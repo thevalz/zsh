@@ -21,13 +21,23 @@ forfeited to the two keepers.
 ## Layout
 
 ```
+app/build.py               refresh ADP + player-id map, emit app/dist/draft-live.html
+app/template.html          page shell and CSS, with __DATA__ / __SCRIPT__ slots
+app/src/state.js           data, persistence, whose-pick arithmetic
+app/src/model.js           roster fill, positional need, need-aware simulation
+app/src/sleeper.js         Sleeper client: discovery, polling, backoff
+app/src/ui.js              rendering and events
+app/test/sync.mjs          22 assertions against a stubbed API (real payloads)
+app/test/live.mjs          smoke test against the real API — needs an http origin
 data/league_config.json    league settings, our picks, keeper rule, modelled keepers
-data/players_sf_adp.json   242-player superflex pool (FFC 2QB ADP, 5,177 drafts)
+data/players_sf_adp.json   242-player superflex pool (FFC 2QB ADP)
+data/player_ids.json       Sleeper player_id -> our pool, so the app never
+                           downloads Sleeper's 14 MB player file at runtime
 data/rosters_2025.json     all 12 final 2025 rosters with original draft positions
 data/standings_2025.json   final rank, wins, points for, waiver moves
 analysis/rosters.py        rosters as a Python literal, for quick scripting
 analysis/keeper_math.py    the surplus model — run it to reproduce the keeper table
-tools/draft-console.html   live draft console (also published as an Artifact)
+tools/draft-console.html   the earlier manual-only console (published as an Artifact)
 draft_board.csv            2025 draft board, reconstructed (see caveat below)
 last-years-draft.md        the same board in prose
 ```
@@ -36,12 +46,39 @@ last-years-draft.md        the same board in prose
 
 ```sh
 python3 analysis/keeper_math.py     # per-team keeper surplus, top 2 each
+python3 app/build.py                # refresh ADP and rebuild the console
+python3 app/build.py --no-fetch     # rebuild offline from cached data/
+node app/test/sync.mjs              # 22 assertions, stubbed API
 ```
 
-The draft console is a single self-contained HTML file. Open it in a browser,
-or use the published Artifact. State persists in `localStorage`; **Reset**
-clears it and **Mock mode** switches to a standard slot-2 snake with no
-keepers so you can practise against a mock.
+### The live console
+
+**It has to be served over http — it cannot run from `file://`.** A page opened
+straight off disk has an opaque origin and the browser refuses every
+cross-origin request, so the Sleeper sync silently never starts. Published
+Artifacts are out for the same reason: their CSP blocks external hosts.
+
+```sh
+python3 app/build.py
+cd app/dist && python3 -m http.server 8777
+# then open http://localhost:8777/draft-live.html
+```
+
+GitHub Pages works too if you want it on your phone at the table.
+
+It finds the draft on its own from the league in `league_config.json`.
+`?draft=<id>` points it at any other draft — that is how you drive a Sleeper
+mock. `?league=<id>` switches leagues.
+
+What it does once connected: marks every pick as it happens, derives your own
+pick numbers from the draft order and traded picks (so pick 38 is in and 119 is
+out without anyone hardcoding it), treats keepers as the picks they are, and
+ranks what to take by what will still be on the board when you next pick —
+simulating the intervening teams from *their* open starter slots rather than
+assuming the board empties in ADP order.
+
+If Sleeper stops answering, the pill turns amber, a banner explains why, and
+marking picks by hand starts working again. It re-syncs on its own.
 
 ## Caveats worth keeping in mind
 

@@ -8,8 +8,7 @@
    "t": "BUF",
    "a": 1.7,
    "b": 7,
-   "sd": 0.9,
-   "ft": null
+   "sd": 0.9
   },
   {
    "n": "Jahmyr Gibbs",
@@ -17,8 +16,7 @@
    "t": "DET",
    "a": 1.8,
    "b": 6,
-   "sd": 0.8,
-   "ft": null
+   "sd": 0.8
   },
   {
    "n": "Bijan Robinson",
@@ -26,8 +24,7 @@
    "t": "ATL",
    "a": 2.6,
    "b": 11,
-   "sd": 0.7,
-   "ft": null
+   "sd": 0.7
   },
   {
    "n": "Puka Nacua",
@@ -35,8 +32,7 @@
    "t": "LAR",
    "a": 4.9,
    "b": 11,
-   "sd": 1.5,
-   "ft": null
+   "sd": 1.5
   },
   {
    "n": "Jonathan Taylor",
@@ -44,8 +40,7 @@
    "t": "IND",
    "a": 5.7,
    "b": 13,
-   "sd": 1.5,
-   "ft": null
+   "sd": 1.5
   },
   {
    "n": "Drake Maye",
@@ -53,8 +48,7 @@
    "t": "NE",
    "a": 6.6,
    "b": 11,
-   "sd": 2.6,
-   "ft": null
+   "sd": 2.6
   },
   {
    "n": "Ja'Marr Chase",
@@ -62,8 +56,7 @@
    "t": "CIN",
    "a": 7.9,
    "b": 6,
-   "sd": 4.1,
-   "ft": null
+   "sd": 4.1
   },
   {
    "n": "Lamar Jackson",
@@ -71,8 +64,7 @@
    "t": "BAL",
    "a": 7.9,
    "b": 13,
-   "sd": 2.9,
-   "ft": null
+   "sd": 2.9
   },
   {
    "n": "Joe Burrow",
@@ -80,8 +72,7 @@
    "t": "CIN",
    "a": 8.8,
    "b": 6,
-   "sd": 2.9,
-   "ft": null
+   "sd": 2.9
   },
   {
    "n": "Jaxon Smith-Njigba",
@@ -89,8 +80,7 @@
    "t": "SEA",
    "a": 9.8,
    "b": 11,
-   "sd": 4.3,
-   "ft": null
+   "sd": 4.3
   },
   {
    "n": "Christian McCaffrey",
@@ -98,8 +88,7 @@
    "t": "SF",
    "a": 10.5,
    "b": 8,
-   "sd": 2.8,
-   "ft": null
+   "sd": 2.8
   },
   {
    "n": "Derrick Henry",
@@ -107,8 +96,7 @@
    "t": "BAL",
    "a": 11.0,
    "b": 13,
-   "sd": 2.7,
-   "ft": null
+   "sd": 2.7
   },
   {
    "n": "Dak Prescott",
@@ -116,8 +104,7 @@
    "t": "DAL",
    "a": 13.0,
    "b": 14,
-   "sd": 3.0,
-   "ft": null
+   "sd": 3.0
   },
   {
    "n": "Jayden Daniels",
@@ -125,8 +112,7 @@
    "t": "WAS",
    "a": 13.4,
    "b": 7,
-   "sd": 3.1,
-   "ft": null
+   "sd": 3.1
   },
   {
    "n": "Amon-Ra St. Brown",
@@ -134,8 +120,7 @@
    "t": "DET",
    "a": 14.6,
    "b": 6,
-   "sd": 4.2,
-   "ft": null
+   "sd": 4.2
   },
   {
    "n": "James Cook III",
@@ -143,8 +128,7 @@
    "t": "BUF",
    "a": 16.6,
    "b": 7,
-   "sd": 4.7,
-   "ft": null
+   "sd": 4.7
   },
   {
    "n": "Jalen Hurts",
@@ -152,8 +136,7 @@
    "t": "PHI",
    "a": 16.6,
    "b": 10,
-   "sd": 3.3,
-   "ft": null
+   "sd": 3.3
   },
   {
    "n": "Matthew Stafford",
@@ -161,8 +144,7 @@
    "t": "LAR",
    "a": 17.1,
    "b": 11,
-   "sd": 2.7,
-   "ft": null
+   "sd": 2.7
   },
   {
    "n": "Brock Purdy",
@@ -170,8 +152,7 @@
    "t": "SF",
    "a": 18.5,
    "b": 8,
-   "sd": 4.1,
-   "ft": null
+   "sd": 4.1
   },
   {
    "n": "Trevor Lawrence",
@@ -179,8 +160,7 @@
    "t": "JAX",
    "a": 18.8,
    "b": 7,
-   "sd": 5.3,
-   "ft": null
+   "sd": 5.3
   },
   {
    "n": "De'Von Achane",
@@ -188,8 +168,7 @@
    "t": "MIA",
    "a": 21.8,
    "b": 6,
-   "sd": 4.9,
-   "ft": null
+   "sd": 4.9
   },
   {
    "n": "Caleb Williams",
@@ -197,8 +176,7 @@
    "t": "CHI",
    "a": 21.9,
    "b": 10,
-   "sd": 5.4,
-   "ft": null
+   "sd": 5.4
   },
   {
    "n": "Patrick Mahomes",
@@ -206,8 +184,7 @@
    "t": "KC",
    "a": 22.9,
    "b": 5,
-   "sd": 5.0,
-   "ft": null
+   "sd": 5.0
   },
   {
    "n": "Drake London",
@@ -215,8 +192,7 @@
    "t": "ATL",
    "a": 24.7,
    "b": 11,
-   "sd": 4.9,
-   "ft": 13
+   "sd": 4.9
   },
   {
    "n": "Jared Goff",
@@ -224,8 +200,7 @@
    "t": "DET",
    "a": 24.8,
    "b": 6,
-   "sd": 5.0,
-   "ft": 44
+   "sd": 5.0
   },
   {
    "n": "Saquon Barkley",
@@ -233,8 +208,7 @@
    "t": "PHI",
    "a": 25.5,
    "b": 10,
-   "sd": 5.3,
-   "ft": null
+   "sd": 5.3
   },
   {
    "n": "Justin Herbert",
@@ -242,8 +216,7 @@
    "t": "LAC",
    "a": 25.6,
    "b": 7,
-   "sd": 4.8,
-   "ft": null
+   "sd": 4.8
   },
   {
    "n": "CeeDee Lamb",
@@ -251,8 +224,7 @@
    "t": "DAL",
    "a": 25.7,
    "b": 14,
-   "sd": 5.5,
-   "ft": 23
+   "sd": 5.5
   },
   {
    "n": "Ashton Jeanty",
@@ -260,8 +232,7 @@
    "t": "LV",
    "a": 28.5,
    "b": 13,
-   "sd": 6.4,
-   "ft": null
+   "sd": 6.4
   },
   {
    "n": "Justin Jefferson",
@@ -269,8 +240,7 @@
    "t": "MIN",
    "a": 28.9,
    "b": 6,
-   "sd": 6.7,
-   "ft": null
+   "sd": 6.7
   },
   {
    "n": "Jaxson Dart",
@@ -278,8 +248,7 @@
    "t": "NYG",
    "a": 29.6,
    "b": 8,
-   "sd": 7.6,
-   "ft": null
+   "sd": 7.6
   },
   {
    "n": "Bo Nix",
@@ -287,8 +256,7 @@
    "t": "DEN",
    "a": 30.9,
    "b": 10,
-   "sd": 6.4,
-   "ft": null
+   "sd": 6.4
   },
   {
    "n": "Chase Brown",
@@ -296,8 +264,7 @@
    "t": "CIN",
    "a": 31.7,
    "b": 6,
-   "sd": 6.5,
-   "ft": 25
+   "sd": 6.5
   },
   {
    "n": "Rashee Rice",
@@ -305,8 +272,7 @@
    "t": "KC",
    "a": 32.7,
    "b": 5,
-   "sd": 9.9,
-   "ft": null
+   "sd": 9.9
   },
   {
    "n": "George Pickens",
@@ -314,8 +280,7 @@
    "t": "DAL",
    "a": 33.1,
    "b": 14,
-   "sd": 5.1,
-   "ft": null
+   "sd": 5.1
   },
   {
    "n": "Josh Jacobs",
@@ -323,8 +288,7 @@
    "t": "GB",
    "a": 34.3,
    "b": 11,
-   "sd": 6.1,
-   "ft": null
+   "sd": 6.1
   },
   {
    "n": "A.J. Brown",
@@ -332,8 +296,7 @@
    "t": "NE",
    "a": 34.9,
    "b": 11,
-   "sd": 5.1,
-   "ft": null
+   "sd": 5.1
   },
   {
    "n": "Nico Collins",
@@ -341,8 +304,7 @@
    "t": "HOU",
    "a": 36.7,
    "b": 8,
-   "sd": 4.4,
-   "ft": null
+   "sd": 4.4
   },
   {
    "n": "Omarion Hampton",
@@ -350,8 +312,7 @@
    "t": "LAC",
    "a": 38.5,
    "b": 7,
-   "sd": 6.4,
-   "ft": 17
+   "sd": 6.4
   },
   {
    "n": "Kenneth Walker",
@@ -359,8 +320,7 @@
    "t": "KC",
    "a": 39.7,
    "b": 5,
-   "sd": 8.1,
-   "ft": null
+   "sd": 8.1
   },
   {
    "n": "Kyren Williams",
@@ -368,8 +328,7 @@
    "t": "LAR",
    "a": 41.3,
    "b": 11,
-   "sd": 5.4,
-   "ft": null
+   "sd": 5.4
   },
   {
    "n": "Baker Mayfield",
@@ -377,8 +336,7 @@
    "t": "TB",
    "a": 41.4,
    "b": 10,
-   "sd": 8.3,
-   "ft": null
+   "sd": 8.3
   },
   {
    "n": "Zay Flowers",
@@ -386,8 +344,7 @@
    "t": "BAL",
    "a": 42.1,
    "b": 13,
-   "sd": 4.0,
-   "ft": null
+   "sd": 4.0
   },
   {
    "n": "Chris Olave",
@@ -395,8 +352,7 @@
    "t": "NO",
    "a": 42.2,
    "b": 8,
-   "sd": 6.2,
-   "ft": null
+   "sd": 6.2
   },
   {
    "n": "Javonte Williams",
@@ -404,8 +360,7 @@
    "t": "DAL",
    "a": 47.4,
    "b": 14,
-   "sd": 5.0,
-   "ft": null
+   "sd": 5.0
   },
   {
    "n": "Tyler Shough",
@@ -413,8 +368,7 @@
    "t": "NO",
    "a": 47.8,
    "b": 8,
-   "sd": 8.8,
-   "ft": null
+   "sd": 8.8
   },
   {
    "n": "Breece Hall",
@@ -422,8 +376,7 @@
    "t": "NYJ",
    "a": 48.2,
    "b": 13,
-   "sd": 5.5,
-   "ft": null
+   "sd": 5.5
   },
   {
    "n": "Jeremiyah Love",
@@ -431,8 +384,7 @@
    "t": "ARI",
    "a": 48.8,
    "b": 14,
-   "sd": 5.9,
-   "ft": null
+   "sd": 5.9
   },
   {
    "n": "Malik Nabers",
@@ -440,8 +392,7 @@
    "t": "NYG",
    "a": 50.6,
    "b": 8,
-   "sd": 10.8,
-   "ft": null
+   "sd": 10.8
   },
   {
    "n": "Emeka Egbuka",
@@ -449,8 +400,7 @@
    "t": "TB",
    "a": 50.7,
    "b": 10,
-   "sd": 6.4,
-   "ft": null
+   "sd": 6.4
   },
   {
    "n": "Tee Higgins",
@@ -458,8 +408,7 @@
    "t": "CIN",
    "a": 51.6,
    "b": 6,
-   "sd": 5.0,
-   "ft": null
+   "sd": 5.0
   },
   {
    "n": "Davante Adams",
@@ -467,8 +416,7 @@
    "t": "LAR",
    "a": 52.1,
    "b": 11,
-   "sd": 5.8,
-   "ft": null
+   "sd": 5.8
   },
   {
    "n": "Cam Skattebo",
@@ -476,8 +424,7 @@
    "t": "NYG",
    "a": 52.3,
    "b": 8,
-   "sd": 5.3,
-   "ft": 53
+   "sd": 5.3
   },
   {
    "n": "Kyler Murray",
@@ -485,8 +432,7 @@
    "t": "MIN",
    "a": 53.1,
    "b": 6,
-   "sd": 10.5,
-   "ft": null
+   "sd": 10.5
   },
   {
    "n": "Jameson Williams",
@@ -494,8 +440,7 @@
    "t": "DET",
    "a": 53.1,
    "b": 6,
-   "sd": 6.1,
-   "ft": null
+   "sd": 6.1
   },
   {
    "n": "Tetairoa McMillan",
@@ -503,8 +448,7 @@
    "t": "CAR",
    "a": 53.1,
    "b": 5,
-   "sd": 5.4,
-   "ft": null
+   "sd": 5.4
   },
   {
    "n": "DeVonta Smith",
@@ -512,8 +456,7 @@
    "t": "PHI",
    "a": 55.9,
    "b": 10,
-   "sd": 5.5,
-   "ft": null
+   "sd": 5.5
   },
   {
    "n": "Sam Darnold",
@@ -521,8 +464,7 @@
    "t": "SEA",
    "a": 56.9,
    "b": 11,
-   "sd": 10.6,
-   "ft": null
+   "sd": 10.6
   },
   {
    "n": "Jordan Love",
@@ -530,8 +472,7 @@
    "t": "GB",
    "a": 57.9,
    "b": 11,
-   "sd": 11.4,
-   "ft": null
+   "sd": 11.4
   },
   {
    "n": "Travis Etienne Jr.",
@@ -539,8 +480,7 @@
    "t": "NO",
    "a": 58.7,
    "b": 8,
-   "sd": 6.9,
-   "ft": null
+   "sd": 6.9
   },
   {
    "n": "D'Andre Swift",
@@ -548,8 +488,7 @@
    "t": "CHI",
    "a": 59.4,
    "b": 10,
-   "sd": 7.0,
-   "ft": null
+   "sd": 7.0
   },
   {
    "n": "Garrett Wilson",
@@ -557,8 +496,7 @@
    "t": "NYJ",
    "a": 59.5,
    "b": 13,
-   "sd": 5.3,
-   "ft": null
+   "sd": 5.3
   },
   {
    "n": "Rome Odunze",
@@ -566,8 +504,7 @@
    "t": "CHI",
    "a": 61.0,
    "b": 10,
-   "sd": 6.2,
-   "ft": null
+   "sd": 6.2
   },
   {
    "n": "Brock Bowers",
@@ -575,8 +512,7 @@
    "t": "LV",
    "a": 61.0,
    "b": 13,
-   "sd": 15.0,
-   "ft": null
+   "sd": 15.0
   },
   {
    "n": "Terry McLaurin",
@@ -584,8 +520,7 @@
    "t": "WAS",
    "a": 63.8,
    "b": 7,
-   "sd": 6.1,
-   "ft": null
+   "sd": 6.1
   },
   {
    "n": "Bucky Irving",
@@ -593,8 +528,7 @@
    "t": "TB",
    "a": 64.5,
    "b": 10,
-   "sd": 6.3,
-   "ft": null
+   "sd": 6.3
   },
   {
    "n": "Trey McBride",
@@ -602,8 +536,7 @@
    "t": "ARI",
    "a": 65.2,
    "b": 14,
-   "sd": 12.5,
-   "ft": null
+   "sd": 12.5
   },
   {
    "n": "Quinshon Judkins",
@@ -611,8 +544,7 @@
    "t": "CLE",
    "a": 66.2,
    "b": 11,
-   "sd": 6.8,
-   "ft": null
+   "sd": 6.8
   },
   {
    "n": "Ladd McConkey",
@@ -620,8 +552,7 @@
    "t": "LAC",
    "a": 66.8,
    "b": 7,
-   "sd": 7.1,
-   "ft": null
+   "sd": 7.1
   },
   {
    "n": "Bhayshul Tuten",
@@ -629,8 +560,7 @@
    "t": "JAX",
    "a": 67.0,
    "b": 7,
-   "sd": 7.8,
-   "ft": null
+   "sd": 7.8
   },
   {
    "n": "Alec Pierce",
@@ -638,8 +568,7 @@
    "t": "IND",
    "a": 68.8,
    "b": 13,
-   "sd": 6.5,
-   "ft": null
+   "sd": 6.5
   },
   {
    "n": "DJ Moore",
@@ -647,8 +576,7 @@
    "t": "BUF",
    "a": 71.1,
    "b": 7,
-   "sd": 9.4,
-   "ft": null
+   "sd": 9.4
   },
   {
    "n": "C.J. Stroud",
@@ -656,8 +584,7 @@
    "t": "HOU",
    "a": 71.3,
    "b": 8,
-   "sd": 10.2,
-   "ft": null
+   "sd": 10.2
   },
   {
    "n": "Daniel Jones",
@@ -665,8 +592,7 @@
    "t": "IND",
    "a": 72.5,
    "b": 13,
-   "sd": 12.4,
-   "ft": null
+   "sd": 12.4
   },
   {
    "n": "David Montgomery",
@@ -674,8 +600,7 @@
    "t": "HOU",
    "a": 73.0,
    "b": 8,
-   "sd": 7.6,
-   "ft": null
+   "sd": 7.6
   },
   {
    "n": "Jaylen Waddle",
@@ -683,8 +608,7 @@
    "t": "DEN",
    "a": 73.3,
    "b": 10,
-   "sd": 7.2,
-   "ft": null
+   "sd": 7.2
   },
   {
    "n": "TreVeyon Henderson",
@@ -692,8 +616,7 @@
    "t": "NE",
    "a": 74.8,
    "b": 11,
-   "sd": 7.1,
-   "ft": null
+   "sd": 7.1
   },
   {
    "n": "Christian Watson",
@@ -701,8 +624,7 @@
    "t": "GB",
    "a": 75.6,
    "b": 11,
-   "sd": 8.1,
-   "ft": null
+   "sd": 8.1
   },
   {
    "n": "Mike Evans",
@@ -710,8 +632,7 @@
    "t": "SF",
    "a": 75.9,
    "b": 8,
-   "sd": 8.7,
-   "ft": null
+   "sd": 8.7
   },
   {
    "n": "Luther Burden III",
@@ -719,8 +640,7 @@
    "t": "CHI",
    "a": 79.3,
    "b": 10,
-   "sd": 8.5,
-   "ft": null
+   "sd": 8.5
   },
   {
    "n": "Courtland Sutton",
@@ -728,8 +648,7 @@
    "t": "DEN",
    "a": 79.5,
    "b": 10,
-   "sd": 8.2,
-   "ft": null
+   "sd": 8.2
   },
   {
    "n": "Malik Willis",
@@ -737,8 +656,7 @@
    "t": "MIA",
    "a": 80.9,
    "b": 6,
-   "sd": 10.7,
-   "ft": null
+   "sd": 10.7
   },
   {
    "n": "DK Metcalf",
@@ -746,8 +664,7 @@
    "t": "PIT",
    "a": 81.9,
    "b": 9,
-   "sd": 7.3,
-   "ft": null
+   "sd": 7.3
   },
   {
    "n": "Colston Loveland",
@@ -755,8 +672,7 @@
    "t": "CHI",
    "a": 82.3,
    "b": 10,
-   "sd": 10.7,
-   "ft": null
+   "sd": 10.7
   },
   {
    "n": "Tony Pollard",
@@ -764,8 +680,7 @@
    "t": "TEN",
    "a": 82.5,
    "b": 9,
-   "sd": 6.7,
-   "ft": null
+   "sd": 6.7
   },
   {
    "n": "Marvin Harrison Jr.",
@@ -773,8 +688,7 @@
    "t": "ARI",
    "a": 84.6,
    "b": 14,
-   "sd": 7.4,
-   "ft": 76
+   "sd": 7.4
   },
   {
    "n": "Jadarian Price",
@@ -782,8 +696,7 @@
    "t": "SEA",
    "a": 86.0,
    "b": 11,
-   "sd": 11.9,
-   "ft": null
+   "sd": 11.9
   },
   {
    "n": "Parker Washington",
@@ -791,8 +704,7 @@
    "t": "JAX",
    "a": 86.6,
    "b": 7,
-   "sd": 6.9,
-   "ft": null
+   "sd": 6.9
   },
   {
    "n": "Brian Thomas Jr.",
@@ -800,8 +712,7 @@
    "t": "JAX",
    "a": 89.3,
    "b": 7,
-   "sd": 6.5,
-   "ft": null
+   "sd": 6.5
   },
   {
    "n": "Bryce Young",
@@ -809,8 +720,7 @@
    "t": "CAR",
    "a": 89.4,
    "b": 5,
-   "sd": 7.4,
-   "ft": null
+   "sd": 7.4
   },
   {
    "n": "Tyler Warren",
@@ -818,8 +728,7 @@
    "t": "IND",
    "a": 89.6,
    "b": 13,
-   "sd": 9.0,
-   "ft": null
+   "sd": 9.0
   },
   {
    "n": "Rhamondre Stevenson",
@@ -827,8 +736,7 @@
    "t": "NE",
    "a": 90.0,
    "b": 11,
-   "sd": 8.7,
-   "ft": null
+   "sd": 8.7
   },
   {
    "n": "Rico Dowdle",
@@ -836,8 +744,7 @@
    "t": "PIT",
    "a": 91.3,
    "b": 9,
-   "sd": 9.1,
-   "ft": 104
+   "sd": 9.1
   },
   {
    "n": "Carnell Tate",
@@ -845,8 +752,7 @@
    "t": "TEN",
    "a": 91.8,
    "b": 9,
-   "sd": 7.3,
-   "ft": null
+   "sd": 7.3
   },
   {
    "n": "Jaylen Warren",
@@ -854,8 +760,7 @@
    "t": "PIT",
    "a": 95.2,
    "b": 9,
-   "sd": 12.1,
-   "ft": null
+   "sd": 12.1
   },
   {
    "n": "Quentin Johnston",
@@ -863,8 +768,7 @@
    "t": "LAC",
    "a": 95.7,
    "b": 7,
-   "sd": 8.9,
-   "ft": null
+   "sd": 8.9
   },
   {
    "n": "J.K. Dobbins",
@@ -872,8 +776,7 @@
    "t": "DEN",
    "a": 96.0,
    "b": 10,
-   "sd": 9.8,
-   "ft": null
+   "sd": 9.8
   },
   {
    "n": "Chuba Hubbard",
@@ -881,8 +784,7 @@
    "t": "CAR",
    "a": 96.8,
    "b": 5,
-   "sd": 9.7,
-   "ft": null
+   "sd": 9.7
   },
   {
    "n": "Cam Ward",
@@ -890,8 +792,7 @@
    "t": "TEN",
    "a": 98.6,
    "b": 9,
-   "sd": 11.9,
-   "ft": null
+   "sd": 11.9
   },
   {
    "n": "Michael Wilson",
@@ -899,8 +800,7 @@
    "t": "ARI",
    "a": 100.4,
    "b": 14,
-   "sd": 10.1,
-   "ft": null
+   "sd": 10.1
   },
   {
    "n": "Jordan Addison",
@@ -908,8 +808,7 @@
    "t": "MIN",
    "a": 100.8,
    "b": 6,
-   "sd": 7.5,
-   "ft": null
+   "sd": 7.5
   },
   {
    "n": "Tucker Kraft",
@@ -917,8 +816,7 @@
    "t": "GB",
    "a": 101.4,
    "b": 11,
-   "sd": 12.8,
-   "ft": null
+   "sd": 12.8
   },
   {
    "n": "Jakobi Meyers",
@@ -926,8 +824,7 @@
    "t": "JAX",
    "a": 102.4,
    "b": 7,
-   "sd": 9.9,
-   "ft": null
+   "sd": 9.9
   },
   {
    "n": "Chris Godwin Jr.",
@@ -935,8 +832,7 @@
    "t": "TB",
    "a": 103.1,
    "b": 10,
-   "sd": 9.7,
-   "ft": null
+   "sd": 9.7
   },
   {
    "n": "Jayden Reed",
@@ -944,8 +840,7 @@
    "t": "GB",
    "a": 104.8,
    "b": 11,
-   "sd": 7.8,
-   "ft": null
+   "sd": 7.8
   },
   {
    "n": "Harold Fannin Jr.",
@@ -953,8 +848,7 @@
    "t": "CLE",
    "a": 107.0,
    "b": 11,
-   "sd": 11.6,
-   "ft": null
+   "sd": 11.6
   },
   {
    "n": "Xavier Worthy",
@@ -962,8 +856,7 @@
    "t": "KC",
    "a": 107.2,
    "b": 5,
-   "sd": 7.1,
-   "ft": null
+   "sd": 7.1
   },
   {
    "n": "Denver Defense",
@@ -971,8 +864,7 @@
    "t": "DEN",
    "a": 108.3,
    "b": 10,
-   "sd": 9.5,
-   "ft": null
+   "sd": 9.5
   },
   {
    "n": "Michael Pittman Jr.",
@@ -980,8 +872,7 @@
    "t": "PIT",
    "a": 109.0,
    "b": 9,
-   "sd": 8.9,
-   "ft": null
+   "sd": 8.9
   },
   {
    "n": "Jacoby Brissett",
@@ -989,8 +880,7 @@
    "t": "ARI",
    "a": 109.1,
    "b": 14,
-   "sd": 15.3,
-   "ft": null
+   "sd": 15.3
   },
   {
    "n": "Jacory Croskey-Merritt",
@@ -998,8 +888,7 @@
    "t": "WAS",
    "a": 109.1,
    "b": 7,
-   "sd": 12.3,
-   "ft": null
+   "sd": 12.3
   },
   {
    "n": "Seattle Defense",
@@ -1007,8 +896,7 @@
    "t": "SEA",
    "a": 109.6,
    "b": 11,
-   "sd": 13.6,
-   "ft": null
+   "sd": 13.6
   },
   {
    "n": "Kyle Pitts Sr.",
@@ -1016,8 +904,7 @@
    "t": "ATL",
    "a": 110.8,
    "b": 11,
-   "sd": 13.9,
-   "ft": null
+   "sd": 13.9
   },
   {
    "n": "Jordyn Tyson",
@@ -1025,8 +912,7 @@
    "t": "NO",
    "a": 110.9,
    "b": 8,
-   "sd": 19.9,
-   "ft": null
+   "sd": 19.9
   },
   {
    "n": "Sam LaPorta",
@@ -1034,8 +920,7 @@
    "t": "DET",
    "a": 112.6,
    "b": 6,
-   "sd": 16.0,
-   "ft": null
+   "sd": 16.0
   },
   {
    "n": "Kyle Monangai",
@@ -1043,8 +928,7 @@
    "t": "CHI",
    "a": 112.8,
    "b": 10,
-   "sd": 13.4,
-   "ft": null
+   "sd": 13.4
   },
   {
    "n": "Aaron Rodgers",
@@ -1052,8 +936,7 @@
    "t": "PIT",
    "a": 112.9,
    "b": 9,
-   "sd": 15.3,
-   "ft": null
+   "sd": 15.3
   },
   {
    "n": "Dallas Goedert",
@@ -1061,8 +944,7 @@
    "t": "PHI",
    "a": 115.1,
    "b": 10,
-   "sd": 18.3,
-   "ft": null
+   "sd": 18.3
   },
   {
    "n": "RJ Harvey",
@@ -1070,8 +952,7 @@
    "t": "DEN",
    "a": 116.0,
    "b": 10,
-   "sd": 17.4,
-   "ft": null
+   "sd": 17.4
   },
   {
    "n": "Deebo Samuel Sr.",
@@ -1079,8 +960,7 @@
    "t": "SF",
    "a": 116.2,
    "b": 8,
-   "sd": 13.9,
-   "ft": null
+   "sd": 13.9
   },
   {
    "n": "Stefon Diggs",
@@ -1088,8 +968,7 @@
    "t": "WAS",
    "a": 116.9,
    "b": 7,
-   "sd": 13.9,
-   "ft": null
+   "sd": 13.9
   },
   {
    "n": "Makai Lemon",
@@ -1097,8 +976,7 @@
    "t": "PHI",
    "a": 117.8,
    "b": 10,
-   "sd": 14.4,
-   "ft": null
+   "sd": 14.4
   },
   {
    "n": "Houston Defense",
@@ -1106,8 +984,7 @@
    "t": "HOU",
    "a": 118.1,
    "b": 8,
-   "sd": 10.2,
-   "ft": null
+   "sd": 10.2
   },
   {
    "n": "Geno Smith",
@@ -1115,8 +992,7 @@
    "t": "NYJ",
    "a": 118.6,
    "b": 13,
-   "sd": 18.4,
-   "ft": null
+   "sd": 18.4
   },
   {
    "n": "Ricky Pearsall",
@@ -1124,8 +1000,7 @@
    "t": "SF",
    "a": 121.2,
    "b": 8,
-   "sd": 13.6,
-   "ft": null
+   "sd": 13.6
   },
   {
    "n": "Josh Downs",
@@ -1133,8 +1008,7 @@
    "t": "IND",
    "a": 121.9,
    "b": 13,
-   "sd": 14.9,
-   "ft": null
+   "sd": 14.9
   },
   {
    "n": "Blake Corum",
@@ -1142,8 +1016,7 @@
    "t": "LAR",
    "a": 122.4,
    "b": 11,
-   "sd": 14.6,
-   "ft": null
+   "sd": 14.6
   },
   {
    "n": "Aaron Jones Sr.",
@@ -1151,8 +1024,7 @@
    "t": "MIN",
    "a": 122.4,
    "b": 6,
-   "sd": 14.3,
-   "ft": null
+   "sd": 14.3
   },
   {
    "n": "Jonathon Brooks",
@@ -1160,8 +1032,7 @@
    "t": "CAR",
    "a": 123.0,
    "b": 5,
-   "sd": 19.9,
-   "ft": null
+   "sd": 19.9
   },
   {
    "n": "Jordan Mason",
@@ -1169,8 +1040,7 @@
    "t": "MIN",
    "a": 123.0,
    "b": 6,
-   "sd": 16.2,
-   "ft": null
+   "sd": 16.2
   },
   {
    "n": "Romeo Doubs",
@@ -1178,8 +1048,7 @@
    "t": "NE",
    "a": 124.0,
    "b": 11,
-   "sd": 10.6,
-   "ft": null
+   "sd": 10.6
   },
   {
    "n": "Wan'Dale Robinson",
@@ -1187,8 +1056,7 @@
    "t": "TEN",
    "a": 124.1,
    "b": 9,
-   "sd": 12.2,
-   "ft": null
+   "sd": 12.2
   },
   {
    "n": "Matthew Golden",
@@ -1196,8 +1064,7 @@
    "t": "GB",
    "a": 124.1,
    "b": 11,
-   "sd": 13.9,
-   "ft": null
+   "sd": 13.9
   },
   {
    "n": "Mark Andrews",
@@ -1205,8 +1072,7 @@
    "t": "BAL",
    "a": 125.2,
    "b": 13,
-   "sd": 15.6,
-   "ft": null
+   "sd": 15.6
   },
   {
    "n": "Chimere Dike",
@@ -1214,8 +1080,7 @@
    "t": "TEN",
    "a": 126.2,
    "b": 9,
-   "sd": 34.2,
-   "ft": null
+   "sd": 34.2
   },
   {
    "n": "Brandon Aubrey",
@@ -1223,8 +1088,7 @@
    "t": "DAL",
    "a": 127.7,
    "b": 14,
-   "sd": 13.2,
-   "ft": null
+   "sd": 13.2
   },
   {
    "n": "Rachaad White",
@@ -1232,8 +1096,7 @@
    "t": "WAS",
    "a": 127.8,
    "b": 7,
-   "sd": 17.1,
-   "ft": null
+   "sd": 17.1
   },
   {
    "n": "Fernando Mendoza",
@@ -1241,8 +1104,7 @@
    "t": "LV",
    "a": 129.6,
    "b": 13,
-   "sd": 21.9,
-   "ft": null
+   "sd": 21.9
   },
   {
    "n": "Minnesota Defense",
@@ -1250,8 +1112,7 @@
    "t": "MIN",
    "a": 129.9,
    "b": 6,
-   "sd": 8.3,
-   "ft": null
+   "sd": 8.3
   },
   {
    "n": "LA Rams Defense",
@@ -1259,8 +1120,7 @@
    "t": "LAR",
    "a": 130.0,
    "b": 11,
-   "sd": 12.0,
-   "ft": null
+   "sd": 12.0
   },
   {
    "n": "Rashid Shaheed",
@@ -1268,8 +1128,7 @@
    "t": "SEA",
    "a": 130.3,
    "b": 11,
-   "sd": 15.1,
-   "ft": null
+   "sd": 15.1
   },
   {
    "n": "George Kittle",
@@ -1277,8 +1136,7 @@
    "t": "SF",
    "a": 130.6,
    "b": 8,
-   "sd": 17.1,
-   "ft": null
+   "sd": 17.1
   },
   {
    "n": "Kenny Gainwell",
@@ -1286,8 +1144,7 @@
    "t": "TB",
    "a": 131.4,
    "b": 10,
-   "sd": 17.7,
-   "ft": null
+   "sd": 17.7
   },
   {
    "n": "Kenyon Sadiq",
@@ -1295,8 +1152,7 @@
    "t": "NYJ",
    "a": 131.8,
    "b": 13,
-   "sd": 28.5,
-   "ft": null
+   "sd": 28.5
   },
   {
    "n": "Jason Myers",
@@ -1304,8 +1160,7 @@
    "t": "SEA",
    "a": 132.9,
    "b": 11,
-   "sd": 8.1,
-   "ft": null
+   "sd": 8.1
   },
   {
    "n": "Oronde Gadsden",
@@ -1313,8 +1168,7 @@
    "t": "LAC",
    "a": 134.8,
    "b": 7,
-   "sd": 12.8,
-   "ft": null
+   "sd": 12.8
   },
   {
    "n": "AJ Barner",
@@ -1322,8 +1176,7 @@
    "t": "SEA",
    "a": 134.9,
    "b": 11,
-   "sd": 16.6,
-   "ft": null
+   "sd": 16.6
   },
   {
    "n": "Shedeur Sanders",
@@ -1331,8 +1184,7 @@
    "t": "CLE",
    "a": 135.0,
    "b": 11,
-   "sd": 29.2,
-   "ft": null
+   "sd": 29.2
   },
   {
    "n": "KC Concepcion",
@@ -1340,8 +1192,7 @@
    "t": "CLE",
    "a": 135.3,
    "b": 11,
-   "sd": 12.7,
-   "ft": null
+   "sd": 12.7
   },
   {
    "n": "Jayden Higgins",
@@ -1349,8 +1200,7 @@
    "t": "HOU",
    "a": 135.3,
    "b": 8,
-   "sd": 12.2,
-   "ft": null
+   "sd": 12.2
   },
   {
    "n": "Khalil Shakir",
@@ -1358,8 +1208,7 @@
    "t": "BUF",
    "a": 135.4,
    "b": 7,
-   "sd": 9.5,
-   "ft": null
+   "sd": 9.5
   },
   {
    "n": "Jonah Coleman",
@@ -1367,8 +1216,7 @@
    "t": "DEN",
    "a": 135.5,
    "b": 10,
-   "sd": 25.9,
-   "ft": null
+   "sd": 25.9
   },
   {
    "n": "Tua Tagovailoa",
@@ -1376,8 +1224,7 @@
    "t": "ATL",
    "a": 135.7,
    "b": 11,
-   "sd": 20.1,
-   "ft": null
+   "sd": 20.1
   },
   {
    "n": "Deshaun Watson",
@@ -1385,8 +1232,7 @@
    "t": "CLE",
    "a": 136.1,
    "b": 11,
-   "sd": 27.2,
-   "ft": null
+   "sd": 27.2
   },
   {
    "n": "Ka'imi Fairbairn",
@@ -1394,8 +1240,7 @@
    "t": "HOU",
    "a": 136.9,
    "b": 8,
-   "sd": 6.7,
-   "ft": null
+   "sd": 6.7
   },
   {
    "n": "De'Zhaun Stribling",
@@ -1403,8 +1248,7 @@
    "t": "SF",
    "a": 137.7,
    "b": 8,
-   "sd": 18.6,
-   "ft": null
+   "sd": 18.6
   },
   {
    "n": "Jalen Coker",
@@ -1412,8 +1256,7 @@
    "t": "CAR",
    "a": 137.8,
    "b": 5,
-   "sd": 10.8,
-   "ft": null
+   "sd": 10.8
   },
   {
    "n": "Travis Kelce",
@@ -1421,8 +1264,7 @@
    "t": "KC",
    "a": 137.9,
    "b": 5,
-   "sd": 16.7,
-   "ft": null
+   "sd": 16.7
   },
   {
    "n": "Brenton Strange",
@@ -1430,8 +1272,7 @@
    "t": "JAX",
    "a": 138.1,
    "b": 7,
-   "sd": 16.6,
-   "ft": 173
+   "sd": 16.6
   },
   {
    "n": "Tre Tucker",
@@ -1439,8 +1280,7 @@
    "t": "LV",
    "a": 138.3,
    "b": 13,
-   "sd": 12.2,
-   "ft": null
+   "sd": 12.2
   },
   {
    "n": "New England Defense",
@@ -1448,8 +1288,7 @@
    "t": "NE",
    "a": 138.4,
    "b": 11,
-   "sd": 8.8,
-   "ft": null
+   "sd": 8.8
   },
   {
    "n": "Detroit Defense",
@@ -1457,8 +1296,7 @@
    "t": "DET",
    "a": 138.8,
    "b": 6,
-   "sd": 8.7,
-   "ft": null
+   "sd": 8.7
   },
   {
    "n": "Calvin Ridley",
@@ -1466,8 +1304,7 @@
    "t": "TEN",
    "a": 138.9,
    "b": 9,
-   "sd": 12.9,
-   "ft": null
+   "sd": 12.9
   },
   {
    "n": "Cameron Dicker",
@@ -1475,8 +1312,7 @@
    "t": "LAC",
    "a": 139.1,
    "b": 7,
-   "sd": 9.4,
-   "ft": null
+   "sd": 9.4
   },
   {
    "n": "Jake Ferguson",
@@ -1484,8 +1320,7 @@
    "t": "DAL",
    "a": 139.8,
    "b": 14,
-   "sd": 22.0,
-   "ft": null
+   "sd": 22.0
   },
   {
    "n": "Zach Charbonnet",
@@ -1493,8 +1328,7 @@
    "t": "SEA",
    "a": 139.9,
    "b": 11,
-   "sd": 19.6,
-   "ft": null
+   "sd": 19.6
   },
   {
    "n": "Philadelphia Defense",
@@ -1502,8 +1336,7 @@
    "t": "PHI",
    "a": 140.2,
    "b": 10,
-   "sd": 11.7,
-   "ft": null
+   "sd": 11.7
   },
   {
    "n": "Keaton Mitchell",
@@ -1511,8 +1344,7 @@
    "t": "LAC",
    "a": 140.7,
    "b": 7,
-   "sd": 32.3,
-   "ft": null
+   "sd": 32.3
   },
   {
    "n": "Isaiah Likely",
@@ -1520,8 +1352,7 @@
    "t": "NYG",
    "a": 140.9,
    "b": 8,
-   "sd": 16.0,
-   "ft": null
+   "sd": 16.0
   },
   {
    "n": "Pittsburgh Defense",
@@ -1529,8 +1360,7 @@
    "t": "PIT",
    "a": 141.4,
    "b": 9,
-   "sd": 16.9,
-   "ft": null
+   "sd": 16.9
   },
   {
    "n": "Dalton Kincaid",
@@ -1538,8 +1368,7 @@
    "t": "BUF",
    "a": 142.3,
    "b": 7,
-   "sd": 18.1,
-   "ft": null
+   "sd": 18.1
   },
   {
    "n": "Michael Penix Jr.",
@@ -1547,8 +1376,7 @@
    "t": "ATL",
    "a": 142.3,
    "b": 11,
-   "sd": 18.3,
-   "ft": null
+   "sd": 18.3
   },
   {
    "n": "Carson Beck",
@@ -1556,8 +1384,7 @@
    "t": "ARI",
    "a": 142.5,
    "b": 14,
-   "sd": 7.6,
-   "ft": null
+   "sd": 7.6
   },
   {
    "n": "Braelon Allen",
@@ -1565,8 +1392,7 @@
    "t": "NYJ",
    "a": 142.8,
    "b": 13,
-   "sd": 14.1,
-   "ft": null
+   "sd": 14.1
   },
   {
    "n": "Kirk Cousins",
@@ -1574,8 +1400,7 @@
    "t": "LV",
    "a": 143.1,
    "b": 13,
-   "sd": 21.6,
-   "ft": null
+   "sd": 21.6
   },
   {
    "n": "Theo Wease Jr.",
@@ -1583,8 +1408,7 @@
    "t": "MIA",
    "a": 143.7,
    "b": 6,
-   "sd": 11.2,
-   "ft": null
+   "sd": 11.2
   },
   {
    "n": "Harrison Mevis",
@@ -1592,8 +1416,7 @@
    "t": "LAR",
    "a": 143.9,
    "b": 11,
-   "sd": 8.9,
-   "ft": null
+   "sd": 8.9
   },
   {
    "n": "John Metchie III",
@@ -1601,8 +1424,7 @@
    "t": "CAR",
    "a": 144.7,
    "b": 5,
-   "sd": 5.2,
-   "ft": null
+   "sd": 5.2
   },
   {
    "n": "Jerry Jeudy",
@@ -1610,8 +1432,7 @@
    "t": "CLE",
    "a": 144.7,
    "b": 11,
-   "sd": 14.8,
-   "ft": null
+   "sd": 14.8
   },
   {
    "n": "Tyjae Spears",
@@ -1619,8 +1440,7 @@
    "t": "TEN",
    "a": 144.9,
    "b": 9,
-   "sd": 25.4,
-   "ft": null
+   "sd": 25.4
   },
   {
    "n": "LA Chargers Defense",
@@ -1628,8 +1448,7 @@
    "t": "LAC",
    "a": 145.1,
    "b": 7,
-   "sd": 12.0,
-   "ft": null
+   "sd": 12.0
   },
   {
    "n": "Rashod Bateman",
@@ -1637,8 +1456,7 @@
    "t": "BAL",
    "a": 145.1,
    "b": 13,
-   "sd": 13.8,
-   "ft": null
+   "sd": 13.8
   },
   {
    "n": "Andy Borregales",
@@ -1646,8 +1464,7 @@
    "t": "NE",
    "a": 145.5,
    "b": 11,
-   "sd": 3.1,
-   "ft": null
+   "sd": 3.1
   },
   {
    "n": "Juwan Johnson",
@@ -1655,8 +1472,7 @@
    "t": "NO",
    "a": 145.7,
    "b": 8,
-   "sd": 21.6,
-   "ft": null
+   "sd": 21.6
   },
   {
    "n": "Jake Bates",
@@ -1664,8 +1480,7 @@
    "t": "DET",
    "a": 145.8,
    "b": 6,
-   "sd": 8.6,
-   "ft": null
+   "sd": 8.6
   },
   {
    "n": "J.J. McCarthy",
@@ -1673,8 +1488,7 @@
    "t": "MIN",
    "a": 146.2,
    "b": 6,
-   "sd": 16.3,
-   "ft": null
+   "sd": 16.3
   },
   {
    "n": "Hunter Henry",
@@ -1682,8 +1496,7 @@
    "t": "NE",
    "a": 147.3,
    "b": 11,
-   "sd": 16.8,
-   "ft": null
+   "sd": 16.8
   },
   {
    "n": "Chris Boswell",
@@ -1691,8 +1504,7 @@
    "t": "PIT",
    "a": 147.6,
    "b": 9,
-   "sd": 11.2,
-   "ft": null
+   "sd": 11.2
   },
   {
    "n": "Isiah Pacheco",
@@ -1700,8 +1512,7 @@
    "t": "DET",
    "a": 147.8,
    "b": 6,
-   "sd": 18.8,
-   "ft": null
+   "sd": 18.8
   },
   {
    "n": "Jalen McMillan",
@@ -1709,8 +1520,7 @@
    "t": "TB",
    "a": 148.1,
    "b": 10,
-   "sd": 13.4,
-   "ft": null
+   "sd": 13.4
   },
   {
    "n": "Chig Okonkwo",
@@ -1718,8 +1528,7 @@
    "t": "WAS",
    "a": 148.2,
    "b": 7,
-   "sd": 25.3,
-   "ft": null
+   "sd": 25.3
   },
   {
    "n": "Green Bay Defense",
@@ -1727,8 +1536,7 @@
    "t": "GB",
    "a": 148.9,
    "b": 11,
-   "sd": 21.8,
-   "ft": null
+   "sd": 21.8
   },
   {
    "n": "Dallas Defense",
@@ -1736,8 +1544,7 @@
    "t": "DAL",
    "a": 149.0,
    "b": 14,
-   "sd": 10.6,
-   "ft": null
+   "sd": 10.6
   },
   {
    "n": "Ja'Kobi Lane",
@@ -1745,8 +1552,7 @@
    "t": "BAL",
    "a": 149.5,
    "b": 13,
-   "sd": 13.4,
-   "ft": null
+   "sd": 13.4
   },
   {
    "n": "Atlanta Defense",
@@ -1754,8 +1560,7 @@
    "t": "ATL",
    "a": 149.5,
    "b": 11,
-   "sd": 16.2,
-   "ft": null
+   "sd": 16.2
   },
   {
    "n": "Tennessee Defense",
@@ -1763,8 +1568,7 @@
    "t": "TEN",
    "a": 150.4,
    "b": 9,
-   "sd": 16.0,
-   "ft": null
+   "sd": 16.0
   },
   {
    "n": "Alvin Kamara",
@@ -1772,8 +1576,7 @@
    "t": "NO",
    "a": 150.6,
    "b": 8,
-   "sd": 18.8,
-   "ft": 137
+   "sd": 18.8
   },
   {
    "n": "Tyler Allgeier",
@@ -1781,8 +1584,7 @@
    "t": "ARI",
    "a": 150.9,
    "b": 14,
-   "sd": 21.0,
-   "ft": null
+   "sd": 21.0
   },
   {
    "n": "Cam Little",
@@ -1790,8 +1592,7 @@
    "t": "JAX",
    "a": 151.0,
    "b": 7,
-   "sd": 12.4,
-   "ft": null
+   "sd": 12.4
   },
   {
    "n": "Tyler Loop",
@@ -1799,8 +1600,7 @@
    "t": "BAL",
    "a": 151.1,
    "b": 13,
-   "sd": 10.8,
-   "ft": null
+   "sd": 10.8
   },
   {
    "n": "Keenan Allen",
@@ -1808,8 +1608,7 @@
    "t": "IND",
    "a": 151.1,
    "b": 13,
-   "sd": 15.3,
-   "ft": null
+   "sd": 15.3
   },
   {
    "n": "Chase McLaughlin",
@@ -1817,8 +1616,7 @@
    "t": "TB",
    "a": 151.4,
    "b": 10,
-   "sd": 10.8,
-   "ft": null
+   "sd": 10.8
   },
   {
    "n": "Jacksonville Defense",
@@ -1826,8 +1624,7 @@
    "t": "JAX",
    "a": 152.3,
    "b": 7,
-   "sd": 15.2,
-   "ft": null
+   "sd": 15.2
   },
   {
    "n": "Brian Robinson",
@@ -1835,8 +1632,7 @@
    "t": "ATL",
    "a": 152.5,
    "b": 11,
-   "sd": 18.6,
-   "ft": null
+   "sd": 18.6
   },
   {
    "n": "Eddy Pi\u00f1eiro",
@@ -1844,8 +1640,7 @@
    "t": "SF",
    "a": 153.2,
    "b": 8,
-   "sd": 11.6,
-   "ft": null
+   "sd": 11.6
   },
   {
    "n": "Cairo Santos",
@@ -1853,8 +1648,7 @@
    "t": "CHI",
    "a": 153.4,
    "b": 10,
-   "sd": 11.6,
-   "ft": null
+   "sd": 11.6
   },
   {
    "n": "Woody Marks",
@@ -1862,8 +1656,7 @@
    "t": "HOU",
    "a": 153.7,
    "b": 8,
-   "sd": 17.3,
-   "ft": null
+   "sd": 17.3
   },
   {
    "n": "Travis Hunter",
@@ -1871,8 +1664,7 @@
    "t": "JAX",
    "a": 153.7,
    "b": 7,
-   "sd": 19.8,
-   "ft": null
+   "sd": 19.8
   },
   {
    "n": "Jalen Nailor",
@@ -1880,8 +1672,7 @@
    "t": "LV",
    "a": 153.8,
    "b": 13,
-   "sd": 15.2,
-   "ft": null
+   "sd": 15.2
   },
   {
    "n": "Dontayvion Wicks",
@@ -1889,8 +1680,7 @@
    "t": "PHI",
    "a": 154.1,
    "b": 10,
-   "sd": 22.7,
-   "ft": null
+   "sd": 22.7
   },
   {
    "n": "Nick Folk",
@@ -1898,8 +1688,7 @@
    "t": "ATL",
    "a": 154.6,
    "b": 11,
-   "sd": 13.5,
-   "ft": null
+   "sd": 13.5
   },
   {
    "n": "Ryan Flournoy",
@@ -1907,8 +1696,7 @@
    "t": "DAL",
    "a": 154.8,
    "b": 14,
-   "sd": 10.5,
-   "ft": null
+   "sd": 10.5
   },
   {
    "n": "Baltimore Defense",
@@ -1916,8 +1704,7 @@
    "t": "BAL",
    "a": 154.9,
    "b": 13,
-   "sd": 14.6,
-   "ft": null
+   "sd": 14.6
   },
   {
    "n": "Will Reichard",
@@ -1925,8 +1712,7 @@
    "t": "MIN",
    "a": 155.1,
    "b": 6,
-   "sd": 15.8,
-   "ft": null
+   "sd": 15.8
   },
   {
    "n": "Chris Rodriguez Jr.",
@@ -1934,8 +1720,7 @@
    "t": "JAX",
    "a": 155.3,
    "b": 7,
-   "sd": 15.4,
-   "ft": null
+   "sd": 15.4
   },
   {
    "n": "Blake Grupe",
@@ -1943,8 +1728,7 @@
    "t": "IND",
    "a": 156.0,
    "b": 13,
-   "sd": 14.4,
-   "ft": null
+   "sd": 14.4
   },
   {
    "n": "Jauan Jennings",
@@ -1952,8 +1736,7 @@
    "t": "MIN",
    "a": 156.9,
    "b": 6,
-   "sd": 12.8,
-   "ft": null
+   "sd": 12.8
   },
   {
    "n": "Evan McPherson",
@@ -1961,8 +1744,7 @@
    "t": "CIN",
    "a": 157.3,
    "b": 6,
-   "sd": 15.4,
-   "ft": null
+   "sd": 15.4
   },
   {
    "n": "Isaac TeSlaa",
@@ -1970,8 +1752,7 @@
    "t": "DET",
    "a": 157.8,
    "b": 6,
-   "sd": 17.0,
-   "ft": null
+   "sd": 17.0
   },
   {
    "n": "Denzel Boston",
@@ -1979,8 +1760,7 @@
    "t": "CLE",
    "a": 158.0,
    "b": 11,
-   "sd": 14.6,
-   "ft": null
+   "sd": 14.6
   },
   {
    "n": "Mike Washington Jr.",
@@ -1988,8 +1768,7 @@
    "t": "LV",
    "a": 158.1,
    "b": 13,
-   "sd": 15.6,
-   "ft": null
+   "sd": 15.6
   },
   {
    "n": "Harrison Butker",
@@ -1997,8 +1776,7 @@
    "t": "KC",
    "a": 158.7,
    "b": 5,
-   "sd": 12.8,
-   "ft": null
+   "sd": 12.8
   },
   {
    "n": "Buffalo Defense",
@@ -2006,8 +1784,7 @@
    "t": "BUF",
    "a": 158.7,
    "b": 7,
-   "sd": 13.0,
-   "ft": null
+   "sd": 13.0
   },
   {
    "n": "Tyrone Tracy Jr.",
@@ -2015,8 +1792,7 @@
    "t": "NYG",
    "a": 158.8,
    "b": 8,
-   "sd": 20.2,
-   "ft": null
+   "sd": 20.2
   },
   {
    "n": "Tyler Bass",
@@ -2024,8 +1800,7 @@
    "t": "BUF",
    "a": 159.3,
    "b": 7,
-   "sd": 18.9,
-   "ft": null
+   "sd": 18.9
   },
   {
    "n": "Cleveland Defense",
@@ -2033,8 +1808,7 @@
    "t": "CLE",
    "a": 160.1,
    "b": 11,
-   "sd": 15.1,
-   "ft": null
+   "sd": 15.1
   },
   {
    "n": "Tank Dell",
@@ -2042,8 +1816,7 @@
    "t": "HOU",
    "a": 160.6,
    "b": 8,
-   "sd": 13.0,
-   "ft": null
+   "sd": 13.0
   },
   {
    "n": "Antonio Williams",
@@ -2051,8 +1824,7 @@
    "t": "WAS",
    "a": 161.2,
    "b": 7,
-   "sd": 18.6,
-   "ft": null
+   "sd": 18.6
   },
   {
    "n": "Wil Lutz",
@@ -2060,8 +1832,7 @@
    "t": "DEN",
    "a": 161.3,
    "b": 10,
-   "sd": 12.5,
-   "ft": null
+   "sd": 12.5
   },
   {
    "n": "Omar Cooper Jr.",
@@ -2069,8 +1840,7 @@
    "t": "NYJ",
    "a": 161.6,
    "b": 13,
-   "sd": 14.9,
-   "ft": null
+   "sd": 14.9
   },
   {
    "n": "Trey Smack",
@@ -2078,8 +1848,7 @@
    "t": "GB",
    "a": 162.4,
    "b": 11,
-   "sd": 15.8,
-   "ft": null
+   "sd": 15.8
   },
   {
    "n": "Cooper Kupp",
@@ -2087,8 +1856,7 @@
    "t": "SEA",
    "a": 163.0,
    "b": 11,
-   "sd": 13.0,
-   "ft": null
+   "sd": 13.0
   },
   {
    "n": "Malachi Fields",
@@ -2096,8 +1864,7 @@
    "t": "NYG",
    "a": 163.4,
    "b": 8,
-   "sd": 7.8,
-   "ft": null
+   "sd": 7.8
   },
   {
    "n": "Tre' Harris",
@@ -2105,8 +1872,7 @@
    "t": "LAC",
    "a": 165.0,
    "b": 7,
-   "sd": 7.7,
-   "ft": null
+   "sd": 7.7
   },
   {
    "n": "Germie Bernard",
@@ -2114,8 +1880,7 @@
    "t": "PIT",
    "a": 165.7,
    "b": 9,
-   "sd": 12.0,
-   "ft": null
+   "sd": 12.0
   },
   {
    "n": "Malik Washington",
@@ -2123,8 +1888,7 @@
    "t": "MIA",
    "a": 166.2,
    "b": 6,
-   "sd": 13.3,
-   "ft": null
+   "sd": 13.3
   },
   {
    "n": "Adonai Mitchell",
@@ -2132,8 +1896,7 @@
    "t": "NYJ",
    "a": 167.8,
    "b": 13,
-   "sd": 8.5,
-   "ft": null
+   "sd": 8.5
   },
   {
    "n": "MarShawn Lloyd",
@@ -2141,8 +1904,7 @@
    "t": "GB",
    "a": 167.9,
    "b": 11,
-   "sd": 15.2,
-   "ft": null
+   "sd": 15.2
   },
   {
    "n": "Tank Bigsby",
@@ -2150,8 +1912,7 @@
    "t": "PHI",
    "a": 167.9,
    "b": 10,
-   "sd": 13.2,
-   "ft": null
+   "sd": 13.2
   },
   {
    "n": "Kaytron Allen",
@@ -2159,8 +1920,7 @@
    "t": "WAS",
    "a": 168.6,
    "b": 7,
-   "sd": 1.9,
-   "ft": null
+   "sd": 1.9
   },
   {
    "n": "New Orleans Defense",
@@ -2168,8 +1928,7 @@
    "t": "NO",
    "a": 168.8,
    "b": 8,
-   "sd": 12.3,
-   "ft": null
+   "sd": 12.3
   },
   {
    "n": "Kayshon Boutte",
@@ -2177,8 +1936,7 @@
    "t": "NE",
    "a": 171.0,
    "b": 11,
-   "sd": 14.7,
-   "ft": null
+   "sd": 14.7
   }
  ]
 }
