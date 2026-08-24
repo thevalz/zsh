@@ -1,0 +1,74 @@
+{
+ "East Coast Wins Most": {
+  "final_rank": 1,
+  "wins": 11,
+  "points_for": 2213.1,
+  "moves": 43
+ },
+ "Hulleywood": {
+  "final_rank": 2,
+  "wins": 9,
+  "points_for": 2066.2,
+  "moves": 11
+ },
+ "Jersey Rum Hams": {
+  "final_rank": 3,
+  "wins": 7,
+  "points_for": 2077.1,
+  "moves": 64
+ },
+ "Scared Hitless": {
+  "final_rank": 4,
+  "wins": 8,
+  "points_for": 1904.52,
+  "moves": 20
+ },
+ "Randiculous": {
+  "final_rank": 5,
+  "wins": 9,
+  "points_for": 2045.28,
+  "moves": 14
+ },
+ "Mountain Hermits": {
+  "final_rank": 6,
+  "wins": 8,
+  "points_for": 1901.76,
+  "moves": 14
+ },
+ "NY Kat Snatchers": {
+  "final_rank": 7,
+  "wins": 5,
+  "points_for": 2007.52,
+  "moves": 61
+ },
+ "Made America 2024": {
+  "final_rank": 8,
+  "wins": 7,
+  "points_for": 1921.76,
+  "moves": 24
+ },
+ "It's Gonna Be Maye": {
+  "final_rank": 9,
+  "wins": 7,
+  "points_for": 1856.68,
+  "moves": 31
+ },
+ "Travis Swift": {
+  "final_rank": 10,
+  "wins": 7,
+  "points_for": 1960.92,
+  "moves": 19
+ },
+ "Down to Pound": {
+  "final_rank": 11,
+  "wins": 5,
+  "points_for": 1997.68,
+  "moves": 15
+ },
+ "Manhattan Meatpacker": {
+  "final_rank": 12,
+  "wins": 1,
+  "points_for": 1568.52,
+  "moves": 2
+ }
+}

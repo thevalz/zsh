@@ -1,0 +1,177 @@
+{
+ "league_id": "1390899489962741761",
+ "draft_id": "1391645001099776000",
+ "platform": "Sleeper",
+ "season": 2026,
+ "teams": 12,
+ "rounds": 16,
+ "scoring": "full PPR, 4pt pass TD, 0.04/pass yd",
+ "roster_slots": [
+  "QB",
+  "RB",
+  "RB",
+  "WR",
+  "WR",
+  "TE",
+  "FLEX",
+  "FLEX",
+  "SUPER_FLEX",
+  "K",
+  "DEF"
+ ],
+ "bench": 5,
+ "max_keepers": 2,
+ "keeper_rule": "keep at 2 rounds earlier than drafted; waiver adds cost R11; R1-R2 picks ineligible",
+ "my_team": "Made America 2024 / supervillain",
+ "my_draft_slot": 2,
+ "my_keepers": [
+  "Cam Skattebo",
+  "Rico Dowdle"
+ ],
+ "my_picks": [
+  2,
+  23,
+  26,
+  38,
+  47,
+  50,
+  71,
+  74,
+  95,
+  122,
+  143,
+  167,
+  170,
+  191
+ ],
+ "traded_picks": [
+  {
+   "in": "4.02 (overall 38) from Jersey Rum Hams"
+  },
+  {
+   "out": "10.11 (overall 119)"
+  }
+ ],
+ "modelled_keepers": [
+  {
+   "n": "Puka Nacua",
+   "team": "East Coast Wins Most",
+   "rd": 7
+  },
+  {
+   "n": "Sam Darnold",
+   "team": "East Coast Wins Most",
+   "rd": 11
+  },
+  {
+   "n": "Drake Maye",
+   "team": "It's Gonna Be Maye",
+   "rd": 8
+  },
+  {
+   "n": "Parker Washington",
+   "team": "It's Gonna Be Maye",
+   "rd": 11
+  },
+  {
+   "n": "Quinshon Judkins",
+   "team": "Down to Pound",
+   "rd": 10
+  },
+  {
+   "n": "Trevor Lawrence",
+   "team": "Down to Pound",
+   "rd": 4
+  },
+  {
+   "n": "Brock Purdy",
+   "team": "Hulleywood",
+   "rd": 8
+  },
+  {
+   "n": "Jake Bates",
+   "team": "Hulleywood",
+   "rd": 14
+  },
+  {
+   "n": "Jaxson Dart",
+   "team": "Jersey Rum Hams",
+   "rd": 12
+  },
+  {
+   "n": "Bucky Irving",
+   "team": "Jersey Rum Hams",
+   "rd": 12
+  },
+  {
+   "n": "Matthew Stafford",
+   "team": "Travis Swift",
+   "rd": 7
+  },
+  {
+   "n": "Christian Watson",
+   "team": "Travis Swift",
+   "rd": 11
+  },
+  {
+   "n": "Rico Dowdle",
+   "team": "Made America 2024",
+   "rd": 13
+  },
+  {
+   "n": "Cam Skattebo",
+   "team": "Made America 2024",
+   "rd": 9
+  },
+  {
+   "n": "Ka'imi Fairbairn",
+   "team": "Manhattan Meatpacker",
+   "rd": 14
+  },
+  {
+   "n": "Chig Okonkwo",
+   "team": "Manhattan Meatpacker",
+   "rd": 12
+  },
+  {
+   "n": "Javonte Williams",
+   "team": "Mountain Hermits",
+   "rd": 8
+  },
+  {
+   "n": "Romeo Doubs",
+   "team": "Mountain Hermits",
+   "rd": 14
+  },
+  {
+   "n": "Alec Pierce",
+   "team": "NY Kat Snatchers",
+   "rd": 11
+  },
+  {
+   "n": "Daniel Jones",
+   "team": "NY Kat Snatchers",
+   "rd": 11
+  },
+  {
+   "n": "Jameson Williams",
+   "team": "Randiculous",
+   "rd": 8
+  },
+  {
+   "n": "Jaxon Smith-Njigba",
+   "team": "Randiculous",
+   "rd": 3
+  },
+  {
+   "n": "Tyler Shough",
+   "team": "Scared Hitless",
+   "rd": 11
+  },
+  {
+   "n": "Kyle Pitts Sr.",
+   "team": "Scared Hitless",
+   "rd": 11
+  }
+ ]
+}

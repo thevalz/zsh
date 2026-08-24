@@ -1,0 +1,2184 @@
+{
+ "source": "FFC 2QB ADP, 5177 drafts, 2026-07-24 to 2026-08-23",
+ "format": "superflex 2QB, 12 team, full PPR",
+ "players": [
+  {
+   "n": "Josh Allen",
+   "p": "QB",
+   "t": "BUF",
+   "a": 1.7,
+   "b": 7,
+   "sd": 0.9,
+   "ft": null
+  },
+  {
+   "n": "Jahmyr Gibbs",
+   "p": "RB",
+   "t": "DET",
+   "a": 1.8,
+   "b": 6,
+   "sd": 0.8,
+   "ft": null
+  },
+  {
+   "n": "Bijan Robinson",
+   "p": "RB",
+   "t": "ATL",
+   "a": 2.6,
+   "b": 11,
+   "sd": 0.7,
+   "ft": null
+  },
+  {
+   "n": "Puka Nacua",
+   "p": "WR",
+   "t": "LAR",
+   "a": 4.9,
+   "b": 11,
+   "sd": 1.5,
+   "ft": null
+  },
+  {
+   "n": "Jonathan Taylor",
+   "p": "RB",
+   "t": "IND",
+   "a": 5.7,
+   "b": 13,
+   "sd": 1.5,
+   "ft": null
+  },
+  {
+   "n": "Drake Maye",
+   "p": "QB",
+   "t": "NE",
+   "a": 6.6,
+   "b": 11,
+   "sd": 2.6,
+   "ft": null
+  },
+  {
+   "n": "Ja'Marr Chase",
+   "p": "WR",
+   "t": "CIN",
+   "a": 7.9,
+   "b": 6,
+   "sd": 4.1,
+   "ft": null
+  },
+  {
+   "n": "Lamar Jackson",
+   "p": "QB",
+   "t": "BAL",
+   "a": 7.9,
+   "b": 13,
+   "sd": 2.9,
+   "ft": null
+  },
+  {
+   "n": "Joe Burrow",
+   "p": "QB",
+   "t": "CIN",
+   "a": 8.8,
+   "b": 6,
+   "sd": 2.9,
+   "ft": null
+  },
+  {
+   "n": "Jaxon Smith-Njigba",
+   "p": "WR",
+   "t": "SEA",
+   "a": 9.8,
+   "b": 11,
+   "sd": 4.3,
+   "ft": null
+  },
+  {
+   "n": "Christian McCaffrey",
+   "p": "RB",
+   "t": "SF",
+   "a": 10.5,
+   "b": 8,
+   "sd": 2.8,
+   "ft": null
+  },
+  {
+   "n": "Derrick Henry",
+   "p": "RB",
+   "t": "BAL",
+   "a": 11.0,
+   "b": 13,
+   "sd": 2.7,
+   "ft": null
+  },
+  {
+   "n": "Dak Prescott",
+   "p": "QB",
+   "t": "DAL",
+   "a": 13.0,
+   "b": 14,
+   "sd": 3.0,
+   "ft": null
+  },
+  {
+   "n": "Jayden Daniels",
+   "p": "QB",
+   "t": "WAS",
+   "a": 13.4,
+   "b": 7,
+   "sd": 3.1,
+   "ft": null
+  },
+  {
+   "n": "Amon-Ra St. Brown",
+   "p": "WR",
+   "t": "DET",
+   "a": 14.6,
+   "b": 6,
+   "sd": 4.2,
+   "ft": null
+  },
+  {
+   "n": "James Cook III",
+   "p": "RB",
+   "t": "BUF",
+   "a": 16.6,
+   "b": 7,
+   "sd": 4.7,
+   "ft": null
+  },
+  {
+   "n": "Jalen Hurts",
+   "p": "QB",
+   "t": "PHI",
+   "a": 16.6,
+   "b": 10,
+   "sd": 3.3,
+   "ft": null
+  },
+  {
+   "n": "Matthew Stafford",
+   "p": "QB",
+   "t": "LAR",
+   "a": 17.1,
+   "b": 11,
+   "sd": 2.7,
+   "ft": null
+  },
+  {
+   "n": "Brock Purdy",
+   "p": "QB",
+   "t": "SF",
+   "a": 18.5,
+   "b": 8,
+   "sd": 4.1,
+   "ft": null
+  },
+  {
+   "n": "Trevor Lawrence",
+   "p": "QB",
+   "t": "JAX",
+   "a": 18.8,
+   "b": 7,
+   "sd": 5.3,
+   "ft": null
+  },
+  {
+   "n": "De'Von Achane",
+   "p": "RB",
+   "t": "MIA",
+   "a": 21.8,
+   "b": 6,
+   "sd": 4.9,
+   "ft": null
+  },
+  {
+   "n": "Caleb Williams",
+   "p": "QB",
+   "t": "CHI",
+   "a": 21.9,
+   "b": 10,
+   "sd": 5.4,
+   "ft": null
+  },
+  {
+   "n": "Patrick Mahomes",
+   "p": "QB",
+   "t": "KC",
+   "a": 22.9,
+   "b": 5,
+   "sd": 5.0,
+   "ft": null
+  },
+  {
+   "n": "Drake London",
+   "p": "WR",
+   "t": "ATL",
+   "a": 24.7,
+   "b": 11,
+   "sd": 4.9,
+   "ft": 13
+  },
+  {
+   "n": "Jared Goff",
+   "p": "QB",
+   "t": "DET",
+   "a": 24.8,
+   "b": 6,
+   "sd": 5.0,
+   "ft": 44
+  },
+  {
+   "n": "Saquon Barkley",
+   "p": "RB",
+   "t": "PHI",
+   "a": 25.5,
+   "b": 10,
+   "sd": 5.3,
+   "ft": null
+  },
+  {
+   "n": "Justin Herbert",
+   "p": "QB",
+   "t": "LAC",
+   "a": 25.6,
+   "b": 7,
+   "sd": 4.8,
+   "ft": null
+  },
+  {
+   "n": "CeeDee Lamb",
+   "p": "WR",
+   "t": "DAL",
+   "a": 25.7,
+   "b": 14,
+   "sd": 5.5,
+   "ft": 23
+  },
+  {
+   "n": "Ashton Jeanty",
+   "p": "RB",
+   "t": "LV",
+   "a": 28.5,
+   "b": 13,
+   "sd": 6.4,
+   "ft": null
+  },
+  {
+   "n": "Justin Jefferson",
+   "p": "WR",
+   "t": "MIN",
+   "a": 28.9,
+   "b": 6,
+   "sd": 6.7,
+   "ft": null
+  },
+  {
+   "n": "Jaxson Dart",
+   "p": "QB",
+   "t": "NYG",
+   "a": 29.6,
+   "b": 8,
+   "sd": 7.6,
+   "ft": null
+  },
+  {
+   "n": "Bo Nix",
+   "p": "QB",
+   "t": "DEN",
+   "a": 30.9,
+   "b": 10,
+   "sd": 6.4,
+   "ft": null
+  },
+  {
+   "n": "Chase Brown",
+   "p": "RB",
+   "t": "CIN",
+   "a": 31.7,
+   "b": 6,
+   "sd": 6.5,
+   "ft": 25
+  },
+  {
+   "n": "Rashee Rice",
+   "p": "WR",
+   "t": "KC",
+   "a": 32.7,
+   "b": 5,
+   "sd": 9.9,
+   "ft": null
+  },
+  {
+   "n": "George Pickens",
+   "p": "WR",
+   "t": "DAL",
+   "a": 33.1,
+   "b": 14,
+   "sd": 5.1,
+   "ft": null
+  },
+  {
+   "n": "Josh Jacobs",
+   "p": "RB",
+   "t": "GB",
+   "a": 34.3,
+   "b": 11,
+   "sd": 6.1,
+   "ft": null
+  },
+  {
+   "n": "A.J. Brown",
+   "p": "WR",
+   "t": "NE",
+   "a": 34.9,
+   "b": 11,
+   "sd": 5.1,
+   "ft": null
+  },
+  {
+   "n": "Nico Collins",
+   "p": "WR",
+   "t": "HOU",
+   "a": 36.7,
+   "b": 8,
+   "sd": 4.4,
+   "ft": null
+  },
+  {
+   "n": "Omarion Hampton",
+   "p": "RB",
+   "t": "LAC",
+   "a": 38.5,
+   "b": 7,
+   "sd": 6.4,
+   "ft": 17
+  },
+  {
+   "n": "Kenneth Walker",
+   "p": "RB",
+   "t": "KC",
+   "a": 39.7,
+   "b": 5,
+   "sd": 8.1,
+   "ft": null
+  },
+  {
+   "n": "Kyren Williams",
+   "p": "RB",
+   "t": "LAR",
+   "a": 41.3,
+   "b": 11,
+   "sd": 5.4,
+   "ft": null
+  },
+  {
+   "n": "Baker Mayfield",
+   "p": "QB",
+   "t": "TB",
+   "a": 41.4,
+   "b": 10,
+   "sd": 8.3,
+   "ft": null
+  },
+  {
+   "n": "Zay Flowers",
+   "p": "WR",
+   "t": "BAL",
+   "a": 42.1,
+   "b": 13,
+   "sd": 4.0,
+   "ft": null
+  },
+  {
+   "n": "Chris Olave",
+   "p": "WR",
+   "t": "NO",
+   "a": 42.2,
+   "b": 8,
+   "sd": 6.2,
+   "ft": null
+  },
+  {
+   "n": "Javonte Williams",
+   "p": "RB",
+   "t": "DAL",
+   "a": 47.4,
+   "b": 14,
+   "sd": 5.0,
+   "ft": null
+  },
+  {
+   "n": "Tyler Shough",
+   "p": "QB",
+   "t": "NO",
+   "a": 47.8,
+   "b": 8,
+   "sd": 8.8,
+   "ft": null
+  },
+  {
+   "n": "Breece Hall",
+   "p": "RB",
+   "t": "NYJ",
+   "a": 48.2,
+   "b": 13,
+   "sd": 5.5,
+   "ft": null
+  },
+  {
+   "n": "Jeremiyah Love",
+   "p": "RB",
+   "t": "ARI",
+   "a": 48.8,
+   "b": 14,
+   "sd": 5.9,
+   "ft": null
+  },
+  {
+   "n": "Malik Nabers",
+   "p": "WR",
+   "t": "NYG",
+   "a": 50.6,
+   "b": 8,
+   "sd": 10.8,
+   "ft": null
+  },
+  {
+   "n": "Emeka Egbuka",
+   "p": "WR",
+   "t": "TB",
+   "a": 50.7,
+   "b": 10,
+   "sd": 6.4,
+   "ft": null
+  },
+  {
+   "n": "Tee Higgins",
+   "p": "WR",
+   "t": "CIN",
+   "a": 51.6,
+   "b": 6,
+   "sd": 5.0,
+   "ft": null
+  },
+  {
+   "n": "Davante Adams",
+   "p": "WR",
+   "t": "LAR",
+   "a": 52.1,
+   "b": 11,
+   "sd": 5.8,
+   "ft": null
+  },
+  {
+   "n": "Cam Skattebo",
+   "p": "RB",
+   "t": "NYG",
+   "a": 52.3,
+   "b": 8,
+   "sd": 5.3,
+   "ft": 53
+  },
+  {
+   "n": "Kyler Murray",
+   "p": "QB",
+   "t": "MIN",
+   "a": 53.1,
+   "b": 6,
+   "sd": 10.5,
+   "ft": null
+  },
+  {
+   "n": "Jameson Williams",
+   "p": "WR",
+   "t": "DET",
+   "a": 53.1,
+   "b": 6,
+   "sd": 6.1,
+   "ft": null
+  },
+  {
+   "n": "Tetairoa McMillan",
+   "p": "WR",
+   "t": "CAR",
+   "a": 53.1,
+   "b": 5,
+   "sd": 5.4,
+   "ft": null
+  },
+  {
+   "n": "DeVonta Smith",
+   "p": "WR",
+   "t": "PHI",
+   "a": 55.9,
+   "b": 10,
+   "sd": 5.5,
+   "ft": null
+  },
+  {
+   "n": "Sam Darnold",
+   "p": "QB",
+   "t": "SEA",
+   "a": 56.9,
+   "b": 11,
+   "sd": 10.6,
+   "ft": null
+  },
+  {
+   "n": "Jordan Love",
+   "p": "QB",
+   "t": "GB",
+   "a": 57.9,
+   "b": 11,
+   "sd": 11.4,
+   "ft": null
+  },
+  {
+   "n": "Travis Etienne Jr.",
+   "p": "RB",
+   "t": "NO",
+   "a": 58.7,
+   "b": 8,
+   "sd": 6.9,
+   "ft": null
+  },
+  {
+   "n": "D'Andre Swift",
+   "p": "RB",
+   "t": "CHI",
+   "a": 59.4,
+   "b": 10,
+   "sd": 7.0,
+   "ft": null
+  },
+  {
+   "n": "Garrett Wilson",
+   "p": "WR",
+   "t": "NYJ",
+   "a": 59.5,
+   "b": 13,
+   "sd": 5.3,
+   "ft": null
+  },
+  {
+   "n": "Rome Odunze",
+   "p": "WR",
+   "t": "CHI",
+   "a": 61.0,
+   "b": 10,
+   "sd": 6.2,
+   "ft": null
+  },
+  {
+   "n": "Brock Bowers",
+   "p": "TE",
+   "t": "LV",
+   "a": 61.0,
+   "b": 13,
+   "sd": 15.0,
+   "ft": null
+  },
+  {
+   "n": "Terry McLaurin",
+   "p": "WR",
+   "t": "WAS",
+   "a": 63.8,
+   "b": 7,
+   "sd": 6.1,
+   "ft": null
+  },
+  {
+   "n": "Bucky Irving",
+   "p": "RB",
+   "t": "TB",
+   "a": 64.5,
+   "b": 10,
+   "sd": 6.3,
+   "ft": null
+  },
+  {
+   "n": "Trey McBride",
+   "p": "TE",
+   "t": "ARI",
+   "a": 65.2,
+   "b": 14,
+   "sd": 12.5,
+   "ft": null
+  },
+  {
+   "n": "Quinshon Judkins",
+   "p": "RB",
+   "t": "CLE",
+   "a": 66.2,
+   "b": 11,
+   "sd": 6.8,
+   "ft": null
+  },
+  {
+   "n": "Ladd McConkey",
+   "p": "WR",
+   "t": "LAC",
+   "a": 66.8,
+   "b": 7,
+   "sd": 7.1,
+   "ft": null
+  },
+  {
+   "n": "Bhayshul Tuten",
+   "p": "RB",
+   "t": "JAX",
+   "a": 67.0,
+   "b": 7,
+   "sd": 7.8,
+   "ft": null
+  },
+  {
+   "n": "Alec Pierce",
+   "p": "WR",
+   "t": "IND",
+   "a": 68.8,
+   "b": 13,
+   "sd": 6.5,
+   "ft": null
+  },
+  {
+   "n": "DJ Moore",
+   "p": "WR",
+   "t": "BUF",
+   "a": 71.1,
+   "b": 7,
+   "sd": 9.4,
+   "ft": null
+  },
+  {
+   "n": "C.J. Stroud",
+   "p": "QB",
+   "t": "HOU",
+   "a": 71.3,
+   "b": 8,
+   "sd": 10.2,
+   "ft": null
+  },
+  {
+   "n": "Daniel Jones",
+   "p": "QB",
+   "t": "IND",
+   "a": 72.5,
+   "b": 13,
+   "sd": 12.4,
+   "ft": null
+  },
+  {
+   "n": "David Montgomery",
+   "p": "RB",
+   "t": "HOU",
+   "a": 73.0,
+   "b": 8,
+   "sd": 7.6,
+   "ft": null
+  },
+  {
+   "n": "Jaylen Waddle",
+   "p": "WR",
+   "t": "DEN",
+   "a": 73.3,
+   "b": 10,
+   "sd": 7.2,
+   "ft": null
+  },
+  {
+   "n": "TreVeyon Henderson",
+   "p": "RB",
+   "t": "NE",
+   "a": 74.8,
+   "b": 11,
+   "sd": 7.1,
+   "ft": null
+  },
+  {
+   "n": "Christian Watson",
+   "p": "WR",
+   "t": "GB",
+   "a": 75.6,
+   "b": 11,
+   "sd": 8.1,
+   "ft": null
+  },
+  {
+   "n": "Mike Evans",
+   "p": "WR",
+   "t": "SF",
+   "a": 75.9,
+   "b": 8,
+   "sd": 8.7,
+   "ft": null
+  },
+  {
+   "n": "Luther Burden III",
+   "p": "WR",
+   "t": "CHI",
+   "a": 79.3,
+   "b": 10,
+   "sd": 8.5,
+   "ft": null
+  },
+  {
+   "n": "Courtland Sutton",
+   "p": "WR",
+   "t": "DEN",
+   "a": 79.5,
+   "b": 10,
+   "sd": 8.2,
+   "ft": null
+  },
+  {
+   "n": "Malik Willis",
+   "p": "QB",
+   "t": "MIA",
+   "a": 80.9,
+   "b": 6,
+   "sd": 10.7,
+   "ft": null
+  },
+  {
+   "n": "DK Metcalf",
+   "p": "WR",
+   "t": "PIT",
+   "a": 81.9,
+   "b": 9,
+   "sd": 7.3,
+   "ft": null
+  },
+  {
+   "n": "Colston Loveland",
+   "p": "TE",
+   "t": "CHI",
+   "a": 82.3,
+   "b": 10,
+   "sd": 10.7,
+   "ft": null
+  },
+  {
+   "n": "Tony Pollard",
+   "p": "RB",
+   "t": "TEN",
+   "a": 82.5,
+   "b": 9,
+   "sd": 6.7,
+   "ft": null
+  },
+  {
+   "n": "Marvin Harrison Jr.",
+   "p": "WR",
+   "t": "ARI",
+   "a": 84.6,
+   "b": 14,
+   "sd": 7.4,
+   "ft": 76
+  },
+  {
+   "n": "Jadarian Price",
+   "p": "RB",
+   "t": "SEA",
+   "a": 86.0,
+   "b": 11,
+   "sd": 11.9,
+   "ft": null
+  },
+  {
+   "n": "Parker Washington",
+   "p": "WR",
+   "t": "JAX",
+   "a": 86.6,
+   "b": 7,
+   "sd": 6.9,
+   "ft": null
+  },
+  {
+   "n": "Brian Thomas Jr.",
+   "p": "WR",
+   "t": "JAX",
+   "a": 89.3,
+   "b": 7,
+   "sd": 6.5,
+   "ft": null
+  },
+  {
+   "n": "Bryce Young",
+   "p": "QB",
+   "t": "CAR",
+   "a": 89.4,
+   "b": 5,
+   "sd": 7.4,
+   "ft": null
+  },
+  {
+   "n": "Tyler Warren",
+   "p": "TE",
+   "t": "IND",
+   "a": 89.6,
+   "b": 13,
+   "sd": 9.0,
+   "ft": null
+  },
+  {
+   "n": "Rhamondre Stevenson",
+   "p": "RB",
+   "t": "NE",
+   "a": 90.0,
+   "b": 11,
+   "sd": 8.7,
+   "ft": null
+  },
+  {
+   "n": "Rico Dowdle",
+   "p": "RB",
+   "t": "PIT",
+   "a": 91.3,
+   "b": 9,
+   "sd": 9.1,
+   "ft": 104
+  },
+  {
+   "n": "Carnell Tate",
+   "p": "WR",
+   "t": "TEN",
+   "a": 91.8,
+   "b": 9,
+   "sd": 7.3,
+   "ft": null
+  },
+  {
+   "n": "Jaylen Warren",
+   "p": "RB",
+   "t": "PIT",
+   "a": 95.2,
+   "b": 9,
+   "sd": 12.1,
+   "ft": null
+  },
+  {
+   "n": "Quentin Johnston",
+   "p": "WR",
+   "t": "LAC",
+   "a": 95.7,
+   "b": 7,
+   "sd": 8.9,
+   "ft": null
+  },
+  {
+   "n": "J.K. Dobbins",
+   "p": "RB",
+   "t": "DEN",
+   "a": 96.0,
+   "b": 10,
+   "sd": 9.8,
+   "ft": null
+  },
+  {
+   "n": "Chuba Hubbard",
+   "p": "RB",
+   "t": "CAR",
+   "a": 96.8,
+   "b": 5,
+   "sd": 9.7,
+   "ft": null
+  },
+  {
+   "n": "Cam Ward",
+   "p": "QB",
+   "t": "TEN",
+   "a": 98.6,
+   "b": 9,
+   "sd": 11.9,
+   "ft": null
+  },
+  {
+   "n": "Michael Wilson",
+   "p": "WR",
+   "t": "ARI",
+   "a": 100.4,
+   "b": 14,
+   "sd": 10.1,
+   "ft": null
+  },
+  {
+   "n": "Jordan Addison",
+   "p": "WR",
+   "t": "MIN",
+   "a": 100.8,
+   "b": 6,
+   "sd": 7.5,
+   "ft": null
+  },
+  {
+   "n": "Tucker Kraft",
+   "p": "TE",
+   "t": "GB",
+   "a": 101.4,
+   "b": 11,
+   "sd": 12.8,
+   "ft": null
+  },
+  {
+   "n": "Jakobi Meyers",
+   "p": "WR",
+   "t": "JAX",
+   "a": 102.4,
+   "b": 7,
+   "sd": 9.9,
+   "ft": null
+  },
+  {
+   "n": "Chris Godwin Jr.",
+   "p": "WR",
+   "t": "TB",
+   "a": 103.1,
+   "b": 10,
+   "sd": 9.7,
+   "ft": null
+  },
+  {
+   "n": "Jayden Reed",
+   "p": "WR",
+   "t": "GB",
+   "a": 104.8,
+   "b": 11,
+   "sd": 7.8,
+   "ft": null
+  },
+  {
+   "n": "Harold Fannin Jr.",
+   "p": "TE",
+   "t": "CLE",
+   "a": 107.0,
+   "b": 11,
+   "sd": 11.6,
+   "ft": null
+  },
+  {
+   "n": "Xavier Worthy",
+   "p": "WR",
+   "t": "KC",
+   "a": 107.2,
+   "b": 5,
+   "sd": 7.1,
+   "ft": null
+  },
+  {
+   "n": "Denver Defense",
+   "p": "DEF",
+   "t": "DEN",
+   "a": 108.3,
+   "b": 10,
+   "sd": 9.5,
+   "ft": null
+  },
+  {
+   "n": "Michael Pittman Jr.",
+   "p": "WR",
+   "t": "PIT",
+   "a": 109.0,
+   "b": 9,
+   "sd": 8.9,
+   "ft": null
+  },
+  {
+   "n": "Jacoby Brissett",
+   "p": "QB",
+   "t": "ARI",
+   "a": 109.1,
+   "b": 14,
+   "sd": 15.3,
+   "ft": null
+  },
+  {
+   "n": "Jacory Croskey-Merritt",
+   "p": "RB",
+   "t": "WAS",
+   "a": 109.1,
+   "b": 7,
+   "sd": 12.3,
+   "ft": null
+  },
+  {
+   "n": "Seattle Defense",
+   "p": "DEF",
+   "t": "SEA",
+   "a": 109.6,
+   "b": 11,
+   "sd": 13.6,
+   "ft": null
+  },
+  {
+   "n": "Kyle Pitts Sr.",
+   "p": "TE",
+   "t": "ATL",
+   "a": 110.8,
+   "b": 11,
+   "sd": 13.9,
+   "ft": null
+  },
+  {
+   "n": "Jordyn Tyson",
+   "p": "WR",
+   "t": "NO",
+   "a": 110.9,
+   "b": 8,
+   "sd": 19.9,
+   "ft": null
+  },
+  {
+   "n": "Sam LaPorta",
+   "p": "TE",
+   "t": "DET",
+   "a": 112.6,
+   "b": 6,
+   "sd": 16.0,
+   "ft": null
+  },
+  {
+   "n": "Kyle Monangai",
+   "p": "RB",
+   "t": "CHI",
+   "a": 112.8,
+   "b": 10,
+   "sd": 13.4,
+   "ft": null
+  },
+  {
+   "n": "Aaron Rodgers",
+   "p": "QB",
+   "t": "PIT",
+   "a": 112.9,
+   "b": 9,
+   "sd": 15.3,
+   "ft": null
+  },
+  {
+   "n": "Dallas Goedert",
+   "p": "TE",
+   "t": "PHI",
+   "a": 115.1,
+   "b": 10,
+   "sd": 18.3,
+   "ft": null
+  },
+  {
+   "n": "RJ Harvey",
+   "p": "RB",
+   "t": "DEN",
+   "a": 116.0,
+   "b": 10,
+   "sd": 17.4,
+   "ft": null
+  },
+  {
+   "n": "Deebo Samuel Sr.",
+   "p": "WR",
+   "t": "SF",
+   "a": 116.2,
+   "b": 8,
+   "sd": 13.9,
+   "ft": null
+  },
+  {
+   "n": "Stefon Diggs",
+   "p": "WR",
+   "t": "WAS",
+   "a": 116.9,
+   "b": 7,
+   "sd": 13.9,
+   "ft": null
+  },
+  {
+   "n": "Makai Lemon",
+   "p": "WR",
+   "t": "PHI",
+   "a": 117.8,
+   "b": 10,
+   "sd": 14.4,
+   "ft": null
+  },
+  {
+   "n": "Houston Defense",
+   "p": "DEF",
+   "t": "HOU",
+   "a": 118.1,
+   "b": 8,
+   "sd": 10.2,
+   "ft": null
+  },
+  {
+   "n": "Geno Smith",
+   "p": "QB",
+   "t": "NYJ",
+   "a": 118.6,
+   "b": 13,
+   "sd": 18.4,
+   "ft": null
+  },
+  {
+   "n": "Ricky Pearsall",
+   "p": "WR",
+   "t": "SF",
+   "a": 121.2,
+   "b": 8,
+   "sd": 13.6,
+   "ft": null
+  },
+  {
+   "n": "Josh Downs",
+   "p": "WR",
+   "t": "IND",
+   "a": 121.9,
+   "b": 13,
+   "sd": 14.9,
+   "ft": null
+  },
+  {
+   "n": "Blake Corum",
+   "p": "RB",
+   "t": "LAR",
+   "a": 122.4,
+   "b": 11,
+   "sd": 14.6,
+   "ft": null
+  },
+  {
+   "n": "Aaron Jones Sr.",
+   "p": "RB",
+   "t": "MIN",
+   "a": 122.4,
+   "b": 6,
+   "sd": 14.3,
+   "ft": null
+  },
+  {
+   "n": "Jonathon Brooks",
+   "p": "RB",
+   "t": "CAR",
+   "a": 123.0,
+   "b": 5,
+   "sd": 19.9,
+   "ft": null
+  },
+  {
+   "n": "Jordan Mason",
+   "p": "RB",
+   "t": "MIN",
+   "a": 123.0,
+   "b": 6,
+   "sd": 16.2,
+   "ft": null
+  },
+  {
+   "n": "Romeo Doubs",
+   "p": "WR",
+   "t": "NE",
+   "a": 124.0,
+   "b": 11,
+   "sd": 10.6,
+   "ft": null
+  },
+  {
+   "n": "Wan'Dale Robinson",
+   "p": "WR",
+   "t": "TEN",
+   "a": 124.1,
+   "b": 9,
+   "sd": 12.2,
+   "ft": null
+  },
+  {
+   "n": "Matthew Golden",
+   "p": "WR",
+   "t": "GB",
+   "a": 124.1,
+   "b": 11,
+   "sd": 13.9,
+   "ft": null
+  },
+  {
+   "n": "Mark Andrews",
+   "p": "TE",
+   "t": "BAL",
+   "a": 125.2,
+   "b": 13,
+   "sd": 15.6,
+   "ft": null
+  },
+  {
+   "n": "Chimere Dike",
+   "p": "WR",
+   "t": "TEN",
+   "a": 126.2,
+   "b": 9,
+   "sd": 34.2,
+   "ft": null
+  },
+  {
+   "n": "Brandon Aubrey",
+   "p": "PK",
+   "t": "DAL",
+   "a": 127.7,
+   "b": 14,
+   "sd": 13.2,
+   "ft": null
+  },
+  {
+   "n": "Rachaad White",
+   "p": "RB",
+   "t": "WAS",
+   "a": 127.8,
+   "b": 7,
+   "sd": 17.1,
+   "ft": null
+  },
+  {
+   "n": "Fernando Mendoza",
+   "p": "QB",
+   "t": "LV",
+   "a": 129.6,
+   "b": 13,
+   "sd": 21.9,
+   "ft": null
+  },
+  {
+   "n": "Minnesota Defense",
+   "p": "DEF",
+   "t": "MIN",
+   "a": 129.9,
+   "b": 6,
+   "sd": 8.3,
+   "ft": null
+  },
+  {
+   "n": "LA Rams Defense",
+   "p": "DEF",
+   "t": "LAR",
+   "a": 130.0,
+   "b": 11,
+   "sd": 12.0,
+   "ft": null
+  },
+  {
+   "n": "Rashid Shaheed",
+   "p": "WR",
+   "t": "SEA",
+   "a": 130.3,
+   "b": 11,
+   "sd": 15.1,
+   "ft": null
+  },
+  {
+   "n": "George Kittle",
+   "p": "TE",
+   "t": "SF",
+   "a": 130.6,
+   "b": 8,
+   "sd": 17.1,
+   "ft": null
+  },
+  {
+   "n": "Kenny Gainwell",
+   "p": "RB",
+   "t": "TB",
+   "a": 131.4,
+   "b": 10,
+   "sd": 17.7,
+   "ft": null
+  },
+  {
+   "n": "Kenyon Sadiq",
+   "p": "TE",
+   "t": "NYJ",
+   "a": 131.8,
+   "b": 13,
+   "sd": 28.5,
+   "ft": null
+  },
+  {
+   "n": "Jason Myers",
+   "p": "PK",
+   "t": "SEA",
+   "a": 132.9,
+   "b": 11,
+   "sd": 8.1,
+   "ft": null
+  },
+  {
+   "n": "Oronde Gadsden",
+   "p": "TE",
+   "t": "LAC",
+   "a": 134.8,
+   "b": 7,
+   "sd": 12.8,
+   "ft": null
+  },
+  {
+   "n": "AJ Barner",
+   "p": "TE",
+   "t": "SEA",
+   "a": 134.9,
+   "b": 11,
+   "sd": 16.6,
+   "ft": null
+  },
+  {
+   "n": "Shedeur Sanders",
+   "p": "QB",
+   "t": "CLE",
+   "a": 135.0,
+   "b": 11,
+   "sd": 29.2,
+   "ft": null
+  },
+  {
+   "n": "KC Concepcion",
+   "p": "WR",
+   "t": "CLE",
+   "a": 135.3,
+   "b": 11,
+   "sd": 12.7,
+   "ft": null
+  },
+  {
+   "n": "Jayden Higgins",
+   "p": "WR",
+   "t": "HOU",
+   "a": 135.3,
+   "b": 8,
+   "sd": 12.2,
+   "ft": null
+  },
+  {
+   "n": "Khalil Shakir",
+   "p": "WR",
+   "t": "BUF",
+   "a": 135.4,
+   "b": 7,
+   "sd": 9.5,
+   "ft": null
+  },
+  {
+   "n": "Jonah Coleman",
+   "p": "RB",
+   "t": "DEN",
+   "a": 135.5,
+   "b": 10,
+   "sd": 25.9,
+   "ft": null
+  },
+  {
+   "n": "Tua Tagovailoa",
+   "p": "QB",
+   "t": "ATL",
+   "a": 135.7,
+   "b": 11,
+   "sd": 20.1,
+   "ft": null
+  },
+  {
+   "n": "Deshaun Watson",
+   "p": "QB",
+   "t": "CLE",
+   "a": 136.1,
+   "b": 11,
+   "sd": 27.2,
+   "ft": null
+  },
+  {
+   "n": "Ka'imi Fairbairn",
+   "p": "PK",
+   "t": "HOU",
+   "a": 136.9,
+   "b": 8,
+   "sd": 6.7,
+   "ft": null
+  },
+  {
+   "n": "De'Zhaun Stribling",
+   "p": "WR",
+   "t": "SF",
+   "a": 137.7,
+   "b": 8,
+   "sd": 18.6,
+   "ft": null
+  },
+  {
+   "n": "Jalen Coker",
+   "p": "WR",
+   "t": "CAR",
+   "a": 137.8,
+   "b": 5,
+   "sd": 10.8,
+   "ft": null
+  },
+  {
+   "n": "Travis Kelce",
+   "p": "TE",
+   "t": "KC",
+   "a": 137.9,
+   "b": 5,
+   "sd": 16.7,
+   "ft": null
+  },
+  {
+   "n": "Brenton Strange",
+   "p": "TE",
+   "t": "JAX",
+   "a": 138.1,
+   "b": 7,
+   "sd": 16.6,
+   "ft": 173
+  },
+  {
+   "n": "Tre Tucker",
+   "p": "WR",
+   "t": "LV",
+   "a": 138.3,
+   "b": 13,
+   "sd": 12.2,
+   "ft": null
+  },
+  {
+   "n": "New England Defense",
+   "p": "DEF",
+   "t": "NE",
+   "a": 138.4,
+   "b": 11,
+   "sd": 8.8,
+   "ft": null
+  },
+  {
+   "n": "Detroit Defense",
+   "p": "DEF",
+   "t": "DET",
+   "a": 138.8,
+   "b": 6,
+   "sd": 8.7,
+   "ft": null
+  },
+  {
+   "n": "Calvin Ridley",
+   "p": "WR",
+   "t": "TEN",
+   "a": 138.9,
+   "b": 9,
+   "sd": 12.9,
+   "ft": null
+  },
+  {
+   "n": "Cameron Dicker",
+   "p": "PK",
+   "t": "LAC",
+   "a": 139.1,
+   "b": 7,
+   "sd": 9.4,
+   "ft": null
+  },
+  {
+   "n": "Jake Ferguson",
+   "p": "TE",
+   "t": "DAL",
+   "a": 139.8,
+   "b": 14,
+   "sd": 22.0,
+   "ft": null
+  },
+  {
+   "n": "Zach Charbonnet",
+   "p": "RB",
+   "t": "SEA",
+   "a": 139.9,
+   "b": 11,
+   "sd": 19.6,
+   "ft": null
+  },
+  {
+   "n": "Philadelphia Defense",
+   "p": "DEF",
+   "t": "PHI",
+   "a": 140.2,
+   "b": 10,
+   "sd": 11.7,
+   "ft": null
+  },
+  {
+   "n": "Keaton Mitchell",
+   "p": "RB",
+   "t": "LAC",
+   "a": 140.7,
+   "b": 7,
+   "sd": 32.3,
+   "ft": null
+  },
+  {
+   "n": "Isaiah Likely",
+   "p": "TE",
+   "t": "NYG",
+   "a": 140.9,
+   "b": 8,
+   "sd": 16.0,
+   "ft": null
+  },
+  {
+   "n": "Pittsburgh Defense",
+   "p": "DEF",
+   "t": "PIT",
+   "a": 141.4,
+   "b": 9,
+   "sd": 16.9,
+   "ft": null
+  },
+  {
+   "n": "Dalton Kincaid",
+   "p": "TE",
+   "t": "BUF",
+   "a": 142.3,
+   "b": 7,
+   "sd": 18.1,
+   "ft": null
+  },
+  {
+   "n": "Michael Penix Jr.",
+   "p": "QB",
+   "t": "ATL",
+   "a": 142.3,
+   "b": 11,
+   "sd": 18.3,
+   "ft": null
+  },
+  {
+   "n": "Carson Beck",
+   "p": "QB",
+   "t": "ARI",
+   "a": 142.5,
+   "b": 14,
+   "sd": 7.6,
+   "ft": null
+  },
+  {
+   "n": "Braelon Allen",
+   "p": "RB",
+   "t": "NYJ",
+   "a": 142.8,
+   "b": 13,
+   "sd": 14.1,
+   "ft": null
+  },
+  {
+   "n": "Kirk Cousins",
+   "p": "QB",
+   "t": "LV",
+   "a": 143.1,
+   "b": 13,
+   "sd": 21.6,
+   "ft": null
+  },
+  {
+   "n": "Theo Wease Jr.",
+   "p": "WR",
+   "t": "MIA",
+   "a": 143.7,
+   "b": 6,
+   "sd": 11.2,
+   "ft": null
+  },
+  {
+   "n": "Harrison Mevis",
+   "p": "PK",
+   "t": "LAR",
+   "a": 143.9,
+   "b": 11,
+   "sd": 8.9,
+   "ft": null
+  },
+  {
+   "n": "John Metchie III",
+   "p": "WR",
+   "t": "CAR",
+   "a": 144.7,
+   "b": 5,
+   "sd": 5.2,
+   "ft": null
+  },
+  {
+   "n": "Jerry Jeudy",
+   "p": "WR",
+   "t": "CLE",
+   "a": 144.7,
+   "b": 11,
+   "sd": 14.8,
+   "ft": null
+  },
+  {
+   "n": "Tyjae Spears",
+   "p": "RB",
+   "t": "TEN",
+   "a": 144.9,
+   "b": 9,
+   "sd": 25.4,
+   "ft": null
+  },
+  {
+   "n": "LA Chargers Defense",
+   "p": "DEF",
+   "t": "LAC",
+   "a": 145.1,
+   "b": 7,
+   "sd": 12.0,
+   "ft": null
+  },
+  {
+   "n": "Rashod Bateman",
+   "p": "WR",
+   "t": "BAL",
+   "a": 145.1,
+   "b": 13,
+   "sd": 13.8,
+   "ft": null
+  },
+  {
+   "n": "Andy Borregales",
+   "p": "PK",
+   "t": "NE",
+   "a": 145.5,
+   "b": 11,
+   "sd": 3.1,
+   "ft": null
+  },
+  {
+   "n": "Juwan Johnson",
+   "p": "TE",
+   "t": "NO",
+   "a": 145.7,
+   "b": 8,
+   "sd": 21.6,
+   "ft": null
+  },
+  {
+   "n": "Jake Bates",
+   "p": "PK",
+   "t": "DET",
+   "a": 145.8,
+   "b": 6,
+   "sd": 8.6,
+   "ft": null
+  },
+  {
+   "n": "J.J. McCarthy",
+   "p": "QB",
+   "t": "MIN",
+   "a": 146.2,
+   "b": 6,
+   "sd": 16.3,
+   "ft": null
+  },
+  {
+   "n": "Hunter Henry",
+   "p": "TE",
+   "t": "NE",
+   "a": 147.3,
+   "b": 11,
+   "sd": 16.8,
+   "ft": null
+  },
+  {
+   "n": "Chris Boswell",
+   "p": "PK",
+   "t": "PIT",
+   "a": 147.6,
+   "b": 9,
+   "sd": 11.2,
+   "ft": null
+  },
+  {
+   "n": "Isiah Pacheco",
+   "p": "RB",
+   "t": "DET",
+   "a": 147.8,
+   "b": 6,
+   "sd": 18.8,
+   "ft": null
+  },
+  {
+   "n": "Jalen McMillan",
+   "p": "WR",
+   "t": "TB",
+   "a": 148.1,
+   "b": 10,
+   "sd": 13.4,
+   "ft": null
+  },
+  {
+   "n": "Chig Okonkwo",
+   "p": "TE",
+   "t": "WAS",
+   "a": 148.2,
+   "b": 7,
+   "sd": 25.3,
+   "ft": null
+  },
+  {
+   "n": "Green Bay Defense",
+   "p": "DEF",
+   "t": "GB",
+   "a": 148.9,
+   "b": 11,
+   "sd": 21.8,
+   "ft": null
+  },
+  {
+   "n": "Dallas Defense",
+   "p": "DEF",
+   "t": "DAL",
+   "a": 149.0,
+   "b": 14,
+   "sd": 10.6,
+   "ft": null
+  },
+  {
+   "n": "Ja'Kobi Lane",
+   "p": "WR",
+   "t": "BAL",
+   "a": 149.5,
+   "b": 13,
+   "sd": 13.4,
+   "ft": null
+  },
+  {
+   "n": "Atlanta Defense",
+   "p": "DEF",
+   "t": "ATL",
+   "a": 149.5,
+   "b": 11,
+   "sd": 16.2,
+   "ft": null
+  },
+  {
+   "n": "Tennessee Defense",
+   "p": "DEF",
+   "t": "TEN",
+   "a": 150.4,
+   "b": 9,
+   "sd": 16.0,
+   "ft": null
+  },
+  {
+   "n": "Alvin Kamara",
+   "p": "RB",
+   "t": "NO",
+   "a": 150.6,
+   "b": 8,
+   "sd": 18.8,
+   "ft": 137
+  },
+  {
+   "n": "Tyler Allgeier",
+   "p": "RB",
+   "t": "ARI",
+   "a": 150.9,
+   "b": 14,
+   "sd": 21.0,
+   "ft": null
+  },
+  {
+   "n": "Cam Little",
+   "p": "PK",
+   "t": "JAX",
+   "a": 151.0,
+   "b": 7,
+   "sd": 12.4,
+   "ft": null
+  },
+  {
+   "n": "Tyler Loop",
+   "p": "PK",
+   "t": "BAL",
+   "a": 151.1,
+   "b": 13,
+   "sd": 10.8,
+   "ft": null
+  },
+  {
+   "n": "Keenan Allen",
+   "p": "WR",
+   "t": "IND",
+   "a": 151.1,
+   "b": 13,
+   "sd": 15.3,
+   "ft": null
+  },
+  {
+   "n": "Chase McLaughlin",
+   "p": "PK",
+   "t": "TB",
+   "a": 151.4,
+   "b": 10,
+   "sd": 10.8,
+   "ft": null
+  },
+  {
+   "n": "Jacksonville Defense",
+   "p": "DEF",
+   "t": "JAX",
+   "a": 152.3,
+   "b": 7,
+   "sd": 15.2,
+   "ft": null
+  },
+  {
+   "n": "Brian Robinson",
+   "p": "RB",
+   "t": "ATL",
+   "a": 152.5,
+   "b": 11,
+   "sd": 18.6,
+   "ft": null
+  },
+  {
+   "n": "Eddy Pi\u00f1eiro",
+   "p": "PK",
+   "t": "SF",
+   "a": 153.2,
+   "b": 8,
+   "sd": 11.6,
+   "ft": null
+  },
+  {
+   "n": "Cairo Santos",
+   "p": "PK",
+   "t": "CHI",
+   "a": 153.4,
+   "b": 10,
+   "sd": 11.6,
+   "ft": null
+  },
+  {
+   "n": "Woody Marks",
+   "p": "RB",
+   "t": "HOU",
+   "a": 153.7,
+   "b": 8,
+   "sd": 17.3,
+   "ft": null
+  },
+  {
+   "n": "Travis Hunter",
+   "p": "WR",
+   "t": "JAX",
+   "a": 153.7,
+   "b": 7,
+   "sd": 19.8,
+   "ft": null
+  },
+  {
+   "n": "Jalen Nailor",
+   "p": "WR",
+   "t": "LV",
+   "a": 153.8,
+   "b": 13,
+   "sd": 15.2,
+   "ft": null
+  },
+  {
+   "n": "Dontayvion Wicks",
+   "p": "WR",
+   "t": "PHI",
+   "a": 154.1,
+   "b": 10,
+   "sd": 22.7,
+   "ft": null
+  },
+  {
+   "n": "Nick Folk",
+   "p": "PK",
+   "t": "ATL",
+   "a": 154.6,
+   "b": 11,
+   "sd": 13.5,
+   "ft": null
+  },
+  {
+   "n": "Ryan Flournoy",
+   "p": "WR",
+   "t": "DAL",
+   "a": 154.8,
+   "b": 14,
+   "sd": 10.5,
+   "ft": null
+  },
+  {
+   "n": "Baltimore Defense",
+   "p": "DEF",
+   "t": "BAL",
+   "a": 154.9,
+   "b": 13,
+   "sd": 14.6,
+   "ft": null
+  },
+  {
+   "n": "Will Reichard",
+   "p": "PK",
+   "t": "MIN",
+   "a": 155.1,
+   "b": 6,
+   "sd": 15.8,
+   "ft": null
+  },
+  {
+   "n": "Chris Rodriguez Jr.",
+   "p": "RB",
+   "t": "JAX",
+   "a": 155.3,
+   "b": 7,
+   "sd": 15.4,
+   "ft": null
+  },
+  {
+   "n": "Blake Grupe",
+   "p": "PK",
+   "t": "IND",
+   "a": 156.0,
+   "b": 13,
+   "sd": 14.4,
+   "ft": null
+  },
+  {
+   "n": "Jauan Jennings",
+   "p": "WR",
+   "t": "MIN",
+   "a": 156.9,
+   "b": 6,
+   "sd": 12.8,
+   "ft": null
+  },
+  {
+   "n": "Evan McPherson",
+   "p": "PK",
+   "t": "CIN",
+   "a": 157.3,
+   "b": 6,
+   "sd": 15.4,
+   "ft": null
+  },
+  {
+   "n": "Isaac TeSlaa",
+   "p": "WR",
+   "t": "DET",
+   "a": 157.8,
+   "b": 6,
+   "sd": 17.0,
+   "ft": null
+  },
+  {
+   "n": "Denzel Boston",
+   "p": "WR",
+   "t": "CLE",
+   "a": 158.0,
+   "b": 11,
+   "sd": 14.6,
+   "ft": null
+  },
+  {
+   "n": "Mike Washington Jr.",
+   "p": "RB",
+   "t": "LV",
+   "a": 158.1,
+   "b": 13,
+   "sd": 15.6,
+   "ft": null
+  },
+  {
+   "n": "Harrison Butker",
+   "p": "PK",
+   "t": "KC",
+   "a": 158.7,
+   "b": 5,
+   "sd": 12.8,
+   "ft": null
+  },
+  {
+   "n": "Buffalo Defense",
+   "p": "DEF",
+   "t": "BUF",
+   "a": 158.7,
+   "b": 7,
+   "sd": 13.0,
+   "ft": null
+  },
+  {
+   "n": "Tyrone Tracy Jr.",
+   "p": "RB",
+   "t": "NYG",
+   "a": 158.8,
+   "b": 8,
+   "sd": 20.2,
+   "ft": null
+  },
+  {
+   "n": "Tyler Bass",
+   "p": "PK",
+   "t": "BUF",
+   "a": 159.3,
+   "b": 7,
+   "sd": 18.9,
+   "ft": null
+  },
+  {
+   "n": "Cleveland Defense",
+   "p": "DEF",
+   "t": "CLE",
+   "a": 160.1,
+   "b": 11,
+   "sd": 15.1,
+   "ft": null
+  },
+  {
+   "n": "Tank Dell",
+   "p": "WR",
+   "t": "HOU",
+   "a": 160.6,
+   "b": 8,
+   "sd": 13.0,
+   "ft": null
+  },
+  {
+   "n": "Antonio Williams",
+   "p": "WR",
+   "t": "WAS",
+   "a": 161.2,
+   "b": 7,
+   "sd": 18.6,
+   "ft": null
+  },
+  {
+   "n": "Wil Lutz",
+   "p": "PK",
+   "t": "DEN",
+   "a": 161.3,
+   "b": 10,
+   "sd": 12.5,
+   "ft": null
+  },
+  {
+   "n": "Omar Cooper Jr.",
+   "p": "WR",
+   "t": "NYJ",
+   "a": 161.6,
+   "b": 13,
+   "sd": 14.9,
+   "ft": null
+  },
+  {
+   "n": "Trey Smack",
+   "p": "PK",
+   "t": "GB",
+   "a": 162.4,
+   "b": 11,
+   "sd": 15.8,
+   "ft": null
+  },
+  {
+   "n": "Cooper Kupp",
+   "p": "WR",
+   "t": "SEA",
+   "a": 163.0,
+   "b": 11,
+   "sd": 13.0,
+   "ft": null
+  },
+  {
+   "n": "Malachi Fields",
+   "p": "WR",
+   "t": "NYG",
+   "a": 163.4,
+   "b": 8,
+   "sd": 7.8,
+   "ft": null
+  },
+  {
+   "n": "Tre' Harris",
+   "p": "WR",
+   "t": "LAC",
+   "a": 165.0,
+   "b": 7,
+   "sd": 7.7,
+   "ft": null
+  },
+  {
+   "n": "Germie Bernard",
+   "p": "WR",
+   "t": "PIT",
+   "a": 165.7,
+   "b": 9,
+   "sd": 12.0,
+   "ft": null
+  },
+  {
+   "n": "Malik Washington",
+   "p": "WR",
+   "t": "MIA",
+   "a": 166.2,
+   "b": 6,
+   "sd": 13.3,
+   "ft": null
+  },
+  {
+   "n": "Adonai Mitchell",
+   "p": "WR",
+   "t": "NYJ",
+   "a": 167.8,
+   "b": 13,
+   "sd": 8.5,
+   "ft": null
+  },
+  {
+   "n": "MarShawn Lloyd",
+   "p": "RB",
+   "t": "GB",
+   "a": 167.9,
+   "b": 11,
+   "sd": 15.2,
+   "ft": null
+  },
+  {
+   "n": "Tank Bigsby",
+   "p": "RB",
+   "t": "PHI",
+   "a": 167.9,
+   "b": 10,
+   "sd": 13.2,
+   "ft": null
+  },
+  {
+   "n": "Kaytron Allen",
+   "p": "RB",
+   "t": "WAS",
+   "a": 168.6,
+   "b": 7,
+   "sd": 1.9,
+   "ft": null
+  },
+  {
+   "n": "New Orleans Defense",
+   "p": "DEF",
+   "t": "NO",
+   "a": 168.8,
+   "b": 8,
+   "sd": 12.3,
+   "ft": null
+  },
+  {
+   "n": "Kayshon Boutte",
+   "p": "WR",
+   "t": "NE",
+   "a": 171.0,
+   "b": 11,
+   "sd": 14.7,
+   "ft": null
+  }
+ ]
+}
