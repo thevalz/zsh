@@ -58,17 +58,34 @@ straight off disk has an opaque origin and the browser refuses every
 cross-origin request, so the Sleeper sync silently never starts. Published
 Artifacts are out for the same reason: their CSP blocks external hosts.
 
+Deployed by GitHub Actions to **https://thevalz.github.io/zsh/** on every push
+to `app/` or `data/`, and again at 11:17 UTC daily so the ADP stays current
+without anyone remembering to rebuild. One-time setup: repo **Settings → Pages
+→ Source: GitHub Actions**. The site is public, like the repo.
+
+Locally:
+
 ```sh
 python3 app/build.py
-cd app/dist && python3 -m http.server 8777
-# then open http://localhost:8777/draft-live.html
+cd app/dist && python3 -m http.server 8777      # or: npm run serve
+# open http://localhost:8777/
 ```
 
-GitHub Pages works too if you want it on your phone at the table.
+### Driving a Sleeper mock
 
-It finds the draft on its own from the league in `league_config.json`.
-`?draft=<id>` points it at any other draft — that is how you drive a Sleeper
-mock. `?league=<id>` switches leagues.
+The console adopts whatever draft you point it at — team count, round count and
+lineup all come from the draft's own settings, so a 10-team single-QB mock is
+scored against *that*, not against our 12-team superflex league.
+
+1. Start a mock in Sleeper.
+2. Open the site and hit **Connect draft**. It asks Sleeper what drafts your
+   account has and offers them as buttons. If your mock is not listed, use
+   *enter a draft ID* and paste the draft URL — it pulls the id out.
+3. A mock usually does not name you in `draft_order`, so the console asks which
+   seat is yours. Pick it, or pass `?slot=3` directly.
+
+`?draft=<id>` and `?league=<id>` both work as URL parameters. Changing draft
+clears `slot`, since a new draft means a new seat.
 
 What it does once connected: marks every pick as it happens, derives your own
 pick numbers from the draft order and traded picks (so pick 38 is in and 119 is

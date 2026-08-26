@@ -155,6 +155,15 @@ def main():
     open(out, "w").write(html)
     print(f"  built    {os.path.relpath(out, ROOT)}  {len(html) / 1024:.0f} KB")
 
+    # Root redirect for Pages. A meta refresh would drop the query string and
+    # ?draft= is the whole point, so hand off in script and keep it.
+    open(os.path.join(DIST, "index.html"), "w").write(
+        '<meta charset="utf-8"><title>Zebras Draft Console</title>\n'
+        '<script>location.replace("draft-live.html" + location.search + location.hash)</script>\n'
+        '<noscript><a href="draft-live.html">Open the draft console</a></noscript>\n'
+    )
+    print("  built    app/dist/index.html  (redirect, preserves ?draft=)")
+
 
 if __name__ == "__main__":
     main()

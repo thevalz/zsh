@@ -70,6 +70,19 @@ async function discoverDraft() {
 
 /* ---- who owns which pick ------------------------------------------------ */
 
+/* Which draft slot picks at a given overall pick. */
+function slotAt(n, draft) {
+  const set = draft.settings || {};
+  const teams = set.teams || D.teams;
+  const round = Math.ceil(n / teams);
+  const inRound = n - (round - 1) * teams;
+  let reversed = draft.type === 'snake' && round % 2 === 0;
+  // third-round reversal and friends flip the snake from a given round on
+  const rev = set.reversal_round || 0;
+  if (rev && round >= rev) reversed = !reversed;
+  return { round, slot: reversed ? teams - inRound + 1 : inRound };
+}
+
 function buildOwnership(draft, traded) {
   const set = draft.settings || {};
   const teams = set.teams || D.teams, rounds = set.rounds || D.rounds;
@@ -79,14 +92,23 @@ function buildOwnership(draft, traded) {
 
   const own = new Map();
   for (let n = 1; n <= teams * rounds; n++) {
-    const round = Math.ceil(n / teams);
-    const inRound = n - (round - 1) * teams;
-    const reversed = draft.type === 'snake' && round % 2 === 0;
-    const slot = reversed ? teams - inRound + 1 : inRound;
-    const original = slotToRoster[slot] ?? slotToRoster[String(slot)];
+    const { round, slot } = slotAt(n, draft);
+    // a mock has no roster ids, so fall back to the slot number itself
+    const original = slotToRoster[slot] ?? slotToRoster[String(slot)] ?? slot;
     own.set(n, moved.get(`${round}:${original}`) ?? original);
   }
   return own;
+}
+
+/* Roster shape straight from the draft, so a mock with different settings is
+   scored against its own lineup rather than our league's. */
+function slotsFromDraft(set) {
+  const out = [];
+  const push = (n, label) => { for (let i = 0; i < (n || 0); i++) out.push(label); };
+  push(set.slots_qb, 'QB'); push(set.slots_rb, 'RB'); push(set.slots_wr, 'WR');
+  push(set.slots_te, 'TE'); push(set.slots_flex, 'FLEX');
+  push(set.slots_super_flex, 'SUPER_FLEX'); push(set.slots_k, 'K'); push(set.slots_def, 'DEF');
+  return out.length ? out : null;
 }
 
 /* Roster a team holds at the moment — used by the need-aware simulation. */
@@ -139,9 +161,16 @@ function applyPicks(picks) {
 
 /* ---- polling ------------------------------------------------------------ */
 
-function setBanner(html) {
+/* `sticky` marks a banner that a healthy poll must not clear — the slot
+   prompt is a question for the user, not a transient network complaint. */
+function setBanner(html, sticky) {
   const b = el('syncBanner');
-  if (!html) { b.hidden = true; b.innerHTML = ''; return; }
+  if (!html) {
+    if (SYNC.sticky) return;
+    b.hidden = true; b.innerHTML = '';
+    return;
+  }
+  SYNC.sticky = !!sticky;
   b.hidden = false;
   b.innerHTML = html;
 }
@@ -162,6 +191,7 @@ async function pollOnce() {
     SYNC.err++;
     if (SYNC.err >= 3 && !SYNC.degraded) {
       SYNC.degraded = true;
+      SYNC.sticky = false;
       setBanner(`<b>Lost contact with Sleeper</b> — ${esc(e.message)}. `
         + 'Marking picks by hand works again in the meantime; the board re-syncs on its own when the connection comes back.');
     }
@@ -204,15 +234,43 @@ async function startSync() {
   try { traded = (await api(`/draft/${id}/traded_picks`)).data || []; } catch (e) {}
   SYNC.ownerOf = buildOwnership(SYNC.draft, traded);
 
-  const mySlot = (SYNC.draft.draft_order || {})[D.myUserId];
+  /* Adopt the draft's own shape. A mock can have a different team count,
+     round count and lineup than our league, and scoring it against our
+     roster slots would give confidently wrong advice. */
+  const set = SYNC.draft.settings || {};
+  if (set.teams) D.teams = set.teams;
+  if (set.rounds) D.rounds = set.rounds;
+  const shape = slotsFromDraft(set);
+  if (shape) { D.slots = shape; D.bench = set.slots_bn ?? D.bench; }
+
+  /* Which team is ours. A league draft knows from draft_order; a mock you
+     joined anonymously does not, so ?slot=N settles it. */
+  const q = new URLSearchParams(location.search);
+  const forced = parseInt(q.get('slot'), 10);
   const slotMap = SYNC.draft.slot_to_roster_id || {};
-  SYNC.myRosterId = mySlot ? (slotMap[mySlot] ?? slotMap[String(mySlot)]) : null;
+  let mySlot = (SYNC.draft.draft_order || {})[D.myUserId];
+  if (!mySlot && forced >= 1 && forced <= (set.teams || D.teams)) mySlot = forced;
+  SYNC.mySlot = mySlot || null;
+  SYNC.myRosterId = mySlot ? (slotMap[mySlot] ?? slotMap[String(mySlot)] ?? mySlot) : null;
 
   if (SYNC.myRosterId != null) {
     SYNC.owned = [...SYNC.ownerOf.entries()]
       .filter(([, rid]) => rid === SYNC.myRosterId)
       .map(([n]) => n).sort((a, b) => a - b);
     SYNCED_PICKS = SYNC.owned;
+  } else {
+    setBanner('<b>Which team is yours?</b> This draft does not list your Sleeper account, '
+      + 'which is normal for a mock. Pick your draft slot so the recommendations know when you are up — '
+      + '<button id="bSlot" class="mini">choose slot</button>', true);
+    const btn = el('bSlot');
+    if (btn) btn.onclick = () => {
+      const v = prompt(`Your draft slot, 1 to ${set.teams || D.teams}:`, '');
+      const n = parseInt(v, 10);
+      if (!(n >= 1)) return;
+      const p = new URLSearchParams(location.search);
+      p.set('slot', String(n));
+      location.search = p.toString();
+    };
   }
 
   // team names are a nicety and absent from standalone mocks
@@ -243,12 +301,42 @@ function renderSync() {
     : `live · ${SYNC.picks.length} picks${SYNC.note ? ' · ' + SYNC.note : ''}`;
 }
 
-el('bSync').onclick = () => {
-  const cur = new URLSearchParams(location.search).get('draft') || SYNC.draftId || '';
-  const v = prompt('Sleeper draft ID (or a sleeper.com draft URL) — blank to use the league default:', cur);
-  if (v === null) return;
-  const id = (v.match(/(\d{6,})/) || [])[1];
+function goToDraft(id) {
   const q = new URLSearchParams(location.search);
   if (id) q.set('draft', id); else q.delete('draft');
+  q.delete('slot');                       // a different draft means a different seat
   location.search = q.toString();
+}
+
+/* Hunting a draft id out of a URL is a miserable way to start a mock, so ask
+   Sleeper what drafts this account has and offer them as buttons. */
+el('bSync').onclick = async () => {
+  setBanner('<b>Looking for your drafts…</b>', true);
+  let drafts = [];
+  if (D.myUserId) {
+    try {
+      drafts = (await api(`/user/${D.myUserId}/drafts/nfl/${D.season || new Date().getFullYear()}`)).data || [];
+    } catch (e) { /* fall through to manual entry */ }
+  }
+  const rows = drafts.map(d => {
+    const m = d.metadata || {}, s = d.settings || {};
+    const label = `${m.name || 'Mock draft'} · ${s.teams || '?'}-team ${m.scoring_type || ''} · ${d.status}`;
+    return `<button class="mini" data-draft="${esc(d.draft_id)}">${esc(label)}</button>`;
+  }).join(' ');
+  setBanner(
+    (rows ? `<b>Your drafts</b> — ${rows}<br>` : '<b>No drafts came back for this account.</b> ')
+    + '<button id="bManual" class="mini">enter a draft ID</button> '
+    + '<button id="bDismiss" class="mini">cancel</button>', true);
+
+  el('bManual').onclick = () => {
+    const v = prompt('Sleeper draft ID, or paste the draft URL:', SYNC.draftId || '');
+    if (v === null) return;
+    goToDraft((v.match(/(\d{6,})/) || [])[1]);
+  };
+  el('bDismiss').onclick = () => { SYNC.sticky = false; setBanner(''); };
 };
+
+addEventListener('click', e => {
+  const t = e.target.closest('[data-draft]');
+  if (t) goToDraft(t.dataset.draft);
+});
