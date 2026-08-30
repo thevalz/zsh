@@ -1,4 +1,6 @@
-node_modules/
+# no trailing slash: that form matches directories only, and a local
+# node_modules is often a symlink to a cache outside the repo
+node_modules
 package-lock.json
 
 # local build output; docs/ is what GitHub Pages serves
