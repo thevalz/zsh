@@ -21,7 +21,8 @@ forfeited to the two keepers.
 ## Layout
 
 ```
-app/build.py               refresh ADP + player-id map, emit app/dist/draft-live.html
+app/build.py               refresh ADP + projections + player-id map, emit
+                           app/dist/draft-live.html and docs/
 app/template.html          page shell and CSS, with __DATA__ / __SCRIPT__ slots
 app/src/state.js           data, persistence, whose-pick arithmetic
 app/src/model.js           roster fill, positional need, need-aware simulation
@@ -32,9 +33,12 @@ app/test/model.mjs         recommendation regressions — the scoring sign bug
 app/test/mock.mjs          adapting to a mock with different settings
 app/test/live.mjs          smoke test against the real API — needs an http origin
 data/league_config.json    league settings, our picks, keeper rule, modelled keepers
-data/players_sf_adp.json   242-player superflex pool (FFC 2QB ADP)
+data/players_sf_adp.json   283-player superflex pool: FFC 2QB ADP, FFToday
+                           projections scored under our rules, and VOR
 data/player_ids.json       Sleeper player_id -> our pool, so the app never
                            downloads Sleeper's 14 MB player file at runtime
+data/projections.json      cached FFToday stat lines, so --no-fetch is really
+                           offline and a partial fetch never drops a position
 data/player_meta.json      rookie status (years_exp) per player
 data/adp_history.json      archived daily ADP snapshots; the source of velocity
 data/rosters_2025.json     all 12 final 2025 rosters with original draft positions
@@ -118,6 +122,54 @@ If Sleeper stops answering, the pill turns amber, a banner explains why (with
 poll and error counts), and marking picks by hand starts working again. It
 re-syncs on its own. Hover the pill any time for live counters.
 
+### Ranking by need and value, not ADP
+
+ADP answers "who is best", which is not the question you have on the clock. The
+question is "who is best *for me, here*", and that needs two things ADP does not
+carry.
+
+**Value: points over replacement, under our own scoring.** `app/build.py` pulls
+FFToday's season projections and scores them with the `scoring_settings` block
+in `league_config.json` — our 0.04/yard passing, 4-point passing TDs, full PPR.
+Replacement level is where our starting requirements actually put it:
+dedicated slots plus each position's share of FLEX and SUPER_FLEX, times 12
+teams. That lands at **QB253, RB149, TE149, WR181**.
+
+The superflex consequence is the whole point. Twenty-four quarterbacks start in
+this league, so QB replacement level sits 100 points above every other position
+and the best quarterback is worth much less *over that bar* than his draft price
+implies — **Josh Allen is ADP #1 and VOR #10**. That is the same conclusion the
+keeper analysis reached about Goff, arrived at independently.
+
+Projections cover 225 of the pool; the remaining 58 are gap-filled by
+interpolating the ADP-to-VOR curve and marked `~` in the table.
+
+**Need** is the same weight the recommendations use — which lineup slot the
+player would actually fill, squared, so a position you have already covered has
+to be much better to outrank one you have not. The board's **need+value** sort
+multiplies the two and adds a 25% bump for players the simulation says will not
+survive to your next pick. Toggle to **ADP** for the flat market view.
+
+Watch it work: with QB, SUPER_FLEX and both RB slots filled, the board flips
+from RB-led to WR-led without you touching a filter.
+
+### Sources considered
+
+Reachable and used: **FFC** (2QB ADP is the spine; PPR pulled too, since its
+pool runs deeper, and mapped onto the superflex scale by monotone
+interpolation), **FFToday** projections, **Sleeper** trending adds and player
+metadata.
+
+Reachable and rejected: FantasyPros superflex ADP returns 200 but renders its
+table in JavaScript, so there is nothing to parse from the HTML. Reddit's JSON
+endpoints are blocked from here, and there is no X/Twitter access — which is why
+the breakout signal below is built from behaviour rather than from text.
+
+The meaningful addition is projections. Every ADP source, however many you
+stack, measures the same thing: what drafters did. Projections measure what a
+player is expected to *score*, which is the only input that can disagree with
+the market for a reason.
+
 ### Finding breakouts
 
 ADP is an average of what people already did, so a breakout only shows up in it
@@ -150,6 +202,13 @@ panel, which is a watchlist rather than advice.
   once the keeper deadline passes.
 - **ADP is a lagging average**, which is why the console also carries a buzz
   signal — see below. Re-pull before drafting with `python3 app/build.py`.
+- **FFC publishes in windows, not continuously.** A refresh that returns
+  identical numbers means no new window has been published, not that the fetch
+  failed. Check `data/adp_history.json` for the last date that actually moved.
+- **Projections are one source's opinion.** FFToday's own totals reproduce
+  exactly for RB/WR/TE from the columns we parse; QB differs by ~4.7 points
+  because of how they compute their displayed FPts, not because of the mapping.
+  A second projection source would be the next real improvement.
 - **Buzz needs history to mean anything.** Velocity is measured against archived
   snapshots in `data/adp_history.json`, bootstrapped from two points recoverable
   from git. It sharpens with every daily rebuild; treat it as thin for now.

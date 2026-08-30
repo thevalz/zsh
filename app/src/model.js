@@ -121,6 +121,22 @@ function buzz(p) {
 }
 const isRookie = p => !!p.rk;
 
+/* ---- fit: need x value ---------------------------------------------------
+   The board used to be sorted by ADP alone, which answers "who is best" and
+   not "who is best *for me*". Value here is points above replacement under
+   this league's own scoring, so a quarterback is measured against the 24 who
+   start in superflex rather than against the 12 who start elsewhere. Need
+   squares, as in the recommendations, so a position you have filled has to be
+   far better to outrank one you have not. */
+const VOR_MAX = Math.max(1, ...P.map(p => p.vor || 0));
+function fitScore(p, roster, left, surv) {
+  const need = needFor(roster, p.p, left);
+  const value = Math.max(0, p.vor || 0) / VOR_MAX;      // 0..1
+  const gone = surv && !surv.includes(p) ? 1.25 : 1;     // won't last to your next pick
+  const bz = 1 + 0.12 * buzz(p) / 100;
+  return need * need * value * gone * bz;
+}
+
 /* The tier the next player at this position belongs to, and what is left of
    it — "3 left in QB tier 4" is the thing you can actually act on. */
 function tierState(pos, board, surv) {

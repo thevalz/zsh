@@ -175,5 +175,16 @@
   }
  ],
  "my_user_id": "1390898887660703744",
- "my_sleeper_handle": "thevalz"
+ "my_sleeper_handle": "thevalz",
+ "scoring_settings": {
+  "pass_yd": 0.04,
+  "pass_td": 4,
+  "pass_int": -1,
+  "rush_yd": 0.1,
+  "rush_td": 6,
+  "rec": 1.0,
+  "rec_yd": 0.1,
+  "rec_td": 6,
+  "fum_lost": -2
+ }
 }

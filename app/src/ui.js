@@ -62,20 +62,38 @@ function renderRoster() {
 
 function renderBoard() {
   el('filters').innerHTML = ['ALL', 'QB', 'RB', 'WR', 'TE', 'PK', 'DEF'].map(x =>
-    `<button class="mini${S.filter === x ? ' on' : ''}" data-f="${x}">${x}</button>`).join(' ');
+    `<button class="mini${S.filter === x ? ' on' : ''}" data-f="${x}">${x}</button>`).join(' ')
+    + ` <button class="mini${S.sort === 'fit' ? ' on' : ''}" data-sort="fit">need+value</button>`
+    + `<button class="mini${S.sort === 'adp' ? ' on' : ''}" data-sort="adp">ADP</button>`;
+
   const q = el('q').value.trim().toLowerCase();
+  const roster = mine(), left = myPicks().filter(x => x >= S.pick).length;
+  const surv = S.sort === 'fit' ? survivors() : null;
   const rows = P.filter(p => {
     if (S.hide && S.drafted[p.n]) return false;
     if (S.filter !== 'ALL' && p.p !== S.filter) return false;
     if (q && !p.n.toLowerCase().includes(q) && !p.t.toLowerCase().includes(q)) return false;
     return true;
-  }).sort((a, b) => a.a - b.a).slice(0, 300);
-  el('tb').innerHTML = rows.map(p => {
+  });
+  if (S.sort === 'fit') {
+    rows.forEach(p => { p._fit = fitScore(p, roster, left, surv); });
+    rows.sort((a, b) => b._fit - a._fit || a.a - b.a);
+  } else {
+    rows.sort((a, b) => a.a - b.a);
+  }
+  const top = rows.length ? Math.max(...rows.slice(0, 60).map(p => p._fit || 0)) : 1;
+
+  el('tb').innerHTML = rows.slice(0, 300).map(p => {
     const st = S.drafted[p.n], e = S.pick - p.a;
+    const fitPct = top > 0 ? Math.round(100 * (p._fit || 0) / top) : 0;
+    const fitCell = S.sort === 'fit'
+      ? `<td><span class="fitbar"><i style="width:${fitPct}%"></i></span></td>` : '<td></td>';
     return `<tr class="row ${st === 'me' ? 'mineRow' : ''} ${st ? 'gone' : ''}" data-n="${esc(p.n)}">
-      <td><span class="badge b-${p.p}">${p.p}</span>${esc(p.n)}</td>
+      <td><span class="badge b-${p.p}">${p.p}</span>${esc(p.n)}${isRookie(p) ? '<span class="rookiechip">R</span>' : ''}</td>
       <td>${p.t}</td><td>${p.b ?? '—'}</td><td>${p.a.toFixed(1)}${p.est ? '~' : ''}</td>
+      <td>${p.vor != null ? (p.vor >= 0 ? '+' : '') + p.vor.toFixed(0) + (p.vest ? '~' : '') : '—'}</td>
       <td class="${e >= 0 ? 'edge-pos' : 'edge-neg'}">${e >= 0 ? '+' : ''}${e.toFixed(0)}</td>
+      ${fitCell}
       <td>${st ? (st === 'me' ? 'yours' : 'gone') : `<button class="mini" data-me="${esc(p.n)}">mine</button>`}</td></tr>`;
   }).join('');
 }
@@ -172,6 +190,8 @@ addEventListener('click', e => {
   if (t) { mark(t.dataset.take || t.dataset.me, 'me'); e.stopPropagation(); return; }
   const f = e.target.closest('[data-f]');
   if (f) { S.filter = f.dataset.f; save(); render(); return; }
+  const so = e.target.closest('[data-sort]');
+  if (so) { S.sort = so.dataset.sort; save(); render(); return; }
   const r = e.target.closest('tr.row');
   if (r && !S.drafted[r.dataset.n]) mark(r.dataset.n, 'them');
 });

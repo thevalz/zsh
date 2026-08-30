@@ -15,7 +15,7 @@ const snakePicks = (slot, teams = D.teams, rounds = D.rounds) => {
 const MOCK_PICKS = snakePicks(D.mySlot);
 
 const KEY = 'zebras-draft-v2';
-let S = { drafted: {}, hist: [], pick: 1, mock: false, hide: true, filter: 'ALL' };
+let S = { drafted: {}, hist: [], pick: 1, mock: false, hide: true, filter: 'ALL', sort: 'fit' };
 try { const r = localStorage.getItem(KEY); if (r) S = { ...S, ...JSON.parse(r) }; } catch (e) {}
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} };
 

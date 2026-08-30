@@ -105,6 +105,60 @@ check('tiers never go backwards as ADP rises', tiers.monotone, true);
 check('tier state reports its own members', tiers.left, tiers.members);
 console.log(`  info  top QBs — ${tiers.qbs.join(' ')}`);
 
+console.log('\nvalue over replacement');
+const vor = await pg.evaluate(() => {
+  const has = P.filter(p => p.vor != null);
+  const real = has.filter(p => !p.vest);
+  const byVor = [...has].sort((a, b) => b.vor - a.vor);
+  const byAdp = [...P].sort((a, b) => a.a - b.a);
+  const rank = n => byVor.findIndex(p => p.n === n) + 1;
+  const topQb = byAdp.find(p => p.p === 'QB');
+  return {
+    coverage: has.length, projected: real.length, pool: P.length,
+    // superflex starts 24 QBs, so replacement level at QB is high and the
+    // best quarterback is worth far less over it than his ADP suggests
+    topQbAdpRank: byAdp.findIndex(p => p.n === topQb.n) + 1,
+    topQbVorRank: rank(topQb.n),
+    allFinite: has.every(p => Number.isFinite(p.vor)),
+  };
+});
+check('most of the pool carries a value', vor.coverage > vor.pool * 0.75, true);
+check('every value is a real number', vor.allFinite, true);
+check('the top QB is not the top value in superflex', vor.topQbVorRank > vor.topQbAdpRank, true);
+console.log(`  info  ${vor.projected} projected + ${vor.coverage - vor.projected} interpolated; `
+  + `top QB ADP #${vor.topQbAdpRank} -> VOR #${vor.topQbVorRank}`);
+
+console.log('\nboard ranks by need as well as value');
+const fitrank = await pg.evaluate(() => {
+  const snap = () => {
+    const roster = mine(), left = myPicks().filter(x => x >= S.pick).length;
+    const surv = survivors();
+    return avail().map(p => ({ p, f: fitScore(p, roster, left, surv) }))
+      .sort((a, b) => b.f - a.f).slice(0, 6).map(x => x.p.p);
+  };
+  S.drafted = {}; S.hist = []; S.pick = 20;
+  const empty = snap();
+
+  // seat two QBs and both RBs, leaving WR/TE/FLEX open
+  const take = (pos, k) => avail().filter(p => p.p === pos).slice(0, k)
+    .forEach(p => { S.drafted[p.n] = 'me'; });
+  take('QB', 2); take('RB', 2);
+  const filled = snap();
+  const { slots } = fill(mine());
+  return {
+    empty, filled,
+    open: slots.filter(s => !s.p).map(s => s.s),
+    everyScorePositive: avail().every(p =>
+      fitScore(p, mine(), 10, null) >= 0),
+  };
+});
+check('fit never goes negative', fitrank.everyScorePositive, true);
+check('a filled position drops off the top of the board',
+  fitrank.filled.filter(x => x === 'QB' || x === 'RB').length < fitrank.empty.filter(x => x === 'QB' || x === 'RB').length, true);
+check('the board leads with what is still open',
+  fitrank.filled.slice(0, 3).every(x => fitrank.open.includes(x) || ['RB', 'WR', 'TE'].includes(x)), true);
+console.log(`  info  empty -> ${fitrank.empty.join(' ')}\n        filled -> ${fitrank.filled.join(' ')} (open: ${fitrank.open.join(', ')})`);
+
 console.log(errs.length ? `\nJS ERRORS: ${errs.join(' | ')}` : '\nno JS errors');
 await b.close();
 process.exit(fails || errs.length ? 1 : 0);

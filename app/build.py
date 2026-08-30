@@ -14,6 +14,7 @@ import json
 import os
 import re
 import sys
+import time
 import unicodedata
 import urllib.request
 
@@ -26,6 +27,14 @@ DOCS = os.path.join(ROOT, "docs")
 ADP_URL = "https://fantasyfootballcalculator.com/api/v1/adp/2qb?teams=12&year=2026&position=all"
 PPR_URL = "https://fantasyfootballcalculator.com/api/v1/adp/ppr?teams=12&year=2026&position=all"
 TREND_URL = "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=48&limit=300"
+PROJ_URL = ("https://www.fftoday.com/rankings/playerproj.php"
+            "?Season=2026&PosID={pos}&LeagueID=1&cur_page={page}")
+# FFToday column order after the name link, per position. Validated by
+# recomputing their own FPts column: RB, WR and TE reproduce it exactly.
+PROJ_COLS = {10: ("QB", ["cmp", "att", "pyd", "ptd", "int", "ra", "ry", "rtd", "fp"]),
+             20: ("RB", ["ra", "ry", "rtd", "rec", "recy", "rectd", "fp"]),
+             30: ("WR", ["rec", "recy", "rectd", "ra", "ry", "rtd", "fp"]),
+             40: ("TE", ["rec", "recy", "rectd", "fp"])}
 HISTORY_DAYS = 10   # window for ADP velocity
 SLEEPER_PLAYERS = "https://api.sleeper.app/v1/players/nfl"
 # concatenation order matters: later files call into earlier ones
@@ -147,6 +156,131 @@ def build_id_map(players):
     return out, meta, missing
 
 
+def get_text(url, timeout=45):
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read().decode("utf-8", "replace")
+
+
+def fetch_projections():
+    """FFToday's raw stat projections, keyed by normalised name."""
+    import html as _html
+    got = {}
+    for pos_id, (pos, cols) in PROJ_COLS.items():
+        for page in range(0, 6):
+            h = None
+            for attempt in range(3):          # they rate-limit; a 403 is often transient
+                try:
+                    h = get_text(PROJ_URL.format(pos=pos_id, page=page))
+                    break
+                except Exception as e:
+                    err = e
+                    time.sleep(2 ** attempt)
+            if h is None:
+                print(f"  proj     {pos} page {page} failed ({err})")
+                break
+            rows = re.findall(r'<A HREF="/stats/players/[^"]*">([^<]+)</A>(.*?)</TR>', h, re.S | re.I)
+            if not rows:
+                break
+            for name, rest in rows:
+                cells = [_html.unescape(re.sub("<[^>]+>", "", c)).strip()
+                         for c in re.findall(r"<TD[^>]*>(.*?)</TD>", rest, re.S | re.I)]
+                if len(cells) < len(cols) + 2:
+                    continue
+                vals = []
+                for c in cells[2:2 + len(cols)]:
+                    c = c.replace(",", "")
+                    try: vals.append(float(c))
+                    except ValueError: vals = None; break
+                if vals is None:
+                    continue
+                got[norm(_html.unescape(name))] = dict(zip(cols, vals))
+    return got
+
+
+def project(players, scoring, got):
+    """Rank by points under OUR scoring, not by other people's draft habits.
+
+    ADP is a consensus of generic superflex drafts. It cannot know that this
+    league pays 4 points for a passing touchdown and a full point per
+    reception. Taking FFToday's raw stat projections and scoring them with the
+    league's own settings gives a ranking actually fitted to this league, and
+    then value over replacement turns that into something comparable across
+    positions.
+    """
+    sc = scoring
+    scored = 0
+    for p in players:
+        d = got.get(norm(p["n"]))
+        if not d:
+            continue
+        pts = (d.get("pyd", 0) * sc["pass_yd"] + d.get("ptd", 0) * sc["pass_td"]
+               + d.get("int", 0) * sc["pass_int"]
+               + d.get("ry", 0) * sc["rush_yd"] + d.get("rtd", 0) * sc["rush_td"]
+               + d.get("rec", 0) * sc["rec"] + d.get("recy", 0) * sc["rec_yd"]
+               + d.get("rectd", 0) * sc["rec_td"])
+        p["pts"] = round(pts, 1)
+        scored += 1
+    print(f"  proj     {len(got)} projections, {scored} matched into the pool")
+    return scored
+
+
+def add_vorp(players, cfg):
+    """Points above the last player at your position who would actually start.
+
+    A quarterback worth 300 points is not worth the same as a receiver worth
+    300 when 24 quarterbacks start in this league and only the top handful of
+    receivers separate themselves.
+    """
+    # The pool is now persisted with vor on it, so a rebuild would otherwise
+    # find nothing to interpolate and keep estimates derived from an older ADP
+    # curve. Always recompute from the projections.
+    for p in players:
+        p.pop("vor", None)
+        p.pop("vest", None)
+
+    teams = cfg["teams"]
+    slots = cfg["roster_slots"]
+    dedicated = {}
+    for s in slots:
+        if s in ("QB", "RB", "WR", "TE"):
+            dedicated[s] = dedicated.get(s, 0) + 1
+    flex = slots.count("FLEX")
+    sflex = slots.count("SUPER_FLEX")
+    # flex goes mostly to backs and receivers; superflex is a quarterback in a
+    # league where quarterbacks score like this
+    share = {"RB": 0.45 * flex, "WR": 0.45 * flex, "TE": 0.10 * flex, "QB": 0.0}
+    share["QB"] += sflex
+    repl = {}
+    for pos in ("QB", "RB", "WR", "TE"):
+        rank = round((dedicated.get(pos, 0) + share.get(pos, 0)) * teams)
+        pool = sorted((p for p in players if p["p"] == pos and "pts" in p),
+                      key=lambda x: -x["pts"])
+        if not pool:
+            continue
+        idx = min(max(rank - 1, 0), len(pool) - 1)
+        repl[pos] = pool[idx]["pts"]
+    for p in players:
+        if "pts" in p and p["p"] in repl:
+            p["vor"] = round(p["pts"] - repl[p["p"]], 1)
+    # Not everyone has a projection — deep bench types especially. Fill those
+    # in from the ADP-to-VOR relationship the projected players describe, so
+    # the board can rank on one consistent scale instead of two.
+    known = sorted(((p["a"], p["vor"]) for p in players if "vor" in p))
+    if len(known) >= 20:
+        xs = [a for a, _ in known]
+        ys = [v for _, v in known]
+        filled = 0
+        for p in players:
+            if "vor" not in p:
+                p["vor"] = round(_interp(p["a"], xs, ys), 1)
+                p["vest"] = 1
+                filled += 1
+        print(f"  proj     {filled} without projections estimated from the ADP-VOR curve")
+    print("  proj     replacement level " + ", ".join(f"{k}{int(v)}" for k, v in sorted(repl.items())))
+    return repl
+
+
 def attach_buzz(players, id_map, meta, today):
     """Three independent reads on who the market is waking up to.
 
@@ -232,8 +366,6 @@ def main():
         print(f"  adp      cached — {src}")
     else:
         players, src = fetch_adp()
-        json.dump({"source": src, "format": "superflex 2QB, 12 team, full PPR",
-                   "players": players}, open(pool_path, "w"), indent=1)
         print(f"  adp      {len(players)} players — {src}")
 
     meta_path = os.path.join(DATA, "player_meta.json")
@@ -250,6 +382,43 @@ def main():
         gaps = [p["n"] for p in players if p["n"] not in known]
         print(f"  ids      cached, {len(id_map)} entries"
               + (f" — {len(gaps)} pool players unmapped, run --refresh-ids" if gaps else ""))
+
+    # Projections are cached so --no-fetch really is offline. Without a cache a
+    # network-less rebuild would silently drop `vor`, and the board's
+    # need+value sort would quietly degrade to need alone.
+    cfg_early = json.load(open(os.path.join(DATA, "league_config.json")))
+    proj_path = os.path.join(DATA, "projections.json")
+    try:
+        if args.no_fetch:
+            got = json.load(open(proj_path))["stats"]
+            print(f"  proj     cached, {len(got)} players")
+        else:
+            # FFToday rate-limits: a run can 403 on one position and succeed on
+            # the rest. Merge over the cache rather than replacing it, so a
+            # partial fetch never drops a position we already had — losing TE
+            # would silently push every tight end onto the interpolated curve.
+            got = {}
+            if os.path.exists(proj_path):
+                got.update(json.load(open(proj_path))["stats"])
+            fresh = fetch_projections()
+            kept = len(set(got) - set(fresh))
+            got.update(fresh)
+            if fresh:
+                json.dump({"source": "FFToday season projections",
+                           "fetched": datetime.date.today().isoformat(),
+                           "stats": got}, open(proj_path, "w"), separators=(",", ":"))
+            if kept:
+                print(f"  proj     {len(fresh)} fetched, {kept} kept from cache")
+        if got and project(players, cfg_early["scoring_settings"], got):
+            add_vorp(players, cfg_early)
+    except Exception as e:
+        print(f"  proj     skipped ({e})")
+
+    # Persist points and value back into the pool so they are versioned and
+    # reviewable in a diff, rather than existing only inside the built HTML.
+    # Written before buzz, which is derived at build time from adp_history.
+    json.dump({"source": src, "format": "superflex 2QB, 12 team, full PPR",
+               "players": players}, open(pool_path, "w"), indent=1)
 
     attach_buzz(players, id_map, meta, datetime.date.today().isoformat())
 
