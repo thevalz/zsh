@@ -68,10 +68,16 @@ straight off disk has an opaque origin and the browser refuses every
 cross-origin request, so the Sleeper sync silently never starts. Published
 Artifacts are out for the same reason: their CSP blocks external hosts.
 
-Served from **https://thevalz.github.io/zsh/** out of `docs/` on this branch.
+Live at **https://thevalz.github.io/zsh/docs/draft-live.html** — bookmark that
+exact URL, it is the one to open on draft day.
 
-Pages settings: **Deploy from a branch** → branch
-`claude/fantasy-keeper-recommendations-tp9ron` → folder **`/docs`**.
+Pages is currently set to **Deploy from a branch** → branch
+`claude/fantasy-keeper-recommendations-tp9ron` → folder **`/` (root)**, so
+Jekyll renders this README at `/zsh/` and the app sits one level down under
+`/docs/`. Switching the folder setting to **`/docs`** would shorten the app URL
+to `https://thevalz.github.io/zsh/draft-live.html` and drop the README page;
+either works, but the URL differs between them, so check the setting before
+trusting a bookmark.
 
 Branch deployment rather than the GitHub Actions source, deliberately: the
 auto-created `github-pages` environment only permits deployments from the
