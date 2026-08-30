@@ -1,0 +1,851 @@
+{
+ "Josh Allen": {
+  "exp": 8
+ },
+ "Jahmyr Gibbs": {
+  "exp": 3
+ },
+ "Bijan Robinson": {
+  "exp": 3
+ },
+ "Puka Nacua": {
+  "exp": 3
+ },
+ "Jonathan Taylor": {
+  "exp": 6
+ },
+ "Ja'Marr Chase": {
+  "exp": 5
+ },
+ "Drake Maye": {
+  "exp": 2
+ },
+ "Jaxon Smith-Njigba": {
+  "exp": 3
+ },
+ "Lamar Jackson": {
+  "exp": 8
+ },
+ "Joe Burrow": {
+  "exp": 6
+ },
+ "Christian McCaffrey": {
+  "exp": 9
+ },
+ "Derrick Henry": {
+  "exp": 10
+ },
+ "Amon-Ra St. Brown": {
+  "exp": 5
+ },
+ "Dak Prescott": {
+  "exp": 10
+ },
+ "Jayden Daniels": {
+  "exp": 2
+ },
+ "James Cook III": {
+  "exp": 4
+ },
+ "Matthew Stafford": {
+  "exp": 17
+ },
+ "Jalen Hurts": {
+  "exp": 6
+ },
+ "Brock Purdy": {
+  "exp": 4
+ },
+ "Trevor Lawrence": {
+  "exp": 5
+ },
+ "De'Von Achane": {
+  "exp": 3
+ },
+ "Caleb Williams": {
+  "exp": 2
+ },
+ "Patrick Mahomes": {
+  "exp": 9
+ },
+ "Drake London": {
+  "exp": 4
+ },
+ "Saquon Barkley": {
+  "exp": 8
+ },
+ "Jared Goff": {
+  "exp": 10
+ },
+ "CeeDee Lamb": {
+  "exp": 6
+ },
+ "Justin Herbert": {
+  "exp": 6
+ },
+ "Justin Jefferson": {
+  "exp": 6
+ },
+ "Chase Brown": {
+  "exp": 3
+ },
+ "Rashee Rice": {
+  "exp": 3
+ },
+ "Bo Nix": {
+  "exp": 2
+ },
+ "Ashton Jeanty": {
+  "exp": 1
+ },
+ "Jaxson Dart": {
+  "exp": 1
+ },
+ "George Pickens": {
+  "exp": 4
+ },
+ "Josh Jacobs": {
+  "exp": 7
+ },
+ "A.J. Brown": {
+  "exp": 7
+ },
+ "Nico Collins": {
+  "exp": 5
+ },
+ "Kenneth Walker": {
+  "exp": 4
+ },
+ "Omarion Hampton": {
+  "exp": 1
+ },
+ "Kyren Williams": {
+  "exp": 4
+ },
+ "Chris Olave": {
+  "exp": 4
+ },
+ "Zay Flowers": {
+  "exp": 3
+ },
+ "Baker Mayfield": {
+  "exp": 8
+ },
+ "Javonte Williams": {
+  "exp": 5
+ },
+ "Malik Nabers": {
+  "exp": 2
+ },
+ "Jeremiyah Love": {
+  "exp": 0
+ },
+ "Breece Hall": {
+  "exp": 4
+ },
+ "Tyler Shough": {
+  "exp": 1
+ },
+ "Emeka Egbuka": {
+  "exp": 1
+ },
+ "Tee Higgins": {
+  "exp": 6
+ },
+ "Davante Adams": {
+  "exp": 12
+ },
+ "Tetairoa McMillan": {
+  "exp": 1
+ },
+ "Cam Skattebo": {
+  "exp": 1
+ },
+ "Jameson Williams": {
+  "exp": 4
+ },
+ "Kyler Murray": {
+  "exp": 7
+ },
+ "DeVonta Smith": {
+  "exp": 5
+ },
+ "Travis Etienne Jr.": {
+  "exp": 5
+ },
+ "Sam Darnold": {
+  "exp": 8
+ },
+ "D'Andre Swift": {
+  "exp": 6
+ },
+ "Garrett Wilson": {
+  "exp": 4
+ },
+ "Jordan Love": {
+  "exp": 6
+ },
+ "Brock Bowers": {
+  "exp": 2
+ },
+ "Rome Odunze": {
+  "exp": 2
+ },
+ "Terry McLaurin": {
+  "exp": 7
+ },
+ "Trey McBride": {
+  "exp": 4
+ },
+ "Bucky Irving": {
+  "exp": 2
+ },
+ "Ladd McConkey": {
+  "exp": 2
+ },
+ "Bhayshul Tuten": {
+  "exp": 1
+ },
+ "Quinshon Judkins": {
+  "exp": 1
+ },
+ "DJ Moore": {
+  "exp": 8
+ },
+ "Alec Pierce": {
+  "exp": 4
+ },
+ "David Montgomery": {
+  "exp": 7
+ },
+ "Jaylen Waddle": {
+  "exp": 5
+ },
+ "C.J. Stroud": {
+  "exp": 3
+ },
+ "Christian Watson": {
+  "exp": 4
+ },
+ "Daniel Jones": {
+  "exp": 7
+ },
+ "TreVeyon Henderson": {
+  "exp": 1
+ },
+ "Mike Evans": {
+  "exp": 12
+ },
+ "Luther Burden III": {
+  "exp": 1
+ },
+ "Courtland Sutton": {
+  "exp": 8
+ },
+ "Colston Loveland": {
+  "exp": 1
+ },
+ "DK Metcalf": {
+  "exp": 7
+ },
+ "Tony Pollard": {
+  "exp": 7
+ },
+ "Malik Willis": {
+  "exp": 4
+ },
+ "Marvin Harrison Jr.": {
+  "exp": 2
+ },
+ "Parker Washington": {
+  "exp": 3
+ },
+ "Jadarian Price": {
+  "exp": 0
+ },
+ "Rhamondre Stevenson": {
+  "exp": 5
+ },
+ "Brian Thomas Jr.": {
+  "exp": 2
+ },
+ "Bryce Young": {
+  "exp": 3
+ },
+ "Tyler Warren": {
+  "exp": 1
+ },
+ "Rico Dowdle": {
+  "exp": 6
+ },
+ "Carnell Tate": {
+  "exp": 0
+ },
+ "Jaylen Warren": {
+  "exp": 4
+ },
+ "J.K. Dobbins": {
+  "exp": 6
+ },
+ "Quentin Johnston": {
+  "exp": 3
+ },
+ "Chuba Hubbard": {
+  "exp": 5
+ },
+ "Michael Wilson": {
+  "exp": 3
+ },
+ "Washington Defense": {
+  "exp": null
+ },
+ "Cam Ward": {
+  "exp": 1
+ },
+ "Chris Godwin Jr.": {
+  "exp": 9
+ },
+ "Tucker Kraft": {
+  "exp": 3
+ },
+ "Jordan Addison": {
+  "exp": 3
+ },
+ "Jakobi Meyers": {
+  "exp": 7
+ },
+ "Jayden Reed": {
+  "exp": 3
+ },
+ "Seattle Defense": {
+  "exp": null
+ },
+ "Harold Fannin Jr.": {
+  "exp": 1
+ },
+ "Jacory Croskey-Merritt": {
+  "exp": 1
+ },
+ "Xavier Worthy": {
+  "exp": 2
+ },
+ "Denver Defense": {
+  "exp": null
+ },
+ "Michael Pittman Jr.": {
+  "exp": 6
+ },
+ "Jacoby Brissett": {
+  "exp": 10
+ },
+ "Kyle Pitts Sr.": {
+  "exp": 5
+ },
+ "Dallas Goedert": {
+  "exp": 8
+ },
+ "Kyle Monangai": {
+  "exp": 1
+ },
+ "Aaron Rodgers": {
+  "exp": 21
+ },
+ "Stefon Diggs": {
+  "exp": 11
+ },
+ "Jonathon Brooks": {
+  "exp": 2
+ },
+ "Deebo Samuel Sr.": {
+  "exp": 7
+ },
+ "Sam LaPorta": {
+  "exp": 3
+ },
+ "Jordyn Tyson": {
+  "exp": 0
+ },
+ "Houston Defense": {
+  "exp": null
+ },
+ "RJ Harvey": {
+  "exp": 1
+ },
+ "Jordan Mason": {
+  "exp": 4
+ },
+ "Geno Smith": {
+  "exp": 13
+ },
+ "Josh Downs": {
+  "exp": 3
+ },
+ "Makai Lemon": {
+  "exp": 0
+ },
+ "Matthew Golden": {
+  "exp": 1
+ },
+ "Blake Corum": {
+  "exp": 2
+ },
+ "Wan'Dale Robinson": {
+  "exp": 4
+ },
+ "Romeo Doubs": {
+  "exp": 4
+ },
+ "Aaron Jones Sr.": {
+  "exp": 9
+ },
+ "Chimere Dike": {
+  "exp": 1
+ },
+ "Mark Andrews": {
+  "exp": 8
+ },
+ "Brandon Aubrey": {
+  "exp": 3
+ },
+ "George Kittle": {
+  "exp": 9
+ },
+ "Minnesota Defense": {
+  "exp": null
+ },
+ "Rachaad White": {
+  "exp": 4
+ },
+ "LA Rams Defense": {
+  "exp": null
+ },
+ "Ricky Pearsall": {
+  "exp": 2
+ },
+ "Kenny Gainwell": {
+  "exp": 5
+ },
+ "Rashid Shaheed": {
+  "exp": 4
+ },
+ "Fernando Mendoza": {
+  "exp": 0
+ },
+ "Jason Myers": {
+  "exp": 11
+ },
+ "De'Zhaun Stribling": {
+  "exp": 0
+ },
+ "San Francisco Defense": {
+  "exp": null
+ },
+ "Oronde Gadsden": {
+  "exp": 1
+ },
+ "Khalil Shakir": {
+  "exp": 4
+ },
+ "Ka'imi Fairbairn": {
+  "exp": 10
+ },
+ "Jayden Higgins": {
+  "exp": 1
+ },
+ "KC Concepcion": {
+  "exp": 0
+ },
+ "Pat Freiermuth": {
+  "exp": 5
+ },
+ "Kenyon Sadiq": {
+  "exp": 0
+ },
+ "Tua Tagovailoa": {
+  "exp": 6
+ },
+ "AJ Barner": {
+  "exp": 2
+ },
+ "Jalen Coker": {
+  "exp": 2
+ },
+ "Jake Ferguson": {
+  "exp": 4
+ },
+ "Detroit Defense": {
+  "exp": null
+ },
+ "New England Defense": {
+  "exp": null
+ },
+ "Brenton Strange": {
+  "exp": 3
+ },
+ "Philadelphia Defense": {
+  "exp": null
+ },
+ "Kaelon Black": {
+  "exp": 0
+ },
+ "Tre Tucker": {
+  "exp": 3
+ },
+ "Travis Kelce": {
+  "exp": 13
+ },
+ "Cameron Dicker": {
+  "exp": 4
+ },
+ "Emari Demercado": {
+  "exp": 3
+ },
+ "Shedeur Sanders": {
+  "exp": 1
+ },
+ "Calvin Ridley": {
+  "exp": 8
+ },
+ "Deshaun Watson": {
+  "exp": 9
+ },
+ "Isaiah Likely": {
+  "exp": 4
+ },
+ "Jonah Coleman": {
+  "exp": 0
+ },
+ "Zach Charbonnet": {
+  "exp": 3
+ },
+ "Pittsburgh Defense": {
+  "exp": null
+ },
+ "Keaton Mitchell": {
+  "exp": 3
+ },
+ "Jerry Jeudy": {
+  "exp": 6
+ },
+ "Terrance Ferguson": {
+  "exp": 1
+ },
+ "Carson Beck": {
+  "exp": 0
+ },
+ "Michael Penix Jr.": {
+  "exp": 2
+ },
+ "Dalton Kincaid": {
+  "exp": 3
+ },
+ "James Conner": {
+  "exp": 9
+ },
+ "Andy Borregales": {
+  "exp": 1
+ },
+ "Braelon Allen": {
+  "exp": 2
+ },
+ "Chig Okonkwo": {
+  "exp": 4
+ },
+ "Greg Dulcich": {
+  "exp": 4
+ },
+ "Isiah Pacheco": {
+  "exp": 4
+ },
+ "Theo Wease Jr.": {
+  "exp": 1
+ },
+ "Rashod Bateman": {
+  "exp": 5
+ },
+ "LA Chargers Defense": {
+  "exp": null
+ },
+ "Ryan Flournoy": {
+  "exp": 2
+ },
+ "John Metchie III": {
+  "exp": 4
+ },
+ "Jake Bates": {
+  "exp": 3
+ },
+ "Kirk Cousins": {
+  "exp": 14
+ },
+ "Harrison Mevis": {
+  "exp": 2
+ },
+ "NY Jets Defense": {
+  "exp": null
+ },
+ "Caleb Douglas": {
+  "exp": 0
+ },
+ "Keon Coleman": {
+  "exp": 2
+ },
+ "J.J. McCarthy": {
+  "exp": 2
+ },
+ "Jaydon Blue": {
+  "exp": 1
+ },
+ "Tampa Bay Defense": {
+  "exp": null
+ },
+ "Jalen McMillan": {
+  "exp": 2
+ },
+ "Germie Bernard": {
+  "exp": 0
+ },
+ "Xavier Hutchinson": {
+  "exp": 3
+ },
+ "Pat Bryant": {
+  "exp": 1
+ },
+ "Mike Washington Jr.": {
+  "exp": 0
+ },
+ "Tyjae Spears": {
+  "exp": 3
+ },
+ "Dallas Defense": {
+  "exp": null
+ },
+ "Dominic Zvada": {
+  "exp": 0
+ },
+ "Juwan Johnson": {
+  "exp": 6
+ },
+ "Tennessee Defense": {
+  "exp": null
+ },
+ "MarShawn Lloyd": {
+  "exp": 2
+ },
+ "Hunter Henry": {
+  "exp": 10
+ },
+ "Chris Boswell": {
+  "exp": 12
+ },
+ "Dalton Schultz": {
+  "exp": 8
+ },
+ "Chase McLaughlin": {
+  "exp": 7
+ },
+ "Woody Marks": {
+  "exp": 1
+ },
+ "Alvin Kamara": {
+  "exp": 9
+ },
+ "Tyler Loop": {
+  "exp": 1
+ },
+ "Chris Rodriguez Jr.": {
+  "exp": 3
+ },
+ "Emmett Johnson": {
+  "exp": 0
+ },
+ "Tank Bigsby": {
+  "exp": 3
+ },
+ "Justice Hill": {
+  "exp": 7
+ },
+ "T.J. Hockenson": {
+  "exp": 7
+ },
+ "Cairo Santos": {
+  "exp": 12
+ },
+ "Green Bay Defense": {
+  "exp": null
+ },
+ "Cam Little": {
+  "exp": 2
+ },
+ "Dean Connors": {
+  "exp": 0
+ },
+ "Jauan Jennings": {
+  "exp": 6
+ },
+ "Travis Hunter": {
+  "exp": 1
+ },
+ "Devaughn Vele": {
+  "exp": 2
+ },
+ "Atlanta Defense": {
+  "exp": null
+ },
+ "Evan McPherson": {
+  "exp": 5
+ },
+ "Troy Franklin": {
+  "exp": 2
+ },
+ "Ty Johnson": {
+  "exp": 7
+ },
+ "Dylan Sampson": {
+  "exp": 1
+ },
+ "Jacksonville Defense": {
+  "exp": null
+ },
+ "Baltimore Defense": {
+  "exp": null
+ },
+ "Jaylin Noel": {
+  "exp": 1
+ },
+ "Eddy Pi\u00f1eiro": {
+  "exp": 8
+ },
+ "Will Reichard": {
+  "exp": 2
+ },
+ "Dontayvion Wicks": {
+  "exp": 3
+ },
+ "Ja'Kobi Lane": {
+  "exp": 0
+ },
+ "Jalen Nailor": {
+  "exp": 4
+ },
+ "Tyrone Tracy Jr.": {
+  "exp": 2
+ },
+ "Tyler Bass": {
+  "exp": 6
+ },
+ "Chicago Defense": {
+  "exp": null
+ },
+ "Samaje Perine": {
+  "exp": 9
+ },
+ "Tyler Allgeier": {
+  "exp": 4
+ },
+ "Nick Folk": {
+  "exp": 19
+ },
+ "Xavier Legette": {
+  "exp": 2
+ },
+ "Cincinnati Defense": {
+  "exp": null
+ },
+ "Bub Means": {
+  "exp": 2
+ },
+ "Najee Harris": {
+  "exp": 5
+ },
+ "Denzel Boston": {
+  "exp": 0
+ },
+ "Brian Robinson": {
+  "exp": 4
+ },
+ "Keenan Allen": {
+  "exp": 13
+ },
+ "Harrison Butker": {
+  "exp": 9
+ },
+ "Antonio Williams": {
+  "exp": 0
+ },
+ "Cleveland Defense": {
+  "exp": null
+ },
+ "Kimani Vidal": {
+  "exp": 2
+ },
+ "Jordan James": {
+  "exp": 1
+ },
+ "Buffalo Defense": {
+  "exp": null
+ },
+ "Tre' Harris": {
+  "exp": 1
+ },
+ "Ray Davis": {
+  "exp": 2
+ },
+ "Isaac TeSlaa": {
+  "exp": 1
+ },
+ "Cyrus Allen": {
+  "exp": 0
+ },
+ "Blake Grupe": {
+  "exp": 3
+ },
+ "Joey Slye": {
+  "exp": 7
+ },
+ "David Njoku": {
+  "exp": 9
+ },
+ "Tank Dell": {
+  "exp": 3
+ },
+ "Jake Elliott": {
+  "exp": 9
+ },
+ "Darius Slayton": {
+  "exp": 7
+ },
+ "Trey Smack": {
+  "exp": 0
+ },
+ "Malachi Fields": {
+  "exp": 0
+ },
+ "Wil Lutz": {
+  "exp": 10
+ },
+ "NY Giants Defense": {
+  "exp": null
+ },
+ "Cooper Kupp": {
+  "exp": 9
+ },
+ "Kayshon Boutte": {
+  "exp": 3
+ },
+ "Malik Washington": {
+  "exp": 2
+ },
+ "New Orleans Defense": {
+  "exp": null
+ },
+ "Omar Cooper Jr.": {
+  "exp": 0
+ },
+ "Adonai Mitchell": {
+  "exp": 2
+ },
+ "Darnell Washington": {
+  "exp": 3
+ }
+}

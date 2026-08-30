@@ -9,6 +9,8 @@ function renderRecs() {
       ? `fills your <b>${r.fills === 'K' ? 'kicker' : r.fills.replace('_', ' ').toLowerCase()}</b>`
       : '<span class="depth">bench depth</span>';
     const t = r.tier ? `<span class="tierchip">${r.pos} tier ${r.tier.tier}</span>` : '';
+    const bz = r.buzz >= 25 ? `<span class="buzzchip">rising ${r.buzz}</span>` : '';
+    const rk = isRookie(r.p) ? '<span class="rookiechip">rookie</span>' : '';
     const wait = !r.nxt ? `<b>nobody left at ${r.pos}</b> after this run`
       : r.tier && r.tier.survives === 0
         ? `<b class="warnTxt">tier ${r.tier.tier} is gone</b> before your next pick`
@@ -17,7 +19,7 @@ function renderRecs() {
     const val = r.bargain > 0 ? `<span class="edge-pos">${r.bargain.toFixed(0)} spots of value</span>`
       : `<span class="edge-neg">reaching ${(r.p.a - S.pick).toFixed(0)}</span>`;
     return `<div class="rec${i ? '' : ' top'}"><div class="rank">${i + 1}</div><div class="rec-main">
-      <div class="rec-name"><span class="badge b-${r.p.p}">${r.p.p}</span>${esc(r.p.n)} ${t}</div>
+      <div class="rec-name"><span class="badge b-${r.p.p}">${r.p.p}</span>${esc(r.p.n)} ${t}${rk}${bz}</div>
       <div class="rec-why">${why} · ADP ${r.p.a.toFixed(0)} · ${val}</div>
       <div class="rec-why">${wait}</div></div>
       <button class="take mini" data-take="${esc(r.p.n)}">Draft</button></div>`;
@@ -72,7 +74,7 @@ function renderBoard() {
     const st = S.drafted[p.n], e = S.pick - p.a;
     return `<tr class="row ${st === 'me' ? 'mineRow' : ''} ${st ? 'gone' : ''}" data-n="${esc(p.n)}">
       <td><span class="badge b-${p.p}">${p.p}</span>${esc(p.n)}</td>
-      <td>${p.t}</td><td>${p.b ?? '—'}</td><td>${p.a.toFixed(1)}</td>
+      <td>${p.t}</td><td>${p.b ?? '—'}</td><td>${p.a.toFixed(1)}${p.est ? '~' : ''}</td>
       <td class="${e >= 0 ? 'edge-pos' : 'edge-neg'}">${e >= 0 ? '+' : ''}${e.toFixed(0)}</td>
       <td>${st ? (st === 'me' ? 'yours' : 'gone') : `<button class="mini" data-me="${esc(p.n)}">mine</button>`}</td></tr>`;
   }).join('');
@@ -116,6 +118,28 @@ function renderOpponents() {
   }).join('');
 }
 
+/* Players the market is moving on right now, still on the board. Separate
+   from the recommendations on purpose — this is a watchlist, not advice. */
+function renderRising() {
+  const rows = avail().map(p => ({ p, b: buzz(p) }))
+    .filter(x => x.b >= 25)
+    .sort((a, x) => x.b - a.b || a.p.a - x.p.a)
+    .slice(0, 8);
+  el('risingCard').hidden = rows.length === 0;
+  el('rising').innerHTML = rows.map(({ p, b }) => {
+    const why = [];
+    if (p.vel > 0) why.push(`up ${p.vel.toFixed(0)} spots`);
+    if (p.add) why.push(`${(p.add / 1000).toFixed(0)}k adds`);
+    return `<div class="risebar" data-me="${esc(p.n)}" title="click to draft">
+      <div class="rise-hd"><span><span class="badge b-${p.p}">${p.p}</span>${esc(p.n)}
+        ${isRookie(p) ? '<span class="rookiechip">rookie</span>' : ''}</span>
+        <b class="mono">${b}</b></div>
+      <div class="meter"><i style="width:${b}%;background:var(--rise)"></i></div>
+      <div class="scar-note">ADP ${p.a.toFixed(0)}${p.est ? '~' : ''} · ${why.join(' · ') || 'trending'}</div>
+    </div>`;
+  }).join('');
+}
+
 function render() {
   const n = nextPick(), tgt = target(), clock = onClock();
   el('sPick').textContent = S.pick;
@@ -132,6 +156,7 @@ function render() {
   renderRunway(tgt);
   renderRoster();
   renderBoard();
+  renderRising();
   renderOpponents();
   if (typeof renderSync === 'function') renderSync();
 

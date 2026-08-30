@@ -9,6 +9,7 @@ Re-run this the morning of the draft so the ADP is current — that is the whole
 point of having a build step rather than hand-edited data.
 """
 import argparse
+import datetime
 import json
 import os
 import re
@@ -24,6 +25,8 @@ DOCS = os.path.join(ROOT, "docs")
 
 ADP_URL = "https://fantasyfootballcalculator.com/api/v1/adp/2qb?teams=12&year=2026&position=all"
 PPR_URL = "https://fantasyfootballcalculator.com/api/v1/adp/ppr?teams=12&year=2026&position=all"
+TREND_URL = "https://api.sleeper.app/v1/players/nfl/trending/add?lookback_hours=48&limit=300"
+HISTORY_DAYS = 10   # window for ADP velocity
 SLEEPER_PLAYERS = "https://api.sleeper.app/v1/players/nfl"
 # concatenation order matters: later files call into earlier ones
 SRC_ORDER = ["state.js", "model.js", "sleeper.js", "ui.js"]
@@ -128,7 +131,8 @@ def build_id_map(players):
             idx.setdefault((norm(full), pos), pid)
         if pos == "DEF":
             idx.setdefault(("def:" + (v.get("team") or ""), "DEF"), pid)
-    out, missing = {}, []
+    exp_by_pid = {pid: v.get("years_exp") for pid, v in sleeper.items()}
+    out, meta, missing = {}, {}, []
     for p in players:
         pid = idx.get((norm(p["n"]), p["p"]))
         if not pid and p["p"] == "DEF":
@@ -137,9 +141,80 @@ def build_id_map(players):
             pid = idx.get((norm(p["n"]), "K"))
         if pid:
             out[pid] = p["n"]
+            meta[p["n"]] = {"exp": exp_by_pid.get(pid)}
         else:
             missing.append(f"{p['p']} {p['n']} ({p['t']})")
-    return out, missing
+    return out, meta, missing
+
+
+def attach_buzz(players, id_map, meta, today):
+    """Three independent reads on who the market is waking up to.
+
+    ADP alone is a lagging average: by the time a breakout shows up in it, the
+    price has already moved. These catch the move while it is happening.
+
+      velocity  how many ADP spots a player has gained recently. Drawn from
+                archived snapshots, so it measures the market's own change of
+                mind rather than anyone's opinion.
+      adds      Sleeper roster adds across every league on the platform. This
+                is behaviour, not sentiment — nobody is scraping tone here.
+      rookie    years_exp == 0, because a rookie with buzz is a different
+                proposition from a veteran with buzz.
+
+    Corroboration is the point: any one of these is noise, and a player showing
+    up in two of them at once is worth a look.
+    """
+    hist_path = os.path.join(DATA, "adp_history.json")
+    hist = {"snapshots": [], "adp": {}}
+    if os.path.exists(hist_path):
+        try: hist = json.load(open(hist_path))
+        except Exception: pass
+
+    # record today, then measure against the oldest point still in the window
+    for p in players:
+        hist["adp"].setdefault(p["n"], {})[today] = p["a"]
+    if not any(s["date"] == today for s in hist["snapshots"]):
+        hist["snapshots"].append({"date": today})
+    hist["snapshots"] = sorted(hist["snapshots"], key=lambda s: s["date"])[-40:]
+    keep = {s["date"] for s in hist["snapshots"]}
+    for n in list(hist["adp"]):
+        hist["adp"][n] = {d: v for d, v in hist["adp"][n].items() if d in keep}
+        if not hist["adp"][n]:
+            del hist["adp"][n]
+
+    dates = [s["date"] for s in hist["snapshots"]][-HISTORY_DAYS:]
+    for p in players:
+        by = hist["adp"].get(p["n"], {})
+        pts = [by[d] for d in dates if d in by]
+        # ADP counts down, so an earlier pick number means he is climbing
+        p["vel"] = round(pts[0] - pts[-1], 1) if len(pts) >= 2 else 0.0
+
+    try:
+        trend = get(TREND_URL, timeout=30)
+        by_pid = {t["player_id"]: t["count"] for t in trend}
+        name_of = id_map
+        adds = {}
+        for pid, c in by_pid.items():
+            n = name_of.get(pid)
+            if n: adds[n] = c
+        top = max(adds.values()) if adds else 0
+        for p in players:
+            p["add"] = adds.get(p["n"], 0)
+        print(f"  buzz     {len(adds)} of the pool trending on Sleeper (top {top:,} adds)")
+    except Exception as e:
+        for p in players: p["add"] = 0
+        print(f"  buzz     trending unavailable ({e})")
+
+    for p in players:
+        if meta.get(p["n"], {}).get("exp") == 0:
+            p["rk"] = 1
+
+    json.dump(hist, open(hist_path, "w"), separators=(",", ":"))
+    movers = sorted((p for p in players if p.get("vel")), key=lambda p: -p["vel"])[:3]
+    if movers:
+        print("  buzz     risers: " + ", ".join(f"{p['n']} +{p['vel']:.0f}" for p in movers))
+    print(f"  buzz     {sum(1 for p in players if p.get('rk'))} rookies flagged, "
+          f"{len(hist['snapshots'])} snapshots on file")
 
 
 def main():
@@ -161,17 +236,22 @@ def main():
                    "players": players}, open(pool_path, "w"), indent=1)
         print(f"  adp      {len(players)} players — {src}")
 
-    if args.refresh_ids or not os.path.exists(ids_path):
-        id_map, missing = build_id_map(players)
+    meta_path = os.path.join(DATA, "player_meta.json")
+    if args.refresh_ids or not os.path.exists(ids_path) or not os.path.exists(meta_path):
+        id_map, meta, missing = build_id_map(players)
         json.dump(id_map, open(ids_path, "w"), indent=1)
+        json.dump(meta, open(meta_path, "w"), indent=1)
         print(f"  ids      {len(id_map)}/{len(players)} matched"
               + (f" — MISSING: {', '.join(missing[:8])}" if missing else ""))
     else:
         id_map = json.load(open(ids_path))
+        meta = json.load(open(meta_path))
         known = {v for v in id_map.values()}
         gaps = [p["n"] for p in players if p["n"] not in known]
         print(f"  ids      cached, {len(id_map)} entries"
               + (f" — {len(gaps)} pool players unmapped, run --refresh-ids" if gaps else ""))
+
+    attach_buzz(players, id_map, meta, datetime.date.today().isoformat())
 
     cfg = json.load(open(os.path.join(DATA, "league_config.json")))
     payload = {

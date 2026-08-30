@@ -20,7 +20,9 @@ const SYNC = {
   ownerOf: new Map(),   // overall pick -> roster_id that owns it
   rosters: new Map(),   // roster_id -> [player objects drafted so far]
   teamName: new Map(),
-  note: ''
+  note: '',
+  // measured, so the next outage is diagnosed rather than guessed at
+  stats: { polls: 0, forced: 0, errors: 0, notModified: 0, lastErr: '', lastMs: 0, maxMs: 0 }
 };
 
 /* sync is the source of truth unless it has fallen over */
@@ -34,9 +36,13 @@ const DEGRADE_QUIET_MS = 45000;  // ...and only if it has been bad this long
 /* Forcing a CDN miss on every poll means every request hits the origin. That
    is worth it when a pick is imminent and 30s of staleness would matter; it is
    just noise and extra failure surface when your turn is twenty picks away. */
+const FRESH_WITHIN = 3;   // picks. Your picks sit ~12 apart, so a wider window
+                          // would force an origin hit on most polls and buy
+                          // nothing: 3 picks is still minutes of warning.
 function freshnessNonce() {
   const n = nextPick();
-  const near = n === null || (n - S.pick) <= 12;
+  const near = n === null || (n - S.pick) <= FRESH_WITHIN;
+  if (near) SYNC.stats.forced++;
   return near ? Date.now().toString(36) + Math.random().toString(36).slice(2, 7) : null;
 }
 
@@ -49,8 +55,11 @@ async function api(path, opts = {}) {
   const ctrl = new AbortController();
   const bell = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   let r;
+  const t0 = Date.now();
   try {
     r = await fetch(url, { headers, signal: ctrl.signal });
+    SYNC.stats.lastMs = Date.now() - t0;
+    SYNC.stats.maxMs = Math.max(SYNC.stats.maxMs, SYNC.stats.lastMs);
   } catch (e) {
     throw new Error(e.name === 'AbortError'
       ? `${path.split('?')[0]} timed out after ${TIMEOUT_MS / 1000}s`
@@ -187,28 +196,33 @@ function setBanner(html, sticky) {
 }
 
 async function pollOnce() {
+  SYNC.stats.polls++;
   try {
     const r = await api(`/draft/${SYNC.draftId}/picks`, { etag: SYNC.etag, nonce: freshnessNonce() });
     SYNC.err = 0;
     SYNC.degraded = false;
     SYNC.lastAt = Date.now();
     setBanner('');
-    if (r.status === 304) { renderSync(); return false; }
+    if (r.status === 304) { SYNC.stats.notModified++; renderSync(); return false; }
     SYNC.etag = r.etag;
     applyPicks(r.data || []);
     render();
     return true;
   } catch (e) {
     SYNC.err++;
+    SYNC.stats.errors++;
+    SYNC.stats.lastErr = e.message;
     /* A blip is not an outage. The board on screen is still the last good one,
        so say nothing until it has genuinely been failing for a while. */
     const quiet = SYNC.lastAt ? Date.now() - SYNC.lastAt : Infinity;
     if (SYNC.err >= DEGRADE_AFTER && quiet > DEGRADE_QUIET_MS && !SYNC.degraded) {
       SYNC.degraded = true;
       SYNC.sticky = false;
+      const st = SYNC.stats;
       setBanner(`<b>Lost contact with Sleeper</b> — ${esc(e.message)}. `
         + 'The board below is the last one we saw. Marking picks by hand works again in the meantime, '
-        + 'and it re-syncs on its own when the connection comes back.');
+        + 'and it re-syncs on its own when the connection comes back. '
+        + `<span class="diag">${st.errors} failed of ${st.polls} polls · slowest ${(st.maxMs / 1000).toFixed(1)}s</span>`);
     }
     renderSync();
     return false;
@@ -319,6 +333,10 @@ function renderSync() {
   pill.className = SYNC.err ? 'pill stale' : 'pill live';
   pill.textContent = status === 'complete' ? 'draft complete'
     : `live · ${SYNC.picks.length} picks${ago}${SYNC.note ? ' · ' + SYNC.note : ''}`;
+  const st = SYNC.stats;
+  pill.title = `${st.polls} polls, ${st.errors} failed, ${st.notModified} unchanged, `
+    + `${st.forced} forced fresh\nlast ${st.lastMs}ms, slowest ${st.maxMs}ms`
+    + (st.lastErr ? `\nlast error: ${st.lastErr}` : '');
 }
 
 function goToDraft(id) {

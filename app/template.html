@@ -10,7 +10,7 @@
   --text:#111819;--muted:#5b686b;--faint:#8b989b;
   --accent:#0d6b5a;--hot:#a8720a;--hot-bg:#fdf1d8;
   --pos:#127a5c;--neg:#c03b52;--mine:#0d6b5a;--mine-bg:#dff0ea;
-  --qb:#c9445c;--rb:#17936a;--wr:#3a7fd0;--te:#c4762a;--pk:#7b6ad0;--def:#5c7078;
+  --qb:#c9445c;--rb:#17936a;--wr:#3a7fd0;--te:#c4762a;--pk:#7b6ad0;--def:#5c7078;--rise:#c2571f;
   --shadow:0 1px 2px rgba(17,24,25,.05),0 4px 16px rgba(17,24,25,.05);
 }
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
@@ -18,7 +18,7 @@
   --text:#e5ecea;--muted:#8fa0a4;--faint:#6b7c81;
   --accent:#3cbb9c;--hot:#f0b429;--hot-bg:#3a2d0e;
   --pos:#3ed19c;--neg:#f0798c;--mine:#3cbb9c;--mine-bg:#123029;
-  --qb:#e8697f;--rb:#2fc48d;--wr:#5f9fe8;--te:#e8963f;--pk:#a08ce8;--def:#8fa3ab;
+  --qb:#e8697f;--rb:#2fc48d;--wr:#5f9fe8;--te:#e8963f;--pk:#a08ce8;--def:#8fa3ab;--rise:#f08a4b;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 20px rgba(0,0,0,.25);
 }}
 :root[data-theme="dark"]{
@@ -26,7 +26,7 @@
   --text:#e5ecea;--muted:#8fa0a4;--faint:#6b7c81;
   --accent:#3cbb9c;--hot:#f0b429;--hot-bg:#3a2d0e;
   --pos:#3ed19c;--neg:#f0798c;--mine:#3cbb9c;--mine-bg:#123029;
-  --qb:#e8697f;--rb:#2fc48d;--wr:#5f9fe8;--te:#e8963f;--pk:#a08ce8;--def:#8fa3ab;
+  --qb:#e8697f;--rb:#2fc48d;--wr:#5f9fe8;--te:#e8963f;--pk:#a08ce8;--def:#8fa3ab;--rise:#f08a4b;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 20px rgba(0,0,0,.25);
 }
 *{box-sizing:border-box}
@@ -65,6 +65,7 @@ button.on{background:var(--accent);color:var(--surface);border-color:var(--accen
 .banner{background:var(--hot-bg);border:1px solid var(--hot);color:var(--text);border-radius:8px;
   padding:10px 16px;font-size:13px;box-shadow:var(--shadow)}
 .banner b{font-weight:600}
+.diag{display:block;margin-top:5px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted)}
 
 /* layout */
 .grid{display:grid;grid-template-columns:1.55fr 1fr;gap:16px;align-items:start}
@@ -128,6 +129,15 @@ tr.mineRow td:first-child{box-shadow:inset 3px 0 0 var(--mine)}
   letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:10px;
   border:1px solid var(--line);color:var(--muted);vertical-align:middle;margin-left:4px}
 .depth{color:var(--faint);font-style:italic}
+.buzzchip,.rookiechip{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:10px;
+  vertical-align:middle;margin-left:4px}
+.buzzchip{color:var(--rise);border:1px solid var(--rise)}
+.rookiechip{color:var(--accent);border:1px solid var(--accent)}
+.risebar{padding:9px 16px;border-bottom:1px solid var(--line);cursor:pointer}
+.risebar:last-child{border-bottom:none}
+.risebar:hover{background:var(--surface-2)}
+.rise-hd{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:13px}
 /* around the room */
 .opps{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:1px;background:var(--line)}
 .opp{background:var(--surface);padding:10px 14px;display:flex;flex-direction:column;gap:5px}
@@ -187,6 +197,7 @@ kbd{font-family:"IBM Plex Mono",monospace;font-size:10.5px;border:1px solid var(
 
     <div class="stack">
       <div class="card"><h2>Positional runway</h2><div id="scar"></div></div>
+      <div class="card" id="risingCard" hidden><h2>Rising — market moving now</h2><div id="rising"></div></div>
       <div class="card"><h2>Your roster</h2><div id="roster"></div></div>
       <div class="card"><h2>Bench</h2><div id="bench"></div></div>
     </div>

@@ -35,6 +35,8 @@ data/league_config.json    league settings, our picks, keeper rule, modelled kee
 data/players_sf_adp.json   242-player superflex pool (FFC 2QB ADP)
 data/player_ids.json       Sleeper player_id -> our pool, so the app never
                            downloads Sleeper's 14 MB player file at runtime
+data/player_meta.json      rookie status (years_exp) per player
+data/adp_history.json      archived daily ADP snapshots; the source of velocity
 data/rosters_2025.json     all 12 final 2025 rosters with original draft positions
 data/standings_2025.json   final rank, wins, points for, waiver moves
 analysis/rosters.py        rosters as a Python literal, for quick scripting
@@ -112,8 +114,29 @@ ranks what to take by what will still be on the board when you next pick —
 simulating the intervening teams from *their* open starter slots rather than
 assuming the board empties in ADP order.
 
-If Sleeper stops answering, the pill turns amber, a banner explains why, and
-marking picks by hand starts working again. It re-syncs on its own.
+If Sleeper stops answering, the pill turns amber, a banner explains why (with
+poll and error counts), and marking picks by hand starts working again. It
+re-syncs on its own. Hover the pill any time for live counters.
+
+### Finding breakouts
+
+ADP is an average of what people already did, so a breakout only shows up in it
+after the price has moved. Three independent signals catch the move instead:
+
+- **ADP velocity** — spots gained against archived snapshots. This is the
+  market changing its own mind, not anyone's opinion.
+- **Sleeper trending adds** — roster adds across every league on the platform.
+  Behaviour, not sentiment; nothing is inferring tone from text.
+- **Rookie status** — `years_exp == 0`, because a rookie with buzz is a
+  different proposition from a veteran with buzz.
+
+Corroboration is the point: the score rewards two signals agreeing far more
+than one shouting, so a player has to show up twice to rank highly.
+
+**Buzz never drives a pick.** It moves a recommendation's score by at most 18%,
+enough to separate two similar players inside a tier and never enough to pull a
+position you don't need to the top. Everything else it does is in the *Rising*
+panel, which is a watchlist rather than advice.
 
 ## Caveats worth keeping in mind
 
@@ -125,8 +148,10 @@ marking picks by hand starts working again. It re-syncs on its own.
   assumes each team keeps its top two by surplus. Last season one team made two
   roster moves all year, so not everyone optimises. Replace with the real list
   once the keeper deadline passes.
-- **ADP is a snapshot.** The superflex sample opens 24 July, so late-August camp
-  news is underweighted. Re-pull before drafting:
-  `curl -s "https://fantasyfootballcalculator.com/api/v1/adp/2qb?teams=12&year=2026&position=all"`
+- **ADP is a lagging average**, which is why the console also carries a buzz
+  signal — see below. Re-pull before drafting with `python3 app/build.py`.
+- **Buzz needs history to mean anything.** Velocity is measured against archived
+  snapshots in `data/adp_history.json`, bootstrapped from two points recoverable
+  from git. It sharpens with every daily rebuild; treat it as thin for now.
 - 2025 finishing order is one season of twelve teams. Wins diverged sharply
   from points scored, so treat any strategy inference from it as suggestive.

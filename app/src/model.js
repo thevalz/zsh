@@ -102,6 +102,25 @@ const TIERS = (() => {
 })();
 const tierOf = p => TIERS.get(p.n) || 0;
 
+/* ---- buzz ----------------------------------------------------------------
+   ADP is a lagging average — by the time a breakout shows up in it, the price
+   has already moved. Two independent live signals catch the move in progress:
+   how fast a player's ADP is climbing, and how hard he is being added across
+   Sleeper. Neither is trustworthy alone; both pointing the same way is.
+
+   This is deliberately NOT allowed to drive a pick. It breaks ties inside a
+   tier and it fills the Rising panel. Need and scarcity still decide. */
+const ADD_MAX = Math.max(1, ...P.map(p => p.add || 0));
+function buzz(p) {
+  const climb = Math.min(1, Math.max(0, p.vel || 0) / 18);   // 18 spots ~ maxed
+  const adds = Math.min(1, (p.add || 0) / ADD_MAX);
+  if (!climb && !adds) return 0;
+  // reward corroboration: agreeing signals score far above one loud one
+  const hi = Math.max(climb, adds), lo = Math.min(climb, adds);
+  return Math.round(Math.min(100, 100 * (0.6 * hi + 0.4 * lo)));
+}
+const isRookie = p => !!p.rk;
+
 /* The tier the next player at this position belongs to, and what is left of
    it — "3 left in QB tier 4" is the thing you can actually act on. */
 function tierState(pos, board, surv) {
@@ -177,9 +196,12 @@ function computeRecs() {
 
     // squared so need dominates: a filled position has to be enormously more
     // urgent to outrank an open one, rather than merely somewhat more urgent
-    const score = need * need * (2 + urgency + 0.5 * bargain + tierRisk);
+    // buzz nudges by at most 18% — enough to separate two similar players,
+    // never enough to pull a position you do not need to the top
+    const bz = buzz(now);
+    const score = need * need * (2 + urgency + 0.5 * bargain + tierRisk) * (1 + 0.18 * bz / 100);
     out.push({
-      p: now, pos, need, urgency, bargain, nxt, score, tier: ts,
+      p: now, pos, need, urgency, bargain, nxt, score, tier: ts, buzz: bz,
       fills: fillsSlot(roster, pos),
       starter: need >= STARTER_NEED,
     });
