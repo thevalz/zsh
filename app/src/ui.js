@@ -5,31 +5,43 @@ const TIER = pos => (pos === 'QB' ? 45 : pos === 'TE' ? 110 : 90);
 function renderRecs() {
   const R = computeRecs();
   el('recs').innerHTML = R.map((r, i) => {
-    const wait = r.delta >= 120 ? `<b>nobody left at ${r.pos}</b> after this run`
-      : r.nxt && r.nxt.n === r.p.n ? 'should survive to your next pick — <b>no rush</b>'
-      : `wait and you drop to <b>${esc(r.nxt.n)}</b> (${r.nxt.a.toFixed(0)}) — <b>${r.delta.toFixed(0)} spots</b>`;
-    const val = r.edge >= 0 ? `<span class="edge-pos">${r.edge.toFixed(0)} spots of value</span>`
-      : `<span class="edge-neg">reaching ${(-r.edge).toFixed(0)}</span>`;
+    const why = r.fills
+      ? `fills your <b>${r.fills === 'K' ? 'kicker' : r.fills.replace('_', ' ').toLowerCase()}</b>`
+      : '<span class="depth">bench depth</span>';
+    const t = r.tier ? `<span class="tierchip">${r.pos} tier ${r.tier.tier}</span>` : '';
+    const wait = !r.nxt ? `<b>nobody left at ${r.pos}</b> after this run`
+      : r.tier && r.tier.survives === 0
+        ? `<b class="warnTxt">tier ${r.tier.tier} is gone</b> before your next pick`
+      : r.nxt.n === r.p.n ? 'should survive to your next pick — <b>no rush</b>'
+      : `wait and you drop to <b>${esc(r.nxt.n)}</b> — <b>${r.urgency.toFixed(0)} spots</b>`;
+    const val = r.bargain > 0 ? `<span class="edge-pos">${r.bargain.toFixed(0)} spots of value</span>`
+      : `<span class="edge-neg">reaching ${(r.p.a - S.pick).toFixed(0)}</span>`;
     return `<div class="rec${i ? '' : ' top'}"><div class="rank">${i + 1}</div><div class="rec-main">
-      <div class="rec-name"><span class="badge b-${r.p.p}">${r.p.p}</span>${esc(r.p.n)}</div>
-      <div class="rec-why">ADP ${r.p.a.toFixed(0)} · ${val} · ${wait}</div></div>
+      <div class="rec-name"><span class="badge b-${r.p.p}">${r.p.p}</span>${esc(r.p.n)} ${t}</div>
+      <div class="rec-why">${why} · ADP ${r.p.a.toFixed(0)} · ${val}</div>
+      <div class="rec-why">${wait}</div></div>
       <button class="take mini" data-take="${esc(r.p.n)}">Draft</button></div>`;
   }).join('') || '<div class="rec"><div class="rec-main"><div class="rec-why">Board is empty.</div></div></div>';
 }
 
 function renderRunway(tgt) {
-  const surv = survivors();
+  const board = avail(), surv = survivors();
   el('scar').innerHTML = ['QB', 'RB', 'WR', 'TE'].map(pos => {
-    const tierN = avail().filter(p => p.p === pos && p.a <= TIER(pos)).length;
-    const n = surv.filter(p => p.p === pos && p.a <= TIER(pos)).length;
-    const pct = Math.min(100, tierN / (pos === 'WR' ? 20 : pos === 'RB' ? 16 : 12) * 100);
-    const col = tierN <= 2 ? 'var(--neg)' : tierN <= 5 ? 'var(--hot)' : 'var(--pos)';
-    const note = n === 0 ? '<span class="warnTxt">Gone before your next pick.</span>'
-      : n === 1 ? `Only one should reach pick ${tgt ?? '—'}.`
-      : `${n} should still be there at pick ${tgt ?? '—'}.`;
-    return `<div class="scar"><div class="scar-hd"><span><span class="badge b-${pos}">${pos}</span> ${tierN} left in tier</span>
-      <b style="color:${col}">${n} survive</b></div>
+    const ts = tierState(pos, board, surv);
+    if (!ts) return `<div class="scar"><div class="scar-hd"><span><span class="badge b-${pos}">${pos}</span> none left</span></div></div>`;
+    const col = ts.survives === 0 ? 'var(--neg)' : ts.survives === 1 ? 'var(--hot)' : 'var(--pos)';
+    const pct = Math.min(100, ts.survives / Math.max(1, ts.left) * 100);
+    const who = ts.members.slice(0, 4).map(p => esc(p.n.split(' ').slice(-1)[0])).join(', ')
+      + (ts.left > 4 ? ` +${ts.left - 4}` : '');
+    const note = ts.survives === 0
+      ? `<span class="warnTxt">All gone before pick ${tgt ?? '—'}.</span> Next is tier ${ts.tier + 1}.`
+      : ts.survives === 1 ? `Only one reaches pick ${tgt ?? '—'}.`
+      : `${ts.survives} of them reach pick ${tgt ?? '—'}.`;
+    return `<div class="scar"><div class="scar-hd">
+        <span><span class="badge b-${pos}">${pos}</span> <b>tier ${ts.tier}</b> · ${ts.left} left</span>
+        <b style="color:${col}">${ts.survives} survive</b></div>
       <div class="meter"><i style="width:${pct}%;background:${col}"></i></div>
+      <div class="scar-note">${who}</div>
       <div class="scar-note">${note}</div></div>`;
   }).join('');
 }

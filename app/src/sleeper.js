@@ -27,13 +27,24 @@ const SYNC = {
 const syncAuthoritative = () => SYNC.on && !SYNC.degraded;
 const liveRosters = () => SYNC.on && SYNC.ownerOf.size > 0;
 
-const TIMEOUT_MS = 8000;
+const TIMEOUT_MS = 15000;   // phones on stadium wifi are slow, not broken
+const DEGRADE_AFTER = 5;    // consecutive misses before crying wolf
+const DEGRADE_QUIET_MS = 45000;  // ...and only if it has been bad this long
+
+/* Forcing a CDN miss on every poll means every request hits the origin. That
+   is worth it when a pick is imminent and 30s of staleness would matter; it is
+   just noise and extra failure surface when your turn is twenty picks away. */
+function freshnessNonce() {
+  const n = nextPick();
+  const near = n === null || (n - S.pick) <= 12;
+  return near ? Date.now().toString(36) + Math.random().toString(36).slice(2, 7) : null;
+}
 
 /* A request that never settles is worse than one that fails: without a
    deadline the app sits on "offline" forever and never says why. */
 async function api(path, opts = {}) {
-  const nonce = Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
-  const url = `${API}${path}${path.includes('?') ? '&' : '?'}_=${nonce}`;
+  const nonce = opts.nonce === undefined ? (Date.now().toString(36) + Math.random().toString(36).slice(2, 7)) : opts.nonce;
+  const url = nonce ? `${API}${path}${path.includes('?') ? '&' : '?'}_=${nonce}` : `${API}${path}`;
   const headers = opts.etag ? { 'If-None-Match': opts.etag } : {};
   const ctrl = new AbortController();
   const bell = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
@@ -177,7 +188,7 @@ function setBanner(html, sticky) {
 
 async function pollOnce() {
   try {
-    const r = await api(`/draft/${SYNC.draftId}/picks`, { etag: SYNC.etag });
+    const r = await api(`/draft/${SYNC.draftId}/picks`, { etag: SYNC.etag, nonce: freshnessNonce() });
     SYNC.err = 0;
     SYNC.degraded = false;
     SYNC.lastAt = Date.now();
@@ -189,11 +200,15 @@ async function pollOnce() {
     return true;
   } catch (e) {
     SYNC.err++;
-    if (SYNC.err >= 3 && !SYNC.degraded) {
+    /* A blip is not an outage. The board on screen is still the last good one,
+       so say nothing until it has genuinely been failing for a while. */
+    const quiet = SYNC.lastAt ? Date.now() - SYNC.lastAt : Infinity;
+    if (SYNC.err >= DEGRADE_AFTER && quiet > DEGRADE_QUIET_MS && !SYNC.degraded) {
       SYNC.degraded = true;
       SYNC.sticky = false;
       setBanner(`<b>Lost contact with Sleeper</b> — ${esc(e.message)}. `
-        + 'Marking picks by hand works again in the meantime; the board re-syncs on its own when the connection comes back.');
+        + 'The board below is the last one we saw. Marking picks by hand works again in the meantime, '
+        + 'and it re-syncs on its own when the connection comes back.');
     }
     renderSync();
     return false;
@@ -201,7 +216,9 @@ async function pollOnce() {
 }
 
 function pollDelay() {
-  if (SYNC.err) return Math.min(60000, 4000 * 2 ** (SYNC.err - 1));
+  // back off gently, with jitter so a flaky link does not resynchronise into
+  // a burst of simultaneous retries
+  if (SYNC.err) return Math.min(30000, 3000 * 1.6 ** (SYNC.err - 1)) * (0.85 + Math.random() * 0.3);
   if (SYNC.draft && SYNC.draft.status === 'complete') return null;
   const away = (nextPick() ?? 999) - S.pick;
   return away <= 6 ? 4000 : 10000;
@@ -296,9 +313,12 @@ function renderSync() {
   if (!SYNC.on) { pill.className = 'pill off'; pill.textContent = 'offline'; return; }
   if (SYNC.degraded) { pill.className = 'pill warn'; pill.textContent = 'retrying'; return; }
   const status = (SYNC.draft && SYNC.draft.status) || '';
-  pill.className = 'pill live';
+  const age = SYNC.lastAt ? Math.round((Date.now() - SYNC.lastAt) / 1000) : null;
+  // only mention staleness once it is worth mentioning
+  const ago = age !== null && age >= 25 ? ` · ${age}s ago` : '';
+  pill.className = SYNC.err ? 'pill stale' : 'pill live';
   pill.textContent = status === 'complete' ? 'draft complete'
-    : `live · ${SYNC.picks.length} picks${SYNC.note ? ' · ' + SYNC.note : ''}`;
+    : `live · ${SYNC.picks.length} picks${ago}${SYNC.note ? ' · ' + SYNC.note : ''}`;
 }
 
 function goToDraft(id) {

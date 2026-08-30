@@ -27,7 +27,9 @@ app/src/state.js           data, persistence, whose-pick arithmetic
 app/src/model.js           roster fill, positional need, need-aware simulation
 app/src/sleeper.js         Sleeper client: discovery, polling, backoff
 app/src/ui.js              rendering and events
-app/test/sync.mjs          22 assertions against a stubbed API (real payloads)
+app/test/sync.mjs          sync behaviour against a stubbed API (real payloads)
+app/test/model.mjs         recommendation regressions — the scoring sign bug
+app/test/mock.mjs          adapting to a mock with different settings
 app/test/live.mjs          smoke test against the real API — needs an http origin
 data/league_config.json    league settings, our picks, keeper rule, modelled keepers
 data/players_sf_adp.json   242-player superflex pool (FFC 2QB ADP)
@@ -48,7 +50,9 @@ last-years-draft.md        the same board in prose
 python3 analysis/keeper_math.py     # per-team keeper surplus, top 2 each
 python3 app/build.py                # refresh ADP and rebuild the console
 python3 app/build.py --no-fetch     # rebuild offline from cached data/
-node app/test/sync.mjs              # 22 assertions, stubbed API
+node app/test/sync.mjs              # sync, keepers, ownership, outage handling
+node app/test/model.mjs             # recommendation model regressions
+node app/test/mock.mjs              # adapting to a foreign mock draft
 ```
 
 ### The live console

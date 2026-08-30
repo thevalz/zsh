@@ -1,49 +1,120 @@
-/* model.js — roster shape, positional need, and the value of waiting.
+/* model.js — roster shape, positional need, tiers, and what to take next.
 
-   The only interesting idea here is `survivors()`. Asking "who is still on the
-   board at my next pick" is what makes a recommendation actionable, and the
-   honest answer depends on what the teams picking in between actually need —
-   not on ADP order alone. */
+   Two ideas carry the whole file:
+
+   1. `survivors()` — who is still on the board when you next pick. The honest
+      answer depends on what the teams picking in between need, not on ADP
+      order alone, so we simulate them from their live rosters.
+
+   2. Every term in the recommendation score is non-negative. An earlier
+      version scored `need x (0.6*delta + 0.4*edge)`, where `edge` was
+      `pick - adp`. Mid-draft that bracket goes negative, and multiplying a
+      negative by a *larger* need makes it *smaller* — so need inverted and
+      positions you had already filled floated to the top exactly when the
+      board thinned. Nothing below may go negative. */
 
 const FLEX = ['RB', 'WR', 'TE'];
 const SF = ['QB', 'RB', 'WR', 'TE'];
 
 /* Greedily seat players into dedicated slots, then FLEX, then SUPER_FLEX.
    Works unchanged on an opponent's roster, which is what makes the
-   need-aware simulation below possible. */
+   need-aware simulation possible. */
 function fill(list) {
   const slots = D.slots.map(s => ({ s, p: null }));
   const pool = [...list].sort((a, b) => a.a - b.a);
   const grab = t => { const i = pool.findIndex(p => t.includes(p.p)); return i < 0 ? null : pool.splice(i, 1)[0]; };
-  for (const sl of slots) if (!['FLEX', 'SUPER_FLEX'].includes(sl.s)) sl.p = grab([sl.s]);
+  // the lineup calls the slot K; the ADP feed calls the position PK. Without
+  // this the kicker slot never fills and the model keeps asking for another.
+  const eligible = s => (s === 'K' ? ['K', 'PK'] : [s]);
+  for (const sl of slots) if (!['FLEX', 'SUPER_FLEX'].includes(sl.s)) sl.p = grab(eligible(sl.s));
   for (const sl of slots) if (sl.s === 'FLEX') sl.p = grab(FLEX);
   for (const sl of slots) if (sl.s === 'SUPER_FLEX') sl.p = grab(SF);
   return { slots, bench: pool };
 }
 
-/* How badly a roster wants another player at `pos`. */
+/* How many lineup slots a position could ever occupy. Two quarterbacks fill
+   QB and SUPER_FLEX in this league, and a third starts nowhere. */
+function startableSlots(pos) {
+  return D.slots.filter(s =>
+    s === pos
+    || (s === 'K' && pos === 'PK')
+    || (s === 'FLEX' && FLEX.includes(pos))
+    || (s === 'SUPER_FLEX' && SF.includes(pos))).length;
+}
+
+/* Need is a positive weight in [0,1]. Anything at or above STARTER_NEED fills
+   a hole in the starting lineup; below it the pick is bench depth. */
+const STARTER_NEED = 0.5;
+
 function needFor(roster, pos, picksLeft) {
   const { slots } = fill(roster);
   const open = s => slots.some(x => x.s === s && !x.p);
   if (pos === 'PK' || pos === 'DEF') {
     const slot = pos === 'PK' ? 'K' : 'DEF';
-    return open(slot) ? (picksLeft <= 3 ? 1.3 : 0.02) : 0.01;
+    // a kicker is only ever the last thing you do
+    return open(slot) ? (picksLeft <= 3 ? 1 : 0.02) : 0.01;
   }
   if (open(pos)) return 1;
-  if (FLEX.includes(pos) && open('FLEX')) return 0.8;
-  if (SF.includes(pos) && open('SUPER_FLEX')) return pos === 'QB' ? 0.95 : 0.7;
+  if (FLEX.includes(pos) && open('FLEX')) return 0.85;
+  if (SF.includes(pos) && open('SUPER_FLEX')) return pos === 'QB' ? 0.95 : 0.75;
+
+  // every slot this position can start in is taken; from here it is depth
   const depth = roster.filter(p => p.p === pos).length;
-  return depth >= 4 ? 0.12 : 0.34;
+  const surplus = Math.max(0, depth - startableSlots(pos));
+  return Math.max(0.02, 0.14 / (1 + surplus));
 }
 
 const needWeight = pos => needFor(mine(), pos, myPicks().filter(x => x >= S.pick).length);
 
-/* Who is left when my next pick comes round.
+/* Which lineup slot this position would actually fill, or null for depth.
+   Shown on every recommendation so the reasoning is visible. */
+function fillsSlot(roster, pos) {
+  const { slots } = fill(roster);
+  const open = s => slots.some(x => x.s === s && !x.p);
+  if (pos === 'PK') return open('K') ? 'K' : null;
+  if (pos === 'DEF') return open('DEF') ? 'DEF' : null;
+  if (open(pos)) return pos;
+  if (FLEX.includes(pos) && open('FLEX')) return 'FLEX';
+  if (SF.includes(pos) && open('SUPER_FLEX')) return 'SUPER_FLEX';
+  return null;
+}
 
-   With live rosters we simulate: each intervening team takes the best of the
-   top few available, tilted toward a position it still needs. Without them we
-   fall back to straight ADP order, which is the same assumption the manual
-   console made. */
+/* ---- tiers ---------------------------------------------------------------
+   A tier is a run of players the market treats as interchangeable. Break the
+   run where the gap to the next player is large relative to how precisely the
+   market has ranked them — the stdev of their ADP is exactly that measure, and
+   FFC gives it to us per player. */
+const TIERS = (() => {
+  const out = new Map();
+  for (const pos of ['QB', 'RB', 'WR', 'TE', 'PK', 'DEF']) {
+    const list = P.filter(p => p.p === pos).sort((a, b) => a.a - b.a);
+    let tier = 1;
+    list.forEach((p, i) => {
+      if (i > 0) {
+        const prev = list[i - 1];
+        const spread = ((prev.sd || 6) + (p.sd || 6)) / 2;
+        if (p.a - prev.a > Math.max(4, spread * 0.9)) tier++;
+      }
+      out.set(p.n, tier);
+    });
+  }
+  return out;
+})();
+const tierOf = p => TIERS.get(p.n) || 0;
+
+/* The tier the next player at this position belongs to, and what is left of
+   it — "3 left in QB tier 4" is the thing you can actually act on. */
+function tierState(pos, board, surv) {
+  const next = board.find(p => p.p === pos);
+  if (!next) return null;
+  const t = tierOf(next);
+  const inTier = board.filter(p => p.p === pos && tierOf(p) === t);
+  const survives = surv.filter(p => p.p === pos && tierOf(p) === t).length;
+  return { tier: t, next, left: inTier.length, survives, members: inTier };
+}
+
+/* ---- who is left when you next pick -------------------------------------- */
+
 function survivors() {
   const board = avail();
   const gap = horizon();
@@ -63,8 +134,7 @@ function survivors() {
     /* Compare the best player at each position rather than the first N on the
        board. In superflex the top of the board goes QB-heavy, so a fixed
        window can contain nothing but quarterbacks — and a team that is set at
-       QB would then be modelled as taking one anyway. Decay is slow, so need
-       carries unless the value gap is very large (~40 spots). */
+       QB would then be modelled as taking one anyway. */
     let best = 0, bestScore = -Infinity;
     const seen = new Set();
     for (let i = 0; i < pool.length && seen.size < 6; i++) {
@@ -83,25 +153,43 @@ function survivors() {
   return pool;
 }
 
-function vona() {
-  const a = avail(), surv = survivors(), out = {};
-  for (const pos of ['QB', 'RB', 'WR', 'TE', 'PK', 'DEF']) {
-    const now = a.find(p => p.p === pos), nxt = surv.find(p => p.p === pos);
-    if (!now) continue;
-    out[pos] = { now, nxt, delta: nxt ? nxt.a - now.a : 120 };
-  }
-  return out;
-}
+/* ---- recommendations ----------------------------------------------------- */
 
 function computeRecs() {
-  const v = vona(), out = [];
-  for (const pos in v) {
-    const { now, nxt, delta } = v[pos], w = needWeight(pos), edge = S.pick - now.a;
-    out.push({ p: now, pos, w, delta, edge, nxt, score: w * (0.6 * delta + 0.4 * edge) });
+  const board = avail(), surv = survivors();
+  const left = myPicks().filter(x => x >= S.pick).length;
+  const roster = mine();
+  const out = [];
+
+  for (const pos of ['QB', 'RB', 'WR', 'TE', 'PK', 'DEF']) {
+    const now = board.find(p => p.p === pos);
+    if (!now) continue;
+    const nxt = surv.find(p => p.p === pos);
+    const need = needFor(roster, pos, left);
+    const ts = tierState(pos, board, surv);
+
+    // urgency: how far you fall by waiting. Never negative.
+    const urgency = nxt ? Math.max(0, nxt.a - now.a) : 140;
+    // bargain: only counts when he is genuinely late for his price. Never negative.
+    const bargain = Math.max(0, S.pick - now.a);
+    // a whole tier about to vanish is the sharpest signal there is
+    const tierRisk = ts && ts.survives === 0 ? 14 : ts && ts.survives === 1 ? 6 : 0;
+
+    // squared so need dominates: a filled position has to be enormously more
+    // urgent to outrank an open one, rather than merely somewhat more urgent
+    const score = need * need * (2 + urgency + 0.5 * bargain + tierRisk);
+    out.push({
+      p: now, pos, need, urgency, bargain, nxt, score, tier: ts,
+      fills: fillsSlot(roster, pos),
+      starter: need >= STARTER_NEED,
+    });
   }
-  // a kicker or defense is never a real recommendation until the very end
-  const live = out.filter(r => !(['PK', 'DEF'].includes(r.pos) && r.w < 0.5));
-  const use = live.length ? live : out;
-  use.sort((x, y) => y.score - x.score);
-  return use.slice(0, 3);
+
+  out.sort((a, b) => b.score - a.score || a.p.a - b.p.a);
+
+  /* Hard rule, not a weighting: while any position still fills a hole in the
+     starting lineup, depth picks are not recommendations. This is what stops
+     a third quarterback being suggested all afternoon. */
+  const starters = out.filter(r => r.starter);
+  return (starters.length ? starters : out).slice(0, 3);
 }

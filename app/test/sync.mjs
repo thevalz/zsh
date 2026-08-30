@@ -109,9 +109,26 @@ check('next owned pick after 40 is 47', s.next, '47');
 // mine at or before 40: 2, 23, 26, 38 -> 14 - 4 = 10 still to come
 check('picks left drops to 10', s.left, 10);
 
-console.log('\ndegraded mode');
+console.log('\ntransient blip');
+/* A few misses in quick succession is a blip, not an outage. The board on
+   screen is still the last good one, so the app should stay quiet. */
 await pg.evaluate(async () => { window.__fail = true; for (let i = 0; i < 3; i++) await pollOnce(); });
-await pg.waitForTimeout(200);
+await pg.waitForTimeout(150);
+const blip = await pg.evaluate(() => ({
+  banner: !document.getElementById('syncBanner').hidden,
+  pill: document.getElementById('syncPill').textContent,
+  boardIntact: Object.keys(S.drafted).length > 0,
+}));
+check('no alarm on a short blip', blip.banner, false);
+check('board still shows the last good state', blip.boardIntact, true);
+console.log(`  info  pill = "${blip.pill}"`);
+
+console.log('\nsustained outage');
+await pg.evaluate(async () => {
+  SYNC.lastAt = Date.now() - 60000;          // failing for a solid minute
+  for (let i = 0; i < 5; i++) await pollOnce();
+});
+await pg.waitForTimeout(150);
 const deg = await pg.evaluate(() => ({
   pill: document.getElementById('syncPill').textContent,
   banner: !document.getElementById('syncBanner').hidden,

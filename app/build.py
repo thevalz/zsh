@@ -23,6 +23,7 @@ DIST = os.path.join(HERE, "dist")
 DOCS = os.path.join(ROOT, "docs")
 
 ADP_URL = "https://fantasyfootballcalculator.com/api/v1/adp/2qb?teams=12&year=2026&position=all"
+PPR_URL = "https://fantasyfootballcalculator.com/api/v1/adp/ppr?teams=12&year=2026&position=all"
 SLEEPER_PLAYERS = "https://api.sleeper.app/v1/players/nfl"
 # concatenation order matters: later files call into earlier ones
 SRC_ORDER = ["state.js", "model.js", "sleeper.js", "ui.js"]
@@ -41,16 +42,74 @@ def norm(s):
     return re.sub(r"\s+", " ", s).strip()
 
 
+def _row(p):
+    return {"n": p["name"], "p": p["position"], "t": p["team"],
+            "a": p["adp"], "b": p["bye"], "sd": p["stdev"]}
+
+
+def _interp(x, xs, ys):
+    """Monotone piecewise-linear lookup; clamps outside the fitted range."""
+    if x <= xs[0]:
+        return ys[0]
+    if x >= xs[-1]:
+        # extrapolate along the last segment so deep players keep spreading out
+        if len(xs) > 1 and xs[-1] > xs[-2]:
+            slope = (ys[-1] - ys[-2]) / (xs[-1] - xs[-2])
+            return ys[-1] + slope * (x - xs[-1])
+        return ys[-1]
+    lo = 0
+    while lo + 1 < len(xs) and xs[lo + 1] < x:
+        lo += 1
+    x0, x1, y0, y1 = xs[lo], xs[lo + 1], ys[lo], ys[lo + 1]
+    return y0 if x1 == x0 else y0 + (y1 - y0) * (x - x0) / (x1 - x0)
+
+
 def fetch_adp():
-    payload = get(ADP_URL)
-    meta = payload["meta"]
-    players = [
-        {"n": p["name"], "p": p["position"], "t": p["team"],
-         "a": p["adp"], "b": p["bye"], "sd": p["stdev"]}
-        for p in payload["players"]
-    ]
+    """Superflex ADP, extended with the deeper 1QB list.
+
+    The 2QB feed only ranks ~240 players, but a 12-team 16-round draft makes
+    192 picks — so the board runs dry in the late rounds exactly when you still
+    need it. The PPR feed goes deeper, so anyone missing from the 2QB list gets
+    a superflex ADP estimated from the two lists' overlap. Quarterbacks are
+    excluded from that fit: they are precisely the players the two formats
+    disagree about, so they would poison the mapping.
+    """
+    sf = get(ADP_URL)
+    meta = sf["meta"]
+    players = [_row(p) for p in sf["players"]]
+    have = {p["n"] for p in players}
     src = "FFC 2QB ADP, {} drafts, {} to {}".format(
         meta["total_drafts"], meta["start_date"], meta["end_date"])
+
+    try:
+        ppr = get(PPR_URL)
+    except Exception as e:                     # deeper pool is a bonus, not a requirement
+        print(f"  depth    skipped, PPR feed unavailable ({e})")
+        return players, src
+
+    sf_by_name = {p["name"]: p["adp"] for p in sf["players"] if p["position"] != "QB"}
+    pairs = sorted((p["adp"], sf_by_name[p["name"]])
+                   for p in ppr["players"]
+                   if p["position"] != "QB" and p["name"] in sf_by_name)
+    if len(pairs) < 20:
+        print("  depth    skipped, not enough overlap to map PPR onto superflex")
+        return players, src
+    xs = [a for a, _ in pairs]
+    ys = [b for _, b in pairs]
+
+    added = 0
+    for p in ppr["players"]:
+        if p["name"] in have:
+            continue
+        r = _row(p)
+        r["a"] = round(_interp(p["adp"], xs, ys), 1)
+        r["est"] = 1                            # value inferred, not observed
+        players.append(r)
+        added += 1
+
+    players.sort(key=lambda p: p["a"])
+    print(f"  depth    +{added} from the PPR list "
+          f"(mapped through {len(pairs)} players in both) -> {len(players)} total")
     return players, src
 
 
