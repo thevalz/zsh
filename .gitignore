@@ -1,2 +1,5 @@
 node_modules/
 package-lock.json
+
+# local build output; docs/ is what GitHub Pages serves
+app/dist/

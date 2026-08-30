@@ -1,11 +1,18 @@
-name: Build and deploy draft console
+name: Rebuild draft console
+
+# Pages serves this repo from the branch, so "deploying" means committing the
+# built site to docs/ and letting GitHub's branch builder pick it up. That
+# avoids the github-pages environment entirely, and its default rule that only
+# the repository's default branch may deploy.
 
 on:
   push:
     branches:
       - claude/fantasy-keeper-recommendations-tp9ron
     paths:
-      - 'app/**'
+      - 'app/src/**'
+      - 'app/template.html'
+      - 'app/build.py'
       - 'data/**'
       - '.github/workflows/pages.yml'
   # Rebuilds pull fresh ADP, so a daily run keeps the numbers current on their
@@ -15,17 +22,14 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
-# never let a scheduled run and a push deploy over each other
 concurrency:
-  group: pages
+  group: rebuild-console
   cancel-in-progress: true
 
 jobs:
-  build:
+  rebuild:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -48,7 +52,7 @@ jobs:
         run: |
           node -e '
             const fs = require("fs");
-            const h = fs.readFileSync("app/dist/draft-live.html", "utf8");
+            const h = fs.readFileSync("docs/draft-live.html", "utf8");
             const m = h.match(/<script>\n([\s\S]*?)\n<\/script>/);
             if (!m) { console.error("no script block in the built file"); process.exit(1); }
             new Function(m[1]);
@@ -56,16 +60,17 @@ jobs:
             console.log("bundle OK,", Math.round(h.length / 1024) + " KB");
           '
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: app/dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      # Only docs/ is committed. A refreshed data/players_sf_adp.json is left
+      # alone on purpose: data/ is a trigger path, so committing it would make
+      # this workflow retrigger itself forever.
+      - name: Commit the rebuilt site
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "site unchanged, nothing to commit"
+            exit 0
+          fi
+          git commit -m "Rebuild draft console (ADP refresh)"
+          git push

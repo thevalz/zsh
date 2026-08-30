@@ -20,6 +20,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 DATA = os.path.join(ROOT, "data")
 DIST = os.path.join(HERE, "dist")
+DOCS = os.path.join(ROOT, "docs")
 
 ADP_URL = "https://fantasyfootballcalculator.com/api/v1/adp/2qb?teams=12&year=2026&position=all"
 SLEEPER_PLAYERS = "https://api.sleeper.app/v1/players/nfl"
@@ -150,19 +151,22 @@ def main():
             .replace("__DATA__", json.dumps(payload, separators=(",", ":")))
             .replace("__SCRIPT__", "\n\n".join(script)))
 
-    os.makedirs(DIST, exist_ok=True)
-    out = os.path.join(DIST, "draft-live.html")
-    open(out, "w").write(html)
-    print(f"  built    {os.path.relpath(out, ROOT)}  {len(html) / 1024:.0f} KB")
-
-    # Root redirect for Pages. A meta refresh would drop the query string and
-    # ?draft= is the whole point, so hand off in script and keep it.
-    open(os.path.join(DIST, "index.html"), "w").write(
+    # app/dist is the local build; docs/ is what GitHub Pages serves from the
+    # branch. Writing both keeps them from drifting apart.
+    redirect = (
         '<meta charset="utf-8"><title>Zebras Draft Console</title>\n'
+        # A meta refresh would drop the query string and ?draft= is the whole
+        # point, so hand off in script and keep it.
         '<script>location.replace("draft-live.html" + location.search + location.hash)</script>\n'
         '<noscript><a href="draft-live.html">Open the draft console</a></noscript>\n'
     )
-    print("  built    app/dist/index.html  (redirect, preserves ?draft=)")
+    for d in (DIST, DOCS):
+        os.makedirs(d, exist_ok=True)
+        open(os.path.join(d, "draft-live.html"), "w").write(html)
+        open(os.path.join(d, "index.html"), "w").write(redirect)
+        # keep Pages' Jekyll pass away from a hand-built site
+        open(os.path.join(d, ".nojekyll"), "w").write("")
+        print(f"  built    {os.path.relpath(d, ROOT)}/  draft-live.html {len(html) / 1024:.0f} KB + index redirect")
 
 
 if __name__ == "__main__":

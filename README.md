@@ -58,10 +58,24 @@ straight off disk has an opaque origin and the browser refuses every
 cross-origin request, so the Sleeper sync silently never starts. Published
 Artifacts are out for the same reason: their CSP blocks external hosts.
 
-Deployed by GitHub Actions to **https://thevalz.github.io/zsh/** on every push
-to `app/` or `data/`, and again at 11:17 UTC daily so the ADP stays current
-without anyone remembering to rebuild. One-time setup: repo **Settings → Pages
-→ Source: GitHub Actions**. The site is public, like the repo.
+Served from **https://thevalz.github.io/zsh/** out of `docs/` on this branch.
+
+Pages settings: **Deploy from a branch** → branch
+`claude/fantasy-keeper-recommendations-tp9ron` → folder **`/docs`**.
+
+Branch deployment rather than the GitHub Actions source, deliberately: the
+auto-created `github-pages` environment only permits deployments from the
+repository's *default* branch, and the default branch here is a different
+`claude/*` branch. Branch deployment has no such gate.
+
+`docs/` is committed build output — `app/build.py` writes both it and
+`app/dist/` (the latter gitignored, for local serving). `.github/workflows/pages.yml`
+rebuilds daily at 11:17 UTC with fresh ADP and commits `docs/` only if it
+changed, so the numbers stay current without anyone remembering. That commit
+step needs **Settings → Actions → General → Workflow permissions → Read and
+write**; the site itself works without it, only the auto-refresh does not.
+
+The site is public, like the repo.
 
 Locally:
 
