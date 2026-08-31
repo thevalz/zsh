@@ -180,6 +180,45 @@ function buzz(p) {
 }
 const isRookie = p => !!p.rk;
 
+/* ---- bye collisions -------------------------------------------------------
+   The objective is points in each individual week, not points in total. Two
+   rosters with the same season projection are not equally good if one of them
+   starts four players who are all off in week 10 — that week is a loss no
+   matter how good the roster reads on paper.
+
+   Only players filling starting slots are counted. A backup sharing a bye with
+   nobody costs you nothing, and a backup sharing a bye with your starter is
+   the specific thing you were supposed to avoid. */
+function byeLoad(roster) {
+  const { slots } = fill(roster);
+  const load = new Map();
+  for (const s of slots) {
+    if (!s.p || !s.p.b) continue;
+    if (!['QB', 'RB', 'WR', 'TE', 'FLEX', 'SUPER_FLEX'].includes(s.s)) continue;
+    load.set(s.p.b, (load.get(s.p.b) || 0) + 1);
+  }
+  return load;
+}
+
+/* How many starters you would have on this player's bye if you took him.
+   Only counts him if he would actually start; a bench body is not a collision. */
+function byeAfter(p, roster) {
+  if (!p.b) return 0;
+  const load = byeLoad(roster);
+  const starts = fillsSlot(roster, p.p) !== null;
+  return (load.get(p.b) || 0) + (starts ? 1 : 0);
+}
+
+/* A multiplier, never a veto. Losing one starter for a week is normal and
+   every roster does it; three is a bad week; four is a forfeit. Capped so a
+   genuinely better player still wins — this breaks ties, it does not draft. */
+const BYE_OK = 2;
+function byeRisk(p, roster) {
+  const n = byeAfter(p, roster);
+  if (n <= BYE_OK) return 1;
+  return Math.max(0.7, 1 - 0.09 * (n - BYE_OK));
+}
+
 /* ---- fit: need x value ---------------------------------------------------
    The board used to be sorted by ADP alone, which answers "who is best" and
    not "who is best *for me*". Value here is points above replacement under
@@ -193,7 +232,7 @@ function fitScore(p, roster, left, surv) {
   const value = Math.max(0, p.vor || 0) / VOR_MAX;      // 0..1
   const gone = surv && !surv.includes(p) ? 1.25 : 1;     // won't last to your next pick
   const bz = 1 + 0.12 * buzz(p) / 100;
-  return need * need * value * gone * bz;
+  return need * need * value * gone * bz * byeRisk(p, roster);
 }
 
 /* The tier the next player at this position belongs to, and what is left of
@@ -256,8 +295,13 @@ function computeRecs() {
   const out = [];
 
   for (const pos of ['QB', 'RB', 'WR', 'TE', 'PK', 'DEF']) {
-    const now = board.find(p => p.p === pos);
-    if (!now) continue;
+    /* Among the first few at this position, prefer one who does not stack a
+       bye you are already heavy on. The penalty is bounded, so this only ever
+       reorders players of near-equal value — it cannot promote a worse one. */
+    const top = board.filter(p => p.p === pos).slice(0, 3);
+    if (!top.length) continue;
+    const now = top.reduce((a, b) =>
+      (Math.max(a.vor ?? 0, 1) * byeRisk(a, roster) >= Math.max(b.vor ?? 0, 1) * byeRisk(b, roster) ? a : b));
     const nxt = surv.find(p => p.p === pos);
     const need = needFor(roster, pos, left);
     const ts = tierState(pos, board, surv);
@@ -274,9 +318,12 @@ function computeRecs() {
     // buzz nudges by at most 18% — enough to separate two similar players,
     // never enough to pull a position you do not need to the top
     const bz = buzz(now);
-    const score = need * need * (2 + urgency + 0.5 * bargain + tierRisk) * (1 + 0.18 * bz / 100);
+    const bye = byeAfter(now, roster);
+    const score = need * need * (2 + urgency + 0.5 * bargain + tierRisk)
+      * (1 + 0.18 * bz / 100) * byeRisk(now, roster);
     out.push({
       p: now, pos, need, urgency, bargain, nxt, score, tier: ts, buzz: bz,
+      bye, byeClash: bye > BYE_OK,
       fills: fillsSlot(roster, pos),
       starter: need >= STARTER_NEED,
     });

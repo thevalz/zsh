@@ -225,6 +225,42 @@ def project(players, scoring, got):
     return scored
 
 
+def blend_market(players, w):
+    """Shrink one source's projections toward what the market thinks.
+
+    ADP is not merely a record of when a player gets taken — it is the fantasy
+    community's aggregated estimate of the same production these projections
+    estimate. It is built from thousands of drafts; FFToday is one analyst.
+    Treating them as rivals was the wrong frame: they measure the same latent
+    quantity, and the sensible thing is to average them.
+
+    Market value is read off the projected VOR distribution by ADP rank within
+    a position — if the market's ordering is right, a player earns the value
+    belonging to his slot. Taking it by rank rather than by fitting a curve to
+    the player's own point avoids the circularity of comparing him to himself.
+
+    The two mostly agree (median disagreement 1 rank at QB, 3-4 at RB/WR), so
+    this mostly damps single-source outliers rather than reordering the board.
+    """
+    if not (0 < w < 1):
+        return 0
+    moved = 0
+    for pos in ("QB", "RB", "WR", "TE"):
+        pool = [p for p in players if p["p"] == pos and "vor" in p]
+        if len(pool) < 8:
+            continue
+        vals = sorted((p["vor"] for p in pool), reverse=True)
+        by_adp = sorted(pool, key=lambda x: x["a"])
+        for rank, p in enumerate(by_adp):
+            market = vals[rank]
+            before = p["vor"]
+            p["vor"] = round(w * market + (1 - w) * before, 1)
+            if abs(p["vor"] - before) >= 10:
+                moved += 1
+    print(f"  proj     blended {int(w * 100)}% market into value; {moved} moved 10+ pts")
+    return moved
+
+
 def add_vorp(players, cfg):
     """Points above the last player at your position who would actually start.
 
@@ -263,6 +299,9 @@ def add_vorp(players, cfg):
     for p in players:
         if "pts" in p and p["p"] in repl:
             p["vor"] = round(p["pts"] - repl[p["p"]], 1)
+
+    blend_market(players, cfg.get("market_weight", 0.5))
+
     # Not everyone has a projection — deep bench types especially. Fill those
     # in from the ADP-to-VOR relationship the projected players describe, so
     # the board can rank on one consistent scale instead of two.

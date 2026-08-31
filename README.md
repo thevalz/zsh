@@ -164,12 +164,28 @@ from RB-led to WR-led without you touching a filter.
 A tier is a group of players who score about the same, so which one you end up
 with barely matters — what matters is **how many are left before the drop**.
 
-These are tiers of **projected points**, not of ADP. An earlier version broke
-tiers on ADP gaps, which describes when a player will be taken rather than what
-he produces. Two players a round apart in cost but identical in output are the
-same decision, and that disagreement is the thing worth exploiting: across
-QB/RB/WR/TE there are currently **22 places where the production order beats the
-draft order**.
+These are tiers of **projected points**. An earlier version broke tiers on ADP
+gaps, which describes when a player gets taken rather than how much he scores —
+a tier needs a magnitude ("how much do I lose by waiting"), and ADP only gives
+an ordering.
+
+But ADP is not merely price. It is the fantasy community's aggregated estimate
+of the *same* production the projections estimate, built from thousands of
+drafts where FFToday is one analyst. Treating the two as rivals was wrong, so
+value is a **50/50 blend**: the projection, shrunk toward the value belonging to
+the player's ADP rank within his position. `market_weight` in
+`league_config.json` sets the mix.
+
+They mostly agree — the median disagreement is **1 rank at QB, 3–4 at RB/WR** —
+so blending damps single-source outliers rather than reshuffling the board. It
+cut the places where production order beats draft order from 22 to **9**, which
+is the intended effect: the wild disagreements were mostly one analyst's noise
+in the deep pool, and the 9 that survive are the ones both signals support.
+
+The market value is taken by **ADP rank**, not by fitting a curve through the
+player's own point — the first version of this analysis did the latter and
+produced a median disagreement of exactly 0.0, because it was comparing every
+player to himself.
 
 Two details make the breaks mean something:
 
@@ -190,6 +206,25 @@ arms**, and only 24 quarterbacks above replacement for 24 starting slots.
 
 The player board carries the same tier number per row plus how many of it
 remain, and marks the last man in a tier in red — the cliff is right after him.
+
+### Bye weeks
+
+The objective is points in each *individual week*, not points in total. Two
+rosters with the same season projection are not equally good if one starts four
+players who are all off in week 10 — that week is a loss the season total never
+shows you.
+
+The **Bye weeks** panel counts only players filling starting slots, week by
+week, and flags any week costing three or more. A backup sharing a bye with
+nobody costs nothing; a backup sharing a bye with your starter is the thing you
+were trying to avoid.
+
+It also feeds the picks. Among the first few players at a position, the model
+prefers one who does not stack a week you are already heavy on, and a clash
+scales the score by at most **0.7**. That is deliberately bounded: it reorders
+players of near-equal value and can never promote a worse one. Two starters on
+a bye is normal and every roster does it; three is a bad week; four is a
+forfeit.
 
 ### Sources considered
 

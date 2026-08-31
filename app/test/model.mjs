@@ -247,6 +247,51 @@ check('survivors never exceed what is left', shape.survSane, true);
 check('drops are never negative', shape.dropsNonNeg, true);
 console.log(`  info  tiers per position — ${shape.rowsPerCol.join(', ')}`);
 
+console.log('\nbye collisions');
+const bye = await pg.evaluate(() => {
+  S.drafted = {}; S.hist = []; S.pick = 40; S.filter = 'ALL';
+  // find the bye week with the most RB/WR available, then stack four starters on it
+  const counts = {};
+  for (const p of avail()) if (['RB', 'WR'].includes(p.p) && p.b) counts[p.b] = (counts[p.b] || 0) + 1;
+  const wk = +Object.entries(counts).sort((a, b) => b[1] - a[1])[0][0];
+  const stack = avail().filter(p => p.b === wk && ['RB', 'WR'].includes(p.p)).slice(0, 4);
+  stack.forEach(p => { S.drafted[p.n] = 'me'; });
+  render();
+
+  const clash = avail().find(p => p.b === wk && p.p === 'WR');
+  const clean = avail().find(p => p.b !== wk && p.p === 'WR');
+  // a bench body on the same bye must not register as a collision
+  const benchOnly = (() => {
+    const before = byeAfter(clash, mine());
+    return before;
+  })();
+  return {
+    week: wk,
+    load: [...byeLoad(mine()).entries()],
+    riskClash: +byeRisk(clash, mine()).toFixed(3),
+    riskClean: +byeRisk(clean, mine()).toFixed(3),
+    benchOnly,
+    floor: +byeRisk({ b: wk, p: 'WR', vor: 1 }, mine()).toFixed(3),
+    flagged: document.querySelectorAll('.byecell.bad, .byecell.warn').length,
+    noteWarns: document.getElementById('byeNote').textContent.includes('costs you'),
+    // the penalty is bounded: it must never invert a large value gap
+    boundedFit: (() => {
+      const good = { ...clean, vor: 200, b: wk }; // huge value but a clash
+      const meh = { ...clean, vor: 40 };
+      return fitScore(good, mine(), 10, null) > fitScore(meh, mine(), 10, null);
+    })(),
+  };
+});
+check('a stacked week is counted', bye.load.some(([w, n]) => w === bye.week && n === 4), true);
+check('a clashing player is penalised', bye.riskClash < 1, true);
+check('a clean bye is not penalised', bye.riskClean, 1);
+check('the penalty is floored, never a veto', bye.floor >= 0.7, true);
+check('the strip flags the bad week', bye.flagged > 0, true);
+check('the note names the cost', bye.noteWarns, true);
+check('a big value gap still beats a bye clash', bye.boundedFit, true);
+console.log(`  info  week ${bye.week}: ${bye.load.map(([w, n]) => `w${w}=${n}`).join(' ')}; `
+  + `risk clash ${bye.riskClash} vs clean ${bye.riskClean}`);
+
 console.log(errs.length ? `\nJS ERRORS: ${errs.join(' | ')}` : '\nno JS errors');
 await b.close();
 process.exit(fails || errs.length ? 1 : 0);

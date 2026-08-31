@@ -186,5 +186,6 @@
   "rec_yd": 0.1,
   "rec_td": 6,
   "fum_lost": -2
- }
+ },
+ "market_weight": 0.5
 }

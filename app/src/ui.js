@@ -11,6 +11,7 @@ function renderRecs() {
     const t = r.tier ? `<span class="tierchip">${r.pos} tier ${r.tier.tier}</span>` : '';
     const bz = r.buzz >= 25 ? `<span class="buzzchip">rising ${r.buzz}</span>` : '';
     const rk = isRookie(r.p) ? '<span class="rookiechip">rookie</span>' : '';
+    const by = r.byeClash ? `<span class="byechip">bye ${r.p.b} · ${r.bye} starters out</span>` : '';
     const wait = !r.nxt ? `<b>nobody left at ${r.pos}</b> after this run`
       : r.tier && r.tier.survives === 0
         ? `<b class="warnTxt">tier ${r.tier.tier} is gone</b> before your next pick`
@@ -19,8 +20,8 @@ function renderRecs() {
     const val = r.bargain > 0 ? `<span class="edge-pos">${r.bargain.toFixed(0)} spots of value</span>`
       : `<span class="edge-neg">reaching ${(r.p.a - S.pick).toFixed(0)}</span>`;
     return `<div class="rec${i ? '' : ' top'}"><div class="rank">${i + 1}</div><div class="rec-main">
-      <div class="rec-name"><span class="badge b-${r.p.p}">${r.p.p}</span>${esc(r.p.n)} ${t}${rk}${bz}</div>
-      <div class="rec-why">${why} · ADP ${r.p.a.toFixed(0)} · ${val}</div>
+      <div class="rec-name"><span class="badge b-${r.p.p}">${r.p.p}</span>${esc(r.p.n)} ${t}${rk}${bz}${by}</div>
+      <div class="rec-why">${why} · bye ${r.p.b ?? '—'} · ADP ${r.p.a.toFixed(0)} · ${val}</div>
       <div class="rec-why">${wait}</div></div>
       <button class="take mini" data-take="${esc(r.p.n)}">Draft</button></div>`;
   }).join('') || '<div class="rec"><div class="rec-main"><div class="rec-why">Board is empty.</div></div></div>';
@@ -86,6 +87,26 @@ function renderShape(tgt) {
 
 const line = p => `<span class="badge b-${p.p}">${p.p}</span><span>${esc(p.n)}</span>`
   + `<span class="spacer"></span><span class="mono" style="color:var(--faint);font-size:11px">${p.a.toFixed(0)}</span>`;
+
+/* Byes across the season. The objective is points every week, so four starters
+   sharing week 10 is a loss the season total never shows you. */
+function renderByes() {
+  const load = byeLoad(mine());
+  const weeks = [...load.keys()].sort((a, b) => a - b);
+  const worst = weeks.length ? Math.max(...weeks.map(w => load.get(w))) : 0;
+  el('byes').innerHTML = !weeks.length
+    ? '<span class="empty">no byes yet</span>'
+    : weeks.map(w => {
+      const n = load.get(w);
+      const cls = n > BYE_OK + 1 ? 'bad' : n > BYE_OK ? 'warn' : '';
+      return `<span class="byecell ${cls}" title="${n} starter${n > 1 ? 's' : ''} out in week ${w}">`
+        + `<b>w${w}</b>${n}</span>`;
+    }).join('');
+  el('byeNote').innerHTML = worst > BYE_OK
+    ? `<span class="warnTxt">Week ${weeks.find(w => load.get(w) === worst)} costs you ${worst} starters.</span>`
+      + ' Later picks at those positions are steered away from it.'
+    : weeks.length ? 'No week takes more than two starters.' : '';
+}
 
 function renderRoster() {
   const { slots, bench } = fill(mine());
@@ -226,6 +247,7 @@ function render() {
   renderRunway(tgt);
   renderShape(tgt);
   renderRoster();
+  renderByes();
   renderBoard();
   renderRising();
   renderOpponents();
