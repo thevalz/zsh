@@ -1,0 +1,279 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zebras Draft Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#f3f6f5;--surface:#fff;--surface-2:#e9eeed;--line:#dbe2e0;
+  --text:#111819;--muted:#5b686b;--faint:#8b989b;
+  --accent:#0d6b5a;--hot:#a8720a;--hot-bg:#fdf1d8;
+  --pos:#127a5c;--neg:#c03b52;--mine:#0d6b5a;--mine-bg:#dff0ea;
+  --qb:#c9445c;--rb:#17936a;--wr:#3a7fd0;--te:#c4762a;--pk:#7b6ad0;--def:#5c7078;--rise:#c2571f;
+  --shadow:0 1px 2px rgba(17,24,25,.05),0 4px 16px rgba(17,24,25,.05);
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0d1214;--surface:#151d20;--surface-2:#1c262a;--line:#28343a;
+  --text:#e5ecea;--muted:#8fa0a4;--faint:#6b7c81;
+  --accent:#3cbb9c;--hot:#f0b429;--hot-bg:#3a2d0e;
+  --pos:#3ed19c;--neg:#f0798c;--mine:#3cbb9c;--mine-bg:#123029;
+  --qb:#e8697f;--rb:#2fc48d;--wr:#5f9fe8;--te:#e8963f;--pk:#a08ce8;--def:#8fa3ab;--rise:#f08a4b;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 20px rgba(0,0,0,.25);
+}}
+:root[data-theme="dark"]{
+  --bg:#0d1214;--surface:#151d20;--surface-2:#1c262a;--line:#28343a;
+  --text:#e5ecea;--muted:#8fa0a4;--faint:#6b7c81;
+  --accent:#3cbb9c;--hot:#f0b429;--hot-bg:#3a2d0e;
+  --pos:#3ed19c;--neg:#f0798c;--mine:#3cbb9c;--mine-bg:#123029;
+  --qb:#e8697f;--rb:#2fc48d;--wr:#5f9fe8;--te:#e8963f;--pk:#a08ce8;--def:#8fa3ab;--rise:#f08a4b;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 4px 20px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Archivo,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;line-height:1.5}
+.mono{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.wrap{max-width:1320px;margin:0 auto;padding:18px 16px 64px;display:flex;flex-direction:column;gap:16px}
+
+/* status bar */
+.bar{position:sticky;top:0;z-index:20;background:var(--surface);border:1px solid var(--line);
+  border-radius:8px;box-shadow:var(--shadow);padding:12px 16px;display:flex;flex-wrap:wrap;
+  align-items:center;gap:10px 20px}
+.bar.clock{border-color:var(--hot);background:var(--hot-bg)}
+.stat{display:flex;flex-direction:column;gap:1px}
+.stat b{font-family:"IBM Plex Mono",monospace;font-size:20px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.clockmsg{font-weight:700;font-size:16px;color:var(--hot);letter-spacing:-.01em}
+.spacer{flex:1 1 auto}
+button{font-family:inherit;font-size:12px;font-weight:500;padding:6px 11px;border-radius:5px;
+  border:1px solid var(--line);background:var(--surface-2);color:var(--text);cursor:pointer}
+button:hover{border-color:var(--accent)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button.warn:hover{border-color:var(--neg);color:var(--neg)}
+button.on{background:var(--accent);color:var(--surface);border-color:var(--accent)}
+
+/* sync */
+.pill{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;padding:4px 9px;border-radius:20px;border:1px solid var(--line);white-space:nowrap}
+.pill.off{color:var(--faint)}
+.pill.live{color:var(--pos);border-color:var(--pos)}
+.pill.live::before{content:"● "}
+.pill.stale{color:var(--hot);border-color:var(--hot)}
+.pill.stale::before{content:"◐ "}
+.pill.warn{color:var(--neg);border-color:var(--neg)}
+.pill.warn::before{content:"▲ "}
+.banner{background:var(--hot-bg);border:1px solid var(--hot);color:var(--text);border-radius:8px;
+  padding:10px 16px;font-size:13px;box-shadow:var(--shadow)}
+.banner b{font-weight:600}
+.diag{display:block;margin-top:5px;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted)}
+
+/* layout */
+.grid{display:grid;grid-template-columns:1.55fr 1fr;gap:16px;align-items:start}
+@media(max-width:960px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);overflow:hidden}
+.card h2{margin:0;padding:11px 16px;font-size:10.5px;font-weight:600;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--faint);border-bottom:1px solid var(--line);background:var(--surface-2)}
+.stack{display:flex;flex-direction:column;gap:16px}
+
+/* recs */
+.rec{display:flex;gap:13px;padding:13px 16px;border-bottom:1px solid var(--line);align-items:flex-start}
+.rec:last-child{border-bottom:none}
+.rec.top{background:var(--hot-bg)}
+.rank{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;color:var(--faint);width:14px;flex:none;padding-top:3px}
+.rec-main{flex:1;min-width:0}
+.rec-name{font-size:16px;font-weight:600;letter-spacing:-.01em}
+.rec-why{font-size:12.5px;color:var(--muted);margin-top:3px}
+.rec-why b{color:var(--text);font-weight:600}
+.take{flex:none;align-self:center}
+
+/* table */
+.tools{display:flex;flex-wrap:wrap;gap:7px;padding:11px 16px;border-bottom:1px solid var(--line);align-items:center}
+input[type=search]{flex:1;min-width:150px;font-family:inherit;font-size:13px;padding:7px 10px;
+  border:1px solid var(--line);border-radius:5px;background:var(--bg);color:var(--text)}
+input[type=search]:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.board{max-height:640px;overflow-y:auto}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{position:sticky;top:0;background:var(--surface-2);font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);text-align:right;
+  padding:7px 9px;border-bottom:1px solid var(--line);z-index:2}
+th:first-child{text-align:left;padding-left:14px}
+td{padding:5px 9px;text-align:right;border-bottom:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;color:var(--muted)}
+td:first-child{text-align:left;padding-left:14px;font-family:Archivo,sans-serif;color:var(--text);font-weight:500}
+tr.row{cursor:pointer}
+tr.row:hover td{background:var(--surface-2)}
+tr.gone td{opacity:.34;text-decoration:line-through}
+tr.mineRow td{background:var(--mine-bg)}
+tr.mineRow td:first-child{box-shadow:inset 3px 0 0 var(--mine)}
+.badge{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:600;
+  padding:2px 4px;border-radius:2px;color:#fff;margin-right:7px;min-width:27px;text-align:center}
+.b-QB{background:var(--qb)}.b-RB{background:var(--rb)}.b-WR{background:var(--wr)}
+.b-TE{background:var(--te)}.b-PK{background:var(--pk)}.b-DEF{background:var(--def)}
+.mini{font-size:10px;padding:2px 6px;border-radius:4px}
+.edge-pos{color:var(--pos);font-weight:600}.edge-neg{color:var(--neg)}
+.fitbar{display:inline-block;width:52px;height:6px;border-radius:3px;background:var(--surface-2);overflow:hidden;vertical-align:middle}
+.fitbar i{display:block;height:100%;background:var(--accent);border-radius:3px}
+
+/* roster + scarcity */
+.slotrow{display:flex;align-items:center;gap:9px;padding:6px 16px;border-bottom:1px solid var(--line);font-size:13px}
+.slotrow:last-child{border-bottom:none}
+.slotlab{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.08em;color:var(--faint);width:74px;flex:none}
+.empty{color:var(--faint);font-style:italic}
+.scar{padding:9px 16px;border-bottom:1px solid var(--line)}
+.scar:last-child{border-bottom:none}
+.scar-hd{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:12.5px}
+.scar-hd b{font-family:"IBM Plex Mono",monospace;font-size:12px}
+.meter{height:5px;border-radius:3px;background:var(--surface-2);margin-top:5px;overflow:hidden}
+.meter i{display:block;height:100%;border-radius:3px}
+.scar-note{font-size:11.5px;color:var(--faint);margin-top:4px}
+.warnTxt{color:var(--neg);font-weight:600}
+.tierchip{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:10px;
+  border:1px solid var(--line);color:var(--muted);vertical-align:middle;margin-left:4px}
+.depth{color:var(--faint);font-style:italic}
+/* tier in the board: the number, plus how many of that tier are still on the
+   board — "2 · 3 left" is the thing you act on, a bare number is not */
+.tno{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--text)}
+.tleft{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--faint);margin-left:4px}
+.tlast .tleft{color:var(--neg)}
+/* last man in his tier — after him the market says there is a cliff */
+tr.tlast td{border-bottom:1px solid var(--neg)}
+.buzzchip,.rookiechip{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+  font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:10px;
+  vertical-align:middle;margin-left:4px}
+.buzzchip{color:var(--rise);border:1px solid var(--rise)}
+.rookiechip{color:var(--accent);border:1px solid var(--accent)}
+/* tier board: one column per position, one row per tier */
+.shape{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:12px 16px}
+.shapecol{min-width:0}
+.shapehd{display:flex;align-items:center;gap:6px;margin-bottom:7px}
+.shapehd b{font-size:11.5px;color:var(--muted);font-weight:600}
+.trow{display:flex;align-items:baseline;gap:5px;padding:4px 7px;border-radius:4px;
+  border:1px solid var(--line);margin-bottom:4px;background:var(--surface-2);font-size:11.5px}
+.trow.here{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.trow.thin{border-color:var(--hot)}
+.trow.empty{opacity:.4}
+.tlab{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--text)}
+.tcnt{font-family:"IBM Plex Mono",monospace;color:var(--muted)}
+.tsurv{font-family:"IBM Plex Mono",monospace;margin-left:auto;font-weight:600}
+.tdrop{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--faint)}
+.trnd{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted)}
+.shape-key{padding:0 16px 13px;font-size:11px;color:var(--faint);line-height:1.5}
+/* bye weeks */
+.byes{display:flex;flex-wrap:wrap;gap:5px;padding:12px 16px 8px}
+.byecell{display:inline-flex;align-items:baseline;gap:4px;font-family:"IBM Plex Mono",monospace;
+  font-size:11.5px;padding:3px 7px;border-radius:4px;border:1px solid var(--line);
+  background:var(--surface-2);color:var(--muted)}
+.byecell b{color:var(--faint);font-size:10px}
+.byecell.warn{border-color:var(--hot);color:var(--hot)}
+.byecell.bad{border-color:var(--neg);color:var(--neg);font-weight:700}
+.byenote{padding:0 16px 13px;font-size:11.5px;color:var(--faint);line-height:1.5}
+/* role in the offence, and which way that offence leans */
+.rolechip{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.05em;text-transform:uppercase;padding:2px 5px;border-radius:3px;
+  border:1px solid var(--line);color:var(--muted)}
+.r-hi{color:var(--pos);border-color:var(--pos)}
+.r-mid{color:var(--text)}
+.r-low{color:var(--hot);border-color:var(--hot)}
+.r-bench{color:var(--faint)}
+.shr{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--faint);margin-left:4px}
+.lean{font-family:"IBM Plex Mono",monospace;font-size:10px;margin-left:3px}
+.lean-pass{color:var(--accent)}
+.lean-run{color:var(--hot)}
+.byechip{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:10px;
+  vertical-align:middle;margin-left:4px;color:var(--neg);border:1px solid var(--neg)}
+@media(max-width:900px){.shape{grid-template-columns:repeat(2,1fr)}}
+.risebar{padding:9px 16px;border-bottom:1px solid var(--line);cursor:pointer}
+.risebar:last-child{border-bottom:none}
+.risebar:hover{background:var(--surface-2)}
+.rise-hd{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:13px}
+/* around the room */
+.opps{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:1px;background:var(--line)}
+.opp{background:var(--surface);padding:10px 14px;display:flex;flex-direction:column;gap:5px}
+.opp.soon{background:var(--hot-bg)}
+.opp.me{box-shadow:inset 3px 0 0 var(--mine)}
+.opp-hd{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.opp-name{font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.opp-when{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--faint);white-space:nowrap}
+.opp-counts{display:flex;flex-wrap:wrap;gap:4px}
+.cnt{font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;padding:2px 5px;
+  border-radius:2px;color:#fff}
+.cnt.zero{background:var(--surface-2)!important;color:var(--faint)}
+.opp-need{font-size:11px;color:var(--muted)}
+.opp-need b{color:var(--text);font-weight:600}
+footer{font-size:11.5px;color:var(--faint);line-height:1.6;padding-top:6px}
+kbd{font-family:"IBM Plex Mono",monospace;font-size:10.5px;border:1px solid var(--line);
+  border-radius:3px;padding:1px 4px;background:var(--surface-2)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+  <div class="bar" id="bar">
+    <div class="stat"><b id="sPick">1</b><span>pick now</span></div>
+    <div class="stat"><b id="sNext">2</b><span>your next</span></div>
+    <div class="stat"><b id="sGap">—</b><span>picks away</span></div>
+    <div class="stat"><b id="sLeft">14</b><span>your picks left</span></div>
+    <div id="clockMsg" class="clockmsg"></div>
+    <div class="spacer"></div>
+    <span id="syncPill" class="pill off">offline</span>
+    <button id="bSync">Connect draft</button>
+    <button id="bKeep">Pre-mark keepers</button>
+    <button id="bMock">Mock mode</button>
+    <button id="bUndo">Undo</button>
+    <button id="bReset" class="warn">Reset</button>
+  </div>
+  <div id="syncBanner" class="banner" hidden></div>
+
+  <div class="grid">
+    <div class="stack">
+      <div class="card">
+        <h2>Take one of these</h2>
+        <div id="recs"></div>
+      </div>
+      <div class="card">
+        <h2>Tier board — which round they go in, and how much is left</h2>
+        <div id="shape" class="shape"></div>
+        <div class="shape-key">Tiers run in draft order, so <b>R4-5</b> is the round band that tier
+          normally goes in; the breaks between them are placed where projected production falls off.
+          Each row: rounds &middot; players still undrafted &middot; <b>&darr;</b> points given up if
+          that tier empties &middot; <b>&rarr;</b> how many reach your next pick. <b>deep</b> is the tail
+          past where the position still fields starters, and one of those is as good as another.</div>
+      </div>
+      <div class="card">
+        <h2>Player board</h2>
+        <div class="tools">
+          <input type="search" id="q" placeholder="Search — Enter marks top hit gone, Shift+Enter drafts him for you" autocomplete="off">
+          <span id="filters"></span>
+          <button id="bHide" class="mini on">Hide drafted</button>
+        </div>
+        <div class="board"><table>
+          <thead><tr><th>Player</th><th>Tm</th><th>Role</th><th>Bye</th><th>Tier</th><th>ADP</th><th>VOR</th><th>vs pick</th><th>Fit</th><th></th></tr></thead>
+          <tbody id="tb"></tbody>
+        </table></div>
+      </div>
+    </div>
+
+    <div class="stack">
+      <div class="card"><h2>Positional runway</h2><div id="scar"></div></div>
+      <div class="card" id="risingCard" hidden><h2>Rising — market moving now</h2><div id="rising"></div></div>
+      <div class="card"><h2>Bye weeks</h2>
+        <div id="byes" class="byes"></div>
+        <div id="byeNote" class="byenote"></div></div>
+      <div class="card"><h2>Your roster</h2><div id="roster"></div></div>
+      <div class="card"><h2>Bench</h2><div id="bench"></div></div>
+    </div>
+  </div>
+
+  <div class="card" id="oppCard" hidden>
+    <h2>Around the room</h2>
+    <div id="opps" class="opps"></div>
+  </div>
+
+  <footer id="foot"></footer>
+</div>
+
+<script id="DATA" type="application/json">__DATA__</script>
+<script>
+__SCRIPT__
+</script>

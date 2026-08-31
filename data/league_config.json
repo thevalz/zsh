@@ -1,0 +1,292 @@
+{
+ "league_id": "1390899489962741761",
+ "draft_id": "1391645001099776000",
+ "platform": "Sleeper",
+ "season": 2026,
+ "teams": 12,
+ "rounds": 16,
+ "scoring": "full PPR, 4pt pass TD, 0.04/pass yd",
+ "roster_slots": [
+  "QB",
+  "RB",
+  "RB",
+  "WR",
+  "WR",
+  "TE",
+  "FLEX",
+  "FLEX",
+  "SUPER_FLEX",
+  "K",
+  "DEF"
+ ],
+ "bench": 5,
+ "max_keepers": 2,
+ "keeper_rule": "keep at 2 rounds earlier than drafted; waiver adds cost R11; R1-R2 picks ineligible",
+ "my_team": "Made America 2024 / supervillain",
+ "my_draft_slot": 2,
+ "my_keepers": [
+  "Cam Skattebo",
+  "Rico Dowdle"
+ ],
+ "my_picks": [
+  2,
+  23,
+  26,
+  38,
+  47,
+  50,
+  71,
+  74,
+  95,
+  122,
+  143,
+  167,
+  170,
+  191
+ ],
+ "traded_picks": [
+  {
+   "in": "4.02 (overall 38) from Jersey Rum Hams"
+  },
+  {
+   "out": "10.11 (overall 119)"
+  }
+ ],
+ "my_user_id": "1390898887660703744",
+ "my_sleeper_handle": "thevalz",
+ "scoring_settings": {
+  "pass_yd": 0.04,
+  "pass_td": 4,
+  "pass_int": -1,
+  "rush_yd": 0.1,
+  "rush_td": 6,
+  "rec": 1.0,
+  "rec_yd": 0.1,
+  "rec_td": 6,
+  "fum_lost": -2
+ },
+ "market_weight": 0.5,
+ "keepers": [
+  {
+   "pick": 28,
+   "round": 3,
+   "roster_id": 7,
+   "team": "srussell28",
+   "name": "Breece Hall",
+   "pos": "RB",
+   "nfl": "NYJ",
+   "player_id": "8155"
+  },
+  {
+   "pick": 29,
+   "round": 3,
+   "roster_id": 8,
+   "team": "Down to Pound",
+   "name": "Jaxon Smith-Njigba",
+   "pos": "WR",
+   "nfl": "SEA",
+   "player_id": "9488"
+  },
+  {
+   "pick": 33,
+   "round": 3,
+   "roster_id": 9,
+   "team": "hulleywood",
+   "name": "George Pickens",
+   "pos": "WR",
+   "nfl": "DAL",
+   "player_id": "8137"
+  },
+  {
+   "pick": 63,
+   "round": 6,
+   "roster_id": 4,
+   "team": "East Coast Wins Most",
+   "name": "Tyler Warren",
+   "pos": "TE",
+   "nfl": "IND",
+   "player_id": "12518"
+  },
+  {
+   "pick": 64,
+   "round": 6,
+   "roster_id": 9,
+   "team": "hulleywood",
+   "name": "Travis Etienne",
+   "pos": "RB",
+   "nfl": "NO",
+   "player_id": "7543"
+  },
+  {
+   "pick": 72,
+   "round": 6,
+   "roster_id": 2,
+   "team": "NYKatSnatchers",
+   "name": "Brock Bowers",
+   "pos": "TE",
+   "nfl": "LV",
+   "player_id": "11604"
+  },
+  {
+   "pick": 82,
+   "round": 7,
+   "roster_id": 4,
+   "team": "East Coast Wins Most",
+   "name": "Rashee Rice",
+   "pos": "WR",
+   "nfl": "KC",
+   "player_id": "10229"
+  },
+  {
+   "pick": 85,
+   "round": 8,
+   "roster_id": 12,
+   "team": "It's Gonna be Maye",
+   "name": "Drake Maye",
+   "pos": "QB",
+   "nfl": "NE",
+   "player_id": "11564"
+  },
+  {
+   "pick": 91,
+   "round": 8,
+   "roster_id": 6,
+   "team": "mtngoblin",
+   "name": "Javonte Williams",
+   "pos": "RB",
+   "nfl": "DAL",
+   "player_id": "7588"
+  },
+  {
+   "pick": 92,
+   "round": 8,
+   "roster_id": 8,
+   "team": "Down to Pound",
+   "name": "Jameson Williams",
+   "pos": "WR",
+   "nfl": "DET",
+   "player_id": "8148"
+  },
+  {
+   "pick": 98,
+   "round": 9,
+   "roster_id": 1,
+   "team": "supervillain",
+   "name": "Cam Skattebo",
+   "pos": "RB",
+   "nfl": "NYG",
+   "player_id": "12481"
+  },
+  {
+   "pick": 99,
+   "round": 9,
+   "roster_id": 3,
+   "team": "dromag04",
+   "name": "Tucker Kraft",
+   "pos": "TE",
+   "nfl": "GB",
+   "player_id": "9484"
+  },
+  {
+   "pick": 100,
+   "round": 9,
+   "roster_id": 7,
+   "team": "srussell28",
+   "name": "Michael Penix",
+   "pos": "QB",
+   "nfl": "ATL",
+   "player_id": "11559"
+  },
+  {
+   "pick": 107,
+   "round": 9,
+   "roster_id": 5,
+   "team": "Jersey Rum Hams",
+   "name": "Colston Loveland",
+   "pos": "TE",
+   "nfl": "CHI",
+   "player_id": "12517"
+  },
+  {
+   "pick": 113,
+   "round": 10,
+   "roster_id": 10,
+   "team": "Holy Turnovers, Batman!",
+   "name": "Kyle Pitts",
+   "pos": "TE",
+   "nfl": "ATL",
+   "player_id": "7553"
+  },
+  {
+   "pick": 121,
+   "round": 11,
+   "roster_id": 2,
+   "team": "NYKatSnatchers",
+   "name": "Daniel Jones",
+   "pos": "QB",
+   "nfl": "IND",
+   "player_id": "5870"
+  },
+  {
+   "pick": 123,
+   "round": 11,
+   "roster_id": 3,
+   "team": "dromag04",
+   "name": "Christian Watson",
+   "pos": "WR",
+   "nfl": "GB",
+   "player_id": "8167"
+  },
+  {
+   "pick": 128,
+   "round": 11,
+   "roster_id": 10,
+   "team": "Holy Turnovers, Batman!",
+   "name": "Kenny Gainwell",
+   "pos": "RB",
+   "nfl": "TB",
+   "player_id": "7567"
+  },
+  {
+   "pick": 132,
+   "round": 11,
+   "roster_id": 12,
+   "team": "It's Gonna be Maye",
+   "name": "Parker Washington",
+   "pos": "WR",
+   "nfl": "JAX",
+   "player_id": "9487"
+  },
+  {
+   "pick": 134,
+   "round": 12,
+   "roster_id": 5,
+   "team": "Jersey Rum Hams",
+   "name": "Jaxson Dart",
+   "pos": "QB",
+   "nfl": "NYG",
+   "player_id": "12508"
+  },
+  {
+   "pick": 146,
+   "round": 13,
+   "roster_id": 1,
+   "team": "supervillain",
+   "name": "Rico Dowdle",
+   "pos": "RB",
+   "nfl": "PIT",
+   "player_id": "7021"
+  },
+  {
+   "pick": 163,
+   "round": 14,
+   "roster_id": 6,
+   "team": "mtngoblin",
+   "name": "Romeo Doubs",
+   "pos": "WR",
+   "nfl": "NE",
+   "player_id": "8121"
+  }
+ ],
+ "keepers_source": "Sleeper draft 1391645001099776000, declared; fetched pre_draft"
+}

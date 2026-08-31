@@ -1,0 +1,76 @@
+name: Rebuild draft console
+
+# Pages serves this repo from the branch, so "deploying" means committing the
+# built site to docs/ and letting GitHub's branch builder pick it up. That
+# avoids the github-pages environment entirely, and its default rule that only
+# the repository's default branch may deploy.
+
+on:
+  push:
+    branches:
+      - claude/fantasy-keeper-recommendations-tp9ron
+    paths:
+      - 'app/src/**'
+      - 'app/template.html'
+      - 'app/build.py'
+      - 'data/**'
+      - '.github/workflows/pages.yml'
+  # Rebuilds pull fresh ADP, so a daily run keeps the numbers current on their
+  # own — the console is most wrong when its values are a month old.
+  schedule:
+    - cron: '17 11 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-console
+  cancel-in-progress: true
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build console with fresh ADP
+        id: build
+        run: python3 app/build.py
+        continue-on-error: true
+
+      - name: Fall back to cached data if the ADP feed is down
+        if: steps.build.outcome == 'failure'
+        run: |
+          echo "::warning::ADP fetch failed; building from the copy in data/"
+          python3 app/build.py --no-fetch
+
+      - name: Check the bundle actually parses
+        run: |
+          node -e '
+            const fs = require("fs");
+            const h = fs.readFileSync("docs/draft-live.html", "utf8");
+            const m = h.match(/<script>\n([\s\S]*?)\n<\/script>/);
+            if (!m) { console.error("no script block in the built file"); process.exit(1); }
+            new Function(m[1]);
+            if (!/id="DATA"/.test(h)) { console.error("data payload missing"); process.exit(1); }
+            console.log("bundle OK,", Math.round(h.length / 1024) + " KB");
+          '
+
+      # Only docs/ is committed. A refreshed data/players_sf_adp.json is left
+      # alone on purpose: data/ is a trigger path, so committing it would make
+      # this workflow retrigger itself forever.
+      - name: Commit the rebuilt site
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          if git diff --cached --quiet; then
+            echo "site unchanged, nothing to commit"
+            exit 0
+          fi
+          git commit -m "Rebuild draft console (ADP refresh)"
+          git push
