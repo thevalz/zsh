@@ -230,6 +230,43 @@ def project(players, scoring, got):
     return scored
 
 
+def _pool_name(name, players):
+    """Our pool's spelling of a name, or None. Sleeper drops the suffix that
+    the ADP feed keeps — 'Travis Etienne' vs 'Travis Etienne Jr.' — and a
+    straight string match silently leaves those keepers on the board."""
+    want = norm(name)
+    for p in players:
+        if norm(p["n"]) == want:
+            return p["n"]
+    # fall back to matching without a generational suffix
+    strip = lambda s: re.sub(r"\s+(jr|sr|ii|iii|iv|v)$", "", norm(s))
+    want = strip(name)
+    for p in players:
+        if strip(p["n"]) == want:
+            return p["n"]
+    return None
+
+
+def resolve_keepers(cfg, players):
+    """Declared keepers, keyed to the pool's own spelling so the board can
+    actually mark them. A keeper we cannot resolve is loudly reported, not
+    dropped — an unmarked keeper is a player the tool thinks is available."""
+    out, missed = [], []
+    for k in cfg.get("keepers", cfg.get("modelled_keepers", [])):
+        raw = k.get("name") or k.get("n")
+        if not raw:
+            continue
+        hit = _pool_name(raw, players)
+        if hit is None:
+            missed.append(raw)
+            continue
+        out.append({"n": hit, "pick": k.get("pick"), "rid": k.get("roster_id")})
+    if cfg.get("keepers"):
+        print(f"  keepers  {len(out)}/{len(cfg['keepers'])} resolved into the pool"
+              + (f" — UNMATCHED: {', '.join(missed)}" if missed else ""))
+    return out
+
+
 def add_roles(players, got):
     """Where a player sits in his own offence, and which way that offence leans.
 
@@ -550,8 +587,12 @@ def main():
     payload = {
         "players": players,
         "idToName": id_map,
-        "keepers": cfg.get("modelled_keepers", []),
-        "mine": cfg.get("my_keepers", []),
+        # Declared keepers now that the deadline has passed; the modelled list
+        # is gone. `mine` still names ours so they land on our roster, not the
+        # opposition's, when the board is pre-marked without a live sync.
+        "keepers": resolve_keepers(cfg, players),
+        "mine": [_pool_name(n, players) or n for n in cfg.get("my_keepers", [])],
+        "keepersDeclared": bool(cfg.get("keepers")),
         "myPicks": cfg.get("my_picks", []),
         "slots": cfg["roster_slots"],
         "bench": cfg["bench"],

@@ -336,10 +336,16 @@ panel, which is a watchlist rather than advice.
   about 7% of picks — it had Josh Allen at 7.12 when he actually went 1.02.
   `data/rosters_2025.json` came from the platform and is authoritative. Prefer
   it wherever the two disagree.
-- **Keepers in `league_config.json` are modelled**, not declared — the model
-  assumes each team keeps its top two by surplus. Last season one team made two
-  roster moves all year, so not everyone optimises. Replace with the real list
-  once the keeper deadline passes.
+- **Keepers are now declared, not modelled.** `league_config.json` carries the
+  real 22 pulled from the Sleeper draft, replacing the old assumption that each
+  team keeps its top two by surplus. Eleven teams kept two; Randaltheandal kept
+  none and drafts with all sixteen picks.
+- **ADP does not know about our keepers.** It is a generic superflex consensus
+  from drafts where all 22 were available. Our league removed five of the top
+  seven tight ends, so Trey McBride's ADP of 64 badly understates what he is
+  worth *here* — seven teams still need a starting TE and he is 64 points
+  clear of the next one. Read ADP as market timing, and the VOR column as value
+  in this league; where they disagree after a keeper run, trust VOR.
 - **ADP is a lagging average**, which is why the console also carries a buzz
   signal — see below. Re-pull before drafting with `python3 app/build.py`.
 - **FFC publishes in windows, not continuously.** A refresh that returns

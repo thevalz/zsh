@@ -350,6 +350,35 @@ console.log(`  info  ${role.tagged} roles, ${role.leaned} leans; `
   + `early bell cows ${role.earlyBell}/${role.earlyTotal}, late depth ${role.lateBench}/${role.lateTotal}`);
 console.log(`  info  committee backs inside ADP 60 — ${role.earlyCommittee.join(', ') || 'none'}`);
 
+console.log('\ndeclared keepers');
+const keep = await pg.evaluate(() => {
+  S.drafted = {}; S.hist = []; S.pick = 1;
+  const names = new Set(P.map(p => p.n));
+  const unresolved = (D.keepers || []).filter(k => !names.has(k.n)).map(k => k.n);
+  // pre-mark them the way the button does
+  (D.keepers || []).forEach(k => { if (names.has(k.n) && !S.drafted[k.n]) S.drafted[k.n] = 'them'; });
+  (D.mine || []).forEach(n => { if (names.has(n)) S.drafted[n] = 'me'; });
+  render();
+  const off = P.filter(p => S.drafted[p.n]).length;
+  const byPos = {};
+  for (const p of P.filter(x => S.drafted[x.n])) byPos[p.p] = (byPos[p.p] || 0) + 1;
+  const startableLeft = pos => P.filter(p => p.p === pos && (p.vor ?? -1) >= 0 && !S.drafted[p.n]).length;
+  return {
+    declared: D.keepersDeclared, count: (D.keepers || []).length, unresolved,
+    off, byPos, mineOnRoster: mine().length,
+    qbLeft: startableLeft('QB'), teLeft: startableLeft('TE'),
+    // every keeper must vanish from the board
+    stillListed: (D.keepers || []).filter(k => avail().some(p => p.n === k.n)).map(k => k.n),
+  };
+});
+check('keepers are declared, not modelled', keep.declared, true);
+check('every declared keeper resolves into the pool', keep.unresolved, []);
+check('all 22 come off the board', keep.off, keep.count);
+check('none is still listed as available', keep.stillListed, []);
+check('our two land on our roster', keep.mineOnRoster, 2);
+console.log(`  info  ${keep.count} keepers off the board ${JSON.stringify(keep.byPos)}`);
+console.log(`  info  startable left — QB ${keep.qbLeft} for 20 slots, TE ${keep.teLeft} for 7`);
+
 console.log(errs.length ? `\nJS ERRORS: ${errs.join(' | ')}` : '\nno JS errors');
 await b.close();
 process.exit(fails || errs.length ? 1 : 0);

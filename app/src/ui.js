@@ -316,8 +316,9 @@ el('bReset').onclick = () => {
     S.drafted = {}; S.hist = []; S.pick = 1; save(); render();
   }
 };
-/* Modelled keepers, for use before the real ones are declared. Once a draft is
-   synced the keepers arrive as picks and this button hides itself. */
+/* The league's declared keepers. Useful for planning before the draft opens;
+   once a draft is synced they arrive as picks and this button hides itself. */
+if (D.keepersDeclared) el('bKeep').textContent = `Mark the ${(D.keepers || []).length} keepers`;
 el('bKeep').onclick = () => {
   (D.keepers || []).forEach(k => { if (byName.has(k.n) && !S.drafted[k.n]) S.drafted[k.n] = 'them'; });
   (D.mine || []).forEach(n => { if (byName.has(n)) S.drafted[n] = 'me'; });
