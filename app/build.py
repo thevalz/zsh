@@ -194,7 +194,12 @@ def fetch_projections():
                     except ValueError: vals = None; break
                 if vals is None:
                     continue
-                got[norm(_html.unescape(name))] = dict(zip(cols, vals))
+                d = dict(zip(cols, vals))
+                # cells[0] is the team, cells[1] the bye — needed to work out
+                # a player's share of his own offence
+                d["tm"] = cells[0].upper()
+                d["pos"] = pos
+                got[norm(_html.unescape(name))] = d
     return got
 
 
@@ -223,6 +228,85 @@ def project(players, scoring, got):
         scored += 1
     print(f"  proj     {len(got)} projections, {scored} matched into the pool")
     return scored
+
+
+def add_roles(players, got):
+    """Where a player sits in his own offence, and which way that offence leans.
+
+    Two questions the raw point total cannot answer: is this back the guy or
+    one of two, and does this offence throw. Both are derived from the same
+    projections, by comparing a player against his own teammates rather than
+    against the league.
+
+    Role is share of team touches (carries + receptions for backs, receptions
+    for receivers), so a pass-catching back on few carries is not mislabelled
+    a backup. Lean is team pass attempts over pass plus rush attempts.
+
+    What this is NOT: an offensive coordinator's history or scheme. There is no
+    coaching-staff source here. It is one projection set's implied volume
+    split, which is a consequence of scheme rather than a reading of it, and it
+    inherits FFToday's assumptions about who is on which roster.
+    """
+    from collections import defaultdict
+    teams = defaultdict(lambda: defaultdict(list))
+    for n, d in got.items():
+        teams[d.get("tm", "?")][d.get("pos", "?")].append((n, d))
+
+    # team pass lean, and the league spread to judge it against
+    lean = {}
+    for tm, byp in teams.items():
+        patt = sum(d.get("att", 0) for _, d in byp.get("QB", []))
+        ratt = sum(d.get("ra", 0) for pos in ("QB", "RB", "WR") for _, d in byp.get(pos, []))
+        if patt + ratt >= 200:
+            lean[tm] = patt / (patt + ratt)
+    if lean:
+        vals = sorted(lean.values())
+        mid = vals[len(vals) // 2]
+        sd = (sum((v - mid) ** 2 for v in vals) / len(vals)) ** 0.5
+    else:
+        mid, sd = 0.55, 0.03
+
+    # share of team touches, per position
+    share = {}
+    for tm, byp in teams.items():
+        rbs = byp.get("RB", [])
+        tot = sum(d.get("ra", 0) + d.get("rec", 0) for _, d in rbs)
+        if tot >= 50:
+            for n, d in rbs:
+                share[n] = ((d.get("ra", 0) + d.get("rec", 0)) / tot, None)
+        for pos in ("WR", "TE"):
+            grp = byp.get(pos, [])
+            tot = sum(d.get("rec", 0) for _, d in grp)
+            if tot < 30:
+                continue
+            for i, (n, d) in enumerate(sorted(grp, key=lambda x: -x[1].get("rec", 0))):
+                share[n] = (d.get("rec", 0) / tot, i + 1)
+
+    tagged = 0
+    for p in players:
+        d = got.get(norm(p["n"]))
+        if not d:
+            continue
+        tm = d.get("tm")
+        if tm in lean:
+            p["lean"] = round(lean[tm], 3)
+            p["leanTag"] = ("pass" if lean[tm] >= mid + 0.5 * sd
+                            else "run" if lean[tm] <= mid - 0.5 * sd else "even")
+        s = share.get(norm(p["n"]))
+        if not s:
+            continue
+        frac, rank = s
+        p["shr"] = round(frac, 3)
+        if p["p"] == "RB":
+            p["role"] = ("bell cow" if frac >= 0.60 else "lead" if frac >= 0.42
+                         else "committee" if frac >= 0.25 else "backup")
+        elif p["p"] in ("WR", "TE"):
+            p["role"] = f"{p['p']}{min(rank, 4)}"
+        tagged += 1
+    print(f"  roles    {tagged} players tagged; league pass rate {mid:.3f} +/-{sd:.3f}, "
+          f"{sum(1 for t in lean.values() if t >= mid + 0.5 * sd)} pass-lean / "
+          f"{sum(1 for t in lean.values() if t <= mid - 0.5 * sd)} run-lean teams")
+    return tagged
 
 
 def blend_market(players, w):
@@ -450,6 +534,7 @@ def main():
                 print(f"  proj     {len(fresh)} fetched, {kept} kept from cache")
         if got and project(players, cfg_early["scoring_settings"], got):
             add_vorp(players, cfg_early)
+            add_roles(players, got)
     except Exception as e:
         print(f"  proj     skipped ({e})")
 

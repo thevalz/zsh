@@ -10,7 +10,9 @@
    "b": 7,
    "sd": 0.9,
    "pts": 375.2,
-   "vor": 122.1
+   "vor": 122.1,
+   "lean": 0.497,
+   "leanTag": "run"
   },
   {
    "n": "Jahmyr Gibbs",
@@ -20,7 +22,11 @@
    "b": 6,
    "sd": 0.8,
    "pts": 367.4,
-   "vor": 217.9
+   "vor": 217.9,
+   "lean": 0.579,
+   "leanTag": "pass",
+   "shr": 0.73,
+   "role": "bell cow"
   },
   {
    "n": "Bijan Robinson",
@@ -30,7 +36,11 @@
    "b": 11,
    "sd": 0.7,
    "pts": 366.9,
-   "vor": 217.4
+   "vor": 217.4,
+   "lean": 0.583,
+   "leanTag": "pass",
+   "shr": 0.758,
+   "role": "bell cow"
   },
   {
    "n": "Puka Nacua",
@@ -40,7 +50,11 @@
    "b": 11,
    "sd": 1.2,
    "pts": 339.3,
-   "vor": 157.6
+   "vor": 157.6,
+   "lean": 0.564,
+   "leanTag": "even",
+   "shr": 0.532,
+   "role": "WR1"
   },
   {
    "n": "Jonathan Taylor",
@@ -50,7 +64,11 @@
    "b": 13,
    "sd": 1.4,
    "pts": 286.5,
-   "vor": 166.7
+   "vor": 166.7,
+   "lean": 0.538,
+   "leanTag": "even",
+   "shr": 0.783,
+   "role": "bell cow"
   },
   {
    "n": "Ja'Marr Chase",
@@ -60,7 +78,11 @@
    "b": 6,
    "sd": 2.3,
    "pts": 330.5,
-   "vor": 148.8
+   "vor": 148.8,
+   "lean": 0.599,
+   "leanTag": "pass",
+   "shr": 0.537,
+   "role": "WR1"
   },
   {
    "n": "Drake Maye",
@@ -70,7 +92,9 @@
    "b": 11,
    "sd": 2.9,
    "pts": 326.3,
-   "vor": 73.5
+   "vor": 73.5,
+   "lean": 0.538,
+   "leanTag": "even"
   },
   {
    "n": "Jaxon Smith-Njigba",
@@ -80,7 +104,11 @@
    "b": 11,
    "sd": 1.9,
    "pts": 308.1,
-   "vor": 131.4
+   "vor": 131.4,
+   "lean": 0.533,
+   "leanTag": "run",
+   "shr": 0.505,
+   "role": "WR1"
   },
   {
    "n": "Lamar Jackson",
@@ -90,7 +118,9 @@
    "b": 13,
    "sd": 3.0,
    "pts": 326.8,
-   "vor": 73.5
+   "vor": 73.5,
+   "lean": 0.483,
+   "leanTag": "run"
   },
   {
    "n": "Joe Burrow",
@@ -100,7 +130,9 @@
    "b": 6,
    "sd": 3.0,
    "pts": 311.3,
-   "vor": 63.0
+   "vor": 63.0,
+   "lean": 0.599,
+   "leanTag": "pass"
   },
   {
    "n": "Christian McCaffrey",
@@ -110,7 +142,11 @@
    "b": 8,
    "sd": 2.8,
    "pts": 345.9,
-   "vor": 166.7
+   "vor": 166.7,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.701,
+   "role": "bell cow"
   },
   {
    "n": "Derrick Henry",
@@ -120,7 +156,11 @@
    "b": 13,
    "sd": 2.6,
    "pts": 259.6,
-   "vor": 117.9
+   "vor": 117.9,
+   "lean": 0.483,
+   "leanTag": "run",
+   "shr": 0.762,
+   "role": "bell cow"
   },
   {
    "n": "Amon-Ra St. Brown",
@@ -130,7 +170,11 @@
    "b": 6,
    "sd": 3.3,
    "pts": 318.1,
-   "vor": 131.4
+   "vor": 131.4,
+   "lean": 0.579,
+   "leanTag": "pass",
+   "shr": 0.531,
+   "role": "WR1"
   },
   {
    "n": "Dak Prescott",
@@ -140,7 +184,9 @@
    "b": 14,
    "sd": 2.9,
    "pts": 305.3,
-   "vor": 59.6
+   "vor": 59.6,
+   "lean": 0.613,
+   "leanTag": "pass"
   },
   {
    "n": "Jayden Daniels",
@@ -150,7 +196,9 @@
    "b": 7,
    "sd": 3.1,
    "pts": 320.0,
-   "vor": 62.6
+   "vor": 62.6,
+   "lean": 0.513,
+   "leanTag": "run"
   },
   {
    "n": "James Cook III",
@@ -160,7 +208,11 @@
    "b": 7,
    "sd": 4.6,
    "pts": 275.2,
-   "vor": 121.8
+   "vor": 121.8,
+   "lean": 0.497,
+   "leanTag": "run",
+   "shr": 0.672,
+   "role": "bell cow"
   },
   {
    "n": "Matthew Stafford",
@@ -170,7 +222,9 @@
    "b": 11,
    "sd": 2.7,
    "pts": 294.9,
-   "vor": 49.5
+   "vor": 49.5,
+   "lean": 0.564,
+   "leanTag": "even"
   },
   {
    "n": "Jalen Hurts",
@@ -180,7 +234,9 @@
    "b": 10,
    "sd": 3.2,
    "pts": 320.8,
-   "vor": 61.3
+   "vor": 61.3,
+   "lean": 0.495,
+   "leanTag": "run"
   },
   {
    "n": "Brock Purdy",
@@ -190,7 +246,9 @@
    "b": 8,
    "sd": 3.3,
    "pts": 304.0,
-   "vor": 52.0
+   "vor": 52.0,
+   "lean": 0.546,
+   "leanTag": "even"
   },
   {
    "n": "Trevor Lawrence",
@@ -200,7 +258,9 @@
    "b": 7,
    "sd": 5.0,
    "pts": 301.0,
-   "vor": 50.0
+   "vor": 50.0,
+   "lean": 0.54,
+   "leanTag": "even"
   },
   {
    "n": "De'Von Achane",
@@ -210,7 +270,11 @@
    "b": 6,
    "sd": 4.8,
    "pts": 267.2,
-   "vor": 117.7
+   "vor": 117.7,
+   "lean": 0.537,
+   "leanTag": "even",
+   "shr": 0.696,
+   "role": "bell cow"
   },
   {
    "n": "Caleb Williams",
@@ -220,7 +284,9 @@
    "b": 10,
    "sd": 4.9,
    "pts": 308.0,
-   "vor": 52.9
+   "vor": 52.9,
+   "lean": 0.518,
+   "leanTag": "run"
   },
   {
    "n": "Patrick Mahomes",
@@ -230,7 +296,9 @@
    "b": 5,
    "sd": 5.8,
    "pts": 295.7,
-   "vor": 45.7
+   "vor": 45.7,
+   "lean": 0.573,
+   "leanTag": "pass"
   },
   {
    "n": "Drake London",
@@ -240,7 +308,11 @@
    "b": 11,
    "sd": 4.7,
    "pts": 272.2,
-   "vor": 90.5
+   "vor": 90.5,
+   "lean": 0.583,
+   "leanTag": "pass",
+   "shr": 0.604,
+   "role": "WR1"
   },
   {
    "n": "Saquon Barkley",
@@ -250,7 +322,11 @@
    "b": 10,
    "sd": 5.4,
    "pts": 262.3,
-   "vor": 114.3
+   "vor": 114.3,
+   "lean": 0.495,
+   "leanTag": "run",
+   "shr": 0.702,
+   "role": "bell cow"
   },
   {
    "n": "Jared Goff",
@@ -260,7 +336,9 @@
    "b": 6,
    "sd": 4.6,
    "pts": 301.4,
-   "vor": 48.3
+   "vor": 48.3,
+   "lean": 0.579,
+   "leanTag": "pass"
   },
   {
    "n": "CeeDee Lamb",
@@ -270,7 +348,11 @@
    "b": 14,
    "sd": 5.4,
    "pts": 252.7,
-   "vor": 77.5
+   "vor": 77.5,
+   "lean": 0.613,
+   "leanTag": "pass",
+   "shr": 0.395,
+   "role": "WR1"
   },
   {
    "n": "Justin Herbert",
@@ -280,7 +362,9 @@
    "b": 7,
    "sd": 4.9,
    "pts": 301.8,
-   "vor": 48.3
+   "vor": 48.3,
+   "lean": 0.555,
+   "leanTag": "even"
   },
   {
    "n": "Justin Jefferson",
@@ -290,7 +374,11 @@
    "b": 6,
    "sd": 6.4,
    "pts": 265.8,
-   "vor": 78.0
+   "vor": 78.0,
+   "lean": 0.552,
+   "leanTag": "even",
+   "shr": 0.49,
+   "role": "WR1"
   },
   {
    "n": "Chase Brown",
@@ -300,7 +388,11 @@
    "b": 6,
    "sd": 6.4,
    "pts": 265.3,
-   "vor": 114.3
+   "vor": 114.3,
+   "lean": 0.599,
+   "leanTag": "pass",
+   "shr": 0.73,
+   "role": "bell cow"
   },
   {
    "n": "Bo Nix",
@@ -310,7 +402,9 @@
    "b": 10,
    "sd": 5.9,
    "pts": 310.2,
-   "vor": 50.9
+   "vor": 50.9,
+   "lean": 0.546,
+   "leanTag": "even"
   },
   {
    "n": "Rashee Rice",
@@ -320,7 +414,11 @@
    "b": 5,
    "sd": 6.0,
    "pts": 242.7,
-   "vor": 66.0
+   "vor": 66.0,
+   "lean": 0.573,
+   "leanTag": "pass",
+   "shr": 0.472,
+   "role": "WR1"
   },
   {
    "n": "Ashton Jeanty",
@@ -330,7 +428,11 @@
    "b": 13,
    "sd": 8.1,
    "pts": 262.3,
-   "vor": 112.8
+   "vor": 112.8,
+   "lean": 0.573,
+   "leanTag": "pass",
+   "shr": 0.765,
+   "role": "bell cow"
   },
   {
    "n": "Jaxson Dart",
@@ -340,7 +442,9 @@
    "b": 8,
    "sd": 7.3,
    "pts": 306.2,
-   "vor": 47.9
+   "vor": 47.9,
+   "lean": 0.517,
+   "leanTag": "run"
   },
   {
    "n": "George Pickens",
@@ -350,7 +454,11 @@
    "b": 14,
    "sd": 5.3,
    "pts": 226.2,
-   "vor": 54.1
+   "vor": 54.1,
+   "lean": 0.613,
+   "leanTag": "pass",
+   "shr": 0.336,
+   "role": "WR2"
   },
   {
    "n": "Josh Jacobs",
@@ -360,7 +468,11 @@
    "b": 11,
    "sd": 5.8,
    "pts": 119.3,
-   "vor": 40.1
+   "vor": 40.1,
+   "lean": 0.564,
+   "leanTag": "even",
+   "shr": 0.386,
+   "role": "committee"
   },
   {
    "n": "A.J. Brown",
@@ -370,7 +482,11 @@
    "b": 11,
    "sd": 5.0,
    "pts": 243.5,
-   "vor": 61.8
+   "vor": 61.8,
+   "lean": 0.538,
+   "leanTag": "even",
+   "shr": 0.443,
+   "role": "WR1"
   },
   {
    "n": "Nico Collins",
@@ -380,7 +496,11 @@
    "b": 8,
    "sd": 4.3,
    "pts": 239.6,
-   "vor": 59.5
+   "vor": 59.5,
+   "lean": 0.568,
+   "leanTag": "pass",
+   "shr": 0.414,
+   "role": "WR1"
   },
   {
    "n": "Kenneth Walker",
@@ -390,7 +510,11 @@
    "b": 5,
    "sd": 7.9,
    "pts": 257.9,
-   "vor": 109.2
+   "vor": 109.2,
+   "lean": 0.573,
+   "leanTag": "pass",
+   "shr": 0.702,
+   "role": "bell cow"
   },
   {
    "n": "Omarion Hampton",
@@ -400,7 +524,11 @@
    "b": 7,
    "sd": 6.4,
    "pts": 267.5,
-   "vor": 113.2
+   "vor": 113.2,
+   "lean": 0.555,
+   "leanTag": "even",
+   "shr": 0.696,
+   "role": "bell cow"
   },
   {
    "n": "Kyren Williams",
@@ -410,7 +538,11 @@
    "b": 11,
    "sd": 5.9,
    "pts": 247.6,
-   "vor": 98.1
+   "vor": 98.1,
+   "lean": 0.564,
+   "leanTag": "even",
+   "shr": 0.622,
+   "role": "bell cow"
   },
   {
    "n": "Chris Olave",
@@ -420,7 +552,11 @@
    "b": 8,
    "sd": 6.1,
    "pts": 253.7,
-   "vor": 65.0
+   "vor": 65.0,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.527,
+   "role": "WR1"
   },
   {
    "n": "Zay Flowers",
@@ -430,7 +566,11 @@
    "b": 13,
    "sd": 3.8,
    "pts": 232.6,
-   "vor": 50.9
+   "vor": 50.9,
+   "lean": 0.483,
+   "leanTag": "run",
+   "shr": 0.479,
+   "role": "WR1"
   },
   {
    "n": "Baker Mayfield",
@@ -440,7 +580,9 @@
    "b": 10,
    "sd": 8.4,
    "pts": 276.6,
-   "vor": 32.6
+   "vor": 32.6,
+   "lean": 0.537,
+   "leanTag": "even"
   },
   {
    "n": "Javonte Williams",
@@ -450,7 +592,11 @@
    "b": 14,
    "sd": 5.3,
    "pts": 233.3,
-   "vor": 89.9
+   "vor": 89.9,
+   "lean": 0.613,
+   "leanTag": "pass",
+   "shr": 0.779,
+   "role": "bell cow"
   },
   {
    "n": "Malik Nabers",
@@ -460,7 +606,11 @@
    "b": 8,
    "sd": 6.1,
    "pts": 230.7,
-   "vor": 49.2
+   "vor": 49.2,
+   "lean": 0.517,
+   "leanTag": "run",
+   "shr": 0.488,
+   "role": "WR1"
   },
   {
    "n": "Jeremiyah Love",
@@ -470,7 +620,11 @@
    "b": 14,
    "sd": 5.4,
    "pts": 259.9,
-   "vor": 99.2
+   "vor": 99.2,
+   "lean": 0.576,
+   "leanTag": "pass",
+   "shr": 0.654,
+   "role": "bell cow"
   },
   {
    "n": "Breece Hall",
@@ -480,7 +634,11 @@
    "b": 13,
    "sd": 5.0,
    "pts": 245.5,
-   "vor": 89.9
+   "vor": 89.9,
+   "lean": 0.561,
+   "leanTag": "even",
+   "shr": 0.669,
+   "role": "bell cow"
   },
   {
    "n": "Tyler Shough",
@@ -490,7 +648,9 @@
    "b": 8,
    "sd": 9.0,
    "pts": 297.7,
-   "vor": 42.9
+   "vor": 42.9,
+   "lean": 0.546,
+   "leanTag": "even"
   },
   {
    "n": "Emeka Egbuka",
@@ -500,7 +660,11 @@
    "b": 10,
    "sd": 5.5,
    "pts": 224.6,
-   "vor": 46.0
+   "vor": 46.0,
+   "lean": 0.537,
+   "leanTag": "even",
+   "shr": 0.394,
+   "role": "WR1"
   },
   {
    "n": "Tee Higgins",
@@ -510,7 +674,11 @@
    "b": 6,
    "sd": 4.8,
    "pts": 203.6,
-   "vor": 33.2
+   "vor": 33.2,
+   "lean": 0.599,
+   "leanTag": "pass",
+   "shr": 0.301,
+   "role": "WR2"
   },
   {
    "n": "Tetairoa McMillan",
@@ -520,7 +688,11 @@
    "b": 5,
    "sd": 5.3,
    "pts": 222.1,
-   "vor": 41.6
+   "vor": 41.6,
+   "lean": 0.563,
+   "leanTag": "even",
+   "shr": 0.47,
+   "role": "WR1"
   },
   {
    "n": "Davante Adams",
@@ -530,7 +702,11 @@
    "b": 11,
    "sd": 5.8,
    "pts": 221.1,
-   "vor": 39.9
+   "vor": 39.9,
+   "lean": 0.564,
+   "leanTag": "even",
+   "shr": 0.321,
+   "role": "WR2"
   },
   {
    "n": "Kyler Murray",
@@ -540,7 +716,9 @@
    "b": 6,
    "sd": 9.9,
    "pts": 294.3,
-   "vor": 32.9
+   "vor": 32.9,
+   "lean": 0.552,
+   "leanTag": "even"
   },
   {
    "n": "Jameson Williams",
@@ -550,7 +728,11 @@
    "b": 6,
    "sd": 5.5,
    "pts": 221.0,
-   "vor": 39.3
+   "vor": 39.3,
+   "lean": 0.579,
+   "leanTag": "pass",
+   "shr": 0.295,
+   "role": "WR2"
   },
   {
    "n": "Cam Skattebo",
@@ -560,7 +742,11 @@
    "b": 8,
    "sd": 5.3,
    "pts": 237.4,
-   "vor": 82.7
+   "vor": 82.7,
+   "lean": 0.517,
+   "leanTag": "run",
+   "shr": 0.628,
+   "role": "bell cow"
   },
   {
    "n": "DeVonta Smith",
@@ -570,7 +756,11 @@
    "b": 10,
    "sd": 5.5,
    "pts": 231.2,
-   "vor": 44.4
+   "vor": 44.4,
+   "lean": 0.495,
+   "leanTag": "run",
+   "shr": 0.441,
+   "role": "WR1"
   },
   {
    "n": "Travis Etienne Jr.",
@@ -580,7 +770,11 @@
    "b": 8,
    "sd": 7.1,
    "pts": 226.9,
-   "vor": 77.1
+   "vor": 77.1,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.636,
+   "role": "bell cow"
   },
   {
    "n": "D'Andre Swift",
@@ -590,7 +784,11 @@
    "b": 10,
    "sd": 7.1,
    "pts": 223.5,
-   "vor": 74.0
+   "vor": 74.0,
+   "lean": 0.518,
+   "leanTag": "run",
+   "shr": 0.556,
+   "role": "lead"
   },
   {
    "n": "Sam Darnold",
@@ -600,7 +798,9 @@
    "b": 11,
    "sd": 10.8,
    "pts": 274.7,
-   "vor": 22.6
+   "vor": 22.6,
+   "lean": 0.533,
+   "leanTag": "run"
   },
   {
    "n": "Garrett Wilson",
@@ -610,7 +810,11 @@
    "b": 13,
    "sd": 5.6,
    "pts": 245.5,
-   "vor": 44.8
+   "vor": 44.8,
+   "lean": 0.561,
+   "leanTag": "even",
+   "shr": 0.556,
+   "role": "WR1"
   },
   {
    "n": "Jordan Love",
@@ -620,7 +824,9 @@
    "b": 11,
    "sd": 11.0,
    "pts": 272.7,
-   "vor": 20.6
+   "vor": 20.6,
+   "lean": 0.564,
+   "leanTag": "even"
   },
   {
    "n": "Brock Bowers",
@@ -630,7 +836,11 @@
    "b": 13,
    "sd": 15.2,
    "pts": 253.8,
-   "vor": 104.2
+   "vor": 104.2,
+   "lean": 0.573,
+   "leanTag": "pass",
+   "shr": 0.705,
+   "role": "TE1"
   },
   {
    "n": "Rome Odunze",
@@ -640,7 +850,11 @@
    "b": 10,
    "sd": 6.4,
    "pts": 201.5,
-   "vor": 22.6
+   "vor": 22.6,
+   "lean": 0.518,
+   "leanTag": "run",
+   "shr": 0.394,
+   "role": "WR2"
   },
   {
    "n": "Terry McLaurin",
@@ -650,7 +864,11 @@
    "b": 7,
    "sd": 6.1,
    "pts": 194.7,
-   "vor": 19.0
+   "vor": 19.0,
+   "lean": 0.513,
+   "leanTag": "run",
+   "shr": 0.332,
+   "role": "WR1"
   },
   {
    "n": "Trey McBride",
@@ -660,7 +878,11 @@
    "b": 14,
    "sd": 12.0,
    "pts": 250.9,
-   "vor": 101.3
+   "vor": 101.3,
+   "lean": 0.576,
+   "leanTag": "pass",
+   "shr": 0.846,
+   "role": "TE1"
   },
   {
    "n": "Bucky Irving",
@@ -670,7 +892,11 @@
    "b": 10,
    "sd": 6.2,
    "pts": 216.0,
-   "vor": 66.5
+   "vor": 66.5,
+   "lean": 0.537,
+   "leanTag": "even",
+   "shr": 0.572,
+   "role": "lead"
   },
   {
    "n": "Ladd McConkey",
@@ -680,7 +906,11 @@
    "b": 7,
    "sd": 6.8,
    "pts": 207.6,
-   "vor": 25.4
+   "vor": 25.4,
+   "lean": 0.555,
+   "leanTag": "even",
+   "shr": 0.447,
+   "role": "WR1"
   },
   {
    "n": "Bhayshul Tuten",
@@ -690,7 +920,11 @@
    "b": 7,
    "sd": 7.6,
    "pts": 226.3,
-   "vor": 67.8
+   "vor": 67.8,
+   "lean": 0.54,
+   "leanTag": "even",
+   "shr": 0.621,
+   "role": "bell cow"
   },
   {
    "n": "Quinshon Judkins",
@@ -700,7 +934,11 @@
    "b": 11,
    "sd": 6.7,
    "pts": 208.3,
-   "vor": 55.3
+   "vor": 55.3,
+   "lean": 0.55,
+   "leanTag": "even",
+   "shr": 0.687,
+   "role": "bell cow"
   },
   {
    "n": "DJ Moore",
@@ -710,7 +948,11 @@
    "b": 7,
    "sd": 8.0,
    "pts": 207.0,
-   "vor": 24.4
+   "vor": 24.4,
+   "lean": 0.497,
+   "leanTag": "run",
+   "shr": 0.394,
+   "role": "WR2"
   },
   {
    "n": "Alec Pierce",
@@ -720,7 +962,11 @@
    "b": 13,
    "sd": 6.9,
    "pts": 181.7,
-   "vor": 10.9
+   "vor": 10.9,
+   "lean": 0.538,
+   "leanTag": "even",
+   "shr": 0.328,
+   "role": "WR2"
   },
   {
    "n": "David Montgomery",
@@ -730,7 +976,11 @@
    "b": 8,
    "sd": 7.3,
    "pts": 199.9,
-   "vor": 50.4
+   "vor": 50.4,
+   "lean": 0.568,
+   "leanTag": "pass",
+   "shr": 0.574,
+   "role": "lead"
   },
   {
    "n": "Jaylen Waddle",
@@ -740,7 +990,11 @@
    "b": 10,
    "sd": 7.0,
    "pts": 206.7,
-   "vor": 22.6
+   "vor": 22.6,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.373,
+   "role": "WR1"
   },
   {
    "n": "C.J. Stroud",
@@ -750,7 +1004,9 @@
    "b": 8,
    "sd": 9.2,
    "pts": 252.2,
-   "vor": 9.4
+   "vor": 9.4,
+   "lean": 0.568,
+   "leanTag": "pass"
   },
   {
    "n": "Christian Watson",
@@ -760,7 +1016,11 @@
    "b": 11,
    "sd": 8.1,
    "pts": 205.2,
-   "vor": 21.6
+   "vor": 21.6,
+   "lean": 0.564,
+   "leanTag": "even",
+   "shr": 0.328,
+   "role": "WR2"
   },
   {
    "n": "Daniel Jones",
@@ -770,7 +1030,9 @@
    "b": 13,
    "sd": 11.8,
    "pts": 265.3,
-   "vor": 12.2
+   "vor": 12.2,
+   "lean": 0.538,
+   "leanTag": "even"
   },
   {
    "n": "TreVeyon Henderson",
@@ -780,7 +1042,11 @@
    "b": 11,
    "sd": 7.2,
    "pts": 191.3,
-   "vor": 44.8
+   "vor": 44.8,
+   "lean": 0.538,
+   "leanTag": "even",
+   "shr": 0.507,
+   "role": "lead"
   },
   {
    "n": "Mike Evans",
@@ -790,7 +1056,11 @@
    "b": 8,
    "sd": 8.0,
    "pts": 206.5,
-   "vor": 20.2
+   "vor": 20.2,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.356,
+   "role": "WR1"
   },
   {
    "n": "Luther Burden III",
@@ -800,7 +1070,11 @@
    "b": 10,
    "sd": 8.1,
    "pts": 201.9,
-   "vor": 16.6
+   "vor": 16.6,
+   "lean": 0.518,
+   "leanTag": "run",
+   "shr": 0.424,
+   "role": "WR1"
   },
   {
    "n": "Courtland Sutton",
@@ -810,7 +1084,11 @@
    "b": 10,
    "sd": 8.1,
    "pts": 189.8,
-   "vor": 10.1
+   "vor": 10.1,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.326,
+   "role": "WR2"
   },
   {
    "n": "Colston Loveland",
@@ -820,7 +1098,11 @@
    "b": 10,
    "sd": 10.4,
    "pts": 193.8,
-   "vor": 44.2
+   "vor": 44.2,
+   "lean": 0.518,
+   "leanTag": "run",
+   "shr": 0.676,
+   "role": "TE1"
   },
   {
    "n": "DK Metcalf",
@@ -830,7 +1112,11 @@
    "b": 9,
    "sd": 7.1,
    "pts": 197.4,
-   "vor": 13.6
+   "vor": 13.6,
+   "lean": 0.578,
+   "leanTag": "pass",
+   "shr": 0.36,
+   "role": "WR2"
   },
   {
    "n": "Tony Pollard",
@@ -840,7 +1126,11 @@
    "b": 9,
    "sd": 6.6,
    "pts": 197.2,
-   "vor": 47.5
+   "vor": 47.5,
+   "lean": 0.599,
+   "leanTag": "pass",
+   "shr": 0.659,
+   "role": "bell cow"
   },
   {
    "n": "Malik Willis",
@@ -850,7 +1140,9 @@
    "b": 6,
    "sd": 10.7,
    "pts": 277.7,
-   "vor": 12.3
+   "vor": 12.3,
+   "lean": 0.537,
+   "leanTag": "even"
   },
   {
    "n": "Marvin Harrison Jr.",
@@ -860,7 +1152,11 @@
    "b": 14,
    "sd": 7.3,
    "pts": 193.3,
-   "vor": 9.8
+   "vor": 9.8,
+   "lean": 0.576,
+   "leanTag": "pass",
+   "shr": 0.418,
+   "role": "WR2"
   },
   {
    "n": "Parker Washington",
@@ -870,7 +1166,11 @@
    "b": 7,
    "sd": 6.7,
    "pts": 173.4,
-   "vor": -2.9
+   "vor": -2.9,
+   "lean": 0.54,
+   "leanTag": "even",
+   "shr": 0.283,
+   "role": "WR2"
   },
   {
    "n": "Jadarian Price",
@@ -880,7 +1180,11 @@
    "b": 11,
    "sd": 10.9,
    "pts": 185.3,
-   "vor": 38.8
+   "vor": 38.8,
+   "lean": 0.533,
+   "leanTag": "run",
+   "shr": 0.488,
+   "role": "lead"
   },
   {
    "n": "Rhamondre Stevenson",
@@ -890,7 +1194,11 @@
    "b": 11,
    "sd": 8.8,
    "pts": 196.7,
-   "vor": 41.5
+   "vor": 41.5,
+   "lean": 0.538,
+   "leanTag": "even",
+   "shr": 0.493,
+   "role": "lead"
   },
   {
    "n": "Brian Thomas Jr.",
@@ -900,7 +1208,11 @@
    "b": 7,
    "sd": 6.4,
    "pts": 167.2,
-   "vor": -7.2
+   "vor": -7.2,
+   "lean": 0.54,
+   "leanTag": "even",
+   "shr": 0.256,
+   "role": "WR3"
   },
   {
    "n": "Bryce Young",
@@ -910,7 +1222,9 @@
    "b": 5,
    "sd": 7.5,
    "pts": 253.1,
-   "vor": -0.5
+   "vor": -0.5,
+   "lean": 0.563,
+   "leanTag": "even"
   },
   {
    "n": "Tyler Warren",
@@ -920,7 +1234,11 @@
    "b": 13,
    "sd": 8.8,
    "pts": 191.6,
-   "vor": 42.0
+   "vor": 42.0,
+   "lean": 0.538,
+   "leanTag": "even",
+   "shr": 0.857,
+   "role": "TE1"
   },
   {
    "n": "Rico Dowdle",
@@ -930,7 +1248,11 @@
    "b": 9,
    "sd": 8.6,
    "pts": 166.4,
-   "vor": 22.9
+   "vor": 22.9,
+   "lean": 0.578,
+   "leanTag": "pass",
+   "shr": 0.483,
+   "role": "lead"
   },
   {
    "n": "Jaylen Warren",
@@ -940,7 +1262,11 @@
    "b": 9,
    "sd": 13.0,
    "pts": 201.3,
-   "vor": 39.6
+   "vor": 39.6,
+   "lean": 0.578,
+   "leanTag": "pass",
+   "shr": 0.517,
+   "role": "lead"
   },
   {
    "n": "Carnell Tate",
@@ -950,7 +1276,11 @@
    "b": 9,
    "sd": 6.7,
    "pts": 181.7,
-   "vor": 0.0
+   "vor": 0.0,
+   "lean": 0.599,
+   "leanTag": "pass",
+   "shr": 0.312,
+   "role": "WR2"
   },
   {
    "n": "J.K. Dobbins",
@@ -960,7 +1290,11 @@
    "b": 10,
    "sd": 10.1,
    "pts": 173.2,
-   "vor": 23.7
+   "vor": 23.7,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.506,
+   "role": "lead"
   },
   {
    "n": "Quentin Johnston",
@@ -970,7 +1304,11 @@
    "b": 7,
    "sd": 6.9,
    "pts": 156.7,
-   "vor": -14.8
+   "vor": -14.8,
+   "lean": 0.555,
+   "leanTag": "even",
+   "shr": 0.294,
+   "role": "WR2"
   },
   {
    "n": "Chuba Hubbard",
@@ -980,7 +1318,11 @@
    "b": 5,
    "sd": 10.2,
    "pts": 178.5,
-   "vor": 24.2
+   "vor": 24.2,
+   "lean": 0.563,
+   "leanTag": "even",
+   "shr": 0.516,
+   "role": "lead"
   },
   {
    "n": "Michael Wilson",
@@ -990,7 +1332,11 @@
    "b": 14,
    "sd": 8.9,
    "pts": 172.2,
-   "vor": -7.7
+   "vor": -7.7,
+   "lean": 0.576,
+   "leanTag": "pass",
+   "shr": 0.431,
+   "role": "WR1"
   },
   {
    "n": "Cam Ward",
@@ -1000,7 +1346,9 @@
    "b": 9,
    "sd": 11.2,
    "pts": 238.2,
-   "vor": -14.9
+   "vor": -14.9,
+   "lean": 0.599,
+   "leanTag": "pass"
   },
   {
    "n": "Chris Godwin Jr.",
@@ -1010,7 +1358,11 @@
    "b": 10,
    "sd": 9.5,
    "pts": 175.9,
-   "vor": -6.4
+   "vor": -6.4,
+   "lean": 0.537,
+   "leanTag": "even",
+   "shr": 0.343,
+   "role": "WR2"
   },
   {
    "n": "Jordan Addison",
@@ -1020,7 +1372,11 @@
    "b": 6,
    "sd": 7.4,
    "pts": 163.8,
-   "vor": -13.1
+   "vor": -13.1,
+   "lean": 0.552,
+   "leanTag": "even",
+   "shr": 0.284,
+   "role": "WR2"
   },
   {
    "n": "Tucker Kraft",
@@ -1030,7 +1386,11 @@
    "b": 11,
    "sd": 11.6,
    "pts": 159.4,
-   "vor": 23.6
+   "vor": 23.6,
+   "lean": 0.564,
+   "leanTag": "even",
+   "shr": 0.713,
+   "role": "TE1"
   },
   {
    "n": "Jakobi Meyers",
@@ -1040,7 +1400,11 @@
    "b": 7,
    "sd": 8.9,
    "pts": 177.1,
-   "vor": -6.8
+   "vor": -6.8,
+   "lean": 0.54,
+   "leanTag": "even",
+   "shr": 0.306,
+   "role": "WR1"
   },
   {
    "n": "Jaleel McLaughlin",
@@ -1061,7 +1425,11 @@
    "b": 11,
    "sd": 8.2,
    "pts": 184.3,
-   "vor": -3.5
+   "vor": -3.5,
+   "lean": 0.564,
+   "leanTag": "even",
+   "shr": 0.333,
+   "role": "WR1"
   },
   {
    "n": "Seattle Defense",
@@ -1081,7 +1449,11 @@
    "b": 11,
    "sd": 11.6,
    "pts": 187.1,
-   "vor": 36.8
+   "vor": 36.8,
+   "lean": 0.55,
+   "leanTag": "even",
+   "shr": 0.917,
+   "role": "TE1"
   },
   {
    "n": "Denver Defense",
@@ -1101,7 +1473,11 @@
    "b": 7,
    "sd": 11.7,
    "pts": 141.2,
-   "vor": 4.3
+   "vor": 4.3,
+   "lean": 0.513,
+   "leanTag": "run",
+   "shr": 0.429,
+   "role": "lead"
   },
   {
    "n": "Xavier Worthy",
@@ -1111,7 +1487,11 @@
    "b": 5,
    "sd": 6.9,
    "pts": 168.1,
-   "vor": -13.3
+   "vor": -13.3,
+   "lean": 0.573,
+   "leanTag": "pass",
+   "shr": 0.289,
+   "role": "WR2"
   },
   {
    "n": "Michael Pittman Jr.",
@@ -1121,7 +1501,11 @@
    "b": 9,
    "sd": 8.7,
    "pts": 193.7,
-   "vor": -0.8
+   "vor": -0.8,
+   "lean": 0.578,
+   "leanTag": "pass",
+   "shr": 0.409,
+   "role": "WR1"
   },
   {
    "n": "Jacoby Brissett",
@@ -1131,7 +1515,9 @@
    "b": 14,
    "sd": 16.0,
    "pts": 235.6,
-   "vor": -16.3
+   "vor": -16.3,
+   "lean": 0.576,
+   "leanTag": "pass"
   },
   {
    "n": "Dallas Goedert",
@@ -1141,7 +1527,11 @@
    "b": 10,
    "sd": 17.9,
    "pts": 156.5,
-   "vor": 15.7
+   "vor": 15.7,
+   "lean": 0.495,
+   "leanTag": "run",
+   "shr": 0.817,
+   "role": "TE1"
   },
   {
    "n": "Kyle Monangai",
@@ -1151,7 +1541,11 @@
    "b": 10,
    "sd": 13.0,
    "pts": 137.7,
-   "vor": -5.7
+   "vor": -5.7,
+   "lean": 0.518,
+   "leanTag": "run",
+   "shr": 0.401,
+   "role": "committee"
   },
   {
    "n": "Kyle Pitts Sr.",
@@ -1161,7 +1555,11 @@
    "b": 11,
    "sd": 15.2,
    "pts": 185.6,
-   "vor": 25.9
+   "vor": 25.9,
+   "lean": 0.583,
+   "leanTag": "pass",
+   "shr": 0.776,
+   "role": "TE1"
   },
   {
    "n": "Aaron Rodgers",
@@ -1171,7 +1569,9 @@
    "b": 9,
    "sd": 15.0,
    "pts": 238.0,
-   "vor": -15.9
+   "vor": -15.9,
+   "lean": 0.578,
+   "leanTag": "pass"
   },
   {
    "n": "Jonathon Brooks",
@@ -1181,7 +1581,11 @@
    "b": 5,
    "sd": 18.0,
    "pts": 149.5,
-   "vor": 0.0
+   "vor": 0.0,
+   "lean": 0.563,
+   "leanTag": "even",
+   "shr": 0.434,
+   "role": "lead"
   },
   {
    "n": "Stefon Diggs",
@@ -1191,7 +1595,11 @@
    "b": 7,
    "sd": 14.3,
    "pts": 168.6,
-   "vor": -13.8
+   "vor": -13.8,
+   "lean": 0.513,
+   "leanTag": "run",
+   "shr": 0.316,
+   "role": "WR2"
   },
   {
    "n": "Deebo Samuel Sr.",
@@ -1201,7 +1609,11 @@
    "b": 8,
    "sd": 12.6,
    "pts": 131.5,
-   "vor": -34.0
+   "vor": -34.0,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.242,
+   "role": "WR3"
   },
   {
    "n": "Houston Defense",
@@ -1221,7 +1633,11 @@
    "b": 6,
    "sd": 18.2,
    "pts": 165.5,
-   "vor": 13.9
+   "vor": 13.9,
+   "lean": 0.579,
+   "leanTag": "pass",
+   "shr": 0.859,
+   "role": "TE1"
   },
   {
    "n": "Jordyn Tyson",
@@ -1231,7 +1647,11 @@
    "b": 8,
    "sd": 24.5,
    "pts": 136.3,
-   "vor": -31.6
+   "vor": -31.6,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.266,
+   "role": "WR2"
   },
   {
    "n": "Jordan Mason",
@@ -1241,7 +1661,11 @@
    "b": 6,
    "sd": 16.0,
    "pts": 131.3,
-   "vor": -9.8
+   "vor": -9.8,
+   "lean": 0.552,
+   "leanTag": "even",
+   "shr": 0.477,
+   "role": "lead"
   },
   {
    "n": "RJ Harvey",
@@ -1251,7 +1675,11 @@
    "b": 10,
    "sd": 17.3,
    "pts": 149.9,
-   "vor": -4.0
+   "vor": -4.0,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.319,
+   "role": "committee"
   },
   {
    "n": "Josh Downs",
@@ -1261,7 +1689,11 @@
    "b": 13,
    "sd": 14.0,
    "pts": 162.7,
-   "vor": -19.0
+   "vor": -19.0,
+   "lean": 0.538,
+   "leanTag": "even",
+   "shr": 0.372,
+   "role": "WR1"
   },
   {
    "n": "Matthew Golden",
@@ -1271,7 +1703,11 @@
    "b": 11,
    "sd": 13.5,
    "pts": 154.2,
-   "vor": -26.2
+   "vor": -26.2,
+   "lean": 0.564,
+   "leanTag": "even",
+   "shr": 0.273,
+   "role": "WR3"
   },
   {
    "n": "Geno Smith",
@@ -1281,7 +1717,9 @@
    "b": 13,
    "sd": 17.4,
    "pts": 236.5,
-   "vor": -17.1
+   "vor": -17.1,
+   "lean": 0.561,
+   "leanTag": "even"
   },
   {
    "n": "Makai Lemon",
@@ -1291,7 +1729,11 @@
    "b": 10,
    "sd": 14.3,
    "pts": 147.7,
-   "vor": -30.8
+   "vor": -30.8,
+   "lean": 0.495,
+   "leanTag": "run",
+   "shr": 0.298,
+   "role": "WR2"
   },
   {
    "n": "Blake Corum",
@@ -1301,7 +1743,11 @@
    "b": 11,
    "sd": 14.7,
    "pts": 132.4,
-   "vor": -14.5
+   "vor": -14.5,
+   "lean": 0.564,
+   "leanTag": "even",
+   "shr": 0.378,
+   "role": "committee"
   },
   {
    "n": "Wan'Dale Robinson",
@@ -1311,7 +1757,11 @@
    "b": 9,
    "sd": 12.5,
    "pts": 174.6,
-   "vor": -17.6
+   "vor": -17.6,
+   "lean": 0.599,
+   "leanTag": "pass",
+   "shr": 0.37,
+   "role": "WR1"
   },
   {
    "n": "Romeo Doubs",
@@ -1321,7 +1771,11 @@
    "b": 11,
    "sd": 11.1,
    "pts": 163.9,
-   "vor": -25.9
+   "vor": -25.9,
+   "lean": 0.538,
+   "leanTag": "even",
+   "shr": 0.299,
+   "role": "WR2"
   },
   {
    "n": "Aaron Jones Sr.",
@@ -1331,7 +1785,11 @@
    "b": 6,
    "sd": 15.0,
    "pts": 148.0,
-   "vor": -9.3
+   "vor": -9.3,
+   "lean": 0.552,
+   "leanTag": "even",
+   "shr": 0.428,
+   "role": "lead"
   },
   {
    "n": "Mark Andrews",
@@ -1341,7 +1799,11 @@
    "b": 13,
    "sd": 15.3,
    "pts": 161.5,
-   "vor": 10.9
+   "vor": 10.9,
+   "lean": 0.483,
+   "leanTag": "run",
+   "shr": 0.859,
+   "role": "TE1"
   },
   {
    "n": "Chimere Dike",
@@ -1351,7 +1813,11 @@
    "b": 9,
    "sd": 33.7,
    "pts": 31.9,
-   "vor": -91.9
+   "vor": -91.9,
+   "lean": 0.599,
+   "leanTag": "pass",
+   "shr": 0.062,
+   "role": "WR4"
   },
   {
    "n": "Brandon Aubrey",
@@ -1371,7 +1837,11 @@
    "b": 8,
    "sd": 17.7,
    "pts": 152.5,
-   "vor": 6.4
+   "vor": 6.4,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.695,
+   "role": "TE1"
   },
   {
    "n": "Minnesota Defense",
@@ -1401,7 +1871,11 @@
    "b": 7,
    "sd": 16.5,
    "pts": 168.9,
-   "vor": 0.6
+   "vor": 0.6,
+   "lean": 0.513,
+   "leanTag": "run",
+   "shr": 0.389,
+   "role": "committee"
   },
   {
    "n": "Kenny Gainwell",
@@ -1431,7 +1905,11 @@
    "b": 11,
    "sd": 14.3,
    "pts": 143.4,
-   "vor": -38.3
+   "vor": -38.3,
+   "lean": 0.533,
+   "leanTag": "run",
+   "shr": 0.236,
+   "role": "WR2"
   },
   {
    "n": "Fernando Mendoza",
@@ -1441,7 +1919,9 @@
    "b": 13,
    "sd": 23.0,
    "pts": 196.9,
-   "vor": -56.2
+   "vor": -56.2,
+   "lean": 0.573,
+   "leanTag": "pass"
   },
   {
    "n": "Jason Myers",
@@ -1461,7 +1941,11 @@
    "b": 8,
    "sd": 16.5,
    "pts": 147.7,
-   "vor": -39.7
+   "vor": -39.7,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.289,
+   "role": "WR2"
   },
   {
    "n": "San Francisco Defense",
@@ -1491,7 +1975,11 @@
    "b": 7,
    "sd": 12.9,
    "pts": 93.4,
-   "vor": -24.7
+   "vor": -24.7,
+   "lean": 0.555,
+   "leanTag": "even",
+   "shr": 0.34,
+   "role": "TE2"
   },
   {
    "n": "Khalil Shakir",
@@ -1501,7 +1989,11 @@
    "b": 7,
    "sd": 9.3,
    "pts": 172.6,
-   "vor": -27.7
+   "vor": -27.7,
+   "lean": 0.497,
+   "leanTag": "run",
+   "shr": 0.4,
+   "role": "WR1"
   },
   {
    "n": "KC Concepcion",
@@ -1511,7 +2003,11 @@
    "b": 11,
    "sd": 11.6,
    "pts": 153.6,
-   "vor": -38.2
+   "vor": -38.2,
+   "lean": 0.55,
+   "leanTag": "even",
+   "shr": 0.345,
+   "role": "WR1"
   },
   {
    "n": "Jayden Higgins",
@@ -1531,7 +2027,11 @@
    "b": 9,
    "sd": 7.9,
    "pts": 139.6,
-   "vor": -3.5
+   "vor": -3.5,
+   "lean": 0.578,
+   "leanTag": "pass",
+   "shr": 0.671,
+   "role": "TE1"
   },
   {
    "n": "Xavier Legette",
@@ -1542,7 +2042,11 @@
    "sd": 20.5,
    "est": 1,
    "pts": 98.7,
-   "vor": -66.6
+   "vor": -66.6,
+   "lean": 0.563,
+   "leanTag": "even",
+   "shr": 0.229,
+   "role": "WR3"
   },
   {
    "n": "Detroit Defense",
@@ -1562,7 +2066,9 @@
    "b": 11,
    "sd": 20.4,
    "pts": 151.0,
-   "vor": -102.1
+   "vor": -102.1,
+   "lean": 0.583,
+   "leanTag": "pass"
   },
   {
    "n": "Kansas City Defense",
@@ -1583,7 +2089,11 @@
    "b": 5,
    "sd": 10.6,
    "pts": 130.1,
-   "vor": -51.6
+   "vor": -51.6,
+   "lean": 0.563,
+   "leanTag": "even",
+   "shr": 0.301,
+   "role": "WR2"
   },
   {
    "n": "AJ Barner",
@@ -1593,7 +2103,11 @@
    "b": 11,
    "sd": 14.2,
    "pts": 128.4,
-   "vor": -10.6
+   "vor": -10.6,
+   "lean": 0.533,
+   "leanTag": "run",
+   "shr": 0.701,
+   "role": "TE1"
   },
   {
    "n": "Kenyon Sadiq",
@@ -1603,7 +2117,11 @@
    "b": 13,
    "sd": 34.8,
    "pts": 96.5,
-   "vor": -27.7
+   "vor": -27.7,
+   "lean": 0.561,
+   "leanTag": "even",
+   "shr": 0.438,
+   "role": "TE2"
   },
   {
    "n": "Philadelphia Defense",
@@ -1633,7 +2151,11 @@
    "b": 14,
    "sd": 22.0,
    "pts": 159.5,
-   "vor": 3.4
+   "vor": 3.4,
+   "lean": 0.613,
+   "leanTag": "pass",
+   "shr": 0.826,
+   "role": "TE1"
   },
   {
    "n": "Travis Kelce",
@@ -1643,7 +2165,11 @@
    "b": 5,
    "sd": 16.8,
    "pts": 174.1,
-   "vor": 10.2
+   "vor": 10.2,
+   "lean": 0.573,
+   "leanTag": "pass",
+   "shr": 0.768,
+   "role": "TE1"
   },
   {
    "n": "Tre Tucker",
@@ -1653,7 +2179,11 @@
    "b": 13,
    "sd": 11.9,
    "pts": 135.5,
-   "vor": -49.2
+   "vor": -49.2,
+   "lean": 0.573,
+   "leanTag": "pass",
+   "shr": 0.364,
+   "role": "WR1"
   },
   {
    "n": "Cameron Dicker",
@@ -1684,7 +2214,11 @@
    "b": 8,
    "sd": 22.8,
    "pts": 37.0,
-   "vor": -68.8
+   "vor": -68.8,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.117,
+   "role": "backup"
   },
   {
    "n": "Emari Demercado",
@@ -1695,7 +2229,11 @@
    "sd": 22.1,
    "est": 1,
    "pts": 62.0,
-   "vor": -58.9
+   "vor": -58.9,
+   "lean": 0.573,
+   "leanTag": "pass",
+   "shr": 0.162,
+   "role": "backup"
   },
   {
    "n": "Shedeur Sanders",
@@ -1705,7 +2243,9 @@
    "b": 11,
    "sd": 28.4,
    "pts": 128.1,
-   "vor": -119.2
+   "vor": -119.2,
+   "lean": 0.55,
+   "leanTag": "even"
   },
   {
    "n": "Deshaun Watson",
@@ -1715,7 +2255,9 @@
    "b": 11,
    "sd": 25.3,
    "pts": 139.7,
-   "vor": -119.2
+   "vor": -119.2,
+   "lean": 0.55,
+   "leanTag": "even"
   },
   {
    "n": "Isaiah Likely",
@@ -1725,7 +2267,11 @@
    "b": 8,
    "sd": 16.8,
    "pts": 145.6,
-   "vor": -4.0
+   "vor": -4.0,
+   "lean": 0.517,
+   "leanTag": "run",
+   "shr": 0.7,
+   "role": "TE1"
   },
   {
    "n": "Jonah Coleman",
@@ -1735,7 +2281,11 @@
    "b": 10,
    "sd": 24.4,
    "pts": 57.5,
-   "vor": -61.2
+   "vor": -61.2,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.175,
+   "role": "backup"
   },
   {
    "n": "Dominic Zvada",
@@ -1756,7 +2306,11 @@
    "b": 11,
    "sd": 4.9,
    "pts": 114.1,
-   "vor": -34.5
+   "vor": -34.5,
+   "lean": 0.55,
+   "leanTag": "even",
+   "shr": 0.227,
+   "role": "backup"
   },
   {
    "n": "Calvin Ridley",
@@ -1766,7 +2320,11 @@
    "b": 9,
    "sd": 12.1,
    "pts": 113.8,
-   "vor": -62.2
+   "vor": -62.2,
+   "lean": 0.599,
+   "leanTag": "pass",
+   "shr": 0.188,
+   "role": "WR3"
   },
   {
    "n": "Pittsburgh Defense",
@@ -1786,7 +2344,9 @@
    "b": 11,
    "sd": 18.0,
    "pts": 94.8,
-   "vor": -158.3
+   "vor": -158.3,
+   "lean": 0.583,
+   "leanTag": "pass"
   },
   {
    "n": "Keaton Mitchell",
@@ -1796,7 +2356,11 @@
    "b": 7,
    "sd": 33.0,
    "pts": 71.1,
-   "vor": -56.9
+   "vor": -56.9,
+   "lean": 0.555,
+   "leanTag": "even",
+   "shr": 0.131,
+   "role": "backup"
   },
   {
    "n": "Zach Charbonnet",
@@ -1806,7 +2370,11 @@
    "b": 11,
    "sd": 17.7,
    "pts": 110.2,
-   "vor": -39.3
+   "vor": -39.3,
+   "lean": 0.533,
+   "leanTag": "run",
+   "shr": 0.317,
+   "role": "committee"
   },
   {
    "n": "Jerry Jeudy",
@@ -1816,7 +2384,11 @@
    "b": 11,
    "sd": 11.5,
    "pts": 133.5,
-   "vor": -55.7
+   "vor": -55.7,
+   "lean": 0.55,
+   "leanTag": "even",
+   "shr": 0.304,
+   "role": "WR2"
   },
   {
    "n": "Dalton Kincaid",
@@ -1826,7 +2398,11 @@
    "b": 7,
    "sd": 18.3,
    "pts": 146.5,
-   "vor": -6.5
+   "vor": -6.5,
+   "lean": 0.497,
+   "leanTag": "run",
+   "shr": 0.667,
+   "role": "TE1"
   },
   {
    "n": "Carson Beck",
@@ -1836,7 +2412,9 @@
    "b": 14,
    "sd": 7.2,
    "pts": 30.4,
-   "vor": -211.1
+   "vor": -211.1,
+   "lean": 0.576,
+   "leanTag": "pass"
   },
   {
    "n": "James Conner",
@@ -1846,7 +2424,11 @@
    "b": 14,
    "sd": 23.3,
    "pts": 35.0,
-   "vor": -79.2
+   "vor": -79.2,
+   "lean": 0.576,
+   "leanTag": "pass",
+   "shr": 0.095,
+   "role": "backup"
   },
   {
    "n": "Justice Hill",
@@ -1857,7 +2439,11 @@
    "sd": 11.3,
    "est": 1,
    "pts": 92.2,
-   "vor": -54.8
+   "vor": -54.8,
+   "lean": 0.483,
+   "leanTag": "run",
+   "shr": 0.179,
+   "role": "backup"
   },
   {
    "n": "Isiah Pacheco",
@@ -1867,7 +2453,11 @@
    "b": 6,
    "sd": 21.8,
    "pts": 89.8,
-   "vor": -58.5
+   "vor": -58.5,
+   "lean": 0.579,
+   "leanTag": "pass",
+   "shr": 0.27,
+   "role": "committee"
   },
   {
    "n": "Braelon Allen",
@@ -1877,7 +2467,11 @@
    "b": 13,
    "sd": 11.5,
    "pts": 73.2,
-   "vor": -68.0
+   "vor": -68.0,
+   "lean": 0.561,
+   "leanTag": "even",
+   "shr": 0.221,
+   "role": "backup"
   },
   {
    "n": "Andy Borregales",
@@ -1958,7 +2552,11 @@
    "sd": 14.0,
    "est": 1,
    "pts": 78.1,
-   "vor": -85.0
+   "vor": -85.0,
+   "lean": 0.568,
+   "leanTag": "pass",
+   "shr": 0.141,
+   "role": "WR4"
   },
   {
    "n": "Troy Franklin",
@@ -1969,7 +2567,11 @@
    "sd": 17.7,
    "est": 1,
    "pts": 69.8,
-   "vor": -89.9
+   "vor": -89.9,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.14,
+   "role": "WR4"
   },
   {
    "n": "Rashod Bateman",
@@ -1979,7 +2581,11 @@
    "b": 13,
    "sd": 6.7,
    "pts": 125.2,
-   "vor": -62.2
+   "vor": -62.2,
+   "lean": 0.483,
+   "leanTag": "run",
+   "shr": 0.267,
+   "role": "WR2"
   },
   {
    "n": "J.J. McCarthy",
@@ -1989,7 +2595,9 @@
    "b": 6,
    "sd": 16.3,
    "pts": 16.2,
-   "vor": -229.8
+   "vor": -229.8,
+   "lean": 0.552,
+   "leanTag": "even"
   },
   {
    "n": "Kirk Cousins",
@@ -1999,7 +2607,9 @@
    "b": 13,
    "sd": 21.2,
    "pts": 53.5,
-   "vor": -218.2
+   "vor": -218.2,
+   "lean": 0.573,
+   "leanTag": "pass"
   },
   {
    "n": "Samaje Perine",
@@ -2010,7 +2620,11 @@
    "sd": 16.0,
    "est": 1,
    "pts": 74.2,
-   "vor": -68.7
+   "vor": -68.7,
+   "lean": 0.599,
+   "leanTag": "pass",
+   "shr": 0.216,
+   "role": "backup"
   },
   {
    "n": "MarShawn Lloyd",
@@ -2020,7 +2634,11 @@
    "b": 11,
    "sd": 25.9,
    "pts": 176.9,
-   "vor": -18.6
+   "vor": -18.6,
+   "lean": 0.564,
+   "leanTag": "even",
+   "shr": 0.503,
+   "role": "lead"
   },
   {
    "n": "Jalen McMillan",
@@ -2030,7 +2648,11 @@
    "b": 10,
    "sd": 13.2,
    "pts": 118.5,
-   "vor": -66.9
+   "vor": -66.9,
+   "lean": 0.537,
+   "leanTag": "even",
+   "shr": 0.197,
+   "role": "WR3"
   },
   {
    "n": "Tyjae Spears",
@@ -2040,7 +2662,11 @@
    "b": 9,
    "sd": 22.7,
    "pts": 115.9,
-   "vor": -51.0
+   "vor": -51.0,
+   "lean": 0.599,
+   "leanTag": "pass",
+   "shr": 0.298,
+   "role": "committee"
   },
   {
    "n": "Germie Bernard",
@@ -2050,7 +2676,11 @@
    "b": 9,
    "sd": 17.6,
    "pts": 115.2,
-   "vor": -70.0
+   "vor": -70.0,
+   "lean": 0.578,
+   "leanTag": "pass",
+   "shr": 0.231,
+   "role": "WR3"
   },
   {
    "n": "NY Jets Defense",
@@ -2071,7 +2701,11 @@
    "b": 13,
    "sd": 22.3,
    "pts": 62.6,
-   "vor": -81.1
+   "vor": -81.1,
+   "lean": 0.573,
+   "leanTag": "pass",
+   "shr": 0.235,
+   "role": "backup"
   },
   {
    "n": "Woody Marks",
@@ -2081,7 +2715,11 @@
    "b": 8,
    "sd": 19.7,
    "pts": 119.1,
-   "vor": -53.3
+   "vor": -53.3,
+   "lean": 0.568,
+   "leanTag": "pass",
+   "shr": 0.371,
+   "role": "committee"
   },
   {
    "n": "Dallas Defense",
@@ -2111,7 +2749,11 @@
    "b": 11,
    "sd": 14.2,
    "pts": 147.4,
-   "vor": -6.6
+   "vor": -6.6,
+   "lean": 0.538,
+   "leanTag": "even",
+   "shr": 1.0,
+   "role": "TE1"
   },
   {
    "n": "Chase McLaughlin",
@@ -2132,7 +2774,11 @@
    "sd": 22.1,
    "est": 1,
    "pts": 42.6,
-   "vor": -92.7
+   "vor": -92.7,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.124,
+   "role": "backup"
   },
   {
    "n": "Joey Slye",
@@ -2153,7 +2799,11 @@
    "b": 8,
    "sd": 18.3,
    "pts": 124.3,
-   "vor": -53.6
+   "vor": -53.6,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.322,
+   "role": "committee"
   },
   {
    "n": "Juwan Johnson",
@@ -2163,7 +2813,11 @@
    "b": 8,
    "sd": 21.8,
    "pts": 145.6,
-   "vor": -9.9
+   "vor": -9.9,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.69,
+   "role": "TE1"
   },
   {
    "n": "Tampa Bay Defense",
@@ -2194,7 +2848,11 @@
    "b": 7,
    "sd": 19.1,
    "pts": 97.2,
-   "vor": -69.1
+   "vor": -69.1,
+   "lean": 0.54,
+   "leanTag": "even",
+   "shr": 0.293,
+   "role": "committee"
   },
   {
    "n": "Bub Means",
@@ -2226,7 +2884,11 @@
    "sd": 23.7,
    "est": 1,
    "pts": 69.5,
-   "vor": -94.1
+   "vor": -94.1,
+   "lean": 0.573,
+   "leanTag": "pass",
+   "shr": 0.132,
+   "role": "WR3"
   },
   {
    "n": "Green Bay Defense",
@@ -2247,7 +2909,11 @@
    "sd": 18.4,
    "est": 1,
    "pts": 101.7,
-   "vor": -78.5
+   "vor": -78.5,
+   "lean": 0.613,
+   "leanTag": "pass",
+   "shr": 0.164,
+   "role": "WR3"
   },
   {
    "n": "Dean Connors",
@@ -2279,7 +2945,11 @@
    "sd": 12.8,
    "est": 1,
    "pts": 43.3,
-   "vor": -96.6
+   "vor": -96.6,
+   "lean": 0.573,
+   "leanTag": "pass",
+   "shr": 0.136,
+   "role": "backup"
   },
   {
    "n": "Cairo Santos",
@@ -2299,7 +2969,11 @@
    "b": 6,
    "sd": 14.1,
    "pts": 101.6,
-   "vor": -80.0
+   "vor": -80.0,
+   "lean": 0.552,
+   "leanTag": "even",
+   "shr": 0.191,
+   "role": "WR3"
   },
   {
    "n": "Evan McPherson",
@@ -2320,7 +2994,11 @@
    "sd": 23.0,
    "est": 1,
    "pts": 99.9,
-   "vor": -33.6
+   "vor": -33.6,
+   "lean": 0.555,
+   "leanTag": "even",
+   "shr": 0.45,
+   "role": "TE1"
   },
   {
    "n": "Tank Bigsby",
@@ -2330,7 +3008,11 @@
    "b": 10,
    "sd": 18.0,
    "pts": 63.6,
-   "vor": -86.7
+   "vor": -86.7,
+   "lean": 0.495,
+   "leanTag": "run",
+   "shr": 0.2,
+   "role": "backup"
   },
   {
    "n": "Travis Hunter",
@@ -2340,7 +3022,11 @@
    "b": 7,
    "sd": 19.4,
    "pts": 85.1,
-   "vor": -88.3
+   "vor": -88.3,
+   "lean": 0.54,
+   "leanTag": "even",
+   "shr": 0.155,
+   "role": "WR4"
   },
   {
    "n": "Jacksonville Defense",
@@ -2361,7 +3047,11 @@
    "sd": 16.5,
    "est": 1,
    "pts": 132.1,
-   "vor": -19.4
+   "vor": -19.4,
+   "lean": 0.54,
+   "leanTag": "even",
+   "shr": 0.879,
+   "role": "TE1"
   },
   {
    "n": "Eddy Pi\u00f1eiro",
@@ -2402,7 +3092,11 @@
    "sd": 32.5,
    "est": 1,
    "pts": 81.6,
-   "vor": -90.7
+   "vor": -90.7,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.161,
+   "role": "WR3"
   },
   {
    "n": "Jalen Nailor",
@@ -2412,7 +3106,11 @@
    "b": 13,
    "sd": 14.2,
    "pts": 113.7,
-   "vor": -75.5
+   "vor": -75.5,
+   "lean": 0.573,
+   "leanTag": "pass",
+   "shr": 0.308,
+   "role": "WR2"
   },
   {
    "n": "Ja'Kobi Lane",
@@ -2422,7 +3120,11 @@
    "b": 13,
    "sd": 13.8,
    "pts": 85.4,
-   "vor": -89.8
+   "vor": -89.8,
+   "lean": 0.483,
+   "leanTag": "run",
+   "shr": 0.182,
+   "role": "WR3"
   },
   {
    "n": "Will Reichard",
@@ -2442,7 +3144,11 @@
    "b": 14,
    "sd": 16.4,
    "pts": 87.5,
-   "vor": -76.3
+   "vor": -76.3,
+   "lean": 0.576,
+   "leanTag": "pass",
+   "shr": 0.251,
+   "role": "committee"
   },
   {
    "n": "Dontayvion Wicks",
@@ -2452,7 +3158,11 @@
    "b": 10,
    "sd": 21.3,
    "pts": 90.6,
-   "vor": -90.2
+   "vor": -90.2,
+   "lean": 0.495,
+   "leanTag": "run",
+   "shr": 0.181,
+   "role": "WR3"
   },
   {
    "n": "Tyler Bass",
@@ -2473,7 +3183,11 @@
    "sd": 24.2,
    "est": 1,
    "pts": 133.8,
-   "vor": -22.2
+   "vor": -22.2,
+   "lean": 0.552,
+   "leanTag": "even",
+   "shr": 0.776,
+   "role": "TE1"
   },
   {
    "n": "Chicago Defense",
@@ -2494,7 +3208,11 @@
    "sd": 24.3,
    "est": 1,
    "pts": 138.6,
-   "vor": -30.4
+   "vor": -30.4,
+   "lean": 0.537,
+   "leanTag": "even",
+   "shr": 0.783,
+   "role": "TE1"
   },
   {
    "n": "Keenan Allen",
@@ -2504,7 +3222,11 @@
    "b": 13,
    "sd": 16.4,
    "pts": 129.6,
-   "vor": -71.1
+   "vor": -71.1,
+   "lean": 0.538,
+   "leanTag": "even",
+   "shr": 0.301,
+   "role": "WR3"
   },
   {
    "n": "Tyrone Tracy Jr.",
@@ -2514,7 +3236,11 @@
    "b": 8,
    "sd": 20.5,
    "pts": 105.5,
-   "vor": -68.0
+   "vor": -68.0,
+   "lean": 0.517,
+   "leanTag": "run",
+   "shr": 0.242,
+   "role": "backup"
   },
   {
    "n": "Ray Davis",
@@ -2525,7 +3251,11 @@
    "sd": 21.5,
    "est": 1,
    "pts": 67.5,
-   "vor": -92.5
+   "vor": -93.5,
+   "lean": 0.497,
+   "leanTag": "run",
+   "shr": 0.162,
+   "role": "backup"
   },
   {
    "n": "Nick Folk",
@@ -2546,7 +3276,11 @@
    "sd": 18.3,
    "est": 1,
    "pts": 91.5,
-   "vor": -90.2
+   "vor": -90.2,
+   "lean": 0.568,
+   "leanTag": "pass",
+   "shr": 0.178,
+   "role": "WR2"
   },
   {
    "n": "Washington Defense",
@@ -2567,7 +3301,11 @@
    "b": 11,
    "sd": 13.6,
    "pts": 104.6,
-   "vor": -84.1
+   "vor": -84.1,
+   "lean": 0.55,
+   "leanTag": "even",
+   "shr": 0.238,
+   "role": "WR3"
   },
   {
    "n": "Brian Robinson",
@@ -2577,7 +3315,11 @@
    "b": 11,
    "sd": 21.3,
    "pts": 85.0,
-   "vor": -84.8
+   "vor": -85.3,
+   "lean": 0.583,
+   "leanTag": "pass",
+   "shr": 0.242,
+   "role": "backup"
   },
   {
    "n": "Najee Harris",
@@ -2588,7 +3330,11 @@
    "sd": 27.6,
    "est": 1,
    "pts": 44.4,
-   "vor": -105.7
+   "vor": -106.0,
+   "lean": 0.517,
+   "leanTag": "run",
+   "shr": 0.129,
+   "role": "backup"
   },
   {
    "n": "Harrison Butker",
@@ -2597,7 +3343,7 @@
    "a": 158.9,
    "b": 5,
    "sd": 13.7,
-   "vor": -98.4,
+   "vor": -98.5,
    "vest": 1
   },
   {
@@ -2608,7 +3354,11 @@
    "b": 7,
    "sd": 20.3,
    "pts": 83.8,
-   "vor": -96.0
+   "vor": -96.0,
+   "lean": 0.513,
+   "leanTag": "run",
+   "shr": 0.138,
+   "role": "WR4"
   },
   {
    "n": "Dalton Schultz",
@@ -2619,7 +3369,11 @@
    "sd": 21.1,
    "est": 1,
    "pts": 149.6,
-   "vor": -26.6
+   "vor": -26.6,
+   "lean": 0.568,
+   "leanTag": "pass",
+   "shr": 0.807,
+   "role": "TE1"
   },
   {
    "n": "Darius Slayton",
@@ -2630,7 +3384,11 @@
    "sd": 4.2,
    "est": 1,
    "pts": 91.6,
-   "vor": -93.2
+   "vor": -93.2,
+   "lean": 0.517,
+   "leanTag": "run",
+   "shr": 0.187,
+   "role": "WR2"
   },
   {
    "n": "Caleb Douglas",
@@ -2641,7 +3399,11 @@
    "sd": 20.0,
    "est": 1,
    "pts": 105.7,
-   "vor": -86.2
+   "vor": -86.2,
+   "lean": 0.537,
+   "leanTag": "even",
+   "shr": 0.296,
+   "role": "WR2"
   },
   {
    "n": "Ty Johnson",
@@ -2652,7 +3414,11 @@
    "sd": 24.0,
    "est": 1,
    "pts": 81.1,
-   "vor": -87.7
+   "vor": -90.5,
+   "lean": 0.497,
+   "leanTag": "run",
+   "shr": 0.166,
+   "role": "backup"
   },
   {
    "n": "Buffalo Defense",
@@ -2683,7 +3449,11 @@
    "b": 7,
    "sd": 11.4,
    "pts": 85.5,
-   "vor": -96.4
+   "vor": -96.4,
+   "lean": 0.555,
+   "leanTag": "even",
+   "shr": 0.188,
+   "role": "WR3"
   },
   {
    "n": "Isaac TeSlaa",
@@ -2693,7 +3463,11 @@
    "b": 6,
    "sd": 16.6,
    "pts": 92.5,
-   "vor": -93.6
+   "vor": -93.6,
+   "lean": 0.579,
+   "leanTag": "pass",
+   "shr": 0.134,
+   "role": "WR3"
   },
   {
    "n": "Blake Grupe",
@@ -2723,7 +3497,11 @@
    "b": 8,
    "sd": 14.4,
    "pts": 48.7,
-   "vor": -116.5
+   "vor": -116.5,
+   "lean": 0.568,
+   "leanTag": "pass",
+   "shr": 0.105,
+   "role": "WR4"
   },
   {
    "n": "Terrance Ferguson",
@@ -2734,7 +3512,11 @@
    "sd": 17.6,
    "est": 1,
    "pts": 121.0,
-   "vor": -42.4
+   "vor": -42.4,
+   "lean": 0.564,
+   "leanTag": "even",
+   "shr": 0.452,
+   "role": "TE1"
   },
   {
    "n": "Jaydon Blue",
@@ -2744,8 +3526,8 @@
    "b": 0,
    "sd": 15.6,
    "est": 1,
-   "pts": 46.5,
-   "vor": -107.8
+   "vor": -85.3,
+   "vest": 1
   },
   {
    "n": "Wil Lutz",
@@ -2766,7 +3548,11 @@
    "sd": 16.1,
    "est": 1,
    "pts": 58.9,
-   "vor": -102.5
+   "vor": -102.5,
+   "lean": 0.555,
+   "leanTag": "even",
+   "shr": 0.173,
+   "role": "backup"
   },
   {
    "n": "Devaughn Vele",
@@ -2777,7 +3563,11 @@
    "sd": 13.7,
    "est": 1,
    "pts": 100.4,
-   "vor": -90.8
+   "vor": -90.8,
+   "lean": 0.546,
+   "leanTag": "even",
+   "shr": 0.207,
+   "role": "WR3"
   },
   {
    "n": "Jake Elliott",
@@ -2817,7 +3607,11 @@
    "b": 8,
    "sd": 7.2,
    "pts": 76.5,
-   "vor": -104.4
+   "vor": -104.4,
+   "lean": 0.517,
+   "leanTag": "run",
+   "shr": 0.181,
+   "role": "WR3"
   },
   {
    "n": "Cooper Kupp",
@@ -2827,7 +3621,11 @@
    "b": 11,
    "sd": 13.0,
    "pts": 98.5,
-   "vor": -94.2
+   "vor": -94.2,
+   "lean": 0.533,
+   "leanTag": "run",
+   "shr": 0.173,
+   "role": "WR3"
   },
   {
    "n": "Kayshon Boutte",
@@ -2837,7 +3635,11 @@
    "b": 8,
    "sd": 15.1,
    "pts": 87.6,
-   "vor": -103.0
+   "vor": -103.0,
+   "lean": 0.568,
+   "leanTag": "pass",
+   "shr": 0.162,
+   "role": "WR3"
   },
   {
    "n": "Malik Washington",
@@ -2847,7 +3649,11 @@
    "b": 6,
    "sd": 12.5,
    "pts": 111.1,
-   "vor": -91.4
+   "vor": -91.4,
+   "lean": 0.537,
+   "leanTag": "even",
+   "shr": 0.303,
+   "role": "WR1"
   },
   {
    "n": "Omar Cooper Jr.",
@@ -2857,7 +3663,11 @@
    "b": 13,
    "sd": 11.9,
    "pts": 81.5,
-   "vor": -116.6
+   "vor": -116.6,
+   "lean": 0.561,
+   "leanTag": "even",
+   "shr": 0.156,
+   "role": "WR3"
   },
   {
    "n": "Adonai Mitchell",
@@ -2867,7 +3677,11 @@
    "b": 13,
    "sd": 10.2,
    "pts": 108.2,
-   "vor": -111.7
+   "vor": -111.7,
+   "lean": 0.561,
+   "leanTag": "even",
+   "shr": 0.2,
+   "role": "WR2"
   },
   {
    "n": "Darnell Washington",
@@ -2877,7 +3691,11 @@
    "b": 9,
    "sd": 13.1,
    "pts": 67.9,
-   "vor": -81.7
+   "vor": -81.7,
+   "lean": 0.578,
+   "leanTag": "pass",
+   "shr": 0.329,
+   "role": "TE2"
   }
  ]
 }

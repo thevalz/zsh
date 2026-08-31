@@ -207,6 +207,50 @@ arms**, and only 24 quarterbacks above replacement for 24 starting slots.
 The player board carries the same tier number per row plus how many of it
 remain, and marks the last man in a tier in red — the cliff is right after him.
 
+### Role, and which way the offence leans
+
+Two questions a point total cannot answer: **is this back the guy or one of
+two**, and **does this offence throw**. Both come out of the same projections,
+by comparing a player with his own teammates rather than with the league.
+
+**Role** is share of team touches — carries plus receptions for backs,
+receptions for receivers — so a pass-catching back on few carries is not
+mislabelled a backup:
+
+| RB | share of team touches |
+|---|---|
+| `bell cow` | ≥ 60% |
+| `lead` | 42–60% |
+| `committee` | 25–42% |
+| `backup` | < 25% |
+
+Receivers and tight ends get an ordinal instead — `WR1`…`WR4` by receptions
+within their own team.
+
+The thresholds come from the actual distribution rather than from taste; the
+label lands where it should, and only where it should. Of backs going inside
+ADP 50, **16 of 17 are bell cows** — no surprise, that is what the top of the
+draft is. The signal is the exception: **Josh Jacobs is the only committee back
+inside ADP 50** (39% of Las Vegas' touches at ADP 35), and he is independently
+the biggest market-vs-projection gap in the pool — the market has him RB#11,
+the projections RB#42. Two unrelated signals on one player is worth more than
+either alone.
+
+Past ADP 100 the labels invert: 30 of 35 read `committee` or `backup`.
+
+**Lean** is the team's projected pass attempts over pass plus rush attempts,
+graded against the league. The spread is real but narrow — median **55.2%**,
+stdev 3.0 points, from Baltimore at 48% to Dallas at 61% — giving 10 pass-lean
+and 7 run-lean teams. It shows as `↑` (pass) or `↓` (run) beside the team
+abbreviation.
+
+**What lean is not:** it is not an offensive coordinator's identity, history, or
+scheme. There is no coaching-staff source in this repo and none was consulted.
+It is one projection set's implied volume split — a *consequence* of scheme
+rather than a reading of it — and it inherits FFToday's assumptions about who
+is on which roster. Treat a `↑` as "this offence is projected to throw", not as
+"their OC likes receivers".
+
 ### Bye weeks
 
 The objective is points in each *individual week*, not points in total. Two

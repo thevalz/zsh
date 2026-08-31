@@ -22,6 +22,9 @@ function renderRecs() {
     return `<div class="rec${i ? '' : ' top'}"><div class="rank">${i + 1}</div><div class="rec-main">
       <div class="rec-name"><span class="badge b-${r.p.p}">${r.p.p}</span>${esc(r.p.n)} ${t}${rk}${bz}${by}</div>
       <div class="rec-why">${why} · bye ${r.p.b ?? '—'} · ADP ${r.p.a.toFixed(0)} · ${val}</div>
+      ${r.p.role ? `<div class="rec-why">${roleCell(r.p)} of ${r.p.t}${
+        r.p.leanTag && r.p.leanTag !== 'even'
+          ? `, an offence that leans <b>${r.p.leanTag}</b> (${Math.round(r.p.lean * 100)}% pass)` : ''}</div>` : ''}
       <div class="rec-why">${wait}</div></div>
       <button class="take mini" data-take="${esc(r.p.n)}">Draft</button></div>`;
   }).join('') || '<div class="rec"><div class="rec-main"><div class="rec-why">Board is empty.</div></div></div>';
@@ -83,6 +86,30 @@ function renderShape(tgt) {
         <b>${needWeight(pos) >= STARTER_NEED ? 'starter open' : 'depth only'}</b></div>
       ${body}</div>`;
   }).join('');
+}
+
+/* Role in his own offence. "bell cow" and "WR1" are the same claim — this
+   player owns the touches — and the label is a share of team volume, so a
+   receiving back is not filed as a backup for having few carries. */
+const ROLE_CLS = {
+  'bell cow': 'r-hi', WR1: 'r-hi', TE1: 'r-hi',
+  lead: 'r-mid', WR2: 'r-mid', TE2: 'r-mid',
+  committee: 'r-low', WR3: 'r-low',
+  backup: 'r-bench', WR4: 'r-bench', TE3: 'r-bench', TE4: 'r-bench',
+};
+const ROLE_SHORT = { 'bell cow': 'bell', committee: 'comm', backup: 'back' };
+function roleCell(p, withShare = true) {
+  if (!p.role) return '';
+  const cls = ROLE_CLS[p.role] || 'r-mid';
+  const txt = ROLE_SHORT[p.role] || p.role;
+  const pct = withShare && p.shr != null ? `<span class="shr">${Math.round(p.shr * 100)}%</span>` : '';
+  return `<span class="rolechip ${cls}" title="${p.role} — ${Math.round((p.shr || 0) * 100)}% of his team's touches at the position">${txt}</span>${pct}`;
+}
+/* Which way the offence leans, from its own projected pass/rush split. */
+function leanMark(p) {
+  if (!p.leanTag || p.leanTag === 'even') return '';
+  const pass = p.leanTag === 'pass';
+  return `<span class="lean lean-${p.leanTag}" title="offence projects ${Math.round((p.lean || 0) * 100)}% pass — leans ${pass ? 'pass' : 'run'}">${pass ? '&uarr;' : '&darr;'}</span>`;
 }
 
 const line = p => `<span class="badge b-${p.p}">${p.p}</span><span>${esc(p.n)}</span>`
@@ -161,7 +188,7 @@ function renderBoard() {
       ? `<td><span class="fitbar"><i style="width:${fitPct}%"></i></span></td>` : '<td></td>';
     return `<tr class="row ${st === 'me' ? 'mineRow' : ''} ${st ? 'gone' : ''} ${last ? 'tlast' : ''}" data-n="${esc(p.n)}">
       <td><span class="badge b-${p.p}">${p.p}</span>${esc(p.n)}${isRookie(p) ? '<span class="rookiechip">R</span>' : ''}</td>
-      <td>${p.t}</td><td>${p.b ?? '—'}</td>
+      <td>${p.t}${leanMark(p)}</td><td>${roleCell(p)}</td><td>${p.b ?? '—'}</td>
       <td title="${p.p} tier ${t}${st ? '' : ` — ${nLeft} still on the board`}"><span class="tno">${t}</span>${st ? '' : `<span class="tleft">· ${nLeft} left</span>`}</td>
       <td>${p.a.toFixed(1)}${p.est ? '~' : ''}</td>
       <td>${p.vor != null ? (p.vor >= 0 ? '+' : '') + p.vor.toFixed(0) + (p.vest ? '~' : '') : '—'}</td>

@@ -167,6 +167,18 @@ tr.tlast td{border-bottom:1px solid var(--neg)}
 .byecell.warn{border-color:var(--hot);color:var(--hot)}
 .byecell.bad{border-color:var(--neg);color:var(--neg);font-weight:700}
 .byenote{padding:0 16px 13px;font-size:11.5px;color:var(--faint);line-height:1.5}
+/* role in the offence, and which way that offence leans */
+.rolechip{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
+  letter-spacing:.05em;text-transform:uppercase;padding:2px 5px;border-radius:3px;
+  border:1px solid var(--line);color:var(--muted)}
+.r-hi{color:var(--pos);border-color:var(--pos)}
+.r-mid{color:var(--text)}
+.r-low{color:var(--hot);border-color:var(--hot)}
+.r-bench{color:var(--faint)}
+.shr{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--faint);margin-left:4px}
+.lean{font-family:"IBM Plex Mono",monospace;font-size:10px;margin-left:3px}
+.lean-pass{color:var(--accent)}
+.lean-run{color:var(--hot)}
 .byechip{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;font-weight:600;
   letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:10px;
   vertical-align:middle;margin-left:4px;color:var(--neg);border:1px solid var(--neg)}
@@ -234,7 +246,7 @@ kbd{font-family:"IBM Plex Mono",monospace;font-size:10.5px;border:1px solid var(
           <button id="bHide" class="mini on">Hide drafted</button>
         </div>
         <div class="board"><table>
-          <thead><tr><th>Player</th><th>Tm</th><th>Bye</th><th>Tier</th><th>ADP</th><th>VOR</th><th>vs pick</th><th>Fit</th><th></th></tr></thead>
+          <thead><tr><th>Player</th><th>Tm</th><th>Role</th><th>Bye</th><th>Tier</th><th>ADP</th><th>VOR</th><th>vs pick</th><th>Fit</th><th></th></tr></thead>
           <tbody id="tb"></tbody>
         </table></div>
       </div>

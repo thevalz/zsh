@@ -292,6 +292,46 @@ check('a big value gap still beats a bye clash', bye.boundedFit, true);
 console.log(`  info  week ${bye.week}: ${bye.load.map(([w, n]) => `w${w}=${n}`).join(' ')}; `
   + `risk clash ${bye.riskClash} vs clean ${bye.riskClean}`);
 
+console.log('\nrole in the offence');
+const role = await pg.evaluate(() => {
+  S.drafted = {}; S.hist = []; S.pick = 1; S.filter = 'ALL'; S.hide = true; S.sort = 'adp';
+  render();
+  const rbs = P.filter(p => p.p === 'RB' && p.role);
+  const wrs = P.filter(p => p.p === 'WR' && p.role);
+  const band = (lo, hi) => rbs.filter(p => p.a >= lo && p.a < hi);
+  const roleset = [...new Set(rbs.map(p => p.role))].sort();
+  // one WR1 per team at most — the label is an ordinal, not a compliment
+  const perTeam = {};
+  for (const p of wrs) if (p.role === 'WR1') perTeam[p.t] = (perTeam[p.t] || 0) + 1;
+  return {
+    tagged: P.filter(p => p.role).length,
+    leaned: P.filter(p => p.leanTag).length,
+    roleset,
+    sharesInRange: [...rbs, ...wrs].every(p => p.shr > 0 && p.shr <= 1),
+    // early backs should be workhorses, late ones should not
+    earlyBell: band(0, 50).filter(p => p.role === 'bell cow').length,
+    earlyTotal: band(0, 50).length,
+    lateBench: band(100, 200).filter(p => ['backup', 'committee'].includes(p.role)).length,
+    lateTotal: band(100, 200).length,
+    dupWR1: Object.values(perTeam).filter(n => n > 1).length,
+    leanTags: [...new Set(P.filter(p => p.leanTag).map(p => p.leanTag))].sort(),
+    chipsRendered: document.querySelectorAll('#tb .rolechip').length,
+    leanRendered: document.querySelectorAll('#tb .lean').length,
+    // a committee back going early is exactly what this is for
+    earlyCommittee: band(0, 60).filter(p => p.role === 'committee').map(p => `${p.n} ${p.a.toFixed(0)}`),
+  };
+});
+check('roles use the expected vocabulary', role.roleset, ['backup', 'bell cow', 'committee', 'lead']);
+check('every share is a real fraction', role.sharesInRange, true);
+check('early backs are mostly workhorses', role.earlyBell / role.earlyTotal > 0.7, true);
+check('late backs are mostly not', role.lateBench / role.lateTotal > 0.7, true);
+check('no team has two WR1s', role.dupWR1, 0);
+check('lean is three-valued', role.leanTags, ['even', 'pass', 'run']);
+check('the board renders role chips', role.chipsRendered > 0, true);
+console.log(`  info  ${role.tagged} roles, ${role.leaned} leans; `
+  + `early bell cows ${role.earlyBell}/${role.earlyTotal}, late depth ${role.lateBench}/${role.lateTotal}`);
+console.log(`  info  committee backs inside ADP 60 — ${role.earlyCommittee.join(', ') || 'none'}`);
+
 console.log(errs.length ? `\nJS ERRORS: ${errs.join(' | ')}` : '\nno JS errors');
 await b.close();
 process.exit(fails || errs.length ? 1 : 0);
