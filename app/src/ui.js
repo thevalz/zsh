@@ -73,8 +73,10 @@ function renderShape(tgt) {
       const col = r.survives === 0 ? 'var(--neg)' : r.survives === 1 ? 'var(--hot)' : 'var(--pos)';
       const drop = !gone && !repl && r.drop != null && r.drop > 0
         ? `<span class="tdrop" title="points given up if this tier empties">&darr;${r.drop}</span>` : '';
-      return `<div class="trow ${cls}" title="${pos} ${repl ? 'below replacement' : 'tier ' + r.tier} — ${r.left} of ${r.members.length} left">
-          <span class="tlab">${repl ? 'repl' : 't' + r.tier}</span>
+      const rng = repl ? '' : `<span class="trnd">R${r.r0}${r.r1 > r.r0 ? `-${r.r1}` : ''}</span>`;
+      return `<div class="trow ${cls}" title="${pos} ${repl ? 'the tail past the startable range' : 'tier ' + r.tier} — ${r.left} of ${r.members.length} left, normally drafted rounds ${r.r0}-${r.r1}">
+          <span class="tlab">${repl ? 'deep' : 't' + r.tier}</span>
+          ${rng}
           <span class="tcnt">${gone ? 'gone' : r.left}</span>
           ${drop}
           ${gone ? '<span class="tsurv" style="color:var(--faint)">&mdash;</span>'

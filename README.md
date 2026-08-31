@@ -164,10 +164,33 @@ from RB-led to WR-led without you touching a filter.
 A tier is a group of players who score about the same, so which one you end up
 with barely matters — what matters is **how many are left before the drop**.
 
-These are tiers of **projected points**. An earlier version broke tiers on ADP
-gaps, which describes when a player gets taken rather than how much he scores —
-a tier needs a magnitude ("how much do I lose by waiting"), and ADP only gives
-an ordering.
+**Tiers run in draft order; production decides where the breaks fall.** A tier
+is a band of rounds — `RB t4 · R4–8` — and tier numbers rise with ADP and never
+fall. Within that ordering, cuts go where projected points drop off hardest
+(with a gap in draft cost as a weaker second vote).
+
+That is a deliberate trade, and it costs something. Ordering tiers by
+production instead would surface players the market underrates directly in the
+tier number, but the two orderings are not the same and a tier you cannot map
+to a round is not usable on the clock. The disagreement is still visible — in
+the VOR column and in the need+value sort — just not in the tier number.
+
+**No tier is smaller than four.** Ordering by production with unconstrained
+breaks fragmented the top of every position into singletons: the gap from the
+best back to the second really is large, but "tier of one" is a player, not a
+choice. A minimum size plus a tier count of `live/7` gives 3–5 tiers a
+position, sized 4–14:
+
+| | tiers | sizes | bands |
+|---|---|---|---|
+| QB | 3 | 6 / 10 / 8 | R1–2, R2–3, R4–7 |
+| RB | 5 | 4 / 6 / 4 / 14 / 7 | R1, R1–3, R3–4, R4–8, R8–10 |
+| WR | 5 | 4 / 4 / 13 / 4 / 9 | R1–2, R3, R3–5, R6, R6–8 |
+| TE | 3 | 4 / 4 / 5 | R6–8, R9–10, R10–12 |
+
+`deep` is the tail past where the position still fields starters. It is taken
+in ADP order to keep tier numbers monotone, so it is *almost* but not exactly
+the below-replacement set — at most three players a position differ.
 
 But ADP is not merely price. It is the fantasy community's aggregated estimate
 of the *same* production the projections estimate, built from thousands of
@@ -198,11 +221,11 @@ Two details make the breaks mean something:
   players are actually in play. A fixed point-gap threshold gave 14 tiers at QB
   and 4 at RB.
 
-The **Tier board** panel shows all of it at once — every tier at every position,
-how many are undrafted, the points given up if that tier empties (`↓`), and how
-many reach your next pick (`→`). The superflex shape is visible immediately:
-one Josh Allen, then four, then a **block of 13 essentially interchangeable
-arms**, and only 24 quarterbacks above replacement for 24 starting slots.
+The **Tier board** panel shows all of it at once — every tier at every
+position, the round band it goes in, how many are undrafted, the points given
+up if that tier empties (`↓`), and how many reach your next pick (`→`). The
+superflex shape is visible immediately: **10 quarterbacks bunched in rounds
+2–3**, and only 24 above replacement for 24 starting slots.
 
 The player board carries the same tier number per row plus how many of it
 remain, and marks the last man in a tier in red — the cliff is right after him.

@@ -91,46 +91,56 @@ const tiers = await pg.evaluate(() => {
   const qbs = avail().filter(p => p.p === 'QB').slice(0, 12).map(p => `${p.n.split(' ').pop()}:t${tierOf(p)}`);
   const ts = tierState('QB', avail(), survivors());
   const allTiered = P.every(p => tierOf(p) >= 1);
-  /* Tiers rank production, so they must never go backwards as VOR falls.
-     They deliberately DO go backwards against ADP — a player the market
-     underrates lands in a better tier than someone drafted ahead of him, and
-     that disagreement is the whole reason to tier on points. */
+  /* Tiers run in DRAFT order: a tier is a band of rounds, so tier numbers must
+     rise with ADP and never fall. Production decides where the breaks go, not
+     the ordering — that trade is deliberate, because a tier you cannot map to
+     a round is not something you can act on while you are on the clock. */
   const monotone = (() => {
     for (const pos of ['QB', 'RB', 'WR', 'TE']) {
-      const l = P.filter(p => p.p === pos).sort((a, b) => (b.vor ?? -1e9) - (a.vor ?? -1e9)).map(tierOf);
+      const l = P.filter(p => p.p === pos).sort((a, b) => a.a - b.a).map(tierOf);
       for (let i = 1; i < l.length; i++) if (l[i] < l[i - 1]) return false;
     }
     return true;
   })();
-  // count positions where the production order disagrees with the draft order
-  const disagrees = (() => {
-    let n = 0;
-    for (const pos of ['QB', 'RB', 'WR', 'TE']) {
-      const l = P.filter(p => p.p === pos).sort((a, b) => a.a - b.a).map(tierOf);
-      for (let i = 1; i < l.length; i++) if (l[i] < l[i - 1]) n++;
-    }
-    return n;
-  })();
-  const replLast = (() => {
-    for (const pos of ['QB', 'RB', 'WR', 'TE']) {
-      const l = P.filter(p => p.p === pos);
-      const maxT = Math.max(...l.map(tierOf));
-      // the bottom bucket must hold only players at or below replacement
-      if (l.filter(p => tierOf(p) === maxT).some(p => (p.vor ?? 0) > 0
-        && l.filter(x => tierOf(x) < maxT).length > 0
-        && p.vor > Math.min(...l.filter(x => tierOf(x) === maxT - 1).map(x => x.vor ?? 0)))) return false;
-    }
+  // no tier may be so small it is a player rather than a choice
+  const sizes = {};
+  for (const pos of ['QB', 'RB', 'WR', 'TE']) {
+    const byTier = {};
+    for (const p of P.filter(x => x.p === pos)) byTier[tierOf(p)] = (byTier[tierOf(p)] || 0) + 1;
+    const maxT = Math.max(...Object.keys(byTier).map(Number));
+    // the replacement bucket is exempt — it is a remainder, not a tier
+    sizes[pos] = Object.entries(byTier).filter(([t]) => +t < maxT).map(([, n]) => n);
+  }
+  const smallest = Math.min(...Object.values(sizes).flat());
+  /* The bottom bucket is the tail past the startable range, taken in ADP order
+     so tier numbers stay monotone. It is not exactly the below-replacement set
+     — the two orderings disagree on a player or two — but it should be
+     overwhelmingly made of them, or the cut is in the wrong place. */
+  const replClean = ['QB', 'RB', 'WR', 'TE'].every(pos => {
+    const l = P.filter(p => p.p === pos);
+    const maxT = Math.max(...l.map(tierOf));
+    const tail = l.filter(p => tierOf(p) === maxT);
+    // an absolute bound, not a ratio — tails differ in size and a ratio lets a
+    // small one (TE) fail on the same two players a large one absorbs
+    return tail.filter(p => (p.vor ?? -1) >= 0).length <= 3;
+  });
+  // every tier's round band must start no earlier than the one before it
+  const roundsRise = ['QB', 'RB', 'WR', 'TE'].every(pos => {
+    const rows = tierShape(pos, avail(), []);
+    for (let i = 1; i < rows.length; i++) if (rows[i].r0 < rows[i - 1].r0) return false;
     return true;
-  })();
-  return { qbs, tier: ts.tier, left: ts.left, members: ts.members.length, allTiered, monotone, disagrees, replLast };
+  });
+  return { qbs, tier: ts.tier, left: ts.left, members: ts.members.length, allTiered,
+           monotone, sizes, smallest, replClean, roundsRise };
 });
 check('every player lands in a tier', tiers.allTiered, true);
-check('tiers never go backwards as production falls', tiers.monotone, true);
-check('tiers disagree with draft order — the point of tiering on points', tiers.disagrees > 0, true);
-check('the bottom bucket never outranks the tier above it', tiers.replLast, true);
+check('tier numbers rise with the draft, never fall', tiers.monotone, true);
+check('no tier is smaller than a real choice', tiers.smallest >= 4, true);
+check('the bottom bucket is almost entirely below replacement', tiers.replClean, true);
+check('each tier starts no earlier in the draft than the one before', tiers.roundsRise, true);
 check('tier state reports its own members', tiers.left, tiers.members);
 console.log(`  info  top QBs — ${tiers.qbs.join(' ')}`);
-console.log(`  info  ${tiers.disagrees} places where production order beats draft order`);
+console.log(`  info  tier sizes — ${Object.entries(tiers.sizes).map(([k, v]) => `${k} ${v.join('/')}`).join(', ')}`);
 
 console.log('\nvalue over replacement');
 const vor = await pg.evaluate(() => {
@@ -190,10 +200,14 @@ console.log('\ntier column on the board');
 const tcol = await pg.evaluate(() => {
   S.drafted = {}; S.hist = []; S.pick = 1; S.filter = 'RB'; S.sort = 'adp'; S.hide = false;
   render();
+  // find the column by its header — hardcoding an index let an added column
+  // break this test silently once already
+  const hdrs = [...document.querySelectorAll('th')].map(t => t.textContent.trim());
+  const ti = hdrs.indexOf('Tier');
   const read = () => [...document.querySelectorAll('#tb tr')].slice(0, 8).map(r => ({
     name: r.cells[0].textContent.trim(),
-    tier: r.cells[3].querySelector('.tno')?.textContent,
-    left: r.cells[3].querySelector('.tleft')?.textContent.trim(),
+    tier: r.cells[ti].querySelector('.tno')?.textContent,
+    left: r.cells[ti].querySelector('.tleft')?.textContent.trim(),
     last: r.classList.contains('tlast'),
   }));
   const before = read();
@@ -208,7 +222,7 @@ const tcol = await pg.evaluate(() => {
     countBefore: before.find(r => r.tier === '1' && r.left)?.left,
     countAfter: after.find(r => r.tier === '1' && r.left)?.left,
     poolT1: t1.length,
-    everyRowHasTier: [...document.querySelectorAll('#tb tr')].every(r => r.cells[3].querySelector('.tno')),
+    everyRowHasTier: [...document.querySelectorAll('#tb tr')].every(r => r.cells[ti].querySelector('.tno')),
   };
 });
 check('the board has a Tier column', tcol.hdr.includes('Tier'), true);
@@ -233,7 +247,10 @@ const shape = await pg.evaluate(() => {
   return {
     cols: cols.length,
     rowsPerCol: cols.map(c => c.querySelectorAll('.trow').length),
-    hasRepl: cols.every(c => [...c.querySelectorAll('.tlab')].some(l => l.textContent === 'repl')),
+    hasRepl: cols.every(c => [...c.querySelectorAll('.tlab')].some(l => l.textContent === 'deep')),
+    // every tier row must name the round band it goes in
+    allHaveRounds: cols.every(c => [...c.querySelectorAll('.trow')].slice(0, -1)
+      .every(r => /^R\d+(-\d+)?$/.test(r.querySelector('.trnd')?.textContent || ''))),
     totals, poolPer,
     // survivors can never exceed what is left in the tier
     survSane: qb.every(r => r.survives <= r.left),
@@ -242,7 +259,8 @@ const shape = await pg.evaluate(() => {
 });
 check('a column per position', shape.cols, 4);
 check('every tier is accounted for — no player lost', shape.totals, shape.poolPer);
-check('each position ends in a replacement bucket', shape.hasRepl, true);
+check('each position ends in a deep bucket', shape.hasRepl, true);
+check('every tier names its round band', shape.allHaveRounds, true);
 check('survivors never exceed what is left', shape.survSane, true);
 check('drops are never negative', shape.dropsNonNeg, true);
 console.log(`  info  tiers per position — ${shape.rowsPerCol.join(', ')}`);

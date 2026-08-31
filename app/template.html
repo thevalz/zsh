@@ -157,6 +157,7 @@ tr.tlast td{border-bottom:1px solid var(--neg)}
 .tcnt{font-family:"IBM Plex Mono",monospace;color:var(--muted)}
 .tsurv{font-family:"IBM Plex Mono",monospace;margin-left:auto;font-weight:600}
 .tdrop{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--faint)}
+.trnd{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--muted)}
 .shape-key{padding:0 16px 13px;font-size:11px;color:var(--faint);line-height:1.5}
 /* bye weeks */
 .byes{display:flex;flex-wrap:wrap;gap:5px;padding:12px 16px 8px}
@@ -231,12 +232,13 @@ kbd{font-family:"IBM Plex Mono",monospace;font-size:10.5px;border:1px solid var(
         <div id="recs"></div>
       </div>
       <div class="card">
-        <h2>Tier board — production, and how much is left of it</h2>
+        <h2>Tier board — which round they go in, and how much is left</h2>
         <div id="shape" class="shape"></div>
-        <div class="shape-key">Tiers of projected points under this league's scoring, not of draft price.
-          Each row: players still undrafted &middot; <b>&darr;</b> points given up if that tier empties
-          &middot; <b>&rarr;</b> how many reach your next pick. <b>repl</b> is everyone below
-          replacement level, where one is as good as another.</div>
+        <div class="shape-key">Tiers run in draft order, so <b>R4-5</b> is the round band that tier
+          normally goes in; the breaks between them are placed where projected production falls off.
+          Each row: rounds &middot; players still undrafted &middot; <b>&darr;</b> points given up if
+          that tier empties &middot; <b>&rarr;</b> how many reach your next pick. <b>deep</b> is the tail
+          past where the position still fields starters, and one of those is as good as another.</div>
       </div>
       <div class="card">
         <h2>Player board</h2>

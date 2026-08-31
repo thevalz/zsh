@@ -98,35 +98,64 @@ function fillsSlot(roster, pos) {
    2. Breaks go at the largest drops (natural breaks), with the tier count
       scaled to how many players are actually in play. Thresholding on a fixed
       gap gave 14 tiers at QB and 4 at RB. */
+const MIN_TIER = 4;      // a tier smaller than this is not a choice, it is a player
 const TIERS = (() => {
   const out = new Map();
+  const zs = arr => {
+    const m = arr.reduce((a, b) => a + b, 0) / (arr.length || 1);
+    const sd = Math.sqrt(arr.reduce((a, b) => a + (b - m) ** 2, 0) / (arr.length || 1)) || 1;
+    return arr.map(x => (x - m) / sd);
+  };
   for (const pos of ['QB', 'RB', 'WR', 'TE', 'PK', 'DEF']) {
-    const all = P.filter(p => p.p === pos).sort((a, b) => (b.vor ?? -1e9) - (a.vor ?? -1e9));
-    // kickers sit entirely below replacement, so never tier fewer than a
-    // starting round's worth or the position collapses to a single tier
+    // ORDER BY ADP, so a tier is a band of the draft and tier numbers rise as
+    // the rounds do. Production decides where the cuts fall, not the order.
+    const all = P.filter(p => p.p === pos).sort((a, b) => a.a - b.a);
+    /* How deep the position runs: as many players as clear replacement, but
+       taken in ADP order so tier numbers stay monotone in the draft. Selecting
+       the above-replacement set itself would break that — the two orderings
+       disagree on a player or two, and a late name with a good projection
+       would then carry a lower tier number than someone drafted before him.
+       Round alignment is the point here, so it wins; the disagreement is still
+       visible in the VOR column and in the need+value sort.
+
+       Kickers sit entirely below replacement, so never take fewer than a
+       round's worth or the position collapses into one tier. */
     const above = all.filter(p => (p.vor ?? -1) >= 0).length;
     const live = Math.min(all.length, Math.max(above, D.teams));
-    const k = Math.max(3, Math.min(8, Math.round(live / 5)));
-
     const head = all.slice(0, live);
-    const cuts = head
-      .map((p, i) => (i > 0 ? { gap: (head[i - 1].vor ?? 0) - (p.vor ?? 0), i } : null))
-      .filter(Boolean)
-      .sort((a, b) => b.gap - a.gap)
-      .slice(0, k - 1)
-      .map(x => x.i)
-      .sort((a, b) => a - b);
+    const rest = all.slice(live);
+    const k = Math.max(3, Math.min(6, Math.round(live / 7)));
+
+    // a cut is worth making where production falls off, with a gap in draft
+    // cost as a weaker second vote
+    const drop = zs(head.slice(1).map((p, i) => Math.max(0, (head[i].vor ?? 0) - (p.vor ?? 0))));
+    const cost = zs(head.slice(1).map((p, i) => Math.max(0, p.a - head[i].a)));
+    const ranked = drop.map((d, i) => ({ s: d + 0.5 * cost[i], i: i + 1 }))
+      .sort((a, b) => b.s - a.s);
+
+    /* Take the best cuts that leave every tier at least MIN_TIER deep. Without
+       this the top of a position fragments into singletons — the gap from the
+       best back to the second is genuinely large, but "tier of one" tells you
+       nothing you could act on. */
+    const cuts = [];
+    for (const { i } of ranked) {
+      if (cuts.length >= k - 1) break;
+      const pts = [0, ...cuts, i, live].sort((a, b) => a - b);
+      if (pts.every((v, j) => j === 0 || v - pts[j - 1] >= MIN_TIER)) cuts.push(i);
+    }
+    cuts.sort((a, b) => a - b);
 
     let tier = 1, c = 0;
     head.forEach((p, i) => {
       if (c < cuts.length && i === cuts[c]) { tier++; c++; }
       out.set(p.n, tier);
     });
-    // everything past the last startable player is one replacement bucket
-    for (const p of all.slice(live)) out.set(p.n, tier + 1);
+    // the tail past the startable range: one bucket, effectively interchangeable
+    for (const p of rest) out.set(p.n, tier + 1);
   }
   return out;
 })();
+const roundOf = p => Math.max(1, Math.ceil(p.a / D.teams));
 const tierOf = p => TIERS.get(p.n) || 0;
 
 /* The shape of a position: every tier, who is left in it, and the drop in
@@ -143,8 +172,10 @@ function tierShape(pos, board, surv) {
   const rows = [...groups.entries()].sort((a, b) => a[0] - b[0]).map(([t, members]) => {
     const live = members.filter(p => !S.drafted[p.n]);
     const best = live.length ? Math.max(...live.map(p => p.vor ?? 0)) : null;
+    const rs = members.map(roundOf);
     return {
       tier: t, members, live,
+      r0: Math.min(...rs), r1: Math.max(...rs),
       left: live.length,
       survives: live.filter(p => survSet.has(p)).length,
       top: best,
