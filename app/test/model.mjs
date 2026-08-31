@@ -91,19 +91,46 @@ const tiers = await pg.evaluate(() => {
   const qbs = avail().filter(p => p.p === 'QB').slice(0, 12).map(p => `${p.n.split(' ').pop()}:t${tierOf(p)}`);
   const ts = tierState('QB', avail(), survivors());
   const allTiered = P.every(p => tierOf(p) >= 1);
+  /* Tiers rank production, so they must never go backwards as VOR falls.
+     They deliberately DO go backwards against ADP — a player the market
+     underrates lands in a better tier than someone drafted ahead of him, and
+     that disagreement is the whole reason to tier on points. */
   const monotone = (() => {
     for (const pos of ['QB', 'RB', 'WR', 'TE']) {
-      const l = P.filter(p => p.p === pos).sort((a, b) => a.a - b.a).map(tierOf);
+      const l = P.filter(p => p.p === pos).sort((a, b) => (b.vor ?? -1e9) - (a.vor ?? -1e9)).map(tierOf);
       for (let i = 1; i < l.length; i++) if (l[i] < l[i - 1]) return false;
     }
     return true;
   })();
-  return { qbs, tier: ts.tier, left: ts.left, members: ts.members.length, allTiered, monotone };
+  // count positions where the production order disagrees with the draft order
+  const disagrees = (() => {
+    let n = 0;
+    for (const pos of ['QB', 'RB', 'WR', 'TE']) {
+      const l = P.filter(p => p.p === pos).sort((a, b) => a.a - b.a).map(tierOf);
+      for (let i = 1; i < l.length; i++) if (l[i] < l[i - 1]) n++;
+    }
+    return n;
+  })();
+  const replLast = (() => {
+    for (const pos of ['QB', 'RB', 'WR', 'TE']) {
+      const l = P.filter(p => p.p === pos);
+      const maxT = Math.max(...l.map(tierOf));
+      // the bottom bucket must hold only players at or below replacement
+      if (l.filter(p => tierOf(p) === maxT).some(p => (p.vor ?? 0) > 0
+        && l.filter(x => tierOf(x) < maxT).length > 0
+        && p.vor > Math.min(...l.filter(x => tierOf(x) === maxT - 1).map(x => x.vor ?? 0)))) return false;
+    }
+    return true;
+  })();
+  return { qbs, tier: ts.tier, left: ts.left, members: ts.members.length, allTiered, monotone, disagrees, replLast };
 });
 check('every player lands in a tier', tiers.allTiered, true);
-check('tiers never go backwards as ADP rises', tiers.monotone, true);
+check('tiers never go backwards as production falls', tiers.monotone, true);
+check('tiers disagree with draft order — the point of tiering on points', tiers.disagrees > 0, true);
+check('the bottom bucket never outranks the tier above it', tiers.replLast, true);
 check('tier state reports its own members', tiers.left, tiers.members);
 console.log(`  info  top QBs — ${tiers.qbs.join(' ')}`);
+console.log(`  info  ${tiers.disagrees} places where production order beats draft order`);
 
 console.log('\nvalue over replacement');
 const vor = await pg.evaluate(() => {
@@ -189,6 +216,36 @@ check('every row shows a tier', tcol.everyRowHasTier, true);
 check('the count matches the pool', tcol.countBefore, `· ${tcol.poolT1} left`);
 check('drafting a player decrements his tier count', tcol.countAfter, `· ${tcol.poolT1 - 1} left`);
 console.log(`  info  ${tcol.before.slice(0, 3).map(r => `${r.name} t${r.tier} ${r.left}`).join(' | ')}`);
+
+console.log('\ntier board panel');
+const shape = await pg.evaluate(() => {
+  S.drafted = {}; S.hist = []; S.pick = 1; S.filter = 'ALL'; S.hide = true;
+  render();
+  const cols = [...document.querySelectorAll('.shapecol')];
+  const qb = tierShape('QB', avail(), survivors());
+  const totals = {};
+  for (const pos of ['QB', 'RB', 'WR', 'TE']) {
+    const rows = tierShape(pos, avail(), survivors());
+    totals[pos] = rows.reduce((a, r) => a + r.members.length, 0);
+  }
+  const poolPer = {};
+  for (const pos of ['QB', 'RB', 'WR', 'TE']) poolPer[pos] = P.filter(p => p.p === pos).length;
+  return {
+    cols: cols.length,
+    rowsPerCol: cols.map(c => c.querySelectorAll('.trow').length),
+    hasRepl: cols.every(c => [...c.querySelectorAll('.tlab')].some(l => l.textContent === 'repl')),
+    totals, poolPer,
+    // survivors can never exceed what is left in the tier
+    survSane: qb.every(r => r.survives <= r.left),
+    dropsNonNeg: qb.every(r => r.drop == null || r.drop >= 0),
+  };
+});
+check('a column per position', shape.cols, 4);
+check('every tier is accounted for — no player lost', shape.totals, shape.poolPer);
+check('each position ends in a replacement bucket', shape.hasRepl, true);
+check('survivors never exceed what is left', shape.survSane, true);
+check('drops are never negative', shape.dropsNonNeg, true);
+console.log(`  info  tiers per position — ${shape.rowsPerCol.join(', ')}`);
 
 console.log(errs.length ? `\nJS ERRORS: ${errs.join(' | ')}` : '\nno JS errors');
 await b.close();

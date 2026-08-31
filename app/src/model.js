@@ -80,27 +80,86 @@ function fillsSlot(roster, pos) {
 }
 
 /* ---- tiers ---------------------------------------------------------------
-   A tier is a run of players the market treats as interchangeable. Break the
-   run where the gap to the next player is large relative to how precisely the
-   market has ranked them — the stdev of their ADP is exactly that measure, and
-   FFC gives it to us per player. */
+   A tier is a run of players who produce about the same, so which one you get
+   does not much matter — what matters is how many are left before the drop.
+
+   These are tiers of POINT PRODUCTION, not of draft price. An earlier version
+   broke on ADP gaps, which describes when a player will be taken rather than
+   what he scores; two players a round apart in cost but identical in output
+   are the same decision, and that is exactly the gap worth exploiting.
+
+   Two details make the breaks meaningful:
+
+   1. Only players above replacement are tiered. Everyone below is one
+      undifferentiated bucket, because they are genuinely interchangeable.
+      Tiering the whole pool put every break in the tail, where the
+      interpolated values fall off a cliff, and left the draftable top as one
+      useless 69-man tier.
+   2. Breaks go at the largest drops (natural breaks), with the tier count
+      scaled to how many players are actually in play. Thresholding on a fixed
+      gap gave 14 tiers at QB and 4 at RB. */
 const TIERS = (() => {
   const out = new Map();
   for (const pos of ['QB', 'RB', 'WR', 'TE', 'PK', 'DEF']) {
-    const list = P.filter(p => p.p === pos).sort((a, b) => a.a - b.a);
-    let tier = 1;
-    list.forEach((p, i) => {
-      if (i > 0) {
-        const prev = list[i - 1];
-        const spread = ((prev.sd || 6) + (p.sd || 6)) / 2;
-        if (p.a - prev.a > Math.max(4, spread * 0.9)) tier++;
-      }
+    const all = P.filter(p => p.p === pos).sort((a, b) => (b.vor ?? -1e9) - (a.vor ?? -1e9));
+    // kickers sit entirely below replacement, so never tier fewer than a
+    // starting round's worth or the position collapses to a single tier
+    const above = all.filter(p => (p.vor ?? -1) >= 0).length;
+    const live = Math.min(all.length, Math.max(above, D.teams));
+    const k = Math.max(3, Math.min(8, Math.round(live / 5)));
+
+    const head = all.slice(0, live);
+    const cuts = head
+      .map((p, i) => (i > 0 ? { gap: (head[i - 1].vor ?? 0) - (p.vor ?? 0), i } : null))
+      .filter(Boolean)
+      .sort((a, b) => b.gap - a.gap)
+      .slice(0, k - 1)
+      .map(x => x.i)
+      .sort((a, b) => a - b);
+
+    let tier = 1, c = 0;
+    head.forEach((p, i) => {
+      if (c < cuts.length && i === cuts[c]) { tier++; c++; }
       out.set(p.n, tier);
     });
+    // everything past the last startable player is one replacement bucket
+    for (const p of all.slice(live)) out.set(p.n, tier + 1);
   }
   return out;
 })();
 const tierOf = p => TIERS.get(p.n) || 0;
+
+/* The shape of a position: every tier, who is left in it, and the drop in
+   points to the tier below. This is the heads-up view — it answers "can I
+   wait?" without reading a single player row. */
+function tierShape(pos, board, surv) {
+  const groups = new Map();
+  for (const p of P.filter(x => x.p === pos)) {
+    const t = tierOf(p);
+    if (!groups.has(t)) groups.set(t, []);
+    groups.get(t).push(p);
+  }
+  const survSet = new Set(surv || []);
+  const rows = [...groups.entries()].sort((a, b) => a[0] - b[0]).map(([t, members]) => {
+    const live = members.filter(p => !S.drafted[p.n]);
+    const best = live.length ? Math.max(...live.map(p => p.vor ?? 0)) : null;
+    return {
+      tier: t, members, live,
+      left: live.length,
+      survives: live.filter(p => survSet.has(p)).length,
+      top: best,
+      hi: Math.max(...members.map(p => p.vor ?? 0)),
+      lo: Math.min(...members.map(p => p.vor ?? 0)),
+      next: live.length ? live.reduce((a, b) => ((a.vor ?? 0) >= (b.vor ?? 0) ? a : b)) : null,
+    };
+  });
+  // drop = what you give up by letting this tier empty out
+  rows.forEach((r, i) => {
+    const below = rows.slice(i + 1).find(x => x.left > 0);
+    r.drop = r.top != null && below && below.top != null ? Math.round(r.top - below.top) : null;
+  });
+  return rows.filter(r => r.left > 0 || r.members.length);
+}
 
 /* ---- buzz ----------------------------------------------------------------
    ADP is a lagging average — by the time a breakout shows up in it, the price

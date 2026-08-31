@@ -143,6 +143,22 @@ tr.tlast td{border-bottom:1px solid var(--neg)}
   vertical-align:middle;margin-left:4px}
 .buzzchip{color:var(--rise);border:1px solid var(--rise)}
 .rookiechip{color:var(--accent);border:1px solid var(--accent)}
+/* tier board: one column per position, one row per tier */
+.shape{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:12px 16px}
+.shapecol{min-width:0}
+.shapehd{display:flex;align-items:center;gap:6px;margin-bottom:7px}
+.shapehd b{font-size:11.5px;color:var(--muted);font-weight:600}
+.trow{display:flex;align-items:baseline;gap:5px;padding:4px 7px;border-radius:4px;
+  border:1px solid var(--line);margin-bottom:4px;background:var(--surface-2);font-size:11.5px}
+.trow.here{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent)}
+.trow.thin{border-color:var(--hot)}
+.trow.empty{opacity:.4}
+.tlab{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--text)}
+.tcnt{font-family:"IBM Plex Mono",monospace;color:var(--muted)}
+.tsurv{font-family:"IBM Plex Mono",monospace;margin-left:auto;font-weight:600}
+.tdrop{font-family:"IBM Plex Mono",monospace;font-size:10px;color:var(--faint)}
+.shape-key{padding:0 16px 13px;font-size:11px;color:var(--faint);line-height:1.5}
+@media(max-width:900px){.shape{grid-template-columns:repeat(2,1fr)}}
 .risebar{padding:9px 16px;border-bottom:1px solid var(--line);cursor:pointer}
 .risebar:last-child{border-bottom:none}
 .risebar:hover{background:var(--surface-2)}
@@ -189,6 +205,14 @@ kbd{font-family:"IBM Plex Mono",monospace;font-size:10.5px;border:1px solid var(
       <div class="card">
         <h2>Take one of these</h2>
         <div id="recs"></div>
+      </div>
+      <div class="card">
+        <h2>Tier board — production, and how much is left of it</h2>
+        <div id="shape" class="shape"></div>
+        <div class="shape-key">Tiers of projected points under this league's scoring, not of draft price.
+          Each row: players still undrafted &middot; <b>&darr;</b> points given up if that tier empties
+          &middot; <b>&rarr;</b> how many reach your next pick. <b>repl</b> is everyone below
+          replacement level, where one is as good as another.</div>
       </div>
       <div class="card">
         <h2>Player board</h2>

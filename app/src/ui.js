@@ -48,6 +48,42 @@ function renderRunway(tgt) {
   }).join('');
 }
 
+/* The heads-up view: for each position, every production tier, how many are
+   left in it, and how many reach your next pick. Read top to bottom it says
+   where the cliffs are; read across it says which position is about to become
+   the expensive one. */
+function renderShape(tgt) {
+  const board = avail(), surv = survivors();
+  el('shape').innerHTML = ['QB', 'RB', 'WR', 'TE'].map(pos => {
+    const rows = tierShape(pos, board, surv);
+    // the tier the next available player at this position sits in
+    const cur = board.find(p => p.p === pos);
+    const curTier = cur ? tierOf(cur) : null;
+    const last = rows[rows.length - 1];
+    const body = rows.map(r => {
+      const gone = r.left === 0;
+      // the tail bucket is everyone below replacement — not a tier you chase
+      const repl = r === last && rows.length > 1;
+      const cls = gone ? 'empty' : r.tier === curTier ? 'here'
+        : (r.survives === 0 && r.left > 0) ? 'thin' : '';
+      const col = r.survives === 0 ? 'var(--neg)' : r.survives === 1 ? 'var(--hot)' : 'var(--pos)';
+      const drop = !gone && !repl && r.drop != null && r.drop > 0
+        ? `<span class="tdrop" title="points given up if this tier empties">&darr;${r.drop}</span>` : '';
+      return `<div class="trow ${cls}" title="${pos} ${repl ? 'below replacement' : 'tier ' + r.tier} — ${r.left} of ${r.members.length} left">
+          <span class="tlab">${repl ? 'repl' : 't' + r.tier}</span>
+          <span class="tcnt">${gone ? 'gone' : r.left}</span>
+          ${drop}
+          ${gone ? '<span class="tsurv" style="color:var(--faint)">&mdash;</span>'
+            : `<span class="tsurv" style="color:${col}">&rarr;${r.survives}</span>`}
+        </div>`;
+    }).join('');
+    return `<div class="shapecol">
+      <div class="shapehd"><span class="badge b-${pos}">${pos}</span>
+        <b>${needWeight(pos) >= STARTER_NEED ? 'starter open' : 'depth only'}</b></div>
+      ${body}</div>`;
+  }).join('');
+}
+
 const line = p => `<span class="badge b-${p.p}">${p.p}</span><span>${esc(p.n)}</span>`
   + `<span class="spacer"></span><span class="mono" style="color:var(--faint);font-size:11px">${p.a.toFixed(0)}</span>`;
 
@@ -188,6 +224,7 @@ function render() {
 
   renderRecs();
   renderRunway(tgt);
+  renderShape(tgt);
   renderRoster();
   renderBoard();
   renderRising();

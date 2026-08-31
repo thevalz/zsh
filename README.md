@@ -159,6 +159,38 @@ survive to your next pick. Toggle to **ADP** for the flat market view.
 Watch it work: with QB, SUPER_FLEX and both RB slots filled, the board flips
 from RB-led to WR-led without you touching a filter.
 
+### Tiers of production, not of price
+
+A tier is a group of players who score about the same, so which one you end up
+with barely matters — what matters is **how many are left before the drop**.
+
+These are tiers of **projected points**, not of ADP. An earlier version broke
+tiers on ADP gaps, which describes when a player will be taken rather than what
+he produces. Two players a round apart in cost but identical in output are the
+same decision, and that disagreement is the thing worth exploiting: across
+QB/RB/WR/TE there are currently **22 places where the production order beats the
+draft order**.
+
+Two details make the breaks mean something:
+
+- **Only players above replacement are tiered.** Everyone below is one
+  undifferentiated `repl` bucket, because they genuinely are interchangeable.
+  Tiering the whole pool put every break down in the tail, where interpolated
+  values fall off a cliff, and left the draftable top as a single useless
+  69-man tier.
+- **Breaks go at the largest drops**, with the tier count scaled to how many
+  players are actually in play. A fixed point-gap threshold gave 14 tiers at QB
+  and 4 at RB.
+
+The **Tier board** panel shows all of it at once — every tier at every position,
+how many are undrafted, the points given up if that tier empties (`↓`), and how
+many reach your next pick (`→`). The superflex shape is visible immediately:
+one Josh Allen, then four, then a **block of 13 essentially interchangeable
+arms**, and only 24 quarterbacks above replacement for 24 starting slots.
+
+The player board carries the same tier number per row plus how many of it
+remain, and marks the last man in a tier in red — the cliff is right after him.
+
 ### Sources considered
 
 Reachable and used: **FFC** (2QB ADP is the spine; PPR pulled too, since its
