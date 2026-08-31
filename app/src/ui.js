@@ -83,14 +83,30 @@ function renderBoard() {
   }
   const top = rows.length ? Math.max(...rows.slice(0, 60).map(p => p._fit || 0)) : 1;
 
+  /* How many of each position-tier are still undrafted. A tier number alone
+     says nothing you can act on; "tier 2, 1 left" says take him now. Counted
+     over the whole pool, not the filtered rows, so a search box or a position
+     filter cannot make a tier look thinner than it is. */
+  const tierLeft = new Map();
+  for (const p of P) {
+    if (S.drafted[p.n]) continue;
+    const k = p.p + tierOf(p);
+    tierLeft.set(k, (tierLeft.get(k) || 0) + 1);
+  }
+
   el('tb').innerHTML = rows.slice(0, 300).map(p => {
     const st = S.drafted[p.n], e = S.pick - p.a;
+    const t = tierOf(p), nLeft = tierLeft.get(p.p + t) || 0;
+    // flag the last undrafted man in his tier: the cliff is right after him
+    const last = !st && nLeft === 1;
     const fitPct = top > 0 ? Math.round(100 * (p._fit || 0) / top) : 0;
     const fitCell = S.sort === 'fit'
       ? `<td><span class="fitbar"><i style="width:${fitPct}%"></i></span></td>` : '<td></td>';
-    return `<tr class="row ${st === 'me' ? 'mineRow' : ''} ${st ? 'gone' : ''}" data-n="${esc(p.n)}">
+    return `<tr class="row ${st === 'me' ? 'mineRow' : ''} ${st ? 'gone' : ''} ${last ? 'tlast' : ''}" data-n="${esc(p.n)}">
       <td><span class="badge b-${p.p}">${p.p}</span>${esc(p.n)}${isRookie(p) ? '<span class="rookiechip">R</span>' : ''}</td>
-      <td>${p.t}</td><td>${p.b ?? '—'}</td><td>${p.a.toFixed(1)}${p.est ? '~' : ''}</td>
+      <td>${p.t}</td><td>${p.b ?? '—'}</td>
+      <td title="${p.p} tier ${t}${st ? '' : ` — ${nLeft} still on the board`}"><span class="tno">${t}</span>${st ? '' : `<span class="tleft">· ${nLeft} left</span>`}</td>
+      <td>${p.a.toFixed(1)}${p.est ? '~' : ''}</td>
       <td>${p.vor != null ? (p.vor >= 0 ? '+' : '') + p.vor.toFixed(0) + (p.vest ? '~' : '') : '—'}</td>
       <td class="${e >= 0 ? 'edge-pos' : 'edge-neg'}">${e >= 0 ? '+' : ''}${e.toFixed(0)}</td>
       ${fitCell}

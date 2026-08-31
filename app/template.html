@@ -131,6 +131,13 @@ tr.mineRow td:first-child{box-shadow:inset 3px 0 0 var(--mine)}
   letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:10px;
   border:1px solid var(--line);color:var(--muted);vertical-align:middle;margin-left:4px}
 .depth{color:var(--faint);font-style:italic}
+/* tier in the board: the number, plus how many of that tier are still on the
+   board — "2 · 3 left" is the thing you act on, a bare number is not */
+.tno{font-family:"IBM Plex Mono",monospace;font-weight:600;color:var(--text)}
+.tleft{font-family:"IBM Plex Mono",monospace;font-size:10.5px;color:var(--faint);margin-left:4px}
+.tlast .tleft{color:var(--neg)}
+/* last man in his tier — after him the market says there is a cliff */
+tr.tlast td{border-bottom:1px solid var(--neg)}
 .buzzchip,.rookiechip{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
   font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:10px;
   vertical-align:middle;margin-left:4px}
@@ -191,7 +198,7 @@ kbd{font-family:"IBM Plex Mono",monospace;font-size:10.5px;border:1px solid var(
           <button id="bHide" class="mini on">Hide drafted</button>
         </div>
         <div class="board"><table>
-          <thead><tr><th>Player</th><th>Tm</th><th>Bye</th><th>ADP</th><th>VOR</th><th>vs pick</th><th>Fit</th><th></th></tr></thead>
+          <thead><tr><th>Player</th><th>Tm</th><th>Bye</th><th>Tier</th><th>ADP</th><th>VOR</th><th>vs pick</th><th>Fit</th><th></th></tr></thead>
           <tbody id="tb"></tbody>
         </table></div>
       </div>

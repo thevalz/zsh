@@ -159,6 +159,37 @@ check('the board leads with what is still open',
   fitrank.filled.slice(0, 3).every(x => fitrank.open.includes(x) || ['RB', 'WR', 'TE'].includes(x)), true);
 console.log(`  info  empty -> ${fitrank.empty.join(' ')}\n        filled -> ${fitrank.filled.join(' ')} (open: ${fitrank.open.join(', ')})`);
 
+console.log('\ntier column on the board');
+const tcol = await pg.evaluate(() => {
+  S.drafted = {}; S.hist = []; S.pick = 1; S.filter = 'RB'; S.sort = 'adp'; S.hide = false;
+  render();
+  const read = () => [...document.querySelectorAll('#tb tr')].slice(0, 8).map(r => ({
+    name: r.cells[0].textContent.trim(),
+    tier: r.cells[3].querySelector('.tno')?.textContent,
+    left: r.cells[3].querySelector('.tleft')?.textContent.trim(),
+    last: r.classList.contains('tlast'),
+  }));
+  const before = read();
+  // the top RB's tier-mates, minus one
+  const t1 = P.filter(p => p.p === 'RB' && tierOf(p) === 1);
+  S.drafted[t1[0].n] = 'them';
+  render();
+  const after = read();
+  const hdr = [...document.querySelectorAll('th')].map(t => t.textContent.trim());
+  return {
+    hdr, before, after,
+    countBefore: before.find(r => r.tier === '1' && r.left)?.left,
+    countAfter: after.find(r => r.tier === '1' && r.left)?.left,
+    poolT1: t1.length,
+    everyRowHasTier: [...document.querySelectorAll('#tb tr')].every(r => r.cells[3].querySelector('.tno')),
+  };
+});
+check('the board has a Tier column', tcol.hdr.includes('Tier'), true);
+check('every row shows a tier', tcol.everyRowHasTier, true);
+check('the count matches the pool', tcol.countBefore, `· ${tcol.poolT1} left`);
+check('drafting a player decrements his tier count', tcol.countAfter, `· ${tcol.poolT1 - 1} left`);
+console.log(`  info  ${tcol.before.slice(0, 3).map(r => `${r.name} t${r.tier} ${r.left}`).join(' | ')}`);
+
 console.log(errs.length ? `\nJS ERRORS: ${errs.join(' | ')}` : '\nno JS errors');
 await b.close();
 process.exit(fails || errs.length ? 1 : 0);
