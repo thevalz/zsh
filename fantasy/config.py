@@ -68,12 +68,29 @@ HANDCUFF_POSITIONS = ("RB", "QB")
 CREDIBILITY_FLOOR_RANK = 120.0   # at or better than this, fully credible
 CREDIBILITY_DECAY = 180.0
 
+# Consensus rank is stale exactly when it matters most -- a third-stringer whose
+# situation changed this week still carries last month's rank. A stampede of
+# waiver adds is the market re-ranking him in real time, so heavy add volume
+# raises the credibility floor regardless of what the rank still says.
+MARKET_CREDIBILITY_FULL = 50000.0   # adds/24h that count as a full re-rank
+MARKET_CREDIBILITY_CAP = 0.85       # market alone never certifies more than this
+MARKET_CREDIBILITY_MIN_ADDS = 5000  # below this, add volume is just noise
+
 # Scoring weights for the waiver board.
 W_OPPORTUNITY = 1.0     # value unlocked by injuries ahead of him
-W_HANDCUFF = 0.55       # standing insurance value behind a healthy starter
+# Insurance behind a *healthy* starter is contingent on an injury that has not
+# happened. Roughly a quarter of starters miss meaningful time, so speculative
+# handcuff value must stay well below live, already-vacated opportunity --
+# otherwise the board recommends lottery tickets over players starting Sunday.
+W_HANDCUFF = 0.18       # standing insurance value behind a healthy starter
 W_OWN_STAKE = 1.6       # multiplier when the starter ahead is on MY roster
 W_FIT = 0.40            # bonus for filling a position I am thin at
 W_MARKET = 0.30         # penalty as the rest of the world catches on
+
+# When every man ahead of a player is hurt, he is not a handcuff -- he is the
+# starter. Linear per-blocker scoring understates that, so a clear path pays a
+# bonus scaled to the job he is stepping into.
+CLEAR_PATH_BONUS = 0.55
 
 # A free agent needs this much score to make the board at all.
 MIN_SCORE = 4.0

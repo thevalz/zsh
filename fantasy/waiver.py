@@ -26,6 +26,8 @@ class Candidate:
     market_adds: int = 0
     my_stake: bool = False
     starter_available: bool = False
+    clear_path: bool = False
+    market_rerated: bool = False
     own_value: float = 0.0
     reasons: list = field(default_factory=list)
     blocks: list = field(default_factory=list)   # who is ahead of him
@@ -34,6 +36,15 @@ class Candidate:
     @property
     def label(self) -> str:
         return f"{self.name} ({self.position}-{self.nfl_team})"
+
+
+def _market_credibility(adds: int) -> float:
+    """Treat a stampede of waiver adds as evidence the stale rank is wrong."""
+    if adds < config.MARKET_CREDIBILITY_MIN_ADDS:
+        return 0.0
+    return min(
+        config.MARKET_CREDIBILITY_CAP, adds / config.MARKET_CREDIBILITY_FULL
+    )
 
 
 def _market(limit: int = 400) -> dict:
@@ -74,6 +85,13 @@ def build_board(lg: League, charts: dict | None = None, top: int = 15) -> list:
         pos = p["position"]
         pos_factor = config.INHERITANCE_BY_POSITION.get(pos, 0.5)
         cred = model.credibility(p)
+        market_cred = _market_credibility(cand.market_adds)
+        if market_cred > cred:
+            cand.market_rerated = True
+            cand.reasons.append(
+                f"{cand.market_adds:,} adds in 24h — the market has re-rated him"
+            )
+            cred = market_cred
 
         opportunity = 0.0
         handcuff = 0.0
@@ -124,6 +142,26 @@ def build_board(lg: League, charts: dict | None = None, top: int = 15) -> list:
             cand.starter_available = True
             cand.reasons.append("starting for his NFL team and unrostered")
 
+        # Every blocker hurt means the job is his, not merely reachable.
+        near = ahead[:3]
+        vacancies = [vacancy(lg.players.get(a) or {}) for a, _ in near]
+        if near and all(v > 0 for v in vacancies):
+            # The path is only as clear as its least-hurt blocker: one man
+            # merely Questionable is not a vacated job, however many players
+            # behind him are also banged up.
+            clearance = min(vacancies)
+            top_value = player_value(lg.players.get(near[0][0]) or {})
+            opportunity += (
+                top_value * config.CLEAR_PATH_BONUS * pos_factor * cred * clearance
+            )
+            cand.clear_path = clearance >= 0.7
+            if cand.clear_path:
+                cand.reasons.insert(0, "everyone ahead of him is out — the job is his")
+            else:
+                cand.reasons.insert(
+                    0, f"every man ahead of him is banged up ({len(near)} deep)"
+                )
+
         cand.opportunity = opportunity
         cand.handcuff_value = handcuff
 
@@ -151,7 +189,7 @@ def build_board(lg: League, charts: dict | None = None, top: int = 15) -> list:
     per_pos: dict = {}
     trimmed = []
     for c in board:
-        if per_pos.get(c.position, 0) >= 4:
+        if per_pos.get(c.position, 0) >= 4 and not (c.clear_path or c.tier == "URGENT"):
             continue
         per_pos[c.position] = per_pos.get(c.position, 0) + 1
         trimmed.append(c)
@@ -167,8 +205,12 @@ def _tier(c: Candidate) -> str:
     starter_hurt = any(
         "is Out" in r or "is IR" in r or "is Doubtful" in r for r in c.reasons
     )
-    if starter_hurt and c.opportunity >= 8:
+    if c.clear_path or (starter_hurt and c.opportunity >= 8):
         return "URGENT"
+    # Real opportunity that the whole world can also see. Still worth having --
+    # but it will cost, so name it rather than burying it as speculative.
+    if c.opportunity >= 6 and c.market_adds >= config.MARKET_HOT:
+        return "CONTESTED"
     if c.starter_available and not c.blocks:
         return "STARTER FA"
     if c.opportunity >= 6 and c.market_adds < config.MARKET_HOT * 0.25:

@@ -8,6 +8,7 @@ from .model import League, player_value
 TIER_ICON = {
     "URGENT": "🚨",
     "BUY EARLY": "🟢",
+    "CONTESTED": "🔥",
     "INSURANCE": "🛡️",
     "STARTER FA": "🔹",
     "SPECULATIVE": "·",
@@ -58,6 +59,8 @@ def suggest_bid(cand, faab: int) -> str:
     """FAAB guidance scaled to opportunity, standing value, and competition."""
     if cand.tier == "URGENT":
         pct = 0.22 if cand.opportunity > 15 else 0.12
+    elif cand.tier == "CONTESTED":
+        pct = 0.30   # everyone sees it; a token bid just donates the claim
     elif cand.tier == "BUY EARLY":
         pct = 0.06
     elif cand.tier == "STARTER FA":
@@ -75,8 +78,9 @@ def suggest_bid(cand, faab: int) -> str:
     elif cand.own_value >= 25:
         pct = max(pct, 0.10)
 
-    # Contested players cost more.
-    if cand.market_adds > config.MARKET_HOT:
+    # Contested players cost more -- but the CONTESTED tier already prices that
+    # in, so do not charge the premium twice.
+    if cand.market_adds > config.MARKET_HOT and cand.tier != "CONTESTED":
         pct *= 1.6
 
     dollars = max(1, min(faab, round(faab * pct)))
@@ -84,7 +88,8 @@ def suggest_bid(cand, faab: int) -> str:
     # A pure handcuff with no standalone worth is a lottery ticket, however
     # valuable the job in front of him. Never bid real money on one -- if the
     # starter goes down the backup will still be there, or the next man will.
-    if cand.own_value < 5 and cand.tier != "URGENT":
+    if cand.own_value < 5 and cand.tier not in ("URGENT", "CONTESTED") \
+            and not cand.market_rerated:
         dollars = min(dollars, 2)
 
     return f"${dollars}"
