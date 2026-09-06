@@ -114,7 +114,7 @@ def build_board(lg: League, charts: dict | None = None, top: int = 15) -> list:
                     cand.my_stake = True
                 opportunity += gain
                 cand.reasons.append(
-                    f"{lg.name(ahead_pid)} is {ahead_p.get('injury_status')}"
+                    f"{lg.name(ahead_pid)} is {model.injury_label(ahead_p)}"
                     + (" — MY player" if owner and owner.is_me else "")
                 )
             elif distance == 1 and pos in config.HANDCUFF_POSITIONS:

@@ -43,6 +43,14 @@ VACANCY_WEIGHT = {
     "COV": 0.5,
 }
 
+# A designation is not a diagnosis. Sleeper tags a cramp and a hyperextended
+# knee both "Questionable", and the only machine-readable difference is whether
+# a body part is named -- a real injury usually gets one, a precautionary tag
+# often does not. This is a heuristic, not a diagnosis: teams do conceal real
+# injuries, so an undisclosed tag is damped rather than dismissed, and the body
+# part is printed on the board so a human can make the final call.
+UNDISCLOSED_DISCOUNT = 0.6
+
 # Designations that mean "this is news" rather than "this is a lingering tag".
 ALERT_STATUSES = ("Out", "IR", "PUP", "Doubtful", "Sus", "NA", "DNR")
 

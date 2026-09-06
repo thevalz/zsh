@@ -30,8 +30,27 @@ def is_available_body(p: dict) -> bool:
 
 
 def vacancy(p: dict) -> float:
-    """How much of this player's workload his injury tag puts up for grabs."""
-    return config.VACANCY_WEIGHT.get(p.get("injury_status"), 0.0)
+    """How much of this player's workload his injury tag puts up for grabs.
+
+    Damped when no body part is named: an undisclosed Questionable is far more
+    often precautionary than a named one.
+    """
+    base = config.VACANCY_WEIGHT.get(p.get("injury_status"), 0.0)
+    if not base:
+        return 0.0
+    part = (p.get("injury_body_part") or "").strip().lower()
+    if part in ("", "undisclosed", "not injury related"):
+        base *= config.UNDISCLOSED_DISCOUNT
+    return base
+
+
+def injury_label(p: dict) -> str:
+    """e.g. 'Questionable (Knee)' -- the detail that separates a cramp from an MRI."""
+    status = p.get("injury_status")
+    if not status:
+        return ""
+    part = (p.get("injury_body_part") or "").strip()
+    return f"{status} ({part})" if part else status
 
 
 @dataclass
