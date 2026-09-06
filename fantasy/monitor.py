@@ -43,8 +43,10 @@ def take_snapshot(lg, charts) -> dict:
     for t in lg.teams:
         for pid in t.player_ids:
             ownership[pid] = t.roster_id
+    # Deliberately no timestamp: the file should change only when league state
+    # actually changes, so an hourly job can `git diff --quiet` and skip the
+    # commit on a quiet hour instead of churning the history.
     return {
-        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "injuries": {
             pid: (lg.players.get(pid) or {}).get("injury_status")
             for pid in watch
