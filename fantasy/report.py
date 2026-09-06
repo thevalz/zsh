@@ -36,15 +36,21 @@ def board_section(board: list, faab: int) -> str:
     if not board:
         return "## Waiver board\n\nNo free agent clears the value threshold right now.\n"
     out = ["## Waiver board — best available opportunity\n"]
-    out.append("| | Player | Tier | Why | Adds/24h | Bid |")
-    out.append("|:--|:--|:--|:--|--:|--:|")
+    out.append("| | Player | Tier | Own value | Why | Adds/24h | Bid |")
+    out.append("|:--|:--|:--|--:|:--|--:|--:|")
     for c in board:
         icon = TIER_ICON.get(c.tier, "·")
         why = "; ".join(c.reasons[:2]) or "depth"
         out.append(
-            f"| {icon} | **{c.label}** | {c.tier} | {why} | "
+            f"| {icon} | **{c.label}** | {c.tier} | {c.own_value} | {why} | "
             f"{c.market_adds:,} | {suggest_bid(c, faab)} |"
         )
+    out.append(
+        "\n*Own value is the player's standalone worth, separate from the "
+        "opportunity in front of him. A high tier next to a low own value means "
+        "you are buying a job, not a player — check that the job is worth having "
+        "before bidding against a crowd.*"
+    )
     return "\n".join(out) + "\n"
 
 
@@ -74,6 +80,13 @@ def suggest_bid(cand, faab: int) -> str:
         pct *= 1.6
 
     dollars = max(1, min(faab, round(faab * pct)))
+
+    # A pure handcuff with no standalone worth is a lottery ticket, however
+    # valuable the job in front of him. Never bid real money on one -- if the
+    # starter goes down the backup will still be there, or the next man will.
+    if cand.own_value < 5 and cand.tier != "URGENT":
+        dollars = min(dollars, 2)
+
     return f"${dollars}"
 
 
