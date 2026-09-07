@@ -67,6 +67,45 @@ out, however badly the other team needs them. Where no fair 1-for-1 exists, the
 tool packages 2-for-1s — the way a deep, flat roster converts quantity into a
 starter.
 
+## News: two jobs, two mechanisms
+
+A designation is not a diagnosis. Sleeper tags a cramp and a hyperextended knee
+both "Questionable", which once put a third-string back at the top of this
+board on the strength of a starter who was, in fact, fine.
+
+The fix is to keep two layers apart:
+
+**Completeness** — the Sleeper snapshot diff. It reads every tracked player
+each run and compares full state, so it cannot miss a change the way a stream
+can. It just cannot say how bad the change is.
+
+**Interpretation** — RotoWire's per-player blurb history, keyed by the
+`rotowire_id` Sleeper already carries for 796 of 813 skill players. Looked up
+**only for players the diff already flagged**, so it stays a handful of
+requests an hour.
+
+That ordering matters. The national feeds are a five-item window — about five
+hours on a quiet day, roughly fifteen minutes on a practice-report afternoon —
+so trying to catch news as it goes past loses most of it. Asking about a named
+player after the diff surfaces him has no window at all.
+
+Each blurb is read for the two things a designation cannot tell you: whether
+the language sounds serious (`MRI`, `torn`, `week-to-week`) or trivial
+(`cramp`, `precautionary`, `rest day`), and whether he practiced. **Practice
+participation is the best available predictor of Sunday** — Questionable plus a
+full Friday means he plays; Questionable plus DNP is a coin flip. An alert that
+reads "likely minor" and is not a DNP drops below the notification threshold,
+so precautionary tags stop waking you.
+
+Ad-hoc lookup for any player:
+
+```
+python3 -m fantasy.monitor player --name "Emeka Egbuka"
+```
+
+RotoWire often carries detail Sleeper lacks — Egbuka's body part is
+`Undisclosed` in the player file and `toe` in the blurbs.
+
 ## State and alerting
 
 `state/snapshot.json` records injury designations, depth-chart order, and

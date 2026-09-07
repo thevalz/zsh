@@ -125,6 +125,7 @@ def diff(lg, charts, old: dict | None, new: dict) -> list:
                 )
         alerts.append(
             {
+                "pid": pid,
                 "icon": "🚨" if mine else "⚠️",
                 "title": title,
                 "detail": detail,
@@ -143,13 +144,13 @@ def diff(lg, charts, old: dict | None, new: dict) -> list:
         if before is None:
             t = next((x for x in lg.teams if x.roster_id == after), None)
             alerts.append({
-                "icon": "📥", "priority": 1,
+                "pid": pid, "icon": "📥", "priority": 1,
                 "title": f"{lg.describe(pid)} was added",
                 "detail": f"Picked up by {t.label if t else '?'}.",
             })
         elif after is None:
             alerts.append({
-                "icon": "📤", "priority": 2,
+                "pid": pid, "icon": "📤", "priority": 2,
                 "title": f"{lg.describe(pid)} was dropped",
                 "detail": "Now a free agent — check the waiver board below.",
             })
@@ -157,7 +158,7 @@ def diff(lg, charts, old: dict | None, new: dict) -> list:
             a = next((x for x in lg.teams if x.roster_id == before), None)
             b = next((x for x in lg.teams if x.roster_id == after), None)
             alerts.append({
-                "icon": "🔁", "priority": 1,
+                "pid": pid, "icon": "🔁", "priority": 1,
                 "title": f"{lg.describe(pid)} traded",
                 "detail": f"{a.label if a else '?'} → {b.label if b else '?'}.",
             })
@@ -171,13 +172,60 @@ def diff(lg, charts, old: dict | None, new: dict) -> list:
         if after >= before or player_value(p) < 4:
             continue   # only promotions are news
         alerts.append({
-            "icon": "📈", "priority": 2,
+            "pid": pid, "icon": "📈", "priority": 2,
             "title": f"{lg.describe(pid)} moved up the depth chart ({before} → {after})",
             "detail": "Workload is trending his way."
                       + ("" if pid in lg.rostered else " He is a free agent."),
         })
 
     alerts.sort(key=lambda a: -a["priority"])
+    return alerts
+
+
+# --------------------------------------------------------------------------
+# enrichment
+# --------------------------------------------------------------------------
+
+def enrich(lg, alerts: list, limit: int = 8) -> list:
+    """Look up the beat-reporter blurb for each flagged player.
+
+    The diff knows a designation changed; it cannot know whether the change is
+    a cramp or an MRI, and those warrant opposite responses. Only players the
+    diff already surfaced are looked up, so this stays a handful of requests an
+    hour rather than a firehose we would mostly discard.
+    """
+    looked_up = 0
+    for a in alerts:
+        pid = a.get("pid")
+        p = lg.players.get(pid) if pid else None
+        if not p or looked_up >= limit:
+            continue
+        blurbs = news.player_news(p.get("rotowire_id"))
+        if not blurbs:
+            continue
+        looked_up += 1
+        info = news.assess(blurbs)
+        a["news"] = info
+
+        bits = []
+        if info["practice"]:
+            bits.append(f"practice: **{info['practice']}**")
+        if info["verdict"] != "unclear":
+            bits.append(info["verdict"])
+        a["detail"] += (
+            f"\n  ↳ _{info['date']} — {info['headline']}:_ {info['body']}"
+            + (f" ({', '.join(bits)})" if bits else "")
+        )
+
+        # A cramp is not news. Drop it below the notification threshold so the
+        # hourly job stops paging on precautionary tags.
+        if info["verdict"] == "likely minor" and info["practice"] != "DNP":
+            a["priority"] -= 2
+            a["icon"] = "·"
+        elif info["verdict"] == "serious" or info["practice"] == "DNP":
+            a["priority"] += 1
+
+    alerts.sort(key=lambda x: -x["priority"])
     return alerts
 
 
@@ -194,7 +242,7 @@ def build(mode: str = "report") -> tuple:
 
     snap = take_snapshot(lg, charts)
     prev = load_snapshot()
-    alerts = diff(lg, charts, prev, snap)
+    alerts = enrich(lg, diff(lg, charts, prev, snap))
 
     board = waiver.build_board(lg, charts, top=15)
     handcuffs = waiver.handcuff_report(lg, charts)
@@ -230,10 +278,13 @@ def build(mode: str = "report") -> tuple:
 
 def summarize_for_push(alerts: list, board: list) -> str:
     """One line, under 200 chars, for a phone notification."""
-    if alerts:
-        top = alerts[0]
-        extra = f" (+{len(alerts)-1} more)" if len(alerts) > 1 else ""
-        return f"{top['title']}{extra}"[:190]
+    worth_waking = [a for a in alerts if a.get("priority", 0) >= 2]
+    if worth_waking:
+        top = worth_waking[0]
+        extra = f" (+{len(worth_waking)-1} more)" if len(worth_waking) > 1 else ""
+        note = (top.get("news") or {}).get("headline", "")
+        line = f"{top['title']}{extra}" + (f" — {note}" if note else "")
+        return line[:190]
     if board and board[0].tier in ("URGENT", "BUY EARLY"):
         c = board[0]
         return f"Waiver: {c.label} — {c.tier}. {c.reasons[0] if c.reasons else ''}"[:190]
@@ -243,11 +294,35 @@ def summarize_for_push(alerts: list, board: list) -> str:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Zebras Shooting Heroin monitor")
     ap.add_argument("mode", nargs="?", default="report",
-                    choices=["report", "watch", "trades", "waiver"])
+                    choices=["report", "watch", "trades", "waiver", "player"])
+    ap.add_argument("--name", help="player mode: whose news to look up")
     ap.add_argument("--no-save", action="store_true",
                     help="do not update the stored snapshot")
     ap.add_argument("--out", help="write the report to this file as well")
     args = ap.parse_args(argv)
+
+    if args.mode == "player":
+        if not args.name:
+            ap.error("player mode needs --name")
+        lg = model.load()
+        hits = [p for p in lg.players.values()
+                if (p.get("full_name") or "").lower() == args.name.lower()]
+        if not hits:
+            print(f"No player named {args.name!r}")
+            return 1
+        p = hits[0]
+        blurbs = news.player_news(p.get("rotowire_id"))
+        print(f"{p['full_name']} ({p.get('position')}-{p.get('team')}) — "
+              f"tag: {model.injury_label(p) or 'healthy'}")
+        if not blurbs:
+            print("  no recent news")
+            return 0
+        info = news.assess(blurbs)
+        print(f"  read: {info['verdict']}"
+              + (f", practice {info['practice']}" if info["practice"] else ""))
+        for b in blurbs:
+            print(f"\n  [{b['date']}] {b['headline']}\n    {b['body']}")
+        return 0
 
     text, alerts, snap, board = build(args.mode)
     print(text)
