@@ -1,0 +1,16 @@
+{
+  "_comment": "Optional. nflverse depth charts list WR1/WR2 as outside and WR3 as slot; that is wrong for WR1/WR2 types who live in the slot. Add 'slot' or 'outside' per player name to override. Names are matched loosely (suffixes and punctuation ignored).",
+  "alignment": {
+    "Amon-Ra St. Brown": "slot",
+    "Chris Godwin Jr.": "slot",
+    "Ladd McConkey": "slot",
+    "Cooper Kupp": "slot",
+    "Josh Downs": "slot",
+    "Wan'Dale Robinson": "slot",
+    "Khalil Shakir": "slot",
+    "Jakobi Meyers": "slot",
+    "Tyler Lockett": "slot",
+    "Jaxon Smith-Njigba": "slot",
+    "Rashid Shaheed": "outside"
+  }
+}
