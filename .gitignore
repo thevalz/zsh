@@ -1,2 +1,4 @@
 .cache/
+fantasy/.cache/
 __pycache__/
+*.pyc
