@@ -1,10 +1,14 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-09 00:36 UTC
+**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-09 00:40 UTC
 
 ## Since last run
 
-- ⚠️ **TreVeyon Henderson (RB-NE) Questionable → Out** — Down to Pound's player's status changed. Next up: **Corey Kiner (RB-NE)** — FREE AGENT, claim him.
+- ⚠️ **Myles Montgomery (RB-NE) → IR** — FREE AGENT player newly listed IR. Next up: **Lan Larison (RB-NE)** — FREE AGENT, claim him.
+  ↳ _August 13, 2026 — Reverts to IR:_ Montgomery (undisclosed) reverted to injured reserve with the Patriots on Thursday, per the  NFL's official transaction log . (serious)
+- ⚠️ **Gunner Olszewski (WR-NYG) → IR** — FREE AGENT player newly listed IR. Next up: **Calvin Austin (WR-NYG)** — FREE AGENT, claim him.
+  ↳ _June 1, 2026 — Moves to IR:_ Olszewski (Achilles) was placed on injured reserve by the Giants on Monday,  Dan Salomone of the team's official site  reports. (serious)
+- ⚠️ **TreVeyon Henderson (RB-NE) Questionable → Out** — Down to Pound's player's status changed. Next up: **Myles Montgomery (RB-NE)** — FREE AGENT, claim him.
   ↳ _September 8, 2026 — Sitting out season opener:_ The Patriots ruled out Henderson for Wednesday's season opener versus the Seahawks,  Evan Lazar of the Patriots' official site  reports. (practice: **DNP**, serious)
 - 📈 **Tyrone Tracy (RB-NYG) moved up the depth chart (3 → 2)** — Workload is trending his way.
   ↳ _September 1, 2026 — Practicing in non-contact jersey:_ Tracy (neck) is present at Tuesday's practice in a non-contact jersey,  Dan Duggan of The Athletic  reports.
@@ -12,27 +16,26 @@
   ↳ _August 31, 2026 — Moves to IR:_ Bradley (thumb) reverted to Jacksonville's injured reserve Monday, per the  NFL's transaction log . (serious)
 - ⚠️ **Christian McCaffrey (RB-SF) cleared (Questionable → healthy)** — Randaltheandal's player is off the report.
   ↳ _September 8, 2026 — Not listed on injury report:_ McCaffrey (undisclosed) was not listed on the injury report the 49ers released Tuesday, according to  Matt Maiocco of NBC Sports Bay Area .
+- ⚠️ **Mike Evans (WR-SF) cleared (Questionable → healthy)** — dromag04's player is off the report.
+  ↳ _September 8, 2026 — Removed from injured list:_ Evans (adductor) was not listed on the injury report the 49ers released Tuesday, according to  Matt Maiocco of NBC Sports Bay Area .
 - ⚠️ **De'Zhaun Stribling (WR-SF) cleared (Questionable → healthy)** — East Coast Wins Most's player is off the report.
   ↳ _September 8, 2026 — Shakes off shoulder issue:_ Stribling (shoulder) was not listed on the injury report the 49ers released Tuesday, according to  Matt Maiocco of NBC Sports Bay Area .
 - ⚠️ **Puka Nacua (WR-LAR) cleared (Questionable → healthy)** — East Coast Wins Most's player is off the report.
-  ↳ _September 8, 2026 — Avoids injury report:_ Nacua (core) was not listed on the injury report the Rams released Tuesday, according to  Sarah Barshop of ESPN.com .
-- ⚠️ **Mike Evans (WR-SF) cleared (Questionable → healthy)** — dromag04's player is off the report.
-  ↳ _September 8, 2026 — Removed from injured list:_ Evans (adductor) was not listed on the injury report the 49ers released Tuesday, according to  Matt Maiocco of NBC Sports Bay Area .
 - 📥 **Tyrone Tracy (RB-NYG) was added** — Picked up by supervillain.
-  ↳ _September 1, 2026 — Practicing in non-contact jersey:_ Tracy (neck) is present at Tuesday's practice in a non-contact jersey,  Dan Duggan of The Athletic  reports.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
-| 🔥 | **Roschon Johnson (RB-CHI)** | CONTESTED | 0.0 | every man ahead of him is banged up (2 deep); 261,464 adds in 24h — the market has re-rated him | 261,464 | $30 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 41,166 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 41,166 | $5 |
+| 🔥 | **Roschon Johnson (RB-CHI)** | CONTESTED | 0.0 | every man ahead of him is banged up (2 deep); 249,488 adds in 24h — the market has re-rated him | 249,488 | $30 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 39,789 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 39,789 | $5 |
 | 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| · | **Corey Kiner (RB-NE)** | SPECULATIVE | 0.0 | 10,554 adds in 24h — the market has re-rated him; TreVeyon Henderson is Out (Ankle) | 10,554 | $1 |
-| 🛡️ | **Tyjae Spears (RB-TEN)** | INSURANCE | 13.1 | direct handcuff to MY Tony Pollard | 8,306 | $3 |
+| 🛡️ | **Tyjae Spears (RB-TEN)** | INSURANCE | 13.1 | direct handcuff to MY Tony Pollard | 7,974 | $3 |
 | · | **Jake Tonges (TE-SF)** | SPECULATIVE | 5.1 | every man ahead of him is banged up (1 deep); George Kittle is Questionable (Achilles) | 0 | $1 |
-| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 9,855 | $4 |
+| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); Malik Nabers is Questionable (Knee - ACL) | 20,295 | $2 |
+| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 9,441 | $4 |
+| · | **Kaytron Allen (RB-WAS)** | SPECULATIVE | 7.3 | every man ahead of him is banged up (2 deep); Jacory Croskey-Merritt is Questionable (Undisclosed) | 0 | $1 |
 | · | **Justin Fields (QB-KC)** | SPECULATIVE | 0.1 | every man ahead of him is banged up (1 deep); Patrick Mahomes is Questionable (Knee - ACL) | 0 | $1 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
