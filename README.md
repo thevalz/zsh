@@ -2,11 +2,17 @@
 
 Helpers for the Zebras Shooting Heroin 12-team Superflex PPR league on Sleeper.
 
+Live site: **https://thevalz.github.io/zsh/** (see [Deploying](#deploying)).
+
 | File | What it is |
 |---|---|
 | `matchups.py` | Weekly **matchup checker** for QB / RB / WR / TE, mine and my opponent's (see below) |
+| `fantasy/` | **Waiver & trade monitor** (`python3 -m fantasy.monitor report`); see `fantasy/README.md` |
+| `build_site.py` | Renders the reports into the static site in `docs/` |
+| `.github/workflows/site.yml` | Scheduled GitHub Actions job that regenerates the reports and site |
 | `wr_alignment_overrides.json` | Optional slot/outside overrides for WRs the depth chart mislabels |
-| `matchups/` | Generated weekly matchup reports |
+| `matchups/`, `reports/` | Generated weekly matchup reports and the latest waiver report |
+| `docs/` | The built site (committed by the workflow); also holds the archived draft console |
 | `last-years-draft.md`, `draft_board.csv` | Record of last year's draft |
 
 ## Matchup checker
@@ -93,3 +99,25 @@ flagged as a **shadow risk**.
   than film would. Linebacker coverage grades only speak to an RB's receiving work; the run-defense grade carries
   most of the RB score.
 - K and DEF are not graded.
+
+## Deploying
+
+The site is plain static HTML in `docs/`, rebuilt by `.github/workflows/site.yml`:
+
+1. `matchups.py --full --markdown --out-dir matchups` writes `matchups/weekNN.md`.
+2. `python3 -m fantasy.monitor report --out reports/waivers.md` writes the waiver/trade report and updates
+   `fantasy/state/snapshot.json` so the next run can diff against it.
+3. `build_site.py` renders both into `docs/` (dashboard, per-week pages, waiver page, weeks index).
+4. The workflow commits `docs/`, `matchups/`, `reports/` and the snapshot back to the branch.
+
+Rebuild locally with the same three commands, then open `docs/index.html`.
+
+**One-time repository settings** (cannot be changed from a workflow):
+
+- *Settings → Pages → Build and deployment*: Source **Deploy from a branch**, branch **this branch**, folder
+  **/docs**. Pages was previously pointed at the keeper branch's root; `docs/draft-live.html` here is an archived
+  copy of that draft console so its URL keeps working under the new source.
+- *Settings → General → Default branch*: GitHub only runs scheduled (`cron`) workflows from the default branch.
+  Make this branch the default, or merge it into the default, for the every-6-hours rebuild to happen on its own.
+  Until then, trigger it from *Actions → Build matchups + waiver site → Run workflow*.
+

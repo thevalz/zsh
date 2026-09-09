@@ -42,7 +42,7 @@ Usage
   python3 matchups.py --player "Bijan Robinson" --player "Trey McBride"
   python3 matchups.py --defenses         # team pass/run defense table
   python3 matchups.py --cbs              # starting-CB toughness leaderboard
-  python3 matchups.py --full --markdown -o matchups/week01.md
+  python3 matchups.py --full --markdown --out-dir matchups   # writes matchups/weekNN.md
   python3 matchups.py --refresh          # ignore the 12h cache
 
 Only the Python standard library is required.
@@ -767,6 +767,7 @@ def main(argv=None) -> int:
                     help="weekly report: both lineups, every team's starters, defenses, CB leaderboard")
     ap.add_argument("--markdown", action="store_true", help="emit Markdown instead of plain text")
     ap.add_argument("-o", "--out", help="write output to this file")
+    ap.add_argument("--out-dir", help="write output to <dir>/weekNN.md (or .txt), named for the week")
     ap.add_argument("--refresh", action="store_true", help="re-download everything, ignoring the cache")
     args = ap.parse_args(argv)
 
@@ -791,6 +792,9 @@ def main(argv=None) -> int:
                     out.append({"name": row["player_name"], "team": team, "pos": slot[:2], "spot": slot})
         return out
 
+    if args.out_dir:
+        os.makedirs(args.out_dir, exist_ok=True)
+        args.out = os.path.join(args.out_dir, f"week{week:02d}." + ("md" if args.markdown else "txt"))
     out = open(args.out, "w") if args.out else sys.stdout
     try:
         title = f"Matchups -- {season} week {week}"

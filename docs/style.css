@@ -1,0 +1,13 @@
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1a1d23;--muted:#5d6570;--line:#e3e6ea;--accent:#1f6feb;--soft:#e9f5ec;--tough:#fdecec;--neutral:#fff6e0}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a20;--ink:#e6e8eb;--muted:#9aa3ad;--line:#2a2f37;--accent:#6ea8ff;--soft:#12301a;--tough:#3a1717;--neutral:#3a2f12}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+a{color:var(--accent)}header.top{background:var(--card);border-bottom:1px solid var(--line);padding:14px 20px;display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline}
+header.top .brand{font-weight:700;font-size:17px;color:var(--ink);text-decoration:none}header.top nav a{margin-right:14px;text-decoration:none;color:var(--muted)}header.top nav a.active{color:var(--accent);font-weight:600}
+main{max-width:1180px;margin:0 auto;padding:20px}h1{font-size:26px;margin:8px 0 4px}h2{font-size:20px;margin:30px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--line)}h3{font-size:16px;margin:20px 0 6px}
+.meta{color:var(--muted);font-size:13px;margin-bottom:10px}.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.card h2{margin-top:0;border:0;padding:0}
+.table-wrap{overflow-x:auto;margin:10px 0}table{border-collapse:collapse;width:100%;font-size:13.5px}th,td{padding:6px 9px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--bg);position:sticky;top:0;font-weight:600;white-space:nowrap}
+td.v-tough{background:var(--tough)}td.v-soft{background:var(--soft)}td.v-neutral{background:var(--neutral)}
+ul{padding-left:20px}li{margin:4px 0}.cont{color:var(--muted);font-size:13px}code{background:var(--bg);padding:1px 5px;border-radius:4px;font-size:12.5px}
+pre{background:var(--bg);padding:12px;border-radius:8px;overflow-x:auto;font-size:12.5px}.more{margin:6px 0 0;font-size:13px}
+footer{color:var(--muted);font-size:12px;text-align:center;padding:30px 0}

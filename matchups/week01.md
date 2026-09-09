@@ -15,7 +15,7 @@ _depth charts as of 2026-09-08; defender grades pool PFR coverage stats from 202
 | Quentin Johnston | WR | LAC | WR | vs ARI | 🟡 NEUTRAL | 41 | (outside) LCB Will Johnson [D 33]<br>RCB Denzel Burke [B 67] | ARI pass D [D 25, #26] |
 | Tetairoa McMillan | WR | CAR | WR | vs CHI | 🟢 SOFT | 36 | (outside) LCB Jaylon Johnson [D 29]<br>RCB Tyrique Stevenson [C 53] | CHI pass D [D 28, #23] |
 | Trey McBride | TE | ARI | TE | @ LAC | 🔴 TOUGH | 73 | FS Elijah Molden [C 45]<br>SS Derwin James Jr. [A 83] | LAC pass D [A 82, #6] |
-| Najee Harris | RB | NYG | BN | vs DAL | 🟢 SOFT | 31 | LILB DeMarvion Overshown [?] (low sample (16 tgt))<br>RILB Dee Winters [B 63] | DAL run D [F 14, #29] |
+| Tyrone Tracy Jr. | RB | NYG | BN | vs DAL | 🟢 SOFT | 31 | LILB DeMarvion Overshown [?] (low sample (16 tgt))<br>RILB Dee Winters [B 63] | DAL run D [F 14, #29] |
 | Tony Pollard | RB | TEN | BN | vs NYJ | 🟢 SOFT | 29 | MLB Jamien Sherwood [D 39]<br>WLB Demario Davis [C 51] | NYJ run D [F 18, #26] |
 | Alec Pierce | WR | IND | BN | vs BAL | 🟡 NEUTRAL | 54 | (outside) LCB Nate Wiggins [B 71]<br>RCB Marlon Humphrey [C 51] | BAL pass D [D 40, #19] |
 | Emeka Egbuka | WR | TB | BN | @ CIN | 🟡 NEUTRAL | 51 | (outside) LCB Dax Hill [B 61]<br>RCB DJ Turner II [B 74] | CIN pass D [F 19, #29] |

@@ -1,0 +1,72 @@
+name: Build matchups + waiver site
+
+# Regenerates the weekly matchup report and the waiver/trade report, renders
+# them into docs/, and commits the result. GitHub Pages is set to
+# "Deploy from a branch" -> this branch -> /docs, so the commit is the deploy.
+#
+# Note: GitHub only runs `schedule` triggers from the repository's default
+# branch. Until this branch is the default (or merged into it), use the
+# "Run workflow" button (workflow_dispatch) or push to the branch.
+
+on:
+  push:
+    branches:
+      - claude/wr-cb-matchup-analysis-jvlvg0
+    paths:
+      - 'matchups.py'
+      - 'build_site.py'
+      - 'wr_alignment_overrides.json'
+      - 'fantasy/**.py'
+      - '.github/workflows/site.yml'
+  schedule:
+    # Every 6 hours, plus Tuesday morning (waivers, after MNF) and Sunday
+    # morning (final lineups) at 12:00 UTC.
+    - cron: '23 */6 * * *'
+    - cron: '0 12 * * 2,0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-site
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Weekly matchup report
+        id: matchups
+        run: python3 matchups.py --full --markdown --out-dir matchups
+        continue-on-error: true
+
+      - name: Waiver and trade report
+        id: waivers
+        run: python3 -m fantasy.monitor report --out reports/waivers.md
+        continue-on-error: true
+
+      - name: Report step failures without killing the build
+        if: steps.matchups.outcome == 'failure' || steps.waivers.outcome == 'failure'
+        run: |
+          echo "::warning::matchups=${{ steps.matchups.outcome }} waivers=${{ steps.waivers.outcome }}; site rebuilt from whatever reports exist"
+
+      - name: Render docs/
+        run: python3 build_site.py
+
+      - name: Commit the rebuilt site
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs matchups reports fantasy/state
+          if git diff --cached --quiet; then
+            echo "nothing changed"
+            exit 0
+          fi
+          git commit -m "Rebuild site ($(date -u +'%Y-%m-%d %H:%M UTC'))"
+          git push
