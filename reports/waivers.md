@@ -1,25 +1,29 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-10 04:49 UTC
+**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-10 11:26 UTC
 
 ## Since last run
 
-- ⚠️ **George Kittle (TE-SF) cleared (Questionable → healthy)** — It's Gonna be Maye's player is off the report.
-  ↳ _September 9, 2026 — In clear to play Week 1:_ Kittle (Achilles) isn't listed on the 49ers' injury report ahead of Thursday's contest against the Rams,  Matt Maiocco of NBC Sports Bay Area  reports. (serious)
+- 📈 **TreVeyon Henderson (RB-NE) moved up the depth chart (4 → 1)** — Workload is trending his way.
+  ↳ _September 8, 2026 — Sitting out season opener:_ The Patriots ruled out Henderson for Wednesday's season opener versus the Seahawks,  Evan Lazar of the Patriots' official site  reports. (practice: **DNP**, serious)
+- 📈 **Zach Charbonnet (RB-SEA) moved up the depth chart (4 → 2)** — Workload is trending his way.
+  ↳ _September 7, 2026 — Progressing in rehab:_ Coach Mike Macdonald said Monday that Charbonnet (knee) looks "awesome" in his rehab from a torn ACL,  Gregg Bell of The Tacoma News Tribune  reports. (serious)
+- ⚠️ **Myles Montgomery (RB-NE) cleared (IR → healthy)** — FREE AGENT player is off the report.
+  ↳ _August 13, 2026 — Reverts to IR:_ Montgomery (undisclosed) reverted to injured reserve with the Patriots on Thursday, per the  NFL's official transaction log . (serious)
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
-| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 33,945 adds in 24h — the market has re-rated him | 33,945 | $35 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 51,300 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 51,300 | $5 |
+| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 41,661 adds in 24h — the market has re-rated him | 41,661 | $35 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 47,970 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 47,970 | $5 |
+| 🟢 | **Emanuel Wilson (RB-SEA)** | BUY EARLY | 6.8 | Zach Charbonnet is PUP (Knee - ACL) | 0 | $6 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🛡️ | **Najee Harris (RB-NYG)** | INSURANCE | 5.9 | direct handcuff to MY Cam Skattebo | 15,715 | $3 |
-| 🔥 | **Darnell Mooney (WR-NYG)** | CONTESTED | 3.9 | every man ahead of him is banged up (1 deep); 37,215 adds in 24h — the market has re-rated him | 37,215 | $30 |
-| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 15,904 | $4 |
-| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 19,461 | $4 |
+| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); 34,875 adds in 24h — the market has re-rated him | 34,875 | $2 |
+| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 16,430 | $4 |
+| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 18,996 | $4 |
 | · | **Justin Fields (QB-KC)** | SPECULATIVE | 0.1 | every man ahead of him is banged up (1 deep); Patrick Mahomes is Questionable (Knee - ACL) | 0 | $1 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 11.8 | starting for his NFL team and unrostered | 0 | $4 |
 
@@ -45,9 +49,9 @@
 
 | Pos | Starters | Rostered | Starter value | League median | Rank | Tradeable surplus |
 |:--|--:|--:|--:|--:|--:|--:|
-| QB | 2 | 2 | 162.13 | 110.46 | **2/12** | 0 |
+| QB | 2 | 2 | 161.34 | 110.03 | **2/12** | 0 |
 | RB | 2 | 6 | 143.87 | 143.87 | **6/12** | 80.5 |
-| WR | 2 | 6 | 106.18 | 132.45 | **11/12** | 22.7 |
+| WR | 2 | 6 | 107.06 | 133.94 | **11/12** | 22.7 |
 | TE | 1 | 1 | 69.3 | 34.99 | **1/12** | 0 |
 
 > ⚠️ **QB: 2 rostered for 2 starting slots — one injury and there is nobody to plug in.**
@@ -57,18 +61,18 @@
 
 ## Trade targets — ranked by two-way fit
 
-### hulleywood — fit score 71.36
+### hulleywood — fit score 71.97
 - Roster counts: QB:4 / RB:3 / WR:5 / TE:2
-- They need: **RB (45.09), QB (6.26)**
+- They need: **RB (45.09), QB (7.1)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
-  - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Tyrone Tracy (RB-NYG)** (49.8) → get **George Pickens (WR-DAL)** (68.2)
-  - _2-for-1_ — give **Tony Pollard (RB-TEN) + Tyrone Tracy (RB-NYG)** (51.0) → get **George Pickens (WR-DAL)** (68.2)
-  - _2-for-1_ — give **Bhayshul Tuten (RB-JAX) + Tyrone Tracy (RB-NYG)** (64.0) → get **George Pickens (WR-DAL)** (68.2)
-  - _2-for-1_ — give **Tony Pollard (RB-TEN) + Rico Dowdle (RB-PIT)** (68.8) → get **George Pickens (WR-DAL)** (68.2)
-  - _2-for-1_ — give **Bhayshul Tuten (RB-JAX) + Rico Dowdle (RB-PIT)** (81.9) → get **George Pickens (WR-DAL)** (68.2)
+  - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Tyrone Tracy (RB-NYG)** (49.8) → get **George Pickens (WR-DAL)** (69.3)
+  - _2-for-1_ — give **Tony Pollard (RB-TEN) + Tyrone Tracy (RB-NYG)** (51.0) → get **George Pickens (WR-DAL)** (69.3)
+  - _2-for-1_ — give **Bhayshul Tuten (RB-JAX) + Tyrone Tracy (RB-NYG)** (64.0) → get **George Pickens (WR-DAL)** (69.3)
+  - _2-for-1_ — give **Tony Pollard (RB-TEN) + Rico Dowdle (RB-PIT)** (68.8) → get **George Pickens (WR-DAL)** (69.3)
+  - _2-for-1_ — give **Bhayshul Tuten (RB-JAX) + Rico Dowdle (RB-PIT)** (81.9) → get **George Pickens (WR-DAL)** (69.3)
 
-### Brooklyn Meatpackers — fit score 56.72
+### Brooklyn Meatpackers — fit score 57.33
 - Roster counts: QB:3 / RB:5 / WR:6 / TE:1
 - They need: **RB (30.45), TE (9.07)**
 - Shape: I send **RB**, I get back **WR**
@@ -79,9 +83,9 @@
   - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Tyrone Tracy (RB-NYG)** (49.8) → get **Jaylen Waddle (WR-DEN)** (49.7)
   - _2-for-1_ — give **Tony Pollard (RB-TEN) + Tyrone Tracy (RB-NYG)** (51.0) → get **Jaylen Waddle (WR-DEN)** (49.7)
 
-### Down to Pound — fit score 38.75
+### Down to Pound — fit score 39.36
 - Roster counts: QB:3 / RB:5 / WR:6 / TE:1
-- They need: **WR (21.67), RB (12.48)**
+- They need: **WR (23.16), RB (12.48)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _1-for-1_ — give **Tyrone Tracy (RB-NYG)** (16.0) → get **KC Concepcion (WR-CLE)** (15.7)
@@ -89,9 +93,20 @@
   - _1-for-1_ — give **Tony Pollard (RB-TEN)** (35.0) → get **DK Metcalf (WR-PIT)** (29.6)
   - _1-for-1_ — give **Bhayshul Tuten (RB-JAX)** (48.0) → get **DK Metcalf (WR-PIT)** (29.6)
 
-### Jersey Rum Hams — fit score 37.48
+### mtngoblin — fit score 38.24
+- Roster counts: QB:3 / RB:6 / WR:4 / TE:2
+- They need: **WR (17.39), RB (11.36), TE (9.92)**
+- Shape: I send **RB**, I get back **WR**
+- Concrete starting points:
+  - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Tyrone Tracy (RB-NYG)** (49.8) → get **Rome Odunze (WR-CHI)** (34.4)
+  - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (33.8) → get **Rome Odunze (WR-CHI)** (34.4)
+  - _1-for-1_ — give **Tony Pollard (RB-TEN)** (35.0) → get **Rome Odunze (WR-CHI)** (34.4)
+  - _1-for-1_ — give **Tyrone Tracy (RB-NYG)** (16.0) → get **Romeo Doubs (WR-NE)** (14.2)
+  - _1-for-1_ — give **Bhayshul Tuten (RB-JAX)** (48.0) → get **Rome Odunze (WR-CHI)** (34.4)
+
+### Jersey Rum Hams — fit score 37.28
 - Roster counts: QB:2 / RB:5 / WR:6 / TE:1
-- They need: **QB (20.7), RB (11.21)**
+- They need: **QB (20.74), RB (10.53)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _1-for-1_ — give **Tyrone Tracy (RB-NYG)** (16.0) → get **Chris Godwin (WR-TB)** (23.1)
@@ -99,16 +114,6 @@
   - _1-for-1_ — give **Tyrone Tracy (RB-NYG)** (16.0) → get **Jalen Coker (WR-CAR)** (11.1)
   - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (33.8) → get **Chris Godwin (WR-TB)** (23.1)
   - _1-for-1_ — give **Tony Pollard (RB-TEN)** (35.0) → get **Chris Godwin (WR-TB)** (23.1)
-
-### mtngoblin — fit score 37.39
-- Roster counts: QB:3 / RB:6 / WR:4 / TE:2
-- They need: **WR (16.92), RB (11.12), TE (9.92)**
-- Shape: I send **RB**, I get back **WR**
-- Concrete starting points:
-  - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (33.8) → get **Rome Odunze (WR-CHI)** (33.8)
-  - _1-for-1_ — give **Tony Pollard (RB-TEN)** (35.0) → get **Rome Odunze (WR-CHI)** (33.8)
-  - _1-for-1_ — give **Tyrone Tracy (RB-NYG)** (16.0) → get **Romeo Doubs (WR-NE)** (14.2)
-  - _1-for-1_ — give **Bhayshul Tuten (RB-JAX)** (48.0) → get **Rome Odunze (WR-CHI)** (33.8)
 
 
 ## News
