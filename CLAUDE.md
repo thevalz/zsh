@@ -14,6 +14,35 @@ already cost someone a day.
 - Trade deadline week 12, playoffs start week 15.
 - Our manager is `thevalz`, team **supervillain**, `roster_id` 1.
 
+## The one rule
+
+**Never state a player's status, prognosis, or return timeline without quoting
+the blurb you read.** If you cannot cite it, do not say it.
+
+Run `python3 -m fantasy.monitor player --name "..."` and paste the line that
+decided it. This is checkable after the fact, which the older wording
+("always check the blurb") was not — that version was written into this file
+and broken within the hour.
+
+Why it keeps mattering: Sleeper's `injury_status` and `injury_body_part` carry
+**no date**. Tank Dell read as `IR (Knee - ACL + MCL)` and was called done for
+the season; the injury was December 2024, he is designated to return, and the
+Texans had just restructured his deal to keep him. The tag was accurate and the
+conclusion drawn from it was wrong. Patrick Mahomes currently reads
+`Questionable (Knee - ACL)` for the same reason — the field is a body part, not
+a diagnosis, and not a date.
+
+The tools now enforce parts of this so it is harder to skip:
+
+- A designation with no blurb behind it renders as `Questionable · unverified`.
+  If you see `unverified`, you have not checked, and you may not conclude.
+- Reserve-list players are no longer dropped from the waiver board. They are
+  resolved against their news into a `STASH` tier (designated to return) or
+  filtered out (finished for the year). The old silent filter hid James Conner,
+  a 21-value back sitting unrostered on IR.
+- `assess()` reports `blurb_age_days` and flags `stale` past 14 days, so a
+  designation whose newest news is weeks old announces itself.
+
 ## Branch and PR protocol
 
 Each Claude session is handed a `claude/<slug>-<id>` branch and told to push
@@ -91,29 +120,26 @@ python3 build_site.py                          # renders docs/ from the reports
 
 ## Analysis lessons worth not relearning
 
-**A designation is not a diagnosis.** Sleeper tags a cramp and a hyperextended
-knee both `Questionable`. Scoring the tag alone once put a third-string back at
-the top of the waiver board on the strength of a starter who was fine. Always
-check the blurb (`monitor player --name`) before acting on an injury.
+Every error made in this repo so far has one shape: **a structured field was
+read as the answer when the answer was in the prose.** The tool was roughly
+right each time and the narration went past it. When a number and a sentence
+disagree, the sentence wins — go read it.
 
-The `serious` / `likely minor` verdict is keyword matching over prose, so it
-errs in both directions — it lands on `unclear` often, and a healthy player
-whose blurb mentions an old injury can read `serious`. Treat it as a pointer to
-the text, never as the answer. Read the blurb yourself.
+- **Practice participation beats the designation.** Questionable + full Friday
+  practice means he plays. Questionable + DNP is a coin flip.
+- **Consensus rank is stale exactly when it matters.** A player whose situation
+  changed this week still carries last month's rank. Heavy add volume is the
+  market re-ranking him live — but the market also over-reacts to headlines that
+  later reports walk back. Read the news before endorsing a bid.
+- **Standalone and conditional value are different questions.** On a roster this
+  deep a handcuff who will never crack the lineup has no standalone value; only
+  the payoff *if* the starter goes down counts. Insure the biggest asset, not
+  the best available backup.
+- **Waivers cannot fix the WR hole.** The best free-agent receiver has been worse
+  than our WR4 all season. Only a trade fixes it — stop proposing claims for it.
+- **`assess()`'s serious/likely-minor verdict is keyword matching** and errs both
+  ways. It is a pointer to the text, never the answer.
 
-**Practice participation beats the designation.** Questionable + full Friday
-practice means he plays. Questionable + DNP is a coin flip.
-
-**Consensus rank is stale exactly when it matters.** A player whose situation
-changed this week still carries last month's rank. Heavy waiver-add volume is
-the market re-ranking him in real time — but the market also over-reacts to
-headlines that later reports walk back, so read the news before endorsing a bid.
-
-**Standalone value and conditional value are different questions.** For a roster
-this deep, a handcuff who will never crack the lineup has no standalone value;
-only the payoff *if* the starter goes down matters. Insure the biggest asset,
-not the best available backup.
-
-**Waivers cannot fix this roster's WR hole.** The best free-agent receiver has
-been worse than our WR4 all season. That problem is solvable only by trade —
-don't keep proposing waiver claims for it.
+Silent filters are the dangerous bugs here. An empty result looks like "nothing
+there" and a prior fills the vacuum. If you exclude a class of player, say so in
+the output.

@@ -7,7 +7,7 @@ import json
 import re
 import urllib.error
 import urllib.request
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 
 FEEDS = [
     "https://site.api.espn.com/apis/site/v2/sports/football/nfl/news?limit=50",
@@ -165,6 +165,38 @@ def player_news(rotowire_id, limit: int = 4) -> list:
     return out
 
 
+# A player on a reserve list is either finished for the year or waiting out a
+# window with a date on it. Those warrant opposite responses, and the
+# designation alone never distinguishes them -- only the prose does.
+RETURN_DESIGNATION = re.compile(
+    r"designat(?:ed|ion) to return|eligible to return|return(?:ed)? to practice|"
+    r"opened? (?:his |the )?(?:21|practice)[- ]day window|activated (?:from|off)|"
+    r"cleared to (?:return|play)|inching closer to (?:a )?return|nearing a return",
+    re.IGNORECASE)
+
+DONE_FOR_YEAR = re.compile(
+    r"out for the season|season[- ]ending|miss(?:ed|ing)? the (?:rest of the |remainder of the )?season|"
+    r"placed on (?:the )?reserve/retired|will not play (?:again )?this season",
+    re.IGNORECASE)
+
+ELIGIBLE_WEEK = re.compile(r"eligible (?:to return )?(?:in |for |as early as |until )?week (\d{1,2})",
+                           re.IGNORECASE)
+
+_MONTHS = ("January February March April May June July August September "
+           "October November December").split()
+
+
+def _parse_date(text: str):
+    """RotoWire stamps read 'September 3, 2026'. Returns a date, or None."""
+    m = re.match(r"([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})", (text or "").strip())
+    if not m or m.group(1) not in _MONTHS:
+        return None
+    try:
+        return date(int(m.group(3)), _MONTHS.index(m.group(1)) + 1, int(m.group(2)))
+    except ValueError:
+        return None
+
+
 def assess(blurbs: list) -> dict:
     """Read the prose for the two things a designation cannot tell you:
     how serious it sounds, and whether he practiced."""
@@ -182,10 +214,27 @@ def assess(blurbs: list) -> dict:
         verdict = "likely minor"
     else:
         verdict = "unclear"
+    # Reserve-list reading: waiting out a window, or finished for the year.
+    reserve_text = " ".join(f"{b['headline']} {b['body']}" for b in blurbs[:4])
+    done = bool(DONE_FOR_YEAR.search(reserve_text))
+    returning = bool(RETURN_DESIGNATION.search(reserve_text)) and not done
+    wk = ELIGIBLE_WEEK.search(reserve_text)
+
+    # How old is the freshest thing anyone has written? A designation whose
+    # newest blurb is weeks old is describing something that already happened,
+    # which is how a December 2024 knee kept reading as a current injury.
+    newest = next((d for d in (_parse_date(b["date"]) for b in blurbs) if d), None)
+    age = (date.today() - newest).days if newest else None
+
     return {
         "verdict": verdict,
         "practice": practice,
         "headline": blurbs[0]["headline"] if blurbs else "",
         "body": blurbs[0]["body"] if blurbs else "",
         "date": blurbs[0]["date"] if blurbs else "",
+        "return_designated": returning,
+        "done_for_year": done,
+        "eligible_week": int(wk.group(1)) if wk else None,
+        "blurb_age_days": age,
+        "stale": age is not None and age > 14,
     }

@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from . import config, model, sleeper
+from . import config, model, news, sleeper
 from .model import League, player_value, vacancy
 
 
@@ -28,6 +28,8 @@ class Candidate:
     starter_available: bool = False
     clear_path: bool = False
     market_rerated: bool = False
+    on_reserve: bool = False
+    news: dict = field(default_factory=dict)
     own_value: float = 0.0
     reasons: list = field(default_factory=list)
     blocks: list = field(default_factory=list)   # who is ahead of him
@@ -66,8 +68,12 @@ def build_board(lg: League, charts: dict | None = None, top: int = 15) -> list:
     for pid, p in lg.players.items():
         if pid in rostered or not model.is_available_body(p):
             continue
-        # A free agent who is himself out for the season is not an opportunity.
-        if p.get("injury_status") in ("IR", "PUP", "Sus", "DNR"):
+        # Reserve-list players are NOT skipped here. Dropping them silently
+        # once hid a 21-value running back sitting unrostered on IR with a
+        # designation to return, and silence reads as "nothing there". They are
+        # carried through and resolved against their news below.
+        on_reserve = p.get("injury_status") in config.RESERVE_STATUSES
+        if on_reserve and player_value(p) < config.STASH_MIN_VALUE:
             continue
 
         cand = Candidate(
@@ -77,6 +83,7 @@ def build_board(lg: League, charts: dict | None = None, top: int = 15) -> list:
             nfl_team=p["team"],
             market_adds=int(market.get(pid, 0)),
             own_value=round(player_value(p), 1),
+            on_reserve=on_reserve,
         )
 
         ahead = model.players_ahead(pid, lg.players, charts)
@@ -179,9 +186,15 @@ def build_board(lg: League, charts: dict | None = None, top: int = 15) -> list:
         )
         cand.tier = _tier(cand)
 
-        if cand.score >= config.MIN_SCORE:
+        if cand.on_reserve:
+            # Nobody is "ahead" of a player who is simply unavailable; his case
+            # rests on what he is worth once he is back.
+            cand.score = cand.own_value
+            board.append(cand)
+        elif cand.score >= config.MIN_SCORE:
             board.append(cand)
 
+    board = _resolve_reserves(lg, board)
     board.sort(key=lambda c: -c.score)
 
     # Cap each position so a deep pool at one spot (usually TE, where 12 teams
@@ -196,12 +209,45 @@ def build_board(lg: League, charts: dict | None = None, top: int = 15) -> list:
     return trimmed[:top]
 
 
+def _resolve_reserves(lg: League, board: list) -> list:
+    """Read the news for reserve-list candidates and keep only the real stashes.
+
+    This is the one place the board spends requests on players who cannot help
+    this week, because the alternative -- assuming a reserve designation means
+    "finished" -- is the assumption that hid James Conner and misread Tank
+    Dell's two-season-old knee as a current injury.
+    """
+    reserves = sorted(
+        (c for c in board if c.on_reserve), key=lambda c: -c.own_value
+    )[: config.MAX_STASH_LOOKUPS]
+    keep = []
+    for c in reserves:
+        p = lg.players.get(c.pid) or {}
+        info = news.assess(news.player_news(p.get("rotowire_id")))
+        c.news = info
+        if info.get("done_for_year") or not info.get("return_designated"):
+            continue
+        wk = info.get("eligible_week")
+        c.reasons = [
+            "on a reserve list but designated to return"
+            + (f", eligible week {wk}" if wk else "")
+        ]
+        if info.get("headline"):
+            c.reasons.append(f"{info['date']}: {info['headline']}")
+        c.tier = "STASH"
+        keep.append(c)
+    kept = {id(c) for c in keep}
+    return [c for c in board if not c.on_reserve or id(c) in kept]
+
+
 def _tier(c: Candidate) -> str:
     """URGENT   -- the job is open right now.
     BUY EARLY   -- the job is not open, and the market has not priced the risk.
     INSURANCE   -- protects a starter of mine specifically.
     STARTER FA  -- simply a good player nobody rostered.
     """
+    if c.on_reserve:
+        return "STASH"
     starter_hurt = any(
         "is Out" in r or "is IR" in r or "is Doubtful" in r for r in c.reasons
     )

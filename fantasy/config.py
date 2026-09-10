@@ -100,6 +100,15 @@ W_MARKET = 0.30         # penalty as the rest of the world catches on
 # bonus scaled to the job he is stepping into.
 CLEAR_PATH_BONUS = 0.55
 
+# Reserve lists (IR/PUP) are not a verdict. A player waiting out a window with
+# a date on it is a stash; a player finished for the year is not -- and the
+# designation alone never says which. Candidates at or above this standing
+# value get their news read before we decide, which is a handful of players,
+# not the whole pool.
+STASH_MIN_VALUE = 6.0
+MAX_STASH_LOOKUPS = 6
+RESERVE_STATUSES = ("IR", "PUP", "Sus", "DNR", "NA")
+
 # A free agent needs this much score to make the board at all.
 MIN_SCORE = 4.0
 

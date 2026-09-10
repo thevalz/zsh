@@ -9,6 +9,7 @@ TIER_ICON = {
     "URGENT": "🚨",
     "BUY EARLY": "🟢",
     "CONTESTED": "🔥",
+    "STASH": "🧊",
     "INSURANCE": "🛡️",
     "STARTER FA": "🔹",
     "SPECULATIVE": "·",
@@ -63,6 +64,8 @@ def suggest_bid(cand, faab: int) -> str:
         pct = 0.30   # everyone sees it; a token bid just donates the claim
     elif cand.tier == "BUY EARLY":
         pct = 0.06
+    elif cand.tier == "STASH":
+        pct = 0.05   # a dated return window is worth a real but modest bid
     elif cand.tier == "STARTER FA":
         pct = 0.04
     elif cand.tier == "INSURANCE":
@@ -88,7 +91,7 @@ def suggest_bid(cand, faab: int) -> str:
     # A pure handcuff with no standalone worth is a lottery ticket, however
     # valuable the job in front of him. Never bid real money on one -- if the
     # starter goes down the backup will still be there, or the next man will.
-    if cand.own_value < 5 and cand.tier not in ("URGENT", "CONTESTED") \
+    if cand.own_value < 5 and cand.tier not in ("URGENT", "CONTESTED", "STASH") \
             and not cand.market_rerated:
         dollars = min(dollars, 2)
 
@@ -104,9 +107,36 @@ def handcuff_section(rows: list) -> str:
             continue
         b = r["backups"][0]
         avail = "**FREE AGENT**" if b["available"] else f"rostered ({b['owner']})"
-        inj = r["injury"] or "healthy"
-        out.append(f"| {r['label']} | {inj} | {b['label']} | {avail} |")
+        out.append(f"| {r['label']} | {designation(r['injury'])} | {b['label']} | {avail} |")
+    out.append(
+        "\n*A designation shown as `unverified` has had no beat-reporter blurb read "
+        "for it. The tag alone cannot tell a cramp from a torn ACL, or a current "
+        "injury from a two-year-old one — run "
+        "`python3 -m fantasy.monitor player --name \"...\"` before acting on it.*"
+    )
     return "\n".join(out) + "\n"
+
+
+def designation(status, info: dict | None = None) -> str:
+    """Render an injury designation, never as bare fact.
+
+    Without a blurb behind it a tag is an unverified claim, and it is labelled
+    as one. With a blurb, the evidence and its date travel alongside.
+    """
+    if not status:
+        return "healthy"
+    if not info:
+        return f"{status} · _unverified_"
+    bits = [status]
+    if info.get("practice"):
+        bits.append(f"practice {info['practice']}")
+    if info.get("stale"):
+        bits.append(f"newest news {info['blurb_age_days']}d old")
+    if info.get("return_designated"):
+        wk = info.get("eligible_week")
+        bits.append("designated to return" + (f" wk {wk}" if wk else ""))
+    tail = f" — _{info['date']}: {info['headline']}_" if info.get("headline") else ""
+    return " · ".join(bits) + tail
 
 
 def my_position_section(summary: dict) -> str:
