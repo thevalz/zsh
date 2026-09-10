@@ -12,14 +12,15 @@ _depth charts as of 2026-09-09; defender grades pool PFR coverage stats from 202
 | Bhayshul Tuten | RB | JAX | FLEX | vs CLE | 🟡 NEUTRAL | 58 | MLB Carson Schwesinger [C 45]<br>WLB Easton Mascarenas-Arnold [?] (no coverage data) | CLE run D [B 65, #13] |
 | Rico Dowdle | RB | PIT | FLEX | vs ATL | 🟡 NEUTRAL | 40 | LILB Divine Deablo [C 59]<br>RILB Christian Harris [?] (low sample (9 tgt)) | ATL run D [D 30, #23] |
 | Cam Skattebo | RB | NYG | RB | vs DAL | 🟢 SOFT | 31 | LILB DeMarvion Overshown [?] (low sample (16 tgt))<br>RILB Dee Winters [B 63] | DAL run D [F 14, #29] |
-| Quentin Johnston | WR | LAC | WR | vs ARI | 🟡 NEUTRAL | 41 | (outside) LCB Will Johnson [D 33]<br>RCB Denzel Burke [B 67] | ARI pass D [D 25, #26] |
+| Emeka Egbuka | WR | TB | WR | @ CIN | 🟡 NEUTRAL | 51 | (outside) LCB Dax Hill [B 61]<br>RCB DJ Turner II [B 74] | CIN pass D [F 19, #29] |
 | Tetairoa McMillan | WR | CAR | WR | vs CHI | 🟢 SOFT | 36 | (outside) LCB Jaylon Johnson [D 29]<br>RCB Tyrique Stevenson [C 53] | CHI pass D [D 28, #23] |
 | Trey McBride | TE | ARI | TE | @ LAC | 🔴 TOUGH | 73 | FS Elijah Molden [C 45]<br>SS Derwin James Jr. [A 83] | LAC pass D [A 82, #6] |
 | Tyrone Tracy Jr. | RB | NYG | BN | vs DAL | 🟢 SOFT | 31 | LILB DeMarvion Overshown [?] (low sample (16 tgt))<br>RILB Dee Winters [B 63] | DAL run D [F 14, #29] |
 | Tony Pollard | RB | TEN | BN | vs NYJ | 🟢 SOFT | 29 | MLB Jamien Sherwood [D 39]<br>WLB Demario Davis [C 51] | NYJ run D [F 18, #26] |
+| Tank Dell | WR | HOU | BN | vs BUF | 🔴 TOUGH | 72 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 90, #2] |
 | Alec Pierce | WR | IND | BN | vs BAL | 🟡 NEUTRAL | 54 | (outside) LCB Nate Wiggins [B 71]<br>RCB Marlon Humphrey [C 51] | BAL pass D [D 40, #19] |
-| Emeka Egbuka | WR | TB | BN | @ CIN | 🟡 NEUTRAL | 51 | (outside) LCB Dax Hill [B 61]<br>RCB DJ Turner II [B 74] | CIN pass D [F 19, #29] |
-| Dallas Goedert | TE | PHI | BN | vs WAS | 🟢 SOFT | 26 | FS Jeremy Reaves [C 45]<br>SS Nick Cross [C 43] | WAS pass D [F 8, #31] |
+| Tre Tucker | WR | LV | BN | vs MIA | 🟡 NEUTRAL | 42 | (outside) LCB Jason Marshall Jr. [?] (low sample (25 tgt))<br>RCB JuJu Brents [?] (low sample (13 tgt)) | MIA pass D [D 26, #24] |
+| Quentin Johnston | WR | LAC | BN | vs ARI | 🟡 NEUTRAL | 41 | (outside) LCB Will Johnson [D 33]<br>RCB Denzel Burke [B 67] | ARI pass D [D 25, #26] |
 
 ## East Coast Wins Most (ltsivin) -- this week's opponent
 
