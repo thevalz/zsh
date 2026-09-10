@@ -1,29 +1,27 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-10 11:26 UTC
+**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-10 16:28 UTC
 
 ## Since last run
 
-- 📈 **TreVeyon Henderson (RB-NE) moved up the depth chart (4 → 1)** — Workload is trending his way.
-  ↳ _September 8, 2026 — Sitting out season opener:_ The Patriots ruled out Henderson for Wednesday's season opener versus the Seahawks,  Evan Lazar of the Patriots' official site  reports. (practice: **DNP**, serious)
-- 📈 **Zach Charbonnet (RB-SEA) moved up the depth chart (4 → 2)** — Workload is trending his way.
-  ↳ _September 7, 2026 — Progressing in rehab:_ Coach Mike Macdonald said Monday that Charbonnet (knee) looks "awesome" in his rehab from a torn ACL,  Gregg Bell of The Tacoma News Tribune  reports. (serious)
-- ⚠️ **Myles Montgomery (RB-NE) cleared (IR → healthy)** — FREE AGENT player is off the report.
-  ↳ _August 13, 2026 — Reverts to IR:_ Montgomery (undisclosed) reverted to injured reserve with the Patriots on Thursday, per the  NFL's official transaction log . (serious)
+- ⚠️ **Josh Jacobs (RB-GB) NA → Out** — NYKatSnatchers's player's status changed. Next up: **Kerrith Whyte (RB-GB)** — FREE AGENT, claim him.
+  ↳ _September 10, 2026 — Makes court appearance Thursday:_ Jacobs (personal) appeared in court in Green Bay on Thursday and pleaded no contest to misdemeanor charges of battery and criminal damage to property,  Matt Schneidman of The Athletic  reports.
+- 📈 **Ray Davis (RB-BUF) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
+  ↳ _August 28, 2026 — Tough night in final exhibition contest:_ Davis didn't receive a touch on offense but gained 11 yards on two punt returns while losing a fumble in Thursday's 28-27 preseason win over the Steelers.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
-| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 41,661 adds in 24h — the market has re-rated him | 41,661 | $35 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 47,970 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 47,970 | $5 |
+| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 53,644 adds in 24h — the market has re-rated him | 53,644 | $35 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 41,427 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 41,427 | $5 |
 | 🟢 | **Emanuel Wilson (RB-SEA)** | BUY EARLY | 6.8 | Zach Charbonnet is PUP (Knee - ACL) | 0 | $6 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); 34,875 adds in 24h — the market has re-rated him | 34,875 | $2 |
-| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 16,430 | $4 |
-| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 18,996 | $4 |
+| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); Malik Nabers is Questionable (Knee - ACL) | 30,690 | $2 |
+| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 18,147 | $4 |
+| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 17,336 | $4 |
 | · | **Justin Fields (QB-KC)** | SPECULATIVE | 0.1 | every man ahead of him is banged up (1 deep); Patrick Mahomes is Questionable (Knee - ACL) | 0 | $1 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 11.8 | starting for his NFL team and unrostered | 0 | $4 |
 
