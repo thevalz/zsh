@@ -1,39 +1,26 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-10 03:41 UTC
+**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-10 04:03 UTC
 
 ## Since last run
 
-- 🚨 **Tank Dell (WR-HOU) → IR** — MY player newly listed IR. Next up: **Jayden Higgins (WR-HOU)** — rostered by It's Gonna be Maye.
-  ↳ _September 4, 2026 — Takes pay cut from Houston:_ Dell (knee) agreed to take a pay cut from the Texans on Friday,  Aaron Wilson of KPRC 2 Houston  reports.
-- 📈 **Jordyn Tyson (WR-NO) moved up the depth chart (11 → 6)** — Workload is trending his way.
-  ↳ _August 30, 2026 — Lands on IR, designated to return:_ Tyson (hamstring) was  placed on injured reserve  with a designation to return by New Orleans on Sunday. (serious)
-- ⚠️ **A.J. Brown (WR-NE) → Out** — Brooklyn Meatpackers's player newly listed Out. Next up: **Romeo Doubs (WR-NE)** — rostered by mtngoblin.
-  ↳ _September 9, 2026 — Will not return Wednesday:_ Brown (ankle) has been  ruled out  for the remainder of Wednesday's contest versus Seattle.
-- ⚠️ **Sam Darnold (QB-SEA) → Out** — Randaltheandal's player newly listed Out. Next up: **Drew Lock (QB-SEA)** — FREE AGENT, claim him.
-  ↳ _September 9, 2026 — Ruled out with injury:_ Darnold (hip) has been  ruled out  for the remainder of Wednesday night's game against New England.
-- 📤 **Dallas Goedert (TE-PHI) was dropped** — Now a free agent — check the waiver board below.
-  ↳ _September 3, 2026 — No preseason action:_ Goedert didn't see any action during the Eagles' three-game preseason slate.
-- 📥 **Jerry Jeudy (WR-CLE) was added** — Picked up by Down to Pound.
-  ↳ _September 4, 2026 — Listed as starting wideout:_ Jeudy is  listed  as a starting wide receiver on Cleveland's initial depth chart ahead of the team's Week 1 game against the Jaguars. (serious)
-- ⚠️ **Alvin Kamara (RB-NO) → Questionable** — FREE AGENT player newly listed Questionable. Next up: **Kendre Miller (RB-NO)** — FREE AGENT, claim him.
-  ↳ _September 9, 2026 — Returns to practice Wednesday:_ Kamara (knee) returned to practice Wednesday,  Mike Triplett of NewOrleans.Football  reports.
+Nothing changed.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
-| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 29,760 adds in 24h — the market has re-rated him | 29,760 | $35 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 52,371 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 52,371 | $5 |
+| 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
+| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 31,676 adds in 24h — the market has re-rated him | 31,676 | $35 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 52,740 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 52,740 | $5 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔥 | **Darnell Mooney (WR-NYG)** | CONTESTED | 3.9 | every man ahead of him is banged up (1 deep); 37,926 adds in 24h — the market has re-rated him | 37,926 | $30 |
-| 🛡️ | **Najee Harris (RB-NYG)** | INSURANCE | 5.9 | direct handcuff to MY Cam Skattebo | 16,095 | $3 |
+| 🔥 | **Darnell Mooney (WR-NYG)** | CONTESTED | 3.9 | every man ahead of him is banged up (1 deep); 38,268 adds in 24h — the market has re-rated him | 38,268 | $30 |
+| 🛡️ | **Najee Harris (RB-NYG)** | INSURANCE | 5.9 | direct handcuff to MY Cam Skattebo | 16,240 | $3 |
 | · | **Jake Tonges (TE-SF)** | SPECULATIVE | 5.1 | every man ahead of him is banged up (1 deep); George Kittle is Questionable (Achilles) | 0 | $1 |
-| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 15,516 | $4 |
-| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 19,758 | $4 |
+| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 15,708 | $4 |
+| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 19,788 | $4 |
 | · | **Justin Fields (QB-KC)** | SPECULATIVE | 0.1 | every man ahead of him is banged up (1 deep); Patrick Mahomes is Questionable (Knee - ACL) | 0 | $1 |
-| 🟢 | **Jaylen Wright (RB-MIA)** | BUY EARLY | 5.5 | handcuff to De'Von Achane (East Coast Wins Most) | 0 | $6 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
@@ -50,6 +37,8 @@
 | Tony Pollard (RB-TEN) | healthy | Tyjae Spears (RB-TEN) | **FREE AGENT** |
 | Rico Dowdle (RB-PIT) | healthy | Eli Heidenreich (RB-PIT) | **FREE AGENT** |
 | Tyrone Tracy (RB-NYG) | healthy | Devin Singletary (RB-NYG) | **FREE AGENT** |
+
+*A designation shown as `unverified` has had no beat-reporter blurb read for it. The tag alone cannot tell a cramp from a torn ACL, or a current injury from a two-year-old one — run `python3 -m fantasy.monitor player --name "..."` before acting on it.*
 
 ## Where I stand
 
