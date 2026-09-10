@@ -4,14 +4,13 @@ name: Build matchups + waiver site
 # them into docs/, and commits the result. GitHub Pages is set to
 # "Deploy from a branch" -> this branch -> /docs, so the commit is the deploy.
 #
-# Note: GitHub only runs `schedule` triggers from the repository's default
-# branch. Until this branch is the default (or merged into it), use the
-# "Run workflow" button (workflow_dispatch) or push to the branch.
+# GitHub only runs `schedule` triggers from the repository's default branch,
+# which is `main`, so the crons below are live.
 
 on:
   push:
     branches:
-      - claude/wr-cb-matchup-analysis-jvlvg0
+      - main
     paths:
       - 'matchups.py'
       - 'build_site.py'

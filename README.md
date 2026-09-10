@@ -108,16 +108,16 @@ The site is plain static HTML in `docs/`, rebuilt by `.github/workflows/site.yml
 2. `python3 -m fantasy.monitor report --out reports/waivers.md` writes the waiver/trade report and updates
    `fantasy/state/snapshot.json` so the next run can diff against it.
 3. `build_site.py` renders both into `docs/` (dashboard, per-week pages, waiver page, weeks index).
-4. The workflow commits `docs/`, `matchups/`, `reports/` and the snapshot back to the branch.
+4. The workflow commits `docs/`, `matchups/`, `reports/` and the snapshot back to `main`.
 
 Rebuild locally with the same three commands, then open `docs/index.html`.
 
 **One-time repository settings** (cannot be changed from a workflow):
 
-- *Settings → Pages → Build and deployment*: Source **Deploy from a branch**, branch **this branch**, folder
-  **/docs**. Pages was previously pointed at the keeper branch's root; `docs/draft-live.html` here is an archived
-  copy of that draft console so its URL keeps working under the new source.
-- *Settings → General → Default branch*: GitHub only runs scheduled (`cron`) workflows from the default branch.
-  Make this branch the default, or merge it into the default, for the every-6-hours rebuild to happen on its own.
-  Until then, trigger it from *Actions → Build matchups + waiver site → Run workflow*.
+- *Settings → Pages → Build and deployment*: Source **Deploy from a branch**, branch **main**, folder **/docs**.
+  Pages was previously pointed at the keeper branch's root; `docs/draft-live.html` here is an archived copy of
+  that draft console so its URL keeps working under the new source. **This must be repointed to `main` by hand**
+  — a workflow cannot change it, and until it is, the site keeps deploying from the old branch.
+- *Settings → General → Default branch*: `main`. GitHub only runs scheduled (`cron`) workflows from the default
+  branch, so the every-6-hours rebuild depends on this being set.
 
