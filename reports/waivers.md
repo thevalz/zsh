@@ -1,26 +1,27 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-10 04:03 UTC
+**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-10 04:49 UTC
 
 ## Since last run
 
-Nothing changed.
+- ⚠️ **George Kittle (TE-SF) cleared (Questionable → healthy)** — It's Gonna be Maye's player is off the report.
+  ↳ _September 9, 2026 — In clear to play Week 1:_ Kittle (Achilles) isn't listed on the 49ers' injury report ahead of Thursday's contest against the Rams,  Matt Maiocco of NBC Sports Bay Area  reports. (serious)
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
-| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 31,676 adds in 24h — the market has re-rated him | 31,676 | $35 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 52,740 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 52,740 | $5 |
+| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 33,945 adds in 24h — the market has re-rated him | 33,945 | $35 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 51,300 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 51,300 | $5 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔥 | **Darnell Mooney (WR-NYG)** | CONTESTED | 3.9 | every man ahead of him is banged up (1 deep); 38,268 adds in 24h — the market has re-rated him | 38,268 | $30 |
-| 🛡️ | **Najee Harris (RB-NYG)** | INSURANCE | 5.9 | direct handcuff to MY Cam Skattebo | 16,240 | $3 |
-| · | **Jake Tonges (TE-SF)** | SPECULATIVE | 5.1 | every man ahead of him is banged up (1 deep); George Kittle is Questionable (Achilles) | 0 | $1 |
-| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 15,708 | $4 |
-| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 19,788 | $4 |
+| 🛡️ | **Najee Harris (RB-NYG)** | INSURANCE | 5.9 | direct handcuff to MY Cam Skattebo | 15,715 | $3 |
+| 🔥 | **Darnell Mooney (WR-NYG)** | CONTESTED | 3.9 | every man ahead of him is banged up (1 deep); 37,215 adds in 24h — the market has re-rated him | 37,215 | $30 |
+| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 15,904 | $4 |
+| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 19,461 | $4 |
 | · | **Justin Fields (QB-KC)** | SPECULATIVE | 0.1 | every man ahead of him is banged up (1 deep); Patrick Mahomes is Questionable (Knee - ACL) | 0 | $1 |
+| 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 11.8 | starting for his NFL team and unrostered | 0 | $4 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
