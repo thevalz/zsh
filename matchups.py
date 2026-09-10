@@ -11,7 +11,10 @@ Data sources (all free, no API keys):
   * nflverse depth charts   -> each defense's starting CBs, off-ball LBs,
                                safeties; each offense's WR1/WR2/WR3
   * nflverse PFR advstats   -> per-defender coverage stats allowed
-  * nflverse team/player weekly stats -> what each defense allows
+  * nflverse team/player weekly stats -> what each defense allows, and
+                               each receiver's target volume last season
+  * nflverse schedules      -> Vegas spread and total (game script)
+  * shadow_corners.json     -> corners documented as travelling with WR1s
 
 Individual defender grades
   Coverage stats from this season, last season and (half weight) the
@@ -20,7 +23,10 @@ Individual defender grades
   vs safeties, LBs vs LBs) on yards per target, passer rating and
   completion % allowed. The average percentile is a 0-100 score
   (100 = hardest to throw on), shrunk toward 50 for small samples, and
-  maps to a grade A-F. Rookies / low samples show "?".
+  maps to a grade A-F. Rookies / low samples show "?". A second score
+  from the last two seasons only is shown when it differs from the
+  pooled one, and the matchup uses the average of the two so a corner
+  who broke out last year is not dragged down by his rookie tape.
 
 Team defense grades
   From last season plus this season (this season weighted 1.5x as it
@@ -31,9 +37,21 @@ Team defense grades
 
 Who faces whom
   QB  -> opponent pass D
-  WR  -> boundary CBs (outside) or nickel (slot), blended with pass D
-  TE  -> the two starting safeties, blended with pass D
+  WR  -> boundary CBs (outside) or nickel (slot), blended with the PPR
+         the defense allows *to receivers* (not the overall pass grade:
+         a defense can be terrible against the pass and still hold WRs
+         if the leak is at TE and RB -- the report says where it goes)
+  TE  -> the two starting safeties, blended with PPR allowed to TEs
   RB  -> run D, blended with the off-ball LBs' coverage grades
+  A team's WR1 facing a documented travel corner (shadow_corners.json)
+  is scored against that corner alone.
+
+Context printed with every matchup
+  Vegas  -> spread, total and the team's implied points; a heavy
+            favourite leans run, an underdog in a high total throws
+  Volume -> last season's targets per game and target share (and this
+            season's once it exists); the floor a matchup cannot take away
+  Health -> Sleeper injury tags on the defenders themselves
 
 Usage
   python3 matchups.py                    # my lineup + my opponent's, this week
@@ -88,6 +106,16 @@ CURRENT_SEASON_TEAM_WEIGHT = 1.5
 BLEND = {"WR": 0.65, "TE": 0.5, "RB": 0.4}   # weight on the individual matchup
 
 OVERRIDES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "wr_alignment_overrides.json")
+SHADOW_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "shadow_corners.json")
+
+RECENT_SEASONS = 2        # the "recent" defender score uses this many seasons at full weight
+RECENT_DELTA = 8          # show the recent score when it differs from pooled by this much
+HEAVY_FAVORITE = 7.0      # favoured by this many -> run-leaning script
+LIVE_DOG = 3.0            # underdog by this many in a high total -> pass-volume script
+HIGH_TOTAL = 48.0
+LOW_TOTAL = 41.0
+LEAK_RANK = 27            # a defense ranked here or worse (of 32) vs a position "leaks" to it
+HOLD_RANK = 6             # ranked here or better "holds" it
 
 # PFR position label -> grading group
 POS_GROUP = {
@@ -221,6 +249,13 @@ def score_or_neutral(x: dict | None) -> float:
     return x["score"] if x and x.get("score") is not None else NEUTRAL_SCORE
 
 
+def eff_score(x: dict | None) -> float:
+    """A defender's score as used in the blend (pooled averaged with recent), else neutral."""
+    if x and x.get("eff_score") is not None:
+        return x["eff_score"]
+    return score_or_neutral(x)
+
+
 # ---------------------------------------------------------------------------
 # Data loading
 # ---------------------------------------------------------------------------
@@ -230,15 +265,30 @@ def load_state(refresh: bool) -> dict:
 
 
 def load_schedule(season: int, week: int, refresh: bool) -> dict[str, dict]:
-    """team -> {opp, home, gameday, gametime} for the given week."""
+    """team -> {opp, home, gameday, gametime, fav_by, total, implied} for the week.
+
+    nflverse's spread_line is from the home team's side: positive means the
+    home team is favoured by that much. fav_by is re-expressed from each
+    team's own side (negative = underdog), and implied is the team's
+    implied points from the total and the spread.
+    """
     rows = read_csv(fetch_text(f"{NFLVERSE}/schedules/games.csv", refresh))
     out = {}
     for r in rows:
         if r["season"] != str(season) or r["game_type"] != "REG" or r["week"] != str(week):
             continue
         base = {"gameday": r["gameday"], "gametime": r["gametime"], "game_id": r["game_id"]}
-        out[r["home_team"]] = dict(base, opp=r["away_team"], home=True)
-        out[r["away_team"]] = dict(base, opp=r["home_team"], home=False)
+        spread = fnum(r["spread_line"]) if r.get("spread_line") else None
+        total = fnum(r["total_line"]) if r.get("total_line") else None
+
+        def vegas(fav_by):
+            if fav_by is None or total is None:
+                return {"fav_by": None, "total": total, "implied": None}
+            return {"fav_by": fav_by, "total": total, "implied": total / 2 + fav_by / 2}
+
+        out[r["home_team"]] = dict(base, opp=r["away_team"], home=True, **vegas(spread))
+        out[r["away_team"]] = dict(base, opp=r["home_team"], home=False,
+                                   **vegas(-spread if spread is not None else None))
     return out
 
 
@@ -311,36 +361,59 @@ def load_defender_stats(season_weights: dict[int, float], refresh: bool) -> dict
         if cur is None or fnum(r["g"]) > fnum(cur["g"]):   # keep the multi-team total row
             best[(season, key)] = r
 
-    pooled = {}
-    for (season, key), r in best.items():
-        s = pooled.setdefault(key, {
-            "name": r["player"], "pfr_id": r["pfr_id"], "team": r["tm"], "group": POS_GROUP[r["pos"]],
-            "tgt": 0.0, "cmp": 0.0, "yds": 0.0, "td": 0.0, "int": 0.0, "seasons": {},
-        })
-        if season >= max(s["seasons"], default=-1):
-            s.update(team=r["tm"], name=r["player"], group=POS_GROUP[r["pos"]])
-        w = season_weights[season]
-        for f in ("tgt", "cmp", "yds", "td", "int"):
-            s[f] += w * fnum(r[f])
-        s["seasons"][season] = {"tgt": fnum(r["tgt"]), "g": fnum(r["g"]), "team": r["tm"]}
+    def pool(weights: dict[int, float]) -> dict:
+        pooled = {}
+        for (season, key), r in best.items():
+            if season not in weights:
+                continue
+            s = pooled.setdefault(key, {
+                "name": r["player"], "pfr_id": r["pfr_id"], "team": r["tm"], "group": POS_GROUP[r["pos"]],
+                "tgt": 0.0, "cmp": 0.0, "yds": 0.0, "td": 0.0, "int": 0.0, "seasons": {},
+            })
+            if season >= max(s["seasons"], default=-1):
+                s.update(team=r["tm"], name=r["player"], group=POS_GROUP[r["pos"]])
+            w = weights[season]
+            for f in ("tgt", "cmp", "yds", "td", "int"):
+                s[f] += w * fnum(r[f])
+            tgt = fnum(r["tgt"])
+            s["seasons"][season] = {
+                "tgt": tgt, "g": fnum(r["g"]), "team": r["tm"],
+                "cmp_pct": fnum(r["cmp"]) / tgt if tgt else None,
+                "yds_tgt": fnum(r["yds"]) / tgt if tgt else None,
+                "rating": passer_rating(fnum(r["cmp"]), tgt, fnum(r["yds"]), fnum(r["td"]), fnum(r["int"])),
+                "td": fnum(r["td"]), "int": fnum(r["int"]),
+            }
 
-    for s in pooled.values():
-        t = s["tgt"]
-        s["cmp_pct"] = s["cmp"] / t if t else None
-        s["yds_tgt"] = s["yds"] / t if t else None
-        s["rating"] = passer_rating(s["cmp"], t, s["yds"], s["td"], s["int"])
-        s["score"], s["grade"] = None, "?"
+        for s in pooled.values():
+            t = s["tgt"]
+            s["cmp_pct"] = s["cmp"] / t if t else None
+            s["yds_tgt"] = s["yds"] / t if t else None
+            s["rating"] = passer_rating(s["cmp"], t, s["yds"], s["td"], s["int"])
+            s["score"], s["grade"] = None, "?"
 
-    for group in ("CB", "S", "LB"):
-        qualified = [s for s in pooled.values() if s["group"] == group and s["tgt"] >= MIN_TARGETS]
-        if len(qualified) < 2:
-            continue
-        ref = {m: [s[m] for s in qualified] for m in ("yds_tgt", "rating", "cmp_pct")}
-        for s in qualified:
-            raw = sum(percentile_lower_is_better(ref[m], s[m]) for m in ref) / 3
-            shrink = s["tgt"] / (s["tgt"] + SHRINK_TARGETS)
-            s["score"] = NEUTRAL_SCORE + (raw - NEUTRAL_SCORE) * shrink
-            s["grade"] = grade_for(s["score"])
+        for group in ("CB", "S", "LB"):
+            qualified = [s for s in pooled.values() if s["group"] == group and s["tgt"] >= MIN_TARGETS]
+            if len(qualified) < 2:
+                continue
+            ref = {m: [s[m] for s in qualified] for m in ("yds_tgt", "rating", "cmp_pct")}
+            for s in qualified:
+                raw = sum(percentile_lower_is_better(ref[m], s[m]) for m in ref) / 3
+                shrink = s["tgt"] / (s["tgt"] + SHRINK_TARGETS)
+                s["score"] = NEUTRAL_SCORE + (raw - NEUTRAL_SCORE) * shrink
+                s["grade"] = grade_for(s["score"])
+        return pooled
+
+    pooled = pool(season_weights)
+    # A second pass over the most recent seasons only, at full weight. A corner
+    # who broke out last year carries his rookie tape in the pooled number; the
+    # recent score is what he looks like now. Both are kept.
+    recent_years = sorted(season_weights)[-RECENT_SEASONS:]
+    recent = pool({y: 1.0 for y in recent_years})
+    for key, s in pooled.items():
+        r = recent.get(key)
+        s["recent_score"] = r["score"] if r else None
+        s["recent_grade"] = r["grade"] if r else "?"
+        s["recent_years"] = recent_years
     return pooled
 
 
@@ -431,14 +504,63 @@ def load_overrides() -> dict[str, str]:
     return {norm_name(k): v for k, v in raw.get("alignment", {}).items()}
 
 
+def load_shadow_corners() -> dict[str, dict]:
+    """norm_name -> {name, note, source} for corners documented as travelling with WR1s."""
+    if not os.path.exists(SHADOW_FILE):
+        return {}
+    with open(SHADOW_FILE) as fh:
+        raw = json.load(fh)
+    return {norm_name(c["name"]): c for c in raw.get("corners", []) if c.get("name")}
+
+
+def load_sleeper_players(refresh: bool) -> dict:
+    """Sleeper's player file, for injury tags on defenders (a week's cache is plenty)."""
+    try:
+        return fetch_json(f"{SLEEPER}/players/nfl", refresh, ttl=7 * 86400)
+    except (urllib.error.URLError, TimeoutError, ValueError):
+        return {}
+
+
+def load_player_volume(season: int, refresh: bool) -> dict:
+    """(norm_name, pos) -> {season: {g, tgt, share, rec, yds, carries, ppr}}.
+
+    Last season plus this season as it accrues. Volume is the half of a
+    matchup a corner cannot take away, so it is printed next to every grade.
+    """
+    out = defaultdict(dict)
+    for yr in (season - 1, season):
+        text = fetch_text_optional(f"{NFLVERSE}/stats_player/stats_player_week_{yr}.csv", refresh)
+        if text is None:
+            continue
+        acc = defaultdict(lambda: {"g": 0, "tgt": 0.0, "share": 0.0, "share_n": 0, "rec": 0.0,
+                                   "yds": 0.0, "carries": 0.0, "ppr": 0.0})
+        for r in read_csv(text):
+            if r["season_type"] != "REG" or r["position"] not in ("QB", "RB", "WR", "TE"):
+                continue
+            a = acc[(norm_name(r["player_display_name"]), r["position"])]
+            a["g"] += 1
+            a["tgt"] += fnum(r["targets"])
+            a["rec"] += fnum(r["receptions"])
+            a["yds"] += fnum(r["receiving_yards"])
+            a["carries"] += fnum(r["carries"])
+            a["ppr"] += fnum(r["fantasy_points_ppr"])
+            if r.get("target_share"):
+                a["share"] += fnum(r["target_share"])
+                a["share_n"] += 1
+        for key, a in acc.items():
+            out[key][yr] = a
+    return out
+
+
 # ---------------------------------------------------------------------------
 # Matching depth-chart defenders to their PFR stats
 # ---------------------------------------------------------------------------
 
 class DefenderIndex:
-    def __init__(self, stats: dict, roster_by_gsis: dict):
+    def __init__(self, stats: dict, roster_by_gsis: dict, sleeper_players: dict | None = None):
         self.stats = stats
         self.roster = roster_by_gsis
+        self.sleeper = sleeper_players or {}
         self.by_name = defaultdict(list)
         self.by_key = defaultdict(list)
         for s in stats.values():
@@ -458,22 +580,51 @@ class DefenderIndex:
                 return same_team[0]
         return None
 
+    def injury(self, depth_row: dict) -> str:
+        """'Questionable (Ankle)' from Sleeper's player file, or ''."""
+        ros = self.roster.get(depth_row["gsis_id"], {})
+        p = self.sleeper.get(ros.get("sleeper_id") or "", {})
+        status = p.get("injury_status")
+        if not status:
+            return ""
+        part = (p.get("injury_body_part") or "").strip()
+        return f"{status} ({part})" if part else status
+
     def describe(self, depth_row: dict | None, label: str) -> dict:
+        empty = {"injury": "", "seasons": [], "recent_score": None, "recent_grade": "?", "eff_score": None}
         if depth_row is None:
-            return {"name": f"(no {label} listed)", "label": label, "grade": "?", "score": None, "note": ""}
+            return dict(empty, name=f"(no {label} listed)", label=label, grade="?", score=None, note="")
         name = depth_row["player_name"]
         stats = self.lookup(depth_row)
         ros = self.roster.get(depth_row["gsis_id"], {})
+        injury = self.injury(depth_row)
         if stats is None:
             note = "rookie" if ros.get("years_exp") in ("0", "") else "no coverage data"
-            return {"name": name, "label": label, "grade": "?", "score": None, "note": note, "tgt": 0}
-        note = ", ".join(f"{y}: {int(v['tgt'])} tgt" for y, v in sorted(stats["seasons"].items()))
-        if stats["score"] is None:
-            note = f"low sample ({int(stats['tgt'])} tgt)"
+            return dict(empty, name=name, label=label, grade="?", score=None, note=note, tgt=0, injury=injury)
+        seasons = []
+        for y, v in sorted(stats["seasons"].items(), reverse=True):
+            if v["tgt"] and v["cmp_pct"] is not None:
+                seasons.append(f"{y}: {int(v['tgt'])} tgt, {100 * v['cmp_pct']:.0f}% cmp, "
+                               f"{v['yds_tgt']:.1f} y/t, {v['rating']:.0f} rtg, "
+                               f"{int(v['td'])} TD / {int(v['int'])} INT")
+            else:
+                seasons.append(f"{y}: {int(v['tgt'])} tgt")
+        note = f"low sample ({int(stats['tgt'])} tgt)" if stats["score"] is None else ""
+        # The score the matchup actually uses: pooled, averaged with the
+        # recent-seasons-only score when that one is graded, so current form
+        # counts without throwing the longer sample away.
+        eff = stats["score"]
+        rs = stats.get("recent_score")
+        if eff is not None and rs is not None:
+            eff = (eff + rs) / 2
         return {
             "name": name, "label": label, "grade": stats["grade"], "score": stats["score"], "note": note,
             "tgt": stats["tgt"], "yds_tgt": stats["yds_tgt"], "rating": stats["rating"],
             "cmp_pct": stats["cmp_pct"], "td": stats["td"], "int": stats["int"], "group": stats["group"],
+            "injury": injury, "seasons": seasons, "recent_score": rs,
+            "recent_grade": stats.get("recent_grade", "?"),
+            "recent_years": [y for y in stats.get("recent_years", []) if y in stats["seasons"]],
+            "eff_score": eff,
         }
 
 
@@ -492,21 +643,75 @@ def wr_role(name: str, team: str, offense: dict, overrides: dict) -> str:
 
 
 class Evaluator:
-    def __init__(self, week_sched, defense, offense, team_def, idx: DefenderIndex, overrides):
+    def __init__(self, week_sched, defense, offense, team_def, idx: DefenderIndex, overrides,
+                 shadow: dict | None = None, volume: dict | None = None):
         self.sched, self.defense, self.offense = week_sched, defense, offense
         self.team_def, self.idx, self.overrides = team_def, idx, overrides
+        self.shadow, self.volume = shadow or {}, volume or {}
 
     def team_line(self, opp: str, kind: str, pos: str) -> dict | None:
+        """The team-defense half of a matchup.
+
+        `score` is what the blend uses. For a QB that is the overall pass
+        grade; for a WR or TE it is the percentile of PPR the defense allows
+        to that position, because the overall grade can be an F while the
+        boundary holds and the damage all comes at tight end and running
+        back. `unit_score` is the overall pass/run grade for display, and
+        `leaks`/`holds` say where the points actually go.
+        """
         td = self.team_def.get(opp)
         if not td:
             return None
+        ranks = td["fp_rank"]
+        leaks = [f"{p} (#{ranks[p]})" for p in ("QB", "RB", "WR", "TE") if ranks[p] >= LEAK_RANK]
+        holds = [f"{p} (#{ranks[p]})" for p in ("QB", "RB", "WR", "TE") if ranks[p] <= HOLD_RANK]
+        common = {"fp": td["fp"][pos], "fp_rank": ranks[pos], "pos": pos, "leaks": leaks, "holds": holds}
         if kind == "pass":
-            return {"kind": "pass", "score": td["pass_score"], "grade": td["pass_grade"], "rank": td["pass_rank"],
-                    "detail": f"{td['yds_att']:.1f} yds/att, {td['epa_db']:+.2f} EPA/dropback",
-                    "fp": td["fp"][pos], "fp_rank": td["fp_rank"][pos], "pos": pos}
-        return {"kind": "run", "score": td["run_score"], "grade": td["run_grade"], "rank": td["run_rank"],
-                "detail": f"{td['yds_carry']:.1f} yds/carry, {td['epa_rush']:+.2f} EPA/carry",
-                "fp": td["fp"]["RB"], "fp_rank": td["fp_rank"]["RB"], "pos": "RB"}
+            blend = td["pass_score"] if pos == "QB" else td["fp_score"][pos]
+            return dict(common, kind="pass", score=blend, unit_score=td["pass_score"],
+                        grade=td["pass_grade"], rank=td["pass_rank"],
+                        detail=f"{td['yds_att']:.1f} yds/att, {td['epa_db']:+.2f} EPA/dropback")
+        return dict(common, kind="run", score=td["run_score"], unit_score=td["run_score"],
+                    grade=td["run_grade"], rank=td["run_rank"],
+                    detail=f"{td['yds_carry']:.1f} yds/carry, {td['epa_rush']:+.2f} EPA/carry")
+
+    def is_wr1(self, name: str, team: str) -> bool:
+        row = self.offense.get(team, {}).get("WR1")
+        return bool(row) and norm_name(row["player_name"]) == norm_name(name)
+
+    def script(self, game: dict) -> dict:
+        """Vegas line -> a one-line read on game script."""
+        fav, total, implied = game.get("fav_by"), game.get("total"), game.get("implied")
+        if fav is None or total is None:
+            return {"fav_by": None, "total": total, "implied": None, "read": "no line yet"}
+        if fav >= HEAVY_FAVORITE:
+            read = "heavy favourite -- run-leaning script, fewer late throws"
+        elif fav <= -LIVE_DOG and total >= HIGH_TOTAL:
+            read = "underdog in a high total -- pass-volume script"
+        elif fav <= -HEAVY_FAVORITE:
+            read = "big underdog -- garbage-time targets, capped team total"
+        elif total >= HIGH_TOTAL:
+            read = "high total -- shootout script"
+        elif total <= LOW_TOTAL:
+            read = "low total -- few scoring chances either way"
+        else:
+            read = "neutral script"
+        return {"fav_by": fav, "total": total, "implied": implied, "read": read}
+
+    def volume_line(self, name: str, pos: str) -> dict | None:
+        v = self.volume.get((norm_name(name), pos))
+        if not v:
+            return None
+        out = {}
+        for yr, a in sorted(v.items()):
+            if not a["g"]:
+                continue
+            out[yr] = {
+                "g": a["g"], "tgt_g": a["tgt"] / a["g"], "rec_g": a["rec"] / a["g"],
+                "yds_g": a["yds"] / a["g"], "carries_g": a["carries"] / a["g"], "ppr_g": a["ppr"] / a["g"],
+                "share": (a["share"] / a["share_n"]) if a["share_n"] else None,
+            }
+        return out or None
 
     def evaluate(self, player: dict) -> dict:
         """player = {name, team, pos, spot?}. Returns a matchup record."""
@@ -521,7 +726,8 @@ class Evaluator:
             rec["verdict"] = "BYE"
             return rec
         opp = game["opp"]
-        rec.update(opp=opp, home=game["home"], gameday=game["gameday"])
+        rec.update(opp=opp, home=game["home"], gameday=game["gameday"],
+                   vegas=self.script(game), volume=self.volume_line(player["name"], pos))
         d = self.defense.get(opp, {})
         desc = self.idx.describe
 
@@ -536,7 +742,19 @@ class Evaluator:
             boundary = [desc(d.get("LCB"), "LCB"), desc(d.get("RCB"), "RCB")]
             nickel = [desc(d.get("NB"), "NB")]
             primary, others = (nickel, boundary) if role == "slot" else (boundary, nickel)
-            rec["shadow"] = any(c["grade"] == "A" for c in boundary)
+            wr1 = self.is_wr1(player["name"], team)
+            # A documented travel corner on the opponent, facing this team's
+            # WR1 on the boundary: score him against that corner alone.
+            traveller = next((c for c in boundary if norm_name(c["name"]) in self.shadow), None)
+            if traveller and wr1 and role == "outside":
+                primary = [traveller]
+                others = [c for c in boundary if c is not traveller] + nickel
+                rec["shadow"] = "travel"
+                rec["shadow_note"] = (f"{traveller['name']} travels with WR1s -- "
+                                      f"{self.shadow[norm_name(traveller['name'])].get('note', '')}")
+            elif wr1 and any(c["grade"] == "A" for c in boundary):
+                rec["shadow"] = "risk"
+                rec["shadow_note"] = "A-grade boundary CB -- shadow coverage risk for the WR1"
             tl = self.team_line(opp, "pass", "WR")
         elif pos == "TE":
             role = ""
@@ -549,7 +767,7 @@ class Evaluator:
             others = []
             tl = self.team_line(opp, "run", "RB")
 
-        ind = sum(score_or_neutral(c) for c in primary) / len(primary)
+        ind = sum(eff_score(c) for c in primary) / len(primary)
         w = BLEND[pos]
         score = w * ind + (1 - w) * score_or_neutral(tl)
         rec.update(role=role, defenders=primary, others=others, team_line=tl, individual=ind,
@@ -612,24 +830,80 @@ def sleeper_lineups(league_id: str, username: str, week: int, roster_by_sleeper:
 # Output
 # ---------------------------------------------------------------------------
 
+def _recent_tag(c: dict) -> str:
+    rs = c.get("recent_score")
+    if rs is None or c.get("score") is None or abs(rs - c["score"]) < RECENT_DELTA:
+        return ""
+    yrs = c.get("recent_years") or []
+    span = f"{yrs[0]}-{str(yrs[-1])[-2:]}" if len(yrs) > 1 else (str(yrs[0]) if yrs else "recent")
+    return f" (recent {c['recent_grade']} {rs:.0f}, {span} only)"
+
+
 def fmt_defender(c: dict, long: bool = False) -> str:
+    inj = f" ⚕{c['injury']}" if c.get("injury") else ""
     if c["score"] is None:
-        base = f"{c['name']} [{c['grade']}]"
+        base = f"{c['name']} [{c['grade']}]{inj}"
         return f"{base} ({c['note']})" if c.get("note") else base
-    s = f"{c['name']} [{c['grade']} {c['score']:.0f}]"
+    s = f"{c['name']} [{c['grade']} {c['score']:.0f}]{inj}{_recent_tag(c)}"
     if long:
         s += (f" {c['yds_tgt']:.1f} yds/tgt, {c['rating']:.0f} rtg, {100 * c['cmp_pct']:.0f}% cmp, "
               f"{int(c['td'])} TD / {int(c['int'])} INT on {int(c['tgt'])} tgt")
     return s
 
 
+def fmt_seasons(c: dict) -> str:
+    return " | ".join(c.get("seasons") or [])
+
+
 def fmt_team_line(tl: dict | None, opp: str, long: bool = False) -> str:
     if tl is None:
         return f"{opp} {'?'} (no team data)"
-    s = f"{opp} {tl['kind']} D [{tl['grade']} {tl['score']:.0f}, #{tl['rank']}]"
+    s = f"{opp} {tl['kind']} D [{tl['grade']} {tl['unit_score']:.0f}, #{tl['rank']}]"
     if long:
         s += f" {tl['detail']}, {tl['fp']:.1f} PPR/g to {tl['pos']}s (#{tl['fp_rank']})"
     return s
+
+
+def fmt_leaks(tl: dict | None) -> str:
+    if not tl:
+        return ""
+    bits = []
+    if tl.get("leaks"):
+        bits.append("leaks to " + ", ".join(tl["leaks"]))
+    if tl.get("holds"):
+        bits.append("holds " + ", ".join(tl["holds"]))
+    return "; ".join(bits)
+
+
+def fmt_vegas(v: dict | None) -> str:
+    if not v or v.get("fav_by") is None:
+        if v and v.get("total") is not None:
+            return f"total {v['total']:.1f}, no spread yet"
+        return "no line yet"
+    if v["fav_by"] > 0:
+        side = f"favoured by {v['fav_by']:.1f}"
+    elif v["fav_by"] < 0:
+        side = f"underdog by {-v['fav_by']:.1f}"
+    else:
+        side = "pick'em"
+    return f"{side}, total {v['total']:.1f}, implied {v['implied']:.1f} -- {v['read']}"
+
+
+def fmt_volume(vol: dict | None, pos: str) -> str:
+    if not vol:
+        return "no prior-season data"
+    parts = []
+    for yr, a in vol.items():
+        if pos == "RB":
+            s = f"{yr}: {a['carries_g']:.1f} car/g, {a['tgt_g']:.1f} tgt/g, {a['ppr_g']:.1f} PPR/g ({a['g']} g)"
+        elif pos == "QB":
+            s = f"{yr}: {a['ppr_g']:.1f} PPR/g ({a['g']} g)"
+        else:
+            share = f", {100 * a['share']:.0f}% share" if a.get("share") is not None else ""
+            s = (f"{yr}: {a['tgt_g']:.1f} tgt/g{share}, {a['rec_g']:.1f} rec, {a['yds_g']:.0f} yds, "
+                 f"{a['ppr_g']:.1f} PPR/g ({a['g']} g)")
+        parts.append(s)
+    return " | ".join(parts)
 
 
 def sort_key(r: dict):
@@ -642,23 +916,30 @@ def print_matchups(recs: list[dict], header: str, markdown: bool, out) -> None:
     recs = sorted(recs, key=sort_key)
     if markdown:
         out.write(f"## {header}\n\n")
-        out.write("| Player | Pos | Tm | Spot | Opp | Verdict | Score | Individual matchup | Team defense |\n")
-        out.write("|---|---|---|---|---|---|---|---|---|\n")
+        out.write("| Player | Pos | Tm | Spot | Opp | Verdict | Score | Individual matchup | Team defense | Script / volume |\n")
+        out.write("|---|---|---|---|---|---|---|---|---|---|\n")
         for r in recs:
             spot = r.get("spot", "")
             if r["verdict"] in ("BYE", "N/A"):
                 out.write(f"| {r['name']} | {r['pos']} | {r['team']} | {spot} | "
-                          f"{'BYE' if r['verdict'] == 'BYE' else ''} | {verdict_icon(r['verdict'])} {r['verdict']} | | | |\n")
+                          f"{'BYE' if r['verdict'] == 'BYE' else ''} | {verdict_icon(r['verdict'])} {r['verdict']} | | | | |\n")
                 continue
             opp = ("vs " if r["home"] else "@ ") + r["opp"]
             ind = "<br>".join(f"{c['label']} {fmt_defender(c)}" for c in r["defenders"])
-            if r["shadow"]:
+            if r["shadow"] == "travel":
+                ind += "<br>🔒 shadowed by WR1 travel corner"
+            elif r["shadow"]:
                 ind += "<br>⚠ shadow risk"
             if r["role"]:
                 ind = f"({r['role']}) " + ind
+            team = fmt_team_line(r["team_line"], r["opp"])
+            leaks = fmt_leaks(r["team_line"])
+            if leaks:
+                team += f"<br>{leaks}"
+            ctx = f"{fmt_vegas(r.get('vegas'))}<br>{fmt_volume(r.get('volume'), r['pos'])}"
             out.write(f"| {r['name']} | {r['pos']} | {r['team']} | {spot} | {opp} | "
                       f"{verdict_icon(r['verdict'])} {r['verdict']} | {r['score']:.0f} | {ind} | "
-                      f"{fmt_team_line(r['team_line'], r['opp'])} |\n")
+                      f"{team} | {ctx} |\n")
         out.write("\n")
         return
     out.write(f"\n{header}\n{'=' * len(header)}\n")
@@ -674,12 +955,19 @@ def print_matchups(recs: list[dict], header: str, markdown: bool, out) -> None:
         out.write(f"\n{verdict_icon(r['verdict'])} {r['name']} {r['pos']} {r['team']}{spot} {opp} -- "
                   f"{r['verdict']} (score {r['score']:.0f}{role})\n")
         out.write(f"     team D  : {fmt_team_line(r['team_line'], r['opp'], long=True)}\n")
+        leaks = fmt_leaks(r["team_line"])
+        if leaks:
+            out.write(f"     points  : {leaks}\n")
         for c in r["defenders"]:
             out.write(f"     {c['label']:<8}: {fmt_defender(c, long=True)}\n")
+            if c.get("seasons"):
+                out.write(f"     {'':<8}  {fmt_seasons(c)}\n")
         for c in r["others"]:
             out.write(f"     also {c['label']:<3}: {fmt_defender(c, long=True)}\n")
         if r["shadow"]:
-            out.write("     note    : A-grade boundary CB -- shadow coverage risk for the WR1\n")
+            out.write(f"     shadow  : {r.get('shadow_note', '')}\n")
+        out.write(f"     vegas   : {fmt_vegas(r.get('vegas'))}\n")
+        out.write(f"     volume  : {fmt_volume(r.get('volume'), r['pos'])}\n")
 
 
 def print_defenses(team_def: dict, markdown: bool, out) -> None:
@@ -737,15 +1025,23 @@ def print_cb_leaderboard(defense: dict, idx: DefenderIndex, markdown: bool, out)
 LEGEND = (
     "### Legend\n\n"
     "- **Score**: 0-100, higher = tougher matchup. QB = opponent pass D. WR = CBs (outside: average of the two "
-    "boundary CBs; slot: nickel) blended {wr:.0%}/{wr_t:.0%} with pass D. TE = the two starting safeties blended "
-    "{te:.0%}/{te_t:.0%} with pass D. RB = off-ball LB coverage blended {rb:.0%}/{rb_t:.0%} with run D. "
-    "Ungraded defenders count as 50.\n"
+    "boundary CBs; slot: nickel) blended {wr:.0%}/{wr_t:.0%} with the PPR the defense allows *to WRs*. TE = the "
+    "two starting safeties blended {te:.0%}/{te_t:.0%} with PPR allowed to TEs. RB = off-ball LB coverage blended "
+    "{rb:.0%}/{rb_t:.0%} with run D. Ungraded defenders count as 50.\n"
     "- **Verdict**: TOUGH at {tough}+, SOFT at {soft} or below, NEUTRAL between.\n"
     "- **Defender grade**: A-F from percentile within their position group on yards/target, passer rating and "
-    "completion % allowed. `?` = rookie or fewer than {min_tgt} weighted targets.\n"
-    "- **Team defense**: grade, score and rank (#1 = toughest of 32). Pass D = yds/att, EPA/dropback and PPR "
-    "allowed to WR+TE; run D = yds/carry, EPA/carry and PPR allowed to RBs.\n"
-    "- **Shadow risk**: the opponent has an A-grade boundary CB who may travel with the WR1.\n"
+    "completion % allowed, pooled over three seasons. `?` = rookie or fewer than {min_tgt} weighted targets. "
+    "A `recent` tag shows the last-two-seasons-only score when it differs; the matchup uses the average of the "
+    "two. ⚕ = the defender carries an injury tag.\n"
+    "- **Team defense**: grade, score and rank (#1 = toughest of 32) of the overall pass or run D, then where the "
+    "points go: a defense *leaks to* positions it ranks {leak}th or worse against and *holds* those it ranks "
+    "top {hold} against.\n"
+    "- **🔒 Shadowed**: the opponent has a corner documented as travelling with WR1s (`shadow_corners.json`) and "
+    "this is his team's WR1, so the matchup is scored against that corner alone. **⚠ Shadow risk**: an A-grade "
+    "boundary CB who may travel.\n"
+    "- **Script / volume**: the Vegas spread, total and implied team points with a one-line read on game "
+    "script; then last season's targets per game, target share and PPR per game (this season is added as it "
+    "accrues). Volume is the half of a matchup a corner cannot take away.\n"
 )
 
 
@@ -780,8 +1076,9 @@ def main(argv=None) -> int:
     defense, offense, snapshot = load_depth_charts(season, args.refresh)
     stats = load_defender_stats({season: 1.0, season - 1: 1.0, season - 2: 0.5}, args.refresh)
     team_def = load_team_defense(season, args.refresh)
-    idx = DefenderIndex(stats, roster_by_gsis)
-    ev = Evaluator(week_sched, defense, offense, team_def, idx, load_overrides())
+    idx = DefenderIndex(stats, roster_by_gsis, load_sleeper_players(args.refresh))
+    ev = Evaluator(week_sched, defense, offense, team_def, idx, load_overrides(),
+                   shadow=load_shadow_corners(), volume=load_player_volume(season, args.refresh))
 
     def all_starters() -> list[dict]:
         out = []
@@ -850,7 +1147,7 @@ def main(argv=None) -> int:
         if args.markdown:
             out.write(LEGEND.format(wr=BLEND["WR"], wr_t=1 - BLEND["WR"], te=BLEND["TE"], te_t=1 - BLEND["TE"],
                                     rb=BLEND["RB"], rb_t=1 - BLEND["RB"], tough=TOUGH_SCORE, soft=SOFT_SCORE,
-                                    min_tgt=MIN_TARGETS))
+                                    min_tgt=MIN_TARGETS, leak=LEAK_RANK, hold=HOLD_RANK))
         return 0
     finally:
         if args.out:

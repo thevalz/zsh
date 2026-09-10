@@ -1,0 +1,25 @@
+{
+  "_comment": "Corners whose defense uses them as a travel corner on the opponent's top boundary receiver. When one of these is a listed boundary CB for the opponent and the receiver being graded is his team's WR1 (outside), the matchup is scored against that corner alone instead of the average of both boundary corners. Depth charts and trades are handled automatically because entries are matched by name, not team. Partial or occasional travelers are deliberately left out; add a corner only when the coordinator's usage is documented. Names are matched loosely (suffixes and punctuation ignored).",
+  "corners": [
+    {
+      "name": "DJ Turner II",
+      "note": "Al Golden (CIN): 'take on the go-to guy' every week; drew Metcalf twice, Jefferson, Odunze, Jeudy in 2025",
+      "source": "https://sports.yahoo.com/articles/bengals-player-profile-dj-turner-144719725.html"
+    },
+    {
+      "name": "Sauce Gardner",
+      "note": "faced opposing No. 1 receivers at the league's highest rate (53%) in 2025",
+      "source": "https://www.nfl.com/news/ranking-the-top-10-shutdown-cornerbacks-of-the-2025-nfl-season-so-far"
+    },
+    {
+      "name": "Patrick Surtain II",
+      "note": "Denver's long-standing travel corner on WR1s; 2024 DPOY, 66.6 rating allowed in 2025",
+      "source": "https://www.nfl.com/news/ranking-the-top-10-shutdown-cornerbacks-of-the-2025-nfl-season-so-far"
+    },
+    {
+      "name": "Christian Gonzalez",
+      "note": "New England travels him with the opponent's top receiver",
+      "source": "https://www.nfl.com/news/ranking-the-top-10-shutdown-cornerbacks-of-the-2025-nfl-season-so-far"
+    }
+  ]
+}
