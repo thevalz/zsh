@@ -1,27 +1,27 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-10 16:28 UTC
+**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-10 20:55 UTC
 
 ## Since last run
 
-- ⚠️ **Josh Jacobs (RB-GB) NA → Out** — NYKatSnatchers's player's status changed. Next up: **Kerrith Whyte (RB-GB)** — FREE AGENT, claim him.
+- ⚠️ **Josh Jacobs (RB-GB) Out → NA** — NYKatSnatchers's player's status changed. Next up: **Kerrith Whyte (RB-GB)** — FREE AGENT, claim him.
   ↳ _September 10, 2026 — Makes court appearance Thursday:_ Jacobs (personal) appeared in court in Green Bay on Thursday and pleaded no contest to misdemeanor charges of battery and criminal damage to property,  Matt Schneidman of The Athletic  reports.
-- 📈 **Ray Davis (RB-BUF) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
-  ↳ _August 28, 2026 — Tough night in final exhibition contest:_ Davis didn't receive a touch on offense but gained 11 yards on two punt returns while losing a fumble in Thursday's 28-27 preseason win over the Steelers.
+- ⚠️ **Zay Flowers (WR-BAL) cleared (Questionable → healthy)** — NYKatSnatchers's player is off the report.
+  ↳ _September 10, 2026 — Upgrades to full Thursday:_ Flowers (hamstring) was a  full participant  at Thursday's practice. (practice: **LIMITED**)
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
-| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 53,644 adds in 24h — the market has re-rated him | 53,644 | $35 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 41,427 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 41,427 | $5 |
+| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 63,436 adds in 24h — the market has re-rated him | 63,436 | $35 |
 | 🟢 | **Emanuel Wilson (RB-SEA)** | BUY EARLY | 6.8 | Zach Charbonnet is PUP (Knee - ACL) | 0 | $6 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 31,689 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 31,689 | $5 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); Malik Nabers is Questionable (Knee - ACL) | 30,690 | $2 |
-| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 18,147 | $4 |
-| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 17,336 | $4 |
+| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 11,694 | $4 |
+| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 13,862 | $4 |
+| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); Malik Nabers is Questionable (Knee - ACL) | 23,796 | $2 |
 | · | **Justin Fields (QB-KC)** | SPECULATIVE | 0.1 | every man ahead of him is banged up (1 deep); Patrick Mahomes is Questionable (Knee - ACL) | 0 | $1 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 11.8 | starting for his NFL team and unrostered | 0 | $4 |
 
