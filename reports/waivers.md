@@ -1,29 +1,38 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-10 20:55 UTC
+**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-11 04:46 UTC
 
 ## Since last run
 
-- ⚠️ **Josh Jacobs (RB-GB) Out → NA** — NYKatSnatchers's player's status changed. Next up: **Kerrith Whyte (RB-GB)** — FREE AGENT, claim him.
-  ↳ _September 10, 2026 — Makes court appearance Thursday:_ Jacobs (personal) appeared in court in Green Bay on Thursday and pleaded no contest to misdemeanor charges of battery and criminal damage to property,  Matt Schneidman of The Athletic  reports.
-- ⚠️ **Zay Flowers (WR-BAL) cleared (Questionable → healthy)** — NYKatSnatchers's player is off the report.
-  ↳ _September 10, 2026 — Upgrades to full Thursday:_ Flowers (hamstring) was a  full participant  at Thursday's practice. (practice: **LIMITED**)
+- ⚠️ **Kurtis Rourke (QB-SF) → Out** — FREE AGENT player newly listed Out.
+  ↳ _September 8, 2026 — Full practice Tuesday:_ Rourke (ribs) did not appear on the 49ers' injury report Tuesday,  Matt Maiocco of NBC Sports Bay Area  reports. (practice: **FULL**, serious)
+- ⚠️ **Brock Bowers (TE-LV) Doubtful → Out** — NYKatSnatchers's player's status changed. Next up: **Ian Thomas (TE-LV)** — FREE AGENT, claim him.
+  ↳ _September 10, 2026 — Sits out practice, set to miss time:_ Bowers (knee) remained a non-participant in Thursday's practice,  Anthony Galaviz of The Fresno Bee  reports. (practice: **DNP**)
+- ⚠️ **CJ Daniels (WR-LAR) → Out** — FREE AGENT player newly listed Out. Next up: **Tutu Atwell (WR-LAR)** — FREE AGENT, claim him.
+  ↳ _September 10, 2026 — Won't make NFL debut in Thursday's opener:_ Daniels (coach's decision) is a healthy scratch for Thursday's matchup versus San Francisco in Melbourne, Australia,  Nate Atkins of The Athletic  reports.
+- ⚠️ **Ty Simpson (QB-LAR) → Out** — FREE AGENT player newly listed Out. Next up: **Matthew Caldwell (QB-LAR)** — FREE AGENT, claim him.
+  ↳ _September 10, 2026 — Opening season as emergency No. 3 QB:_ Simpson is inactive as the Rams' emergency third quarterback for Thursday's matchup against San Francisco in Melbourne, Australia,  Nate Atkins of The Athletic  reports.
+- ⚠️ **De'Zhaun Stribling (WR-SF) → Out** — East Coast Wins Most's player newly listed Out. Next up: **Demarcus Robinson (WR-SF)** — FREE AGENT, claim him.
+  ↳ _September 10, 2026 — Avoids Achilles injury:_ Stribling (ankle) avoided an Achilles injury Thursday against the Rams after initial tests revealed his Achilles is intact,  James Palmer of The Athletic  reports.
+- ⚠️ **Jordan James (RB-SF) → Out** — FREE AGENT player newly listed Out. Next up: **Isaac Guerendo (RB-SF)** — FREE AGENT, claim him.
+  ↳ _September 10, 2026 — Inactive Thursday:_ James (coach's decision) is officially inactive for Thursday's game against the Rams,  Matt Maiocco of NBC Sports Bay Area  reports.
+- ⚠️ **Patrick Mahomes (QB-KC) cleared (Questionable → healthy)** — Holy Turnovers, Batman!'s player is off the report.
+  ↳ _September 10, 2026 — Practices fully, looks ready for opener:_ Mahomes (knee) opened Week 1 prep as a  full practice participant  Thursday. (practice: **FULL**, serious)
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
-| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 63,436 adds in 24h — the market has re-rated him | 63,436 | $35 |
+| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 41,576 adds in 24h — the market has re-rated him | 41,576 | $35 |
 | 🟢 | **Emanuel Wilson (RB-SEA)** | BUY EARLY | 6.8 | Zach Charbonnet is PUP (Knee - ACL) | 0 | $6 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 31,689 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 31,689 | $5 |
-| 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 16,911 | $2 |
+| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 0 | $4 |
+| 🛡️ | **Najee Harris (RB-NYG)** | INSURANCE | 5.9 | direct handcuff to MY Cam Skattebo | 7,915 | $3 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 11,694 | $4 |
-| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 13,862 | $4 |
-| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); Malik Nabers is Questionable (Knee - ACL) | 23,796 | $2 |
-| · | **Justin Fields (QB-KC)** | SPECULATIVE | 0.1 | every man ahead of him is banged up (1 deep); Patrick Mahomes is Questionable (Knee - ACL) | 0 | $1 |
-| 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 11.8 | starting for his NFL team and unrostered | 0 | $4 |
+| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 9,874 | $4 |
+| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); Malik Nabers is Questionable (Knee - ACL) | 14,877 | $1 |
+| 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $4 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
