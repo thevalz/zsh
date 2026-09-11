@@ -1,31 +1,24 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-11 11:28 UTC
+**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-11 16:33 UTC
 
 ## Since last run
 
-- ⚠️ **Christian Kirk (WR-SF) → IR** — FREE AGENT player newly listed IR. Next up: **Brandon Aiyuk (WR-SF)** — FREE AGENT, claim him.
-  ↳ _August 30, 2026 — Placed on IR, designated to return:_ Kirk (calf) was  placed on injured reserve  by the 49ers on Sunday with a designation to return. (serious)
-- ⚠️ **Tutu Atwell (WR-LAR) → Out** — FREE AGENT player newly listed Out. Next up: **Jordan Whittington (WR-LAR)** — FREE AGENT, claim him.
-  ↳ _September 10, 2026 — Inactive for season opener:_ Atwell (coach's decision) is inactive for Thursday's tilt against the 49ers in Melbourne, Australia,  Nate Atkins of The Athletic  reports.
-- ⚠️ **Brandon Aiyuk (WR-SF) → DNR** — FREE AGENT player newly listed DNR. Next up: **Demarcus Robinson (WR-SF)** — FREE AGENT, claim him.
-  ↳ _July 25, 2026 — Remains on left squad list:_ San Francisco general manager John Lynch told reporters Saturday that Aiyuk (knee) will remain on the 49ers' reserve/left squad list,  Adam Schefter of ESPN  reports.
-- ⚠️ **CJ Daniels (WR-LAR) cleared (Out → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 10, 2026 — Won't make NFL debut in Thursday's opener:_ Daniels (coach's decision) is a healthy scratch for Thursday's matchup versus San Francisco in Melbourne, Australia,  Nate Atkins of The Athletic  reports.
+Nothing changed.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
-| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 36,719 adds in 24h — the market has re-rated him | 36,719 | $35 |
+| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 29,182 adds in 24h — the market has re-rated him | 29,182 | $35 |
 | 🟢 | **Emanuel Wilson (RB-SEA)** | BUY EARLY | 6.8 | Zach Charbonnet is PUP (Knee - ACL) | 0 | $6 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 16,515 | $2 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 15,669 | $2 |
 | 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 0 | $4 |
-| 🛡️ | **Najee Harris (RB-NYG)** | INSURANCE | 5.9 | direct handcuff to MY Cam Skattebo | 7,785 | $3 |
+| 🛡️ | **Najee Harris (RB-NYG)** | INSURANCE | 5.9 | direct handcuff to MY Cam Skattebo | 7,450 | $3 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 9,648 | $4 |
-| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); Malik Nabers is Questionable (Knee - ACL) | 14,634 | $1 |
+| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 9,108 | $4 |
+| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); Malik Nabers is Questionable (Knee - ACL) | 13,707 | $1 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $4 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*

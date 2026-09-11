@@ -1,6 +1,6 @@
 # Matchups -- 2026 week 1
 
-_depth charts as of 2026-09-10; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
+_depth charts as of 2026-09-11; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
 
 ## supervillain (thevalz) -- my lineup
 
@@ -202,7 +202,7 @@ _depth charts as of 2026-09-10; defender grades pool PFR coverage stats from 202
 | Dontayvion Wicks | WR | PHI | WR2 | vs WAS | 🟢 SOFT | 34 | (outside) LCB Rasul Douglas [B 67]<br>RCB Mike Sainristil [D 28] | WAS pass D [F 8, #31] |
 | Darnell Mooney | WR | NYG | WR3 | vs DAL | 🟢 SOFT | 34 | (slot) NB Caleb Downs [?] (rookie) | DAL pass D [F 3, #32] |
 | Carnell Tate | WR | TEN | WR1 | vs NYJ | 🟢 SOFT | 28 | (outside) LCB Nahshon Wright [C 47]<br>RCB Brandon Stephens [F 16] | NYJ pass D [D 23, #28] |
-| Bryce Lance | WR | NO | WR3 | @ DET | 🟢 SOFT | 28 | (slot) NB Roger McCreary [D 25] | DET pass D [D 32, #21] |
+| Barion Brown | WR | NO | WR3 | @ DET | 🟢 SOFT | 28 | (slot) NB Roger McCreary [D 25] | DET pass D [D 32, #21] |
 | Olamide Zaccheaus | WR | ATL | WR3 | @ PIT | 🟢 SOFT | 26 | (slot) NB Jalen Ramsey [D 27]<br>⚠ shadow risk | PIT pass D [D 25, #27] |
 | Makai Lemon | WR | PHI | WR3 | vs WAS | 🟢 SOFT | 18 | (slot) NB Amik Robertson [D 23] | WAS pass D [F 8, #31] |
 | Dalton Kincaid | TE | BUF | TE1 | @ HOU | 🔴 TOUGH | 78 | FS Calen Bullock [A 83]<br>SS Reed Blankenship [C 49] | HOU pass D [A 89, #3] |
