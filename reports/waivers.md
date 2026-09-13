@@ -1,47 +1,52 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-13 16:23 UTC
+**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-13 20:53 UTC
 
 ## Since last run
 
-- ⚠️ **Zach Wilson (QB-NO) → Out** — FREE AGENT player newly listed Out. Next up: **Spencer Rattler (QB-NO)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Serving as QB3 for Week 1:_ Wilson (coach's decision) is  inactive  as the emergency third quarterback for Sunday's game against the Lions. (serious)
-- ⚠️ **Will Howard (QB-PIT) → Out** — FREE AGENT player newly listed Out. Next up: **Drew Allar (QB-PIT)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Emergency QB3 for Week 1:_ Howard (coach's decision) is  inactive  but will serve as the Steelers' emergency third quarterback against the Falcons on Sunday. (serious)
-- ⚠️ **Quinn Ewers (QB-JAX) → Out** — FREE AGENT player newly listed Out. Next up: **Joey Aguilar (QB-JAX)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Not playing Week 1:_ Ewers (coach's decision) is  inactive  for Sunday's game against the Browns. (serious)
-- ⚠️ **Haynes King (QB-CAR) → Out** — FREE AGENT player newly listed Out.
-  ↳ _September 13, 2026 — Emergency QB3 vs. Chicago:_ King (coach's decision) is inactive but will serve as the Panthers' emergency third quarterback against the Bears on Sunday,  Darin Gantt of the Panthers' official site  reports.
-- ⚠️ **John Metchie (WR-CAR) → Out** — FREE AGENT player newly listed Out. Next up: **Jimmy Horn (WR-CAR)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Inactive vs. Chicago:_ Metchie (coach's decision) is inactive for Sunday's regular-season opener against the Bears,  Darin Gantt of the Panthers' official site  reports.
-- ⚠️ **Sean Tucker (RB-TB) Doubtful → Out** — FREE AGENT player's status changed. Next up: **Josh Williams (RB-TB)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Inactive Sunday:_ Tucker (hamstring) is inactive for Sunday's game at Cincinnati,  Scott Smith of the Buccaneers' official site  reports.
-- ⚠️ **Elijah Sarratt (WR-BAL) → Out** — FREE AGENT player newly listed Out. Next up: **LaJohntay Wester (WR-BAL)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Inactive Sunday:_ Sarratt (coach's decision)  is inactive for Sunday's game  against the Colts.
-- ⚠️ **Devontez Walker (WR-BAL) Questionable → Out** — FREE AGENT player's status changed. Next up: **Elijah Sarratt (WR-BAL)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Sitting out Sunday:_ Walker (groin)  is inactive for Sunday's clash  with the Colts.
-- ⚠️ **Taylen Green (QB-CLE) → Out** — FREE AGENT player newly listed Out.
-- ⚠️ **Tyson Bagent (QB-CHI) Questionable → Out** — FREE AGENT player's status changed. Next up: **Miller Moss (QB-CHI)** — FREE AGENT, claim him.
-- ⚠️ **Alvin Kamara (RB-NO) Questionable → Out** — FREE AGENT player's status changed. Next up: **Kendre Miller (RB-NO)** — FREE AGENT, claim him.
-- ⚠️ **DJ Giddens (RB-IND) → Out** — FREE AGENT player newly listed Out. Next up: **Anderson Castle (RB-IND)** — FREE AGENT, claim him.
-- ⚠️ **Nicholas Singleton (RB-TEN) → Out** — FREE AGENT player newly listed Out. Next up: **Julius Chestnut (RB-TEN)** — FREE AGENT, claim him.
-- ⚠️ **Ty Johnson (RB-BUF) Questionable → Out** — FREE AGENT player's status changed. Next up: **Frank Gore (RB-BUF)** — FREE AGENT, claim him.
-- ⚠️ **Riley Leonard (QB-IND) → Out** — FREE AGENT player newly listed Out. Next up: **Jalen Morton (QB-IND)** — FREE AGENT, claim him.
-- ⚠️ **Rome Odunze (WR-CHI) cleared (Questionable → healthy)** — mtngoblin's player is off the report.
+- ⚠️ **Jalen Tolbert (WR-MIA) → Out** — FREE AGENT player newly listed Out. Next up: **Chris Bell (WR-MIA)** — rostered by Jersey Rum Hams.
+  ↳ _September 13, 2026 — Inactive for Week 1:_ Tolbert (coach's decision) is  inactive  for Sunday's game against the Raiders. (serious)
+- ⚠️ **Brady Cook (QB-MIA) → Out** — FREE AGENT player newly listed Out. Next up: **Kyle McCord (QB-MIA)** — FREE AGENT, claim him.
+  ↳ _September 13, 2026 — Emergency QB for Week 1:_ Cook (coach's decision)  will be the emergency quarterback  for Sunday's game against the Raiders. (serious)
+- ⚠️ **Tanner McKee (QB-PHI) → Out** — FREE AGENT player newly listed Out. Next up: **Cole Payton (QB-PHI)** — FREE AGENT, claim him.
+  ↳ _September 13, 2026 — Emergency option for Week 1:_ McKee (coach's decision) is  inactive as the emergency third quarterback  for Sunday's game against the Commanders. (serious)
+- ⚠️ **Athan Kaliakmanis (QB-WAS) → Out** — FREE AGENT player newly listed Out. Next up: **Sam Hartman (QB-WAS)** — FREE AGENT, claim him.
+  ↳ _September 13, 2026 — Emergency QB vs. Philadelphia:_ Kaliakmanis (coach's decision) is  inactive  but will serve as the Commanders' emergency third quarterback against the Eagles on Sunday. (serious)
+- ⚠️ **Ja'Kobi Lane (WR-BAL) → Out** — Brooklyn Meatpackers's player newly listed Out. Next up: **LaJohntay Wester (WR-BAL)** — FREE AGENT, claim him.
+  ↳ _September 13, 2026 — Leaves early with wrist injury:_ The Ravens  announced  that Lane has been ruled out for the remainder of Sunday's game against the Colts due to a wrist injury.
+- ⚠️ **Aidan O'Connell (QB-LV) → Out** — FREE AGENT player newly listed Out. Next up: **Fernando Mendoza (QB-LV)** — rostered by Brooklyn Meatpackers.
+  ↳ _September 13, 2026 — Emergency QB3 vs. Miami:_ O'Connell (coach's decision) is  inactive  but will serve as the Raiders' emergency third quarterback against the Dolphins on Sunday.
+- ⚠️ **Carson Beck (QB-ARI) → Out** — FREE AGENT player newly listed Out.
+  ↳ _September 13, 2026 — Emergency QB to start season:_ Beck (coach's decision) is  inactive as the emergency third quarterback  for Sunday's game against the Chargers.
+- ⚠️ **Zay Flowers (WR-BAL) → Out** — NYKatSnatchers's player newly listed Out. Next up: **Rashod Bateman (WR-BAL)** — FREE AGENT, claim him.
+  ↳ _September 13, 2026 — Done for day with hamstring injury:_ Flowers (hamstring) has been ruled out for remainder of Sunday's game against the Colts,  Jonas Shaffer of TheBaltimoreBanner.com  reports.
+- ⚠️ **Omar Cooper (WR-NYJ) → Out** — FREE AGENT player newly listed Out. Next up: **Isaiah Williams (WR-NYJ)** — FREE AGENT, claim him.
+- ⚠️ **Demond Claiborne (RB-MIN) → Out** — FREE AGENT player newly listed Out. Next up: **Max Bredeson (RB-MIN)** — FREE AGENT, claim him.
+- ⚠️ **Dylan Sampson (RB-CLE) → Out** — East Coast Wins Most's player newly listed Out. Next up: **Raheim Sanders (RB-CLE)** — FREE AGENT, claim him.
+- ⚠️ **J.J. McCarthy (QB-MIN) → Out** — FREE AGENT player newly listed Out. Next up: **Max Brosmer (QB-MIN)** — FREE AGENT, claim him.
+- ⚠️ **Treylon Burks (WR-WAS) → Out** — FREE AGENT player newly listed Out. Next up: **Jaylin Lane (WR-WAS)** — FREE AGENT, claim him.
+- 📈 **Kendre Miller (RB-NO) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
+- ⚠️ **Elijah Sarratt (WR-BAL) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Brian Thomas (WR-JAX) → Questionable** — To Infinity and Bijan's player newly listed Questionable. Next up: **Jakobi Meyers (WR-JAX)** — rostered by Holy Turnovers, Batman!.
+- ⚠️ **Nicholas Singleton (RB-TEN) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Jeremiyah Love (RB-ARI) cleared (Questionable → healthy)** — Holy Turnovers, Batman!'s player is off the report.
+- ⚠️ **John Metchie (WR-CAR) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Devontez Walker (WR-BAL) cleared (Out → healthy)** — FREE AGENT player is off the report.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Out (Hamstring) | 0 | $12 |
 | 🟢 | **Emanuel Wilson (RB-SEA)** | BUY EARLY | 6.8 | Zach Charbonnet is PUP (Knee - ACL) | 0 | $6 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 31,230 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 31,230 | $5 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 31,590 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 31,590 | $5 |
 | 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔥 | **Darnell Mooney (WR-NYG)** | CONTESTED | 3.9 | every man ahead of him is banged up (1 deep); 49,851 adds in 24h — the market has re-rated him | 49,851 | $30 |
+| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 0 | $4 |
+| 🔥 | **Darnell Mooney (WR-NYG)** | CONTESTED | 3.9 | every man ahead of him is banged up (1 deep); 76,149 adds in 24h — the market has re-rated him | 76,149 | $30 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 3,952 | $4 |
-| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 5,895 | $4 |
+| 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $4 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
