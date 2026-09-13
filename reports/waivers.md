@@ -1,15 +1,15 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-12 20:37 UTC
+**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-13 04:53 UTC
 
 ## Since last run
 
-- ⚠️ **Malik Davis (RB-DAL) Out → IR** — FREE AGENT player's status changed. Next up: **Israel Abanikanda (RB-DAL)** — FREE AGENT, claim him.
-  ↳ _September 12, 2026 — Done for 2026 after hip surgery:_ The Cowboys placed Davis (hip) on injured reserve Saturday,  Adam Schefter of ESPN  reports. (serious)
-- ⚠️ **Savion Williams (WR-GB) cleared (IR → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 1, 2026 — On mend from high-ankle sprain:_ Packers general manager Brian Gutekunst said Tuesday that Williams is recovering from a high-ankle sprain and should be ready to return from injured reserve when first eligible in Week 5,  Matt Schneidman of The Athletic  reports. (serious)
-- ⚠️ **Oscar Delp (TE-NO) cleared (Out → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 11, 2026 — Out for Week 1:_ Delp (hamstring) has been  ruled out  for Sunday's game against the Lions. (serious)
+- 📈 **Jayden Higgins (WR-HOU) moved up the depth chart (9 → 7)** — Workload is trending his way.
+  ↳ _August 21, 2026 — Sent to injured reserve:_ The Texans placed Higgins (knee) on injured reserve Friday,  Adam Schefter of ESPN  reports. (serious)
+- ⚠️ **Gunner Olszewski (WR-NYG) cleared (IR → healthy)** — FREE AGENT player is off the report.
+  ↳ _June 1, 2026 — Moves to IR:_ Olszewski (Achilles) was placed on injured reserve by the Giants on Monday,  Dan Salomone of the team's official site  reports. (serious)
+- ⚠️ **Robbie Ouzts (RB-SEA) cleared (IR → healthy)** — FREE AGENT player is off the report.
+  ↳ _August 14, 2026 — Not facing career-threatening issue:_ Ouzts' neck injury is likely not a career-threatening issue,  Corbin K. Smith of SI.com  reports. (serious)
 
 ## Waiver board — best available opportunity
 
@@ -17,13 +17,13 @@
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
 | 🟢 | **Emanuel Wilson (RB-SEA)** | BUY EARLY | 6.8 | Zach Charbonnet is PUP (Knee - ACL) | 0 | $6 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 17,208 | $2 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 17,244 | $2 |
 | 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 0 | $4 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
+| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 2,542 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 4,005 | $4 |
-| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); Malik Nabers is Questionable (Knee - ACL) | 18,675 | $1 |
+| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 3,555 | $4 |
+| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); Malik Nabers is Questionable (Knee - ACL) | 20,799 | $2 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
