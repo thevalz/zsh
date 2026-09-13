@@ -1,6 +1,6 @@
 # Matchups -- 2026 week 1
 
-_depth charts as of 2026-09-12; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
+_depth charts as of 2026-09-13; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
 
 ## supervillain (thevalz) -- my lineup
 
@@ -125,8 +125,8 @@ _depth charts as of 2026-09-12; defender grades pool PFR coverage stats from 202
 | Kayshon Boutte | WR | HOU | WR2 | vs BUF | 🔴 TOUGH | 72 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 90, #2] |
 | Nico Collins | WR | HOU | WR1 | vs BUF | 🔴 TOUGH | 72 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 90, #2] |
 | Kendrick Bourne | WR | ARI | WR3 | @ LAC | 🔴 TOUGH | 72 | (slot) NB Tarheeb Still [B 66] | LAC pass D [A 82, #6] |
-| A.J. Brown | WR | NE | WR1 | @ SEA | 🔴 TOUGH | 69 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 82, #7] |
-| Romeo Doubs | WR | NE | WR2 | @ SEA | 🔴 TOUGH | 69 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 82, #7] |
+| DeMario Douglas | WR | NE | WR2 | @ SEA | 🔴 TOUGH | 69 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 82, #7] |
+| Romeo Doubs | WR | NE | WR1 | @ SEA | 🔴 TOUGH | 69 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 82, #7] |
 | Jerry Jeudy | WR | CLE | WR1 | @ JAX | 🟡 NEUTRAL | 65 | (outside) LCB Travis Hunter [?] (no coverage data)<br>RCB Montaric Brown [B 69] | JAX pass D [B 75, #9] |
 | KC Concepcion | WR | CLE | WR2 | @ JAX | 🟡 NEUTRAL | 65 | (outside) LCB Travis Hunter [?] (no coverage data)<br>RCB Montaric Brown [B 69] | JAX pass D [B 75, #9] |
 | Denzel Boston | WR | CLE | WR3 | @ JAX | 🟡 NEUTRAL | 65 | (slot) NB Jourdan Lewis [C 59] | JAX pass D [B 75, #9] |
@@ -135,7 +135,7 @@ _depth charts as of 2026-09-12; defender grades pool PFR coverage stats from 202
 | Marvin Harrison Jr. | WR | ARI | WR1 | @ LAC | 🟡 NEUTRAL | 64 | (outside) LCB Cam Hart [D 32]<br>RCB Donte Jackson [B 78] | LAC pass D [A 82, #6] |
 | Michael Wilson | WR | ARI | WR2 | @ LAC | 🟡 NEUTRAL | 64 | (outside) LCB Cam Hart [D 32]<br>RCB Donte Jackson [B 78] | LAC pass D [A 82, #6] |
 | De'Zhaun Stribling | WR | SF | WR3 | @ LA | 🟡 NEUTRAL | 63 | (slot) NB Quentin Lake [B 65] | LA pass D [C 58, #14] |
-| DeMario Douglas | WR | NE | WR3 | @ SEA | 🟡 NEUTRAL | 62 | (slot) NB Nick Emmanwori [C 51]<br>⚠ shadow risk | SEA pass D [A 82, #7] |
+| Mack Hollins | WR | NE | WR3 | @ SEA | 🟡 NEUTRAL | 62 | (slot) NB Nick Emmanwori [C 51]<br>⚠ shadow risk | SEA pass D [A 82, #7] |
 | Deebo Samuel | WR | SF | WR2 | @ LA | 🟡 NEUTRAL | 59 | (outside) LCB Jaylen Watson [C 56]<br>RCB Trent McDuffie [B 62] | LA pass D [C 58, #14] |
 | Mike Evans | WR | SF | WR1 | @ LA | 🟡 NEUTRAL | 59 | (outside) LCB Jaylen Watson [C 56]<br>RCB Trent McDuffie [B 62] | LA pass D [C 58, #14] |
 | Davante Adams | WR | LA | WR2 | vs SF | 🟡 NEUTRAL | 58 | (outside) LCB Renardo Green [B 74]<br>RCB Deommodore Lenoir [B 62] | SF pass D [C 41, #19] |

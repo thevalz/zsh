@@ -1,10 +1,11 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-13 11:58 UTC
+**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-13 15:27 UTC
 
 ## Since last run
 
-Nothing changed.
+- ⚠️ **Malik Davis (RB-DAL) cleared (IR → healthy)** — FREE AGENT player is off the report.
+  ↳ _September 12, 2026 — Done for 2026 after hip surgery:_ The Cowboys placed Davis (hip) on injured reserve Saturday,  Adam Schefter of ESPN  reports. (serious)
 
 ## Waiver board — best available opportunity
 
@@ -12,13 +13,13 @@ Nothing changed.
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
 | 🟢 | **Emanuel Wilson (RB-SEA)** | BUY EARLY | 6.8 | Zach Charbonnet is PUP (Knee - ACL) | 0 | $6 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 18,567 | $2 |
 | 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 0 | $4 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 23,715 | $2 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
-| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 2,792 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 3,888 | $4 |
-| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); Malik Nabers is Questionable (Knee - ACL) | 22,968 | $2 |
+| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 3,548 | $4 |
+| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 5,130 | $4 |
+| · | **Darnell Mooney (WR-NYG)** | SPECULATIVE | 3.9 | every man ahead of him is banged up (1 deep); 34,515 adds in 24h — the market has re-rated him | 34,515 | $2 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
