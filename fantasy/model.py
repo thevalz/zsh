@@ -6,7 +6,7 @@ import math
 import sys
 from dataclasses import dataclass, field
 
-from . import config, sleeper
+from . import config, sleeper, sources
 
 
 def _rank_curve(rank: float) -> float:
@@ -14,9 +14,18 @@ def _rank_curve(rank: float) -> float:
     return config.VALUE_SCALE * math.exp(-rank / config.VALUE_DECAY)
 
 
+def consensus_rank(p: dict) -> float:
+    """The prior rank: the broad-sourced consensus (fantasy/sources.py), falling
+    back to Sleeper's `search_rank` only for a player no source lists."""
+    row = sources.consensus_ranks().get(p.get("player_id") or "")
+    if row:
+        return float(row["rank"])
+    return float(p.get("search_rank") or config.UNRANKED_RANK)
+
+
 def consensus_value(p: dict) -> float:
-    """The preseason prior: Sleeper's `search_rank` pushed through the decay curve."""
-    rank = p.get("search_rank") or config.UNRANKED_RANK
+    """The prior pushed through the decay curve."""
+    rank = consensus_rank(p)
     if rank >= config.UNRANKED_RANK:
         return 0.0
     return _rank_curve(rank)
@@ -104,8 +113,9 @@ def production_weight(games: int) -> float:
 def player_value(p: dict) -> float:
     """Approximate standalone fantasy value on a 0-100ish scale.
 
-    The consensus rank (Sleeper's `search_rank`, decayed exponentially so the
-    curve matches how fantasy value actually behaves) is the prior. Once a
+    The consensus rank (expert consensus and season projections from several
+    sources, decayed exponentially so the curve matches how fantasy value
+    actually behaves) is the prior. Once a
     player has games on record it is blended toward his season-to-date
     production rank under this league's scoring, and the superflex quarterback
     premium is applied to the result.
@@ -122,6 +132,28 @@ def player_value(p: dict) -> float:
     if base <= 0.0:
         return 0.0
     return base * config.POSITION_MULTIPLIER.get(p.get("position"), 1.0)
+
+
+def healthy_value(p: dict) -> float:
+    """What a player is worth when he is playing, ignoring a current absence.
+
+    The consensus sources price a reserve-list stint into the rank -- a back
+    who will miss six weeks drops 150 spots in every rest-of-season list --
+    which is right for standalone value and wrong for a stash decision, where
+    the question is what he is worth once he is back. The best single rank any
+    source gives him (Sleeper's search rank included) is the least
+    injury-adjusted view we have.
+    """
+    if not p:
+        return 0.0
+    ranks = [float(p.get("search_rank") or config.UNRANKED_RANK)]
+    row = sources.consensus_ranks().get(p.get("player_id") or "")
+    if row:
+        ranks += [float(r) for r in row["sources"].values()]
+    best = min(ranks)
+    if best >= config.UNRANKED_RANK:
+        return 0.0
+    return _rank_curve(best) * config.POSITION_MULTIPLIER.get(p.get("position"), 1.0)
 
 
 def effective_rank(p: dict) -> float:

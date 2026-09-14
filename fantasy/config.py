@@ -18,12 +18,27 @@ STARTERS = {"QB": 2, "RB": 2, "WR": 2, "TE": 1}
 # Positions the analysis reasons about. K/DEF are streamed and ignored.
 SKILL_POSITIONS = ("QB", "RB", "WR", "TE")
 
-# Value curve. Sleeper's `search_rank` is a rough consensus rank; this maps it
-# onto a points scale that decays the way real fantasy value does -- the gap
-# between the RB1 and RB12 is much larger than between the RB40 and RB52.
+# Value curve. A consensus rank is mapped onto a points scale that decays the
+# way real fantasy value does -- the gap between the RB1 and RB12 is much
+# larger than between the RB40 and RB52.
 VALUE_DECAY = 60.0          # larger = flatter curve
 VALUE_SCALE = 100.0
 UNRANKED_RANK = 9999
+
+# Where the consensus rank comes from. Sleeper's own `search_rank` is one
+# site's opinion with no visible update cadence, so the prior is the weighted
+# mean of a player's rank in each of these independent lists (each re-ranked
+# among skill players only). A source that cannot be fetched is dropped and
+# named in the report header; `search_rank` is used only for a player none of
+# them list. See fantasy/sources.py.
+PRIOR_SOURCES = {
+    "fantasypros": 1.0,   # rest-of-season PPR expert consensus
+    "espn": 1.0,          # ESPN season projections (injury-adjusted in season)
+    "rotowire": 1.0,      # RotoWire season projections via Sleeper's feed
+}
+# The live FantasyPros ROS page can carry two experts on a Monday. Below this
+# many, use the DynastyProcess weekly mirror, which has the full set.
+FP_MIN_EXPERTS = 8
 
 # Consensus rank is preseason data and goes stale the moment games are played.
 # Once a player has games on record, his value is a blend of the consensus
@@ -136,5 +151,9 @@ CACHE_TTL = {
     "state": 1800,
     "stats": 1800,          # the in-progress week; completed weeks cache for a day
     "stats_final": 86400,
+    "fantasypros": 6 * 3600,
+    "fantasypros_mirror": 24 * 3600,
+    "projections": 6 * 3600,
+    "crosswalk": 24 * 3600,
     "news": 900,
 }

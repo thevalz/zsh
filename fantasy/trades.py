@@ -141,9 +141,14 @@ def find_partners(lg: League, top: int = 5) -> list:
             for pos in config.SKILL_POSITIONS
         }
 
-        # Never offer to ship out a position I am myself below median at, no
-        # matter how badly the other team needs it.
-        sendable = {p: v for p, v in send_fit.items() if my[p]["need"] <= 0}
+        # Never offer to ship out a position I am short at, unless the bench
+        # surplus there more than covers the shortfall: six running backs with
+        # two below-median starters is still a room with parts to move, and
+        # what goes out is the surplus, never a starter.
+        sendable = {
+            p: v for p, v in send_fit.items()
+            if my[p]["need"] <= my[p]["surplus"]
+        }
         if not sendable or max(sendable.values()) <= 0:
             continue
         send_pos = max(sendable, key=sendable.get)

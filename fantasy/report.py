@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from . import config
+from . import sources
 from .model import League, player_value, production_meta, production_weight
 
 TIER_ICON = {
@@ -30,11 +31,17 @@ def header(lg: League, week: int, generated: str) -> str:
         )
     else:
         basis = "values are consensus rank only — no games played yet"
+    src = sources.meta()
+    prior = "consensus rank from " + ("; ".join(src.get("used") or []) or "nothing")
+    if src.get("failed"):
+        prior += " · ⚠️ unavailable: " + "; ".join(src["failed"])
+    if not src.get("used"):
+        prior += " — falling back to Sleeper search rank"
     return (
         f"# {config.LEAGUE_NAME} — waiver & trade monitor\n\n"
         f"**Week {week}** · {me.label} ({me.wins}-{me.losses}) · "
         f"FAAB left **${me.faab_left}** · generated {generated}\n\n"
-        f"_{basis}_\n"
+        f"_{basis}_  \n_{prior}_\n"
     )
 
 

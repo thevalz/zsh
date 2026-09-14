@@ -11,7 +11,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from . import config, model, news, sleeper
-from .model import League, player_value, vacancy
+from .model import League, healthy_value, player_value, vacancy
 
 
 @dataclass
@@ -73,7 +73,10 @@ def build_board(lg: League, charts: dict | None = None, top: int = 15) -> list:
         # designation to return, and silence reads as "nothing there". They are
         # carried through and resolved against their news below.
         on_reserve = p.get("injury_status") in config.RESERVE_STATUSES
-        if on_reserve and player_value(p) < config.STASH_MIN_VALUE:
+        # Screen stashes on what he is worth *when back*, not his rest-of-season
+        # value: the consensus sources already price the absence in, and that
+        # would drop every worthwhile IR stash below the threshold.
+        if on_reserve and healthy_value(p) < config.STASH_MIN_VALUE:
             continue
 
         cand = Candidate(
@@ -82,7 +85,7 @@ def build_board(lg: League, charts: dict | None = None, top: int = 15) -> list:
             position=p["position"],
             nfl_team=p["team"],
             market_adds=int(market.get(pid, 0)),
-            own_value=round(player_value(p), 1),
+            own_value=round(healthy_value(p) if on_reserve else player_value(p), 1),
             on_reserve=on_reserve,
         )
 
