@@ -31,11 +31,25 @@ public Sleeper API (no auth) plus ESPN's public news feed.
 
 ## How the numbers work
 
-**Player value** — Sleeper's `search_rank` decayed exponentially
-(`100 · e^(-rank/60)`), because the gap between the RB1 and the RB12 is far
-larger than between the RB40 and the RB52. Quarterbacks get a 1.20× superflex
-premium. This is a consensus-rank proxy, not a projection; it is the best
-signal the public API exposes.
+**Player value** — two ranks pushed through the same curve
+(`100 · e^(-rank/60)`, because the gap between the RB1 and the RB12 is far
+larger than between the RB40 and the RB52) and blended:
+
+- *consensus* — Sleeper's `search_rank`, the preseason prior.
+- *production* — every skill player ranked by points per game this season under
+  this league's own scoring settings, from Sleeper's weekly stat lines.
+
+The blend weight is `games / (games + PRODUCTION_PRIOR_GAMES)` with the prior
+worth four games: one game moves a player a fifth of the way toward his
+production rank, four games half way, and the rank is never fully forgotten.
+Points are per game *played*, so an IR stint or a bye is not a zero, and a
+player with no games keeps his pure consensus value. Quarterbacks get a 1.20×
+superflex premium on the blended result. If the stats cannot be fetched the
+report says so in its header and every value is consensus-only.
+
+`credibility()` — the check that a backup is good enough to convert inherited
+workload — reads the *effective* rank implied by the blended value, so a
+rank-209 receiver who just posted a WR1 week is no longer treated as rank 209.
 
 **Opportunity** — for each free agent, the value of the players ahead of him on
 his NFL depth chart, multiplied by:

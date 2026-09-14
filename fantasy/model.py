@@ -3,25 +3,140 @@
 from __future__ import annotations
 
 import math
+import sys
 from dataclasses import dataclass, field
 
 from . import config, sleeper
 
 
-def player_value(p: dict) -> float:
-    """Approximate standalone fantasy value on a 0-100ish scale.
+def _rank_curve(rank: float) -> float:
+    """Map a 1-based rank onto the 0-100 value scale."""
+    return config.VALUE_SCALE * math.exp(-rank / config.VALUE_DECAY)
 
-    Sleeper's `search_rank` is the only consensus signal the public API exposes.
-    We decay it exponentially so the curve matches how fantasy value actually
-    behaves, then apply the superflex quarterback premium.
-    """
-    if not p:
-        return 0.0
+
+def consensus_value(p: dict) -> float:
+    """The preseason prior: Sleeper's `search_rank` pushed through the decay curve."""
     rank = p.get("search_rank") or config.UNRANKED_RANK
     if rank >= config.UNRANKED_RANK:
         return 0.0
-    base = config.VALUE_SCALE * math.exp(-rank / config.VALUE_DECAY)
+    return _rank_curve(rank)
+
+
+# ---------------------------------------------------------------------------
+# Production: what players have actually scored this season under this
+# league's scoring. Built lazily once per process, from Sleeper's weekly stat
+# lines, and ranked across all skill positions so it lives on the same scale as
+# the consensus rank it is blended with.
+# ---------------------------------------------------------------------------
+
+_PRODUCTION: dict | None = None
+_PRODUCTION_META: dict = {"weeks": 0, "players": 0, "error": None}
+
+
+def _league_points(line: dict, scoring: dict) -> float:
+    return sum(w * line.get(stat, 0.0) for stat, w in scoring.items() if stat in line)
+
+
+def production_table(force: bool = False) -> dict:
+    """{player_id: {"pts", "games", "ppg", "rank", "value"}} for every skill
+    player with at least one game logged this season.
+
+    Failure is loud, not silent: if the stats cannot be fetched the table is
+    empty, values fall back to pure consensus, and a warning goes to stderr,
+    because a quiet fallback would look exactly like "nobody has played yet".
+    """
+    global _PRODUCTION
+    if _PRODUCTION is not None and not force:
+        return _PRODUCTION
+    table: dict = {}
+    try:
+        state = sleeper.nfl_state()
+        season = str(state.get("season") or config.SEASON)
+        current = int(state.get("week") or 0)
+        if state.get("season_type") != "regular":
+            current = 0
+        scoring = (sleeper.league().get("scoring_settings") or {})
+        players = sleeper.players()
+        totals: dict = {}
+        weeks = 0
+        for week in range(1, current + 1):
+            lines = sleeper.weekly_stats(season, week, final=week < current) or {}
+            weeks += 1
+            for pid, line in lines.items():
+                p = players.get(pid)
+                if not p or not is_available_body(p) or not line.get("gp"):
+                    continue
+                t = totals.setdefault(pid, {"pts": 0.0, "games": 0})
+                t["pts"] += _league_points(line, scoring)
+                t["games"] += 1
+        ranked = sorted(
+            ((pid, t) for pid, t in totals.items() if t["games"] >= config.PRODUCTION_MIN_GAMES),
+            key=lambda kv: -(kv[1]["pts"] / kv[1]["games"]),
+        )
+        for i, (pid, t) in enumerate(ranked, start=1):
+            ppg = t["pts"] / t["games"]
+            table[pid] = {
+                "pts": round(t["pts"], 2), "games": t["games"], "ppg": round(ppg, 2),
+                "rank": i, "value": _rank_curve(i),
+            }
+        _PRODUCTION_META.update(weeks=weeks, players=len(table), error=None)
+    except Exception as err:  # noqa: BLE001 -- any failure must degrade loudly
+        _PRODUCTION_META.update(weeks=0, players=0, error=str(err))
+        print(f"warning: production data unavailable, values are consensus-only ({err})",
+              file=sys.stderr)
+        table = {}
+    _PRODUCTION = table
+    return table
+
+
+def production_meta() -> dict:
+    production_table()
+    return dict(_PRODUCTION_META)
+
+
+def production_weight(games: int) -> float:
+    """How far actual production overrides the consensus prior."""
+    if games <= 0:
+        return 0.0
+    return games / (games + config.PRODUCTION_PRIOR_GAMES)
+
+
+def player_value(p: dict) -> float:
+    """Approximate standalone fantasy value on a 0-100ish scale.
+
+    The consensus rank (Sleeper's `search_rank`, decayed exponentially so the
+    curve matches how fantasy value actually behaves) is the prior. Once a
+    player has games on record it is blended toward his season-to-date
+    production rank under this league's scoring, and the superflex quarterback
+    premium is applied to the result.
+    """
+    if not p:
+        return 0.0
+    prior = consensus_value(p)
+    prod = production_table().get(p.get("player_id") or "")
+    if prod:
+        w = production_weight(prod["games"])
+        base = (1.0 - w) * prior + w * prod["value"]
+    else:
+        base = prior
+    if base <= 0.0:
+        return 0.0
     return base * config.POSITION_MULTIPLIER.get(p.get("position"), 1.0)
+
+
+def effective_rank(p: dict) -> float:
+    """The rank a player's blended value corresponds to on the consensus curve.
+
+    This is what "consensus rank" means once production is folded in, and it is
+    what the credibility check should read -- a rank-209 receiver who has just
+    posted a WR1 week is no longer a rank-209 receiver.
+    """
+    if not p:
+        return float(config.UNRANKED_RANK)
+    base = player_value(p) / config.POSITION_MULTIPLIER.get(p.get("position"), 1.0)
+    if base <= 0.0:
+        return float(config.UNRANKED_RANK)
+    return -config.VALUE_DECAY * math.log(base / config.VALUE_SCALE)
 
 
 def is_available_body(p: dict) -> bool:
@@ -184,7 +299,7 @@ def credibility(p: dict) -> float:
     """
     if not p:
         return 0.0
-    rank = p.get("search_rank") or config.UNRANKED_RANK
+    rank = effective_rank(p)
     if rank >= config.UNRANKED_RANK:
         return 0.0
     excess = max(0.0, rank - config.CREDIBILITY_FLOOR_RANK)

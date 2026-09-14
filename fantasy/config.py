@@ -25,6 +25,18 @@ VALUE_DECAY = 60.0          # larger = flatter curve
 VALUE_SCALE = 100.0
 UNRANKED_RANK = 9999
 
+# Consensus rank is preseason data and goes stale the moment games are played.
+# Once a player has games on record, his value is a blend of the consensus
+# curve and a *production* curve: every skill player is ranked by points per
+# game under this league's own scoring settings and pushed through the same
+# decay. The blend weight is games / (games + PRODUCTION_PRIOR_GAMES), so the
+# consensus prior is worth PRODUCTION_PRIOR_GAMES games of evidence -- one game
+# moves a player a fifth of the way, four games half way, and it never fully
+# forgets the rank. Players with no games logged (IR, bye, not yet played)
+# keep their pure consensus value; a missing week is not a zero.
+PRODUCTION_PRIOR_GAMES = 4.0
+PRODUCTION_MIN_GAMES = 1
+
 # Superflex premium. A startable QB is worth more here than his raw rank implies
 # because 12 teams are chasing ~24 startable quarterbacks.
 POSITION_MULTIPLIER = {"QB": 1.20, "RB": 1.0, "WR": 1.0, "TE": 1.0}
@@ -122,5 +134,7 @@ CACHE_TTL = {
     "league": 6 * 3600,
     "trending": 1800,
     "state": 1800,
+    "stats": 1800,          # the in-progress week; completed weeks cache for a day
+    "stats_final": 86400,
     "news": 900,
 }

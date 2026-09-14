@@ -79,6 +79,12 @@ def nfl_state():
     return get("state/nfl", "state", config.CACHE_TTL["state"])
 
 
+def weekly_stats(season: str, week: int, final: bool = False):
+    """Per-player stat lines for one regular-season week, keyed by player_id."""
+    ttl = config.CACHE_TTL["stats_final" if final else "stats"]
+    return get(f"stats/nfl/regular/{season}/{week}", f"stats_{season}_{week}", ttl)
+
+
 def league(league_id: str = config.LEAGUE_ID):
     return get(f"league/{league_id}", "league", config.CACHE_TTL["league"])
 
