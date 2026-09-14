@@ -1,51 +1,42 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-13 20:53 UTC
+**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-14 05:02 UTC
 
 ## Since last run
 
-- ⚠️ **Jalen Tolbert (WR-MIA) → Out** — FREE AGENT player newly listed Out. Next up: **Chris Bell (WR-MIA)** — rostered by Jersey Rum Hams.
-  ↳ _September 13, 2026 — Inactive for Week 1:_ Tolbert (coach's decision) is  inactive  for Sunday's game against the Raiders. (serious)
-- ⚠️ **Brady Cook (QB-MIA) → Out** — FREE AGENT player newly listed Out. Next up: **Kyle McCord (QB-MIA)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Emergency QB for Week 1:_ Cook (coach's decision)  will be the emergency quarterback  for Sunday's game against the Raiders. (serious)
-- ⚠️ **Tanner McKee (QB-PHI) → Out** — FREE AGENT player newly listed Out. Next up: **Cole Payton (QB-PHI)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Emergency option for Week 1:_ McKee (coach's decision) is  inactive as the emergency third quarterback  for Sunday's game against the Commanders. (serious)
-- ⚠️ **Athan Kaliakmanis (QB-WAS) → Out** — FREE AGENT player newly listed Out. Next up: **Sam Hartman (QB-WAS)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Emergency QB vs. Philadelphia:_ Kaliakmanis (coach's decision) is  inactive  but will serve as the Commanders' emergency third quarterback against the Eagles on Sunday. (serious)
-- ⚠️ **Ja'Kobi Lane (WR-BAL) → Out** — Brooklyn Meatpackers's player newly listed Out. Next up: **LaJohntay Wester (WR-BAL)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Leaves early with wrist injury:_ The Ravens  announced  that Lane has been ruled out for the remainder of Sunday's game against the Colts due to a wrist injury.
-- ⚠️ **Aidan O'Connell (QB-LV) → Out** — FREE AGENT player newly listed Out. Next up: **Fernando Mendoza (QB-LV)** — rostered by Brooklyn Meatpackers.
-  ↳ _September 13, 2026 — Emergency QB3 vs. Miami:_ O'Connell (coach's decision) is  inactive  but will serve as the Raiders' emergency third quarterback against the Dolphins on Sunday.
-- ⚠️ **Carson Beck (QB-ARI) → Out** — FREE AGENT player newly listed Out.
-  ↳ _September 13, 2026 — Emergency QB to start season:_ Beck (coach's decision) is  inactive as the emergency third quarterback  for Sunday's game against the Chargers.
-- ⚠️ **Zay Flowers (WR-BAL) → Out** — NYKatSnatchers's player newly listed Out. Next up: **Rashod Bateman (WR-BAL)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Done for day with hamstring injury:_ Flowers (hamstring) has been ruled out for remainder of Sunday's game against the Colts,  Jonas Shaffer of TheBaltimoreBanner.com  reports.
-- ⚠️ **Omar Cooper (WR-NYJ) → Out** — FREE AGENT player newly listed Out. Next up: **Isaiah Williams (WR-NYJ)** — FREE AGENT, claim him.
-- ⚠️ **Demond Claiborne (RB-MIN) → Out** — FREE AGENT player newly listed Out. Next up: **Max Bredeson (RB-MIN)** — FREE AGENT, claim him.
-- ⚠️ **Dylan Sampson (RB-CLE) → Out** — East Coast Wins Most's player newly listed Out. Next up: **Raheim Sanders (RB-CLE)** — FREE AGENT, claim him.
-- ⚠️ **J.J. McCarthy (QB-MIN) → Out** — FREE AGENT player newly listed Out. Next up: **Max Brosmer (QB-MIN)** — FREE AGENT, claim him.
-- ⚠️ **Treylon Burks (WR-WAS) → Out** — FREE AGENT player newly listed Out. Next up: **Jaylin Lane (WR-WAS)** — FREE AGENT, claim him.
-- 📈 **Kendre Miller (RB-NO) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
-- ⚠️ **Elijah Sarratt (WR-BAL) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Brian Thomas (WR-JAX) → Questionable** — To Infinity and Bijan's player newly listed Questionable. Next up: **Jakobi Meyers (WR-JAX)** — rostered by Holy Turnovers, Batman!.
-- ⚠️ **Nicholas Singleton (RB-TEN) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Jeremiyah Love (RB-ARI) cleared (Questionable → healthy)** — Holy Turnovers, Batman!'s player is off the report.
-- ⚠️ **John Metchie (WR-CAR) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Devontez Walker (WR-BAL) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Kyler Murray (QB-MIN) → Out** — hulleywood's player newly listed Out. Next up: **Carson Wentz (QB-MIN)** — FREE AGENT, claim him.
+  ↳ _September 13, 2026 — Won't return to Sunday's game:_ Murray (concussion) has been ruled out of Sunday's contest against the Packers,  Alec Lewis of The Athletic  reports. (serious)
+- ⚠️ **Najee Harris (RB-NYG) → Out** — FREE AGENT player newly listed Out. Next up: **Tyrone Tracy (RB-NYG)** — rostered by supervillain.
+  ↳ _September 13, 2026 — Healthy scratch Week 1:_ Harris (coach's decision) is inactive for Sunday's game against the Cowboys,  Dan Salomone of the Giants' official site  reports. (serious)
+- 📈 **Najee Harris (RB-NYG) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
+  ↳ _September 13, 2026 — Healthy scratch Week 1:_ Harris (coach's decision) is inactive for Sunday's game against the Cowboys,  Dan Salomone of the Giants' official site  reports. (serious)
+- ⚠️ **Israel Abanikanda (RB-DAL) → Out** — FREE AGENT player newly listed Out. Next up: **Malik Davis (RB-DAL)** — FREE AGENT, claim him.
+  ↳ _September 12, 2026 — Signs with active roster:_ The Cowboys  signed  Abanikanda from the practice squad to the active roster Saturday.
+- 🚨 **Alec Pierce (WR-IND) → Questionable** — MY player newly listed Questionable. Next up: **Josh Downs (WR-IND)** — rostered by hulleywood.
+  ↳ _September 13, 2026 — X-rays negative on banged-up hand:_ Pierce went to the locker room during Sunday's 41-23 loss to the Ravens for X-rays on his left hand and wrist, which came back negative,  Nathan Brown of the Indianapolis Star  reports.
+- ⚠️ **Demond Claiborne (RB-MIN) cleared (Out → healthy)** — FREE AGENT player is off the report.
+  ↳ _September 13, 2026 — Won't make NFL debut Week 1:_ Claiborne (coach's decision) is inactive for Sunday's game against the Packers,  Craig Peters of the Vikings' official site  reports. (serious)
+- ⚠️ **Alvin Kamara (RB-NO) cleared (Out → healthy)** — FREE AGENT player is off the report.
+  ↳ _September 13, 2026 — Inactive for Week 1:_ Kamara (knee) is inactive for Sunday's game against the Lions,  Nick Underhill of NewOrleans.Football  reports. (serious)
+- ⚠️ **Ladd McConkey (WR-LAC) → Questionable** — NYKatSnatchers's player newly listed Questionable. Next up: **Quentin Johnston (WR-LAC)** — rostered by supervillain.
+  ↳ _September 13, 2026 — No update on chest injury after loss:_ Head coach Jim Harbaugh didn't have a postgame update on McConkey (chest), who exited in the second half of Sunday's 26-14 loss to the Cardinals,  Kris Rhim of ESPN.com  reports.
+- ⚠️ **Treylon Burks (WR-WAS) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Malik Nabers (WR-NYG) cleared (Questionable → healthy)** — Brooklyn Meatpackers's player is off the report.
+- ⚠️ **Jalen Tolbert (WR-MIA) cleared (Out → healthy)** — FREE AGENT player is off the report.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
+| 🚨 | **Carson Wentz (QB-MIN)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 163,722 adds in 24h — the market has re-rated him | 163,722 | $35 |
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
 | 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Out (Hamstring) | 0 | $12 |
 | 🟢 | **Emanuel Wilson (RB-SEA)** | BUY EARLY | 6.8 | Zach Charbonnet is PUP (Knee - ACL) | 0 | $6 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | 31,590 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 31,590 | $5 |
 | 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔥 | **Darnell Mooney (WR-NYG)** | CONTESTED | 3.9 | every man ahead of him is banged up (1 deep); 76,149 adds in 24h — the market has re-rated him | 76,149 | $30 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 28,143 | $2 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
+| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 18,164 | $4 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $4 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
@@ -57,12 +48,12 @@
 | Josh Allen (QB-BUF) | healthy | Kyle Allen (QB-BUF) | **FREE AGENT** |
 | Derrick Henry (RB-BAL) | healthy | Justice Hill (RB-BAL) | **FREE AGENT** |
 | Trey McBride (TE-ARI) | healthy | Elijah Higgins (TE-ARI) | **FREE AGENT** |
-| Cam Skattebo (RB-NYG) | healthy | Tyrone Tracy (RB-NYG) | rostered (supervillain) |
-| Bhayshul Tuten (RB-JAX) | healthy | Chris Rodriguez (RB-JAX) | rostered (Randaltheandal) |
+| Cam Skattebo (RB-NYG) | healthy | Najee Harris (RB-NYG) | **FREE AGENT** |
+| Bhayshul Tuten (RB-JAX) | healthy | Chris Rodriguez (RB-JAX) | rostered (Randikulous) |
 | Brock Purdy (QB-SF) | healthy | Mac Jones (QB-SF) | **FREE AGENT** |
 | Tony Pollard (RB-TEN) | healthy | Tyjae Spears (RB-TEN) | **FREE AGENT** |
 | Rico Dowdle (RB-PIT) | healthy | Eli Heidenreich (RB-PIT) | **FREE AGENT** |
-| Tyrone Tracy (RB-NYG) | healthy | Najee Harris (RB-NYG) | **FREE AGENT** |
+| Tyrone Tracy (RB-NYG) | healthy | Devin Singletary (RB-NYG) | **FREE AGENT** |
 
 *A designation shown as `unverified` has had no beat-reporter blurb read for it. The tag alone cannot tell a cramp from a torn ACL, or a current injury from a two-year-old one — run `python3 -m fantasy.monitor player --name "..."` before acting on it.*
 
