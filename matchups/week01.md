@@ -1,6 +1,6 @@
 # Matchups -- 2026 week 1
 
-_depth charts as of 2026-09-13; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
+_depth charts as of 2026-09-14; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
 
 ## supervillain (thevalz) -- my lineup
 
@@ -63,7 +63,7 @@ _depth charts as of 2026-09-13; defender grades pool PFR coverage stats from 202
 | Dak Prescott | QB | DAL | QB1 | @ NYG | 🟡 NEUTRAL | 51 |  | NYG pass D [C 51, #16] |
 | Malik Willis | QB | MIA | QB1 | @ LV | 🟡 NEUTRAL | 49 |  | LV pass D [C 49, #17] |
 | Daniel Jones | QB | IND | QB1 | vs BAL | 🟡 NEUTRAL | 45 |  | BAL pass D [C 45, #18] |
-| Tua Tagovailoa | QB | ATL | QB1 | @ PIT | 🟢 SOFT | 38 |  | PIT pass D [D 38, #19] |
+| Michael Penix Jr. | QB | ATL | QB1 | @ PIT | 🟢 SOFT | 38 |  | PIT pass D [D 38, #19] |
 | Caleb Williams | QB | CHI | QB1 | @ CAR | 🟢 SOFT | 37 |  | CAR pass D [D 37, #20] |
 | Matthew Stafford | QB | LA | QB1 | vs SF | 🟢 SOFT | 37 |  | SF pass D [D 37, #21] |
 | Cam Ward | QB | TEN | QB1 | vs NYJ | 🟢 SOFT | 29 |  | NYJ pass D [D 29, #22] |
@@ -212,7 +212,7 @@ _depth charts as of 2026-09-13; defender grades pool PFR coverage stats from 202
 | Trey McBride | TE | ARI | TE1 | @ LAC | 🔴 TOUGH | 73 | FS Elijah Molden [C 45]<br>SS Derwin James Jr. [A 83] | LAC pass D [A 81, #5] |
 | Chig Okonkwo | TE | WAS | TE1 | @ PHI | 🔴 TOUGH | 72 | FS Andrew Mukuba [?] (low sample (25 tgt))<br>SS Marcus Epps [?] (low sample (13 tgt)) | PHI pass D [A 94, #1] |
 | Harold Fannin Jr. | TE | CLE | TE1 | @ JAX | 🟡 NEUTRAL | 67 | FS Antonio Johnson [B 68]<br>SS Eric Murray [C 45] | JAX pass D [B 77, #7] |
-| Pat Freiermuth | TE | PIT | TE1 | vs ATL | 🟡 NEUTRAL | 64 | FS Xavier Watts [C 59]<br>SS Jessie Bates III [B 75] | ATL pass D [B 60, #13] |
+| Darnell Washington | TE | PIT | TE1 | vs ATL | 🟡 NEUTRAL | 64 | FS Xavier Watts [C 59]<br>SS Jessie Bates III [B 75] | ATL pass D [B 60, #13] |
 | Tucker Kraft | TE | GB | TE1 | @ MIN | 🟡 NEUTRAL | 60 | FS Harrison Smith [D 33]<br>SS Joshua Metellus [B 61] | MIN pass D [B 74, #8] |
 | Brenton Strange | TE | JAX | TE1 | vs CLE | 🟡 NEUTRAL | 60 | FS Ronnie Hickman [B 60]<br>SS Grant Delpit [C 40] | CLE pass D [B 70, #11] |
 | Sam LaPorta | TE | DET | TE1 | vs NO | 🟡 NEUTRAL | 59 | FS Julian Blackmon [?] (low sample (22 tgt))<br>SS Justin Reid [C 45] | NO pass D [B 71, #10] |

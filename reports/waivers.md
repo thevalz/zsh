@@ -1,67 +1,28 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-14 12:56 UTC
+**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-14 21:52 UTC
 
 ## Since last run
 
-- ⚠️ **Calvin Austin (WR-NYG) → IR** — FREE AGENT player newly listed IR. Next up: **Odell Beckham (WR-NYG)** — FREE AGENT, claim him.
-  ↳ _August 27, 2026 — Officially moves to IR:_ The Giants placed Austin (knee) on injured reserve Thursday,  Patricia Traina of SI.com  reports. (serious)
-- ⚠️ **Nicholas Singleton (RB-TEN) → Out** — FREE AGENT player newly listed Out. Next up: **Julius Chestnut (RB-TEN)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Inactive for Week 1:_ Singleton (coach's decision) is  inactive  for Sunday's game against the Jets. (serious)
-- ⚠️ **Savion Williams (WR-GB) → IR** — FREE AGENT player newly listed IR. Next up: **Skyy Moore (WR-GB)** — FREE AGENT, claim him.
-  ↳ _September 1, 2026 — On mend from high-ankle sprain:_ Packers general manager Brian Gutekunst said Tuesday that Williams is recovering from a high-ankle sprain and should be ready to return from injured reserve when first eligible in Week 5,  Matt Schneidman of The Athletic  reports. (serious)
-- ⚠️ **Demond Claiborne (RB-MIN) → Out** — FREE AGENT player newly listed Out. Next up: **Max Bredeson (RB-MIN)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Won't make NFL debut Week 1:_ Claiborne (coach's decision) is inactive for Sunday's game against the Packers,  Craig Peters of the Vikings' official site  reports. (serious)
-- ⚠️ **Jalen McMillan (WR-TB) → Out** — FREE AGENT player newly listed Out. Next up: **Ted Hurst (WR-TB)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Inactive in Week 1:_ McMillan (knee) is listed as inactive Sunday at Cincinnati,  Scott Smith of the Buccaneers' official site  reports. (serious)
-- ⚠️ **Isiah Pacheco (RB-DET) → IR** — FREE AGENT player newly listed IR. Next up: **Jacob Saylors (RB-DET)** — FREE AGENT, claim him.
-  ↳ _September 2, 2026 — Without timetable for return:_ Lions GM Brad Holmes said Wednesday that Pacheco (back) doesn't have a clear timetable for return,  Colton Pouncy of The Athletic  reports. (serious)
-- ⚠️ **Tip Reiman (TE-ARI) → PUP** — FREE AGENT player newly listed PUP. Next up: **Hunter Long (TE-ARI)** — FREE AGENT, claim him.
-  ↳ _August 30, 2026 — Moved to reserve/PUP:_ The Cardinals moved Reiman (ankle) from the active/PUP list to the reserve/PUP list Sunday,  Darren Urban of the team's official site  reports.
-- ⚠️ **Luke Musgrave (TE-GB) → PUP** — FREE AGENT player newly listed PUP. Next up: **Josh Whyle (TE-GB)** — FREE AGENT, claim him.
-- ⚠️ **Luke McCaffrey (WR-WAS) → Out** — FREE AGENT player newly listed Out. Next up: **Dyami Brown (WR-WAS)** — FREE AGENT, claim him.
-- ⚠️ **Elijah Sarratt (WR-BAL) → Out** — FREE AGENT player newly listed Out. Next up: **Chris Moore (WR-BAL)** — FREE AGENT, claim him.
-- ⚠️ **Mason Tipton (WR-NO) → PUP** — FREE AGENT player newly listed PUP. Next up: **Barion Brown (WR-NO)** — FREE AGENT, claim him.
-- ⚠️ **Will Mallory (TE-IND) → IR** — FREE AGENT player newly listed IR. Next up: **Drew Ogletree (TE-IND)** — FREE AGENT, claim him.
-- ⚠️ **Cole Payton (QB-PHI) → Out** — FREE AGENT player newly listed Out. Next up: **Tanner McKee (QB-PHI)** — FREE AGENT, claim him.
-- ⚠️ **Jalen Tolbert (WR-MIA) → Out** — FREE AGENT player newly listed Out. Next up: **Chris Bell (WR-MIA)** — rostered by Jersey Rum Hams.
-- ⚠️ **Oscar Delp (TE-NO) → Out** — FREE AGENT player newly listed Out. Next up: **Moliki Matavao (TE-NO)** — FREE AGENT, claim him.
-- ⚠️ **Devontez Walker (WR-BAL) → Out** — FREE AGENT player newly listed Out. Next up: **Elijah Sarratt (WR-BAL)** — FREE AGENT, claim him.
-- ⚠️ **Adam Randall (RB-BAL) → IR** — FREE AGENT player newly listed IR. Next up: **Rasheen Ali (RB-BAL)** — FREE AGENT, claim him.
-- ⚠️ **Alvin Kamara (RB-NO) → Out** — FREE AGENT player newly listed Out. Next up: **Kendre Miller (RB-NO)** — FREE AGENT, claim him.
-- ⚠️ **Malik Davis (RB-DAL) → IR** — FREE AGENT player newly listed IR. Next up: **Israel Abanikanda (RB-DAL)** — FREE AGENT, claim him.
-- 📈 **Josh Jacobs (RB-GB) moved up the depth chart (4 → 1)** — Workload is trending his way.
-- 📈 **Jordyn Tyson (WR-NO) moved up the depth chart (11 → 3)** — Workload is trending his way.
-- 📈 **Tyrone Tracy (RB-NYG) moved up the depth chart (3 → 2)** — Workload is trending his way.
-- 📈 **Brock Bowers (TE-LV) moved up the depth chart (4 → 1)** — Workload is trending his way.
-- 📈 **Sean Tucker (RB-TB) moved up the depth chart (4 → 3)** — Workload is trending his way. He is a free agent.
-- 📈 **Brian Thomas (WR-JAX) moved up the depth chart (2 → 1)** — Workload is trending his way.
-- 📈 **James Conner (RB-ARI) moved up the depth chart (4 → 3)** — Workload is trending his way. He is a free agent.
-- 📈 **Jordan Mason (RB-MIN) moved up the depth chart (2 → 1)** — Workload is trending his way.
-- 📈 **Tank Dell (WR-HOU) moved up the depth chart (5 → 4)** — Workload is trending his way.
-- 📈 **Fernando Mendoza (QB-LV) moved up the depth chart (3 → 1)** — Workload is trending his way.
-- 📈 **Makai Lemon (WR-PHI) moved up the depth chart (3 → 2)** — Workload is trending his way.
-- 📈 **Kenyon Sadiq (TE-NYJ) moved up the depth chart (2 → 1)** — Workload is trending his way.
-- ⚠️ **Carter Runyon (TE-LV) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Tanner McKee (QB-PHI) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- · **Joe Royer (TE-CLE) → PUP** — FREE AGENT player newly listed PUP. Next up: **Carsen Ryan (TE-CLE)** — FREE AGENT, claim him.
-  ↳ _August 30, 2026 — Placed on non-football illness list:_ The Browns placed Royer (personal) on the reserve/non-football illness list Sunday,  Scott Petrak of the Elyria Chronicle-Telegram  reports. (likely minor)
+- ⚠️ **Jalen Coker (WR-CAR) → Questionable** — Jersey Rum Hams's player newly listed Questionable. Next up: **Xavier Legette (WR-CAR)** — FREE AGENT, claim him.
+  ↳ _September 14, 2026 — In walking boot Monday:_ Coker is in a walking boot Monday after sustaining an ankle injury in Sunday's loss to the Bears,  Mike Kaye of ESPN.com  reports. (serious)
+- ⚠️ **Jordan Mason (RB-MIN) → Questionable** — It's Gonna be Maye's player newly listed Questionable. Next up: **Aaron Jones (RB-MIN)** — rostered by hulleywood.
+  ↳ _September 14, 2026 — Nursing sore thumb after Week 1:_ Vikings head coach Kevin O'Connell said Monday that Mason is being further evaluated after experiencing thumb soreness coming out of Sunday's 39-22 win over the Packers,  Alec Lewis of The Athletic  reports. (serious)
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
-| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Out (Hamstring) | 0 | $12 |
 | 🚨 | **J.J. McCarthy (QB-MIN)** | URGENT | 2.9 | everyone ahead of him is out — the job is his; Kyler Murray is Out (Concussion) | 0 | $22 |
-| 🚨 | **Carson Wentz (QB-MIN)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 204,534 adds in 24h — the market has re-rated him | 204,534 | $35 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Out (Hamstring) | 7,585 | $12 |
+| 🚨 | **Carson Wentz (QB-MIN)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 288,822 adds in 24h — the market has re-rated him | 288,822 | $35 |
 | 🟢 | **Emanuel Wilson (RB-SEA)** | BUY EARLY | 6.8 | Zach Charbonnet is PUP (Knee - ACL) | 0 | $6 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 4,491 | $2 |
 | 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 0 | $4 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 24,948 | $2 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔥 | **Dallas Goedert (TE-PHI)** | CONTESTED | 20.9 | starting for his NFL team and unrostered | 20,618 | $30 |
-| 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $4 |
+| 🔥 | **Dallas Goedert (TE-PHI)** | CONTESTED | 20.9 | starting for his NFL team and unrostered | 22,382 | $30 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
