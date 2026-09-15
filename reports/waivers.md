@@ -1,25 +1,28 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$100** · generated 2026-09-15 17:04 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$100** · generated 2026-09-15 21:25 UTC
 
 ## Since last run
 
-Nothing changed.
+- ⚠️ **Dylan Sampson (RB-CLE) Out → IR** — East Coast Wins Most's player's status changed. Next up: **Eric Gray (RB-CLE)** — FREE AGENT, claim him.
+  ↳ _September 15, 2026 — Lands on injured reserve:_ Sampson (knee)  was placed on injured reserve  Tuesday. (serious)
+- ⚠️ **Israel Abanikanda (RB-DAL) cleared (Out → healthy)** — FREE AGENT player is off the report.
+  ↳ _September 12, 2026 — Signs with active roster:_ The Cowboys  signed  Abanikanda from the practice squad to the active roster Saturday.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
-| 🚨 | **Carson Wentz (QB-MIN)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 519,870 adds in 24h — the market has re-rated him | 519,870 | $35 |
+| 🚨 | **Carson Wentz (QB-MIN)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 608,376 adds in 24h — the market has re-rated him | 608,376 | $35 |
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
-| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Out (Hamstring) | 29,357 | $19 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 9,549 | $2 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; 36,029 adds in 24h — the market has re-rated him | 36,029 | $19 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 13,176 | $2 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🛡️ | **Devin Singletary (RB-NYG)** | INSURANCE | 0.0 | 1,037,808 adds in 24h — the market has re-rated him; direct handcuff to MY Cam Skattebo | 1,037,808 | $5 |
-| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 10,110 | $4 |
-| 🚨 | **Kendre Miller (RB-NO)** | URGENT | 5.0 | 51,008 adds in 24h — the market has re-rated him; Alvin Kamara is Out (Knee - MCL) | 51,008 | $19 |
-| 🔥 | **Dallas Goedert (TE-PHI)** | CONTESTED | 20.9 | starting for his NFL team and unrostered | 30,752 | $30 |
+| 🛡️ | **Devin Singletary (RB-NYG)** | INSURANCE | 0.0 | 1,253,097 adds in 24h — the market has re-rated him; direct handcuff to MY Cam Skattebo | 1,253,097 | $5 |
+| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 13,536 | $4 |
+| 🚨 | **Kendre Miller (RB-NO)** | URGENT | 5.0 | 65,778 adds in 24h — the market has re-rated him; Alvin Kamara is Out (Knee - MCL) | 65,778 | $19 |
+| 🔥 | **Dallas Goedert (TE-PHI)** | CONTESTED | 20.9 | starting for his NFL team and unrostered | 34,964 | $30 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $4 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
