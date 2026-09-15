@@ -1,6 +1,6 @@
 # Matchups -- 2026 week 1
 
-_depth charts as of 2026-09-14; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
+_depth charts as of 2026-09-15; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
 
 ## supervillain (thevalz) -- my lineup
 
@@ -82,8 +82,8 @@ _depth charts as of 2026-09-14; defender grades pool PFR coverage stats from 202
 | James Cook III | RB | BUF | RB1 | @ HOU | 🔴 TOUGH | 71 | MLB Azeez Al-Shaair [B 71]<br>WLB Henry To'oTo'o [C 48] | HOU run D [B 78, #5] |
 | De'Von Achane | RB | MIA | RB1 | @ LV | 🔴 TOUGH | 70 | LILB Nakobe Dean [B 71]<br>RILB Quay Walker [C 45] | LV run D [B 78, #6] |
 | Jahmyr Gibbs | RB | DET | RB1 | vs NO | 🔴 TOUGH | 70 | LILB Kaden Elliss [B 65]<br>RILB Pete Werner [B 65] | NO run D [B 73, #9] |
+| Jeremiyah Love | RB | ARI | RB1 | @ LAC | 🔴 TOUGH | 70 | LILB Daiyan Henley [B 67]<br>RILB Del'Shawn Phillips [?] (low sample (5 tgt)) | LAC run D [B 77, #7] |
 | Quinshon Judkins | RB | CLE | RB1 | @ JAX | 🔴 TOUGH | 69 | MLB Ventrell Miller [?] (low sample (16 tgt))<br>WLB Foyesade Oluokun [D 39] | JAX run D [A 86, #3] |
-| Jeremiyah Love | RB | ARI | RB1 | @ LAC | 🟡 NEUTRAL | 65 | LILB Daiyan Henley [B 67]<br>RILB Troy Dye [D 28] | LAC run D [B 77, #7] |
 | Chase Brown | RB | CIN | RB1 | vs TB | 🟡 NEUTRAL | 62 | LILB Alex Anzalone [A 81]<br>RILB Josiah Trotter [?] (rookie) | TB run D [B 60, #13] |
 | J.K. Dobbins | RB | DEN | RB1 | @ KC | 🟡 NEUTRAL | 61 | MLB Nick Bolton [D 39]<br>WLB Drue Tranquill [D 23] | KC run D [A 82, #4] |
 | Jadarian Price | RB | SEA | RB1 | vs NE | 🟡 NEUTRAL | 61 | LILB Christian Elliss [C 41]<br>RILB Robert Spillane [C 41] | NE run D [B 74, #8] |
@@ -119,8 +119,8 @@ _depth charts as of 2026-09-14; defender grades pool PFR coverage stats from 202
 | Keon Coleman | WR | BUF | WR3 | @ HOU | 🔴 TOUGH | 75 | (slot) NB Jalen Pitre [B 72]<br>⚠ shadow risk | HOU pass D [B 80, #6] |
 | Khalil Shakir | WR | BUF | WR2 | @ HOU | 🔴 TOUGH | 75 | (slot) NB Jalen Pitre [B 72]<br>⚠ shadow risk | HOU pass D [B 80, #6] |
 | Rashid Shaheed | WR | SEA | WR2 | vs NE | 🔴 TOUGH | 74 | (outside) LCB Carlton Davis III [B 75]<br>RCB Christian Gonzalez [A 83]<br>⚠ shadow risk | NE pass D [B 65, #12] |
-| Kayshon Boutte | WR | HOU | WR2 | vs BUF | 🔴 TOUGH | 72 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 90, #3] |
 | Nico Collins | WR | HOU | WR1 | vs BUF | 🔴 TOUGH | 72 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 90, #3] |
+| Xavier Hutchinson | WR | HOU | WR2 | vs BUF | 🔴 TOUGH | 72 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 90, #3] |
 | Kendrick Bourne | WR | ARI | WR3 | @ LAC | 🔴 TOUGH | 71 | (slot) NB Tarheeb Still [B 66] | LAC pass D [A 81, #5] |
 | DeMario Douglas | WR | NE | WR2 | @ SEA | 🔴 TOUGH | 71 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 87, #4] |
 | Romeo Doubs | WR | NE | WR1 | @ SEA | 🔴 TOUGH | 71 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 87, #4] |
@@ -147,7 +147,7 @@ _depth charts as of 2026-09-14; defender grades pool PFR coverage stats from 202
 | Michael Pittman Jr. | WR | PIT | WR2 | vs ATL | 🟡 NEUTRAL | 57 | (outside) LCB A.J. Terrell Jr. [B 66]<br>RCB Mike Hughes [C 44] | ATL pass D [B 60, #13] |
 | Davante Adams | WR | LA | WR2 | vs SF | 🟡 NEUTRAL | 57 | (outside) LCB Renardo Green [B 74]<br>RCB Deommodore Lenoir [B 62] | SF pass D [D 37, #21] |
 | Puka Nacua | WR | LA | WR1 | vs SF | 🟡 NEUTRAL | 57 | (outside) LCB Renardo Green [B 74]<br>RCB Deommodore Lenoir [B 62] | SF pass D [D 37, #21] |
-| Xavier Hutchinson | WR | HOU | WR3 | vs BUF | 🟡 NEUTRAL | 57 | (slot) NB Dee Alford [D 38] | BUF pass D [A 90, #3] |
+| Kayshon Boutte | WR | HOU | WR3 | vs BUF | 🟡 NEUTRAL | 57 | (slot) NB Dee Alford [D 38] | BUF pass D [A 90, #3] |
 | Courtland Sutton | WR | DEN | WR2 | @ KC | 🟡 NEUTRAL | 56 | (outside) LCB L'Jarius Sneed [D 39]<br>RCB Mansoor Delane [?] (rookie) | KC pass D [B 77, #8] |
 | Jaylen Waddle | WR | DEN | WR1 | @ KC | 🟡 NEUTRAL | 56 | (outside) LCB L'Jarius Sneed [D 39]<br>RCB Mansoor Delane [?] (rookie) | KC pass D [B 77, #8] |
 | Alec Pierce | WR | IND | WR1 | vs BAL | 🟡 NEUTRAL | 55 | (outside) LCB Nate Wiggins [B 71]<br>RCB Marlon Humphrey [C 51] | BAL pass D [C 45, #18] |

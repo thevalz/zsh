@@ -1,48 +1,57 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$100** · generated 2026-09-15 11:50 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$100** · generated 2026-09-15 16:03 UTC
 
 ## Since last run
 
-- ⚠️ **Jeremiah Webb (WR-NE) → IR** — FREE AGENT player newly listed IR. Next up: **Cameron Dorner (WR-NE)** — FREE AGENT, claim him.
-  ↳ _July 26, 2026 — Moved to IR:_ The Patriots placed Webb (arm) on injured reserve Sunday,  Evan Lazar of the team's official site  reports. (serious)
-- ⚠️ **Robbie Ouzts (RB-SEA) → IR** — FREE AGENT player newly listed IR. Next up: **Jacardia Wright (RB-SEA)** — FREE AGENT, claim him.
-  ↳ _August 14, 2026 — Not facing career-threatening issue:_ Ouzts' neck injury is likely not a career-threatening issue,  Corbin K. Smith of SI.com  reports. (serious)
-- 📈 **Romeo Doubs (WR-NE) moved up the depth chart (2 → 1)** — Workload is trending his way.
-  ↳ _September 9, 2026 — Forgettable team debut in loss:_ Doubs failed to bring in any of his three targets during the Patriots' 13-10 loss to the Seahawks on Wednesday.
-- 📈 **MarShawn Lloyd (RB-GB) moved up the depth chart (2 → 1)** — Workload is trending his way.
-  ↳ _September 13, 2026 — Leading rusher in ineffective RB room:_ Lloyd rushed 13 times for 37 yards and didn't catch his lone target in Sunday's 39-22 loss to the Vikings.
-- 📈 **Kaytron Allen (RB-WAS) moved up the depth chart (4 → 3)** — Workload is trending his way. He is a free agent.
-  ↳ _September 14, 2026 — Limited action in NFL debut:_ Allen turned four carries into 16 yards during the Commanders' 24-22 loss to the Eagles on Sunday.
-- 📈 **Emanuel Wilson (RB-SEA) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
-  ↳ _September 10, 2026 — Two touches in Seahawks debut:_ Wilson rushed twice for three yards and wasn't targeted in Wednesday's 13-10 win over the Patriots. (practice: **FULL**)
-- ⚠️ **Savion Williams (WR-GB) cleared (IR → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 1, 2026 — On mend from high-ankle sprain:_ Packers general manager Brian Gutekunst said Tuesday that Williams is recovering from a high-ankle sprain and should be ready to return from injured reserve when first eligible in Week 5,  Matt Schneidman of The Athletic  reports. (serious)
-- ⚠️ **Luke Musgrave (TE-GB) cleared (PUP → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 1, 2026 — Expected to play in 2026:_ Packers general manager Brian Gutekunst said Tuesday that he's "really hopeful" Musgrave (neck) will be able to play at some point during the 2026 season,  Ryan Wood of USA Today  reports.
-- ⚠️ **Adam Randall (RB-BAL) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Mason Tipton (WR-NO) cleared (PUP → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Tip Reiman (TE-ARI) cleared (PUP → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Brandon Aiyuk (WR-SF) cleared (DNR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Calvin Austin (WR-NYG) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Elijah Sarratt (WR-BAL) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Will Mallory (TE-IND) cleared (IR → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Tanner McKee (QB-PHI) → Out** — FREE AGENT player newly listed Out. Next up: **Cole Payton (QB-PHI)** — FREE AGENT, claim him.
+  ↳ _September 13, 2026 — Emergency option for Week 1:_ McKee (coach's decision) is  inactive as the emergency third quarterback  for Sunday's game against the Commanders. (serious)
+- 📈 **Rhamondre Stevenson (RB-NE) moved up the depth chart (2 → 1)** — Workload is trending his way.
+  ↳ _September 9, 2026 — Heavy volume in Week 1 loss:_ Stevenson rushed 18 times for 51 yards and brought in five of six targets for 44 yards in the Patriots' 13-10 loss to the Seahawks on Wednesday. (serious)
+- ⚠️ **Jordan Watkins (WR-SF) → Out** — FREE AGENT player newly listed Out. Next up: **Jacob Cowing (WR-SF)** — FREE AGENT, claim him.
+  ↳ _September 10, 2026 — Won't play Thursday:_ Watkins (coach's decision) is officially inactive for Thursday's game against the Rams,  Matt Maiocco of NBC Sports Bay Area  reports.
+- ⚠️ **John Metchie (WR-CAR) → Out** — FREE AGENT player newly listed Out. Next up: **Jimmy Horn (WR-CAR)** — FREE AGENT, claim him.
+  ↳ _September 13, 2026 — Inactive vs. Chicago:_ Metchie (coach's decision) is inactive for Sunday's regular-season opener against the Bears,  Darin Gantt of the Panthers' official site  reports.
+- ⚠️ **Elijah Moore (WR-PHI) → Out** — FREE AGENT player newly listed Out. Next up: **Marquise Brown (WR-PHI)** — FREE AGENT, claim him.
+  ↳ _September 13, 2026 — Odd man out in Philly:_ Moore (coach's decision) is  inactive  for Sunday's game against the Commanders.
+- ⚠️ **Kene Nwangwu (RB-NYJ) → Out** — FREE AGENT player newly listed Out. Next up: **Andrew Beck (RB-NYJ)** — FREE AGENT, claim him.
+  ↳ _September 12, 2026 — Out for Sunday:_ Nwangwu (back) has been  ruled out  ahead of Sunday's game against the Titans.
+- 📈 **Pat Bryant (WR-DEN) moved up the depth chart (4 → 3)** — Workload is trending his way. He is a free agent.
+  ↳ _September 3, 2026 — Poised to operate as top depth option:_ Bryant is slotted in as a top reserve option on the  Broncos' unofficial depth chart .
+- 📈 **Michael Wilson (WR-ARI) moved up the depth chart (2 → 1)** — Workload is trending his way.
+  ↳ _September 13, 2026 — Opens season with five catches:_ Wilson secured five of seven targets for 56 yards in the Cardinals' 26-14 win over the Chargers on Sunday.
+- 📈 **Kaleb Johnson (RB-GB) moved up the depth chart (5 → 3)** — Workload is trending his way. He is a free agent.
+- 📈 **Jayden Higgins (WR-HOU) moved up the depth chart (10 → 9)** — Workload is trending his way.
+- 📈 **Zach Charbonnet (RB-SEA) moved up the depth chart (5 → 4)** — Workload is trending his way.
+- 📈 **Aaron Jones (RB-MIN) moved up the depth chart (2 → 1)** — Workload is trending his way.
+- 📈 **KC Concepcion (WR-CLE) moved up the depth chart (2 → 1)** — Workload is trending his way.
+- 📈 **James Conner (RB-ARI) moved up the depth chart (4 → 3)** — Workload is trending his way. He is a free agent.
+- 📈 **Parker Washington (WR-JAX) moved up the depth chart (2 → 1)** — Workload is trending his way.
+- 📈 **Tank Dell (WR-HOU) moved up the depth chart (7 → 6)** — Workload is trending his way.
+- ⚠️ **Nicholas Singleton (RB-TEN) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Cole Payton (QB-PHI) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Isiah Pacheco (RB-DET) cleared (IR → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Tutu Atwell (WR-LAR) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Malik Davis (RB-DAL) cleared (IR → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Luke McCaffrey (WR-WAS) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Christian Kirk (WR-SF) cleared (IR → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Joe Royer (TE-CLE) cleared (PUP → healthy)** — FREE AGENT player is off the report.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
-| 🟢 | **Kaleb Johnson (RB-GB)** | BUY EARLY | 5.6 | Josh Jacobs is NA (Personal) | 0 | $6 |
+| 🚨 | **Carson Wentz (QB-MIN)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 495,432 adds in 24h — the market has re-rated him | 495,432 | $35 |
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
-| 🚨 | **J.J. McCarthy (QB-MIN)** | URGENT | 2.9 | everyone ahead of him is out — the job is his; Kyler Murray is Out (Concussion) | 0 | $22 |
-| 🚨 | **Carson Wentz (QB-MIN)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 366,270 adds in 24h — the market has re-rated him | 366,270 | $35 |
-| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Out (Hamstring) | 18,944 | $12 |
-| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 25,825 adds in 24h — the market has re-rated him | 25,825 | $19 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 5,850 | $2 |
-| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 0 | $4 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Out (Hamstring) | 27,995 | $19 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 8,919 | $2 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔥 | **Dallas Goedert (TE-PHI)** | CONTESTED | 20.9 | starting for his NFL team and unrostered | 23,410 | $30 |
+| 🛡️ | **Devin Singletary (RB-NYG)** | INSURANCE | 0.0 | 976,302 adds in 24h — the market has re-rated him; direct handcuff to MY Cam Skattebo | 976,302 | $5 |
+| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 9,333 | $4 |
+| 🚨 | **Kendre Miller (RB-NO)** | URGENT | 5.0 | 48,086 adds in 24h — the market has re-rated him; Alvin Kamara is Out (Knee - MCL) | 48,086 | $19 |
+| 🔥 | **Dallas Goedert (TE-PHI)** | CONTESTED | 20.9 | starting for his NFL team and unrostered | 29,558 | $30 |
+| 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $4 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
@@ -53,7 +62,7 @@
 | Josh Allen (QB-BUF) | healthy | Kyle Allen (QB-BUF) | **FREE AGENT** |
 | Derrick Henry (RB-BAL) | healthy | Justice Hill (RB-BAL) | **FREE AGENT** |
 | Trey McBride (TE-ARI) | healthy | Elijah Higgins (TE-ARI) | **FREE AGENT** |
-| Cam Skattebo (RB-NYG) | healthy | Tyrone Tracy (RB-NYG) | rostered (supervillain) |
+| Cam Skattebo (RB-NYG) | healthy | Devin Singletary (RB-NYG) | **FREE AGENT** |
 | Bhayshul Tuten (RB-JAX) | healthy | Chris Rodriguez (RB-JAX) | rostered (Randikulous) |
 | Brock Purdy (QB-SF) | healthy | Mac Jones (QB-SF) | **FREE AGENT** |
 | Tony Pollard (RB-TEN) | healthy | Tyjae Spears (RB-TEN) | **FREE AGENT** |
