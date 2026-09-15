@@ -1,13 +1,19 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 1** · supervillain (0-0) · FAAB left **$100** · generated 2026-09-14 21:52 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$100** · generated 2026-09-15 04:59 UTC
 
 ## Since last run
 
-- ⚠️ **Jalen Coker (WR-CAR) → Questionable** — Jersey Rum Hams's player newly listed Questionable. Next up: **Xavier Legette (WR-CAR)** — FREE AGENT, claim him.
-  ↳ _September 14, 2026 — In walking boot Monday:_ Coker is in a walking boot Monday after sustaining an ankle injury in Sunday's loss to the Bears,  Mike Kaye of ESPN.com  reports. (serious)
-- ⚠️ **Jordan Mason (RB-MIN) → Questionable** — It's Gonna be Maye's player newly listed Questionable. Next up: **Aaron Jones (RB-MIN)** — rostered by hulleywood.
-  ↳ _September 14, 2026 — Nursing sore thumb after Week 1:_ Vikings head coach Kevin O'Connell said Monday that Mason is being further evaluated after experiencing thumb soreness coming out of Sunday's 39-22 win over the Packers,  Alec Lewis of The Athletic  reports. (serious)
+- ⚠️ **Jared Wiley (TE-KC) → Out** — FREE AGENT player newly listed Out. Next up: **Jake Briningstool (TE-KC)** — FREE AGENT, claim him.
+  ↳ _February 7, 2026 — Minimal action in 2025:_ Wiley finished the 2025 regular season with one reception for four yards in five games. (serious)
+- ⚠️ **Tyler Badie (RB-DEN) → Out** — FREE AGENT player newly listed Out. Next up: **Cody Schrader (RB-DEN)** — FREE AGENT, claim him.
+  ↳ _September 14, 2026 — Healthy scratch Week 1:_ Badie (coach's decision) is inactive for Monday's game against the Chiefs,  Aric DiLalla of the Broncos' official site  reports. (serious)
+- ⚠️ **Carter Runyon (TE-LV) → IR** — FREE AGENT player newly listed IR. Next up: **Patrick Gurd (TE-LV)** — FREE AGENT, claim him.
+  ↳ _August 31, 2026 — Placed on IR, designated to return:_ Runyon (undisclosed) was  placed on injured reserve by the Raiders on Sunday  with a designation to return. (serious)
+- ⚠️ **Garrett Nussmeier (QB-KC) → Out** — FREE AGENT player newly listed Out.
+  ↳ _September 14, 2026 — Emergency QB for MNF:_ Nussmeier (coach's decision) is  inactive as the emergency third quarterback  for Monday night's game against the Broncos.
+- ⚠️ **Sam Ehlinger (QB-DEN) → Out** — FREE AGENT player newly listed Out.
+  ↳ _September 14, 2026 — Emergency quarterback for MNF:_ Ehlinger (coach's decision) is inactive but will serve as the Broncos' emergency third quarterback against the Chiefs on Monday,  Aric DiLalla of the Broncos' official site  reports.
 
 ## Waiver board — best available opportunity
 
@@ -15,14 +21,15 @@
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
 | 🚨 | **J.J. McCarthy (QB-MIN)** | URGENT | 2.9 | everyone ahead of him is out — the job is his; Kyler Murray is Out (Concussion) | 0 | $22 |
-| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Out (Hamstring) | 7,585 | $12 |
-| 🚨 | **Carson Wentz (QB-MIN)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 288,822 adds in 24h — the market has re-rated him | 288,822 | $35 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Out (Hamstring) | 11,196 | $12 |
+| 🚨 | **Carson Wentz (QB-MIN)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 280,476 adds in 24h — the market has re-rated him | 280,476 | $35 |
 | 🟢 | **Emanuel Wilson (RB-SEA)** | BUY EARLY | 6.8 | Zach Charbonnet is PUP (Knee - ACL) | 0 | $6 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 4,491 | $2 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 3,888 | $2 |
 | 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 0 | $4 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🔥 | **Dallas Goedert (TE-PHI)** | CONTESTED | 20.9 | starting for his NFL team and unrostered | 22,382 | $30 |
+| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 11,839 adds in 24h — the market has re-rated him | 11,839 | $12 |
+| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 18,990 | $4 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 

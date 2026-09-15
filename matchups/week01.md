@@ -6,10 +6,10 @@ _depth charts as of 2026-09-14; defender grades pool PFR coverage stats from 202
 
 | Player | Pos | Tm | Spot | Opp | Verdict | Score | Individual matchup | Team defense |
 |---|---|---|---|---|---|---|---|---|
-| Josh Allen | QB | BUF | QB | @ HOU | 🔴 TOUGH | 81 |  | HOU pass D [A 81, #6] |
-| Brock Purdy | QB | SF | SUPER_FLEX | @ LA | 🟡 NEUTRAL | 57 |  | LA pass D [C 57, #14] |
-| Bhayshul Tuten | RB | JAX | FLEX | vs CLE | 🟡 NEUTRAL | 60 | MLB Carson Schwesinger [C 45]<br>WLB Easton Mascarenas-Arnold [?] (no coverage data) | CLE run D [B 69, #11] |
-| Derrick Henry | RB | BAL | RB | @ IND | 🟡 NEUTRAL | 54 | MLB Akeem Davis-Gaither [D 26]<br>WLB Jaylon Carlies [?] (low sample (6 tgt)) | IND run D [B 65, #12] |
+| Josh Allen | QB | BUF | QB | @ HOU | 🔴 TOUGH | 80 |  | HOU pass D [B 80, #6] |
+| Brock Purdy | QB | SF | SUPER_FLEX | @ LA | 🟡 NEUTRAL | 55 |  | LA pass D [C 55, #15] |
+| Bhayshul Tuten | RB | JAX | FLEX | vs CLE | 🟡 NEUTRAL | 60 | MLB Carson Schwesinger [C 45]<br>WLB Easton Mascarenas-Arnold [?] (no coverage data) | CLE run D [B 69, #10] |
+| Derrick Henry | RB | BAL | RB | @ IND | 🟡 NEUTRAL | 55 | MLB Akeem Davis-Gaither [D 26]<br>WLB Jaylon Carlies [?] (low sample (6 tgt)) | IND run D [B 67, #11] |
 | Rico Dowdle | RB | PIT | FLEX | vs ATL | 🟡 NEUTRAL | 46 | LILB Kendal Daniels [?] (rookie)<br>RILB Divine Deablo [C 59] | ATL run D [D 40, #21] |
 | Cam Skattebo | RB | NYG | RB | vs DAL | 🟢 SOFT | 31 | LILB DeMarvion Overshown [?] (low sample (16 tgt))<br>RILB Dee Winters [B 63] | DAL run D [F 14, #28] |
 | Emeka Egbuka | WR | TB | WR | @ CIN | 🟡 NEUTRAL | 52 | (outside) LCB Dax Hill [B 61]<br>RCB DJ Turner II [B 74] | CIN pass D [D 23, #27] |
@@ -17,7 +17,7 @@ _depth charts as of 2026-09-14; defender grades pool PFR coverage stats from 202
 | Trey McBride | TE | ARI | TE | @ LAC | 🔴 TOUGH | 73 | FS Elijah Molden [C 45]<br>SS Derwin James Jr. [A 83] | LAC pass D [A 81, #5] |
 | Tyrone Tracy Jr. | RB | NYG | BN | vs DAL | 🟢 SOFT | 31 | LILB DeMarvion Overshown [?] (low sample (16 tgt))<br>RILB Dee Winters [B 63] | DAL run D [F 14, #28] |
 | Tony Pollard | RB | TEN | BN | vs NYJ | 🟢 SOFT | 30 | MLB Jamien Sherwood [D 39]<br>WLB Demario Davis [C 51] | NYJ run D [F 19, #25] |
-| Tank Dell | WR | HOU | BN | vs BUF | 🔴 TOUGH | 72 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 90, #2] |
+| Tank Dell | WR | HOU | BN | vs BUF | 🔴 TOUGH | 72 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 90, #3] |
 | Alec Pierce | WR | IND | BN | vs BAL | 🟡 NEUTRAL | 55 | (outside) LCB Nate Wiggins [B 71]<br>RCB Marlon Humphrey [C 51] | BAL pass D [C 45, #18] |
 | Tre Tucker | WR | LV | BN | vs MIA | 🟡 NEUTRAL | 42 | (outside) LCB Jason Marshall Jr. [?] (low sample (25 tgt))<br>RCB JuJu Brents [?] (low sample (13 tgt)) | MIA pass D [D 28, #23] |
 | Quentin Johnston | WR | LAC | BN | vs ARI | 🟡 NEUTRAL | 41 | (outside) LCB Will Johnson [D 33]<br>RCB Denzel Burke [B 67] | ARI pass D [D 26, #25] |
@@ -28,38 +28,38 @@ _depth charts as of 2026-09-14; defender grades pool PFR coverage stats from 202
 |---|---|---|---|---|---|---|---|---|
 | Aaron Rodgers | QB | PIT | SUPER_FLEX | vs ATL | 🟡 NEUTRAL | 60 |  | ATL pass D [B 60, #13] |
 | Matthew Stafford | QB | LA | QB | vs SF | 🟢 SOFT | 37 |  | SF pass D [D 37, #21] |
-| De'Von Achane | RB | MIA | RB | @ LV | 🔴 TOUGH | 70 | LILB Nakobe Dean [B 71]<br>RILB Quay Walker [C 45] | LV run D [B 77, #8] |
-| Omarion Hampton | RB | LAC | RB | vs ARI | 🟡 NEUTRAL | 38 | MLB Mack Wilson Sr. [C 58]<br>WLB Jack Gibbens [D 31] | ARI run D [D 34, #23] |
-| Rashee Rice | WR | KC | FLEX | vs DEN | 🔴 TOUGH | 77 | (outside) LCB Pat Surtain II [A 85]<br>RCB Riley Moss [C 55]<br>⚠ shadow risk | DEN pass D [A 90, #3] |
+| De'Von Achane | RB | MIA | RB | @ LV | 🔴 TOUGH | 70 | LILB Nakobe Dean [B 71]<br>RILB Quay Walker [C 45] | LV run D [B 78, #6] |
+| Omarion Hampton | RB | LAC | RB | vs ARI | 🟡 NEUTRAL | 39 | MLB Mack Wilson Sr. [C 58]<br>WLB Jack Gibbens [D 31] | ARI run D [D 35, #23] |
+| Rashee Rice | WR | KC | FLEX | vs DEN | 🔴 TOUGH | 78 | (outside) LCB Pat Surtain II [A 85]<br>RCB Riley Moss [C 55]<br>⚠ shadow risk | DEN pass D [A 92, #2] |
 | Michael Wilson | WR | ARI | FLEX | @ LAC | 🟡 NEUTRAL | 64 | (outside) LCB Cam Hart [D 32]<br>RCB Donte Jackson [B 78] | LAC pass D [A 81, #5] |
 | Puka Nacua | WR | LA | WR | vs SF | 🟡 NEUTRAL | 57 | (outside) LCB Renardo Green [B 74]<br>RCB Deommodore Lenoir [B 62] | SF pass D [D 37, #21] |
 | Luther Burden III | WR | CHI | WR | @ CAR | 🟡 NEUTRAL | 55 | (outside) LCB Mike Jackson [C 56]<br>RCB Jaycee Horn [B 74] | CAR pass D [D 37, #20] |
 | Tyler Warren | TE | IND | TE | vs BAL | 🟡 NEUTRAL | 54 | FS Malaki Starks [C 56]<br>SS Jaylinn Hawkins [B 69] | BAL pass D [C 45, #18] |
 | Jacoby Brissett | QB | ARI | BN | @ LAC | 🔴 TOUGH | 81 |  | LAC pass D [A 81, #5] |
-| Dylan Sampson | RB | CLE | BN | @ JAX | 🔴 TOUGH | 68 | MLB Ventrell Miller [?] (low sample (16 tgt))<br>WLB Foyesade Oluokun [D 39] | JAX run D [A 84, #4] |
-| Rachaad White | RB | WAS | BN | @ PHI | 🟡 NEUTRAL | 58 | LILB Zack Baun [A 84]<br>RILB Jihaad Campbell [B 65] | PHI run D [C 46, #19] |
+| Dylan Sampson | RB | CLE | BN | @ JAX | 🔴 TOUGH | 69 | MLB Ventrell Miller [?] (low sample (16 tgt))<br>WLB Foyesade Oluokun [D 39] | JAX run D [A 86, #3] |
+| Rachaad White | RB | WAS | BN | @ PHI | 🟡 NEUTRAL | 58 | LILB Zack Baun [A 84]<br>RILB Jihaad Campbell [B 65] | PHI run D [C 47, #19] |
 | Mike Washington | RB | LV | BN | vs MIA | 🟢 SOFT | 29 | MLB Jacob Rodriguez [?] (rookie)<br>WLB Jordyn Brooks [D 38] | MIA run D [F 18, #26] |
-| De'Zhaun Stribling | WR | SF | BN | @ LA | 🟡 NEUTRAL | 62 | (slot) NB Quentin Lake [B 65] | LA pass D [C 57, #14] |
+| De'Zhaun Stribling | WR | SF | BN | @ LA | 🟡 NEUTRAL | 62 | (slot) NB Quentin Lake [B 65] | LA pass D [C 55, #15] |
 
 ## All NFL starters (waiver / trade targets)
 
 | Player | Pos | Tm | Spot | Opp | Verdict | Score | Individual matchup | Team defense |
 |---|---|---|---|---|---|---|---|---|
 | Jayden Daniels | QB | WAS | QB1 | @ PHI | 🔴 TOUGH | 94 |  | PHI pass D [A 94, #1] |
-| C.J. Stroud | QB | HOU | QB1 | vs BUF | 🔴 TOUGH | 90 |  | BUF pass D [A 90, #2] |
-| Patrick Mahomes | QB | KC | QB1 | vs DEN | 🔴 TOUGH | 90 |  | DEN pass D [A 90, #3] |
-| Drake Maye | QB | NE | QB1 | @ SEA | 🔴 TOUGH | 88 |  | SEA pass D [A 88, #4] |
+| Patrick Mahomes | QB | KC | QB1 | vs DEN | 🔴 TOUGH | 92 |  | DEN pass D [A 92, #2] |
+| C.J. Stroud | QB | HOU | QB1 | vs BUF | 🔴 TOUGH | 90 |  | BUF pass D [A 90, #3] |
+| Drake Maye | QB | NE | QB1 | @ SEA | 🔴 TOUGH | 87 |  | SEA pass D [A 87, #4] |
 | Jacoby Brissett | QB | ARI | QB1 | @ LAC | 🔴 TOUGH | 81 |  | LAC pass D [A 81, #5] |
-| Josh Allen | QB | BUF | QB1 | @ HOU | 🔴 TOUGH | 81 |  | HOU pass D [A 81, #6] |
+| Josh Allen | QB | BUF | QB1 | @ HOU | 🔴 TOUGH | 80 |  | HOU pass D [B 80, #6] |
+| Bo Nix | QB | DEN | QB1 | @ KC | 🔴 TOUGH | 77 |  | KC pass D [B 77, #8] |
 | Deshaun Watson | QB | CLE | QB1 | @ JAX | 🔴 TOUGH | 77 |  | JAX pass D [B 77, #7] |
-| Jordan Love | QB | GB | QB1 | @ MIN | 🔴 TOUGH | 74 |  | MIN pass D [B 74, #8] |
-| Bo Nix | QB | DEN | QB1 | @ KC | 🔴 TOUGH | 72 |  | KC pass D [B 72, #9] |
-| Jared Goff | QB | DET | QB1 | vs NO | 🔴 TOUGH | 71 |  | NO pass D [B 71, #10] |
+| Jordan Love | QB | GB | QB1 | @ MIN | 🔴 TOUGH | 74 |  | MIN pass D [B 74, #9] |
+| Jared Goff | QB | DET | QB1 | vs NO | 🔴 TOUGH | 70 |  | NO pass D [B 70, #10] |
 | Trevor Lawrence | QB | JAX | QB1 | vs CLE | 🔴 TOUGH | 70 |  | CLE pass D [B 70, #11] |
-| Sam Darnold | QB | SEA | QB1 | vs NE | 🟡 NEUTRAL | 67 |  | NE pass D [B 67, #12] |
+| Sam Darnold | QB | SEA | QB1 | vs NE | 🟡 NEUTRAL | 65 |  | NE pass D [B 65, #12] |
 | Aaron Rodgers | QB | PIT | QB1 | vs ATL | 🟡 NEUTRAL | 60 |  | ATL pass D [B 60, #13] |
-| Brock Purdy | QB | SF | QB1 | @ LA | 🟡 NEUTRAL | 57 |  | LA pass D [C 57, #14] |
-| Kyler Murray | QB | MIN | QB1 | vs GB | 🟡 NEUTRAL | 56 |  | GB pass D [C 56, #15] |
+| Kyler Murray | QB | MIN | QB1 | vs GB | 🟡 NEUTRAL | 56 |  | GB pass D [C 56, #14] |
+| Brock Purdy | QB | SF | QB1 | @ LA | 🟡 NEUTRAL | 55 |  | LA pass D [C 55, #15] |
 | Dak Prescott | QB | DAL | QB1 | @ NYG | 🟡 NEUTRAL | 51 |  | NYG pass D [C 51, #16] |
 | Malik Willis | QB | MIA | QB1 | @ LV | 🟡 NEUTRAL | 49 |  | LV pass D [C 49, #17] |
 | Daniel Jones | QB | IND | QB1 | vs BAL | 🟡 NEUTRAL | 45 |  | BAL pass D [C 45, #18] |
@@ -77,30 +77,30 @@ _depth charts as of 2026-09-14; defender grades pool PFR coverage stats from 202
 | Jalen Hurts | QB | PHI | QB1 | vs WAS | 🟢 SOFT | 9 |  | WAS pass D [F 9, #30] |
 | Geno Smith | QB | NYJ | QB1 | @ TEN | 🟢 SOFT | 8 |  | TEN pass D [F 8, #31] |
 | Jaxson Dart | QB | NYG | QB1 | vs DAL | 🟢 SOFT | 2 |  | DAL pass D [F 2, #32] |
-| Rhamondre Stevenson | RB | NE | RB1 | @ SEA | 🔴 TOUGH | 85 | LILB Drake Thomas [B 65]<br>RILB Ernest Jones IV [B 68] | SEA run D [A 97, #1] |
-| MarShawn Lloyd | RB | GB | RB1 | @ MIN | 🔴 TOUGH | 74 | LILB Eric Wilson [B 66]<br>RILB Blake Cashman [D 34] | MIN run D [A 90, #2] |
+| Rhamondre Stevenson | RB | NE | RB1 | @ SEA | 🔴 TOUGH | 85 | LILB Drake Thomas [B 65]<br>RILB Ernest Jones IV [B 68] | SEA run D [A 98, #1] |
+| MarShawn Lloyd | RB | GB | RB1 | @ MIN | 🔴 TOUGH | 75 | LILB Eric Wilson [B 66]<br>RILB Blake Cashman [D 34] | MIN run D [A 92, #2] |
 | James Cook III | RB | BUF | RB1 | @ HOU | 🔴 TOUGH | 71 | MLB Azeez Al-Shaair [B 71]<br>WLB Henry To'oTo'o [C 48] | HOU run D [B 78, #5] |
-| Kenneth Walker III | RB | KC | RB1 | vs DEN | 🔴 TOUGH | 70 | LILB Alex Singleton [D 21]<br>RILB Justin Strnad [B 71] | DEN run D [A 86, #3] |
-| De'Von Achane | RB | MIA | RB1 | @ LV | 🔴 TOUGH | 70 | LILB Nakobe Dean [B 71]<br>RILB Quay Walker [C 45] | LV run D [B 77, #8] |
-| Jahmyr Gibbs | RB | DET | RB1 | vs NO | 🔴 TOUGH | 69 | LILB Kaden Elliss [B 65]<br>RILB Pete Werner [B 65] | NO run D [B 72, #10] |
-| Quinshon Judkins | RB | CLE | RB1 | @ JAX | 🔴 TOUGH | 68 | MLB Ventrell Miller [?] (low sample (16 tgt))<br>WLB Foyesade Oluokun [D 39] | JAX run D [A 84, #4] |
-| Jeremiyah Love | RB | ARI | RB1 | @ LAC | 🟡 NEUTRAL | 65 | LILB Daiyan Henley [B 67]<br>RILB Troy Dye [D 28] | LAC run D [B 77, #6] |
+| De'Von Achane | RB | MIA | RB1 | @ LV | 🔴 TOUGH | 70 | LILB Nakobe Dean [B 71]<br>RILB Quay Walker [C 45] | LV run D [B 78, #6] |
+| Jahmyr Gibbs | RB | DET | RB1 | vs NO | 🔴 TOUGH | 70 | LILB Kaden Elliss [B 65]<br>RILB Pete Werner [B 65] | NO run D [B 73, #9] |
+| Quinshon Judkins | RB | CLE | RB1 | @ JAX | 🔴 TOUGH | 69 | MLB Ventrell Miller [?] (low sample (16 tgt))<br>WLB Foyesade Oluokun [D 39] | JAX run D [A 86, #3] |
+| Jeremiyah Love | RB | ARI | RB1 | @ LAC | 🟡 NEUTRAL | 65 | LILB Daiyan Henley [B 67]<br>RILB Troy Dye [D 28] | LAC run D [B 77, #7] |
 | Chase Brown | RB | CIN | RB1 | vs TB | 🟡 NEUTRAL | 62 | LILB Alex Anzalone [A 81]<br>RILB Josiah Trotter [?] (rookie) | TB run D [B 60, #13] |
-| Jadarian Price | RB | SEA | RB1 | vs NE | 🟡 NEUTRAL | 60 | LILB Christian Elliss [C 41]<br>RILB Robert Spillane [C 41] | NE run D [B 73, #9] |
-| Bhayshul Tuten | RB | JAX | RB1 | vs CLE | 🟡 NEUTRAL | 60 | MLB Carson Schwesinger [C 45]<br>WLB Easton Mascarenas-Arnold [?] (no coverage data) | CLE run D [B 69, #11] |
-| J.K. Dobbins | RB | DEN | RB1 | @ KC | 🟡 NEUTRAL | 59 | MLB Nick Bolton [D 39]<br>WLB Drue Tranquill [D 23] | KC run D [B 77, #7] |
-| Jacory Croskey-Merritt | RB | WAS | RB1 | @ PHI | 🟡 NEUTRAL | 58 | LILB Zack Baun [A 84]<br>RILB Jihaad Campbell [B 65] | PHI run D [C 46, #19] |
-| Travis Etienne Jr. | RB | NO | RB1 | @ DET | 🟡 NEUTRAL | 54 | MLB Jack Campbell [C 53]<br>WLB Derrick Barnes [?] (low sample (28 tgt)) | DET run D [C 56, #15] |
-| Derrick Henry | RB | BAL | RB1 | @ IND | 🟡 NEUTRAL | 54 | MLB Akeem Davis-Gaither [D 26]<br>WLB Jaylon Carlies [?] (low sample (6 tgt)) | IND run D [B 65, #12] |
+| J.K. Dobbins | RB | DEN | RB1 | @ KC | 🟡 NEUTRAL | 61 | MLB Nick Bolton [D 39]<br>WLB Drue Tranquill [D 23] | KC run D [A 82, #4] |
+| Jadarian Price | RB | SEA | RB1 | vs NE | 🟡 NEUTRAL | 61 | LILB Christian Elliss [C 41]<br>RILB Robert Spillane [C 41] | NE run D [B 74, #8] |
+| Bhayshul Tuten | RB | JAX | RB1 | vs CLE | 🟡 NEUTRAL | 60 | MLB Carson Schwesinger [C 45]<br>WLB Easton Mascarenas-Arnold [?] (no coverage data) | CLE run D [B 69, #10] |
+| Jacory Croskey-Merritt | RB | WAS | RB1 | @ PHI | 🟡 NEUTRAL | 58 | LILB Zack Baun [A 84]<br>RILB Jihaad Campbell [B 65] | PHI run D [C 47, #19] |
+| Derrick Henry | RB | BAL | RB1 | @ IND | 🟡 NEUTRAL | 55 | MLB Akeem Davis-Gaither [D 26]<br>WLB Jaylon Carlies [?] (low sample (6 tgt)) | IND run D [B 67, #11] |
+| Kenneth Walker III | RB | KC | RB1 | vs DEN | 🟡 NEUTRAL | 55 | LILB Alex Singleton [D 21]<br>RILB Justin Strnad [B 71] | DEN run D [B 61, #12] |
+| Travis Etienne Jr. | RB | NO | RB1 | @ DET | 🟡 NEUTRAL | 55 | MLB Jack Campbell [C 53]<br>WLB Derrick Barnes [?] (low sample (28 tgt)) | DET run D [C 57, #15] |
+| Aaron Jones Sr. | RB | MIN | RB1 | vs GB | 🟡 NEUTRAL | 54 | LILB Edgerrin Cooper [B 62]<br>RILB Zaire Franklin [D 35] | GB run D [C 58, #14] |
 | Jonathan Taylor | RB | IND | RB1 | vs BAL | 🟡 NEUTRAL | 53 | LILB Roquan Smith [C 50]<br>RILB Teddye Buchanan [C 51] | BAL run D [C 55, #16] |
-| Aaron Jones Sr. | RB | MIN | RB1 | vs GB | 🟡 NEUTRAL | 53 | LILB Edgerrin Cooper [B 62]<br>RILB Zaire Franklin [D 35] | GB run D [C 56, #14] |
-| Breece Hall | RB | NYJ | RB1 | @ TEN | 🟡 NEUTRAL | 51 | MLB Cody Barton [B 71]<br>WLB Cedric Gray [D 38] | TEN run D [C 48, #18] |
-| Christian McCaffrey | RB | SF | RB1 | @ LA | 🟡 NEUTRAL | 49 | LILB Nate Landman [D 35]<br>RILB Omar Speights [B 76] | LA run D [C 44, #20] |
-| Bijan Robinson | RB | ATL | RB1 | @ PIT | 🟡 NEUTRAL | 47 | LILB Payton Wilson [D 37]<br>RILB Patrick Queen [C 40] | PIT run D [C 53, #17] |
+| Breece Hall | RB | NYJ | RB1 | @ TEN | 🟡 NEUTRAL | 52 | MLB Cody Barton [B 71]<br>WLB Cedric Gray [D 38] | TEN run D [C 49, #18] |
+| Christian McCaffrey | RB | SF | RB1 | @ LA | 🟡 NEUTRAL | 49 | LILB Nate Landman [D 35]<br>RILB Omar Speights [B 76] | LA run D [C 45, #20] |
+| Bijan Robinson | RB | ATL | RB1 | @ PIT | 🟡 NEUTRAL | 48 | LILB Payton Wilson [D 37]<br>RILB Patrick Queen [C 40] | PIT run D [C 54, #17] |
+| Kyren Williams | RB | LA | RB1 | vs SF | 🟡 NEUTRAL | 46 | MLB Fred Warner [B 70]<br>WLB Dre Greenlaw [?] (low sample (23 tgt)) | SF run D [D 37, #22] |
 | Jaylen Warren | RB | PIT | RB1 | vs ATL | 🟡 NEUTRAL | 46 | LILB Kendal Daniels [?] (rookie)<br>RILB Divine Deablo [C 59] | ATL run D [D 40, #21] |
-| Kyren Williams | RB | LA | RB1 | vs SF | 🟡 NEUTRAL | 45 | MLB Fred Warner [B 70]<br>WLB Dre Greenlaw [?] (low sample (23 tgt)) | SF run D [D 35, #22] |
 | Chuba Hubbard | RB | CAR | RB1 | vs CHI | 🟡 NEUTRAL | 42 | MLB T.J. Edwards [B 65]<br>WLB Devin Bush [B 71] | CHI run D [D 25, #24] |
-| Omarion Hampton | RB | LAC | RB1 | vs ARI | 🟡 NEUTRAL | 38 | MLB Mack Wilson Sr. [C 58]<br>WLB Jack Gibbens [D 31] | ARI run D [D 34, #23] |
+| Omarion Hampton | RB | LAC | RB1 | vs ARI | 🟡 NEUTRAL | 39 | MLB Mack Wilson Sr. [C 58]<br>WLB Jack Gibbens [D 31] | ARI run D [D 35, #23] |
 | D'Andre Swift | RB | CHI | RB1 | @ CAR | 🟢 SOFT | 35 | LILB Devin Lloyd [B 66]<br>RILB Bobby Okereke [B 75] | CAR run D [F 12, #30] |
 | Cam Skattebo | RB | NYG | RB1 | vs DAL | 🟢 SOFT | 31 | LILB DeMarvion Overshown [?] (low sample (16 tgt))<br>RILB Dee Winters [B 63] | DAL run D [F 14, #28] |
 | Tony Pollard | RB | TEN | RB1 | vs NYJ | 🟢 SOFT | 30 | MLB Jamien Sherwood [D 39]<br>WLB Demario Davis [C 51] | NYJ run D [F 19, #25] |
@@ -111,54 +111,54 @@ _depth charts as of 2026-09-14; defender grades pool PFR coverage stats from 202
 | Bucky Irving | RB | TB | RB1 | @ CIN | 🟢 SOFT | 16 | MLB Barrett Carter [D 24]<br>WLB Demetrius Knight Jr. [C 45] | CIN run D [F 4, #31] |
 | Stefon Diggs | WR | WAS | WR2 | @ PHI | 🔴 TOUGH | 90 | (outside) LCB Riq Woolen [A 86]<br>RCB Quinyon Mitchell [A 90]<br>⚠ shadow risk | PHI pass D [A 94, #1] |
 | Terry McLaurin | WR | WAS | WR1 | @ PHI | 🔴 TOUGH | 90 | (outside) LCB Riq Woolen [A 86]<br>RCB Quinyon Mitchell [A 90]<br>⚠ shadow risk | PHI pass D [A 94, #1] |
-| DJ Moore | WR | BUF | WR1 | @ HOU | 🔴 TOUGH | 83 | (outside) LCB Derek Stingley Jr. [A 90]<br>RCB Kamari Lassiter [B 80]<br>⚠ shadow risk | HOU pass D [A 81, #6] |
-| Rashee Rice | WR | KC | WR1 | vs DEN | 🔴 TOUGH | 77 | (outside) LCB Pat Surtain II [A 85]<br>RCB Riley Moss [C 55]<br>⚠ shadow risk | DEN pass D [A 90, #3] |
-| Xavier Worthy | WR | KC | WR2 | vs DEN | 🔴 TOUGH | 77 | (outside) LCB Pat Surtain II [A 85]<br>RCB Riley Moss [C 55]<br>⚠ shadow risk | DEN pass D [A 90, #3] |
-| Tyquan Thornton | WR | KC | WR3 | vs DEN | 🔴 TOUGH | 77 | (slot) NB Ja'Quan McMillian [B 69]<br>⚠ shadow risk | DEN pass D [A 90, #3] |
-| Keon Coleman | WR | BUF | WR3 | @ HOU | 🔴 TOUGH | 75 | (slot) NB Jalen Pitre [B 72]<br>⚠ shadow risk | HOU pass D [A 81, #6] |
-| Khalil Shakir | WR | BUF | WR2 | @ HOU | 🔴 TOUGH | 75 | (slot) NB Jalen Pitre [B 72]<br>⚠ shadow risk | HOU pass D [A 81, #6] |
+| DJ Moore | WR | BUF | WR1 | @ HOU | 🔴 TOUGH | 83 | (outside) LCB Derek Stingley Jr. [A 90]<br>RCB Kamari Lassiter [B 80]<br>⚠ shadow risk | HOU pass D [B 80, #6] |
+| Rashee Rice | WR | KC | WR1 | vs DEN | 🔴 TOUGH | 78 | (outside) LCB Pat Surtain II [A 85]<br>RCB Riley Moss [C 55]<br>⚠ shadow risk | DEN pass D [A 92, #2] |
+| Xavier Worthy | WR | KC | WR2 | vs DEN | 🔴 TOUGH | 78 | (outside) LCB Pat Surtain II [A 85]<br>RCB Riley Moss [C 55]<br>⚠ shadow risk | DEN pass D [A 92, #2] |
+| Tyquan Thornton | WR | KC | WR3 | vs DEN | 🔴 TOUGH | 77 | (slot) NB Ja'Quan McMillian [B 69]<br>⚠ shadow risk | DEN pass D [A 92, #2] |
 | Antonio Williams | WR | WAS | WR3 | @ PHI | 🔴 TOUGH | 75 | (slot) NB Cooper DeJean [B 65]<br>⚠ shadow risk | PHI pass D [A 94, #1] |
-| Rashid Shaheed | WR | SEA | WR2 | vs NE | 🔴 TOUGH | 75 | (outside) LCB Carlton Davis III [B 75]<br>RCB Christian Gonzalez [A 83]<br>⚠ shadow risk | NE pass D [B 67, #12] |
-| Kayshon Boutte | WR | HOU | WR2 | vs BUF | 🔴 TOUGH | 72 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 90, #2] |
-| Nico Collins | WR | HOU | WR1 | vs BUF | 🔴 TOUGH | 72 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 90, #2] |
-| DeMario Douglas | WR | NE | WR2 | @ SEA | 🔴 TOUGH | 72 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 88, #4] |
-| Romeo Doubs | WR | NE | WR1 | @ SEA | 🔴 TOUGH | 72 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 88, #4] |
+| Keon Coleman | WR | BUF | WR3 | @ HOU | 🔴 TOUGH | 75 | (slot) NB Jalen Pitre [B 72]<br>⚠ shadow risk | HOU pass D [B 80, #6] |
+| Khalil Shakir | WR | BUF | WR2 | @ HOU | 🔴 TOUGH | 75 | (slot) NB Jalen Pitre [B 72]<br>⚠ shadow risk | HOU pass D [B 80, #6] |
+| Rashid Shaheed | WR | SEA | WR2 | vs NE | 🔴 TOUGH | 74 | (outside) LCB Carlton Davis III [B 75]<br>RCB Christian Gonzalez [A 83]<br>⚠ shadow risk | NE pass D [B 65, #12] |
+| Kayshon Boutte | WR | HOU | WR2 | vs BUF | 🔴 TOUGH | 72 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 90, #3] |
+| Nico Collins | WR | HOU | WR1 | vs BUF | 🔴 TOUGH | 72 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 90, #3] |
 | Kendrick Bourne | WR | ARI | WR3 | @ LAC | 🔴 TOUGH | 71 | (slot) NB Tarheeb Still [B 66] | LAC pass D [A 81, #5] |
-| Matthew Golden | WR | GB | WR3 | @ MIN | 🔴 TOUGH | 70 | (slot) NB Byron Murphy Jr. [B 68]<br>⚠ shadow risk | MIN pass D [B 74, #8] |
-| Christian Watson | WR | GB | WR1 | @ MIN | 🔴 TOUGH | 70 | (outside) LCB Charles Demmings [?] (rookie)<br>RCB James Pierre [A 84]<br>⚠ shadow risk | MIN pass D [B 74, #8] |
-| Jayden Reed | WR | GB | WR2 | @ MIN | 🔴 TOUGH | 70 | (outside) LCB Charles Demmings [?] (rookie)<br>RCB James Pierre [A 84]<br>⚠ shadow risk | MIN pass D [B 74, #8] |
+| DeMario Douglas | WR | NE | WR2 | @ SEA | 🔴 TOUGH | 71 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 87, #4] |
+| Romeo Doubs | WR | NE | WR1 | @ SEA | 🔴 TOUGH | 71 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 87, #4] |
+| Matthew Golden | WR | GB | WR3 | @ MIN | 🔴 TOUGH | 70 | (slot) NB Byron Murphy Jr. [B 68]<br>⚠ shadow risk | MIN pass D [B 74, #9] |
+| Christian Watson | WR | GB | WR1 | @ MIN | 🔴 TOUGH | 70 | (outside) LCB Charles Demmings [?] (rookie)<br>RCB James Pierre [A 84]<br>⚠ shadow risk | MIN pass D [B 74, #9] |
+| Jayden Reed | WR | GB | WR2 | @ MIN | 🔴 TOUGH | 70 | (outside) LCB Charles Demmings [?] (rookie)<br>RCB James Pierre [A 84]<br>⚠ shadow risk | MIN pass D [B 74, #9] |
 | Jerry Jeudy | WR | CLE | WR1 | @ JAX | 🟡 NEUTRAL | 66 | (outside) LCB Travis Hunter [?] (no coverage data)<br>RCB Montaric Brown [B 69] | JAX pass D [B 77, #7] |
 | KC Concepcion | WR | CLE | WR2 | @ JAX | 🟡 NEUTRAL | 66 | (outside) LCB Travis Hunter [?] (no coverage data)<br>RCB Montaric Brown [B 69] | JAX pass D [B 77, #7] |
 | Denzel Boston | WR | CLE | WR3 | @ JAX | 🟡 NEUTRAL | 66 | (slot) NB Jourdan Lewis [C 59] | JAX pass D [B 77, #7] |
-| Mack Hollins | WR | NE | WR3 | @ SEA | 🟡 NEUTRAL | 64 | (slot) NB Nick Emmanwori [C 51]<br>⚠ shadow risk | SEA pass D [A 88, #4] |
 | Marvin Harrison Jr. | WR | ARI | WR1 | @ LAC | 🟡 NEUTRAL | 64 | (outside) LCB Cam Hart [D 32]<br>RCB Donte Jackson [B 78] | LAC pass D [A 81, #5] |
 | Michael Wilson | WR | ARI | WR2 | @ LAC | 🟡 NEUTRAL | 64 | (outside) LCB Cam Hart [D 32]<br>RCB Donte Jackson [B 78] | LAC pass D [A 81, #5] |
+| Mack Hollins | WR | NE | WR3 | @ SEA | 🟡 NEUTRAL | 64 | (slot) NB Nick Emmanwori [C 51]<br>⚠ shadow risk | SEA pass D [A 87, #4] |
 | Drake London | WR | ATL | WR1 | @ PIT | 🟡 NEUTRAL | 63 | (outside) LCB Joey Porter Jr. [A 83]<br>RCB Jamel Dean [B 70]<br>⚠ shadow risk | PIT pass D [D 38, #19] |
 | Jahan Dotson | WR | ATL | WR2 | @ PIT | 🟡 NEUTRAL | 63 | (outside) LCB Joey Porter Jr. [A 83]<br>RCB Jamel Dean [B 70]<br>⚠ shadow risk | PIT pass D [D 38, #19] |
-| De'Zhaun Stribling | WR | SF | WR3 | @ LA | 🟡 NEUTRAL | 62 | (slot) NB Quentin Lake [B 65] | LA pass D [C 57, #14] |
+| De'Zhaun Stribling | WR | SF | WR3 | @ LA | 🟡 NEUTRAL | 62 | (slot) NB Quentin Lake [B 65] | LA pass D [C 55, #15] |
 | Brian Thomas Jr. | WR | JAX | WR1 | vs CLE | 🟡 NEUTRAL | 61 | (outside) LCB Denzel Ward [C 57]<br>RCB Tyson Campbell [C 55] | CLE pass D [B 70, #11] |
 | Parker Washington | WR | JAX | WR2 | vs CLE | 🟡 NEUTRAL | 61 | (outside) LCB Denzel Ward [C 57]<br>RCB Tyson Campbell [C 55] | CLE pass D [B 70, #11] |
 | Josh Downs | WR | IND | WR2 | vs BAL | 🟡 NEUTRAL | 60 | (slot) NB Kyle Hamilton [B 68] | BAL pass D [C 45, #18] |
 | Keenan Allen | WR | IND | WR3 | vs BAL | 🟡 NEUTRAL | 60 | (slot) NB Kyle Hamilton [B 68] | BAL pass D [C 45, #18] |
-| Deebo Samuel | WR | SF | WR2 | @ LA | 🟡 NEUTRAL | 58 | (outside) LCB Jaylen Watson [C 56]<br>RCB Trent McDuffie [B 62] | LA pass D [C 57, #14] |
-| Mike Evans | WR | SF | WR1 | @ LA | 🟡 NEUTRAL | 58 | (outside) LCB Jaylen Watson [C 56]<br>RCB Trent McDuffie [B 62] | LA pass D [C 57, #14] |
-| Marvin Mims Jr. | WR | DEN | WR3 | @ KC | 🟡 NEUTRAL | 58 | (slot) NB Jadon Canady [?] (rookie) | KC pass D [B 72, #9] |
+| Marvin Mims Jr. | WR | DEN | WR3 | @ KC | 🟡 NEUTRAL | 60 | (slot) NB Jadon Canady [?] (rookie) | KC pass D [B 77, #8] |
+| Deebo Samuel | WR | SF | WR2 | @ LA | 🟡 NEUTRAL | 58 | (outside) LCB Jaylen Watson [C 56]<br>RCB Trent McDuffie [B 62] | LA pass D [C 55, #15] |
+| Mike Evans | WR | SF | WR1 | @ LA | 🟡 NEUTRAL | 58 | (outside) LCB Jaylen Watson [C 56]<br>RCB Trent McDuffie [B 62] | LA pass D [C 55, #15] |
 | DK Metcalf | WR | PIT | WR1 | vs ATL | 🟡 NEUTRAL | 57 | (outside) LCB A.J. Terrell Jr. [B 66]<br>RCB Mike Hughes [C 44] | ATL pass D [B 60, #13] |
 | Michael Pittman Jr. | WR | PIT | WR2 | vs ATL | 🟡 NEUTRAL | 57 | (outside) LCB A.J. Terrell Jr. [B 66]<br>RCB Mike Hughes [C 44] | ATL pass D [B 60, #13] |
 | Davante Adams | WR | LA | WR2 | vs SF | 🟡 NEUTRAL | 57 | (outside) LCB Renardo Green [B 74]<br>RCB Deommodore Lenoir [B 62] | SF pass D [D 37, #21] |
 | Puka Nacua | WR | LA | WR1 | vs SF | 🟡 NEUTRAL | 57 | (outside) LCB Renardo Green [B 74]<br>RCB Deommodore Lenoir [B 62] | SF pass D [D 37, #21] |
-| Xavier Hutchinson | WR | HOU | WR3 | vs BUF | 🟡 NEUTRAL | 57 | (slot) NB Dee Alford [D 38] | BUF pass D [A 90, #2] |
+| Xavier Hutchinson | WR | HOU | WR3 | vs BUF | 🟡 NEUTRAL | 57 | (slot) NB Dee Alford [D 38] | BUF pass D [A 90, #3] |
+| Courtland Sutton | WR | DEN | WR2 | @ KC | 🟡 NEUTRAL | 56 | (outside) LCB L'Jarius Sneed [D 39]<br>RCB Mansoor Delane [?] (rookie) | KC pass D [B 77, #8] |
+| Jaylen Waddle | WR | DEN | WR1 | @ KC | 🟡 NEUTRAL | 56 | (outside) LCB L'Jarius Sneed [D 39]<br>RCB Mansoor Delane [?] (rookie) | KC pass D [B 77, #8] |
 | Alec Pierce | WR | IND | WR1 | vs BAL | 🟡 NEUTRAL | 55 | (outside) LCB Nate Wiggins [B 71]<br>RCB Marlon Humphrey [C 51] | BAL pass D [C 45, #18] |
-| Amon-Ra St. Brown | WR | DET | WR1 | vs NO | 🟡 NEUTRAL | 55 | (slot) NB Jonas Sanker [C 47] | NO pass D [B 71, #10] |
-| Isaac TeSlaa | WR | DET | WR3 | vs NO | 🟡 NEUTRAL | 55 | (slot) NB Jonas Sanker [C 47] | NO pass D [B 71, #10] |
 | Luther Burden III | WR | CHI | WR2 | @ CAR | 🟡 NEUTRAL | 55 | (outside) LCB Mike Jackson [C 56]<br>RCB Jaycee Horn [B 74] | CAR pass D [D 37, #20] |
 | Rome Odunze | WR | CHI | WR1 | @ CAR | 🟡 NEUTRAL | 55 | (outside) LCB Mike Jackson [C 56]<br>RCB Jaycee Horn [B 74] | CAR pass D [D 37, #20] |
-| Jameson Williams | WR | DET | WR2 | vs NO | 🟡 NEUTRAL | 55 | (outside) LCB Kool-Aid McKinstry [C 46]<br>RCB Quincy Riley [C 46] | NO pass D [B 71, #10] |
-| Courtland Sutton | WR | DEN | WR2 | @ KC | 🟡 NEUTRAL | 54 | (outside) LCB L'Jarius Sneed [D 39]<br>RCB Mansoor Delane [?] (rookie) | KC pass D [B 72, #9] |
-| Jaylen Waddle | WR | DEN | WR1 | @ KC | 🟡 NEUTRAL | 54 | (outside) LCB L'Jarius Sneed [D 39]<br>RCB Mansoor Delane [?] (rookie) | KC pass D [B 72, #9] |
+| Amon-Ra St. Brown | WR | DET | WR1 | vs NO | 🟡 NEUTRAL | 55 | (slot) NB Jonas Sanker [C 47] | NO pass D [B 70, #10] |
+| Isaac TeSlaa | WR | DET | WR3 | vs NO | 🟡 NEUTRAL | 55 | (slot) NB Jonas Sanker [C 47] | NO pass D [B 70, #10] |
+| Jameson Williams | WR | DET | WR2 | vs NO | 🟡 NEUTRAL | 54 | (outside) LCB Kool-Aid McKinstry [C 46]<br>RCB Quincy Riley [C 46] | NO pass D [B 70, #10] |
 | Roman Wilson | WR | PIT | WR3 | vs ATL | 🟡 NEUTRAL | 54 | (slot) NB Billy Bowman Jr. [?] (low sample (27 tgt)) | ATL pass D [B 60, #13] |
-| Jordan Addison | WR | MIN | WR2 | vs GB | 🟡 NEUTRAL | 53 | (outside) LCB Keisean Nixon [C 52]<br>RCB Brandon Cisse [?] (rookie) | GB pass D [C 56, #15] |
-| Justin Jefferson | WR | MIN | WR1 | vs GB | 🟡 NEUTRAL | 53 | (outside) LCB Keisean Nixon [C 52]<br>RCB Brandon Cisse [?] (rookie) | GB pass D [C 56, #15] |
+| Jordan Addison | WR | MIN | WR2 | vs GB | 🟡 NEUTRAL | 53 | (outside) LCB Keisean Nixon [C 52]<br>RCB Brandon Cisse [?] (rookie) | GB pass D [C 56, #14] |
+| Justin Jefferson | WR | MIN | WR1 | vs GB | 🟡 NEUTRAL | 53 | (outside) LCB Keisean Nixon [C 52]<br>RCB Brandon Cisse [?] (rookie) | GB pass D [C 56, #14] |
 | Caleb Douglas | WR | MIA | WR2 | @ LV | 🟡 NEUTRAL | 52 | (outside) LCB Eric Stokes [B 73]<br>RCB Darien Porter [D 34] | LV pass D [C 49, #17] |
 | Malik Washington | WR | MIA | WR1 | @ LV | 🟡 NEUTRAL | 52 | (outside) LCB Eric Stokes [B 73]<br>RCB Darien Porter [D 34] | LV pass D [C 49, #17] |
 | Emeka Egbuka | WR | TB | WR1 | @ CIN | 🟡 NEUTRAL | 52 | (outside) LCB Dax Hill [B 61]<br>RCB DJ Turner II [B 74] | CIN pass D [D 23, #27] |
@@ -166,12 +166,12 @@ _depth charts as of 2026-09-14; defender grades pool PFR coverage stats from 202
 | Chris Olave | WR | NO | WR1 | @ DET | 🟡 NEUTRAL | 48 | (outside) LCB D.J. Reed [B 68]<br>RCB Keith Abney II [?] (rookie) | DET pass D [D 27, #24] |
 | Devaughn Vele | WR | NO | WR2 | @ DET | 🟡 NEUTRAL | 48 | (outside) LCB D.J. Reed [B 68]<br>RCB Keith Abney II [?] (rookie) | DET pass D [D 27, #24] |
 | Jakobi Meyers | WR | JAX | WR3 | vs CLE | 🟡 NEUTRAL | 47 | (slot) NB Myles Harden [D 35] | CLE pass D [B 70, #11] |
-| Jauan Jennings | WR | MIN | WR3 | vs GB | 🟡 NEUTRAL | 47 | (slot) NB Javon Bullard [C 42] | GB pass D [C 56, #15] |
+| Jauan Jennings | WR | MIN | WR3 | vs GB | 🟡 NEUTRAL | 47 | (slot) NB Javon Bullard [C 42] | GB pass D [C 56, #14] |
 | Calvin Ridley | WR | TEN | WR3 | vs NYJ | 🟡 NEUTRAL | 46 | (slot) NB Jarvis Brownlee Jr. [C 55] | NYJ pass D [D 29, #22] |
 | Wan'Dale Robinson | WR | TEN | WR2 | vs NYJ | 🟡 NEUTRAL | 46 | (slot) NB Jarvis Brownlee Jr. [C 55] | NYJ pass D [D 29, #22] |
-| Cooper Kupp | WR | SEA | WR3 | vs NE | 🟡 NEUTRAL | 45 | (slot) NB Marcus Jones [D 34]<br>⚠ shadow risk | NE pass D [B 67, #12] |
-| Jaxon Smith-Njigba | WR | SEA | WR1 | vs NE | 🟡 NEUTRAL | 45 | (slot) NB Marcus Jones [D 34]<br>⚠ shadow risk | NE pass D [B 67, #12] |
 | Omar Cooper Jr. | WR | NYJ | WR3 | @ TEN | 🟡 NEUTRAL | 45 | (slot) NB Marcus Harris [B 65] | TEN pass D [F 8, #31] |
+| Cooper Kupp | WR | SEA | WR3 | vs NE | 🟡 NEUTRAL | 45 | (slot) NB Marcus Jones [D 34]<br>⚠ shadow risk | NE pass D [B 65, #12] |
+| Jaxon Smith-Njigba | WR | SEA | WR1 | vs NE | 🟡 NEUTRAL | 45 | (slot) NB Marcus Jones [D 34]<br>⚠ shadow risk | NE pass D [B 65, #12] |
 | Ryan Flournoy | WR | DAL | WR3 | @ NYG | 🟡 NEUTRAL | 43 | (slot) NB Dru Phillips [D 39] | NYG pass D [C 51, #16] |
 | Rashod Bateman | WR | BAL | WR2 | @ IND | 🟡 NEUTRAL | 42 | (outside) LCB Sauce Gardner [B 61]<br>RCB Charvarius Ward [C 48] | IND pass D [F 19, #29] |
 | Zay Flowers | WR | BAL | WR1 | @ IND | 🟡 NEUTRAL | 42 | (outside) LCB Sauce Gardner [B 61]<br>RCB Charvarius Ward [C 48] | IND pass D [F 19, #29] |
@@ -205,24 +205,24 @@ _depth charts as of 2026-09-14; defender grades pool PFR coverage stats from 202
 | Carnell Tate | WR | TEN | WR1 | vs NYJ | 🟢 SOFT | 30 | (outside) LCB Nahshon Wright [C 47]<br>RCB Brandon Stephens [F 16] | NYJ pass D [D 29, #22] |
 | Barion Brown | WR | NO | WR3 | @ DET | 🟢 SOFT | 26 | (slot) NB Roger McCreary [D 25] | DET pass D [D 27, #24] |
 | Makai Lemon | WR | PHI | WR3 | vs WAS | 🟢 SOFT | 18 | (slot) NB Amik Robertson [D 23] | WAS pass D [F 9, #30] |
-| Hunter Henry | TE | NE | TE1 | @ SEA | 🔴 TOUGH | 78 | FS Julian Love [A 81]<br>SS Ty Okada [C 53] | SEA pass D [A 88, #4] |
-| Travis Kelce | TE | KC | TE1 | vs DEN | 🔴 TOUGH | 76 | FS Brandon Jones [B 79]<br>SS Talanoa Hufanga [C 46] | DEN pass D [A 90, #3] |
-| Dalton Schultz | TE | HOU | TE1 | vs BUF | 🔴 TOUGH | 76 | FS C.J. Gardner-Johnson [B 62]<br>SS Cole Bishop [C 59] | BUF pass D [A 90, #2] |
-| Dalton Kincaid | TE | BUF | TE1 | @ HOU | 🔴 TOUGH | 73 | FS Calen Bullock [A 83]<br>SS Reed Blankenship [C 49] | HOU pass D [A 81, #6] |
+| Travis Kelce | TE | KC | TE1 | vs DEN | 🔴 TOUGH | 77 | FS Brandon Jones [B 79]<br>SS Talanoa Hufanga [C 46] | DEN pass D [A 92, #2] |
+| Hunter Henry | TE | NE | TE1 | @ SEA | 🔴 TOUGH | 77 | FS Julian Love [A 81]<br>SS Ty Okada [C 53] | SEA pass D [A 87, #4] |
+| Dalton Schultz | TE | HOU | TE1 | vs BUF | 🔴 TOUGH | 76 | FS C.J. Gardner-Johnson [B 62]<br>SS Cole Bishop [C 59] | BUF pass D [A 90, #3] |
+| Dalton Kincaid | TE | BUF | TE1 | @ HOU | 🔴 TOUGH | 73 | FS Calen Bullock [A 83]<br>SS Reed Blankenship [C 49] | HOU pass D [B 80, #6] |
 | Trey McBride | TE | ARI | TE1 | @ LAC | 🔴 TOUGH | 73 | FS Elijah Molden [C 45]<br>SS Derwin James Jr. [A 83] | LAC pass D [A 81, #5] |
 | Chig Okonkwo | TE | WAS | TE1 | @ PHI | 🔴 TOUGH | 72 | FS Andrew Mukuba [?] (low sample (25 tgt))<br>SS Marcus Epps [?] (low sample (13 tgt)) | PHI pass D [A 94, #1] |
 | Harold Fannin Jr. | TE | CLE | TE1 | @ JAX | 🟡 NEUTRAL | 67 | FS Antonio Johnson [B 68]<br>SS Eric Murray [C 45] | JAX pass D [B 77, #7] |
 | Darnell Washington | TE | PIT | TE1 | vs ATL | 🟡 NEUTRAL | 64 | FS Xavier Watts [C 59]<br>SS Jessie Bates III [B 75] | ATL pass D [B 60, #13] |
-| Tucker Kraft | TE | GB | TE1 | @ MIN | 🟡 NEUTRAL | 60 | FS Harrison Smith [D 33]<br>SS Joshua Metellus [B 61] | MIN pass D [B 74, #8] |
+| Tucker Kraft | TE | GB | TE1 | @ MIN | 🟡 NEUTRAL | 60 | FS Harrison Smith [D 33]<br>SS Joshua Metellus [B 61] | MIN pass D [B 74, #9] |
 | Brenton Strange | TE | JAX | TE1 | vs CLE | 🟡 NEUTRAL | 60 | FS Ronnie Hickman [B 60]<br>SS Grant Delpit [C 40] | CLE pass D [B 70, #11] |
-| Sam LaPorta | TE | DET | TE1 | vs NO | 🟡 NEUTRAL | 59 | FS Julian Blackmon [?] (low sample (22 tgt))<br>SS Justin Reid [C 45] | NO pass D [B 71, #10] |
-| T.J. Hockenson | TE | MIN | TE1 | vs GB | 🟡 NEUTRAL | 55 | FS Xavier McKinney [B 61]<br>SS Evan Williams [C 49] | GB pass D [C 56, #15] |
+| Sam LaPorta | TE | DET | TE1 | vs NO | 🟡 NEUTRAL | 59 | FS Julian Blackmon [?] (low sample (22 tgt))<br>SS Justin Reid [C 45] | NO pass D [B 70, #10] |
+| Evan Engram | TE | DEN | TE1 | @ KC | 🟡 NEUTRAL | 55 | FS Alohi Gilman [D 37]<br>SS Chamarri Conner [D 30] | KC pass D [B 77, #8] |
+| T.J. Hockenson | TE | MIN | TE1 | vs GB | 🟡 NEUTRAL | 55 | FS Xavier McKinney [B 61]<br>SS Evan Williams [C 49] | GB pass D [C 56, #14] |
 | Jake Ferguson | TE | DAL | TE1 | @ NYG | 🟡 NEUTRAL | 54 | FS Jevon Holland [B 80]<br>SS Tyler Nubin [D 36] | NYG pass D [C 51, #16] |
 | Tyler Warren | TE | IND | TE1 | vs BAL | 🟡 NEUTRAL | 54 | FS Malaki Starks [C 56]<br>SS Jaylinn Hawkins [B 69] | BAL pass D [C 45, #18] |
-| Evan Engram | TE | DEN | TE1 | @ KC | 🟡 NEUTRAL | 53 | FS Alohi Gilman [D 37]<br>SS Chamarri Conner [D 30] | KC pass D [B 72, #9] |
-| AJ Barner | TE | SEA | TE1 | vs NE | 🟡 NEUTRAL | 49 | FS Kevin Byard [D 28]<br>SS Craig Woodson [D 34] | NE pass D [B 67, #12] |
-| George Kittle | TE | SF | TE1 | @ LA | 🟡 NEUTRAL | 48 | FS Kam Curl [C 46]<br>SS Kamren Kinchens [D 33] | LA pass D [C 57, #14] |
 | Colby Parkinson | TE | LA | TE1 | vs SF | 🟡 NEUTRAL | 48 | FS Ji'Ayir Brown [B 64]<br>SS Malik Mustapha [C 56] | SF pass D [D 37, #21] |
+| AJ Barner | TE | SEA | TE1 | vs NE | 🟡 NEUTRAL | 48 | FS Kevin Byard [D 28]<br>SS Craig Woodson [D 34] | NE pass D [B 65, #12] |
+| George Kittle | TE | SF | TE1 | @ LA | 🟡 NEUTRAL | 47 | FS Kam Curl [C 46]<br>SS Kamren Kinchens [D 33] | LA pass D [C 55, #15] |
 | Greg Dulcich | TE | MIA | TE1 | @ LV | 🟡 NEUTRAL | 44 | FS Treydan Stukes [?] (rookie)<br>SS Jeremy Chinn [D 28] | LV pass D [C 49, #17] |
 | Charlie Kolar | TE | LAC | TE1 | vs ARI | 🟡 NEUTRAL | 40 | FS Andrew Wingard [B 78]<br>SS Budda Baker [D 31] | ARI pass D [D 26, #25] |
 | Brock Bowers | TE | LV | TE1 | vs MIA | 🟡 NEUTRAL | 39 | FS Zayne Anderson [?] (low sample (2 tgt))<br>SS Dante Trader Jr. [?] (low sample (20 tgt)) | MIA pass D [D 28, #23] |
@@ -242,31 +242,31 @@ _depth charts as of 2026-09-14; defender grades pool PFR coverage stats from 202
 
 | Team | Pass D | Yds/Att | EPA/db | Run D | Yds/Carry | EPA/carry | PPR/g vs QB | vs RB | vs WR | vs TE |
 |---|---|---|---|---|---|---|---|---|---|---|
-| SEA | A 88 (#4) | 6.0 | -0.09 | A 97 (#1) | 3.7 | -0.15 | 13.7 (#4) | 18.5 (#4) | 25.9 (#2) | 14.5 (#23) |
-| DEN | A 90 (#3) | 6.1 | -0.12 | A 86 (#3) | 3.9 | -0.04 | 14.2 (#5) | 16.9 (#1) | 27.0 (#4) | 13.7 (#18) |
-| MIN | B 74 (#8) | 7.1 | -0.10 | A 90 (#2) | 3.9 | -0.09 | 11.8 (#1) | 18.5 (#5) | 26.3 (#3) | 11.1 (#8) |
-| JAX | B 77 (#7) | 6.3 | -0.13 | A 84 (#4) | 3.9 | -0.05 | 15.7 (#14) | 17.9 (#2) | 30.8 (#18) | 14.1 (#21) |
-| HOU | A 81 (#6) | 6.9 | -0.11 | B 78 (#5) | 4.0 | -0.06 | 14.7 (#9) | 19.2 (#8) | 27.2 (#5) | 12.9 (#14) |
-| LAC | A 81 (#5) | 6.7 | -0.06 | B 77 (#6) | 4.2 | -0.07 | 12.9 (#2) | 18.8 (#6) | 27.7 (#9) | 11.6 (#9) |
-| KC | B 72 (#9) | 6.9 | -0.00 | B 77 (#7) | 4.0 | -0.06 | 15.1 (#11) | 19.2 (#7) | 27.3 (#6) | 11.0 (#6) |
-| NO | B 71 (#10) | 6.6 | -0.02 | B 72 (#10) | 4.1 | -0.09 | 14.2 (#6) | 22.0 (#18) | 28.5 (#11) | 12.4 (#11) |
-| PHI | A 94 (#1) | 6.3 | -0.10 | C 46 (#19) | 4.3 | -0.03 | 14.8 (#10) | 22.4 (#20) | 27.6 (#8) | 8.2 (#2) |
-| NE | B 67 (#12) | 6.8 | -0.02 | B 73 (#9) | 4.2 | -0.04 | 14.6 (#8) | 18.5 (#3) | 29.5 (#14) | 13.0 (#15) |
-| CLE | B 70 (#11) | 6.9 | -0.06 | B 69 (#11) | 4.1 | -0.07 | 14.3 (#7) | 21.4 (#13) | 28.7 (#12) | 12.1 (#10) |
-| LV | C 49 (#17) | 7.0 | +0.07 | B 77 (#8) | 3.9 | -0.08 | 16.1 (#17) | 21.9 (#17) | 32.8 (#22) | 9.6 (#3) |
-| GB | C 56 (#15) | 6.4 | +0.08 | C 56 (#14) | 4.1 | -0.03 | 15.3 (#12) | 21.6 (#15) | 31.2 (#20) | 12.6 (#12) |
-| BUF | A 90 (#2) | 6.3 | -0.09 | F 12 (#29) | 5.0 | +0.09 | 13.4 (#3) | 24.7 (#25) | 27.6 (#7) | 8.1 (#1) |
-| LA | C 57 (#14) | 6.7 | -0.02 | C 44 (#20) | 4.5 | -0.02 | 15.6 (#13) | 20.3 (#10) | 33.0 (#23) | 12.6 (#13) |
+| SEA | A 87 (#4) | 6.0 | -0.09 | A 98 (#1) | 3.7 | -0.15 | 13.7 (#4) | 18.5 (#3) | 25.9 (#2) | 14.5 (#23) |
+| MIN | B 74 (#9) | 7.1 | -0.10 | A 92 (#2) | 3.9 | -0.09 | 11.8 (#1) | 18.5 (#4) | 26.3 (#5) | 11.1 (#7) |
+| JAX | B 77 (#7) | 6.3 | -0.13 | A 86 (#3) | 3.9 | -0.05 | 15.7 (#14) | 17.9 (#1) | 30.8 (#18) | 14.1 (#21) |
+| KC | B 77 (#8) | 6.7 | -0.04 | A 82 (#4) | 4.0 | -0.06 | 14.3 (#6) | 18.6 (#5) | 26.2 (#4) | 11.5 (#8) |
+| LAC | A 81 (#5) | 6.7 | -0.06 | B 77 (#7) | 4.2 | -0.07 | 12.9 (#2) | 18.8 (#6) | 27.7 (#9) | 11.6 (#9) |
+| HOU | B 80 (#6) | 6.9 | -0.11 | B 78 (#5) | 4.0 | -0.06 | 14.7 (#9) | 19.2 (#8) | 27.2 (#6) | 12.9 (#14) |
+| DEN | A 92 (#2) | 6.1 | -0.11 | B 61 (#12) | 4.1 | -0.01 | 14.8 (#11) | 19.1 (#7) | 26.0 (#3) | 13.6 (#18) |
+| NO | B 70 (#10) | 6.6 | -0.02 | B 73 (#9) | 4.1 | -0.09 | 14.2 (#5) | 22.0 (#18) | 28.5 (#11) | 12.4 (#11) |
+| PHI | A 94 (#1) | 6.3 | -0.10 | C 47 (#19) | 4.3 | -0.03 | 14.8 (#10) | 22.4 (#20) | 27.6 (#8) | 8.2 (#2) |
+| NE | B 65 (#12) | 6.8 | -0.02 | B 74 (#8) | 4.2 | -0.04 | 14.6 (#8) | 18.5 (#2) | 29.5 (#14) | 13.0 (#15) |
+| CLE | B 70 (#11) | 6.9 | -0.06 | B 69 (#10) | 4.1 | -0.07 | 14.3 (#7) | 21.4 (#13) | 28.7 (#12) | 12.1 (#10) |
+| LV | C 49 (#17) | 7.0 | +0.07 | B 78 (#6) | 3.9 | -0.08 | 16.1 (#17) | 21.9 (#17) | 32.8 (#22) | 9.6 (#3) |
+| GB | C 56 (#14) | 6.4 | +0.08 | C 58 (#14) | 4.1 | -0.03 | 15.3 (#12) | 21.6 (#15) | 31.2 (#20) | 12.6 (#12) |
+| BUF | A 90 (#3) | 6.3 | -0.09 | F 12 (#29) | 5.0 | +0.09 | 13.4 (#3) | 24.7 (#25) | 27.6 (#7) | 8.1 (#1) |
 | BAL | C 45 (#18) | 6.9 | +0.06 | C 55 (#16) | 4.2 | -0.07 | 17.0 (#20) | 23.4 (#22) | 35.1 (#28) | 10.9 (#4) |
+| LA | C 55 (#15) | 6.7 | -0.02 | C 45 (#20) | 4.5 | -0.02 | 15.6 (#13) | 20.3 (#10) | 33.0 (#23) | 12.6 (#13) |
 | ATL | B 60 (#13) | 7.0 | -0.04 | D 40 (#21) | 4.5 | +0.00 | 16.0 (#16) | 20.9 (#12) | 32.7 (#21) | 10.9 (#5) |
-| PIT | D 38 (#19) | 7.2 | +0.00 | C 53 (#17) | 4.2 | -0.02 | 17.7 (#22) | 20.7 (#11) | 33.2 (#24) | 15.3 (#27) |
+| PIT | D 38 (#19) | 7.2 | +0.00 | C 54 (#17) | 4.2 | -0.02 | 17.7 (#22) | 20.7 (#11) | 33.2 (#24) | 15.3 (#27) |
+| IND | F 19 (#29) | 7.4 | +0.07 | B 67 (#11) | 4.0 | -0.04 | 17.6 (#21) | 21.5 (#14) | 36.3 (#29) | 15.0 (#26) |
 | TB | D 25 (#26) | 7.6 | +0.07 | B 60 (#13) | 4.2 | -0.08 | 19.0 (#28) | 22.4 (#21) | 30.5 (#17) | 16.6 (#30) |
-| IND | F 19 (#29) | 7.4 | +0.07 | B 65 (#12) | 4.0 | -0.04 | 17.6 (#21) | 21.5 (#14) | 36.3 (#29) | 15.0 (#26) |
-| DET | D 27 (#24) | 7.3 | +0.01 | C 56 (#15) | 4.3 | -0.03 | 18.6 (#27) | 19.8 (#9) | 37.3 (#31) | 14.8 (#25) |
-| SF | D 37 (#21) | 7.0 | +0.11 | D 35 (#22) | 4.3 | -0.02 | 16.2 (#18) | 23.6 (#23) | 31.2 (#19) | 14.0 (#20) |
-| ARI | D 26 (#25) | 7.3 | +0.13 | D 34 (#23) | 4.4 | -0.03 | 16.7 (#19) | 24.8 (#26) | 30.0 (#15) | 16.9 (#31) |
-| TEN | F 8 (#31) | 8.3 | +0.20 | C 48 (#18) | 4.3 | -0.03 | 18.3 (#26) | 21.6 (#16) | 35.0 (#27) | 14.2 (#22) |
-| NYG | C 51 (#16) | 6.9 | +0.06 | F 4 (#32) | 5.2 | +0.13 | 17.9 (#25) | 25.7 (#28) | 33.4 (#25) | 11.1 (#7) |
+| DET | D 27 (#24) | 7.3 | +0.01 | C 57 (#15) | 4.3 | -0.03 | 18.6 (#27) | 19.8 (#9) | 37.3 (#31) | 14.8 (#25) |
+| SF | D 37 (#21) | 7.0 | +0.11 | D 37 (#22) | 4.3 | -0.02 | 16.2 (#18) | 23.6 (#23) | 31.2 (#19) | 14.0 (#20) |
+| ARI | D 26 (#25) | 7.3 | +0.13 | D 35 (#23) | 4.4 | -0.03 | 16.7 (#19) | 24.8 (#26) | 30.0 (#15) | 16.9 (#31) |
+| TEN | F 8 (#31) | 8.3 | +0.20 | C 49 (#18) | 4.3 | -0.03 | 18.3 (#26) | 21.6 (#16) | 35.0 (#27) | 14.2 (#22) |
+| NYG | C 51 (#16) | 6.9 | +0.06 | F 4 (#32) | 5.2 | +0.13 | 17.9 (#25) | 25.7 (#28) | 33.4 (#25) | 11.1 (#6) |
 | NYJ | D 29 (#22) | 7.2 | +0.22 | F 19 (#25) | 4.4 | +0.01 | 19.3 (#29) | 26.4 (#30) | 30.0 (#16) | 14.7 (#24) |
 | CAR | D 37 (#20) | 7.4 | +0.14 | F 12 (#30) | 4.7 | +0.04 | 15.7 (#15) | 26.5 (#31) | 27.7 (#10) | 13.5 (#17) |
 | MIA | D 28 (#23) | 7.4 | +0.13 | F 18 (#26) | 4.7 | +0.01 | 17.8 (#23) | 25.8 (#29) | 29.3 (#13) | 15.7 (#28) |
