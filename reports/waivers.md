@@ -1,35 +1,48 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$100** · generated 2026-09-15 04:59 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$100** · generated 2026-09-15 11:50 UTC
 
 ## Since last run
 
-- ⚠️ **Jared Wiley (TE-KC) → Out** — FREE AGENT player newly listed Out. Next up: **Jake Briningstool (TE-KC)** — FREE AGENT, claim him.
-  ↳ _February 7, 2026 — Minimal action in 2025:_ Wiley finished the 2025 regular season with one reception for four yards in five games. (serious)
-- ⚠️ **Tyler Badie (RB-DEN) → Out** — FREE AGENT player newly listed Out. Next up: **Cody Schrader (RB-DEN)** — FREE AGENT, claim him.
-  ↳ _September 14, 2026 — Healthy scratch Week 1:_ Badie (coach's decision) is inactive for Monday's game against the Chiefs,  Aric DiLalla of the Broncos' official site  reports. (serious)
-- ⚠️ **Carter Runyon (TE-LV) → IR** — FREE AGENT player newly listed IR. Next up: **Patrick Gurd (TE-LV)** — FREE AGENT, claim him.
-  ↳ _August 31, 2026 — Placed on IR, designated to return:_ Runyon (undisclosed) was  placed on injured reserve by the Raiders on Sunday  with a designation to return. (serious)
-- ⚠️ **Garrett Nussmeier (QB-KC) → Out** — FREE AGENT player newly listed Out.
-  ↳ _September 14, 2026 — Emergency QB for MNF:_ Nussmeier (coach's decision) is  inactive as the emergency third quarterback  for Monday night's game against the Broncos.
-- ⚠️ **Sam Ehlinger (QB-DEN) → Out** — FREE AGENT player newly listed Out.
-  ↳ _September 14, 2026 — Emergency quarterback for MNF:_ Ehlinger (coach's decision) is inactive but will serve as the Broncos' emergency third quarterback against the Chiefs on Monday,  Aric DiLalla of the Broncos' official site  reports.
+- ⚠️ **Jeremiah Webb (WR-NE) → IR** — FREE AGENT player newly listed IR. Next up: **Cameron Dorner (WR-NE)** — FREE AGENT, claim him.
+  ↳ _July 26, 2026 — Moved to IR:_ The Patriots placed Webb (arm) on injured reserve Sunday,  Evan Lazar of the team's official site  reports. (serious)
+- ⚠️ **Robbie Ouzts (RB-SEA) → IR** — FREE AGENT player newly listed IR. Next up: **Jacardia Wright (RB-SEA)** — FREE AGENT, claim him.
+  ↳ _August 14, 2026 — Not facing career-threatening issue:_ Ouzts' neck injury is likely not a career-threatening issue,  Corbin K. Smith of SI.com  reports. (serious)
+- 📈 **Romeo Doubs (WR-NE) moved up the depth chart (2 → 1)** — Workload is trending his way.
+  ↳ _September 9, 2026 — Forgettable team debut in loss:_ Doubs failed to bring in any of his three targets during the Patriots' 13-10 loss to the Seahawks on Wednesday.
+- 📈 **MarShawn Lloyd (RB-GB) moved up the depth chart (2 → 1)** — Workload is trending his way.
+  ↳ _September 13, 2026 — Leading rusher in ineffective RB room:_ Lloyd rushed 13 times for 37 yards and didn't catch his lone target in Sunday's 39-22 loss to the Vikings.
+- 📈 **Kaytron Allen (RB-WAS) moved up the depth chart (4 → 3)** — Workload is trending his way. He is a free agent.
+  ↳ _September 14, 2026 — Limited action in NFL debut:_ Allen turned four carries into 16 yards during the Commanders' 24-22 loss to the Eagles on Sunday.
+- 📈 **Emanuel Wilson (RB-SEA) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
+  ↳ _September 10, 2026 — Two touches in Seahawks debut:_ Wilson rushed twice for three yards and wasn't targeted in Wednesday's 13-10 win over the Patriots. (practice: **FULL**)
+- ⚠️ **Savion Williams (WR-GB) cleared (IR → healthy)** — FREE AGENT player is off the report.
+  ↳ _September 1, 2026 — On mend from high-ankle sprain:_ Packers general manager Brian Gutekunst said Tuesday that Williams is recovering from a high-ankle sprain and should be ready to return from injured reserve when first eligible in Week 5,  Matt Schneidman of The Athletic  reports. (serious)
+- ⚠️ **Luke Musgrave (TE-GB) cleared (PUP → healthy)** — FREE AGENT player is off the report.
+  ↳ _September 1, 2026 — Expected to play in 2026:_ Packers general manager Brian Gutekunst said Tuesday that he's "really hopeful" Musgrave (neck) will be able to play at some point during the 2026 season,  Ryan Wood of USA Today  reports.
+- ⚠️ **Adam Randall (RB-BAL) cleared (IR → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Mason Tipton (WR-NO) cleared (PUP → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Tip Reiman (TE-ARI) cleared (PUP → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Brandon Aiyuk (WR-SF) cleared (DNR → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Calvin Austin (WR-NYG) cleared (IR → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Elijah Sarratt (WR-BAL) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Will Mallory (TE-IND) cleared (IR → healthy)** — FREE AGENT player is off the report.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
+| 🟢 | **Kaleb Johnson (RB-GB)** | BUY EARLY | 5.6 | Josh Jacobs is NA (Personal) | 0 | $6 |
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
 | 🚨 | **J.J. McCarthy (QB-MIN)** | URGENT | 2.9 | everyone ahead of him is out — the job is his; Kyler Murray is Out (Concussion) | 0 | $22 |
-| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Out (Hamstring) | 11,196 | $12 |
-| 🚨 | **Carson Wentz (QB-MIN)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 280,476 adds in 24h — the market has re-rated him | 280,476 | $35 |
-| 🟢 | **Emanuel Wilson (RB-SEA)** | BUY EARLY | 6.8 | Zach Charbonnet is PUP (Knee - ACL) | 0 | $6 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 3,888 | $2 |
+| 🚨 | **Carson Wentz (QB-MIN)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 366,270 adds in 24h — the market has re-rated him | 366,270 | $35 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Out (Hamstring) | 18,944 | $12 |
+| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 25,825 adds in 24h — the market has re-rated him | 25,825 | $19 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 5,850 | $2 |
 | 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 0 | $4 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🚨 | **Drew Lock (QB-SEA)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 11,839 adds in 24h — the market has re-rated him | 11,839 | $12 |
-| 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 20.9 | starting for his NFL team and unrostered | 18,990 | $4 |
+| 🔥 | **Dallas Goedert (TE-PHI)** | CONTESTED | 20.9 | starting for his NFL team and unrostered | 23,410 | $30 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
@@ -54,8 +67,8 @@
 | Pos | Starters | Rostered | Starter value | League median | Rank | Tradeable surplus |
 |:--|--:|--:|--:|--:|--:|--:|
 | QB | 2 | 2 | 160.24 | 110.46 | **1/12** | 0 |
-| RB | 2 | 6 | 142.96 | 142.96 | **6/12** | 80.5 |
-| WR | 2 | 6 | 106.16 | 133.94 | **11/12** | 22.75 |
+| RB | 2 | 6 | 143.87 | 143.87 | **6/12** | 80.5 |
+| WR | 2 | 6 | 106.16 | 133.94 | **11/12** | 23.05 |
 | TE | 1 | 1 | 69.3 | 34.99 | **1/12** | 0 |
 
 > ⚠️ **QB: 2 rostered for 2 starting slots — one injury and there is nobody to plug in.**
@@ -65,9 +78,9 @@
 
 ## Trade targets — ranked by two-way fit
 
-### hulleywood — fit score 71.96
+### hulleywood — fit score 72.87
 - Roster counts: QB:4 / RB:3 / WR:5 / TE:2
-- They need: **RB (44.18), QB (5.8)**
+- They need: **RB (45.09), QB (5.8)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Tyrone Tracy (RB-NYG)** (49.8) → get **George Pickens (WR-DAL)** (68.2)
@@ -76,9 +89,9 @@
   - _2-for-1_ — give **Tony Pollard (RB-TEN) + Rico Dowdle (RB-PIT)** (68.8) → get **George Pickens (WR-DAL)** (68.2)
   - _2-for-1_ — give **Bhayshul Tuten (RB-JAX) + Rico Dowdle (RB-PIT)** (81.9) → get **George Pickens (WR-DAL)** (68.2)
 
-### Brooklyn Meatpackers — fit score 58.14
+### Brooklyn Meatpackers — fit score 59.05
 - Roster counts: QB:3 / RB:5 / WR:6 / TE:1
-- They need: **RB (30.36), TE (9.07)**
+- They need: **RB (31.27), TE (9.07)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Tyrone Tracy (RB-NYG)** (49.8) → get **Malik Nabers (WR-NYG)** (64.8)
@@ -87,9 +100,9 @@
   - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Tyrone Tracy (RB-NYG)** (49.8) → get **Jaylen Waddle (WR-DEN)** (49.7)
   - _2-for-1_ — give **Tony Pollard (RB-TEN) + Tyrone Tracy (RB-NYG)** (51.0) → get **Jaylen Waddle (WR-DEN)** (49.7)
 
-### Down to Pound — fit score 39.35
+### Down to Pound — fit score 40.26
 - Roster counts: QB:3 / RB:5 / WR:6 / TE:1
-- They need: **WR (23.16), RB (11.57)**
+- They need: **WR (23.16), RB (12.48)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _1-for-1_ — give **Tyrone Tracy (RB-NYG)** (16.0) → get **KC Concepcion (WR-CLE)** (15.7)
@@ -97,20 +110,20 @@
   - _1-for-1_ — give **Tony Pollard (RB-TEN)** (35.0) → get **DK Metcalf (WR-PIT)** (29.6)
   - _1-for-1_ — give **Bhayshul Tuten (RB-JAX)** (48.0) → get **DK Metcalf (WR-PIT)** (29.6)
 
-### Jersey Rum Hams — fit score 38.08
+### Jersey Rum Hams — fit score 38.53
 - Roster counts: QB:2 / RB:5 / WR:6 / TE:1
-- They need: **QB (23.19), RB (10.3)**
+- They need: **QB (23.64), RB (11.21)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
-  - _1-for-1_ — give **Tyrone Tracy (RB-NYG)** (16.0) → get **Chris Godwin (WR-TB)** (23.5)
-  - _1-for-1_ — give **Tyrone Tracy (RB-NYG)** (16.0) → get **Stefon Diggs (WR-WAS)** (17.7)
+  - _1-for-1_ — give **Tyrone Tracy (RB-NYG)** (16.0) → get **Chris Godwin (WR-TB)** (23.1)
+  - _1-for-1_ — give **Tyrone Tracy (RB-NYG)** (16.0) → get **Stefon Diggs (WR-WAS)** (17.4)
   - _1-for-1_ — give **Tyrone Tracy (RB-NYG)** (16.0) → get **Jalen Coker (WR-CAR)** (11.1)
-  - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (33.8) → get **Chris Godwin (WR-TB)** (23.5)
-  - _1-for-1_ — give **Tony Pollard (RB-TEN)** (35.0) → get **Chris Godwin (WR-TB)** (23.5)
+  - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (33.8) → get **Chris Godwin (WR-TB)** (23.1)
+  - _1-for-1_ — give **Tony Pollard (RB-TEN)** (35.0) → get **Chris Godwin (WR-TB)** (23.1)
 
-### mtngoblin — fit score 37.01
+### mtngoblin — fit score 37.92
 - Roster counts: QB:3 / RB:6 / WR:4 / TE:2
-- They need: **WR (17.39), TE (9.92), RB (9.23)**
+- They need: **WR (16.46), RB (10.14), TE (9.92)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Tyrone Tracy (RB-NYG)** (49.8) → get **Rome Odunze (WR-CHI)** (34.4)
