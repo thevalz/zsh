@@ -1,28 +1,42 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$100** · generated 2026-09-15 21:25 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$100** · generated 2026-09-16 04:54 UTC
 
 ## Since last run
 
-- ⚠️ **Dylan Sampson (RB-CLE) Out → IR** — East Coast Wins Most's player's status changed. Next up: **Eric Gray (RB-CLE)** — FREE AGENT, claim him.
-  ↳ _September 15, 2026 — Lands on injured reserve:_ Sampson (knee)  was placed on injured reserve  Tuesday. (serious)
-- ⚠️ **Israel Abanikanda (RB-DAL) cleared (Out → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 12, 2026 — Signs with active roster:_ The Cowboys  signed  Abanikanda from the practice squad to the active roster Saturday.
+- ⚠️ **Nicholas Singleton (RB-TEN) → Out** — FREE AGENT player newly listed Out. Next up: **Julius Chestnut (RB-TEN)** — FREE AGENT, claim him.
+  ↳ _September 13, 2026 — Inactive for Week 1:_ Singleton (coach's decision) is  inactive  for Sunday's game against the Jets. (serious)
+- 📈 **Kayshon Boutte (WR-HOU) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
+  ↳ _September 14, 2026 — Minimal production in Week 1:_ Boutte caught one of two targets for 21 yards in the Texans' 36-31 loss to the Bills on Sunday. (serious)
+- 📈 **Najee Harris (RB-NYG) moved up the depth chart (4 → 3)** — Workload is trending his way. He is a free agent.
+  ↳ _September 13, 2026 — Healthy scratch Week 1:_ Harris (coach's decision) is inactive for Sunday's game against the Cowboys,  Dan Salomone of the Giants' official site  reports. (serious)
+- ⚠️ **Reggie Virgil (WR-ARI) → Out** — FREE AGENT player newly listed Out. Next up: **Jalen Brooks (WR-ARI)** — FREE AGENT, claim him.
+  ↳ _August 29, 2026 — Modest production in preseason finale:_ Virgil caught three of six targets for 23 yards in a loss to Green Bay during Friday's exhibition contest.
+- 📈 **Matthew Golden (WR-GB) moved up the depth chart (3 → 2)** — Workload is trending his way.
+  ↳ _September 13, 2026 — Draws team-high 12 targets in win:_ Golden caught six of 12 targets for 95 yards in Sunday's 39-22 loss to the Vikings.
+- 📈 **Oronde Gadsden (TE-LAC) moved up the depth chart (2 → 1)** — Workload is trending his way.
+  ↳ _September 14, 2026 — Catches two passes in limited action:_ Gadsden caught both of his targets for 32 yards during the Chargers' 26-14 loss to the Cardinals on Sunday.
+- 📈 **Marvin Harrison (WR-ARI) moved up the depth chart (2 → 1)** — Workload is trending his way.
+  ↳ _September 13, 2026 — Held to one catch in win:_ Harrison brought in one of three targets for 33 yards in the Cardinals' 26-14 win over the Chargers on Sunday.
+- 📈 **Courtland Sutton (WR-DEN) moved up the depth chart (2 → 1)** — Workload is trending his way.
+  ↳ _September 14, 2026 — Limited to two catches in loss:_ Sutton secured two of five targets for 11 yards in the Broncos' 31-10 loss to the Chiefs on Monday night.
+- ⚠️ **Kene Nwangwu (RB-NYJ) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Elijah Moore (WR-PHI) cleared (Out → healthy)** — FREE AGENT player is off the report.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
-| 🚨 | **Carson Wentz (QB-MIN)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 608,376 adds in 24h — the market has re-rated him | 608,376 | $35 |
+| 🚨 | **Carson Wentz (QB-MIN)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 889,656 adds in 24h — the market has re-rated him | 889,656 | $35 |
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $5 |
-| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; 36,029 adds in 24h — the market has re-rated him | 36,029 | $19 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 13,176 | $2 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; 51,149 adds in 24h — the market has re-rated him | 51,149 | $35 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 20,385 | $2 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $6 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $4 |
-| 🛡️ | **Devin Singletary (RB-NYG)** | INSURANCE | 0.0 | 1,253,097 adds in 24h — the market has re-rated him; direct handcuff to MY Cam Skattebo | 1,253,097 | $5 |
-| 🔹 | **Hunter Henry (TE-NE)** | STARTER FA | 21.6 | starting for his NFL team and unrostered | 13,536 | $4 |
-| 🚨 | **Kendre Miller (RB-NO)** | URGENT | 5.0 | 65,778 adds in 24h — the market has re-rated him; Alvin Kamara is Out (Knee - MCL) | 65,778 | $19 |
-| 🔥 | **Dallas Goedert (TE-PHI)** | CONTESTED | 20.9 | starting for his NFL team and unrostered | 34,964 | $30 |
+| 🛡️ | **Devin Singletary (RB-NYG)** | INSURANCE | 0.0 | 1,572,840 adds in 24h — the market has re-rated him; direct handcuff to MY Cam Skattebo | 1,572,840 | $5 |
+| 🚨 | **Kendre Miller (RB-NO)** | URGENT | 5.0 | 99,694 adds in 24h — the market has re-rated him; Alvin Kamara is Out (Knee - MCL) | 99,694 | $19 |
+| 🔥 | **Hunter Henry (TE-NE)** | CONTESTED | 21.6 | starting for his NFL team and unrostered | 20,664 | $30 |
+| 🔥 | **Dallas Goedert (TE-PHI)** | CONTESTED | 20.9 | starting for his NFL team and unrostered | 40,426 | $30 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $4 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
@@ -39,7 +53,7 @@
 | Brock Purdy (QB-SF) | healthy | Mac Jones (QB-SF) | **FREE AGENT** |
 | Tony Pollard (RB-TEN) | healthy | Tyjae Spears (RB-TEN) | **FREE AGENT** |
 | Rico Dowdle (RB-PIT) | healthy | Eli Heidenreich (RB-PIT) | **FREE AGENT** |
-| Tyrone Tracy (RB-NYG) | healthy | Najee Harris (RB-NYG) | **FREE AGENT** |
+| Tyrone Tracy (RB-NYG) | healthy | Phil Mafah (RB-NYG) | **FREE AGENT** |
 
 *A designation shown as `unverified` has had no beat-reporter blurb read for it. The tag alone cannot tell a cramp from a torn ACL, or a current injury from a two-year-old one — run `python3 -m fantasy.monitor player --name "..."` before acting on it.*
 
