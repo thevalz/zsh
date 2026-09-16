@@ -1,85 +1,24 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-16 11:43 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-16 17:04 UTC
 
 ## Since last run
 
-- ⚠️ **Ja'Kobi Lane (WR-BAL) Out → Doubtful** — Brooklyn Meatpackers's player's status changed. Next up: **Xavier Guillory (WR-BAL)** — FREE AGENT, claim him.
-  ↳ _September 15, 2026 — Expected to undergo wrist surgery:_ Lane (wrist) is expected to undergo surgery in the coming days, potentially as soon as Wednesday,  Matt Zenitz of CBS Sports  reports. (serious)
-- ⚠️ **De'Zhaun Stribling (WR-SF) Out → Doubtful** — East Coast Wins Most's player's status changed. Next up: **Wesley Grimes (WR-SF)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — Likely out at least one month:_ Stribling (ankle) is expected to miss at least one month after he was diagnosed Sunday with a deltoid sprain of his left ankle,  Ian Rapoport of NFL Network  reports. (serious)
-- ⚠️ **Sam Darnold (QB-SEA) Out → Doubtful** — Randikulous's player's status changed. Next up: **Jalen Milroe (QB-SEA)** — FREE AGENT, claim him.
-  ↳ _September 15, 2026 — Could have four-week timeline:_ Darnold (glute) is "looking at about a four-week return to play" but could return "a little bit sooner than that,"  Mike Garafolo of NFL Network  reports. (serious)
-- ⚠️ **Grant Calcaterra (TE-PHI) → IR** — FREE AGENT player newly listed IR. Next up: **E.J. Jenkins (TE-PHI)** — FREE AGENT, claim him.
-  ↳ _August 31, 2026 — Opening season on IR:_ Calcaterra (back) was  placed on injured reserve by the Eagles on Sunday  with a designation to return. (serious)
-- 📤 **Tyrone Tracy (RB-NYG) was dropped** — Now a free agent — check the waiver board below.
-  ↳ _September 14, 2026 — Two offensive snaps in Week 1:_ Tracy recorded two carries for 14 yards and lost a fumble in Sunday night's 28-20 win over Dallas. (serious)
-- 📤 **Dylan Sampson (RB-CLE) was dropped** — Now a free agent — check the waiver board below.
-  ↳ _September 15, 2026 — Lands on injured reserve:_ Sampson (knee)  was placed on injured reserve  Tuesday. (serious)
-- 📤 **Juwan Johnson (TE-NO) was dropped** — Now a free agent — check the waiver board below.
-  ↳ _September 13, 2026 — Scores touchdown in OT loss:_ Johnson caught three of his seven targets for 54 yards and a touchdown in Sunday's 31-30 overtime loss to the Lions.
-- 📤 **Rashid Shaheed (WR-SEA) was dropped** — Now a free agent — check the waiver board below.
-  ↳ _September 10, 2026 — One catch in season opener:_ Shaheed caught one of three targets for four yards while adding three kickoff returns for 80 yards and a nine-yard punt return in Wednesday's 13-10 win over the Patriots.
-- ⚠️ **Brock Bowers (TE-LV) Out → Questionable** — NYKatSnatchers's player's status changed. Next up: **Michael Mayer (TE-LV)** — rostered by mtngoblin.
-- ⚠️ **Tyson Bagent (QB-CHI) Out → Questionable** — FREE AGENT player's status changed. Next up: **Miller Moss (QB-CHI)** — FREE AGENT, claim him.
-- ⚠️ **Devontez Walker (WR-BAL) Out → Questionable** — FREE AGENT player's status changed. Next up: **LaJohntay Wester (WR-BAL)** — FREE AGENT, claim him.
-- ⚠️ **Jalen Milroe (QB-SEA) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Omar Cooper (WR-NYJ) Out → Questionable** — FREE AGENT player's status changed. Next up: **Isaiah Williams (WR-NYJ)** — FREE AGENT, claim him.
-- ⚠️ **Ty Johnson (RB-BUF) Out → Questionable** — NYKatSnatchers's player's status changed. Next up: **Ray Davis (RB-BUF)** — FREE AGENT, claim him.
-- ⚠️ **Tyler Badie (RB-DEN) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Sean Tucker (RB-TB) Out → Questionable** — FREE AGENT player's status changed. Next up: **Josh Williams (RB-TB)** — FREE AGENT, claim him.
-- ⚠️ **Behren Morton (QB-NE) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Jordan James (RB-SF) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Tanner McKee (QB-PHI) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Carson Beck (QB-ARI) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Reggie Virgil (WR-ARI) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Ty Simpson (QB-LAR) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Haynes King (QB-CAR) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Dylan Sampson (RB-CLE) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **John Metchie (WR-CAR) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Michael Penix (QB-ATL) Out → Questionable** — Brooklyn Meatpackers's player's status changed. Next up: **Cooper Rush (QB-ATL)** — FREE AGENT, claim him.
-- ⚠️ **Zay Flowers (WR-BAL) Out → Questionable** — NYKatSnatchers's player's status changed. Next up: **Rashod Bateman (WR-BAL)** — FREE AGENT, claim him.
-- ⚠️ **Najee Harris (RB-NYG) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Alvin Kamara (RB-NO) Out → Questionable** — FREE AGENT player's status changed. Next up: **Kendre Miller (RB-NO)** — FREE AGENT, claim him.
-- ⚠️ **Brady Cook (QB-MIA) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Jordan Watkins (WR-SF) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Athan Kaliakmanis (QB-WAS) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Garrett Nussmeier (QB-KC) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Aidan O'Connell (QB-LV) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Sam Ehlinger (QB-DEN) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Kurtis Rourke (QB-SF) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Tory Horton (WR-SEA) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Riley Leonard (QB-IND) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Tua Tagovailoa (QB-ATL) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Oscar Delp (TE-NO) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Kyler Murray (QB-MIN) Out → Questionable** — hulleywood's player's status changed. Next up: **Carson Wentz (QB-MIN)** — rostered by Randikulous.
-- ⚠️ **Jalen McMillan (WR-TB) Out → Questionable** — FREE AGENT player's status changed. Next up: **Ted Hurst (WR-TB)** — FREE AGENT, claim him.
-- ⚠️ **Taylen Green (QB-CLE) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Jalen Tolbert (WR-MIA) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Nicholas Singleton (RB-TEN) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Jared Wiley (TE-KC) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Demond Claiborne (RB-MIN) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Zach Wilson (QB-NO) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **DJ Giddens (RB-IND) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Will Howard (QB-PIT) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **J.J. McCarthy (QB-MIN) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Quinn Ewers (QB-JAX) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **TreVeyon Henderson (RB-NE) Out → Questionable** — Down to Pound's player's status changed. Next up: **Corey Kiner (RB-NE)** — FREE AGENT, claim him.
-- 📥 **Denzel Boston (WR-CLE) was added** — Picked up by Down to Pound.
-- 📥 **Dallas Goedert (TE-PHI) was added** — Picked up by NYKatSnatchers.
+Nothing changed.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $4 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 21,978 | $2 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 21,447 | $2 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🛡️ | **Devin Singletary (RB-NYG)** | INSURANCE | 0.0 | 1,590,219 adds in 24h — the market has re-rated him; direct handcuff to MY Cam Skattebo | 1,590,219 | $3 |
-| · | **Rashod Bateman (WR-BAL)** | SPECULATIVE | 3.4 | every man ahead of him is banged up (1 deep); 52,967 adds in 24h — the market has re-rated him | 52,967 | $1 |
-| 🔥 | **Hunter Henry (TE-NE)** | CONTESTED | 21.6 | starting for his NFL team and unrostered | 24,822 | $21 |
+| 🛡️ | **Devin Singletary (RB-NYG)** | INSURANCE | 0.0 | 1,366,065 adds in 24h — the market has re-rated him; direct handcuff to MY Cam Skattebo | 1,366,065 | $3 |
+| · | **Rashod Bateman (WR-BAL)** | SPECULATIVE | 3.4 | every man ahead of him is banged up (1 deep); 48,585 adds in 24h — the market has re-rated him | 48,585 | $1 |
+| 🔥 | **Hunter Henry (TE-NE)** | CONTESTED | 21.6 | starting for his NFL team and unrostered | 27,549 | $21 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
+| 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 11.8 | starting for his NFL team and unrostered | 0 | $3 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
