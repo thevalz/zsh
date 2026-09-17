@@ -1,45 +1,29 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-16 21:22 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-17 04:57 UTC
 
 ## Since last run
 
-- ⚠️ **Jordan Mason (RB-MIN) Questionable → IR** — It's Gonna be Maye's player's status changed.
-  ↳ _September 16, 2026 — Lands on injured reserve:_ Coach Kevin O'Connell said Wednesday that Mason has a small fracture in his thumb that underwent surgery, and the running back will be placed on injured reserve,  Alec Lewis of The Athletic  reports. (serious)
-- ⚠️ **Sam Darnold (QB-SEA) Doubtful → Out** — Randikulous's player's status changed. Next up: **Jalen Milroe (QB-SEA)** — FREE AGENT, claim him.
-  ↳ _September 16, 2026 — Won't play in Week 2:_ Coach Mike Macdonald said Darnold (glute) won't play in Sunday's game at Arizona,  Curtis Crabtree of Fox 13 Seattle  reports. (serious)
-- ⚠️ **De'Zhaun Stribling (WR-SF) Doubtful → Out** — East Coast Wins Most's player's status changed. Next up: **Wesley Grimes (WR-SF)** — FREE AGENT, claim him.
-  ↳ _September 16, 2026 — Undergoes surgery, out 10 weeks:_ Stribling underwent ankle surgery Wednesday and is expected to miss 10 weeks,  Matt Maiocco of NBC Sports Bay Area  reports. (serious)
-- ⚠️ **Ja'Kobi Lane (WR-BAL) Doubtful → IR** — Brooklyn Meatpackers's player's status changed. Next up: **Xavier Guillory (WR-BAL)** — FREE AGENT, claim him.
-  ↳ _September 16, 2026 — Undergoes wrist surgery:_ Coach Jesse Minter said Lane underwent wrist surgery Wednesday, and the Ravens placed the rookie wide receiver on injured reserve,  Brian Wacker of The Baltimore Sun  reports. (serious)
-- ⚠️ **Jake Tonges (TE-SF) Questionable → IR** — FREE AGENT player's status changed. Next up: **Brayden Willis (TE-SF)** — FREE AGENT, claim him.
-  ↳ _September 16, 2026 — Needs season-ending surgery:_ Tonges (knee) required surgery for an MCL tear and is done for the season,  Cam Inman reports. (serious)
-- 📤 **Travis Hunter (DB-JAX) was dropped** — Now a free agent — check the waiver board below.
-  ↳ _September 14, 2026 — Plays four offensive snaps Week 1:_ Hunter played four offensive snaps in the Jaguars' 34-10 win over the Browns on Sunday. (serious)
-- 📈 **Demond Claiborne (RB-MIN) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
-  ↳ _September 13, 2026 — Won't make NFL debut Week 1:_ Claiborne (coach's decision) is inactive for Sunday's game against the Packers,  Craig Peters of the Vikings' official site  reports. (serious)
-- 🚨 **Alec Pierce (WR-IND) cleared (Questionable → healthy)** — MY player is off the report.
-  ↳ _September 16, 2026 — Practices fully Wednesday:_ Pierce (hand/wrist) fully participated in Wednesday's practice,  Kevin Bowen of 107.5 The Fan Indianapolis  reports.
-- ⚠️ **Tyrone Tracy (RB-NYG) → Questionable** — FREE AGENT player newly listed Questionable. Next up: **Najee Harris (RB-NYG)** — FREE AGENT, claim him.
-- ⚠️ **RJ Harvey (RB-DEN) → Questionable** — Brooklyn Meatpackers's player newly listed Questionable. Next up: **Jonah Coleman (RB-DEN)** — rostered by Down to Pound.
-- ⚠️ **D'Andre Swift (RB-CHI) → Questionable** — Randikulous's player newly listed Questionable. Next up: **Kyle Monangai (RB-CHI)** — rostered by Randikulous.
-- ⚠️ **TreVeyon Henderson (RB-NE) cleared (Questionable → healthy)** — Down to Pound's player is off the report.
-- ⚠️ **Kyle Monangai (RB-CHI) → Questionable** — Randikulous's player newly listed Questionable. Next up: **Roschon Johnson (RB-CHI)** — rostered by Brooklyn Meatpackers.
-- ⚠️ **Alvin Kamara (RB-NO) cleared (Questionable → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Michael Pittman (WR-PIT) → Questionable** — hulleywood's player newly listed Questionable. Next up: **Roman Wilson (WR-PIT)** — FREE AGENT, claim him.
-- ⚠️ **Joe Burrow (QB-CIN) → Questionable** — Down to Pound's player newly listed Questionable. Next up: **Joe Flacco (QB-CIN)** — rostered by East Coast Wins Most.
-- ⚠️ **Jakobi Meyers (WR-JAX) → Questionable** — Holy Turnovers, Batman!'s player newly listed Questionable. Next up: **Josh Cameron (WR-JAX)** — FREE AGENT, claim him.
+- 📈 **Denzel Boston (WR-CLE) moved up the depth chart (3 → 2)** — Workload is trending his way.
+  ↳ _September 13, 2026 — Hauls in 46-yard TD in debut:_ Boston caught two passes on four targets for 59 yards and a touchdown during the Browns' 34-10 loss to the Jaguars on Sunday.
+- 📈 **Oronde Gadsden (TE-LAC) moved up the depth chart (2 → 1)** — Workload is trending his way.
+  ↳ _September 14, 2026 — Catches two passes in limited action:_ Gadsden caught both of his targets for 32 yards during the Chargers' 26-14 loss to the Cardinals on Sunday.
+- ⚠️ **George Kittle (TE-SF) → Questionable** — It's Gonna be Maye's player newly listed Questionable. Next up: **Luke Farrell (TE-SF)** — FREE AGENT, claim him.
+  ↳ _September 16, 2026 — Limited in Wednesday's practice:_ Kittle (Achilles) was limited in practice Wednesday,  Nick Wagoner of ESPN.com  reports. (practice: **LIMITED**, serious)
+- 📥 **Hunter Henry (TE-NE) was added** — Picked up by Brooklyn Meatpackers.
+  ↳ _September 9, 2026 — Three catches in Week 1 loss:_ Henry brought in all three targets for 26 yards in the Patriots' 13-10 loss to the Seahawks on Wednesday. (serious)
+- ⚠️ **Nico Collins (WR-HOU) → Questionable** — Jersey Rum Hams's player newly listed Questionable. Next up: **Kayshon Boutte (WR-HOU)** — FREE AGENT, claim him.
+  ↳ _September 16, 2026 — Slated for tests on hamstring injury:_ Collins is undergoing tests on a hamstring injury that limited him at Wednesday's practice,  Aaron Wilson of KPRC 2 Houston  reports.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $4 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 24,273 | $2 |
+| 🟢 | **Kayshon Boutte (WR-HOU)** | BUY EARLY | 6.5 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 0 | $4 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 19,053 | $2 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| · | **Rashod Bateman (WR-BAL)** | SPECULATIVE | 3.4 | every man ahead of him is banged up (1 deep); 50,131 adds in 24h — the market has re-rated him | 50,131 | $1 |
-| 🔥 | **Hunter Henry (TE-NE)** | CONTESTED | 21.6 | starting for his NFL team and unrostered | 30,279 | $21 |
 | 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 11.8 | starting for his NFL team and unrostered | 0 | $3 |
@@ -89,7 +73,7 @@
   - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (33.8) → get **Jayden Reed (WR-GB)** (18.9)
 
 ### Brooklyn Meatpackers — fit score 58.99
-- Roster counts: QB:3 / RB:5 / WR:6 / TE:1
+- Roster counts: QB:2 / RB:5 / WR:6 / TE:2
 - They need: **RB (29.61), TE (9.07)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
