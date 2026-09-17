@@ -1,23 +1,25 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-17 11:48 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-17 17:04 UTC
 
 ## Since last run
 
-Nothing changed.
+- 📈 **Demond Claiborne (RB-MIN) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
+  ↳ _September 16, 2026 — In line for larger role sans Mason:_ Claiborne was a healthy scratch for the Vikings' Week 1 win over the Packers, but he's in line for a larger role for at least the next four games after  Jordan Mason  (thumb) was placed on injured reserve,  Alec Lewis of The Athletic  reports. (serious)
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $4 |
-| 🟢 | **Kayshon Boutte (WR-HOU)** | BUY EARLY | 6.5 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 0 | $4 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 16,182 | $2 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 14,841 | $2 |
+| 🔥 | **Xavier Hutchinson (WR-HOU)** | CONTESTED | 0.0 | every man ahead of him is banged up (1 deep); 115,871 adds in 24h — the market has re-rated him | 115,871 | $21 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
 | 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 11.8 | starting for his NFL team and unrostered | 0 | $3 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 15,066 | $3 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
