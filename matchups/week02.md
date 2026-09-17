@@ -1,6 +1,6 @@
 # Matchups -- 2026 week 2
 
-_depth charts as of 2026-09-16; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
+_depth charts as of 2026-09-17; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
 
 ## supervillain (thevalz) -- my lineup
 
@@ -152,7 +152,7 @@ _depth charts as of 2026-09-16; defender grades pool PFR coverage stats from 202
 | Devaughn Vele | WR | NO | WR2 | @ BAL | 🟡 NEUTRAL | 55 | (outside) LCB Nate Wiggins [B 71]<br>RCB Marlon Humphrey [C 51] | BAL pass D [C 45, #18] |
 | Drake London | WR | ATL | WR1 | vs CAR | 🟡 NEUTRAL | 55 | (outside) LCB Mike Jackson [C 56]<br>RCB Jaycee Horn [B 74] | CAR pass D [D 37, #20] |
 | Jahan Dotson | WR | ATL | WR2 | vs CAR | 🟡 NEUTRAL | 55 | (outside) LCB Mike Jackson [C 56]<br>RCB Jaycee Horn [B 74] | CAR pass D [D 37, #20] |
-| Ja'Kobi Lane | WR | BAL | WR3 | vs NO | 🟡 NEUTRAL | 55 | (slot) NB Jonas Sanker [C 47] | NO pass D [B 70, #10] |
+| Devontez Walker | WR | BAL | WR3 | vs NO | 🟡 NEUTRAL | 55 | (slot) NB Jonas Sanker [C 47] | NO pass D [B 70, #10] |
 | Rashod Bateman | WR | BAL | WR2 | vs NO | 🟡 NEUTRAL | 54 | (outside) LCB Kool-Aid McKinstry [C 46]<br>RCB Quincy Riley [C 46] | NO pass D [B 70, #10] |
 | Zay Flowers | WR | BAL | WR1 | vs NO | 🟡 NEUTRAL | 54 | (outside) LCB Kool-Aid McKinstry [C 46]<br>RCB Quincy Riley [C 46] | NO pass D [B 70, #10] |
 | Xavier Legette | WR | CAR | WR3 | @ ATL | 🟡 NEUTRAL | 54 | (slot) NB Billy Bowman Jr. [?] (low sample (27 tgt)) | ATL pass D [B 60, #13] |
@@ -174,8 +174,8 @@ _depth charts as of 2026-09-16; defender grades pool PFR coverage stats from 202
 | Jordan Whittington | WR | LA | WR3 | vs NYG | 🟡 NEUTRAL | 43 | (slot) NB Dru Phillips [D 39] | NYG pass D [C 51, #16] |
 | Rashee Rice | WR | KC | WR1 | vs IND | 🟡 NEUTRAL | 42 | (outside) LCB Sauce Gardner [B 61]<br>RCB Charvarius Ward [C 48] | IND pass D [F 19, #29] |
 | Xavier Worthy | WR | KC | WR2 | vs IND | 🟡 NEUTRAL | 42 | (outside) LCB Sauce Gardner [B 61]<br>RCB Charvarius Ward [C 48] | IND pass D [F 19, #29] |
-| De'Zhaun Stribling | WR | SF | WR3 | vs MIA | 🟡 NEUTRAL | 42 | (slot) NB Chris Johnson [?] (rookie) | MIA pass D [D 28, #23] |
 | Deebo Samuel | WR | SF | WR2 | vs MIA | 🟡 NEUTRAL | 42 | (outside) LCB Jason Marshall Jr. [?] (low sample (25 tgt))<br>RCB JuJu Brents [?] (low sample (13 tgt)) | MIA pass D [D 28, #23] |
+| Demarcus Robinson | WR | SF | WR3 | vs MIA | 🟡 NEUTRAL | 42 | (slot) NB Chris Johnson [?] (rookie) | MIA pass D [D 28, #23] |
 | Mike Evans | WR | SF | WR1 | vs MIA | 🟡 NEUTRAL | 42 | (outside) LCB Jason Marshall Jr. [?] (low sample (25 tgt))<br>RCB JuJu Brents [?] (low sample (13 tgt)) | MIA pass D [D 28, #23] |
 | Rashid Shaheed | WR | SEA | WR2 | @ ARI | 🟡 NEUTRAL | 41 | (outside) LCB Will Johnson [D 33]<br>RCB Denzel Burke [B 67] | ARI pass D [D 26, #25] |
 | Jauan Jennings | WR | MIN | WR3 | @ CHI | 🟡 NEUTRAL | 41 | (slot) NB Cam Lewis [C 51] | CHI pass D [D 22, #28] |
