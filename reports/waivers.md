@@ -1,27 +1,29 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-18 11:22 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-18 16:29 UTC
 
 ## Since last run
 
-- ⚠️ **Isiah Pacheco (RB-DET) → IR** — FREE AGENT player newly listed IR. Next up: **Jacob Saylors (RB-DET)** — FREE AGENT, claim him.
-  ↳ _September 14, 2026 — Undergoes back surgery:_ Pacheco (back) underwent surgery Monday and is expected to be out for a significant amount of time,  Nolan Bianchi of The Detroit News  reports. (serious)
-- 📤 **Jerry Jeudy (WR-CLE) was dropped** — Now a free agent — check the waiver board below.
-  ↳ _September 14, 2026 — Logs two catches in Week 1 loss:_ Jeudy caught two passes (on four targets) for 26 yards during the Browns' 34-10 loss to the Jaguars on Sunday. (serious)
+- ⚠️ **Omar Cooper (WR-NYJ) Questionable → Out** — FREE AGENT player's status changed. Next up: **Isaiah Williams (WR-NYJ)** — FREE AGENT, claim him.
+  ↳ _September 18, 2026 — Ruled out for Week 2:_ Cooper (ankle) will not play Sunday against the Packers,  Zack Rosenblatt of The Athletic  reports. (practice: **DNP**, serious)
+- 📈 **Kayshon Boutte (WR-HOU) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
+  ↳ _September 14, 2026 — Minimal production in Week 1:_ Boutte caught one of two targets for 21 yards in the Texans' 36-31 loss to the Bills on Sunday. (serious)
+- 📈 **Oronde Gadsden (TE-LAC) moved up the depth chart (2 → 1)** — Workload is trending his way.
+  ↳ _September 14, 2026 — Catches two passes in limited action:_ Gadsden caught both of his targets for 32 yards during the Chargers' 26-14 loss to the Cardinals on Sunday.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $4 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 9,396 | $2 |
-| 🔥 | **Xavier Hutchinson (WR-HOU)** | CONTESTED | 0.0 | every man ahead of him is banged up (1 deep); 154,350 adds in 24h — the market has re-rated him | 154,350 | $21 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 8,694 | $2 |
+| · | **Kayshon Boutte (WR-HOU)** | SPECULATIVE | 6.5 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 18,860 | $1 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 9,316 | $3 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 8,534 | $3 |
 | 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 11.8 | starting for his NFL team and unrostered | 0 | $3 |
+| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 13,104 | $3 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
