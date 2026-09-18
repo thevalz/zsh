@@ -1,27 +1,31 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-17 21:26 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-18 04:49 UTC
 
 ## Since last run
 
-- 📈 **Ja'Kobi Lane (WR-BAL) moved up the depth chart (9 → 7)** — Workload is trending his way.
-  ↳ _September 16, 2026 — Undergoes wrist surgery:_ Coach Jesse Minter said Lane underwent wrist surgery Wednesday, and the Ravens placed the rookie wide receiver on injured reserve,  Brian Wacker of The Baltimore Sun  reports. (serious)
-- 🚨 **Alec Pierce (WR-IND) → Questionable** — MY player newly listed Questionable. Next up: **Josh Downs (WR-IND)** — rostered by hulleywood.
-  ↳ _September 17, 2026 — Doesn't practice Thursday:_ Pierce (heel)  didn't participate  in practice Thursday.
-- · **Chris Olave (WR-NO) → Questionable** — mtngoblin's player newly listed Questionable. Next up: **Devaughn Vele (WR-NO)** — rostered by supervillain.
-  ↳ _September 17, 2026 — Exits Thursday's practice as precaution:_ Olave (hamstring) departed Thursday's practice early as a precaution, but it isn't expected to impact his ability to play,  Nick Underhill of NewOrleans.Football  reports. (likely minor)
+- ⚠️ **Dylan Sampson (RB-CLE) → IR** — FREE AGENT player newly listed IR. Next up: **Eric Gray (RB-CLE)** — FREE AGENT, claim him.
+  ↳ _September 15, 2026 — Lands on injured reserve:_ Sampson (knee)  was placed on injured reserve  Tuesday. (serious)
+- ⚠️ **Ty Johnson (RB-BUF) Questionable → Out** — FREE AGENT player's status changed. Next up: **Ray Davis (RB-BUF)** — FREE AGENT, claim him.
+  ↳ _September 17, 2026 — Inactive again in Week 2:_ Johnson (hamstring) is listed as  inactive  Thursday against the Lions. (serious)
+- 📤 **Jayden Higgins (WR-HOU) was dropped** — Now a free agent — check the waiver board below.
+  ↳ _August 21, 2026 — Sent to injured reserve:_ The Texans placed Higgins (knee) on injured reserve Friday,  Adam Schefter of ESPN  reports. (serious)
+- ⚠️ **DJ Moore (WR-BUF) → Out** — Randikulous's player newly listed Out. Next up: **Khalil Shakir (WR-BUF)** — rostered by Randikulous.
+  ↳ _September 17, 2026 — Will not return Thursday:_ Moore (shoulder) has been  ruled out  for the remainder of Thursday night's game against the Lions.
+- ⚠️ **Tyrone Tracy (RB-NYG) cleared (Questionable → healthy)** — FREE AGENT player is off the report.
+  ↳ _September 17, 2026 — Healthy ahead of Week 2:_ Tracy (illness) did not appear on the Giants' injury report Thursday,  Dan Salomone of the team's official site  reports. (serious)
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $4 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 11,142 | $2 |
-| 🔥 | **Xavier Hutchinson (WR-HOU)** | CONTESTED | 0.0 | every man ahead of him is banged up (1 deep); 143,633 adds in 24h — the market has re-rated him | 143,633 | $21 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 9,765 | $2 |
+| 🔥 | **Xavier Hutchinson (WR-HOU)** | CONTESTED | 0.0 | every man ahead of him is banged up (1 deep); 152,698 adds in 24h — the market has re-rated him | 152,698 | $21 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 9,702 | $3 |
 | 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
-| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 12,396 | $3 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 11.8 | starting for his NFL team and unrostered | 0 | $3 |
 
