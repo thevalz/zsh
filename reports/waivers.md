@@ -1,29 +1,47 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-18 16:29 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-18 20:57 UTC
 
 ## Since last run
 
-- ⚠️ **Omar Cooper (WR-NYJ) Questionable → Out** — FREE AGENT player's status changed. Next up: **Isaiah Williams (WR-NYJ)** — FREE AGENT, claim him.
-  ↳ _September 18, 2026 — Ruled out for Week 2:_ Cooper (ankle) will not play Sunday against the Packers,  Zack Rosenblatt of The Athletic  reports. (practice: **DNP**, serious)
-- 📈 **Kayshon Boutte (WR-HOU) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
-  ↳ _September 14, 2026 — Minimal production in Week 1:_ Boutte caught one of two targets for 21 yards in the Texans' 36-31 loss to the Bills on Sunday. (serious)
-- 📈 **Oronde Gadsden (TE-LAC) moved up the depth chart (2 → 1)** — Workload is trending his way.
-  ↳ _September 14, 2026 — Catches two passes in limited action:_ Gadsden caught both of his targets for 32 yards during the Chargers' 26-14 loss to the Cardinals on Sunday.
+- ⚠️ **Jauan Jennings (WR-MIN) → Out** — FREE AGENT player newly listed Out. Next up: **Tai Felton (WR-MIN)** — FREE AGENT, claim him.
+  ↳ _September 18, 2026 — Ruled out for Week 2:_ Jennings (not injury related - personal)  won't play  Sunday in Chicago. (serious)
+- ⚠️ **Ashton Dulin (WR-IND) Questionable → Out** — FREE AGENT player's status changed. Next up: **Laquon Treadwell (WR-IND)** — FREE AGENT, claim him.
+  ↳ _September 17, 2026 — :_ Dulin (ankle) did not practice Thursday,  James Boyd of The Athletic  reports. (practice: **DNP**)
+- ⚠️ **Ty Chandler (RB-NO) → IR** — FREE AGENT player newly listed IR. Next up: **Audric Estime (RB-NO)** — FREE AGENT, claim him.
+  ↳ _August 25, 2026 — Placed on injured reserve:_ The Saints placed Chandler (knee) on injured reserve Tuesday,  Mike Triplett of NewOrleans.Football  reports. (serious)
+- 🚨 **Alec Pierce (WR-IND) cleared (Questionable → healthy)** — MY player is off the report.
+  ↳ _September 18, 2026 — :_ Pierce (heel) was a full participant in Friday's practice and  doesn't carry an injury designation  for Sunday's game at Kansas City. (practice: **FULL**)
+- ⚠️ **Brock Bowers (TE-LV) Questionable → Doubtful** — NYKatSnatchers's player's status changed. Next up: **Michael Mayer (TE-LV)** — rostered by mtngoblin.
+  ↳ _September 18, 2026 — :_ Bowers (knee) will be listed as doubtful for Sunday's game at the Chargers, and Raiders coach Klint Kubiak said Friday that the tight end will be worked out pregame before a final decision is made,  Sam Warren of The Athletic  reports.
+- ⚠️ **Nico Collins (WR-HOU) Questionable → Out** — Jersey Rum Hams's player's status changed. Next up: **Kayshon Boutte (WR-HOU)** — FREE AGENT, claim him.
+  ↳ _September 18, 2026 — :_ Collins (hamstring)  will not play  Sunday against the Bengals.
+- ⚠️ **Kyler Murray (QB-MIN) Questionable → Out** — hulleywood's player's status changed. Next up: **J.J. McCarthy (QB-MIN)** — FREE AGENT, claim him.
+  ↳ _September 18, 2026 — :_ Murray (concussion)  won't play  in Sunday's contest at Chicago.
+- ⚠️ **Zay Flowers (WR-BAL) Questionable → Doubtful** — NYKatSnatchers's player's status changed. Next up: **Rashod Bateman (WR-BAL)** — FREE AGENT, claim him.
+  ↳ _September 18, 2026 — :_ Flowers (hamstring) is  listed as doubtful  for Sunday's game against New Orleans.
+- ⚠️ **Michael Penix (QB-ATL) Questionable → Out** — It's Gonna be Maye's player's status changed. Next up: **Tua Tagovailoa (QB-ATL)** — FREE AGENT, claim him.
+- ⚠️ **Tua Tagovailoa (QB-ATL) Questionable → Doubtful** — FREE AGENT player's status changed. Next up: **Jack Strand (QB-ATL)** — FREE AGENT, claim him.
+- ⚠️ **Kyle Monangai (RB-CHI) cleared (Questionable → healthy)** — Randikulous's player is off the report.
+- ⚠️ **Jalen Coker (WR-CAR) cleared (Questionable → healthy)** — Jersey Rum Hams's player is off the report.
+- ⚠️ **D'Andre Swift (RB-CHI) cleared (Questionable → healthy)** — Randikulous's player is off the report.
+- 📥 **Alvin Kamara (RB-NO) was added** — Picked up by Jersey Rum Hams.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
+| 🚨 | **Kayshon Boutte (WR-HOU)** | URGENT | 6.5 | everyone ahead of him is out — the job is his; Nico Collins is Out (Hamstring) | 25,304 | $25 |
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $4 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 8,694 | $2 |
-| · | **Kayshon Boutte (WR-HOU)** | SPECULATIVE | 6.5 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 18,860 | $1 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Doubtful (Hamstring) | 16,634 | $8 |
+| 🚨 | **J.J. McCarthy (QB-MIN)** | URGENT | 2.9 | Kyler Murray is Out (Concussion) | 0 | $8 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 8,991 | $2 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 8,534 | $3 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 8,202 | $3 |
 | 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 13,104 | $3 |
+| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 13,131 | $3 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
@@ -47,7 +65,7 @@
 | Pos | Starters | Rostered | Starter value | League median | Rank | Tradeable surplus |
 |:--|--:|--:|--:|--:|--:|--:|
 | QB | 2 | 2 | 160.24 | 109.06 | **2/12** | 0 |
-| RB | 2 | 5 | 143.87 | 143.87 | **6/12** | 75.59 |
+| RB | 2 | 5 | 143.87 | 143.87 | **6/12** | 77.6 |
 | WR | 2 | 7 | 105.29 | 134.67 | **11/12** | 22.14 |
 | TE | 1 | 1 | 69.3 | 34.99 | **1/12** | 0 |
 
@@ -99,7 +117,7 @@
   - _1-for-1_ — give **Bhayshul Tuten (RB-JAX)** (48.0) → get **Rome Odunze (WR-CHI)** (34.4)
 
 ### Jersey Rum Hams — fit score 37.98
-- Roster counts: QB:2 / RB:5 / WR:6 / TE:1
+- Roster counts: QB:2 / RB:6 / WR:6 / TE:1
 - They need: **QB (20.79), RB (11.21)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
