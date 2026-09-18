@@ -1,6 +1,6 @@
 # Matchups -- 2026 week 2
 
-_depth charts as of 2026-09-17; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
+_depth charts as of 2026-09-18; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
 
 ## supervillain (thevalz) -- my lineup
 
@@ -121,8 +121,8 @@ _depth charts as of 2026-09-17; defender grades pool PFR coverage stats from 202
 | DK Metcalf | WR | PIT | WR1 | @ NE | 🔴 TOUGH | 74 | (outside) LCB Carlton Davis III [B 75]<br>RCB Christian Gonzalez [A 83]<br>⚠ shadow risk | NE pass D [B 65, #12] |
 | Michael Pittman Jr. | WR | PIT | WR2 | @ NE | 🔴 TOUGH | 74 | (outside) LCB Carlton Davis III [B 75]<br>RCB Christian Gonzalez [A 83]<br>⚠ shadow risk | NE pass D [B 65, #12] |
 | Jack Bech | WR | LV | WR3 | @ LAC | 🔴 TOUGH | 72 | (slot) NB Tarheeb Still [B 66] | LAC pass D [A 82, #5] |
-| Marvin Harrison Jr. | WR | ARI | WR1 | vs SEA | 🔴 TOUGH | 71 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 87, #3] |
-| Michael Wilson | WR | ARI | WR2 | vs SEA | 🔴 TOUGH | 71 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 87, #3] |
+| Marvin Harrison Jr. | WR | ARI | WR2 | vs SEA | 🔴 TOUGH | 71 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 87, #3] |
+| Michael Wilson | WR | ARI | WR1 | vs SEA | 🔴 TOUGH | 71 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 87, #3] |
 | Kalif Raymond | WR | CHI | WR3 | vs MIN | 🔴 TOUGH | 71 | (slot) NB Byron Murphy Jr. [B 68]<br>⚠ shadow risk | MIN pass D [B 75, #9] |
 | Luther Burden III | WR | CHI | WR2 | vs MIN | 🔴 TOUGH | 70 | (outside) LCB Charles Demmings [?] (rookie)<br>RCB James Pierre [A 84]<br>⚠ shadow risk | MIN pass D [B 75, #9] |
 | Rome Odunze | WR | CHI | WR1 | vs MIN | 🔴 TOUGH | 70 | (outside) LCB Charles Demmings [?] (rookie)<br>RCB James Pierre [A 84]<br>⚠ shadow risk | MIN pass D [B 75, #9] |
@@ -225,7 +225,7 @@ _depth charts as of 2026-09-17; defender grades pool PFR coverage stats from 202
 | Isaiah Likely | TE | NYG | TE1 | @ LA | 🟡 NEUTRAL | 47 | FS Kam Curl [C 46]<br>SS Kamren Kinchens [D 33] | LA pass D [C 55, #15] |
 | Charlie Kolar | TE | LAC | TE1 | vs LV | 🟡 NEUTRAL | 44 | FS Treydan Stukes [?] (rookie)<br>SS Jeremy Chinn [D 28] | LV pass D [C 49, #17] |
 | AJ Barner | TE | SEA | TE1 | @ ARI | 🟡 NEUTRAL | 40 | FS Andrew Wingard [B 78]<br>SS Budda Baker [D 31] | ARI pass D [D 26, #25] |
-| George Kittle | TE | SF | TE1 | vs MIA | 🟡 NEUTRAL | 39 | FS Zayne Anderson [?] (low sample (2 tgt))<br>SS Dante Trader Jr. [?] (low sample (20 tgt)) | MIA pass D [D 28, #23] |
+| George Kittle | TE | SF | TE1 | vs MIA | 🟡 NEUTRAL | 39 | FS Zayne Anderson [?] (low sample (2 tgt))<br>SS Michael Taaffe [?] (rookie) | MIA pass D [D 28, #23] |
 | Kyle Pitts Sr. | TE | ATL | TE1 | vs CAR | 🟡 NEUTRAL | 38 | FS Nick Scott [D 23]<br>SS Tre'von Moehrig [C 56] | CAR pass D [D 37, #20] |
 | Tucker Kraft | TE | GB | TE1 | @ NYJ | 🟢 SOFT | 37 | FS Minkah Fitzpatrick [C 43]<br>SS Dane Belton [C 48] | NYJ pass D [D 29, #22] |
 | Harold Fannin Jr. | TE | CLE | TE1 | @ TB | 🟢 SOFT | 36 | FS Antoine Winfield Jr. [C 50]<br>SS Tykee Smith [C 44] | TB pass D [D 25, #26] |

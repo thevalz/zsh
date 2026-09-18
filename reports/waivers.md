@@ -1,30 +1,24 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-18 04:49 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-18 11:22 UTC
 
 ## Since last run
 
-- ⚠️ **Dylan Sampson (RB-CLE) → IR** — FREE AGENT player newly listed IR. Next up: **Eric Gray (RB-CLE)** — FREE AGENT, claim him.
-  ↳ _September 15, 2026 — Lands on injured reserve:_ Sampson (knee)  was placed on injured reserve  Tuesday. (serious)
-- ⚠️ **Ty Johnson (RB-BUF) Questionable → Out** — FREE AGENT player's status changed. Next up: **Ray Davis (RB-BUF)** — FREE AGENT, claim him.
-  ↳ _September 17, 2026 — Inactive again in Week 2:_ Johnson (hamstring) is listed as  inactive  Thursday against the Lions. (serious)
-- 📤 **Jayden Higgins (WR-HOU) was dropped** — Now a free agent — check the waiver board below.
-  ↳ _August 21, 2026 — Sent to injured reserve:_ The Texans placed Higgins (knee) on injured reserve Friday,  Adam Schefter of ESPN  reports. (serious)
-- ⚠️ **DJ Moore (WR-BUF) → Out** — Randikulous's player newly listed Out. Next up: **Khalil Shakir (WR-BUF)** — rostered by Randikulous.
-  ↳ _September 17, 2026 — Will not return Thursday:_ Moore (shoulder) has been  ruled out  for the remainder of Thursday night's game against the Lions.
-- ⚠️ **Tyrone Tracy (RB-NYG) cleared (Questionable → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 17, 2026 — Healthy ahead of Week 2:_ Tracy (illness) did not appear on the Giants' injury report Thursday,  Dan Salomone of the team's official site  reports. (serious)
+- ⚠️ **Isiah Pacheco (RB-DET) → IR** — FREE AGENT player newly listed IR. Next up: **Jacob Saylors (RB-DET)** — FREE AGENT, claim him.
+  ↳ _September 14, 2026 — Undergoes back surgery:_ Pacheco (back) underwent surgery Monday and is expected to be out for a significant amount of time,  Nolan Bianchi of The Detroit News  reports. (serious)
+- 📤 **Jerry Jeudy (WR-CLE) was dropped** — Now a free agent — check the waiver board below.
+  ↳ _September 14, 2026 — Logs two catches in Week 1 loss:_ Jeudy caught two passes (on four targets) for 26 yards during the Browns' 34-10 loss to the Jaguars on Sunday. (serious)
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $4 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.6 | direct handcuff to MY Derrick Henry | 9,765 | $2 |
-| 🔥 | **Xavier Hutchinson (WR-HOU)** | CONTESTED | 0.0 | every man ahead of him is banged up (1 deep); 152,698 adds in 24h — the market has re-rated him | 152,698 | $21 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 9,396 | $2 |
+| 🔥 | **Xavier Hutchinson (WR-HOU)** | CONTESTED | 0.0 | every man ahead of him is banged up (1 deep); 154,350 adds in 24h — the market has re-rated him | 154,350 | $21 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 9,702 | $3 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 9,316 | $3 |
 | 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 11.8 | starting for his NFL team and unrostered | 0 | $3 |
@@ -50,9 +44,9 @@
 
 | Pos | Starters | Rostered | Starter value | League median | Rank | Tradeable surplus |
 |:--|--:|--:|--:|--:|--:|--:|
-| QB | 2 | 2 | 160.24 | 111.45 | **2/12** | 0 |
-| RB | 2 | 5 | 142.96 | 142.96 | **6/12** | 75.59 |
-| WR | 2 | 7 | 105.29 | 134.67 | **11/12** | 22.49 |
+| QB | 2 | 2 | 160.24 | 109.06 | **2/12** | 0 |
+| RB | 2 | 5 | 143.87 | 143.87 | **6/12** | 75.59 |
+| WR | 2 | 7 | 105.29 | 134.67 | **11/12** | 22.14 |
 | TE | 1 | 1 | 69.3 | 34.99 | **1/12** | 0 |
 
 > ⚠️ **QB: 2 rostered for 2 starting slots — one injury and there is nobody to plug in.**
@@ -62,9 +56,9 @@
 
 ## Trade targets — ranked by two-way fit
 
-### hulleywood — fit score 71.44
+### hulleywood — fit score 72.35
 - Roster counts: QB:4 / RB:3 / WR:5 / TE:2
-- They need: **RB (44.18), QB (8.05)**
+- They need: **RB (45.09), QB (5.66)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _2-for-1_ — give **Tony Pollard (RB-TEN) + Rico Dowdle (RB-PIT)** (68.8) → get **George Pickens (WR-DAL)** (68.2)
@@ -73,9 +67,9 @@
   - _1-for-1_ — give **Bhayshul Tuten (RB-JAX)** (48.0) → get **George Pickens (WR-DAL)** (68.2)
   - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (33.8) → get **Jayden Reed (WR-GB)** (19.2)
 
-### Brooklyn Meatpackers — fit score 58.08
+### Brooklyn Meatpackers — fit score 60.65
 - Roster counts: QB:2 / RB:5 / WR:6 / TE:2
-- They need: **RB (28.7), TE (9.07)**
+- They need: **RB (31.27), TE (9.07)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _2-for-1_ — give **Tony Pollard (RB-TEN) + Rico Dowdle (RB-PIT)** (68.8) → get **Malik Nabers (WR-NYG)** (63.8)
@@ -84,27 +78,27 @@
   - _2-for-1_ — give **Bhayshul Tuten (RB-JAX) + Tony Pollard (RB-TEN)** (83.0) → get **Malik Nabers (WR-NYG)** (63.8)
   - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (33.8) → get **Jaylen Waddle (WR-DEN)** (49.7)
 
-### Down to Pound — fit score 40.22
-- Roster counts: QB:3 / RB:5 / WR:6 / TE:1
-- They need: **WR (23.89), RB (11.57)**
+### Down to Pound — fit score 41.13
+- Roster counts: QB:3 / RB:5 / WR:5 / TE:1
+- They need: **WR (23.89), RB (12.48)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (33.8) → get **DK Metcalf (WR-PIT)** (29.6)
   - _1-for-1_ — give **Tony Pollard (RB-TEN)** (35.0) → get **DK Metcalf (WR-PIT)** (29.6)
   - _1-for-1_ — give **Bhayshul Tuten (RB-JAX)** (48.0) → get **DK Metcalf (WR-PIT)** (29.6)
 
-### mtngoblin — fit score 38.61
+### mtngoblin — fit score 39.52
 - Roster counts: QB:3 / RB:6 / WR:4 / TE:2
-- They need: **WR (18.12), TE (9.92), RB (9.23)**
+- They need: **WR (18.12), RB (10.14), TE (9.92)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (33.8) → get **Rome Odunze (WR-CHI)** (34.4)
   - _1-for-1_ — give **Tony Pollard (RB-TEN)** (35.0) → get **Rome Odunze (WR-CHI)** (34.4)
   - _1-for-1_ — give **Bhayshul Tuten (RB-JAX)** (48.0) → get **Rome Odunze (WR-CHI)** (34.4)
 
-### Jersey Rum Hams — fit score 37.07
+### Jersey Rum Hams — fit score 37.98
 - Roster counts: QB:2 / RB:5 / WR:6 / TE:1
-- They need: **QB (23.63), RB (10.3)**
+- They need: **QB (20.79), RB (11.21)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (33.8) → get **Chris Godwin (WR-TB)** (23.1)
