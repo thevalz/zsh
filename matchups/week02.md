@@ -1,6 +1,6 @@
 # Matchups -- 2026 week 2
 
-_depth charts as of 2026-09-18; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
+_depth charts as of 2026-09-19; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
 
 ## supervillain (thevalz) -- my lineup
 
@@ -93,10 +93,10 @@ _depth charts as of 2026-09-18; defender grades pool PFR coverage stats from 202
 | Kenneth Walker III | RB | KC | RB1 | vs IND | 🟡 NEUTRAL | 55 | MLB Akeem Davis-Gaither [D 26]<br>WLB Jaylon Carlies [?] (low sample (6 tgt)) | IND run D [B 67, #11] |
 | Breece Hall | RB | NYJ | RB1 | vs GB | 🟡 NEUTRAL | 55 | LILB Edgerrin Cooper [B 62]<br>RILB Zaire Franklin [D 35] | GB run D [C 59, #14] |
 | Travis Etienne Jr. | RB | NO | RB1 | @ BAL | 🟡 NEUTRAL | 53 | LILB Roquan Smith [C 50]<br>RILB Teddye Buchanan [C 51] | BAL run D [C 55, #15] |
-| Saquon Barkley | RB | PHI | RB1 | @ TEN | 🟡 NEUTRAL | 52 | MLB Cody Barton [B 71]<br>WLB Cedric Gray [D 38] | TEN run D [C 51, #17] |
 | Cam Skattebo | RB | NYG | RB1 | @ LA | 🟡 NEUTRAL | 50 | LILB Nate Landman [D 35]<br>RILB Omar Speights [B 76] | LA run D [C 46, #19] |
 | Rhamondre Stevenson | RB | NE | RB1 | vs PIT | 🟡 NEUTRAL | 48 | LILB Payton Wilson [D 37]<br>RILB Patrick Queen [C 40] | PIT run D [C 55, #16] |
 | James Cook III | RB | BUF | RB1 | vs DET | 🟡 NEUTRAL | 48 | MLB Jack Campbell [C 53]<br>WLB Derrick Barnes [?] (low sample (28 tgt)) | DET run D [C 46, #20] |
+| Saquon Barkley | RB | PHI | RB1 | @ TEN | 🟡 NEUTRAL | 48 | MLB Anthony Hill Jr. [?] (rookie)<br>WLB Cedric Gray [D 38] | TEN run D [C 51, #17] |
 | De'Von Achane | RB | MIA | RB1 | @ SF | 🟡 NEUTRAL | 47 | MLB Fred Warner [B 70]<br>WLB Dre Greenlaw [?] (low sample (23 tgt)) | SF run D [D 39, #23] |
 | Chuba Hubbard | RB | CAR | RB1 | @ ATL | 🟡 NEUTRAL | 46 | LILB Kendal Daniels [?] (rookie)<br>RILB Divine Deablo [C 59] | ATL run D [D 40, #21] |
 | Aaron Jones Sr. | RB | MIN | RB1 | @ CHI | 🟡 NEUTRAL | 42 | MLB T.J. Edwards [B 65]<br>WLB Devin Bush [B 71] | CHI run D [D 25, #24] |
@@ -168,6 +168,8 @@ _depth charts as of 2026-09-18; defender grades pool PFR coverage stats from 202
 | Chris Godwin Jr. | WR | TB | WR2 | vs CLE | 🟡 NEUTRAL | 47 | (slot) NB Myles Harden [D 35] | CLE pass D [B 71, #10] |
 | Jalen McMillan | WR | TB | WR3 | vs CLE | 🟡 NEUTRAL | 47 | (slot) NB Myles Harden [D 35] | CLE pass D [B 71, #10] |
 | Omar Cooper Jr. | WR | NYJ | WR3 | vs GB | 🟡 NEUTRAL | 47 | (slot) NB Javon Bullard [C 42] | GB pass D [C 57, #14] |
+| Keon Coleman | WR | BUF | WR3 | vs DET | 🟡 NEUTRAL | 47 | (slot) NB Christian Izien [C 58]<br>⚠ shadow risk | DET pass D [D 27, #24] |
+| Khalil Shakir | WR | BUF | WR2 | vs DET | 🟡 NEUTRAL | 47 | (slot) NB Christian Izien [C 58]<br>⚠ shadow risk | DET pass D [D 27, #24] |
 | Matthew Golden | WR | GB | WR3 | @ NYJ | 🟡 NEUTRAL | 46 | (slot) NB Jarvis Brownlee Jr. [C 55] | NYJ pass D [D 29, #22] |
 | Makai Lemon | WR | PHI | WR3 | @ TEN | 🟡 NEUTRAL | 45 | (slot) NB Marcus Harris [B 65] | TEN pass D [F 8, #31] |
 | Roman Wilson | WR | PIT | WR3 | @ NE | 🟡 NEUTRAL | 45 | (slot) NB Marcus Jones [D 34]<br>⚠ shadow risk | NE pass D [B 65, #12] |
@@ -202,8 +204,6 @@ _depth charts as of 2026-09-18; defender grades pool PFR coverage stats from 202
 | Mack Hollins | WR | NE | WR3 | vs PIT | 🟢 SOFT | 31 | (slot) NB Jalen Ramsey [D 27]<br>⚠ shadow risk | PIT pass D [D 38, #19] |
 | Christian Watson | WR | GB | WR1 | @ NYJ | 🟢 SOFT | 30 | (outside) LCB Nahshon Wright [C 47]<br>RCB Brandon Stephens [F 16] | NYJ pass D [D 29, #22] |
 | Jayden Reed | WR | GB | WR2 | @ NYJ | 🟢 SOFT | 30 | (outside) LCB Nahshon Wright [C 47]<br>RCB Brandon Stephens [F 16] | NYJ pass D [D 29, #22] |
-| Keon Coleman | WR | BUF | WR3 | vs DET | 🟢 SOFT | 26 | (slot) NB Roger McCreary [D 25]<br>⚠ shadow risk | DET pass D [D 27, #24] |
-| Khalil Shakir | WR | BUF | WR2 | vs DET | 🟢 SOFT | 26 | (slot) NB Roger McCreary [D 25]<br>⚠ shadow risk | DET pass D [D 27, #24] |
 | Ryan Flournoy | WR | DAL | WR3 | vs WAS | 🟢 SOFT | 18 | (slot) NB Amik Robertson [D 23] | WAS pass D [F 9, #30] |
 | Brenton Strange | TE | JAX | TE1 | @ DEN | 🔴 TOUGH | 77 | FS Brandon Jones [B 79]<br>SS Talanoa Hufanga [C 46] | DEN pass D [A 92, #2] |
 | Trey McBride | TE | ARI | TE1 | vs SEA | 🔴 TOUGH | 77 | FS Julian Love [A 81]<br>SS Ty Okada [C 53] | SEA pass D [A 87, #3] |
@@ -222,7 +222,7 @@ _depth charts as of 2026-09-18; defender grades pool PFR coverage stats from 202
 | Juwan Johnson | TE | NO | TE1 | @ BAL | 🟡 NEUTRAL | 54 | FS Malaki Starks [C 56]<br>SS Jaylinn Hawkins [B 69] | BAL pass D [C 45, #18] |
 | Greg Dulcich | TE | MIA | TE1 | @ SF | 🟡 NEUTRAL | 48 | FS Ji'Ayir Brown [B 64]<br>SS Malik Mustapha [C 56] | SF pass D [D 37, #21] |
 | Darnell Washington | TE | PIT | TE1 | @ NE | 🟡 NEUTRAL | 48 | FS Kevin Byard [D 28]<br>SS Craig Woodson [D 34] | NE pass D [B 65, #12] |
-| Isaiah Likely | TE | NYG | TE1 | @ LA | 🟡 NEUTRAL | 47 | FS Kam Curl [C 46]<br>SS Kamren Kinchens [D 33] | LA pass D [C 55, #15] |
+| Isaiah Likely | TE | NYG | TE1 | @ LA | 🟡 NEUTRAL | 47 | FS Kamren Kinchens [D 33]<br>SS Kam Curl [C 46] | LA pass D [C 55, #15] |
 | Charlie Kolar | TE | LAC | TE1 | vs LV | 🟡 NEUTRAL | 44 | FS Treydan Stukes [?] (rookie)<br>SS Jeremy Chinn [D 28] | LV pass D [C 49, #17] |
 | AJ Barner | TE | SEA | TE1 | @ ARI | 🟡 NEUTRAL | 40 | FS Andrew Wingard [B 78]<br>SS Budda Baker [D 31] | ARI pass D [D 26, #25] |
 | George Kittle | TE | SF | TE1 | vs MIA | 🟡 NEUTRAL | 39 | FS Zayne Anderson [?] (low sample (2 tgt))<br>SS Michael Taaffe [?] (rookie) | MIA pass D [D 28, #23] |
@@ -319,47 +319,47 @@ _depth charts as of 2026-09-18; defender grades pool PFR coverage stats from 202
 | 38 | Sauce Gardner | IND | LCB | B | 61 | 7.7 | 86 | 52 | 2 | 0 | 74 |
 | 39 | Dax Hill | CIN | LCB | B | 61 | 6.1 | 88 | 64 | 3 | 1 | 98 |
 | 40 | Jourdan Lewis | JAX | NB | C | 59 | 4.8 | 89 | 66 | 6 | 2 | 85 |
-| 41 | Denzel Ward | CLE | LCB | C | 57 | 7.3 | 90 | 59 | 5 | 2 | 100 |
-| 42 | Jaylen Watson | LA | LCB | C | 56 | 7.7 | 78 | 61 | 1 | 2 | 79 |
-| 43 | Mike Jackson | CAR | LCB | C | 56 | 7.7 | 85 | 59 | 7 | 5 | 148 |
-| 44 | Riley Moss | DEN | RCB | C | 55 | 7.3 | 90 | 60 | 6 | 1 | 169 |
-| 45 | Tyson Campbell | CLE | RCB | C | 55 | 7.5 | 95 | 55 | 7 | 1 | 119 |
-| 46 | Jarvis Brownlee Jr. | NYJ | NB | C | 55 | 6.0 | 90 | 67 | 2 | 0 | 85 |
-| 47 | Tyrique Stevenson | CHI | RCB | C | 53 | 8.5 | 87 | 57 | 3 | 2 | 99 |
-| 48 | Taron Johnson | LV | NB | C | 52 | 6.7 | 90 | 66 | 2 | 1 | 82 |
-| 49 | Keisean Nixon | GB | LCB | C | 52 | 6.8 | 96 | 62 | 7 | 1 | 130 |
-| 50 | Zyon McCollum | TB | LCB | C | 51 | 7.4 | 95 | 59 | 8 | 2 | 136 |
-| 51 | Nick Emmanwori | SEA | NB | C | 51 | 6.4 | 100 | 74 | 3 | 1 | 66 |
-| 52 | Cam Lewis | CHI | NB | C | 51 | 6.7 | 91 | 66 | 2 | 0 | 71 |
-| 53 | Marlon Humphrey | BAL | RCB | C | 51 | 8.1 | 77 | 63 | 3 | 7 | 147 |
-| 54 | Charvarius Ward | IND | RCB | C | 48 | 7.6 | 98 | 58 | 3 | 0 | 74 |
-| 55 | Jonas Sanker | NO | NB | C | 47 | 10.3 | 101 | 62 | 3 | 2 | 34 |
-| 56 | Nahshon Wright | NYJ | LCB | C | 47 | 8.3 | 87 | 61 | 6 | 5 | 98 |
-| 57 | Kool-Aid McKinstry | NO | LCB | C | 46 | 8.0 | 98 | 58 | 9 | 3 | 123 |
-| 58 | Quincy Riley | NO | RCB | C | 46 | 7.9 | 96 | 60 | 3 | 1 | 52 |
-| 59 | Mike Hughes | ATL | RCB | C | 44 | 7.4 | 100 | 61 | 6 | 1 | 105 |
-| 60 | Javon Bullard | GB | NB | C | 42 | 6.9 | 105 | 80 | 2 | 0 | 86 |
-| 61 | Jacob Parrish | TB | NB | C | 41 | 7.3 | 90 | 71 | 2 | 2 | 77 |
-| 62 | Devon Witherspoon | SEA | LCB | C | 40 | 6.8 | 98 | 70 | 4 | 1 | 103 |
-| 63 | Max Melton | ARI | NB | D | 40 | 8.1 | 93 | 63 | 1 | 0 | 71 |
-| 64 | L'Jarius Sneed | KC | NB | D | 39 | 8.0 | 112 | 59 | 3 | 0 | 43 |
-| 65 | Dru Phillips | NYG | NB | D | 39 | 7.1 | 92 | 71 | 3 | 2 | 105 |
-| 66 | Dee Alford | BUF | NB | D | 38 | 7.0 | 100 | 69 | 8 | 3 | 125 |
-| 67 | DaRon Bland | DAL | RCB | D | 38 | 7.6 | 104 | 62 | 7 | 1 | 102 |
-| 68 | Alontae Taylor | TEN | RCB | D | 37 | 7.1 | 103 | 66 | 9 | 2 | 145 |
-| 69 | Benjamin Morrison | TB | RCB | D | 37 | 8.9 | 112 | 59 | 3 | 0 | 41 |
-| 70 | Myles Harden | CLE | NB | D | 35 | 6.6 | 119 | 73 | 5 | 0 | 59 |
-| 71 | Upton Stout | SF | NB | D | 35 | 7.7 | 92 | 70 | 0 | 0 | 69 |
-| 72 | Marcus Jones | NE | NB | D | 34 | 7.4 | 101 | 67 | 8 | 3 | 110 |
-| 73 | Darien Porter | LV | RCB | D | 34 | 8.3 | 101 | 66 | 1 | 0 | 35 |
-| 74 | Will Johnson | ARI | LCB | D | 33 | 7.4 | 110 | 66 | 4 | 0 | 62 |
-| 75 | Greg Newsome II | NYG | RCB | D | 33 | 8.1 | 103 | 63 | 7 | 1 | 114 |
-| 76 | Cam Hart | LAC | LCB | D | 32 | 8.0 | 103 | 65 | 5 | 1 | 103 |
-| 77 | Chau Smith-Wade | CAR | NB | D | 29 | 7.5 | 102 | 81 | 2 | 1 | 57 |
-| 78 | Jaylon Johnson | CHI | LCB | D | 29 | 10.3 | 92 | 69 | 1 | 2 | 50 |
-| 79 | Mike Sainristil | WAS | RCB | D | 28 | 8.1 | 104 | 66 | 12 | 5 | 137 |
-| 80 | Jalen Ramsey | PIT | NB | D | 27 | 7.6 | 107 | 68 | 8 | 2 | 116 |
-| 81 | Roger McCreary | DET | NB | D | 25 | 7.6 | 107 | 79 | 3 | 1 | 65 |
+| 41 | Christian Izien | DET | NB | C | 58 | 7.0 | 91 | 68 | 1 | 0 | 42 |
+| 42 | Denzel Ward | CLE | LCB | C | 57 | 7.3 | 90 | 59 | 5 | 2 | 100 |
+| 43 | Jaylen Watson | LA | LCB | C | 56 | 7.7 | 78 | 61 | 1 | 2 | 79 |
+| 44 | Mike Jackson | CAR | LCB | C | 56 | 7.7 | 85 | 59 | 7 | 5 | 148 |
+| 45 | Riley Moss | DEN | RCB | C | 55 | 7.3 | 90 | 60 | 6 | 1 | 169 |
+| 46 | Tyson Campbell | CLE | RCB | C | 55 | 7.5 | 95 | 55 | 7 | 1 | 119 |
+| 47 | Jarvis Brownlee Jr. | NYJ | NB | C | 55 | 6.0 | 90 | 67 | 2 | 0 | 85 |
+| 48 | Tyrique Stevenson | CHI | RCB | C | 53 | 8.5 | 87 | 57 | 3 | 2 | 99 |
+| 49 | Taron Johnson | LV | NB | C | 52 | 6.7 | 90 | 66 | 2 | 1 | 82 |
+| 50 | Keisean Nixon | GB | LCB | C | 52 | 6.8 | 96 | 62 | 7 | 1 | 130 |
+| 51 | Zyon McCollum | TB | LCB | C | 51 | 7.4 | 95 | 59 | 8 | 2 | 136 |
+| 52 | Nick Emmanwori | SEA | NB | C | 51 | 6.4 | 100 | 74 | 3 | 1 | 66 |
+| 53 | Cam Lewis | CHI | NB | C | 51 | 6.7 | 91 | 66 | 2 | 0 | 71 |
+| 54 | Marlon Humphrey | BAL | RCB | C | 51 | 8.1 | 77 | 63 | 3 | 7 | 147 |
+| 55 | Charvarius Ward | IND | RCB | C | 48 | 7.6 | 98 | 58 | 3 | 0 | 74 |
+| 56 | Jonas Sanker | NO | NB | C | 47 | 10.3 | 101 | 62 | 3 | 2 | 34 |
+| 57 | Nahshon Wright | NYJ | LCB | C | 47 | 8.3 | 87 | 61 | 6 | 5 | 98 |
+| 58 | Kool-Aid McKinstry | NO | LCB | C | 46 | 8.0 | 98 | 58 | 9 | 3 | 123 |
+| 59 | Quincy Riley | NO | RCB | C | 46 | 7.9 | 96 | 60 | 3 | 1 | 52 |
+| 60 | Mike Hughes | ATL | RCB | C | 44 | 7.4 | 100 | 61 | 6 | 1 | 105 |
+| 61 | Javon Bullard | GB | NB | C | 42 | 6.9 | 105 | 80 | 2 | 0 | 86 |
+| 62 | Jacob Parrish | TB | NB | C | 41 | 7.3 | 90 | 71 | 2 | 2 | 77 |
+| 63 | Devon Witherspoon | SEA | LCB | C | 40 | 6.8 | 98 | 70 | 4 | 1 | 103 |
+| 64 | Max Melton | ARI | NB | D | 40 | 8.1 | 93 | 63 | 1 | 0 | 71 |
+| 65 | L'Jarius Sneed | KC | NB | D | 39 | 8.0 | 112 | 59 | 3 | 0 | 43 |
+| 66 | Dru Phillips | NYG | NB | D | 39 | 7.1 | 92 | 71 | 3 | 2 | 105 |
+| 67 | Dee Alford | BUF | NB | D | 38 | 7.0 | 100 | 69 | 8 | 3 | 125 |
+| 68 | DaRon Bland | DAL | RCB | D | 38 | 7.6 | 104 | 62 | 7 | 1 | 102 |
+| 69 | Alontae Taylor | TEN | RCB | D | 37 | 7.1 | 103 | 66 | 9 | 2 | 145 |
+| 70 | Benjamin Morrison | TB | RCB | D | 37 | 8.9 | 112 | 59 | 3 | 0 | 41 |
+| 71 | Myles Harden | CLE | NB | D | 35 | 6.6 | 119 | 73 | 5 | 0 | 59 |
+| 72 | Upton Stout | SF | NB | D | 35 | 7.7 | 92 | 70 | 0 | 0 | 69 |
+| 73 | Marcus Jones | NE | NB | D | 34 | 7.4 | 101 | 67 | 8 | 3 | 110 |
+| 74 | Darien Porter | LV | RCB | D | 34 | 8.3 | 101 | 66 | 1 | 0 | 35 |
+| 75 | Will Johnson | ARI | LCB | D | 33 | 7.4 | 110 | 66 | 4 | 0 | 62 |
+| 76 | Greg Newsome II | NYG | RCB | D | 33 | 8.1 | 103 | 63 | 7 | 1 | 114 |
+| 77 | Cam Hart | LAC | LCB | D | 32 | 8.0 | 103 | 65 | 5 | 1 | 103 |
+| 78 | Chau Smith-Wade | CAR | NB | D | 29 | 7.5 | 102 | 81 | 2 | 1 | 57 |
+| 79 | Jaylon Johnson | CHI | LCB | D | 29 | 10.3 | 92 | 69 | 1 | 2 | 50 |
+| 80 | Mike Sainristil | WAS | RCB | D | 28 | 8.1 | 104 | 66 | 12 | 5 | 137 |
+| 81 | Jalen Ramsey | PIT | NB | D | 27 | 7.6 | 107 | 68 | 8 | 2 | 116 |
 | 82 | Amik Robertson | WAS | NB | D | 23 | 8.5 | 110 | 66 | 9 | 1 | 148 |
 | 83 | Deonte Banks | NYG | LCB | F | 20 | 8.5 | 125 | 68 | 7 | 0 | 74 |
 | 84 | Brandon Stephens | NYJ | RCB | F | 16 | 8.3 | 124 | 69 | 12 | 0 | 136 |
