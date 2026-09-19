@@ -1,39 +1,27 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-19 10:47 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-19 14:18 UTC
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-19 05:41 UTC (5.1h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-19 10:47 UTC (3.5h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- 📈 **Kayshon Boutte (WR-HOU) moved up the depth chart (2 → 1)** — Workload is trending his way.
-  ↳ _September 18, 2026 — :_ Boutte is in line for a larger role with  Nico Collins  (hamstring) ruled out for Sunday's game against the Bengals,  Aaron Wilson of SportsTalk790AM  reports. (serious)
-- 📈 **Jaylin Noel (WR-HOU) moved up the depth chart (4 → 3)** — Workload is trending his way. He is a free agent.
-  ↳ _September 18, 2026 — :_ Noel has a chance for more playing time with  Nico Collins  (hamstring) ruled out for Sunday's game against the Bengals,  Aaron Wilson of SportsTalk790AM  reports.
-- ⚠️ **Ashton Dulin (WR-IND) cleared (Out → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 18, 2026 — :_ Dulin (ankle) is listed as out for Sunday's game against the Chiefs,  Kevin Bowen of 107.5 The Fan Indianapolis  reports. (practice: **DNP**)
-- ⚠️ **Marvin Mims (WR-DEN) cleared (Out → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 18, 2026 — :_ Mims (foot) has been ruled out for Sunday's game against the Jaguars,  Troy Renck of Denver 7 News  reports. (practice: **DNP**)
-- ⚠️ **Omar Cooper (WR-NYJ) cleared (Out → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 18, 2026 — :_ Cooper (ankle) will not play Sunday against the Packers,  Zack Rosenblatt of The Athletic  reports. (practice: **DNP**)
-- ⚠️ **Tua Tagovailoa (QB-ATL) cleared (Doubtful → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 18, 2026 — :_ Tagovailoa (oblique) is doubtful for Sunday's game versus the Panthers,  Will McFadden of the Falcons' official site  reports.
-- · **Jauan Jennings (WR-MIN) cleared (Out → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 18, 2026 — :_ Jennings (not injury related - personal)  won't play  Sunday in Chicago. (likely minor)
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $4 |
-| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Doubtful (Hamstring) | 22,062 | $13 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Doubtful (Hamstring) | 23,491 | $13 |
 | 🚨 | **J.J. McCarthy (QB-MIN)** | URGENT | 2.9 | Kyler Murray is Out (Concussion) | 0 | $8 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 8,388 | $2 |
-| · | **Joe Flacco (QB-CIN)** | SPECULATIVE | 0.0 | every man ahead of him is banged up (1 deep); 13,086 adds in 24h — the market has re-rated him | 13,086 | $1 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 8,838 | $2 |
+| · | **Joe Flacco (QB-CIN)** | SPECULATIVE | 0.0 | every man ahead of him is banged up (1 deep); 13,581 adds in 24h — the market has re-rated him | 13,581 | $1 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 6,972 | $3 |
-| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 9,351 | $3 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 7,050 | $3 |
+| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 9,288 | $3 |
 | 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
 
