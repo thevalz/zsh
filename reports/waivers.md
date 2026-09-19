@@ -1,37 +1,27 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-19 04:42 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-19 05:40 UTC
 
 ## Since last run
 
-- ⚠️ **Marvin Mims (WR-DEN) Questionable → Out** — FREE AGENT player's status changed. Next up: **Troy Franklin (WR-DEN)** — FREE AGENT, claim him.
-  ↳ _September 18, 2026 — :_ Mims (foot) has been ruled out for Sunday's game against the Jaguars,  Troy Renck of Denver 7 News  reports. (practice: **DNP**)
-- 📈 **Jordyn Tyson (WR-NO) moved up the depth chart (11 → 6)** — Workload is trending his way.
-  ↳ _August 30, 2026 — Lands on IR, designated to return:_ Tyson (hamstring) was  placed on injured reserve  with a designation to return by New Orleans on Sunday. (serious)
-- ⚠️ **Jakobi Meyers (WR-JAX) cleared (Questionable → healthy)** — Holy Turnovers, Batman!'s player is off the report.
-  ↳ _September 18, 2026 — :_ Meyers (thumb) was limited at Friday's practice but doesn't have an injury designation for Week 2 at Denver,  Ryan O'Halloran of the Florida Times-Union  reports. (practice: **LIMITED**, serious)
-- ⚠️ **Puka Nacua (WR-LAR) → Questionable** — East Coast Wins Most's player newly listed Questionable. Next up: **Davante Adams (WR-LAR)** — rostered by Holy Turnovers, Batman!.
-  ↳ _September 18, 2026 — :_ Nacua didn't practice Friday due to a hip injury,  Benjamin Royer of The Orange County Register  reports. (practice: **DNP**)
-- ⚠️ **George Kittle (TE-SF) cleared (Questionable → healthy)** — It's Gonna be Maye's player is off the report.
-  ↳ _September 18, 2026 — :_ Kittle (Achilles) practiced fully Friday and does not have an injury designation for Week 2, according to  David Furones of the South Florida Sun Sentinel . (practice: **FULL**, serious)
-- 📥 **Kayshon Boutte (WR-HOU) was added** — Picked up by East Coast Wins Most.
-  ↳ _September 18, 2026 — :_ Boutte is in line for a larger role with  Nico Collins  (hamstring) ruled out for Sunday's game against the Bengals,  Aaron Wilson of SportsTalk790AM  reports. (serious)
-- ⚠️ **Brian Thomas (WR-JAX) cleared (Questionable → healthy)** — To Infinity and Bijan's player is off the report.
-  ↳ _September 18, 2026 — :_ Thomas (shoulder) doesn't have an injury designation for Sunday's game at Denver,  Ryan O'Halloran of the Florida Times-Union  reports.
+_baseline: snapshot committed 2026-09-19 05:40 UTC (0.0h ago)_
+
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $4 |
-| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Doubtful (Hamstring) | 21,067 | $13 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Doubtful (Hamstring) | 21,310 | $13 |
 | 🚨 | **J.J. McCarthy (QB-MIN)** | URGENT | 2.9 | Kyler Murray is Out (Concussion) | 0 | $8 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 8,253 | $2 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 8,262 | $2 |
 | · | **Joe Flacco (QB-CIN)** | SPECULATIVE | 0.0 | every man ahead of him is banged up (1 deep); 12,933 adds in 24h — the market has re-rated him | 12,933 | $1 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 6,976 | $3 |
-| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 9,819 | $3 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 6,982 | $3 |
+| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 9,576 | $3 |
 | 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
 
