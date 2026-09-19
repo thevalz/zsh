@@ -1,7 +1,7 @@
 """Entry point: build the report, diff against the last run, emit alerts.
 
     python3 -m fantasy.monitor report     # full standing analysis
-    python3 -m fantasy.monitor watch      # hourly mode: only what changed
+    python3 -m fantasy.monitor watch      # hourly mode: only what changed (read-only)
     python3 -m fantasy.monitor trades     # trade targets only
     python3 -m fantasy.monitor waiver     # waiver board only
 """
@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import subprocess
 import sys
 from datetime import datetime, timezone
 
@@ -75,6 +76,33 @@ def save_snapshot(snap: dict) -> None:
     with open(tmp, "w") as fh:
         json.dump(snap, fh, indent=1, sort_keys=True)
     os.replace(tmp, SNAPSHOT)
+
+
+def baseline_info() -> str:
+    """Say which committed snapshot the diff runs against, and how old it is.
+
+    The snapshot carries no timestamp on purpose (see take_snapshot), so its
+    age comes from git. Only the site workflow commits it; the hourly Routine
+    reads it and cannot push. So the age doubles as a lag meter: past ~2h the
+    workflow is behind, and a change listed under "Since last run" may already
+    have been reported an hour ago.
+    """
+    try:
+        out = subprocess.run(
+            ["git", "log", "-1", "--format=%cI", "--", SNAPSHOT],
+            capture_output=True, text=True, timeout=10, cwd=STATE_DIR,
+        ).stdout.strip()
+        committed = datetime.fromisoformat(out).astimezone(timezone.utc) if out else None
+    except (OSError, ValueError, subprocess.SubprocessError):
+        committed = None
+    if committed is None:
+        return "baseline: committed snapshot of unknown age"
+    hours = (datetime.now(timezone.utc) - committed).total_seconds() / 3600
+    note = f"baseline: snapshot committed {committed:%Y-%m-%d %H:%M UTC} ({hours:.1f}h ago)"
+    if hours > 2:
+        note += (" — older than the hourly rebuild, so some of these changes "
+                 "may have been reported last hour too")
+    return note
 
 
 # --------------------------------------------------------------------------
@@ -243,6 +271,7 @@ def build(mode: str = "report") -> tuple:
     snap = take_snapshot(lg, charts)
     prev = load_snapshot()
     alerts = enrich(lg, diff(lg, charts, prev, snap))
+    baseline = baseline_info() if prev else "no committed snapshot to diff against"
 
     board = waiver.build_board(lg, charts, top=15)
     handcuffs = waiver.handcuff_report(lg, charts)
@@ -262,7 +291,7 @@ def build(mode: str = "report") -> tuple:
 
     parts = [report.header(lg, week, now)]
     if mode in ("report", "watch"):
-        parts.append(report.alerts_section(alerts))
+        parts.append(report.alerts_section(alerts, baseline, have_baseline=prev is not None))
     if mode in ("report", "waiver", "watch"):
         parts.append(report.board_section(board, lg.me.faab_left))
     if mode in ("report", "waiver"):
@@ -298,6 +327,11 @@ def main(argv=None) -> int:
     ap.add_argument("--name", help="player mode: whose news to look up")
     ap.add_argument("--no-save", action="store_true",
                     help="do not update the stored snapshot")
+    ap.add_argument("--save", action="store_true",
+                    help="watch mode: update the stored snapshot too. Off by default "
+                         "because the site workflow owns the committed snapshot and the "
+                         "hourly Routine cannot push; only use this where the result "
+                         "will actually be committed to main")
     ap.add_argument("--out", help="write the report to this file as well")
     args = ap.parse_args(argv)
 
@@ -338,7 +372,11 @@ def main(argv=None) -> int:
         else:
             print("\n::PUSH:: (nothing worth a notification)")
 
-    if not args.no_save:
+    # `report` (what the site workflow runs) advances the committed baseline.
+    # `watch` is read-only unless asked: it runs in Routine sessions that cannot
+    # push to main, and a snapshot saved there was only ever a local edit that
+    # made `git status` look like there was something to commit.
+    if not args.no_save and (args.mode != "watch" or args.save):
         save_snapshot(snap)
     return 0
 

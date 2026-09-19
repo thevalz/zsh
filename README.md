@@ -102,13 +102,15 @@ flagged as a **shadow risk**.
 
 ## Deploying
 
-The site is plain static HTML in `docs/`, rebuilt by `.github/workflows/site.yml`:
+The site is plain static HTML in `docs/`, rebuilt hourly by `.github/workflows/site.yml`:
 
 1. `matchups.py --full --markdown --out-dir matchups` writes `matchups/weekNN.md`.
 2. `python3 -m fantasy.monitor report --out reports/waivers.md` writes the waiver/trade report and updates
    `fantasy/state/snapshot.json` so the next run can diff against it.
 3. `build_site.py` renders both into `docs/` (dashboard, per-week pages, waiver page, weeks index).
-4. The workflow commits `docs/`, `matchups/`, `reports/` and the snapshot back to `main`.
+4. The workflow commits `docs/`, `matchups/`, `reports/` and the snapshot back to `main`. It is the only
+   thing that commits the snapshot; the hourly Claude Routine runs `fantasy.monitor watch`, which diffs
+   against the committed copy without writing it (Routine sessions cannot push to `main`).
 
 Rebuild locally with the same three commands, then open `docs/index.html`.
 

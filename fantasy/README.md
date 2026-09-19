@@ -21,7 +21,7 @@ same player after 40,000 adds is just expensive.
 
 ```
 python3 -m fantasy.monitor report    # full standing analysis
-python3 -m fantasy.monitor watch     # hourly mode — leads with what changed
+python3 -m fantasy.monitor watch     # hourly mode — leads with what changed; read-only
 python3 -m fantasy.monitor waiver    # waiver board + handcuff table only
 python3 -m fantasy.monitor trades    # roster strengths + trade targets only
 ```
@@ -114,6 +114,12 @@ diffs against it, so hourly checks report *changes* — a new injury, a
 promotion, a drop, a trade — rather than re-reading the same board. The
 snapshot is committed so that a fresh run on a clean checkout still has
 yesterday's baseline to compare against.
+
+`report` rewrites the snapshot and is what the site workflow runs hourly, so
+the committed copy is the workflow's. `watch` only reads it (pass `--save` to
+change that) and prints the baseline's commit time and age at the top of
+"Since last run"; past two hours the workflow is lagging and some alerts will
+be repeats of the previous hour.
 
 `watch` prints a `::PUSH::` line: one sub-200-character summary suitable for a
 phone notification, or a note that nothing was worth interrupting for.

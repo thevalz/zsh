@@ -74,13 +74,28 @@ records injury designations, depth-chart order and league ownership so each run
 can diff against the last; it is committed because containers are ephemeral and
 the diff needs a baseline that outlives them.
 
-Both the GitHub Action and the hourly Routine write it to `main`. Therefore:
+**Only the GitHub Action writes it.** It runs `fantasy.monitor report` hourly
+and commits the snapshot to `main`. The Routines run `fantasy.monitor watch`,
+which is read-only: it diffs live state against the committed baseline and
+prints the baseline's age under "Since last run".
+
+Why this is the rule and not just the habit: Routine sessions are created with
+no git source or outcome, so they have no push credential for `main`. From
+2026-09-06 to 2026-09-14 the hourly Routine tried `git push origin main` every
+hour and not one snapshot commit ever landed, while it reported the push as a
+failed merge. The GitHub Action's copy was the real baseline the whole time.
+Do not put a `git push` back into a Routine prompt.
 
 - **Never hand-edit it.** Let the tools own it.
-- **Always `git pull --rebase` before pushing.**
-- **On conflict, take `main`'s copy.** Losing one hour of diff beats a wedged
-  branch.
-- A feature branch that only touches code should leave it alone entirely.
+- **A feature branch should leave it alone entirely**, and so should a session
+  running `watch`. If `git status` shows it modified after `watch`, something
+  passed `--save` that should not have.
+- If a session does have to advance it by hand (a rebuilt model, a debug run
+  of `report`), `git pull --rebase` first, and on conflict take `main`'s copy.
+  Losing one hour of diff beats a wedged branch.
+- A baseline older than ~2h means the Action is lagging (GitHub delays
+  scheduled runs under load). The report says so; expect some alerts to
+  repeat from the previous hour and do not treat them as new.
 
 ## What runs on a schedule
 
@@ -88,11 +103,11 @@ Two of these live outside the repo, so you cannot see them in the tree:
 
 | What | Where | When |
 |---|---|---|
-| Site rebuild | `.github/workflows/site.yml` | every 6h, plus Tue + Sun 12:00 UTC |
-| Waiver/trade monitor | Claude Routine (account-level) | hourly, `:23` |
+| Site rebuild + snapshot commit | `.github/workflows/site.yml` | hourly at `:05`, plus Tue + Sun 12:00 UTC |
+| Waiver/trade monitor | Claude Routine (account-level) | hourly, `:50` (read-only, after the Action) |
 | Sunday inactives + lineup | Claude Routine (account-level) | Sun 11:35am ET |
 
-All three target `main`. If you rename or restructure anything they invoke —
+All three read `main`; only the Action writes to it. If you rename or restructure anything they invoke —
 `fantasy.monitor`, `matchups.py`, `build_site.py` — the Routines will keep
 running the old commands and fail quietly. Flag it to the human so the Routine
 prompts get updated in the same change.

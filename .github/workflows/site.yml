@@ -4,6 +4,12 @@ name: Build matchups + waiver site
 # them into docs/, and commits the result. GitHub Pages is set to
 # "Deploy from a branch" -> this branch -> /docs, so the commit is the deploy.
 #
+# This workflow is the ONLY writer of fantasy/state/snapshot.json. The hourly
+# Claude Routine reads it as the diff baseline and never pushes: Routine
+# sessions carry no push credential for main, and every snapshot push they
+# attempted between 2026-09-06 and 2026-09-14 failed. Running hourly keeps the
+# baseline fresh for the Routine that follows it at :50.
+#
 # GitHub only runs `schedule` triggers from the repository's default branch,
 # which is `main`, so the crons below are live.
 
@@ -18,9 +24,11 @@ on:
       - 'fantasy/**.py'
       - '.github/workflows/site.yml'
   schedule:
-    # Every 6 hours, plus Tuesday morning (waivers, after MNF) and Sunday
-    # morning (final lineups) at 12:00 UTC.
-    - cron: '23 */6 * * *'
+    # Hourly at :05 so the snapshot baseline is fresh for the Routine at :50
+    # (GitHub delays scheduled runs by up to ~30 minutes under load), plus
+    # Tuesday morning (waivers, after MNF) and Sunday morning (final lineups)
+    # at 12:00 UTC.
+    - cron: '5 * * * *'
     - cron: '0 12 * * 2,0'
   workflow_dispatch:
 

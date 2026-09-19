@@ -25,10 +25,15 @@ def header(lg: League, week: int, generated: str) -> str:
     )
 
 
-def alerts_section(alerts: list) -> str:
-    if not alerts:
-        return "## Since last run\n\nNothing changed.\n"
+def alerts_section(alerts: list, baseline: str = "", have_baseline: bool = True) -> str:
     out = ["## Since last run\n"]
+    if baseline:
+        out.append(f"_{baseline}_\n")
+    if not have_baseline:
+        out.append("No committed snapshot to diff against, so nothing can be "
+                   "reported as changed. This is a first run, not a quiet hour.\n")
+    elif not alerts:
+        out.append("Nothing changed.\n")
     for a in alerts:
         out.append(f"- {a['icon']} **{a['title']}** — {a['detail']}")
     return "\n".join(out) + "\n"
