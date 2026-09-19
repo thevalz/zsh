@@ -1,47 +1,39 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-18 20:57 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-19 04:42 UTC
 
 ## Since last run
 
-- ⚠️ **Jauan Jennings (WR-MIN) → Out** — FREE AGENT player newly listed Out. Next up: **Tai Felton (WR-MIN)** — FREE AGENT, claim him.
-  ↳ _September 18, 2026 — Ruled out for Week 2:_ Jennings (not injury related - personal)  won't play  Sunday in Chicago. (serious)
-- ⚠️ **Ashton Dulin (WR-IND) Questionable → Out** — FREE AGENT player's status changed. Next up: **Laquon Treadwell (WR-IND)** — FREE AGENT, claim him.
-  ↳ _September 17, 2026 — :_ Dulin (ankle) did not practice Thursday,  James Boyd of The Athletic  reports. (practice: **DNP**)
-- ⚠️ **Ty Chandler (RB-NO) → IR** — FREE AGENT player newly listed IR. Next up: **Audric Estime (RB-NO)** — FREE AGENT, claim him.
-  ↳ _August 25, 2026 — Placed on injured reserve:_ The Saints placed Chandler (knee) on injured reserve Tuesday,  Mike Triplett of NewOrleans.Football  reports. (serious)
-- 🚨 **Alec Pierce (WR-IND) cleared (Questionable → healthy)** — MY player is off the report.
-  ↳ _September 18, 2026 — :_ Pierce (heel) was a full participant in Friday's practice and  doesn't carry an injury designation  for Sunday's game at Kansas City. (practice: **FULL**)
-- ⚠️ **Brock Bowers (TE-LV) Questionable → Doubtful** — NYKatSnatchers's player's status changed. Next up: **Michael Mayer (TE-LV)** — rostered by mtngoblin.
-  ↳ _September 18, 2026 — :_ Bowers (knee) will be listed as doubtful for Sunday's game at the Chargers, and Raiders coach Klint Kubiak said Friday that the tight end will be worked out pregame before a final decision is made,  Sam Warren of The Athletic  reports.
-- ⚠️ **Nico Collins (WR-HOU) Questionable → Out** — Jersey Rum Hams's player's status changed. Next up: **Kayshon Boutte (WR-HOU)** — FREE AGENT, claim him.
-  ↳ _September 18, 2026 — :_ Collins (hamstring)  will not play  Sunday against the Bengals.
-- ⚠️ **Kyler Murray (QB-MIN) Questionable → Out** — hulleywood's player's status changed. Next up: **J.J. McCarthy (QB-MIN)** — FREE AGENT, claim him.
-  ↳ _September 18, 2026 — :_ Murray (concussion)  won't play  in Sunday's contest at Chicago.
-- ⚠️ **Zay Flowers (WR-BAL) Questionable → Doubtful** — NYKatSnatchers's player's status changed. Next up: **Rashod Bateman (WR-BAL)** — FREE AGENT, claim him.
-  ↳ _September 18, 2026 — :_ Flowers (hamstring) is  listed as doubtful  for Sunday's game against New Orleans.
-- ⚠️ **Michael Penix (QB-ATL) Questionable → Out** — It's Gonna be Maye's player's status changed. Next up: **Tua Tagovailoa (QB-ATL)** — FREE AGENT, claim him.
-- ⚠️ **Tua Tagovailoa (QB-ATL) Questionable → Doubtful** — FREE AGENT player's status changed. Next up: **Jack Strand (QB-ATL)** — FREE AGENT, claim him.
-- ⚠️ **Kyle Monangai (RB-CHI) cleared (Questionable → healthy)** — Randikulous's player is off the report.
-- ⚠️ **Jalen Coker (WR-CAR) cleared (Questionable → healthy)** — Jersey Rum Hams's player is off the report.
-- ⚠️ **D'Andre Swift (RB-CHI) cleared (Questionable → healthy)** — Randikulous's player is off the report.
-- 📥 **Alvin Kamara (RB-NO) was added** — Picked up by Jersey Rum Hams.
+- ⚠️ **Marvin Mims (WR-DEN) Questionable → Out** — FREE AGENT player's status changed. Next up: **Troy Franklin (WR-DEN)** — FREE AGENT, claim him.
+  ↳ _September 18, 2026 — :_ Mims (foot) has been ruled out for Sunday's game against the Jaguars,  Troy Renck of Denver 7 News  reports. (practice: **DNP**)
+- 📈 **Jordyn Tyson (WR-NO) moved up the depth chart (11 → 6)** — Workload is trending his way.
+  ↳ _August 30, 2026 — Lands on IR, designated to return:_ Tyson (hamstring) was  placed on injured reserve  with a designation to return by New Orleans on Sunday. (serious)
+- ⚠️ **Jakobi Meyers (WR-JAX) cleared (Questionable → healthy)** — Holy Turnovers, Batman!'s player is off the report.
+  ↳ _September 18, 2026 — :_ Meyers (thumb) was limited at Friday's practice but doesn't have an injury designation for Week 2 at Denver,  Ryan O'Halloran of the Florida Times-Union  reports. (practice: **LIMITED**, serious)
+- ⚠️ **Puka Nacua (WR-LAR) → Questionable** — East Coast Wins Most's player newly listed Questionable. Next up: **Davante Adams (WR-LAR)** — rostered by Holy Turnovers, Batman!.
+  ↳ _September 18, 2026 — :_ Nacua didn't practice Friday due to a hip injury,  Benjamin Royer of The Orange County Register  reports. (practice: **DNP**)
+- ⚠️ **George Kittle (TE-SF) cleared (Questionable → healthy)** — It's Gonna be Maye's player is off the report.
+  ↳ _September 18, 2026 — :_ Kittle (Achilles) practiced fully Friday and does not have an injury designation for Week 2, according to  David Furones of the South Florida Sun Sentinel . (practice: **FULL**, serious)
+- 📥 **Kayshon Boutte (WR-HOU) was added** — Picked up by East Coast Wins Most.
+  ↳ _September 18, 2026 — :_ Boutte is in line for a larger role with  Nico Collins  (hamstring) ruled out for Sunday's game against the Bengals,  Aaron Wilson of SportsTalk790AM  reports. (serious)
+- ⚠️ **Brian Thomas (WR-JAX) cleared (Questionable → healthy)** — To Infinity and Bijan's player is off the report.
+  ↳ _September 18, 2026 — :_ Thomas (shoulder) doesn't have an injury designation for Sunday's game at Denver,  Ryan O'Halloran of the Florida Times-Union  reports.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
-| 🚨 | **Kayshon Boutte (WR-HOU)** | URGENT | 6.5 | everyone ahead of him is out — the job is his; Nico Collins is Out (Hamstring) | 25,304 | $25 |
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $4 |
-| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Doubtful (Hamstring) | 16,634 | $8 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 3.4 | everyone ahead of him is out — the job is his; Zay Flowers is Doubtful (Hamstring) | 21,067 | $13 |
 | 🚨 | **J.J. McCarthy (QB-MIN)** | URGENT | 2.9 | Kyler Murray is Out (Concussion) | 0 | $8 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 8,991 | $2 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 8,253 | $2 |
+| · | **Joe Flacco (QB-CIN)** | SPECULATIVE | 0.0 | every man ahead of him is banged up (1 deep); 12,933 adds in 24h — the market has re-rated him | 12,933 | $1 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 8,202 | $3 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 6,976 | $3 |
+| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 9,819 | $3 |
 | 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 13,131 | $3 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
