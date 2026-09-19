@@ -1,27 +1,27 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-19 20:30 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-19 22:52 UTC
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-19 17:55 UTC (2.6h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-19 20:30 UTC (2.4h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- ⚠️ **Jordan Whittington (WR-LAR) Questionable → Doubtful** — FREE AGENT player's status changed. Next up: **Xavier Smith (WR-LAR)** — FREE AGENT, claim him.
-  ↳ _September 19, 2026 — :_ Whittington (quadriceps) is doubtful to play in Monday's game against the Giants,  Benjamin Royer of The Orange County Register  reports. (practice: **DNP**)
-- ⚠️ **Zay Flowers (WR-BAL) Doubtful → Out** — NYKatSnatchers's player's status changed. Next up: **Chris Moore (WR-BAL)** — FREE AGENT, claim him.
-  ↳ _September 19, 2026 — :_ Flowers (hamstring) has been downgraded to  out  for Sunday's game against the Saints.
+- ⚠️ **De'Zhaun Stribling (WR-SF) Out → IR** — East Coast Wins Most's player's status changed. Next up: **Wesley Grimes (WR-SF)** — FREE AGENT, claim him.
+  ↳ _September 19, 2026 — :_ The 49ers  placed  Stribling (ankle) on injured reserve Saturday. (serious)
+- ⚠️ **Aidan O'Connell (QB-LV) Questionable → Out** — FREE AGENT player's status changed. Next up: **Fernando Mendoza (QB-LV)** — rostered by Brooklyn Meatpackers.
+  ↳ _September 19, 2026 — :_ O'Connell (personal) has been ruled out ahead of Sunday's game against the Chargers,  Paul Gutierrez of Raiders.com  reports. (serious)
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $4 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 9,801 | $2 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 9,900 | $2 |
+| · | **Joe Flacco (QB-CIN)** | SPECULATIVE | 0.0 | every man ahead of him is banged up (1 deep); 13,743 adds in 24h — the market has re-rated him | 13,743 | $1 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
-| · | **Joe Flacco (QB-CIN)** | SPECULATIVE | 0.0 | every man ahead of him is banged up (1 deep); 12,609 adds in 24h — the market has re-rated him | 12,609 | $1 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 6,256 | $3 |
-| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 7,587 | $3 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 6,014 | $3 |
+| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 7,020 | $3 |
 | 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
 
