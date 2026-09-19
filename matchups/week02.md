@@ -9,16 +9,16 @@ _depth charts as of 2026-09-18; defender grades pool PFR coverage stats from 202
 | Brock Purdy | QB | SF | SUPER_FLEX | vs MIA | 🟢 SOFT | 28 |  | MIA pass D [D 28, #23] |
 | Josh Allen | QB | BUF | QB | vs DET | 🟢 SOFT | 27 |  | DET pass D [D 27, #24] |
 | Derrick Henry | RB | BAL | RB | vs NO | 🔴 TOUGH | 70 | LILB Kaden Elliss [B 65]<br>RILB Pete Werner [B 65] | NO run D [B 73, #9] |
-| Rico Dowdle | RB | PIT | FLEX | @ NE | 🟡 NEUTRAL | 61 | LILB Christian Elliss [C 41]<br>RILB Robert Spillane [C 41] | NE run D [B 74, #8] |
 | Bhayshul Tuten | RB | JAX | FLEX | @ DEN | 🟡 NEUTRAL | 56 | LILB Alex Singleton [D 21]<br>RILB Justin Strnad [B 71] | DEN run D [B 62, #12] |
 | Cam Skattebo | RB | NYG | RB | @ LA | 🟡 NEUTRAL | 50 | LILB Nate Landman [D 35]<br>RILB Omar Speights [B 76] | LA run D [C 46, #19] |
 | Emeka Egbuka | WR | TB | WR | vs CLE | 🟡 NEUTRAL | 61 | (outside) LCB Denzel Ward [C 57]<br>RCB Tyson Campbell [C 55] | CLE pass D [B 71, #10] |
 | Tetairoa McMillan | WR | CAR | WR | @ ATL | 🟡 NEUTRAL | 57 | (outside) LCB A.J. Terrell Jr. [B 66]<br>RCB Mike Hughes [C 44] | ATL pass D [B 61, #13] |
+| Devaughn Vele | WR | NO | FLEX | @ BAL | 🟡 NEUTRAL | 55 | (outside) LCB Nate Wiggins [B 71]<br>RCB Marlon Humphrey [C 51] | BAL pass D [C 45, #18] |
 | Trey McBride | TE | ARI | TE | vs SEA | 🔴 TOUGH | 77 | FS Julian Love [A 81]<br>SS Ty Okada [C 53] | SEA pass D [A 87, #3] |
+| Rico Dowdle | RB | PIT | BN | @ NE | 🟡 NEUTRAL | 61 | LILB Christian Elliss [C 41]<br>RILB Robert Spillane [C 41] | NE run D [B 74, #8] |
 | Tony Pollard | RB | TEN | BN | vs PHI | 🟡 NEUTRAL | 58 | LILB Zack Baun [A 84]<br>RILB Jihaad Campbell [B 65] | PHI run D [C 47, #18] |
 | Kalif Raymond | WR | CHI | BN | vs MIN | 🔴 TOUGH | 71 | (slot) NB Byron Murphy Jr. [B 68]<br>⚠ shadow risk | MIN pass D [B 75, #9] |
 | Alec Pierce | WR | IND | BN | @ KC | 🟡 NEUTRAL | 66 | (outside) LCB Nohl Williams [B 69]<br>RCB Mansoor Delane [?] (rookie) | KC pass D [B 78, #7] |
-| Devaughn Vele | WR | NO | BN | @ BAL | 🟡 NEUTRAL | 55 | (outside) LCB Nate Wiggins [B 71]<br>RCB Marlon Humphrey [C 51] | BAL pass D [C 45, #18] |
 | Quentin Johnston | WR | LAC | BN | vs LV | 🟡 NEUTRAL | 52 | (outside) LCB Eric Stokes [B 73]<br>RCB Darien Porter [D 34] | LV pass D [C 49, #17] |
 | Tank Dell | WR | HOU | BN | vs CIN | 🟡 NEUTRAL | 52 | (outside) LCB Dax Hill [B 61]<br>RCB DJ Turner II [B 74] | CIN pass D [D 23, #27] |
 
