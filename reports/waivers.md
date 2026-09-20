@@ -1,25 +1,27 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-20 11:10 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$68** · generated 2026-09-20 15:15 UTC
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-20 06:01 UTC (5.2h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-20 11:11 UTC (4.1h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-Nothing changed.
-
+- ⚠️ **Ty Chandler (RB-NO) cleared (IR → healthy)** — FREE AGENT player is off the report.
+  ↳ _August 25, 2026 — Placed on injured reserve:_ The Saints placed Chandler (knee) on injured reserve Tuesday,  Mike Triplett of NewOrleans.Football  reports. (serious)
+- ⚠️ **Jordan Whittington (WR-LAR) cleared (Doubtful → healthy)** — FREE AGENT player is off the report.
+  ↳ _September 19, 2026 — :_ Whittington (quadriceps) is doubtful to play in Monday's game against the Giants,  Benjamin Royer of The Orange County Register  reports. (practice: **DNP**)
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
-| 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $4 |
-| · | **Joe Flacco (QB-CIN)** | SPECULATIVE | 0.0 | every man ahead of him is banged up (1 deep); 19,161 adds in 24h — the market has re-rated him | 19,161 | $1 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 11,187 | $2 |
+| 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $3 |
+| 🔥 | **Joe Flacco (QB-CIN)** | CONTESTED | 0.0 | every man ahead of him is banged up (1 deep); 23,175 adds in 24h — the market has re-rated him | 23,175 | $20 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 13,545 | $2 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 6,132 | $3 |
-| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 7,326 | $3 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 7,804 | $3 |
+| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 8,757 | $3 |
 | 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
 

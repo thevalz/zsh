@@ -17,8 +17,8 @@ _depth charts as of 2026-09-20; defender grades pool PFR coverage stats from 202
 | Trey McBride | TE | ARI | TE | vs SEA | 🔴 TOUGH | 77 | FS Julian Love [A 81]<br>SS Ty Okada [C 53] | SEA pass D [A 87, #3] |
 | Rico Dowdle | RB | PIT | BN | @ NE | 🟡 NEUTRAL | 61 | LILB Christian Elliss [C 41]<br>RILB Robert Spillane [C 41] | NE run D [B 74, #8] |
 | Tony Pollard | RB | TEN | BN | vs PHI | 🟡 NEUTRAL | 58 | LILB Zack Baun [A 84]<br>RILB Jihaad Campbell [B 65] | PHI run D [C 47, #18] |
-| Kalif Raymond | WR | CHI | BN | vs MIN | 🔴 TOUGH | 71 | (slot) NB Byron Murphy Jr. [B 68]<br>⚠ shadow risk | MIN pass D [B 75, #9] |
 | Alec Pierce | WR | IND | BN | @ KC | 🟡 NEUTRAL | 66 | (outside) LCB Nohl Williams [B 69]<br>RCB Mansoor Delane [?] (rookie) | KC pass D [B 78, #7] |
+| Malachi Fields | WR | NYG | BN | @ LA | 🟡 NEUTRAL | 58 | (outside) LCB Jaylen Watson [C 56]<br>RCB Trent McDuffie [B 62] | LA pass D [C 55, #15] |
 | Quentin Johnston | WR | LAC | BN | vs LV | 🟡 NEUTRAL | 52 | (outside) LCB Eric Stokes [B 73]<br>RCB Darien Porter [D 34] | LV pass D [C 49, #17] |
 | Tank Dell | WR | HOU | BN | vs CIN | 🟡 NEUTRAL | 52 | (outside) LCB Dax Hill [B 61]<br>RCB DJ Turner II [B 74] | CIN pass D [D 23, #27] |
 
