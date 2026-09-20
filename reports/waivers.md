@@ -1,27 +1,40 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$68** · generated 2026-09-20 15:15 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$68** · generated 2026-09-20 15:56 UTC
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-20 11:11 UTC (4.1h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-20 15:16 UTC (0.7h ago)_
 
-- ⚠️ **Ty Chandler (RB-NO) cleared (IR → healthy)** — FREE AGENT player is off the report.
-  ↳ _August 25, 2026 — Placed on injured reserve:_ The Saints placed Chandler (knee) on injured reserve Tuesday,  Mike Triplett of NewOrleans.Football  reports. (serious)
-- ⚠️ **Jordan Whittington (WR-LAR) cleared (Doubtful → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 19, 2026 — :_ Whittington (quadriceps) is doubtful to play in Monday's game against the Giants,  Benjamin Royer of The Orange County Register  reports. (practice: **DNP**)
+- ⚠️ **Kendre Miller (RB-NO) → Out** — FREE AGENT player newly listed Out. Next up: **CJ Donaldson (RB-NO)** — FREE AGENT, claim him.
+  ↳ _September 20, 2026 — :_ Miller (coach's decision) is listed as  inactive  Sunday in Baltimore. (serious)
+- ⚠️ **Tanner McKee (QB-PHI) → Out** — FREE AGENT player newly listed Out. Next up: **Cole Payton (QB-PHI)** — FREE AGENT, claim him.
+  ↳ _September 20, 2026 — :_ McKee (coach's decision) is  inactive as the emergency third quarterback  for Sunday's game against the Titans. (serious)
+- ⚠️ **Behren Morton (QB-NE) → Out** — FREE AGENT player newly listed Out.
+  ↳ _September 9, 2026 — :_ Morton (coach's decision) is  inactive  but will serve as the Patriots' emergency third quarterback for Wednesday's game against the Seahawks.
+- ⚠️ **Taylen Green (QB-CLE) → Out** — FREE AGENT player newly listed Out.
+  ↳ _September 13, 2026 — :_ Green (coach's decision)  is inactive for Sunday's matchup  with the Jaguars.
+- ⚠️ **Case Keenum (QB-CHI) → Out** — FREE AGENT player newly listed Out. Next up: **Tyson Bagent (QB-CHI)** — FREE AGENT, claim him.
+  ↳ _September 20, 2026 — :_ Keenum (coach's decision) is  inactive  but serving as the Bears' emergency third quarterback against the Vikings on Sunday.
+- ⚠️ **Zach Wilson (QB-NO) → Out** — FREE AGENT player newly listed Out. Next up: **Blake Bortles (QB-NO)** — FREE AGENT, claim him.
+  ↳ _September 13, 2026 — :_ Wilson (coach's decision) is  inactive  as the emergency third quarterback for Sunday's game against the Lions.
+- ⚠️ **Haynes King (QB-CAR) → Out** — FREE AGENT player newly listed Out.
+  ↳ _September 20, 2026 — :_ King (coach's decision) is inactive but serving as the Panthers' emergency third quarterback Sunday against the Falcons,  Darin Gantt of the team's official site  reports.
+- ⚠️ **Josh Johnson (QB-CIN) → Out** — FREE AGENT player newly listed Out. Next up: **Sean Clifford (QB-CIN)** — FREE AGENT, claim him.
+  ↳ _September 19, 2026 — :_ The Bengals  elevated  Johnson from the practice squad to the active roster Saturday.
+- ⚠️ **Joe Burrow (QB-CIN) cleared (Questionable → healthy)** — Down to Pound's player is off the report.
+- ⚠️ **Chris Olave (WR-NO) cleared (Questionable → healthy)** — mtngoblin's player is off the report.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $3 |
-| 🔥 | **Joe Flacco (QB-CIN)** | CONTESTED | 0.0 | every man ahead of him is banged up (1 deep); 23,175 adds in 24h — the market has re-rated him | 23,175 | $20 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 13,545 | $2 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 14,418 | $2 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 7,804 | $3 |
-| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 8,757 | $3 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 8,174 | $3 |
+| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 9,009 | $3 |
 | 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
 
