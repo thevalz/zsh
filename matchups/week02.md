@@ -1,6 +1,6 @@
 # Matchups -- 2026 week 2
 
-_depth charts as of 2026-09-19; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
+_depth charts as of 2026-09-20; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
 
 ## supervillain (thevalz) -- my lineup
 
@@ -167,7 +167,7 @@ _depth charts as of 2026-09-19; defender grades pool PFR coverage stats from 202
 | Tre' Harris | WR | LAC | WR3 | vs LV | 🟡 NEUTRAL | 51 | (slot) NB Taron Johnson [C 52] | LV pass D [C 49, #17] |
 | Chris Godwin Jr. | WR | TB | WR2 | vs CLE | 🟡 NEUTRAL | 47 | (slot) NB Myles Harden [D 35] | CLE pass D [B 71, #10] |
 | Jalen McMillan | WR | TB | WR3 | vs CLE | 🟡 NEUTRAL | 47 | (slot) NB Myles Harden [D 35] | CLE pass D [B 71, #10] |
-| Omar Cooper Jr. | WR | NYJ | WR3 | vs GB | 🟡 NEUTRAL | 47 | (slot) NB Javon Bullard [C 42] | GB pass D [C 57, #14] |
+| Isaiah Williams | WR | NYJ | WR3 | vs GB | 🟡 NEUTRAL | 47 | (slot) NB Javon Bullard [C 42] | GB pass D [C 57, #14] |
 | Keon Coleman | WR | BUF | WR3 | vs DET | 🟡 NEUTRAL | 47 | (slot) NB Christian Izien [C 58]<br>⚠ shadow risk | DET pass D [D 27, #24] |
 | Khalil Shakir | WR | BUF | WR2 | vs DET | 🟡 NEUTRAL | 47 | (slot) NB Christian Izien [C 58]<br>⚠ shadow risk | DET pass D [D 27, #24] |
 | Matthew Golden | WR | GB | WR3 | @ NYJ | 🟡 NEUTRAL | 46 | (slot) NB Jarvis Brownlee Jr. [C 55] | NYJ pass D [D 29, #22] |

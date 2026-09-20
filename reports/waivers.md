@@ -1,10 +1,10 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-20 06:00 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$70** · generated 2026-09-20 11:10 UTC
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-20 00:57 UTC (5.1h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-20 06:01 UTC (5.2h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
 Nothing changed.
 
@@ -14,12 +14,12 @@ Nothing changed.
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $4 |
-| · | **Joe Flacco (QB-CIN)** | SPECULATIVE | 0.0 | every man ahead of him is banged up (1 deep); 17,631 adds in 24h — the market has re-rated him | 17,631 | $1 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 10,701 | $2 |
+| · | **Joe Flacco (QB-CIN)** | SPECULATIVE | 0.0 | every man ahead of him is banged up (1 deep); 19,161 adds in 24h — the market has re-rated him | 19,161 | $1 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 11,187 | $2 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 5,836 | $3 |
-| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 7,011 | $3 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 6,132 | $3 |
+| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 7,326 | $3 |
 | 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
 
@@ -44,7 +44,7 @@ Nothing changed.
 
 | Pos | Starters | Rostered | Starter value | League median | Rank | Tradeable surplus |
 |:--|--:|--:|--:|--:|--:|--:|
-| QB | 2 | 2 | 160.24 | 109.06 | **2/12** | 0 |
+| QB | 2 | 2 | 159.45 | 109.06 | **2/12** | 0 |
 | RB | 2 | 5 | 143.87 | 143.87 | **6/12** | 77.6 |
 | WR | 2 | 7 | 105.29 | 136.19 | **11/12** | 22.42 |
 | TE | 1 | 1 | 69.3 | 34.99 | **1/12** | 0 |
@@ -58,7 +58,7 @@ Nothing changed.
 
 ### hulleywood — fit score 72.77
 - Roster counts: QB:4 / RB:3 / WR:5 / TE:2
-- They need: **RB (45.09), QB (4.4)**
+- They need: **RB (45.09), QB (5.19)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _2-for-1_ — give **Tony Pollard (RB-TEN) + Rico Dowdle (RB-PIT)** (68.8) → get **George Pickens (WR-DAL)** (68.2)
@@ -98,7 +98,7 @@ Nothing changed.
 
 ### Jersey Rum Hams — fit score 38.11
 - Roster counts: QB:2 / RB:6 / WR:6 / TE:1
-- They need: **QB (21.79), RB (11.21)**
+- They need: **QB (22.24), RB (11.21)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (33.8) → get **Chris Godwin (WR-TB)** (23.1)
