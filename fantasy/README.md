@@ -24,6 +24,7 @@ python3 -m fantasy.monitor report    # full standing analysis
 python3 -m fantasy.monitor watch     # hourly mode — leads with what changed; read-only
 python3 -m fantasy.monitor waiver    # waiver board + handcuff table only
 python3 -m fantasy.monitor trades    # roster strengths + trade targets only
+python3 -m fantasy.backtest          # score the value model against completed weeks
 ```
 
 No dependencies beyond the Python standard library. Everything comes from
@@ -66,6 +67,19 @@ stint into their rest-of-season rank. A back who will miss six weeks drops
 150 spots in every list, which is right for standalone value and wrong for
 the stash question, which is what he is worth once he is back. The `STASH`
 row's own value is that healthy value.
+
+**Backtest** — `python3 -m fantasy.backtest` scores the model against what
+actually happened. For each completed week N it predicts every skill player's
+value from the prior plus production through week N-1, then compares the
+ordering with week N's league-scored points (Spearman ρ and top-N hit rate,
+per position) and checks how many points the lineup it would have set for my
+roster left on the bench. It scores the blend at several
+`PRODUCTION_PRIOR_GAMES` settings alongside three baselines: the prior alone,
+Sleeper's `search_rank` curve (the model before PR #3) and Sleeper's own
+pre-game projection for that week. The report lands in `reports/backtest.md`.
+Two rules: the prior is today's list because no source publishes history, and
+the report says so on every table; and `PRODUCTION_PRIOR_GAMES` is only
+changed with the backtest number cited, never on feel.
 
 **Opportunity** — for each free agent, the value of the players ahead of him on
 his NFL depth chart, multiplied by:

@@ -127,6 +127,7 @@ is public and RotoWire is scraped read-only.
 python3 -m fantasy.monitor report              # full waiver + trade analysis
 python3 -m fantasy.monitor watch               # hourly mode: what changed
 python3 -m fantasy.monitor player --name "..."  # beat-reporter news for one player
+python3 -m fantasy.backtest                    # score the value model on completed weeks
 python3 matchups.py --full --markdown --out-dir matchups
 python3 build_site.py                          # renders docs/ from the reports
 ```
@@ -154,6 +155,11 @@ disagree, the sentence wins — go read it.
   than our WR4 all season. Only a trade fixes it — stop proposing claims for it.
 - **`assess()`'s serious/likely-minor verdict is keyword matching** and errs both
   ways. It is a pointer to the text, never the answer.
+- **A change to how value is computed shows its backtest number.** Run
+  `python3 -m fantasy.backtest` before and after, and cite the ρ in the commit.
+  Hand-set overrides and "the number feels low" are not evidence; the week 1
+  and week 2 tables in `reports/backtest.md` are. An in-progress week is
+  labelled as such and never used to retune a constant.
 
 Silent filters are the dangerous bugs here. An empty result looks like "nothing
 there" and a prior fills the vacuum. If you exclude a class of player, say so in

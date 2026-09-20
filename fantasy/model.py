@@ -46,16 +46,53 @@ def _league_points(line: dict, scoring: dict) -> float:
     return sum(w * line.get(stat, 0.0) for stat, w in scoring.items() if stat in line)
 
 
-def production_table(force: bool = False) -> dict:
+def _build_production(season: str, through_week: int, current_week: int,
+                      scoring: dict, players: dict) -> tuple[dict, int]:
+    """Rank every skill player by league-scored points per game over weeks
+    1..through_week. Returns (table, weeks_read)."""
+    totals: dict = {}
+    weeks = 0
+    for week in range(1, through_week + 1):
+        lines = sleeper.weekly_stats(season, week, final=week < current_week) or {}
+        weeks += 1
+        for pid, line in lines.items():
+            p = players.get(pid)
+            if not p or not is_available_body(p) or not line.get("gp"):
+                continue
+            t = totals.setdefault(pid, {"pts": 0.0, "games": 0})
+            t["pts"] += _league_points(line, scoring)
+            t["games"] += 1
+    ranked = sorted(
+        ((pid, t) for pid, t in totals.items() if t["games"] >= config.PRODUCTION_MIN_GAMES),
+        key=lambda kv: -(kv[1]["pts"] / kv[1]["games"]),
+    )
+    table: dict = {}
+    for i, (pid, t) in enumerate(ranked, start=1):
+        ppg = t["pts"] / t["games"]
+        table[pid] = {
+            "pts": round(t["pts"], 2), "games": t["games"], "ppg": round(ppg, 2),
+            "rank": i, "value": _rank_curve(i),
+        }
+    return table, weeks
+
+
+def production_table(force: bool = False, through_week: int | None = None) -> dict:
     """{player_id: {"pts", "games", "ppg", "rank", "value"}} for every skill
     player with at least one game logged this season.
 
-    Failure is loud, not silent: if the stats cannot be fetched the table is
-    empty, values fall back to pure consensus, and a warning goes to stderr,
-    because a quiet fallback would look exactly like "nobody has played yet".
+    `through_week` limits the table to weeks 1..N -- what was knowable before
+    week N+1 kicked off -- and is what the backtest uses. It bypasses the
+    process cache so the live model is never left holding a truncated table,
+    and it raises on failure instead of degrading, because a backtest built
+    on an empty table would be measuring nothing.
+
+    Otherwise failure is loud, not silent: if the stats cannot be fetched the
+    table is empty, values fall back to pure consensus, and a warning goes to
+    stderr, because a quiet fallback would look exactly like "nobody has
+    played yet".
     """
     global _PRODUCTION
-    if _PRODUCTION is not None and not force:
+    if through_week is None and _PRODUCTION is not None and not force:
         return _PRODUCTION
     table: dict = {}
     try:
@@ -66,30 +103,14 @@ def production_table(force: bool = False) -> dict:
             current = 0
         scoring = (sleeper.league().get("scoring_settings") or {})
         players = sleeper.players()
-        totals: dict = {}
-        weeks = 0
-        for week in range(1, current + 1):
-            lines = sleeper.weekly_stats(season, week, final=week < current) or {}
-            weeks += 1
-            for pid, line in lines.items():
-                p = players.get(pid)
-                if not p or not is_available_body(p) or not line.get("gp"):
-                    continue
-                t = totals.setdefault(pid, {"pts": 0.0, "games": 0})
-                t["pts"] += _league_points(line, scoring)
-                t["games"] += 1
-        ranked = sorted(
-            ((pid, t) for pid, t in totals.items() if t["games"] >= config.PRODUCTION_MIN_GAMES),
-            key=lambda kv: -(kv[1]["pts"] / kv[1]["games"]),
-        )
-        for i, (pid, t) in enumerate(ranked, start=1):
-            ppg = t["pts"] / t["games"]
-            table[pid] = {
-                "pts": round(t["pts"], 2), "games": t["games"], "ppg": round(ppg, 2),
-                "rank": i, "value": _rank_curve(i),
-            }
+        upto = current if through_week is None else max(0, min(through_week, current))
+        table, weeks = _build_production(season, upto, current, scoring, players)
+        if through_week is not None:
+            return table
         _PRODUCTION_META.update(weeks=weeks, players=len(table), error=None)
     except Exception as err:  # noqa: BLE001 -- any failure must degrade loudly
+        if through_week is not None:
+            raise
         _PRODUCTION_META.update(weeks=0, players=0, error=str(err))
         print(f"warning: production data unavailable, values are consensus-only ({err})",
               file=sys.stderr)
