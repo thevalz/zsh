@@ -277,6 +277,7 @@ def build(mode: str = "report") -> tuple:
     handcuffs = waiver.handcuff_report(lg, charts)
     partners = trades.find_partners(lg, top=5)
     summary = trades.my_summary(lg)
+    strength = trades.league_strength(lg)
 
     interest = {}
     for pid in lg.me.player_ids:
@@ -298,6 +299,7 @@ def build(mode: str = "report") -> tuple:
         parts.append(report.handcuff_section(handcuffs))
     if mode in ("report", "trades"):
         parts.append(report.my_position_section(summary))
+        parts.append(report.league_strength_section(strength))
         parts.append(report.trades_section(partners, lg))
     if mode in ("report", "watch"):
         parts.append(report.news_section(hits))

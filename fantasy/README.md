@@ -26,16 +26,46 @@ python3 -m fantasy.monitor waiver    # waiver board + handcuff table only
 python3 -m fantasy.monitor trades    # roster strengths + trade targets only
 ```
 
-No dependencies beyond the Python standard library. Everything comes from the
-public Sleeper API (no auth) plus ESPN's public news feed.
+No dependencies beyond the Python standard library. Everything comes from
+public, keyless endpoints: the Sleeper API, ESPN's fantasy API, FantasyPros'
+public rankings pages (and DynastyProcess's mirror of them), and RotoWire news.
 
 ## How the numbers work
 
-**Player value** — Sleeper's `search_rank` decayed exponentially
-(`100 · e^(-rank/60)`), because the gap between the RB1 and the RB12 is far
-larger than between the RB40 and the RB52. Quarterbacks get a 1.20× superflex
-premium. This is a consensus-rank proxy, not a projection; it is the best
-signal the public API exposes.
+**Player value** — two ranks pushed through the same curve
+(`100 · e^(-rank/60)`, because the gap between the RB1 and the RB12 is far
+larger than between the RB40 and the RB52) and blended:
+
+- *consensus* — the weighted mean of a player's rank in three independent
+  lists, each re-ranked among skill players only (`fantasy/sources.py`):
+  FantasyPros rest-of-season PPR expert consensus (the live page when it has
+  at least `FP_MIN_EXPERTS` experts, otherwise the DynastyProcess weekly
+  mirror with the full set), ESPN season projections, and RotoWire season
+  projections via Sleeper's projection feed. IDs are reconciled through the
+  DynastyProcess crosswalk. Sleeper's own `search_rank` is used only for a
+  player none of them list. A source that cannot be fetched is dropped and
+  named in the report header — never silently.
+- *production* — every skill player ranked by points per game this season under
+  this league's own scoring settings, from Sleeper's weekly stat lines.
+
+The blend weight is `games / (games + PRODUCTION_PRIOR_GAMES)` with the prior
+worth four games: one game moves a player a fifth of the way toward his
+production rank, four games half way, and the rank is never fully forgotten.
+Points are per game *played*, so an IR stint or a bye is not a zero, and a
+player with no games keeps his pure consensus value. Quarterbacks get a 1.20×
+superflex premium on the blended result. If the stats cannot be fetched the
+report says so in its header and every value is consensus-only.
+
+`credibility()` — the check that a backup is good enough to convert inherited
+workload — reads the *effective* rank implied by the blended value, so a
+rank-209 receiver who just posted a WR1 week is no longer treated as rank 209.
+
+**Stashes are screened on `healthy_value()`**, the best single rank any
+source gives the player, because the consensus sources price a reserve-list
+stint into their rest-of-season rank. A back who will miss six weeks drops
+150 spots in every list, which is right for standalone value and wrong for
+the stash question, which is what he is worth once he is back. The `STASH`
+row's own value is that healthy value.
 
 **Opportunity** — for each free agent, the value of the players ahead of him on
 his NFL depth chart, multiplied by:

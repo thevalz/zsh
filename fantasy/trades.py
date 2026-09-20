@@ -141,9 +141,14 @@ def find_partners(lg: League, top: int = 5) -> list:
             for pos in config.SKILL_POSITIONS
         }
 
-        # Never offer to ship out a position I am myself below median at, no
-        # matter how badly the other team needs it.
-        sendable = {p: v for p, v in send_fit.items() if my[p]["need"] <= 0}
+        # Never offer to ship out a position I am short at, unless the bench
+        # surplus there more than covers the shortfall: six running backs with
+        # two below-median starters is still a room with parts to move, and
+        # what goes out is the surplus, never a starter.
+        sendable = {
+            p: v for p, v in send_fit.items()
+            if my[p]["need"] <= my[p]["surplus"]
+        }
         if not sendable or max(sendable.values()) <= 0:
             continue
         send_pos = max(sendable, key=sendable.get)
@@ -219,6 +224,33 @@ def _build_offers(lg: League, them: Team, send_pos: str, recv_pos: str, profiles
 
     offers.sort(key=lambda o: (o["shape"] != "2-for-1", -o["delta"]))
     return offers[:5]
+
+
+def league_strength(lg: League) -> list:
+    """Every roster's starting-lineup value, best first.
+
+    Lineup value is the positional starters plus the best three leftovers for
+    the two FLEX slots and the SUPER_FLEX, which is how these rosters are
+    actually played. Bench is everything after that.
+    """
+    profiles = league_profiles(lg)
+    rows = []
+    for t in lg.teams:
+        prof = profiles[t.roster_id]
+        leftovers = []
+        for pos in config.SKILL_POSITIONS:
+            values = sorted((player_value(p) for p in prof[pos]["players"]), reverse=True)
+            leftovers += values[config.STARTERS[pos]:]
+        leftovers.sort(reverse=True)
+        flex = sum(leftovers[:3])
+        rows.append({
+            "team": t,
+            "lineup": round(sum(prof[pos]["starter_value"] for pos in config.SKILL_POSITIONS) + flex, 1),
+            "bench": round(sum(leftovers[3:]), 1),
+            **{pos: round(prof[pos]["starter_value"], 1) for pos in config.SKILL_POSITIONS},
+        })
+    rows.sort(key=lambda r: -r["lineup"])
+    return rows
 
 
 def my_summary(lg: League) -> dict:

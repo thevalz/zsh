@@ -3,7 +3,8 @@
 from __future__ import annotations
 
 from . import config
-from .model import League, player_value
+from . import sources
+from .model import League, player_value, production_meta, production_weight
 
 TIER_ICON = {
     "URGENT": "🚨",
@@ -18,10 +19,29 @@ TIER_ICON = {
 
 def header(lg: League, week: int, generated: str) -> str:
     me = lg.me
+    meta = production_meta()
+    if meta.get("error"):
+        basis = "⚠️ production data unavailable — values are consensus rank only"
+    elif meta.get("weeks"):
+        w = production_weight(meta["weeks"])
+        basis = (
+            f"values blend consensus rank with {meta['weeks']} week"
+            f"{'s' if meta['weeks'] != 1 else ''} of production "
+            f"(a player with every game played is {w:.0%} production)"
+        )
+    else:
+        basis = "values are consensus rank only — no games played yet"
+    src = sources.meta()
+    prior = "consensus rank from " + ("; ".join(src.get("used") or []) or "nothing")
+    if src.get("failed"):
+        prior += " · ⚠️ unavailable: " + "; ".join(src["failed"])
+    if not src.get("used"):
+        prior += " — falling back to Sleeper search rank"
     return (
         f"# {config.LEAGUE_NAME} — waiver & trade monitor\n\n"
         f"**Week {week}** · {me.label} ({me.wins}-{me.losses}) · "
-        f"FAAB left **${me.faab_left}** · generated {generated}\n"
+        f"FAAB left **${me.faab_left}** · generated {generated}\n\n"
+        f"_{basis}_  \n_{prior}_\n"
     )
 
 
@@ -166,6 +186,26 @@ def my_position_section(summary: dict) -> str:
         "\n*Surplus is bench value above replacement level — what you could trade "
         "without weakening your starting lineup. A high positional rank with zero "
         "surplus means strong, not deep, and there is nothing there to trade.*"
+    )
+    return "\n".join(out) + "\n"
+
+
+def league_strength_section(rows: list) -> str:
+    out = ["## League roster strength\n"]
+    out.append("| # | Team | W-L | Lineup | Bench | QB | RB | WR | TE |")
+    out.append("|--:|:--|:--|--:|--:|--:|--:|--:|--:|")
+    for i, r in enumerate(rows, start=1):
+        t = r["team"]
+        name = f"**{t.label}**" if t.is_me else t.label
+        out.append(
+            f"| {i} | {name} | {t.wins}-{t.losses} | {r['lineup']} | {r['bench']} | "
+            f"{r['QB']} | {r['RB']} | {r['WR']} | {r['TE']} |"
+        )
+    out.append(
+        "\n*Lineup is the value of the starters each roster actually plays: the "
+        "positional starters plus the best three leftovers for FLEX, FLEX and "
+        "SUPER_FLEX. Bench is everything after that. Values are the same blended "
+        "consensus-plus-production numbers used everywhere else in this report.*"
     )
     return "\n".join(out) + "\n"
 
