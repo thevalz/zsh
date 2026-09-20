@@ -30,14 +30,14 @@ _depth charts as of 2026-09-19; defender grades pool PFR coverage stats from 202
 | Jalen Hurts | QB | PHI | QB | @ TEN | 🟢 SOFT | 8 |  | TEN pass D [F 8, #31] |
 | Jaylen Warren | RB | PIT | RB | @ NE | 🟡 NEUTRAL | 61 | LILB Christian Elliss [C 41]<br>RILB Robert Spillane [C 41] | NE run D [B 74, #8] |
 | Travis Etienne | RB | NO | RB | @ BAL | 🟡 NEUTRAL | 53 | LILB Roquan Smith [C 50]<br>RILB Teddye Buchanan [C 51] | BAL run D [C 55, #15] |
-| Michael Pittman | WR | PIT | FLEX | @ NE | 🔴 TOUGH | 74 | (outside) LCB Carlton Davis III [B 75]<br>RCB Christian Gonzalez [A 83]<br>⚠ shadow risk | NE pass D [B 65, #12] |
+| Aaron Jones | RB | MIN | FLEX | @ CHI | 🟡 NEUTRAL | 42 | MLB T.J. Edwards [B 65]<br>WLB Devin Bush [B 71] | CHI run D [D 25, #24] |
 | George Pickens | WR | DAL | WR | vs WAS | 🟢 SOFT | 34 | (outside) LCB Rasul Douglas [B 67]<br>RCB Mike Sainristil [D 28] | WAS pass D [F 9, #30] |
 | Justin Jefferson | WR | MIN | WR | @ CHI | 🟢 SOFT | 34 | (outside) LCB Jaylon Johnson [D 29]<br>RCB Tyrique Stevenson [C 53] | CHI pass D [D 22, #28] |
 | Jayden Reed | WR | GB | FLEX | @ NYJ | 🟢 SOFT | 30 | (outside) LCB Nahshon Wright [C 47]<br>RCB Brandon Stephens [F 16] | NYJ pass D [D 29, #22] |
 | Sam LaPorta | TE | DET | TE | @ BUF | 🔴 TOUGH | 71 | FS C.J. Gardner-Johnson [B 62]<br>SS Cole Bishop [C 59] | BUF pass D [A 82, #4] |
 | Deshaun Watson | QB | CLE | BN | @ TB | 🟢 SOFT | 25 |  | TB pass D [D 25, #26] |
 | Kyler Murray | QB | MIN | BN | @ CHI | 🟢 SOFT | 22 |  | CHI pass D [D 22, #28] |
-| Aaron Jones | RB | MIN | BN | @ CHI | 🟡 NEUTRAL | 42 | MLB T.J. Edwards [B 65]<br>WLB Devin Bush [B 71] | CHI run D [D 25, #24] |
+| Michael Pittman | WR | PIT | BN | @ NE | 🔴 TOUGH | 74 | (outside) LCB Carlton Davis III [B 75]<br>RCB Christian Gonzalez [A 83]<br>⚠ shadow risk | NE pass D [B 65, #12] |
 | Josh Downs | WR | IND | BN | @ KC | 🟡 NEUTRAL | 53 | (slot) NB L'Jarius Sneed [D 39] | KC pass D [B 78, #7] |
 | Mark Andrews | TE | BAL | BN | vs NO | 🟡 NEUTRAL | 59 | FS Julian Blackmon [?] (low sample (22 tgt))<br>SS Justin Reid [C 45] | NO pass D [B 70, #11] |
 
