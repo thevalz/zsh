@@ -1,41 +1,33 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$68** · generated 2026-09-20 15:56 UTC
+**Week 2** · supervillain (2-0) · FAAB left **$68** · generated 2026-09-20 18:41 UTC
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-20 15:16 UTC (0.7h ago)_
+_baseline: snapshot committed 2026-09-20 15:57 UTC (2.7h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- ⚠️ **Kendre Miller (RB-NO) → Out** — FREE AGENT player newly listed Out. Next up: **CJ Donaldson (RB-NO)** — FREE AGENT, claim him.
-  ↳ _September 20, 2026 — :_ Miller (coach's decision) is listed as  inactive  Sunday in Baltimore. (serious)
-- ⚠️ **Tanner McKee (QB-PHI) → Out** — FREE AGENT player newly listed Out. Next up: **Cole Payton (QB-PHI)** — FREE AGENT, claim him.
-  ↳ _September 20, 2026 — :_ McKee (coach's decision) is  inactive as the emergency third quarterback  for Sunday's game against the Titans. (serious)
-- ⚠️ **Behren Morton (QB-NE) → Out** — FREE AGENT player newly listed Out.
-  ↳ _September 9, 2026 — :_ Morton (coach's decision) is  inactive  but will serve as the Patriots' emergency third quarterback for Wednesday's game against the Seahawks.
-- ⚠️ **Taylen Green (QB-CLE) → Out** — FREE AGENT player newly listed Out.
-  ↳ _September 13, 2026 — :_ Green (coach's decision)  is inactive for Sunday's matchup  with the Jaguars.
-- ⚠️ **Case Keenum (QB-CHI) → Out** — FREE AGENT player newly listed Out. Next up: **Tyson Bagent (QB-CHI)** — FREE AGENT, claim him.
-  ↳ _September 20, 2026 — :_ Keenum (coach's decision) is  inactive  but serving as the Bears' emergency third quarterback against the Vikings on Sunday.
-- ⚠️ **Zach Wilson (QB-NO) → Out** — FREE AGENT player newly listed Out. Next up: **Blake Bortles (QB-NO)** — FREE AGENT, claim him.
-  ↳ _September 13, 2026 — :_ Wilson (coach's decision) is  inactive  as the emergency third quarterback for Sunday's game against the Lions.
-- ⚠️ **Haynes King (QB-CAR) → Out** — FREE AGENT player newly listed Out.
-  ↳ _September 20, 2026 — :_ King (coach's decision) is inactive but serving as the Panthers' emergency third quarterback Sunday against the Falcons,  Darin Gantt of the team's official site  reports.
-- ⚠️ **Josh Johnson (QB-CIN) → Out** — FREE AGENT player newly listed Out. Next up: **Sean Clifford (QB-CIN)** — FREE AGENT, claim him.
-  ↳ _September 19, 2026 — :_ The Bengals  elevated  Johnson from the practice squad to the active roster Saturday.
-- ⚠️ **Joe Burrow (QB-CIN) cleared (Questionable → healthy)** — Down to Pound's player is off the report.
-- ⚠️ **Chris Olave (WR-NO) cleared (Questionable → healthy)** — mtngoblin's player is off the report.
+- ⚠️ **Will Howard (QB-PIT) → Out** — FREE AGENT player newly listed Out. Next up: **Drew Allar (QB-PIT)** — FREE AGENT, claim him.
+  ↳ _September 20, 2026 — :_ Howard (coach's decision) is inactive as the Steelers' emergency third quarterback for Sunday's game against the Patriots,  Teresa Varley of the team's official site  reports. (serious)
+- ⚠️ **Jayden Reed (WR-GB) → Out** — hulleywood's player newly listed Out. Next up: **Skyy Moore (WR-GB)** — FREE AGENT, claim him.
+  ↳ _September 20, 2026 — :_ Reed has been  ruled out  of Sunday's game at the Jets due to a neck injury. (serious)
+- 🚨 **Rico Dowdle (RB-PIT) → Questionable** — MY player newly listed Questionable. Next up: **Eli Heidenreich (RB-PIT)** — FREE AGENT, claim him.
+  ↳ _September 20, 2026 — :_ The Steelers announced that Dowdle is questionable to return to Sunday's game against the Patriots due to a toe injury,  Alan Saunders of SteelersNow.com  reports.
+- ⚠️ **Dallas Goedert (TE-PHI) → Questionable** — NYKatSnatchers's player newly listed Questionable. Next up: **Johnny Mundt (TE-PHI)** — FREE AGENT, claim him.
+  ↳ _September 20, 2026 — :_ Goedert is  questionable  to return to Sunday's game against the Titans due to a knee injury. (serious)
+- ⚠️ **Saquon Barkley (RB-PHI) → Questionable** — Holy Turnovers, Batman!'s player newly listed Questionable. Next up: **Tank Bigsby (RB-PHI)** — FREE AGENT, claim him.
+  ↳ _September 20, 2026 — :_ Barkley (shoulder) returned to Sunday's game against the Titans for the start of the third quarter,  Brooks Kubena of The Athletic  reports. (serious)
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
+| 🔥 | **Tank Bigsby (RB-PHI)** | CONTESTED | 8.6 | every man ahead of him is banged up (1 deep); Saquon Barkley is Questionable (Arm) | 108,465 | $20 |
 | 🧊 | **James Conner (RB-ARI)** | STASH | 21.6 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $3 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 14,418 | $2 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 2.5 | direct handcuff to MY Derrick Henry | 16,101 | $2 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 13.1 | direct handcuff to MY Tony Pollard | 0 | $4 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 8,174 | $3 |
-| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 9,009 | $3 |
-| 🟢 | **Tank Bigsby (RB-PHI)** | BUY EARLY | 8.6 | handcuff to Saquon Barkley (Holy Turnovers, Batman!) | 0 | $4 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 18.0 | starting for his NFL team and unrostered | 9,336 | $3 |
+| 🔹 | **Brenton Strange (TE-JAX)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 12,024 | $3 |
 | 🔹 | **AJ Barner (TE-SEA)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $3 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
@@ -51,7 +43,7 @@ _baseline: snapshot committed 2026-09-20 15:16 UTC (0.7h ago)_
 | Bhayshul Tuten (RB-JAX) | healthy | Chris Rodriguez (RB-JAX) | rostered (Randikulous) |
 | Brock Purdy (QB-SF) | healthy | Mac Jones (QB-SF) | **FREE AGENT** |
 | Tony Pollard (RB-TEN) | healthy | Tyjae Spears (RB-TEN) | **FREE AGENT** |
-| Rico Dowdle (RB-PIT) | healthy | Eli Heidenreich (RB-PIT) | **FREE AGENT** |
+| Rico Dowdle (RB-PIT) | Questionable · _unverified_ | Eli Heidenreich (RB-PIT) | **FREE AGENT** |
 
 *A designation shown as `unverified` has had no beat-reporter blurb read for it. The tag alone cannot tell a cramp from a torn ACL, or a current injury from a two-year-old one — run `python3 -m fantasy.monitor player --name "..."` before acting on it.*
 
