@@ -344,23 +344,29 @@ def load_defender_stats(season_weights: dict[int, float], refresh: bool) -> dict
     return pooled
 
 
-def load_team_defense(season: int, refresh: bool) -> dict[str, dict]:
+def load_team_defense(season: int, refresh: bool, through_week: int | None = None) -> dict[str, dict]:
     """What each defense allows, pooled over last season and this season.
 
     Returns team -> {pass: {...}, run: {...}, fp: {QB, RB, WR, TE}} with
-    scores/grades/ranks (100 = toughest).
+    scores/grades/ranks (100 = toughest). `through_week` drops this season's
+    rows after that week, so a backtest sees only what was known at the time.
     """
     weights = {season - 1: 1.0, season: CURRENT_SEASON_TEAM_WEIGHT}
     acc = defaultdict(lambda: defaultdict(float))
     games = defaultdict(float)
     seasons_used = []
+
+    def in_window(r):
+        return (through_week is None or int(r["season"]) != season
+                or int(r["week"] or 0) <= through_week)
+
     for yr, w in weights.items():
         text = fetch_text_optional(f"{NFLVERSE}/stats_team/stats_team_week_{yr}.csv", refresh)
         if text is None:
             continue
         seasons_used.append(yr)
         for r in read_csv(text):
-            if r["season_type"] != "REG":
+            if r["season_type"] != "REG" or not in_window(r):
                 continue
             d = acc[r["opponent_team"]]          # the defense that faced this offense
             d["att"] += w * fnum(r["attempts"])
@@ -375,7 +381,8 @@ def load_team_defense(season: int, refresh: bool) -> dict[str, dict]:
         if ptext is None:
             continue
         for r in read_csv(ptext):
-            if r["season_type"] != "REG" or r["position"] not in ("QB", "RB", "WR", "TE"):
+            if (r["season_type"] != "REG" or r["position"] not in ("QB", "RB", "WR", "TE")
+                    or not in_window(r)):
                 continue
             acc[r["opponent_team"]]["fp_" + r["position"]] += w * fnum(r["fantasy_points_ppr"])
 

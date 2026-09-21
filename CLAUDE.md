@@ -160,6 +160,16 @@ disagree, the sentence wins — go read it.
   Hand-set overrides and "the number feels low" are not evidence; the week 1
   and week 2 tables in `reports/backtest.md` are. An in-progress week is
   labelled as such and never used to retune a constant.
+- **Value and lineup are one question.** A lineup of the highest-value active
+  players should score the most, and if it does not the value model is wrong.
+  The one fair way to check is to exclude players who did not dress that week
+  for every candidate; the first version of the check let the model "start"
+  inactives, concluded value and lineups were different things, and was wrong
+  by about eight points a team.
+- **A static outside list is the stale-rank problem in a different coat.**
+  Sleeper's season-total projection never moved after August (Tank Dell 52
+  points on IR). Every prior source is fingerprinted and dropped to weight 0
+  when it stops changing; the header says which.
 
 Silent filters are the dangerous bugs here. An empty result looks like "nothing
 there" and a prior fills the vacuum. If you exclude a class of player, say so in
