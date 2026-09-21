@@ -48,6 +48,22 @@ jobs:
         with:
           python-version: '3.12'
 
+      # The value model reads ~80 MB of outside data (two prior seasons of
+      # weekly stat lines for the usage fit, ESPN/FantasyPros/Sleeper
+      # projections, nflverse schedules and snap counts). Each fetch has its
+      # own TTL in fantasy/config.py; without a persisted cache every hourly
+      # run would refetch all of it and scrape FantasyPros 24 times a day
+      # instead of the 4 the TTL intends. run_id keys mean every run saves a
+      # fresh cache and the next one restores the newest.
+      - uses: actions/cache@v4
+        with:
+          path: |
+            fantasy/.cache
+            .cache
+          key: model-cache-${{ github.run_id }}
+          restore-keys: |
+            model-cache-
+
       - name: Weekly matchup report
         id: matchups
         run: python3 matchups.py --full --markdown --out-dir matchups
@@ -58,10 +74,19 @@ jobs:
         run: python3 -m fantasy.monitor report --out reports/waivers.md
         continue-on-error: true
 
+      # Tuesday, after Monday night: score the value model on every completed
+      # week so reports/backtest.md accumulates a week at a time. Any change to
+      # a model constant has to cite these numbers (CLAUDE.md).
+      - name: Backtest the value model on completed weeks
+        id: backtest
+        if: github.event.schedule == '0 12 * * 2' || github.event_name == 'workflow_dispatch'
+        run: python3 -m fantasy.backtest
+        continue-on-error: true
+
       - name: Report step failures without killing the build
-        if: steps.matchups.outcome == 'failure' || steps.waivers.outcome == 'failure'
+        if: steps.matchups.outcome == 'failure' || steps.waivers.outcome == 'failure' || steps.backtest.outcome == 'failure'
         run: |
-          echo "::warning::matchups=${{ steps.matchups.outcome }} waivers=${{ steps.waivers.outcome }}; site rebuilt from whatever reports exist"
+          echo "::warning::matchups=${{ steps.matchups.outcome }} waivers=${{ steps.waivers.outcome }} backtest=${{ steps.backtest.outcome }}; site rebuilt from whatever reports exist"
 
       - name: Render docs/
         run: python3 build_site.py

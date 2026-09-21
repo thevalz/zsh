@@ -104,6 +104,7 @@ Two of these live outside the repo, so you cannot see them in the tree:
 | What | Where | When |
 |---|---|---|
 | Site rebuild + snapshot commit | `.github/workflows/site.yml` | hourly at `:05`, plus Tue + Sun 12:00 UTC |
+| Value-model backtest → `reports/backtest.md` | same workflow, Tuesday 12:00 UTC run only (and manual dispatch) | weekly, after MNF |
 | Waiver/trade monitor | Claude Routine (account-level) | hourly, `:50` (read-only, after the Action) |
 | Sunday inactives + lineup | Claude Routine (account-level) | Sun 11:35am ET |
 
