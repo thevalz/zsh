@@ -103,7 +103,7 @@ Two of these live outside the repo, so you cannot see them in the tree:
 
 | What | Where | When |
 |---|---|---|
-| Site rebuild + snapshot commit | `.github/workflows/site.yml` | hourly at `:05`, plus Tue + Sun 12:00 UTC |
+| Site rebuild (matchups, waivers, rest-of-season values) + snapshot commit | `.github/workflows/site.yml` | hourly at `:05`, plus Tue + Sun 12:00 UTC |
 | Value-model backtest → `reports/backtest.md` | same workflow, Tuesday 12:00 UTC run only (and manual dispatch) | weekly, after MNF |
 | Waiver/trade monitor | Claude Routine (account-level) | hourly, `:50` (read-only, after the Action) |
 | Sunday inactives + lineup | Claude Routine (account-level) | Sun 11:35am ET |
@@ -129,6 +129,7 @@ python3 -m fantasy.monitor report              # full waiver + trade analysis
 python3 -m fantasy.monitor watch               # hourly mode: what changed
 python3 -m fantasy.monitor player --name "..."  # beat-reporter news for one player
 python3 -m fantasy.backtest                    # score the value model on completed weeks
+python3 -m fantasy.monitor values              # every roster, every player, the numbers behind value (read-only)
 python3 matchups.py --full --markdown --out-dir matchups
 python3 build_site.py                          # renders docs/ from the reports
 ```

@@ -263,3 +263,102 @@ def news_section(hits: list) -> str:
         flag = "⚠️ " if h["injury_flavored"] else ""
         out.append(f"- {flag}[{h['headline']}]({h['link']}) — {who}")
     return "\n".join(out) + "\n"
+
+
+# ---------------------------------------------------------------------------
+# Rest-of-season values: the model's reasoning for every roster
+# ---------------------------------------------------------------------------
+
+VALUE_COLUMNS = (
+    "| | Pos | Player | Value | Rank | ROS | ROS/wk | Usage xPPG (g) | Actual PPG | Prior | Sched | Weeks | Status |\n"
+    "|:--|:--|:--|--:|--:|--:|--:|--:|--:|--:|--:|--:|:--|"
+)
+
+
+def _value_row(lg: League, pid: str, row: dict, starter: bool = False, healthy: bool = False) -> str:
+    p = lg.players.get(pid) or {}
+    status = p.get("injury_status") or ""
+    if row.get("unverified"):
+        status += " · `unverified`"
+    if healthy and status:
+        status += f" · healthy {row['healthy_value']:.1f}"
+    weeks = row.get("weeks") or 0.0
+    per_wk = row["ros"] / weeks if weeks else 0.0
+    xppg = f"{row['xppg']:.1f} ({row['games']})" if row.get("games") else "—"
+    actual = f"{row['actual_ppg']:.1f}" if row.get("actual_ppg") is not None else "—"
+    prior = f"{row['prior']:.0f}" if row.get("prior") is not None else "—"
+    sched = f"{row['sched']:.2f}" if row.get("sched") is not None else "—"
+    return (
+        f"| {'★' if starter else ''} | {p.get('position')} | {lg.name(pid)} ({p.get('team')}) | "
+        f"{row['value']:.1f} | {row['rank']} | {row['ros']:.0f} | {per_wk:.1f} | {xppg} | {actual} | "
+        f"{prior} | {sched} | {weeks:.0f} | {status.strip(' ·')} |"
+    )
+
+
+def _starters(lg: League, team, table: dict) -> set:
+    """The lineup league_strength() assumes: positional starters plus the best
+    three leftovers for FLEX, FLEX and SUPER_FLEX."""
+    chosen: set = set()
+    leftovers = []
+    for pos in config.SKILL_POSITIONS:
+        ranked = lg.roster_of(team, pos)
+        chosen.update(ranked[: config.STARTERS[pos]])
+        leftovers += ranked[config.STARTERS[pos]:]
+    leftovers.sort(key=lambda pid: -table.get(pid, {}).get("value", 0.0))
+    chosen.update(leftovers[:3])
+    return chosen
+
+
+def values_report(lg: League, week: int, generated: str) -> str:
+    from . import model as _model
+    from .trades import league_strength
+
+    table = _model.value_table()
+    meta = _model.value_meta()
+    head = header(lg, week, generated).replace("waiver & trade monitor", "rest-of-season values")
+    out = [head]
+    out.append(
+        "*Every number the waiver board, trade finder and roster-strength table run on, "
+        "for every roster. **Value** is rest-of-season points over replacement, ranked "
+        "across all skill players and put on the 0–100 curve. **ROS** is weighted "
+        "rest-of-season points (playoff weeks count double); **ROS/wk** divides it by "
+        "the weighted games he is projected to play. **Usage xPPG** is what his own "
+        "targets, carries, shares and red-zone looks predict per game, with games "
+        "played in brackets; **Actual PPG** is what he has scored. **Prior** is the "
+        "outside lists' weighted rest-of-season points. **Sched** is his mean "
+        "remaining-opponent multiplier (1.00 = league average). **Weeks** is weighted "
+        "games he is projected to play. ★ marks the lineup the strength table assumes. "
+        "Kickers and defenses are streamed and not valued.*\n"
+    )
+    repl = meta.get("replacement") or {}
+    if repl:
+        out.append("Replacement level (ROS points): " + " · ".join(f"{k} {v}" for k, v in repl.items()) + "\n")
+
+    rows = league_strength(lg)
+    rows.sort(key=lambda r: (not r["team"].is_me, -r["lineup"]))
+    for r in rows:
+        t = r["team"]
+        out.append(f"## {t.label} ({t.wins}-{t.losses}) — lineup {r['lineup']} · bench {r['bench']}\n")
+        starters = _starters(lg, t, table)
+        pids = sorted(
+            (pid for pid in t.player_ids if pid in table),
+            key=lambda pid: -table[pid]["value"],
+        )
+        out.append(VALUE_COLUMNS)
+        for pid in pids:
+            out.append(_value_row(lg, pid, table[pid], starter=pid in starters, healthy=True))
+        out.append("")
+
+    rostered = lg.rostered
+    free = sorted((pid for pid in table if pid not in rostered), key=lambda pid: -table[pid]["value"])
+    out.append("## Best available\n")
+    out.append(
+        f"Top 25 of {len(free)} unrostered skill players by value. A reserve-list player "
+        "shows what he is worth when back (`healthy`); the waiver board resolves whether "
+        "he is designated to return.\n"
+    )
+    out.append(VALUE_COLUMNS)
+    for pid in free[:25]:
+        out.append(_value_row(lg, pid, table[pid], healthy=True))
+    out.append("")
+    return "\n".join(out) + "\n"

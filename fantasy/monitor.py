@@ -325,7 +325,7 @@ def summarize_for_push(alerts: list, board: list) -> str:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Zebras Shooting Heroin monitor")
     ap.add_argument("mode", nargs="?", default="report",
-                    choices=["report", "watch", "trades", "waiver", "player"])
+                    choices=["report", "watch", "trades", "waiver", "player", "values"])
     ap.add_argument("--name", help="player mode: whose news to look up")
     ap.add_argument("--no-save", action="store_true",
                     help="do not update the stored snapshot")
@@ -358,6 +358,19 @@ def main(argv=None) -> int:
               + (f", practice {info['practice']}" if info["practice"] else ""))
         for b in blurbs:
             print(f"\n  [{b['date']}] {b['headline']}\n    {b['body']}")
+        return 0
+
+    if args.mode == "values":
+        # The model's reasoning for every roster. Read-only: it never touches
+        # the snapshot, so it is safe anywhere `watch` is.
+        lg = model.load()
+        week = int((sleeper.nfl_state() or {}).get("week") or 1)
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+        text = report.values_report(lg, week, now)
+        print(text)
+        if args.out:
+            with open(args.out, "w") as fh:
+                fh.write(text)
         return 0
 
     text, alerts, snap, board = build(args.mode)

@@ -25,6 +25,7 @@ python3 -m fantasy.monitor watch     # hourly mode — leads with what changed; 
 python3 -m fantasy.monitor waiver    # waiver board + handcuff table only
 python3 -m fantasy.monitor trades    # roster strengths + trade targets only
 python3 -m fantasy.backtest          # score the value model against completed weeks
+python3 -m fantasy.monitor values    # every roster's players with the numbers behind their value
 ```
 
 No dependencies beyond the Python standard library. Everything comes from
@@ -55,6 +56,10 @@ each player:
    along as an extra column when it is available. The report header prints
    the fit's out-of-sample number each run. `USAGE_ALPHA` blends the
    prediction with raw PPG; at 1.0 the fitted predictor is trusted outright.
+   The fit is trained on players with real roles and cannot extrapolate down
+   to a backup's mop-up snaps, so below `USAGE_ROLE_SNAP` (35% of snaps) the
+   prediction is scaled by snap share, and a quarterback whose snaps are not
+   posted yet is scaled by attempts against `QB_ROLE_ATTEMPTS`.
 2. *Depth chart and injuries* — who plays which weeks. A reserve-list or Out
    player is projected to miss `DEFAULT_ABSENCE_WEEKS` for his tag unless a
    blurb gave an eligible week, and the header counts how many absences rest

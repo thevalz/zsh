@@ -87,6 +87,8 @@ def features_for(line: dict, team: dict, pos: str, scoring: dict) -> dict:
     for name in FEATURES[pos]:
         out[name] = DERIVED[name](line, team, scoring) if name in DERIVED else _f(line, name)
     out[SNAP] = _snap_share(line)
+    if pos == "QB":
+        out["pass_att"] = _f(line, "pass_att")     # role fallback when snaps are pending
     return out
 
 
@@ -350,6 +352,15 @@ def usage_table(season: str, through_week: int, current_week: int, scoring: dict
             x = _x(t["feat"], pos, False)
             pred = sum(a * b for a, b in zip(c["no_snaps"], x)) if (x and c.get("no_snaps")) else t["ppg"]
         pred = max(0.0, pred)
+        snap = t["feat"].get(SNAP)
+        if snap is not None and snap < config.USAGE_ROLE_SNAP:
+            # A part-timer's prediction is a starter's prediction otherwise;
+            # see config.USAGE_ROLE_SNAP.
+            pred *= snap / config.USAGE_ROLE_SNAP
+        elif snap is None and pos == "QB":
+            # Snaps not posted yet: a quarterback's own attempts say whether he
+            # played the game or mopped up.
+            pred *= min(1.0, t["feat"].get("pass_att", 0.0) / config.QB_ROLE_ATTEMPTS)
         out[pid] = {
             "games": t["games"],
             "actual_ppg": round(t["ppg"], 2),

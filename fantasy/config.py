@@ -43,6 +43,16 @@ UNRANKED_RANK = 9999
 # leans back on raw points. Touchdowns are noise; targets and carries are not.
 USAGE_ALPHA = 1.0
 USAGE_MIN_GAMES = 1
+# The usage fit is trained on players with real roles, so it cannot
+# extrapolate down to a backup who took a few mop-up snaps: a quarterback
+# with one point on three attempts still projects like a starter, because
+# the team's red-zone trips are his team's too. Below this snap share the
+# prediction is scaled by share / USAGE_ROLE_SNAP; at or above it (any
+# regular, including a 54%-snap workhorse back) nothing changes.
+USAGE_ROLE_SNAP = 0.35
+# Same idea for a quarterback whose snaps are not posted yet: fewer than this
+# many pass attempts per game scales his prediction down proportionally.
+QB_ROLE_ATTEMPTS = 20.0
 
 # The outside prior. Only sources that move during the season are used: a
 # list whose payload has not changed in SOURCE_STALE_DAYS is flagged static in
