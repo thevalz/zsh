@@ -24,6 +24,7 @@ python3 -m fantasy.monitor report    # full standing analysis
 python3 -m fantasy.monitor watch     # hourly mode — leads with what changed; read-only
 python3 -m fantasy.monitor waiver    # waiver board + handcuff table only
 python3 -m fantasy.monitor trades    # roster strengths + trade targets only
+python3 -m fantasy.backtest          # score the value model against completed weeks
 ```
 
 No dependencies beyond the Python standard library. Everything comes from
@@ -32,40 +33,82 @@ public rankings pages (and DynastyProcess's mirror of them), and RotoWire news.
 
 ## How the numbers work
 
-**Player value** — two ranks pushed through the same curve
-(`100 · e^(-rank/60)`, because the gap between the RB1 and the RB12 is far
-larger than between the RB40 and the RB52) and blended:
+**Player value** — rest-of-season expected points over replacement, ranked
+across every skill player and pushed through the curve `100 · e^(-rank/60)`
+(the gap between the RB1 and the RB12 is far larger than between the RB40 and
+the RB52, and every threshold downstream is calibrated to that scale). For
+each player:
 
-- *consensus* — the weighted mean of a player's rank in three independent
-  lists, each re-ranked among skill players only (`fantasy/sources.py`):
-  FantasyPros rest-of-season PPR expert consensus (the live page when it has
-  at least `FP_MIN_EXPERTS` experts, otherwise the DynastyProcess weekly
-  mirror with the full set), ESPN season projections, and RotoWire season
-  projections via Sleeper's projection feed. IDs are reconciled through the
-  DynastyProcess crosswalk. Sleeper's own `search_rank` is used only for a
-  player none of them list. A source that cannot be fetched is dropped and
-  named in the report header — never silently.
-- *production* — every skill player ranked by points per game this season under
-  this league's own scoring settings, from Sleeper's weekly stat lines.
+1. *Usage* (`fantasy/usage.py`) — what he is actually being used for this
+   season, per game, from Sleeper's weekly stat lines and the team rows they
+   sit inside (nflverse snap counts fill in while Sleeper's are pending).
+   Per-position coefficients turn that into expected *future* points per
+   game: they are fit on the two previous seasons to predict rest-of-season
+   PPG from first-part-of-season opportunity, at three points in the season,
+   which discounts a hot touchdown month by itself. The feature set per
+   position is whatever beat first-part PPG alone out of sample (fit on one
+   season, test on the other, both ways): QB — PPG, rushing first downs,
+   team red-zone attempts (r 0.46 vs 0.42); RB — PPG, touches, share of the
+   team's red-zone carries (0.85, a tie); WR — PPG, targets, receiving first
+   downs (0.78 vs 0.78); TE — target share, air-yards share, first downs
+   (0.84 vs 0.80, PPG dropped). Wider sets scored lower. Snap share rides
+   along as an extra column when it is available. The report header prints
+   the fit's out-of-sample number each run. `USAGE_ALPHA` blends the
+   prediction with raw PPG; at 1.0 the fitted predictor is trusted outright.
+2. *Depth chart and injuries* — who plays which weeks. A reserve-list or Out
+   player is projected to miss `DEFAULT_ABSENCE_WEEKS` for his tag unless a
+   blurb gave an eligible week, and the header counts how many absences rest
+   on a default (`unverified`). Whoever sits behind an absent player inherits
+   a share of his expected points for those weeks, using the same
+   `INHERITANCE` and `INHERITANCE_BY_POSITION` factors as the waiver board.
+3. *Schedule* (`fantasy/schedule.py`) — every remaining week through the last
+   playoff week, each opponent scales expected points by
+   `1 + SCHEDULE_K · (50 − percentile of points allowed to his position) / 50`,
+   clamped to `±SCHEDULE_CAP`, using the matchup tool's defense grades. Weeks
+   from the league's first playoff week count `PLAYOFF_WEIGHT` times. A bye
+   contributes nothing. This gives weighted rest-of-season points, "ours".
+4. *Prior* (`fantasy/sources.py`) — outside lists, each converted to weighted
+   rest-of-season points over the same horizon: FantasyPros ROS expert
+   consensus (a rank, converted through the ladder the other sources define;
+   the DynastyProcess weekly mirror when the live page has fewer than
+   `FP_MIN_EXPERTS`), ESPN's week-by-week projections summed over the
+   remaining weeks, and Sleeper's week-by-week projections summed the same
+   way under league scoring. Only lists that move during the season are
+   used: a payload unchanged for `SOURCE_STALE_DAYS` is flagged static in the
+   header and gets weight 0. `PRIOR_SOURCES` weights are what the backtest
+   recommends. Sleeper's static season-total feed and its `search_rank` are
+   no longer inputs.
+5. *Shrinkage* — `ROS = (games · ours + PRIOR_GAMES · prior) / (games +
+   PRIOR_GAMES)`, plus inherited points. The prior is worth `PRIOR_GAMES`
+   games of evidence; a player with no games is pure prior.
+6. *Replacement* — `REPLACEMENT_RANK` per position (QB 24, because of
+   superflex; that is where the quarterback premium now lives, so
+   `POSITION_MULTIPLIER` is flat). Points over replacement, ranked, onto the
+   curve.
 
-The blend weight is `games / (games + PRODUCTION_PRIOR_GAMES)` with the prior
-worth four games: one game moves a player a fifth of the way toward his
-production rank, four games half way, and the rank is never fully forgotten.
-Points are per game *played*, so an IR stint or a bye is not a zero, and a
-player with no games keeps his pure consensus value. Quarterbacks get a 1.20×
-superflex premium on the blended result. If the stats cannot be fetched the
-report says so in its header and every value is consensus-only.
+`healthy_value()` is the same pipeline with the player's own absence removed —
+the stash question is what he is worth once he is back. A player with no
+games this season is projected from last season's usage. `credibility()`
+reads the rank behind the value.
 
-`credibility()` — the check that a backup is good enough to convert inherited
-workload — reads the *effective* rank implied by the blended value, so a
-rank-209 receiver who just posted a WR1 week is no longer treated as rank 209.
-
-**Stashes are screened on `healthy_value()`**, the best single rank any
-source gives the player, because the consensus sources price a reserve-list
-stint into their rest-of-season rank. A back who will miss six weeks drops
-150 spots in every list, which is right for standalone value and wrong for
-the stash question, which is what he is worth once he is back. The `STASH`
-row's own value is that healthy value.
+**Backtest** — `python3 -m fantasy.backtest` scores all of this against what
+actually happened. For each completed week N it rebuilds the table as it
+stood before week N (usage and defense grades through N-1) and compares the
+ordering with week N's league-scored points: Spearman ρ and top-N hit rate
+per position, for the live model, the model with each part switched off, the
+model across grids of `PRIOR_GAMES`, `USAGE_ALPHA` and `SCHEDULE_K`, the
+prior alone, each source alone, the old `search_rank` curve, and Sleeper's
+own pre-game projection for that week. It then sets a lineup for every roster
+in the league from each candidate's values, with players who did not dress
+that week excluded for every candidate, and reports the points left on the
+bench against what the managers actually left. Team-level ρ across the 12
+rosters and a recommended set of source weights (∝ ρ − 0.5) come out of the
+same run, into `reports/backtest.md`. Rules: the prior is today's list
+because no source publishes history, and the report says so on every table;
+an in-progress week is labelled and never used to retune; a constant changes
+only with the backtest number cited. A one-week test cannot see most of what
+the schedule term does (it averages fifteen opponents), so a null result
+there is expected; the lineup and team-level numbers are the better read on it.
 
 **Opportunity** — for each free agent, the value of the players ahead of him on
 his NFL depth chart, multiplied by:

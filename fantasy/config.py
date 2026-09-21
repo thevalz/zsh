@@ -25,36 +25,68 @@ VALUE_DECAY = 60.0          # larger = flatter curve
 VALUE_SCALE = 100.0
 UNRANKED_RANK = 9999
 
-# Where the consensus rank comes from. Sleeper's own `search_rank` is one
-# site's opinion with no visible update cadence, so the prior is the weighted
-# mean of a player's rank in each of these independent lists (each re-ranked
-# among skill players only). A source that cannot be fetched is dropped and
-# named in the report header; `search_rank` is used only for a player none of
-# them list. See fantasy/sources.py.
+# ---------------------------------------------------------------------------
+# Value = rest-of-season expected points over replacement (fantasy/model.py).
+# Built from what a player is actually being used for (snaps, targets, carries,
+# red-zone looks), projected over his remaining schedule, adjusted for the
+# depth chart and injuries, and shrunk toward an outside prior while the sample
+# is small. Every constant below is scored by `python3 -m fantasy.backtest`;
+# change one only with the backtest number cited.
+# ---------------------------------------------------------------------------
+
+# Expected points per game = USAGE_ALPHA * (the usage model's prediction) +
+# (1 - USAGE_ALPHA) * actual points per game. The usage model is fit on the two
+# previous seasons to *predict* rest-of-season points from first-part-of-season
+# opportunity (targets, shares of the team's targets and air yards, red-zone
+# looks, carries, the team's own scoring chances) with actual points per game
+# as one of its inputs, so 1.0 means "trust the fitted predictor"; lowering it
+# leans back on raw points. Touchdowns are noise; targets and carries are not.
+USAGE_ALPHA = 1.0
+USAGE_MIN_GAMES = 1
+
+# The outside prior. Only sources that move during the season are used: a
+# list whose payload has not changed in SOURCE_STALE_DAYS is flagged static in
+# the report header and gets weight 0. Weights are what the backtest recommends
+# (proportional to each source's rank correlation with actual points on
+# completed weeks); see reports/backtest.md.
 PRIOR_SOURCES = {
-    "fantasypros": 1.0,   # rest-of-season PPR expert consensus
-    "espn": 1.0,          # ESPN season projections (injury-adjusted in season)
-    "rotowire": 1.0,      # RotoWire season projections via Sleeper's feed
+    "fantasypros": 1.0,   # rest-of-season PPR expert consensus rank, re-ranked weekly
+    "espn": 1.0,          # ESPN week-by-week projections, summed over remaining weeks
+    "sleeper": 1.0,       # Sleeper week-by-week projections, summed over remaining weeks
 }
+SOURCE_STALE_DAYS = 10
 # The live FantasyPros ROS page can carry two experts on a Monday. Below this
 # many, use the DynastyProcess weekly mirror, which has the full set.
 FP_MIN_EXPERTS = 8
 
-# Consensus rank is preseason data and goes stale the moment games are played.
-# Once a player has games on record, his value is a blend of the consensus
-# curve and a *production* curve: every skill player is ranked by points per
-# game under this league's own scoring settings and pushed through the same
-# decay. The blend weight is games / (games + PRODUCTION_PRIOR_GAMES), so the
-# consensus prior is worth PRODUCTION_PRIOR_GAMES games of evidence -- one game
-# moves a player a fifth of the way, four games half way, and it never fully
-# forgets the rank. Players with no games logged (IR, bye, not yet played)
-# keep their pure consensus value; a missing week is not a zero.
-PRODUCTION_PRIOR_GAMES = 4.0
-PRODUCTION_MIN_GAMES = 1
+# Shrinkage toward the prior: ROS = (games * ours + PRIOR_GAMES * prior) /
+# (games + PRIOR_GAMES). The prior is worth PRIOR_GAMES games of evidence --
+# one game moves a player a fifth of the way, four games half way. A player
+# with no games logged is pure prior; a missing week is not a zero.
+PRIOR_GAMES = 4.0
 
-# Superflex premium. A startable QB is worth more here than his raw rank implies
-# because 12 teams are chasing ~24 startable quarterbacks.
-POSITION_MULTIPLIER = {"QB": 1.20, "RB": 1.0, "WR": 1.0, "TE": 1.0}
+# Schedule. Each remaining opponent scales a player's expected points by
+# 1 + SCHEDULE_K * (50 - defense percentile vs his position) / 50, clamped to
+# +/- SCHEDULE_CAP, where 100 is the toughest defense in the league. Weeks from
+# the league's first playoff week onward count PLAYOFF_WEIGHT times, because
+# that is when the title is decided. A bye contributes nothing.
+SCHEDULE_K = 0.15
+SCHEDULE_CAP = 0.15
+PLAYOFF_WEIGHT = 2.0
+
+# Replacement level per position: the ROS points of the Nth-best player, where
+# N is roughly how many start league-wide. QB is 24 because of superflex --
+# that is where the quarterback premium now lives, so POSITION_MULTIPLIER is
+# flat.
+REPLACEMENT_RANK = {"QB": 24, "RB": 30, "WR": 30, "TE": 12}
+
+# How many weeks an absence costs when no blurb has said otherwise. These are
+# defaults, not diagnoses; a player priced on them is marked `unverified`, and
+# a blurb with an eligible week overrides them.
+DEFAULT_ABSENCE_WEEKS = {"IR": 4, "PUP": 4, "Sus": 2, "NA": 2, "DNR": 99, "Out": 1, "Doubtful": 1}
+
+# Kept flat: the superflex premium is expressed by REPLACEMENT_RANK["QB"].
+POSITION_MULTIPLIER = {"QB": 1.0, "RB": 1.0, "WR": 1.0, "TE": 1.0}
 
 # Injury designations, and how much of the starter's workload we assume is
 # actually up for grabs when he carries that tag.
@@ -151,9 +183,12 @@ CACHE_TTL = {
     "state": 1800,
     "stats": 1800,          # the in-progress week; completed weeks cache for a day
     "stats_final": 86400,
+    "stats_prior_season": 7 * 86400,
+    "usage_fit": 7 * 86400,
     "fantasypros": 6 * 3600,
     "fantasypros_mirror": 24 * 3600,
     "projections": 6 * 3600,
     "crosswalk": 24 * 3600,
+    "nflverse": 12 * 3600,
     "news": 900,
 }

@@ -104,6 +104,7 @@ Two of these live outside the repo, so you cannot see them in the tree:
 | What | Where | When |
 |---|---|---|
 | Site rebuild + snapshot commit | `.github/workflows/site.yml` | hourly at `:05`, plus Tue + Sun 12:00 UTC |
+| Value-model backtest → `reports/backtest.md` | same workflow, Tuesday 12:00 UTC run only (and manual dispatch) | weekly, after MNF |
 | Waiver/trade monitor | Claude Routine (account-level) | hourly, `:50` (read-only, after the Action) |
 | Sunday inactives + lineup | Claude Routine (account-level) | Sun 11:35am ET |
 
@@ -127,6 +128,7 @@ is public and RotoWire is scraped read-only.
 python3 -m fantasy.monitor report              # full waiver + trade analysis
 python3 -m fantasy.monitor watch               # hourly mode: what changed
 python3 -m fantasy.monitor player --name "..."  # beat-reporter news for one player
+python3 -m fantasy.backtest                    # score the value model on completed weeks
 python3 matchups.py --full --markdown --out-dir matchups
 python3 build_site.py                          # renders docs/ from the reports
 ```
@@ -154,6 +156,21 @@ disagree, the sentence wins — go read it.
   than our WR4 all season. Only a trade fixes it — stop proposing claims for it.
 - **`assess()`'s serious/likely-minor verdict is keyword matching** and errs both
   ways. It is a pointer to the text, never the answer.
+- **A change to how value is computed shows its backtest number.** Run
+  `python3 -m fantasy.backtest` before and after, and cite the ρ in the commit.
+  Hand-set overrides and "the number feels low" are not evidence; the week 1
+  and week 2 tables in `reports/backtest.md` are. An in-progress week is
+  labelled as such and never used to retune a constant.
+- **Value and lineup are one question.** A lineup of the highest-value active
+  players should score the most, and if it does not the value model is wrong.
+  The one fair way to check is to exclude players who did not dress that week
+  for every candidate; the first version of the check let the model "start"
+  inactives, concluded value and lineups were different things, and was wrong
+  by about eight points a team.
+- **A static outside list is the stale-rank problem in a different coat.**
+  Sleeper's season-total projection never moved after August (Tank Dell 52
+  points on IR). Every prior source is fingerprinted and dropped to weight 0
+  when it stops changing; the header says which.
 
 Silent filters are the dangerous bugs here. An empty result looks like "nothing
 there" and a prior fills the vacuum. If you exclude a class of player, say so in

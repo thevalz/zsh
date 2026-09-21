@@ -85,6 +85,16 @@ def weekly_stats(season: str, week: int, final: bool = False):
     return get(f"stats/nfl/regular/{season}/{week}", f"stats_{season}_{week}", ttl)
 
 
+def weekly_projections(season: str, week: int):
+    """Sleeper's pre-game projections for one week, keyed by player_id.
+
+    They persist after the games are played, which makes them a third-party
+    baseline the backtest can measure the model against.
+    """
+    return get(f"projections/nfl/regular/{season}/{week}", f"proj_{season}_{week}",
+               config.CACHE_TTL["projections"])
+
+
 def league(league_id: str = config.LEAGUE_ID):
     return get(f"league/{league_id}", "league", config.CACHE_TTL["league"])
 

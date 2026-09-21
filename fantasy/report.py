@@ -3,8 +3,7 @@
 from __future__ import annotations
 
 from . import config
-from . import sources
-from .model import League, player_value, production_meta, production_weight
+from .model import League, player_value, value_meta
 
 TIER_ICON = {
     "URGENT": "🚨",
@@ -19,29 +18,49 @@ TIER_ICON = {
 
 def header(lg: League, week: int, generated: str) -> str:
     me = lg.me
-    meta = production_meta()
-    if meta.get("error"):
-        basis = "⚠️ production data unavailable — values are consensus rank only"
-    elif meta.get("weeks"):
-        w = production_weight(meta["weeks"])
-        basis = (
-            f"values blend consensus rank with {meta['weeks']} week"
-            f"{'s' if meta['weeks'] != 1 else ''} of production "
-            f"(a player with every game played is {w:.0%} production)"
-        )
-    else:
-        basis = "values are consensus rank only — no games played yet"
-    src = sources.meta()
-    prior = "consensus rank from " + ("; ".join(src.get("used") or []) or "nothing")
+    meta = value_meta()
+    played = meta.get("played_weeks", 0)
+    w = played / (played + meta.get("prior_games", config.PRIOR_GAMES)) if played else 0.0
+    basis = (
+        f"value = rest-of-season points over replacement from usage through week {played} "
+        f"({meta.get('with_usage', 0)} players with games), projected over {meta.get('horizon')}; "
+        f"a player with every game played is {w:.0%} his own usage, the rest prior"
+        if played else
+        f"value = rest-of-season points over replacement; no games played yet, so it is the prior "
+        f"projected over {meta.get('horizon')}"
+    )
+    src = meta.get("sources") or {}
+    weights = src.get("weights") or {}
+    live = [f"{name} ×{wt:g}" for name, wt in weights.items() if wt > 0]
+    prior = "prior from " + ("; ".join(src.get("used") or []) or "nothing")
+    if live:
+        prior += f" · weights {', '.join(live)}"
+    if src.get("static"):
+        prior += " · ⚠️ static, weight 0: " + "; ".join(src["static"])
     if src.get("failed"):
         prior += " · ⚠️ unavailable: " + "; ".join(src["failed"])
     if not src.get("used"):
-        prior += " — falling back to Sleeper search rank"
+        prior += " — values rest on usage alone"
+    if meta.get("unverified"):
+        prior += (f" · {meta['unverified']} absences priced on default weeks, not a blurb "
+                  f"(`unverified`)")
+    fit = meta.get("usage_fit") or {}
+    seasons = meta.get("usage_fit_seasons") or []
+    fit_line = ""
+    if fit and seasons:
+        cells = []
+        for pos, v in fit.items():
+            if v.get("oos_r") is not None:
+                cells.append(f"{pos} {v['oos_r']:.2f}"
+                             + (f" (PPG alone {v['ppg_only']:.2f})" if v.get("ppg_only") is not None else ""))
+        if cells:
+            fit_line = (f"_usage fit on {', '.join(seasons)}; out-of-sample r vs rest-of-season PPG "
+                        f"on {seasons[-1]}: " + ", ".join(cells) + "_\n")
     return (
         f"# {config.LEAGUE_NAME} — waiver & trade monitor\n\n"
         f"**Week {week}** · {me.label} ({me.wins}-{me.losses}) · "
         f"FAAB left **${me.faab_left}** · generated {generated}\n\n"
-        f"_{basis}_  \n_{prior}_\n"
+        f"_{basis}_  \n_{prior}_  \n{fit_line}"
     )
 
 
@@ -204,8 +223,8 @@ def league_strength_section(rows: list) -> str:
     out.append(
         "\n*Lineup is the value of the starters each roster actually plays: the "
         "positional starters plus the best three leftovers for FLEX, FLEX and "
-        "SUPER_FLEX. Bench is everything after that. Values are the same blended "
-        "consensus-plus-production numbers used everywhere else in this report.*"
+        "SUPER_FLEX. Bench is everything after that. Values are the same rest-of-season "
+        "points-over-replacement numbers used everywhere else in this report.*"
     )
     return "\n".join(out) + "\n"
 

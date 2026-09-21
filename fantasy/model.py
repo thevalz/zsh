@@ -2,11 +2,12 @@
 
 from __future__ import annotations
 
+import bisect
 import math
 import sys
 from dataclasses import dataclass, field
 
-from . import config, sleeper, sources
+from . import config, schedule, sleeper, sources, usage
 
 
 def _rank_curve(rank: float) -> float:
@@ -14,161 +15,284 @@ def _rank_curve(rank: float) -> float:
     return config.VALUE_SCALE * math.exp(-rank / config.VALUE_DECAY)
 
 
-def consensus_rank(p: dict) -> float:
-    """The prior rank: the broad-sourced consensus (fantasy/sources.py), falling
-    back to Sleeper's `search_rank` only for a player no source lists."""
-    row = sources.consensus_ranks().get(p.get("player_id") or "")
-    if row:
-        return float(row["rank"])
-    return float(p.get("search_rank") or config.UNRANKED_RANK)
-
-
-def consensus_value(p: dict) -> float:
-    """The prior pushed through the decay curve."""
-    rank = consensus_rank(p)
-    if rank >= config.UNRANKED_RANK:
-        return 0.0
-    return _rank_curve(rank)
-
-
 # ---------------------------------------------------------------------------
-# Production: what players have actually scored this season under this
-# league's scoring. Built lazily once per process, from Sleeper's weekly stat
-# lines, and ranked across all skill positions so it lives on the same scale as
-# the consensus rank it is blended with.
+# Value: rest-of-season expected points over replacement.
+#
+# For every skill player:
+#   1. what he is used for (usage.py)            -> expected points per game
+#   2. the depth chart and injuries              -> who plays which weeks, who
+#                                                   inherits what
+#   3. his remaining opponents (schedule.py)     -> per-week multiplier,
+#                                                   playoff weeks weighted up
+#   4. the outside prior (sources.py)            -> shrinkage while the sample
+#                                                   is small
+#   5. replacement level per position            -> points over replacement,
+#                                                   ranked, onto the curve
+# Built once per process for the live view; the backtest rebuilds it as of
+# any past week.
 # ---------------------------------------------------------------------------
 
-_PRODUCTION: dict | None = None
-_PRODUCTION_META: dict = {"weeks": 0, "players": 0, "error": None}
+_TABLE: dict | None = None
+_TABLE_KEY: tuple | None = None
+_META: dict = {}
 
 
-def _league_points(line: dict, scoring: dict) -> float:
-    return sum(w * line.get(stat, 0.0) for stat, w in scoring.items() if stat in line)
+def _played_weeks(season: str, current_week: int) -> int:
+    """The last week with any game logged -- Sleeper's `week` rolls on Tuesday,
+    so on a Monday the current week is played but still 'current'."""
+    last = 0
+    for wk in range(1, current_week + 1):
+        try:
+            lines = sleeper.weekly_stats(season, wk, final=wk < current_week) or {}
+        except RuntimeError:
+            break
+        if any(v.get("gp") for v in lines.values()):
+            last = wk
+    return last
 
 
-def production_table(force: bool = False) -> dict:
-    """{player_id: {"pts", "games", "ppg", "rank", "value"}} for every skill
-    player with at least one game logged this season.
+def _plays(p: dict, weeks: list, first_week: int, absences: dict | None) -> tuple[list, bool]:
+    """Fraction of each remaining week this player is expected to play, and
+    whether that rests on a default rather than a blurb."""
+    status = p.get("injury_status")
+    pid = p.get("player_id")
+    unverified = False
+    out = []
+    if status in config.RESERVE_STATUSES or status == "DNR":
+        back = (absences or {}).get(pid)
+        if back is None:
+            back = first_week + config.DEFAULT_ABSENCE_WEEKS.get(status, 4)
+            unverified = True
+        out = [1.0 if w >= back else 0.0 for w in weeks]
+    elif status in ("Out", "Doubtful", "Questionable"):
+        miss = vacancy(p)
+        out = [(1.0 - miss) if w == first_week else 1.0 for w in weeks]
+        unverified = status != "Questionable"
+    else:
+        out = [1.0] * len(weeks)
+    return out, unverified
 
-    Failure is loud, not silent: if the stats cannot be fetched the table is
-    empty, values fall back to pure consensus, and a warning goes to stderr,
-    because a quiet fallback would look exactly like "nobody has played yet".
+
+def _charts_by_usage(players: dict, xppg: dict) -> dict:
+    """Depth charts ordered by Sleeper's slot, then by usage -- built here so
+    the value table never has to call player_value() to order itself."""
+    charts: dict = {}
+    for pid, p in players.items():
+        if not is_available_body(p):
+            continue
+        charts.setdefault((p["team"], p["position"]), []).append(pid)
+    for pids in charts.values():
+        pids.sort(key=lambda pid: (
+            (0, players[pid]["depth_chart_order"]) if players[pid].get("depth_chart_order")
+            else (1, -xppg.get(pid, 0.0), players[pid].get("search_rank") or config.UNRANKED_RANK)
+        ))
+    return charts
+
+
+def value_table(through_week: int | None = None, *, alpha: float | None = None,
+                prior_games: float | None = None, schedule_k: float | None = None,
+                use_prior: bool = True, use_schedule: bool = True, use_depth: bool = True,
+                prior_only: str | None = None, absences: dict | None = None,
+                force: bool = False) -> dict:
+    """{player_id: row} for every available skill player.
+
+    Row keys: value, rank, ros (weighted ROS points), ros_healthy, prior,
+    ours, inherited, games, xppg, usage_ppg, actual_ppg, snap_share, sched,
+    weeks, vorp, unverified.
+
+    `through_week` builds the table as it stood after that week (the backtest);
+    the keyword arguments switch parts off or retune constants for the same
+    purpose. The live view (no arguments) is cached per process.
     """
-    global _PRODUCTION
-    if _PRODUCTION is not None and not force:
-        return _PRODUCTION
-    table: dict = {}
-    try:
-        state = sleeper.nfl_state()
-        season = str(state.get("season") or config.SEASON)
-        current = int(state.get("week") or 0)
-        if state.get("season_type") != "regular":
-            current = 0
-        scoring = (sleeper.league().get("scoring_settings") or {})
-        players = sleeper.players()
-        totals: dict = {}
-        weeks = 0
-        for week in range(1, current + 1):
-            lines = sleeper.weekly_stats(season, week, final=week < current) or {}
-            weeks += 1
-            for pid, line in lines.items():
-                p = players.get(pid)
-                if not p or not is_available_body(p) or not line.get("gp"):
+    global _TABLE, _TABLE_KEY
+    alpha = config.USAGE_ALPHA if alpha is None else alpha
+    prior_games = config.PRIOR_GAMES if prior_games is None else prior_games
+    schedule_k = config.SCHEDULE_K if schedule_k is None else schedule_k
+    key = (through_week, alpha, prior_games, schedule_k, use_prior, use_schedule, use_depth,
+           prior_only, tuple(sorted((absences or {}).items())))
+    if _TABLE is not None and _TABLE_KEY == key and not force:
+        return _TABLE
+
+    state = sleeper.nfl_state()
+    season = str(state.get("season") or config.SEASON)
+    current = int(state.get("week") or 0)
+    if state.get("season_type") != "regular":
+        current = 0
+    settings = sleeper.league()
+    scoring = settings.get("scoring_settings") or {}
+    players = sleeper.players()
+    skill = {pid: p for pid, p in players.items() if is_available_body(p)}
+
+    played = _played_weeks(season, current) if through_week is None else min(through_week, current)
+    first_week = played + 1
+    sched = schedule.Schedule(season, settings, first_week,
+                              through_week=played if through_week is not None else None,
+                              k=schedule_k, enabled=use_schedule)
+    weeks = sched.weeks
+    weight = sched.weight
+
+    # 1. usage
+    fit_seasons = [str(int(season) - 2), str(int(season) - 1)]
+    coefs = usage.fit_coefficients(fit_seasons, scoring, players)
+    use = usage.usage_table(season, played, current, scoring, players, alpha=alpha, coefs=coefs) if played else {}
+    # last season's usage, for what an unplayed player looks like when healthy
+    last = usage.usage_table(fit_seasons[-1], 17, 99, scoring, players, alpha=alpha,
+                             coefs=coefs, prior_season_ttl=True)
+    xppg = {pid: r["xppg"] for pid, r in use.items()}
+
+    # 4. prior (fetched before depth so a no-game player's ppg can seed inheritance)
+    prior = {}
+    if use_prior:
+        try:
+            prior = sources.prior(season, weeks, weight, scoring, players, only=prior_only)
+        except Exception as err:  # noqa: BLE001
+            print(f"warning: prior unavailable ({err}); values are usage-only", file=sys.stderr)
+            prior = {}
+
+    def ppg_guess(pid: str) -> float:
+        """Best per-game guess for a player, for inheritance seeding."""
+        if pid in xppg:
+            return xppg[pid]
+        wg = sched.weighted_games(skill[pid]["team"]) or 1.0
+        if pid in prior:
+            return prior[pid]["ros"] / wg
+        return last.get(pid, {}).get("xppg", 0.0) * 0.5
+
+    # 2. who plays when, and who inherits
+    plays, unverified = {}, {}
+    for pid, p in skill.items():
+        plays[pid], unverified[pid] = _plays(p, weeks, first_week, absences)
+    inherited = {pid: [0.0] * len(weeks) for pid in skill}
+    if use_depth:
+        charts = _charts_by_usage(players, xppg)
+        pos_factor = config.INHERITANCE_BY_POSITION
+        for pid, p in skill.items():
+            for ahead, dist in players_ahead(pid, players, charts):
+                share = config.INHERITANCE.get(dist, 0.0)
+                if not share or ahead not in plays:
                     continue
-                t = totals.setdefault(pid, {"pts": 0.0, "games": 0})
-                t["pts"] += _league_points(line, scoring)
-                t["games"] += 1
-        ranked = sorted(
-            ((pid, t) for pid, t in totals.items() if t["games"] >= config.PRODUCTION_MIN_GAMES),
-            key=lambda kv: -(kv[1]["pts"] / kv[1]["games"]),
-        )
-        for i, (pid, t) in enumerate(ranked, start=1):
-            ppg = t["pts"] / t["games"]
-            table[pid] = {
-                "pts": round(t["pts"], 2), "games": t["games"], "ppg": round(ppg, 2),
-                "rank": i, "value": _rank_curve(i),
-            }
-        _PRODUCTION_META.update(weeks=weeks, players=len(table), error=None)
-    except Exception as err:  # noqa: BLE001 -- any failure must degrade loudly
-        _PRODUCTION_META.update(weeks=0, players=0, error=str(err))
-        print(f"warning: production data unavailable, values are consensus-only ({err})",
-              file=sys.stderr)
-        table = {}
-    _PRODUCTION = table
-    return table
+                gain = ppg_guess(ahead) * share * pos_factor.get(p["position"], 0.5)
+                if gain <= 0:
+                    continue
+                for i, w in enumerate(weeks):
+                    missing = 1.0 - plays[ahead][i]
+                    if missing > 0:
+                        inherited[pid][i] += gain * missing
+
+    # 3. + 4. project, shrink
+    rows: dict = {}
+    for pid, p in skill.items():
+        team, pos = p["team"], p["position"]
+        base = xppg.get(pid, 0.0)
+        games = use.get(pid, {}).get("games", 0)
+        ours = ours_healthy = inh = 0.0
+        sched_sum = sched_n = 0.0
+        for i, w in enumerate(weeks):
+            m = sched.mult(team, pos, w)
+            if m <= 0:
+                continue
+            wt = weight(w)
+            sched_sum += m * wt
+            sched_n += wt
+            ours += base * m * wt * plays[pid][i]
+            ours_healthy += base * m * wt
+            inh += inherited[pid][i] * m * wt * plays[pid][i]
+        pr = prior.get(pid, {}).get("ros") if use_prior else None
+        if pr is not None:
+            ros = (games * ours + prior_games * pr) / (games + prior_games) + inh
+            if games:
+                ros_healthy = (games * ours_healthy + prior_games * pr) / (games + prior_games) + inh
+            else:
+                # Nothing this season to say what he is when healthy; last
+                # season's usage is the least injury-adjusted evidence there is.
+                healthy_base = last.get(pid, {}).get("xppg", 0.0) * sched_sum
+                ros_healthy = max(pr, healthy_base) + inh
+        else:
+            ros = ours + inh
+            ros_healthy = (ours_healthy if games else last.get(pid, {}).get("xppg", 0.0) * sched_sum) + inh
+        rows[pid] = {
+            "ros": ros, "ros_healthy": ros_healthy, "prior": pr, "ours": ours, "inherited": inh,
+            "games": games, "xppg": base,
+            "usage_ppg": use.get(pid, {}).get("usage_ppg"), "actual_ppg": use.get(pid, {}).get("actual_ppg"),
+            "snap_share": use.get(pid, {}).get("snap_share"),
+            "sched": round(sched_sum / sched_n, 3) if sched_n else None,
+            "weeks": round(sum(plays[pid][i] * weight(w) for i, w in enumerate(weeks)
+                               if sched.mult(team, pos, w) > 0), 1),
+            "unverified": unverified[pid] and (p.get("injury_status") in config.RESERVE_STATUSES
+                                                or p.get("injury_status") in ("Out", "Doubtful")),
+        }
+
+    # 5. replacement level, points over replacement, rank, curve
+    repl = {}
+    for pos in config.SKILL_POSITIONS:
+        vals = sorted((r["ros"] for pid, r in rows.items() if skill[pid]["position"] == pos), reverse=True)
+        n = config.REPLACEMENT_RANK.get(pos, 24)
+        repl[pos] = vals[n - 1] if len(vals) >= n else (vals[-1] if vals else 0.0)
+    for pid, r in rows.items():
+        pos = skill[pid]["position"]
+        r["vorp"] = r["ros"] - repl[pos]
+        r["vorp_healthy"] = r["ros_healthy"] - repl[pos]
+    order = sorted(rows, key=lambda pid: (-rows[pid]["vorp"], -rows[pid]["ros"]))
+    vorps_desc = [rows[pid]["vorp"] for pid in order]
+    neg_sorted = [-v for v in vorps_desc]           # ascending, for bisect
+    for i, pid in enumerate(order, start=1):
+        rows[pid]["rank"] = i
+        rows[pid]["value"] = _rank_curve(i) * config.POSITION_MULTIPLIER.get(skill[pid]["position"], 1.0)
+        hr = bisect.bisect_left(neg_sorted, -rows[pid]["vorp_healthy"]) + 1
+        rows[pid]["healthy_rank"] = hr
+        rows[pid]["healthy_value"] = _rank_curve(hr) * config.POSITION_MULTIPLIER.get(skill[pid]["position"], 1.0)
+
+    _META.update(
+        season=season, played_weeks=played, first_week=first_week, horizon=sched.describe(),
+        schedule_available=sched.available, alpha=alpha, prior_games=prior_games,
+        sources=sources.meta() if use_prior else {"used": [], "failed": ["prior disabled"], "static": [], "weights": {}},
+        players=len(rows), with_usage=len(use), unverified=sum(1 for r in rows.values() if r["unverified"]),
+        replacement={k: round(v, 1) for k, v in repl.items()},
+        usage_fit={pos: {"oos_r": coefs[pos].get("oos_r"), "ppg_only": coefs[pos].get("oos_r_ppg_only"),
+                         "n": coefs[pos].get("n")} for pos in config.SKILL_POSITIONS},
+        usage_fit_seasons=fit_seasons,
+    )
+    if through_week is None and not force and key[1:] == (config.USAGE_ALPHA, config.PRIOR_GAMES,
+                                                            config.SCHEDULE_K, True, True, True, None, ()):
+        _TABLE, _TABLE_KEY = rows, key
+    elif _TABLE is None:
+        _TABLE, _TABLE_KEY = rows, key
+    return rows
 
 
-def production_meta() -> dict:
-    production_table()
-    return dict(_PRODUCTION_META)
-
-
-def production_weight(games: int) -> float:
-    """How far actual production overrides the consensus prior."""
-    if games <= 0:
-        return 0.0
-    return games / (games + config.PRODUCTION_PRIOR_GAMES)
+def value_meta() -> dict:
+    value_table()
+    return dict(_META)
 
 
 def player_value(p: dict) -> float:
-    """Approximate standalone fantasy value on a 0-100ish scale.
-
-    The consensus rank (expert consensus and season projections from several
-    sources, decayed exponentially so the curve matches how fantasy value
-    actually behaves) is the prior. Once a
-    player has games on record it is blended toward his season-to-date
-    production rank under this league's scoring, and the superflex quarterback
-    premium is applied to the result.
-    """
+    """Standalone fantasy value on a 0-100ish scale: rest-of-season expected
+    points over replacement, ranked across all skill players, on the curve."""
     if not p:
         return 0.0
-    prior = consensus_value(p)
-    prod = production_table().get(p.get("player_id") or "")
-    if prod:
-        w = production_weight(prod["games"])
-        base = (1.0 - w) * prior + w * prod["value"]
-    else:
-        base = prior
-    if base <= 0.0:
-        return 0.0
-    return base * config.POSITION_MULTIPLIER.get(p.get("position"), 1.0)
+    row = value_table().get(p.get("player_id") or "")
+    return row["value"] if row else 0.0
 
 
 def healthy_value(p: dict) -> float:
     """What a player is worth when he is playing, ignoring a current absence.
 
-    The consensus sources price a reserve-list stint into the rank -- a back
-    who will miss six weeks drops 150 spots in every rest-of-season list --
-    which is right for standalone value and wrong for a stash decision, where
-    the question is what he is worth once he is back. The best single rank any
-    source gives him (Sleeper's search rank included) is the least
-    injury-adjusted view we have.
+    The stash question is what he is worth once he is back, not what he is
+    worth while he sits. Same pipeline with the absence removed; a player with
+    no games this season is projected from last season's usage.
     """
     if not p:
         return 0.0
-    ranks = [float(p.get("search_rank") or config.UNRANKED_RANK)]
-    row = sources.consensus_ranks().get(p.get("player_id") or "")
-    if row:
-        ranks += [float(r) for r in row["sources"].values()]
-    best = min(ranks)
-    if best >= config.UNRANKED_RANK:
-        return 0.0
-    return _rank_curve(best) * config.POSITION_MULTIPLIER.get(p.get("position"), 1.0)
+    row = value_table().get(p.get("player_id") or "")
+    return row["healthy_value"] if row else 0.0
 
 
 def effective_rank(p: dict) -> float:
-    """The rank a player's blended value corresponds to on the consensus curve.
-
-    This is what "consensus rank" means once production is folded in, and it is
-    what the credibility check should read -- a rank-209 receiver who has just
-    posted a WR1 week is no longer a rank-209 receiver.
-    """
+    """The overall rank behind a player's value -- what credibility reads."""
     if not p:
         return float(config.UNRANKED_RANK)
-    base = player_value(p) / config.POSITION_MULTIPLIER.get(p.get("position"), 1.0)
-    if base <= 0.0:
-        return float(config.UNRANKED_RANK)
-    return -config.VALUE_DECAY * math.log(base / config.VALUE_SCALE)
+    row = value_table().get(p.get("player_id") or "")
+    return float(row["rank"]) if row else float(config.UNRANKED_RANK)
 
 
 def is_available_body(p: dict) -> bool:
