@@ -132,11 +132,12 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
     weight = sched.weight
 
     # 1. usage
-    coefs = usage.fit_coefficients(str(int(season) - 1), scoring, players)
+    fit_seasons = [str(int(season) - 2), str(int(season) - 1)]
+    coefs = usage.fit_coefficients(fit_seasons, scoring, players)
     use = usage.usage_table(season, played, current, scoring, players, alpha=alpha, coefs=coefs) if played else {}
     # last season's usage, for what an unplayed player looks like when healthy
-    last = usage.usage_table(str(int(season) - 1), 18, 99, scoring, players, alpha=alpha,
-                             coefs=coefs, prior_season=str(int(season) - 1))
+    last = usage.usage_table(fit_seasons[-1], 17, 99, scoring, players, alpha=alpha,
+                             coefs=coefs, prior_season_ttl=True)
     xppg = {pid: r["xppg"] for pid, r in use.items()}
 
     # 4. prior (fetched before depth so a no-game player's ppg can seed inheritance)
@@ -247,6 +248,9 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
         sources=sources.meta() if use_prior else {"used": [], "failed": ["prior disabled"], "static": [], "weights": {}},
         players=len(rows), with_usage=len(use), unverified=sum(1 for r in rows.values() if r["unverified"]),
         replacement={k: round(v, 1) for k, v in repl.items()},
+        usage_fit={pos: {"oos_r": coefs[pos].get("oos_r"), "ppg_only": coefs[pos].get("oos_r_ppg_only"),
+                         "n": coefs[pos].get("n")} for pos in config.SKILL_POSITIONS},
+        usage_fit_seasons=fit_seasons,
     )
     if through_week is None and not force and key[1:] == (config.USAGE_ALPHA, config.PRIOR_GAMES,
                                                             config.SCHEDULE_K, True, True, True, None, ()):

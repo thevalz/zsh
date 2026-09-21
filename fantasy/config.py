@@ -34,10 +34,14 @@ UNRANKED_RANK = 9999
 # change one only with the backtest number cited.
 # ---------------------------------------------------------------------------
 
-# Expected points per game = USAGE_ALPHA * (points implied by opportunity, from
-# per-position coefficients fit on last season) + (1 - USAGE_ALPHA) * actual
-# points per game. Touchdowns are noise; targets and carries are not.
-USAGE_ALPHA = 0.6
+# Expected points per game = USAGE_ALPHA * (the usage model's prediction) +
+# (1 - USAGE_ALPHA) * actual points per game. The usage model is fit on the two
+# previous seasons to *predict* rest-of-season points from first-part-of-season
+# opportunity (targets, shares of the team's targets and air yards, red-zone
+# looks, carries, the team's own scoring chances) with actual points per game
+# as one of its inputs, so 1.0 means "trust the fitted predictor"; lowering it
+# leans back on raw points. Touchdowns are noise; targets and carries are not.
+USAGE_ALPHA = 1.0
 USAGE_MIN_GAMES = 1
 
 # The outside prior. Only sources that move during the season are used: a

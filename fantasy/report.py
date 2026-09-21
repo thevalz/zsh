@@ -44,11 +44,23 @@ def header(lg: League, week: int, generated: str) -> str:
     if meta.get("unverified"):
         prior += (f" · {meta['unverified']} absences priced on default weeks, not a blurb "
                   f"(`unverified`)")
+    fit = meta.get("usage_fit") or {}
+    seasons = meta.get("usage_fit_seasons") or []
+    fit_line = ""
+    if fit and seasons:
+        cells = []
+        for pos, v in fit.items():
+            if v.get("oos_r") is not None:
+                cells.append(f"{pos} {v['oos_r']:.2f}"
+                             + (f" (PPG alone {v['ppg_only']:.2f})" if v.get("ppg_only") is not None else ""))
+        if cells:
+            fit_line = (f"_usage fit on {', '.join(seasons)}; out-of-sample r vs rest-of-season PPG "
+                        f"on {seasons[-1]}: " + ", ".join(cells) + "_\n")
     return (
         f"# {config.LEAGUE_NAME} — waiver & trade monitor\n\n"
         f"**Week {week}** · {me.label} ({me.wins}-{me.losses}) · "
         f"FAAB left **${me.faab_left}** · generated {generated}\n\n"
-        f"_{basis}_  \n_{prior}_\n"
+        f"_{basis}_  \n_{prior}_  \n{fit_line}"
     )
 
 

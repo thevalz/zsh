@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — value model backtest
 
-_generated 2026-09-21 00:48 UTC_
+_generated 2026-09-21 00:55 UTC_
 
 Each candidate predicts every skill player's value using only what was knowable before the week, and is scored against actual league-scored points for players who played (`gp = 1`). **ρ** is Spearman rank correlation (1 = perfect ordering, 0 = noise). **top-N** is the share of the week's actual top-N at the position the model also had in its top-N (N = QB 24, RB 24, WR 24, TE 12). A player a candidate does not rank counts as value 0, so coverage gaps cost the candidate.
 
@@ -16,8 +16,8 @@ _Week 1 has no usage to project from, so the full model equals the prior; the gr
 |:--|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|
 | full model (live settings) | 0.765 | 0.641 | 79% | 39/39 | 0.841 | 79% | 99/99 | 0.763 | 46% | 169/169 | 0.757 | 33% | 111/111 |
 | prior only | 0.765 | 0.641 | 79% | 39/39 | 0.841 | 79% | 99/99 | 0.763 | 46% | 169/169 | 0.757 | 33% | 111/111 |
-| prior: fantasypros alone | 0.706 | 0.629 | 79% | 39/39 | 0.783 | 79% | 99/99 | 0.702 | 50% | 169/169 | 0.627 | 33% | 111/111 |
-| prior: espn alone | 0.767 | 0.614 | 79% | 39/39 | 0.849 | 83% | 99/99 | 0.775 | 46% | 169/169 | 0.754 | 33% | 111/111 |
+| prior: fantasypros alone | 0.706 | 0.629 | 79% | 39/39 | 0.781 | 79% | 99/99 | 0.702 | 50% | 169/169 | 0.627 | 33% | 111/111 |
+| prior: espn alone | 0.767 | 0.614 | 79% | 39/39 | 0.846 | 83% | 99/99 | 0.775 | 46% | 169/169 | 0.754 | 33% | 111/111 |
 | prior: sleeper alone | 0.757 | 0.677 | 79% | 39/39 | 0.845 | 79% | 99/99 | 0.750 | 50% | 169/169 | 0.741 | 25% | 111/111 |
 | sleeper search_rank curve (pre-PR #3 model) | 0.627 | 0.531 | 75% | 39/39 | 0.759 | 75% | 98/99 | 0.588 | 42% | 169/169 | 0.474 | 17% | 110/111 |
 | sleeper projection for week 1 | 0.735 | 0.482 | 71% | 32/39 | 0.774 | 75% | 90/99 | 0.689 | 42% | 154/169 | 0.707 | 33% | 97/111 |

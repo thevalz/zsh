@@ -40,12 +40,21 @@ the RB52, and every threshold downstream is calibrated to that scale). For
 each player:
 
 1. *Usage* (`fantasy/usage.py`) — what he is actually being used for this
-   season: targets, red-zone targets, carries, red-zone carries, pass
-   attempts and snap share, per game, from Sleeper's weekly stat lines
-   (nflverse snap counts fill in while Sleeper's are pending). Per-position
-   coefficients fit on last season under this league's scoring turn that
-   into usage-implied points per game; `xppg` blends it with actual points
-   per game at `USAGE_ALPHA`, because touchdowns are noise and targets are not.
+   season, per game, from Sleeper's weekly stat lines and the team rows they
+   sit inside (nflverse snap counts fill in while Sleeper's are pending).
+   Per-position coefficients turn that into expected *future* points per
+   game: they are fit on the two previous seasons to predict rest-of-season
+   PPG from first-part-of-season opportunity, at three points in the season,
+   which discounts a hot touchdown month by itself. The feature set per
+   position is whatever beat first-part PPG alone out of sample (fit on one
+   season, test on the other, both ways): QB — PPG, rushing first downs,
+   team red-zone attempts (r 0.46 vs 0.42); RB — PPG, touches, share of the
+   team's red-zone carries (0.85, a tie); WR — PPG, targets, receiving first
+   downs (0.78 vs 0.78); TE — target share, air-yards share, first downs
+   (0.84 vs 0.80, PPG dropped). Wider sets scored lower. Snap share rides
+   along as an extra column when it is available. The report header prints
+   the fit's out-of-sample number each run. `USAGE_ALPHA` blends the
+   prediction with raw PPG; at 1.0 the fitted predictor is trusted outright.
 2. *Depth chart and injuries* — who plays which weeks. A reserve-list or Out
    player is projected to miss `DEFAULT_ABSENCE_WEEKS` for his tag unless a
    blurb gave an eligible week, and the header counts how many absences rest
