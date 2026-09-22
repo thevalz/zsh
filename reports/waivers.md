@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 3** · supervillain (4-0) · FAAB left **$68** · generated 2026-09-22 18:44 UTC
+**Week 3** · supervillain (4-0) · FAAB left **$68** · generated 2026-09-22 21:58 UTC
 
 _value = rest-of-season points over replacement from usage through week 2 (449 players with games), projected over weeks 3–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 33% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-18; live page had only 5 experts); ESPN weekly projections summed over weeks 3–17 (377 players); Sleeper weekly projections summed over 15 remaining weeks (444 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 149 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,7 +8,7 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-22 16:06 UTC (2.6h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-22 18:44 UTC (3.2h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
 Nothing changed.
 
@@ -17,16 +17,16 @@ Nothing changed.
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
-| 🚨 | **Tyson Bagent (QB-CHI)** | URGENT | 0.1 | everyone ahead of him is out — the job is his; 230,934 adds in 24h — the market has re-rated him | 230,934 | $24 |
-| 🚨 | **Jameis Winston (QB-NYG)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 47,177 adds in 24h — the market has re-rated him | 47,177 | $24 |
+| 🚨 | **Tyson Bagent (QB-CHI)** | URGENT | 0.1 | everyone ahead of him is out — the job is his; 251,334 adds in 24h — the market has re-rated him | 251,334 | $24 |
+| 🚨 | **Jameis Winston (QB-NYG)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 81,467 adds in 24h — the market has re-rated him | 81,467 | $24 |
 | 🧊 | **James Conner (RB-ARI)** | STASH | 28.2 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $7 |
-| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 5.8 | everyone ahead of him is out — the job is his; 95,221 adds in 24h — the market has re-rated him | 95,221 | $24 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 5.8 | everyone ahead of him is out — the job is his; 110,869 adds in 24h — the market has re-rated him | 110,869 | $24 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 19.5 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🔥 | **Tank Bigsby (RB-PHI)** | CONTESTED | 3.5 | every man ahead of him is banged up (1 deep); 363,881 adds in 24h — the market has re-rated him | 363,881 | $20 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.9 | direct handcuff to MY Derrick Henry | 17,316 | $2 |
+| 🔥 | **Tank Bigsby (RB-PHI)** | CONTESTED | 3.5 | every man ahead of him is banged up (1 deep); 402,003 adds in 24h — the market has re-rated him | 402,003 | $20 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 25.5 | starting for his NFL team and unrostered | 0 | $7 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.9 | direct handcuff to MY Derrick Henry | 21,393 | $2 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔥 | **Emanuel Wilson (RB-SEA)** | CONTESTED | 2.5 | every man ahead of him is banged up (1 deep); 2,118,996 adds in 24h — the market has re-rated him | 2,118,996 | $20 |
+| 🔥 | **Emanuel Wilson (RB-SEA)** | CONTESTED | 2.5 | every man ahead of him is banged up (1 deep); 2,415,744 adds in 24h — the market has re-rated him | 2,415,744 | $20 |
 | 🔹 | **Pat Freiermuth (TE-PIT)** | STARTER FA | 11.5 | starting for his NFL team and unrostered | 0 | $3 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
