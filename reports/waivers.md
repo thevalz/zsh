@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 3** · supervillain (4-0) · FAAB left **$68** · generated 2026-09-22 16:06 UTC
+**Week 3** · supervillain (4-0) · FAAB left **$68** · generated 2026-09-22 18:44 UTC
 
 _value = rest-of-season points over replacement from usage through week 2 (449 players with games), projected over weeks 3–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 33% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-18; live page had only 5 experts); ESPN weekly projections summed over weeks 3–17 (377 players); Sleeper weekly projections summed over 15 remaining weeks (444 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 149 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,53 +8,25 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-22 14:40 UTC (1.4h ago)_
+_baseline: snapshot committed 2026-09-22 16:06 UTC (2.6h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- ⚠️ **Tanner McKee (QB-PHI) → Out** — FREE AGENT player newly listed Out. Next up: **Cole Payton (QB-PHI)** — FREE AGENT, claim him.
-  ↳ _September 20, 2026 — :_ McKee (coach's decision) is  inactive as the emergency third quarterback  for Sunday's game against the Titans. (serious)
-- ⚠️ **Tua Tagovailoa (QB-ATL) → Out** — FREE AGENT player newly listed Out. Next up: **Jack Strand (QB-ATL)** — FREE AGENT, claim him.
-  ↳ _September 21, 2026 — :_ Tagovailoa (ankle) was estimated as a limited participant in Monday's walk-through practice,  Marc Raimondi of ESPN.com  reports. (practice: **LIMITED**, serious)
-- 📈 **Zach Charbonnet (RB-SEA) moved up the depth chart (5 → 4)** — Workload is trending his way.
-  ↳ _September 18, 2026 — :_ Coach Mike Macdonald said Friday that the Seahawks are drawing closer to setting a date for Charbonnet (knee) to resume practicing,  Gregg Bell of The Tacoma News Tribune  reports. (serious)
-- 📈 **Michael Penix (QB-ATL) moved up the depth chart (2 → 1)** — Workload is trending his way.
-  ↳ _September 21, 2026 — :_ The Falcons announced that Penix (knee) has been named the team's starting quarterback for Thursday's game against the Packers,  Tori McElhaney of the team's official site  reports. (serious)
-- 📈 **Matthew Golden (WR-GB) moved up the depth chart (3 → 2)** — Workload is trending his way.
-  ↳ _September 20, 2026 — :_ Golden caught four of six targets for 58 yards in Sunday's 20-17 overtime win over the Jets.
-- 📈 **Roman Wilson (WR-PIT) moved up the depth chart (4 → 3)** — Workload is trending his way. He is a free agent.
-  ↳ _September 21, 2026 — :_ Wilson caught five of six targets for 28 yards during the Steelers' 20-3 loss to the Patriots on Sunday.
-- 📈 **Denzel Boston (WR-CLE) moved up the depth chart (3 → 1)** — Workload is trending his way.
-  ↳ _September 20, 2026 — :_ Boston caught five of seven targets for 95 yards and a touchdown in the Browns' 23-19 win over Tampa Bay on Sunday.
-- 📈 **Pat Bryant (WR-DEN) moved up the depth chart (4 → 3)** — Workload is trending his way.
-  ↳ _September 21, 2026 — :_ Bryant failed to catch his only target while adding a 16-yard rush during Sunday's 20-13 win over the Jaguars.
-- 📈 **Michael Wilson (WR-ARI) moved up the depth chart (2 → 1)** — Workload is trending his way.
-- 📈 **Dontayvion Wicks (WR-PHI) moved up the depth chart (3 → 2)** — Workload is trending his way.
-- 📈 **Parker Washington (WR-JAX) moved up the depth chart (2 → 1)** — Workload is trending his way.
-- ⚠️ **Joe Royer (TE-CLE) cleared (PUP → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Luke McCaffrey (WR-WAS) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Demarcus Robinson (WR-SF) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Grant Calcaterra (TE-PHI) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Ashton Dulin (WR-IND) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Christian Kirk (WR-SF) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Cole Payton (QB-PHI) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Isiah Pacheco (RB-DET) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Malik Davis (RB-DAL) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Ty Chandler (RB-NO) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Jalen Tolbert (WR-MIA) cleared (Out → healthy)** — FREE AGENT player is off the report.
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
-| 🚨 | **Tyson Bagent (QB-CHI)** | URGENT | 0.1 | everyone ahead of him is out — the job is his; 206,094 adds in 24h — the market has re-rated him | 206,094 | $24 |
-| 🚨 | **Jameis Winston (QB-NYG)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 36,371 adds in 24h — the market has re-rated him | 36,371 | $24 |
+| 🚨 | **Tyson Bagent (QB-CHI)** | URGENT | 0.1 | everyone ahead of him is out — the job is his; 230,934 adds in 24h — the market has re-rated him | 230,934 | $24 |
+| 🚨 | **Jameis Winston (QB-NYG)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 47,177 adds in 24h — the market has re-rated him | 47,177 | $24 |
 | 🧊 | **James Conner (RB-ARI)** | STASH | 28.2 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $7 |
-| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 5.8 | everyone ahead of him is out — the job is his; 81,060 adds in 24h — the market has re-rated him | 81,060 | $24 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 5.8 | everyone ahead of him is out — the job is his; 95,221 adds in 24h — the market has re-rated him | 95,221 | $24 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 19.5 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🔥 | **Tank Bigsby (RB-PHI)** | CONTESTED | 3.5 | every man ahead of him is banged up (1 deep); 346,710 adds in 24h — the market has re-rated him | 346,710 | $20 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.9 | direct handcuff to MY Derrick Henry | 13,851 | $2 |
+| 🔥 | **Tank Bigsby (RB-PHI)** | CONTESTED | 3.5 | every man ahead of him is banged up (1 deep); 363,881 adds in 24h — the market has re-rated him | 363,881 | $20 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.9 | direct handcuff to MY Derrick Henry | 17,316 | $2 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 25.5 | starting for his NFL team and unrostered | 0 | $7 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 19.5 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔥 | **Emanuel Wilson (RB-SEA)** | CONTESTED | 2.5 | every man ahead of him is banged up (1 deep); 1,839,690 adds in 24h — the market has re-rated him | 1,839,690 | $20 |
+| 🔥 | **Emanuel Wilson (RB-SEA)** | CONTESTED | 2.5 | every man ahead of him is banged up (1 deep); 2,118,996 adds in 24h — the market has re-rated him | 2,118,996 | $20 |
 | 🔹 | **Pat Freiermuth (TE-PIT)** | STARTER FA | 11.5 | starting for his NFL team and unrostered | 0 | $3 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
