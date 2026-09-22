@@ -370,3 +370,36 @@ def usage_table(season: str, through_week: int, current_week: int, scoring: dict
             "per_game": {k: round(v, 2) for k, v in t["feat"].items() if k not in ("pts", SNAP)},
         }
     return out
+
+
+# ---------------------------------------------------------------------------
+# game logs, for floor / ceiling
+# ---------------------------------------------------------------------------
+
+def weekly_points(seasons: list, scoring: dict, players: dict, through_week: int,
+                  current_week: int) -> dict:
+    """{pid: [league points per game played]} across `seasons`, oldest first.
+
+    Every season but the last is read in full; the last (the current one) is
+    read through `through_week` so a backtest sees only what was on record.
+    """
+    out: dict = {}
+    for i, season in enumerate(seasons):
+        last = i == len(seasons) - 1
+        weeks = range(1, (through_week if last else 18) + 1)
+        for wk in weeks:
+            if last:
+                try:
+                    lines = sleeper.weekly_stats(season, wk, final=wk < current_week) or {}
+                except RuntimeError:
+                    lines = {}
+            else:
+                lines = _weekly(season, wk, config.CACHE_TTL["stats_prior_season"])
+            for pid, line in lines.items():
+                if pid.startswith("TEAM_") or not line.get("gp"):
+                    continue
+                p = players.get(pid)
+                if not p or p.get("position") not in FEATURES:
+                    continue
+                out.setdefault(pid, []).append(league_points(line, scoring))
+    return out

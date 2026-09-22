@@ -270,8 +270,8 @@ def news_section(hits: list) -> str:
 # ---------------------------------------------------------------------------
 
 VALUE_COLUMNS = (
-    "| | Pos | Player | Value | Rank | ROS | ROS/wk | Usage xPPG (g) | Actual PPG | Prior | Sched | Weeks | Status |\n"
-    "|:--|:--|:--|--:|--:|--:|--:|--:|--:|--:|--:|--:|:--|"
+    "| | Pos | Player | Value | Rank | ROS | ROS/wk | Usage xPPG (g) | Actual PPG | Floor / Ceil | Bust% | Prior | Sched | Weeks | Status |\n"
+    "|:--|:--|:--|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|--:|:--|"
 )
 
 
@@ -288,10 +288,16 @@ def _value_row(lg: League, pid: str, row: dict, starter: bool = False, healthy: 
     actual = f"{row['actual_ppg']:.1f}" if row.get("actual_ppg") is not None else "—"
     prior = f"{row['prior']:.0f}" if row.get("prior") is not None else "—"
     sched = f"{row['sched']:.2f}" if row.get("sched") is not None else "—"
+    if row.get("floor") is not None:
+        fc = f"{row['floor']:.1f} / {row['ceiling']:.1f}"
+        bust = f"{row['bust_rate']:.0%}"
+    else:
+        fc = f"— ({row.get('games_logged', 0)} g)"
+        bust = "—"
     return (
         f"| {'★' if starter else ''} | {p.get('position')} | {lg.name(pid)} ({p.get('team')}) | "
         f"{row['value']:.1f} | {row['rank']} | {row['ros']:.0f} | {per_wk:.1f} | {xppg} | {actual} | "
-        f"{prior} | {sched} | {weeks:.0f} | {status.strip(' ·')} |"
+        f"{fc} | {bust} | {prior} | {sched} | {weeks:.0f} | {status.strip(' ·')} |"
     )
 
 
@@ -327,7 +333,10 @@ def values_report(lg: League, week: int, generated: str) -> str:
         "played in brackets; **Actual PPG** is what he has scored. **Prior** is the "
         "outside lists' weighted rest-of-season points. **Sched** is his mean "
         "remaining-opponent multiplier (1.00 = league average). **Weeks** is weighted "
-        "games he is projected to play. ★ marks the lineup the strength table assumes. "
+        "games he is projected to play. **Floor / Ceil** are the 25th and 75th percentiles "
+        "of his league points per game played over last season and this one, and "
+        "**Bust%** the share of those games under 8 points; they describe consistency and "
+        "are not priced into value. ★ marks the lineup the strength table assumes. "
         "Kickers and defenses are streamed and not valued.*\n"
     )
     repl = meta.get("replacement") or {}
@@ -386,6 +395,15 @@ def resolve_player(lg: League, name: str) -> str:
         return near[0]
     hint = ", ".join(lg.describe(pid) for pid in near[:6]) or "no skill player matches"
     raise ValueError(f"'{name}': {hint}")
+
+
+def _floor_of(table: dict, chosen: list, horizon: float) -> float:
+    """Sum of the lineup's floors; a thin log falls back to 60% of his mean."""
+    total = 0.0
+    for p in chosen:
+        r = table[p]
+        total += r["floor"] if r.get("floor") is not None else 0.6 * r["ros"] / horizon
+    return total
 
 
 def _lineup(lg: League, table: dict, pids: list) -> tuple[float, list, float]:
@@ -460,11 +478,17 @@ def trade_report(lg: League, give: list, get: list, partner=None, absences: dict
     b1, l1, c1 = _lineup(lg, table, mine_after)
     t0, _, tc0 = _lineup(lg, table, partner.player_ids)
     t1, _, tc1 = _lineup(lg, table, theirs_after)
+    horizon = max((r.get("weeks") or 0.0) for r in table.values()) or 1.0
+    f0, f1 = _floor_of(table, l0, horizon), _floor_of(table, l1, horizon)
     out.append("## Lineups\n")
-    out.append(f"**{me.label}:** {b0:.1f} → {b1:.1f} ROS/wk ({b1 - b0:+.1f}); bench cover "
+    out.append(f"**{me.label}:** {b0:.1f} → {b1:.1f} ROS/wk ({b1 - b0:+.1f}); floor (sum of "
+               f"starters' 25th percentiles) {f0:.1f} → {f1:.1f} ({f1 - f0:+.1f}); bench cover "
                f"(two best RB/WR outside the lineup) {c0:.1f} → {c1:.1f}.  ")
     out.append(f"**{partner.label}:** {t0:.1f} → {t1:.1f} ROS/wk ({t1 - t0:+.1f}); bench cover "
                f"{tc0:.1f} → {tc1:.1f}.\n")
+    if b1 - b0 > -0.5 and f1 - f0 < -1.0:
+        out.append("*Equal or better on the mean, worse on the floor: this swaps consistency for "
+                   "ceiling. For the league's strongest lineup that is a cost, not a wash.*\n")
     out.append(f"- my lineup now: {_fmt_lineup(lg, table, l0)}")
     out.append(f"- my lineup after: {_fmt_lineup(lg, table, l1)}\n")
 
@@ -485,17 +509,17 @@ def trade_report(lg: League, give: list, get: list, partner=None, absences: dict
         if not _balanced(vg, v, band):
             continue
         after = [p for p in me.player_ids if p not in give] + combo
-        bl, _, cl = _lineup(lg, table, after)
+        bl, lc, cl = _lineup(lg, table, after)
         tl, _, _ = _lineup(lg, table, [p for p in partner.player_ids if p not in combo] + give)
-        scored.append((bl - b0, v - vg, combo, cl, tl - t0))
-    scored.sort(key=lambda s: (-s[0], -s[1]))
+        scored.append((bl - b0, v - vg, combo, cl, tl - t0, _floor_of(table, lc, horizon) - f0))
+    scored.sort(key=lambda s: (-s[0], -s[5], -s[1]))
     out.append("## Counters worth asking for\n")
     if scored:
-        out.append("| Get instead | Value get | My lineup | My bench cover | Their lineup |")
-        out.append("|:--|--:|--:|--:|--:|")
-        for dl, dv, combo, cl, dt in scored[:8]:
+        out.append("| Get instead | Value get | My lineup | My floor | My bench cover | Their lineup |")
+        out.append("|:--|--:|--:|--:|--:|--:|")
+        for dl, dv, combo, cl, dt, df in scored[:8]:
             out.append(f"| {' + '.join(lg.name(p) for p in combo)} | {vg + dv:.1f} ({dv:+.1f}) | "
-                       f"{dl:+.1f}/wk | {cl:.1f} | {dt:+.1f}/wk |")
+                       f"{dl:+.1f}/wk | {df:+.1f} | {cl:.1f} | {dt:+.1f}/wk |")
         out.append("\n*Same players out, different players back, filtered to the balance band and "
                    "sorted by what my lineup gains. A row that also drops their lineup is one they "
                    "will decline; the ones near zero for them are the asks.*")

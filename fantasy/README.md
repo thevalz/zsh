@@ -92,6 +92,15 @@ each player:
    `POSITION_MULTIPLIER` is flat). Points over replacement, ranked, onto the
    curve.
 
+**Consistency** — next to every value the reports show *Floor / Ceil* (the 25th
+and 75th percentiles of the player's league points per game played over last
+season and this one) and *Bust%* (share of those games under `BUST_POINTS`).
+They describe, they do not price: value stays a mean. The trade evaluator sums
+starters' floors before and after a swap and says so when a trade holds the
+mean and lowers the floor, and the backtest reports how floor-set lineups fare
+against value-set ones. Under `CONSISTENCY_MIN_GAMES` logged games the columns
+show a dash with the count.
+
 `healthy_value()` is the same pipeline with the player's own absence removed —
 the stash question is what he is worth once he is back. A player with no
 games this season is projected from last season's usage. `credibility()`

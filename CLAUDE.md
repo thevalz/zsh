@@ -169,6 +169,11 @@ disagree, the sentence wins — go read it.
   for every candidate; the first version of the check let the model "start"
   inactives, concluded value and lineups were different things, and was wrong
   by about eight points a team.
+- **The model prices means.** For a favourite, floor beats ceiling at equal mean:
+  a swap of equal rest-of-season points that lowers the lineup's summed 25th
+  percentiles is a cost, not a wash. Read the Floor / Ceil and Bust% columns
+  (values page, trade evaluator) before accepting one. Diggs-for-Skattebo read
+  as even on the mean and was a floor downgrade at two slots.
 - **A static outside list is the stale-rank problem in a different coat.**
   Sleeper's season-total projection never moved after August (Tank Dell 52
   points on IR). Every prior source is fingerprinted and dropped to weight 0

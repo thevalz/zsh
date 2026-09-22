@@ -95,6 +95,14 @@ REPLACEMENT_RANK = {"QB": 24, "RB": 30, "WR": 30, "TE": 12}
 # a blurb with an eligible week overrides them.
 DEFAULT_ABSENCE_WEEKS = {"IR": 4, "PUP": 4, "Sus": 2, "NA": 2, "DNR": 99, "Out": 1, "Doubtful": 1}
 
+# Consistency, reported next to value but never priced into it: floor and
+# ceiling are the 25th and 75th percentiles of a player's league points per
+# game played over last season and this one; bust rate is the share of those
+# games under BUST_POINTS. Fewer than CONSISTENCY_MIN_GAMES logged and the
+# report shows a dash with the count instead of a number.
+BUST_POINTS = 8.0
+CONSISTENCY_MIN_GAMES = 6
+
 # Kept flat: the superflex premium is expressed by REPLACEMENT_RANK["QB"].
 POSITION_MULTIPLIER = {"QB": 1.0, "RB": 1.0, "WR": 1.0, "TE": 1.0}
 

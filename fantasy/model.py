@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import bisect
 import math
+import statistics
 import sys
 from dataclasses import dataclass, field
 
@@ -142,6 +143,9 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
     last = usage.usage_table(fit_seasons[-1], 17, 99, scoring, players, alpha=alpha,
                              coefs=coefs, prior_season_ttl=True)
     xppg = {pid: r["xppg"] for pid, r in use.items()}
+    # Game logs for floor / ceiling: last season plus this one, through the
+    # weeks on record. Reported, never priced.
+    logs = usage.weekly_points([fit_seasons[-1], season], scoring, players, played, current)
 
     # 4. prior (fetched before depth so a no-game player's ppg can seed inheritance)
     prior = {}
@@ -224,6 +228,15 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
             "unverified": unverified[pid] and (p.get("injury_status") in config.RESERVE_STATUSES
                                                 or p.get("injury_status") in ("Out", "Doubtful")),
         }
+        log = logs.get(pid) or []
+        rows[pid]["games_logged"] = len(log)
+        if len(log) >= config.CONSISTENCY_MIN_GAMES:
+            q = statistics.quantiles(log, n=4)
+            rows[pid]["floor"] = round(q[0], 1)
+            rows[pid]["ceiling"] = round(q[2], 1)
+            rows[pid]["bust_rate"] = round(sum(1 for v in log if v < config.BUST_POINTS) / len(log), 2)
+        else:
+            rows[pid]["floor"] = rows[pid]["ceiling"] = rows[pid]["bust_rate"] = None
 
     # 5. replacement level, points over replacement, rank, curve
     repl = {}

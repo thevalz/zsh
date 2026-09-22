@@ -248,6 +248,11 @@ def evaluate_week(week: int, season: str, current_week: int, scoring: dict,
                                f"matchups_{week}", 600) or []
         slots = skill_slots(roster_positions)
         live = cands[LIVE]
+        # Floor-weighted lineups: start by 25th percentile instead of value.
+        # Answers whether floor should ever drive the model, not just decorate it.
+        tab = model.value_table(through_week=week - 1)
+        floor_vals = {pid: r["floor"] for pid, r in tab.items() if r.get("floor") is not None}
+        floor_left_total = 0.0
         team_rows, drift = [], 0.0
         for m in matchups:
             t = teams.get(m.get("roster_id"))
@@ -264,6 +269,8 @@ def evaluate_week(week: int, season: str, current_week: int, scoring: dict,
             raw_live = round(optimal - sum(pts.get(pid, 0.0)
                                            for pid in pick_lineup(live, roster, players, slots)), 1)
             pred_value = sum(live.get(pid, 0.0) for pid in pick_lineup(live, active, players, slots))
+            floor_left_total += optimal - sum(pts.get(pid, 0.0)
+                                              for pid in pick_lineup(floor_vals, active, players, slots))
             drift = max(drift, max((abs(actual.get(pid, 0.0) - pts.get(pid, 0.0))
                                     for pid in roster if pid in actual), default=0.0))
             team_rows.append({
@@ -280,6 +287,7 @@ def evaluate_week(week: int, season: str, current_week: int, scoring: dict,
             "rho_actual": spearman([r["pred"] for r in team_rows], [r["actual"] for r in team_rows]),
             "mean_left": {name: round(sum(r["left"][name] for r in team_rows) / n, 1) for name in cands} if n else {},
             "mean_manager_left": round(sum(r["manager_left"] for r in team_rows) / n, 1) if n else None,
+            "mean_floor_left": round(floor_left_total / n, 1) if n else None,
             "mean_raw_live_left": round(sum(r["raw_live_left"] for r in team_rows) / n, 1) if n else None,
         }
     except Exception as err:  # noqa: BLE001
@@ -350,7 +358,8 @@ def render(results: list, prior_note: str, generated: str) -> str:
                 f"\nTeam-level ρ (n = {lg['n']}): predicted vs optimal **{_f(lg['rho_optimal'])}**, "
                 f"predicted vs actual total **{_f(lg['rho_actual'])}**. "
                 f"Mean points left on bench: managers **{lg['mean_manager_left']}**; "
-                f"live model **{lg['mean_left'].get(LIVE)}** (raw, inactives allowed: {lg['mean_raw_live_left']}).\n"
+                f"live model **{lg['mean_left'].get(LIVE)}** (raw, inactives allowed: {lg['mean_raw_live_left']}); "
+                f"lineups set by floor (25th percentile) instead of value: **{lg.get('mean_floor_left')}**.\n"
             )
             out.append("| Setter | Mean left on bench |")
             out.append("|:--|--:|")
@@ -429,7 +438,8 @@ def summary(results: list) -> str:
             "still change. Do not retune any constant until every scored week is final."
         )
     lines.append("\nLineup verdict, inactives excluded (mean points left on bench per team): " + "; ".join(
-        f"week {r['week']}: managers {r['league']['mean_manager_left']}, live model {r['league']['mean_left'].get(LIVE)}"
+        f"week {r['week']}: managers {r['league']['mean_manager_left']}, live model "
+        f"{r['league']['mean_left'].get(LIVE)}, floor-set lineups {r['league'].get('mean_floor_left')}"
         for r in results if r.get("league")) + ".")
     return "\n".join(lines)
 
