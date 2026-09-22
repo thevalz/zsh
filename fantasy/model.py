@@ -58,11 +58,14 @@ def _plays(p: dict, weeks: list, first_week: int, absences: dict | None) -> tupl
     pid = p.get("player_id")
     unverified = False
     out = []
-    if status in config.RESERVE_STATUSES or status == "DNR":
-        back = (absences or {}).get(pid)
-        if back is None:
-            back = first_week + config.DEFAULT_ABSENCE_WEEKS.get(status, 4)
-            unverified = True
+    back = (absences or {}).get(pid)
+    if back is not None:
+        # A blurb said when he is back; that beats any tag, including a bare
+        # "Out" that would otherwise be read as one week.
+        out = [1.0 if w >= back else 0.0 for w in weeks]
+    elif status in config.RESERVE_STATUSES or status == "DNR":
+        back = first_week + config.DEFAULT_ABSENCE_WEEKS.get(status, 4)
+        unverified = True
         out = [1.0 if w >= back else 0.0 for w in weeks]
     elif status in ("Out", "Doubtful", "Questionable"):
         miss = vacancy(p)

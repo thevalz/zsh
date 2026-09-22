@@ -392,11 +392,14 @@ def _lineup(lg: League, table: dict, pids: list) -> tuple[float, list, float]:
     """(weighted ROS/wk of the lineup, the lineup, bench cover) for a roster."""
     from .backtest import pick_lineup, skill_slots
     slots = skill_slots(lg.settings.get("roster_positions") or [])
+    # Per horizon week, not per week he plays: a man out until midseason has a
+    # high per-game number and no games, and must not be "started" here.
+    horizon = max((r.get("weeks") or 0.0) for r in table.values()) or 1.0
     vals = {}
     for pid in pids:
         r = table.get(pid)
-        if r and r.get("weeks"):
-            vals[pid] = r["ros"] / r["weeks"]
+        if r:
+            vals[pid] = r["ros"] / horizon
     chosen = pick_lineup(vals, list(vals), lg.players, slots)
     rest = sorted((vals[p] for p in vals if p not in chosen
                    and lg.players[p].get("position") in ("RB", "WR")), reverse=True)
@@ -404,17 +407,20 @@ def _lineup(lg: League, table: dict, pids: list) -> tuple[float, list, float]:
 
 
 def _fmt_lineup(lg: League, table: dict, chosen: list) -> str:
+    horizon = max((r.get("weeks") or 0.0) for r in table.values()) or 1.0
     return ", ".join(
-        f"{lg.players[p]['position']} {lg.name(p)} {table[p]['ros'] / table[p]['weeks']:.1f}"
+        f"{lg.players[p]['position']} {lg.name(p)} {table[p]['ros'] / horizon:.1f}"
         for p in chosen
     )
 
 
-def trade_report(lg: League, give: list, get: list, partner=None) -> str:
+def trade_report(lg: League, give: list, get: list, partner=None, absences: dict | None = None) -> str:
+    """`absences` maps player_id -> first week he is back, from blurbs the caller
+    read; it overrides the tag-default absence for those players."""
     from . import model as _model, news
     from .trades import _balanced
 
-    table = _model.value_table()
+    table = _model.value_table(absences=absences) if absences else _model.value_table()
     meta = _model.value_meta()
     me = lg.me
     partner = partner or lg.owner_of(get[0])

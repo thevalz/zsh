@@ -331,6 +331,9 @@ def main(argv=None) -> int:
     ap.add_argument("--get", nargs="+", help="trade mode: players I receive")
     ap.add_argument("--with", dest="with_team",
                     help="trade mode: the other team (defaults to the owner of the first --get player)")
+    ap.add_argument("--back", nargs="*", default=[],
+                    help="trade mode: 'Name=week' pairs -- the week a blurb says an injured player "
+                         "returns, overriding the tag's default absence")
     ap.add_argument("--no-save", action="store_true",
                     help="do not update the stored snapshot")
     ap.add_argument("--save", action="store_true",
@@ -380,7 +383,13 @@ def main(argv=None) -> int:
                                 if want in (t.team_name or "").lower() or want in t.display_name.lower()), None)
                 if partner is None:
                     ap.error(f"no team matches {args.with_team!r}")
-            text = report.trade_report(lg, give, get, partner)
+            absences = {}
+            for pair in args.back:
+                name, _, wk = pair.rpartition("=")
+                if not name or not wk.isdigit():
+                    ap.error(f"--back expects 'Name=week', got {pair!r}")
+                absences[report.resolve_player(lg, name)] = int(wk)
+            text = report.trade_report(lg, give, get, partner, absences or None)
         except ValueError as err:
             print(f"error: {err}", file=sys.stderr)
             return 1
