@@ -325,8 +325,12 @@ def summarize_for_push(alerts: list, board: list) -> str:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description="Zebras Shooting Heroin monitor")
     ap.add_argument("mode", nargs="?", default="report",
-                    choices=["report", "watch", "trades", "waiver", "player", "values"])
+                    choices=["report", "watch", "trades", "waiver", "player", "values", "trade"])
     ap.add_argument("--name", help="player mode: whose news to look up")
+    ap.add_argument("--give", nargs="+", help="trade mode: players I send")
+    ap.add_argument("--get", nargs="+", help="trade mode: players I receive")
+    ap.add_argument("--with", dest="with_team",
+                    help="trade mode: the other team (defaults to the owner of the first --get player)")
     ap.add_argument("--no-save", action="store_true",
                     help="do not update the stored snapshot")
     ap.add_argument("--save", action="store_true",
@@ -358,6 +362,32 @@ def main(argv=None) -> int:
               + (f", practice {info['practice']}" if info["practice"] else ""))
         for b in blurbs:
             print(f"\n  [{b['date']}] {b['headline']}\n    {b['body']}")
+        return 0
+
+    if args.mode == "trade":
+        # Score an offer that arrived, with the same numbers the trade finder
+        # uses to make its own. Read-only.
+        if not args.give or not args.get:
+            ap.error("trade mode needs --give and --get")
+        lg = model.load()
+        try:
+            give = [report.resolve_player(lg, n) for n in args.give]
+            get = [report.resolve_player(lg, n) for n in args.get]
+            partner = None
+            if args.with_team:
+                want = args.with_team.lower()
+                partner = next((t for t in lg.teams
+                                if want in (t.team_name or "").lower() or want in t.display_name.lower()), None)
+                if partner is None:
+                    ap.error(f"no team matches {args.with_team!r}")
+            text = report.trade_report(lg, give, get, partner)
+        except ValueError as err:
+            print(f"error: {err}", file=sys.stderr)
+            return 1
+        print(text)
+        if args.out:
+            with open(args.out, "w") as fh:
+                fh.write(text)
         return 0
 
     if args.mode == "values":

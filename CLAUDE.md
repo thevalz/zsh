@@ -130,6 +130,7 @@ python3 -m fantasy.monitor watch               # hourly mode: what changed
 python3 -m fantasy.monitor player --name "..."  # beat-reporter news for one player
 python3 -m fantasy.backtest                    # score the value model on completed weeks
 python3 -m fantasy.monitor values              # every roster, every player, the numbers behind value (read-only)
+python3 -m fantasy.monitor trade --give "A" --get "B"   # score an offer: value, both lineups, counters, blurbs
 python3 matchups.py --full --markdown --out-dir matchups
 python3 build_site.py                          # renders docs/ from the reports
 ```

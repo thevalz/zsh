@@ -26,6 +26,7 @@ python3 -m fantasy.monitor waiver    # waiver board + handcuff table only
 python3 -m fantasy.monitor trades    # roster strengths + trade targets only
 python3 -m fantasy.backtest          # score the value model against completed weeks
 python3 -m fantasy.monitor values    # every roster's players with the numbers behind their value
+python3 -m fantasy.monitor trade --give "Cam Skattebo" --get "Stefon Diggs"   # score an offer, with counters
 ```
 
 No dependencies beyond the Python standard library. Everything comes from

@@ -362,3 +362,148 @@ def values_report(lg: League, week: int, generated: str) -> str:
         out.append(_value_row(lg, pid, table[pid], healthy=True))
     out.append("")
     return "\n".join(out) + "\n"
+
+
+# ---------------------------------------------------------------------------
+# Trade evaluation: score an offer the way the model scores everything else
+# ---------------------------------------------------------------------------
+
+def resolve_player(lg: League, name: str) -> str:
+    """Sleeper player_id for a name; raises ValueError naming near matches."""
+    want = name.strip().lower()
+    exact = [pid for pid, p in lg.players.items()
+             if p.get("team") and (p.get("full_name") or "").lower() == want]
+    if len(exact) > 1:
+        rostered = [pid for pid in exact if pid in lg.rostered]
+        exact = rostered or exact[:1]
+    if len(exact) == 1:
+        return exact[0]
+    tokens = want.split()
+    near = [pid for pid, p in lg.players.items()
+            if p.get("team") and p.get("position") in config.SKILL_POSITIONS
+            and all(t in (p.get("full_name") or "").lower() for t in tokens)]
+    if len(near) == 1:
+        return near[0]
+    hint = ", ".join(lg.describe(pid) for pid in near[:6]) or "no skill player matches"
+    raise ValueError(f"'{name}': {hint}")
+
+
+def _lineup(lg: League, table: dict, pids: list) -> tuple[float, list, float]:
+    """(weighted ROS/wk of the lineup, the lineup, bench cover) for a roster."""
+    from .backtest import pick_lineup, skill_slots
+    slots = skill_slots(lg.settings.get("roster_positions") or [])
+    vals = {}
+    for pid in pids:
+        r = table.get(pid)
+        if r and r.get("weeks"):
+            vals[pid] = r["ros"] / r["weeks"]
+    chosen = pick_lineup(vals, list(vals), lg.players, slots)
+    rest = sorted((vals[p] for p in vals if p not in chosen
+                   and lg.players[p].get("position") in ("RB", "WR")), reverse=True)
+    return sum(vals[p] for p in chosen), chosen, sum(rest[:2])
+
+
+def _fmt_lineup(lg: League, table: dict, chosen: list) -> str:
+    return ", ".join(
+        f"{lg.players[p]['position']} {lg.name(p)} {table[p]['ros'] / table[p]['weeks']:.1f}"
+        for p in chosen
+    )
+
+
+def trade_report(lg: League, give: list, get: list, partner=None) -> str:
+    from . import model as _model, news
+    from .trades import _balanced
+
+    table = _model.value_table()
+    meta = _model.value_meta()
+    me = lg.me
+    partner = partner or lg.owner_of(get[0])
+    if partner is None:
+        raise ValueError(f"{lg.name(get[0])} is not on any roster; use --with to name the other team")
+    for pid in give:
+        if pid not in me.player_ids:
+            raise ValueError(f"{lg.name(pid)} is not on my roster")
+    for pid in get:
+        if pid not in partner.player_ids:
+            raise ValueError(f"{lg.name(pid)} is not on {partner.label}'s roster")
+
+    out = [f"# Trade: {' + '.join(lg.name(p) for p in give)} for "
+           f"{' + '.join(lg.name(p) for p in get)} (with {partner.label})\n"]
+    out.append(VALUE_COLUMNS)
+    for pid in give:
+        out.append(_value_row(lg, pid, table[pid], healthy=True).replace("|  |", "| give |", 1))
+    for pid in get:
+        out.append(_value_row(lg, pid, table[pid], healthy=True).replace("|  |", "| get |", 1))
+
+    vg = sum(table[p]["value"] for p in give)
+    vr = sum(table[p]["value"] for p in get)
+    tol = 0.45 if len(give) == len(get) == 1 else 0.35
+    verdict = "inside" if _balanced(vg, vr, tol) else "outside"
+    repl = meta.get("replacement") or {}
+    out.append(
+        f"\n**Standalone value:** give {vg:.1f}, get {vr:.1f} ({vr - vg:+.1f}); {verdict} the "
+        f"{tol:.0%} balance band the trade finder uses. Replacement level (ROS points): "
+        + " · ".join(f"{k} {v}" for k, v in repl.items())
+        + ". Equal rest-of-season points at different positions are not equal value: the "
+        "gap to replacement is what counts.\n"
+    )
+
+    mine_after = [p for p in me.player_ids if p not in give] + get
+    theirs_after = [p for p in partner.player_ids if p not in get] + give
+    b0, l0, c0 = _lineup(lg, table, me.player_ids)
+    b1, l1, c1 = _lineup(lg, table, mine_after)
+    t0, _, tc0 = _lineup(lg, table, partner.player_ids)
+    t1, _, tc1 = _lineup(lg, table, theirs_after)
+    out.append("## Lineups\n")
+    out.append(f"**{me.label}:** {b0:.1f} → {b1:.1f} ROS/wk ({b1 - b0:+.1f}); bench cover "
+               f"(two best RB/WR outside the lineup) {c0:.1f} → {c1:.1f}.  ")
+    out.append(f"**{partner.label}:** {t0:.1f} → {t1:.1f} ROS/wk ({t1 - t0:+.1f}); bench cover "
+               f"{tc0:.1f} → {tc1:.1f}.\n")
+    out.append(f"- my lineup now: {_fmt_lineup(lg, table, l0)}")
+    out.append(f"- my lineup after: {_fmt_lineup(lg, table, l1)}\n")
+
+    # Counters: keep what I give, vary what I get from their roster -- at the
+    # positions changing hands on either side, so "Diggs plus one of their
+    # backs" is a candidate when I am sending a back.
+    positions = {lg.players[p]["position"] for p in list(get) + list(give)}
+    pool = [p for p in partner.player_ids if p in table
+            and lg.players[p].get("position") in positions and p not in get]
+    combos = [[p] for p in pool + list(get)]
+    combos += [[a, b] for i, a in enumerate(pool + list(get)) for b in (pool + list(get))[i + 1:]]
+    scored = []
+    for combo in combos:
+        if sorted(combo) == sorted(get):
+            continue
+        v = sum(table[p]["value"] for p in combo)
+        band = 0.45 if len(combo) == len(give) else 0.35
+        if not _balanced(vg, v, band):
+            continue
+        after = [p for p in me.player_ids if p not in give] + combo
+        bl, _, cl = _lineup(lg, table, after)
+        tl, _, _ = _lineup(lg, table, [p for p in partner.player_ids if p not in combo] + give)
+        scored.append((bl - b0, v - vg, combo, cl, tl - t0))
+    scored.sort(key=lambda s: (-s[0], -s[1]))
+    out.append("## Counters worth asking for\n")
+    if scored:
+        out.append("| Get instead | Value get | My lineup | My bench cover | Their lineup |")
+        out.append("|:--|--:|--:|--:|--:|")
+        for dl, dv, combo, cl, dt in scored[:8]:
+            out.append(f"| {' + '.join(lg.name(p) for p in combo)} | {vg + dv:.1f} ({dv:+.1f}) | "
+                       f"{dl:+.1f}/wk | {cl:.1f} | {dt:+.1f}/wk |")
+        out.append("\n*Same players out, different players back, filtered to the balance band and "
+                   "sorted by what my lineup gains. A row that also drops their lineup is one they "
+                   "will decline; the ones near zero for them are the asks.*")
+    else:
+        out.append("No alternative package from their roster falls inside the balance band.")
+
+    out.append("\n## News\n")
+    for pid in list(give) + list(get):
+        p = lg.players[pid]
+        blurbs = news.player_news(p.get("rotowire_id"), limit=2)
+        if blurbs:
+            b = blurbs[0]
+            out.append(f"- **{lg.name(pid)}** ({_model.injury_label(p) or 'healthy'}) — "
+                       f"_{b['date']}: {b['headline'] or 'no headline'}_ {b['body']}")
+        else:
+            out.append(f"- **{lg.name(pid)}** ({_model.injury_label(p) or 'healthy'}) — no recent news")
+    return "\n".join(out) + "\n"
