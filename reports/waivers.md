@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 2** · supervillain (2-0) · FAAB left **$68** · generated 2026-09-21 23:11 UTC
+**Week 3** · supervillain (2-0) · FAAB left **$68** · generated 2026-09-22 04:39 UTC
 
 _value = rest-of-season points over replacement from usage through week 2 (449 players with games), projected over weeks 3–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 33% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-18; live page had only 2 experts); ESPN weekly projections summed over weeks 3–17 (374 players); Sleeper weekly projections summed over 15 remaining weeks (440 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 147 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,32 +8,28 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-21 19:16 UTC (3.9h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-21 23:12 UTC (5.5h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- ⚠️ **Charlie Kolar (TE-LAC) Questionable → Out** — FREE AGENT player's status changed. Next up: **Patrick Herbert (TE-LAC)** — FREE AGENT, claim him.
-  ↳ _September 21, 2026 — :_ Head coach Jim Harbaugh said Monday that Kolar will go on injured reserve due to a forearm injury he sustained during Sunday's 26-14 loss to the Raiders,  Kris Rhim of ESPN.com  reports. (serious)
-- ⚠️ **Puka Nacua (WR-LAR) Questionable → Out** — East Coast Wins Most's player's status changed. Next up: **Davante Adams (WR-LAR)** — rostered by Holy Turnovers, Batman!.
-  ↳ _September 21, 2026 — :_ Nacua (hip) is listed as inactive Monday against the Giants,  Adam Schefter of ESPN  reports. (serious)
-- ⚠️ **Ty Simpson (QB-LAR) → Out** — FREE AGENT player newly listed Out. Next up: **Matthew Caldwell (QB-LAR)** — FREE AGENT, claim him.
-  ↳ _September 21, 2026 — :_ Simpson (coach's decision) is  inactive  but will serve as the Rams' emergency third quarterback for Monday's game against the Giants.
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
-| 🚨 | **Tyson Bagent (QB-CHI)** | URGENT | 0.1 | everyone ahead of him is out — the job is his; 137,118 adds in 24h — the market has re-rated him | 137,118 | $24 |
-| 🚨 | **Marcus Mariota (QB-WAS)** | URGENT | 0.8 | everyone ahead of him is out — the job is his; 132,272 adds in 24h — the market has re-rated him | 132,272 | $24 |
+| 🚨 | **Tyson Bagent (QB-CHI)** | URGENT | 0.1 | everyone ahead of him is out — the job is his; 112,770 adds in 24h — the market has re-rated him | 112,770 | $24 |
+| 🚨 | **Marcus Mariota (QB-WAS)** | URGENT | 0.8 | everyone ahead of him is out — the job is his; 113,804 adds in 24h — the market has re-rated him | 113,804 | $24 |
 | 🧊 | **James Conner (RB-ARI)** | STASH | 26.8 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $7 |
-| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 5.5 | everyone ahead of him is out — the job is his; Zay Flowers is Out (Hamstring) | 35,490 | $24 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 5.5 | everyone ahead of him is out — the job is his; Zay Flowers is Out (Hamstring) | 35,005 | $24 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 19.2 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🔥 | **Tank Bigsby (RB-PHI)** | CONTESTED | 3.6 | every man ahead of him is banged up (1 deep); 244,202 adds in 24h — the market has re-rated him | 244,202 | $20 |
+| 🔥 | **Tank Bigsby (RB-PHI)** | CONTESTED | 3.6 | every man ahead of him is banged up (1 deep); 230,657 adds in 24h — the market has re-rated him | 230,657 | $20 |
 | 🟢 | **Justice Hill (RB-BAL)** | BUY EARLY | 3.9 | direct handcuff to MY Derrick Henry | 0 | $2 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 25.5 | starting for his NFL team and unrostered | 0 | $7 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 19.9 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔥 | **Emanuel Wilson (RB-SEA)** | CONTESTED | 3.5 | every man ahead of him is banged up (2 deep); 521,541 adds in 24h — the market has re-rated him | 521,541 | $20 |
+| 🔥 | **Emanuel Wilson (RB-SEA)** | CONTESTED | 3.5 | every man ahead of him is banged up (2 deep); 825,390 adds in 24h — the market has re-rated him | 825,390 | $20 |
 | · | **Jaylin Noel (WR-HOU)** | SPECULATIVE | 3.2 | Nico Collins is Out (Hamstring); fills my thin WR room | 0 | $1 |
+| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 17.1 | starting for his NFL team and unrostered | 12,020 | $3 |
 | 🔹 | **Pat Freiermuth (TE-PIT)** | STARTER FA | 11.6 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔹 | **Juwan Johnson (TE-NO)** | STARTER FA | 17.1 | starting for his NFL team and unrostered | 12,918 | $3 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
