@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-23 20:10 UTC
+**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-23 23:35 UTC
 
 _value = rest-of-season points over replacement from usage through week 2 (452 players with games), projected over weeks 3–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 33% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-18; live page had only 6 experts); ESPN weekly projections summed over weeks 3–17 (379 players); Sleeper weekly projections summed over 15 remaining weeks (448 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 90 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,30 +8,10 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-23 16:45 UTC (3.4h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-23 20:10 UTC (3.4h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- 🚨 **Alec Pierce (WR-IND) Doubtful → Out** — MY player's status changed. Next up: **Laquon Treadwell (WR-IND)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ Colts head coach Shane Steichen said Wednesday that Pierce (heel) will be placed on injured reserve and is without a timeline for a return,  Kevin Bowen of 107.5 The Fan Indianapolis  reports. (serious)
-- ⚠️ **Andrei Iosivas (WR-CIN) → Out** — FREE AGENT player newly listed Out. Next up: **Dohnte Meyers (WR-CIN)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ Bengals head coach Zac Taylor said Wednesday that Iosivas tore a ligament in his thumb and will be placed on injured reserve,  Ben Baby of ESPN.com  reports. (serious)
-- ⚠️ **Jaxson Dart (QB-NYG) Doubtful → Out** — Jersey Rum Hams's player's status changed. Next up: **Clayton Thorson (QB-NYG)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ Dart is expected to undergo knee surgery that will end his 2026 season but lead to a full recovery heading into 2027,  Ian Rapoport and Mike Garafolo of NFL Network  report. (serious)
-- ⚠️ **Jonathon Brooks (RB-CAR) Doubtful → IR** — FREE AGENT player's status changed. Next up: **Trevor Etienne (RB-CAR)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ The Panthers placed Brooks (core) on injured reserve Wednesday,  Darin Gantt of the team's official site  reports. (serious)
-- ⚠️ **Tim Patrick (WR-NYJ) → IR** — FREE AGENT player newly listed IR. Next up: **Myles White (WR-NYJ)** — FREE AGENT, claim him.
-  ↳ _September 12, 2026 — :_ The Jets placed Patrick (groin) on injured reserve Saturday,  Zack Rosenblatt of The Athletic  reports. (serious)
-- ⚠️ **David Njoku (TE-LAC) Out → IR** — FREE AGENT player's status changed. Next up: **Charlie Kolar (TE-LAC)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ The Chargers  placed  Njoku (fibula) on injured reserve Wednesday. (serious)
-- 🚨 **Tony Pollard (RB-TEN) → Questionable** — MY player newly listed Questionable. Next up: **Tyjae Spears (RB-TEN)** — rostered by NYKatSnatchers.
-  ↳ _September 23, 2026 — :_ Titans head coach Robert Saleh said that Pollard won't practice Wednesday due to unspecified soreness,  Turron Davenport of ESPN.com  reports.
-- ⚠️ **Jayden Daniels (QB-WAS) Doubtful → Out** — mtngoblin's player's status changed. Next up: **Athan Kaliakmanis (QB-WAS)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ Commanders head coach Dan Quinn confirmed that Daniels will be out for Sunday's game against the Seahawks, but the quarterback remains without a precise timeline for a return while he continues to receive more medical opinions on his left elbow injury,  Ben Standig of The Team 980 Washington D.C.  reports.
-- 📈 **Jaxson Dart (QB-NYG) moved up the depth chart (3 → 2)** — Workload is trending his way.
-- 📈 **Jordyn Tyson (WR-NO) moved up the depth chart (11 → 6)** — Workload is trending his way.
-- ⚠️ **Jaylen Warren (RB-PIT) → Questionable** — hulleywood's player newly listed Questionable. Next up: **Rico Dowdle (RB-PIT)** — rostered by supervillain.
-- ⚠️ **Aaron Jones (RB-MIN) → Questionable** — hulleywood's player newly listed Questionable. Next up: **DeeJay Dallas (RB-MIN)** — FREE AGENT, claim him.
-- ⚠️ **Tyjae Spears (RB-TEN) → Questionable** — NYKatSnatchers's player newly listed Questionable. Next up: **Nicholas Singleton (RB-TEN)** — FREE AGENT, claim him.
-- ⚠️ **Jalen Coker (WR-CAR) → Questionable** — Jersey Rum Hams's player newly listed Questionable. Next up: **Xavier Legette (WR-CAR)** — FREE AGENT, claim him.
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
@@ -39,11 +19,11 @@ _baseline: snapshot committed 2026-09-23 16:45 UTC (3.4h ago) — older than the
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 32.2 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $6 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 19.2 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.4 | 46,692 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 46,692 | $3 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.4 | 47,916 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 47,916 | $3 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 18.9 | starting for his NFL team and unrostered | 0 | $2 |
-| · | **Xavier Hutchinson (WR-HOU)** | SPECULATIVE | 2.9 | every man ahead of him is banged up (1 deep); 32,445 adds in 24h — the market has re-rated him | 32,445 | $1 |
 | 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 13.5 | starting for his NFL team and unrostered | 0 | $2 |
-| 🚨 | **Zach Ertz (TE-PHI)** | URGENT | 0.1 | everyone ahead of him is out — the job is his; 862,398 adds in 24h — the market has re-rated him | 862,398 | $11 |
+| · | **Xavier Hutchinson (WR-HOU)** | SPECULATIVE | 2.9 | every man ahead of him is banged up (1 deep); 30,688 adds in 24h — the market has re-rated him | 30,688 | $1 |
+| 🚨 | **Zach Ertz (TE-PHI)** | URGENT | 0.1 | everyone ahead of him is out — the job is his; 755,496 adds in 24h — the market has re-rated him | 755,496 | $11 |
 | 🔹 | **Pat Freiermuth (TE-PIT)** | STARTER FA | 11.5 | starting for his NFL team and unrostered | 0 | $2 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
@@ -88,7 +68,7 @@ _baseline: snapshot committed 2026-09-23 16:45 UTC (3.4h ago) — older than the
 | 5 | mtngoblin | 4-0 | 458.7 | 35.2 | 89.6 | 164.4 | 117.9 | 6.7 |
 | 6 | Down to Pound | 1-3 | 405.8 | 39.0 | 79.5 | 121.9 | 100.4 | 23.1 |
 | 7 | To Infinity and Bijan | 2-2 | 402.2 | 20.1 | 79.2 | 161.7 | 83.7 | 20.5 |
-| 8 | hulleywood | 1-3 | 383.9 | 42.0 | 94.9 | 79.4 | 108.4 | 29.6 |
+| 8 | hulleywood | 1-3 | 383.9 | 44.6 | 94.9 | 79.4 | 108.4 | 29.6 |
 | 9 | NYKatSnatchers | 1-3 | 383.0 | 32.7 | 51.3 | 113.6 | 100.9 | 60.6 |
 | 10 | Brooklyn Meatpackers | 0-4 | 372.2 | 30.6 | 79.0 | 126.5 | 62.1 | 48.8 |
 | 11 | Holy Turnovers, Batman! | 1-3 | 359.8 | 24.2 | 100.0 | 107.1 | 86.7 | 11.1 |
@@ -110,7 +90,7 @@ _baseline: snapshot committed 2026-09-23 16:45 UTC (3.4h ago) — older than the
   - _2-for-1_ — give **Bhayshul Tuten (RB-JAX) + Rico Dowdle (RB-PIT)** (57.5) → get **Jalen Coker (WR-CAR)** (45.7)
 
 ### hulleywood — fit score 69.46
-- Roster counts: QB:4 / RB:3 / WR:5 / TE:2
+- Roster counts: QB:4 / RB:4 / WR:5 / TE:2
 - They need: **RB (59.27)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
