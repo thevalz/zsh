@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 3** · supervillain (4-0) · FAAB left **$68** · generated 2026-09-23 00:16 UTC
+**Week 3** · supervillain (4-0) · FAAB left **$68** · generated 2026-09-23 05:49 UTC
 
 _value = rest-of-season points over replacement from usage through week 2 (453 players with games), projected over weeks 3–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 33% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-18; live page had only 6 experts); ESPN weekly projections summed over weeks 3–17 (377 players); Sleeper weekly projections summed over 15 remaining weeks (445 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 149 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,26 +8,26 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-22 21:58 UTC (2.3h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-23 00:17 UTC (5.5h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- 🚨 **Rico Dowdle (RB-PIT) Out → Questionable** — MY player's status changed. Next up: **Eli Heidenreich (RB-PIT)** — FREE AGENT, claim him.
-  ↳ _September 22, 2026 — :_ Dowdle "checked out relatively OK" after undergoing testing on his toe injury Tuesday and is considered day-to-day,  Ian Rapoport of NFL Network  reports.
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
-| 🚨 | **Tyson Bagent (QB-CHI)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 273,324 adds in 24h — the market has re-rated him | 273,324 | $24 |
+| 🚨 | **Tyson Bagent (QB-CHI)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 330,054 adds in 24h — the market has re-rated him | 330,054 | $24 |
 | 🧊 | **James Conner (RB-ARI)** | STASH | 32.2 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $7 |
-| 🚨 | **Jameis Winston (QB-NYG)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 98,730 adds in 24h — the market has re-rated him | 98,730 | $24 |
-| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 5.9 | everyone ahead of him is out — the job is his; 123,963 adds in 24h — the market has re-rated him | 123,963 | $24 |
+| 🚨 | **Jameis Winston (QB-NYG)** | URGENT | 0.0 | everyone ahead of him is out — the job is his; 133,165 adds in 24h — the market has re-rated him | 133,165 | $24 |
+| 🚨 | **Rashod Bateman (WR-BAL)** | URGENT | 5.9 | everyone ahead of him is out — the job is his; 150,047 adds in 24h — the market has re-rated him | 150,047 | $24 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 19.2 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🔥 | **Tank Bigsby (RB-PHI)** | CONTESTED | 3.7 | every man ahead of him is banged up (1 deep); 441,476 adds in 24h — the market has re-rated him | 441,476 | $20 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.2 | direct handcuff to MY Derrick Henry | 24,768 | $2 |
+| 🔥 | **Tank Bigsby (RB-PHI)** | CONTESTED | 3.7 | every man ahead of him is banged up (1 deep); 536,655 adds in 24h — the market has re-rated him | 536,655 | $20 |
+| 🚨 | **Case Keenum (QB-CHI)** | URGENT | 0.0 | every man ahead of him is banged up (2 deep); 28,344 adds in 24h — the market has re-rated him | 28,344 | $13 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.2 | direct handcuff to MY Derrick Henry | 32,535 | $2 |
 | 🔹 | **Dalton Schultz (TE-HOU)** | STARTER FA | 25.9 | starting for his NFL team and unrostered | 0 | $7 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 19.2 | starting for his NFL team and unrostered | 0 | $3 |
-| 🔥 | **Emanuel Wilson (RB-SEA)** | CONTESTED | 3.0 | every man ahead of him is banged up (1 deep); 2,676,276 adds in 24h — the market has re-rated him | 2,676,276 | $20 |
-| 🚨 | **Case Keenum (QB-CHI)** | URGENT | 0.0 | every man ahead of him is banged up (2 deep); 18,742 adds in 24h — the market has re-rated him | 18,742 | $8 |
+| 🔥 | **Emanuel Wilson (RB-SEA)** | CONTESTED | 3.0 | every man ahead of him is banged up (1 deep); 3,260,673 adds in 24h — the market has re-rated him | 3,260,673 | $20 |
 | 🔹 | **Pat Freiermuth (TE-PIT)** | STARTER FA | 11.6 | starting for his NFL team and unrostered | 0 | $3 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
