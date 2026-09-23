@@ -26,7 +26,7 @@ _depth charts as of 2026-09-23; defender grades pool PFR coverage stats from 202
 
 | Player | Pos | Tm | Spot | Opp | Verdict | Score | Individual matchup | Team defense |
 |---|---|---|---|---|---|---|---|---|
-| Baker Mayfield | QB | TB | SUPER_FLEX | vs MIN | 🔴 TOUGH | 82 |  | MIN pass D [A 82, #4] |
+| Bryce Young | QB | CAR | SUPER_FLEX | @ CLE | 🔴 TOUGH | 73 |  | CLE pass D [B 73, #9] |
 | Patrick Mahomes | QB | KC | QB | @ MIA | 🟢 SOFT | 24 |  | MIA pass D [D 24, #27] |
 | Jeremiyah Love | RB | ARI | RB | @ SF | 🟡 NEUTRAL | 50 | MLB Fred Warner [B 70]<br>WLB Dre Greenlaw [?] (low sample (23 tgt)) | SF run D [C 43, #20] |
 | Saquon Barkley | RB | PHI | RB | @ CHI | 🟡 NEUTRAL | 45 | MLB T.J. Edwards [B 65]<br>WLB Devin Bush [B 71] | CHI run D [D 30, #24] |
@@ -35,7 +35,7 @@ _depth charts as of 2026-09-23; defender grades pool PFR coverage stats from 202
 | Ja'Marr Chase | WR | CIN | WR | @ PIT | 🟡 NEUTRAL | 63 | (outside) LCB Joey Porter Jr. [A 83]<br>RCB Jamel Dean [B 70]<br>⚠ shadow risk | PIT pass D [D 38, #19] |
 | Carnell Tate | WR | TEN | FLEX | @ NYG | 🟢 SOFT | 28 | (outside) LCB Deonte Banks [F 20]<br>RCB Greg Newsome II [D 33] | NYG pass D [D 31, #22] |
 | Kyle Pitts | TE | ATL | TE | @ GB | 🟡 NEUTRAL | 58 | FS Xavier McKinney [B 61]<br>SS Evan Williams [C 49] | GB pass D [B 60, #14] |
-| Bryce Young | QB | CAR | BN | @ CLE | 🔴 TOUGH | 73 |  | CLE pass D [B 73, #9] |
+| Baker Mayfield | QB | TB | BN | vs MIN | 🔴 TOUGH | 82 |  | MIN pass D [A 82, #4] |
 | Kirk Cousins | QB | LV | BN | @ NO | 🟡 NEUTRAL | 66 |  | NO pass D [B 66, #13] |
 | Kenny Gainwell | RB | TB | BN | vs MIN | 🔴 TOUGH | 72 | LILB Eric Wilson [B 66]<br>RILB Blake Cashman [D 34] | MIN run D [A 87, #4] |
 | Jakobi Meyers | WR | JAX | BN | vs NE | 🟡 NEUTRAL | 47 | (slot) NB Marcus Jones [D 34]<br>⚠ shadow risk | NE pass D [B 72, #11] |
