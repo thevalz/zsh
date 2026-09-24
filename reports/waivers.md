@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-24 14:53 UTC
+**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-24 19:00 UTC
 
 _value = rest-of-season points over replacement from usage through week 2 (452 players with games), projected over weeks 3–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 33% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-18; live page had only 6 experts); ESPN weekly projections summed over weeks 3–17 (378 players); Sleeper weekly projections summed over 15 remaining weeks (448 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 91 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,12 +8,10 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-24 09:53 UTC (5.0h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-24 14:53 UTC (4.1h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- 📈 **Kayshon Boutte (WR-HOU) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
-  ↳ _September 21, 2026 — :_ Boutte caught three of five targets for 37 yards during the Texans' 20-6 loss to the Bengals on Sunday.
-- ⚠️ **Mason Taylor (TE-NYJ) cleared (Doubtful → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 23, 2026 — :_ Jets head coach Aaron Glenn said that Taylor (thumb) won't participate in Wednesday's practice,  Rich Cimini of ESPN.com  reports. (serious)
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
@@ -21,8 +19,8 @@ _baseline: snapshot committed 2026-09-24 09:53 UTC (5.0h ago) — older than the
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 34.4 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $6 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 18.9 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🔥 | **Alvin Kamara (RB-NO)** | CONTESTED | 11.1 | every man ahead of him is banged up (1 deep); Travis Etienne is Questionable (Hamstring) | 234,304 | $17 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.4 | 41,166 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 41,166 | $3 |
+| 🔥 | **Alvin Kamara (RB-NO)** | CONTESTED | 11.1 | every man ahead of him is banged up (1 deep); Travis Etienne is Questionable (Hamstring) | 212,952 | $17 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.4 | 39,834 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 39,834 | $3 |
 | 🟢 | **Kayshon Boutte (WR-HOU)** | BUY EARLY | 4.8 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 0 | $2 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 18.9 | starting for his NFL team and unrostered | 0 | $2 |
 | 🔹 | **Pat Freiermuth (TE-PIT)** | STARTER FA | 11.5 | starting for his NFL team and unrostered | 0 | $2 |
