@@ -67,6 +67,17 @@ each player:
    on a default (`unverified`). Whoever sits behind an absent player inherits
    a share of his expected points for those weeks, using the same
    `INHERITANCE` and `INHERITANCE_BY_POSITION` factors as the waiver board.
+   A team's starting quarterback (most attempts this season) is tracked the
+   same way, and every week he is projected absent his backs, receivers and
+   tight ends are scaled by a factor *measured* on the two previous seasons
+   (`usage.qb_out_effect`: the week-1 starter throwing fewer than
+   `QB_OUT_MIN_ATTEMPTS` passes is an absent week; pooled median ratio of a
+   team position group's points absent vs present, clamped to
+   `[QB_OUT_FLOOR, 1.0]`). The header prints the factors with their sample
+   sizes; 1.00 means the data did not support a discount, and it is never
+   hand-set. On 2024–2025 the effect is unstable season to season (2024 ≈ no
+   loss, 2025 ≈ −16%), which is why it is measured and printed rather than
+   assumed.
 3. *Schedule* (`fantasy/schedule.py`) — every remaining week through the last
    playoff week, each opponent scales expected points by
    `1 + SCHEDULE_K · (50 − percentile of points allowed to his position) / 50`,

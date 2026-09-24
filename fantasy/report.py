@@ -47,6 +47,12 @@ def header(lg: League, week: int, generated: str) -> str:
     fit = meta.get("usage_fit") or {}
     seasons = meta.get("usage_fit_seasons") or []
     fit_line = ""
+    qb = meta.get("qb_out") or {}
+    if qb:
+        cells = [f"{pos} ×{v['factor']:.2f} (n={v['n']})" for pos, v in qb.items()]
+        fit_line += ("_when the starting QB sits, his skill players are scaled by the pooled "
+                     f"{', '.join(seasons)} median: " + ", ".join(cells) + "; a factor of 1.00 means the "
+                     "sample did not support a discount_  \n")
     if fit and seasons:
         cells = []
         for pos, v in fit.items():
@@ -54,8 +60,8 @@ def header(lg: League, week: int, generated: str) -> str:
                 cells.append(f"{pos} {v['oos_r']:.2f}"
                              + (f" (PPG alone {v['ppg_only']:.2f})" if v.get("ppg_only") is not None else ""))
         if cells:
-            fit_line = (f"_usage fit on {', '.join(seasons)}; out-of-sample r vs rest-of-season PPG "
-                        f"on {seasons[-1]}: " + ", ".join(cells) + "_\n")
+            fit_line += (f"_usage fit on {', '.join(seasons)}; out-of-sample r vs rest-of-season PPG "
+                         f"on {seasons[-1]}: " + ", ".join(cells) + "_\n")
     return (
         f"# {config.LEAGUE_NAME} — waiver & trade monitor\n\n"
         f"**Week {week}** · {me.label} ({me.wins}-{me.losses}) · "
@@ -282,6 +288,8 @@ def _value_row(lg: League, pid: str, row: dict, starter: bool = False, healthy: 
         status += " · `unverified`"
     if healthy and status:
         status += f" · healthy {row['healthy_value']:.1f}"
+    if row.get("qb_out_weeks"):
+        status += f" · QB out {row['qb_out_weeks']:.0f} wks ×{row['qb_factor']:.2f}"
     weeks = row.get("weeks") or 0.0
     per_wk = row["ros"] / weeks if weeks else 0.0
     xppg = f"{row['xppg']:.1f} ({row['games']})" if row.get("games") else "—"

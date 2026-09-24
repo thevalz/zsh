@@ -96,7 +96,7 @@ def _charts_by_usage(players: dict, xppg: dict) -> dict:
 def value_table(through_week: int | None = None, *, alpha: float | None = None,
                 prior_games: float | None = None, schedule_k: float | None = None,
                 use_prior: bool = True, use_schedule: bool = True, use_depth: bool = True,
-                prior_only: str | None = None, absences: dict | None = None,
+                use_qb: bool = True, prior_only: str | None = None, absences: dict | None = None,
                 force: bool = False) -> dict:
     """{player_id: row} for every available skill player.
 
@@ -113,7 +113,7 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
     prior_games = config.PRIOR_GAMES if prior_games is None else prior_games
     schedule_k = config.SCHEDULE_K if schedule_k is None else schedule_k
     key = (through_week, alpha, prior_games, schedule_k, use_prior, use_schedule, use_depth,
-           prior_only, tuple(sorted((absences or {}).items())))
+           use_qb, prior_only, tuple(sorted((absences or {}).items())))
     if _TABLE is not None and _TABLE_KEY == key and not force:
         return _TABLE
 
@@ -186,6 +186,12 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
                     if missing > 0:
                         inherited[pid][i] += gain * missing
 
+    # 2b. the starting quarterback: weeks he is projected absent scale his
+    # skill players by a factor measured on the two previous seasons.
+    qb_effect = usage.qb_out_effect(fit_seasons, scoring, players) if use_qb else {}
+    qb1 = usage.team_qb1(season, played, current, players) if use_qb else {}
+    qb_absent = {team: [1.0 - x for x in plays[q]] for team, q in qb1.items() if q in plays}
+
     # 3. + 4. project, shrink
     rows: dict = {}
     for pid, p in skill.items():
@@ -194,6 +200,9 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
         games = use.get(pid, {}).get("games", 0)
         ours = ours_healthy = inh = 0.0
         sched_sum = sched_n = 0.0
+        qfac = (qb_effect.get(pos) or {}).get("factor", 1.0) if pos != "QB" else 1.0
+        qabs = qb_absent.get(team) if qfac < 1.0 else None
+        qb_out_weeks = 0.0
         for i, w in enumerate(weeks):
             m = sched.mult(team, pos, w)
             if m <= 0:
@@ -201,8 +210,12 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
             wt = weight(w)
             sched_sum += m * wt
             sched_n += wt
-            ours += base * m * wt * plays[pid][i]
-            ours_healthy += base * m * wt
+            q = 1.0
+            if qabs and qabs[i] > 0:
+                q = 1.0 - qabs[i] * (1.0 - qfac)
+                qb_out_weeks += qabs[i] * wt
+            ours += base * m * wt * q * plays[pid][i]
+            ours_healthy += base * m * wt * q
             inh += inherited[pid][i] * m * wt * plays[pid][i]
         pr = prior.get(pid, {}).get("ros") if use_prior else None
         if pr is not None:
@@ -228,6 +241,8 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
             "unverified": unverified[pid] and (p.get("injury_status") in config.RESERVE_STATUSES
                                                 or p.get("injury_status") in ("Out", "Doubtful")),
         }
+        rows[pid]["qb_out_weeks"] = round(qb_out_weeks, 1)
+        rows[pid]["qb_factor"] = qfac
         log = logs.get(pid) or []
         rows[pid]["games_logged"] = len(log)
         if len(log) >= config.CONSISTENCY_MIN_GAMES:
@@ -267,6 +282,7 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
         usage_fit={pos: {"oos_r": coefs[pos].get("oos_r"), "ppg_only": coefs[pos].get("oos_r_ppg_only"),
                          "n": coefs[pos].get("n")} for pos in config.SKILL_POSITIONS},
         usage_fit_seasons=fit_seasons,
+        qb_out=qb_effect,
     )
     if through_week is None and not force and key[1:] == (config.USAGE_ALPHA, config.PRIOR_GAMES,
                                                             config.SCHEDULE_K, True, True, True, None, ()):

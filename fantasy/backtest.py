@@ -159,6 +159,8 @@ def build_candidates(week: int, season: str, scoring: dict, skill: dict,
             model.value_table(through_week=through, use_depth=False))
         cands["usage only (no prior)"] = _values(
             model.value_table(through_week=through, use_prior=False))
+        cands["full model, no QB-absence factor"] = _values(
+            model.value_table(through_week=through, use_qb=False))
         for k in grids["prior_games"]:
             if k == config.PRIOR_GAMES:
                 continue
@@ -420,6 +422,7 @@ def summary(results: list) -> str:
                              + (" — the live setting" if best[1] == "live" else ""))
         for label, key in (("no schedule adjustment", "full model, no schedule adjustment"),
                            ("no depth-chart/injury projection", "full model, no depth-chart/injury projection"),
+                           ("no QB-absence factor", "full model, no QB-absence factor"),
                            ("no prior", "usage only (no prior)")):
             if key in by:
                 d = live - by[key]

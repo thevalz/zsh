@@ -174,6 +174,11 @@ disagree, the sentence wins — go read it.
   percentiles is a cost, not a wash. Read the Floor / Ceil and Bust% columns
   (values page, trade evaluator) before accepting one. Diggs-for-Skattebo read
   as even on the mean and was a floor downgrade at two slots.
+- **A running back's value is partly his quarterback's, but less than it feels.**
+  Skattebo averaged 18 with Dart and 12 without; league-wide over 2024–2025 the
+  loss when a starter sits is unstable (none in 2024, ~16% in 2025). The model
+  applies a *measured* factor for the weeks a QB1 is projected out and prints
+  it with its sample size; the blurb still decides how long he is out.
 - **A static outside list is the stale-rank problem in a different coat.**
   Sleeper's season-total projection never moved after August (Tank Dell 52
   points on IR). Every prior source is fingerprinted and dropped to weight 0

@@ -403,3 +403,88 @@ def weekly_points(seasons: list, scoring: dict, players: dict, through_week: int
                     continue
                 out.setdefault(pid, []).append(league_points(line, scoring))
     return out
+
+
+# ---------------------------------------------------------------------------
+# what a position group loses when the starting quarterback sits
+# ---------------------------------------------------------------------------
+
+def team_qb1(season: str, through_week: int, current_week: int, players: dict) -> dict:
+    """{team: QB player_id} -- the quarterback with the most pass attempts this
+    season through `through_week`; Sleeper's depth-chart QB1 where nobody has
+    thrown yet."""
+    att: dict = {}
+    for wk in range(1, through_week + 1):
+        try:
+            lines = sleeper.weekly_stats(season, wk, final=wk < current_week) or {}
+        except RuntimeError:
+            continue
+        for pid, line in lines.items():
+            p = players.get(pid) or {}
+            if p.get("position") == "QB" and p.get("team") and line.get("gp"):
+                att[(p["team"], pid)] = att.get((p["team"], pid), 0.0) + float(line.get("pass_att") or 0)
+    out: dict = {}
+    for (team, pid), a in att.items():
+        if team not in out or a > att[(team, out[team])]:
+            out[team] = pid
+    for pid, p in players.items():
+        if p.get("position") == "QB" and p.get("team") and p.get("depth_chart_order") == 1:
+            out.setdefault(p["team"], pid)
+    return out
+
+
+def qb_out_effect(seasons: list, scoring: dict, players: dict, force: bool = False) -> dict:
+    """{pos: {"factor", "n", "by_season": {season: [median, n]}}} measured, not guessed.
+
+    Per team-season the week-1 starter is the quarterback; a week where he threw
+    fewer than QB_OUT_MIN_ATTEMPTS passes is an absent week. For each team and
+    position group with enough weeks of both kinds, the ratio of the group's
+    mean league points per game absent / present. The factor is the pooled
+    median across seasons, clamped to [QB_OUT_FLOOR, 1.0]; a thin or noisy
+    sample lands at 1.0 and the header says so.
+    """
+    key = "qb_out_" + "_".join(seasons)
+    hit = None if force else sleeper._read_cache(key, config.CACHE_TTL["usage_fit"])
+    if hit:
+        return hit
+    import statistics as st
+    pooled: dict = {pos: [] for pos in ("RB", "WR", "TE")}
+    by_season: dict = {}
+    for season in seasons:
+        weeks = {wk: _weekly(season, wk, config.CACHE_TTL["stats_prior_season"]) for wk in range(1, 19)}
+        starters: dict = {}
+        for pid, line in (weeks.get(1) or {}).items():
+            p = players.get(pid) or {}
+            if p.get("position") == "QB" and p.get("team") and line.get("gp"):
+                a = float(line.get("pass_att") or 0)
+                if a > starters.get(p["team"], ("", 0.0))[1]:
+                    starters[p["team"]] = (pid, a)
+        group: dict = {}
+        for wk, lines in weeks.items():
+            for pid, line in lines.items():
+                p = players.get(pid) or {}
+                pos, team = p.get("position"), p.get("team")
+                if pos not in pooled or not line.get("gp") or team not in starters:
+                    continue
+                q = lines.get(starters[team][0]) or {}
+                state = "p" if float(q.get("pass_att") or 0) >= config.QB_OUT_MIN_ATTEMPTS else "a"
+                g = group.setdefault((team, pos), {"p": {}, "a": {}})
+                g[state][wk] = g[state].get(wk, 0.0) + league_points(line, scoring)
+        ratios: dict = {pos: [] for pos in pooled}
+        for (team, pos), g in group.items():
+            if (len(g["a"]) >= config.QB_OUT_MIN_ABSENT_WEEKS
+                    and len(g["p"]) >= config.QB_OUT_MIN_PRESENT_WEEKS and st.mean(g["p"].values()) > 0):
+                ratios[pos].append(st.mean(g["a"].values()) / st.mean(g["p"].values()))
+        by_season[season] = {pos: [round(st.median(v), 3) if v else None, len(v)] for pos, v in ratios.items()}
+        for pos, v in ratios.items():
+            pooled[pos] += v
+    out = {}
+    for pos, v in pooled.items():
+        med = st.median(v) if v else 1.0
+        out[pos] = {
+            "factor": round(max(config.QB_OUT_FLOOR, min(1.0, med)), 3) if len(v) >= 8 else 1.0,
+            "n": len(v),
+            "by_season": {s: by_season[s][pos] for s in seasons},
+        }
+    sleeper._write_cache(key, out)
+    return out
