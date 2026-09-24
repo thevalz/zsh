@@ -74,6 +74,11 @@ jobs:
         run: python3 -m fantasy.monitor report --out reports/waivers.md
         continue-on-error: true
 
+      - name: Rest-of-season values for every roster
+        id: values
+        run: python3 -m fantasy.monitor values --out reports/values.md
+        continue-on-error: true
+
       # Tuesday, after Monday night: score the value model on every completed
       # week so reports/backtest.md accumulates a week at a time. Any change to
       # a model constant has to cite these numbers (CLAUDE.md).
@@ -84,9 +89,9 @@ jobs:
         continue-on-error: true
 
       - name: Report step failures without killing the build
-        if: steps.matchups.outcome == 'failure' || steps.waivers.outcome == 'failure' || steps.backtest.outcome == 'failure'
+        if: steps.matchups.outcome == 'failure' || steps.waivers.outcome == 'failure' || steps.values.outcome == 'failure' || steps.backtest.outcome == 'failure'
         run: |
-          echo "::warning::matchups=${{ steps.matchups.outcome }} waivers=${{ steps.waivers.outcome }} backtest=${{ steps.backtest.outcome }}; site rebuilt from whatever reports exist"
+          echo "::warning::matchups=${{ steps.matchups.outcome }} waivers=${{ steps.waivers.outcome }} values=${{ steps.values.outcome }} backtest=${{ steps.backtest.outcome }}; site rebuilt from whatever reports exist"
 
       - name: Render docs/
         run: python3 build_site.py

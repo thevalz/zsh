@@ -25,6 +25,8 @@ python3 -m fantasy.monitor watch     # hourly mode — leads with what changed; 
 python3 -m fantasy.monitor waiver    # waiver board + handcuff table only
 python3 -m fantasy.monitor trades    # roster strengths + trade targets only
 python3 -m fantasy.backtest          # score the value model against completed weeks
+python3 -m fantasy.monitor values    # every roster's players with the numbers behind their value
+python3 -m fantasy.monitor trade --give "Cam Skattebo" --get "Stefon Diggs"   # score an offer, with counters
 ```
 
 No dependencies beyond the Python standard library. Everything comes from
@@ -55,12 +57,27 @@ each player:
    along as an extra column when it is available. The report header prints
    the fit's out-of-sample number each run. `USAGE_ALPHA` blends the
    prediction with raw PPG; at 1.0 the fitted predictor is trusted outright.
+   The fit is trained on players with real roles and cannot extrapolate down
+   to a backup's mop-up snaps, so below `USAGE_ROLE_SNAP` (35% of snaps) the
+   prediction is scaled by snap share, and a quarterback whose snaps are not
+   posted yet is scaled by attempts against `QB_ROLE_ATTEMPTS`.
 2. *Depth chart and injuries* — who plays which weeks. A reserve-list or Out
    player is projected to miss `DEFAULT_ABSENCE_WEEKS` for his tag unless a
    blurb gave an eligible week, and the header counts how many absences rest
    on a default (`unverified`). Whoever sits behind an absent player inherits
    a share of his expected points for those weeks, using the same
    `INHERITANCE` and `INHERITANCE_BY_POSITION` factors as the waiver board.
+   A team's starting quarterback (most attempts this season) is tracked the
+   same way, and every week he is projected absent his backs, receivers and
+   tight ends are scaled by a factor *measured* on the two previous seasons
+   (`usage.qb_out_effect`: the week-1 starter throwing fewer than
+   `QB_OUT_MIN_ATTEMPTS` passes is an absent week; pooled median ratio of a
+   team position group's points absent vs present, clamped to
+   `[QB_OUT_FLOOR, 1.0]`). The header prints the factors with their sample
+   sizes; 1.00 means the data did not support a discount, and it is never
+   hand-set. On 2024–2025 the effect is unstable season to season (2024 ≈ no
+   loss, 2025 ≈ −16%), which is why it is measured and printed rather than
+   assumed.
 3. *Schedule* (`fantasy/schedule.py`) — every remaining week through the last
    playoff week, each opponent scales expected points by
    `1 + SCHEDULE_K · (50 − percentile of points allowed to his position) / 50`,
@@ -85,6 +102,15 @@ each player:
    superflex; that is where the quarterback premium now lives, so
    `POSITION_MULTIPLIER` is flat). Points over replacement, ranked, onto the
    curve.
+
+**Consistency** — next to every value the reports show *Floor / Ceil* (the 25th
+and 75th percentiles of the player's league points per game played over last
+season and this one) and *Bust%* (share of those games under `BUST_POINTS`).
+They describe, they do not price: value stays a mean. The trade evaluator sums
+starters' floors before and after a swap and says so when a trade holds the
+mean and lowers the floor, and the backtest reports how floor-set lineups fare
+against value-set ones. Under `CONSISTENCY_MIN_GAMES` logged games the columns
+show a dash with the count.
 
 `healthy_value()` is the same pipeline with the player's own absence removed —
 the stash question is what he is worth once he is back. A player with no

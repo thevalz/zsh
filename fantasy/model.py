@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import bisect
 import math
+import statistics
 import sys
 from dataclasses import dataclass, field
 
@@ -58,11 +59,14 @@ def _plays(p: dict, weeks: list, first_week: int, absences: dict | None) -> tupl
     pid = p.get("player_id")
     unverified = False
     out = []
-    if status in config.RESERVE_STATUSES or status == "DNR":
-        back = (absences or {}).get(pid)
-        if back is None:
-            back = first_week + config.DEFAULT_ABSENCE_WEEKS.get(status, 4)
-            unverified = True
+    back = (absences or {}).get(pid)
+    if back is not None:
+        # A blurb said when he is back; that beats any tag, including a bare
+        # "Out" that would otherwise be read as one week.
+        out = [1.0 if w >= back else 0.0 for w in weeks]
+    elif status in config.RESERVE_STATUSES or status == "DNR":
+        back = first_week + config.DEFAULT_ABSENCE_WEEKS.get(status, 4)
+        unverified = True
         out = [1.0 if w >= back else 0.0 for w in weeks]
     elif status in ("Out", "Doubtful", "Questionable"):
         miss = vacancy(p)
@@ -92,7 +96,7 @@ def _charts_by_usage(players: dict, xppg: dict) -> dict:
 def value_table(through_week: int | None = None, *, alpha: float | None = None,
                 prior_games: float | None = None, schedule_k: float | None = None,
                 use_prior: bool = True, use_schedule: bool = True, use_depth: bool = True,
-                prior_only: str | None = None, absences: dict | None = None,
+                use_qb: bool = True, prior_only: str | None = None, absences: dict | None = None,
                 force: bool = False) -> dict:
     """{player_id: row} for every available skill player.
 
@@ -109,7 +113,7 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
     prior_games = config.PRIOR_GAMES if prior_games is None else prior_games
     schedule_k = config.SCHEDULE_K if schedule_k is None else schedule_k
     key = (through_week, alpha, prior_games, schedule_k, use_prior, use_schedule, use_depth,
-           prior_only, tuple(sorted((absences or {}).items())))
+           use_qb, prior_only, tuple(sorted((absences or {}).items())))
     if _TABLE is not None and _TABLE_KEY == key and not force:
         return _TABLE
 
@@ -139,6 +143,9 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
     last = usage.usage_table(fit_seasons[-1], 17, 99, scoring, players, alpha=alpha,
                              coefs=coefs, prior_season_ttl=True)
     xppg = {pid: r["xppg"] for pid, r in use.items()}
+    # Game logs for floor / ceiling: last season plus this one, through the
+    # weeks on record. Reported, never priced.
+    logs = usage.weekly_points([fit_seasons[-1], season], scoring, players, played, current)
 
     # 4. prior (fetched before depth so a no-game player's ppg can seed inheritance)
     prior = {}
@@ -179,6 +186,12 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
                     if missing > 0:
                         inherited[pid][i] += gain * missing
 
+    # 2b. the starting quarterback: weeks he is projected absent scale his
+    # skill players by a factor measured on the two previous seasons.
+    qb_effect = usage.qb_out_effect(fit_seasons, scoring, players) if use_qb else {}
+    qb1 = usage.team_qb1(season, played, current, players) if use_qb else {}
+    qb_absent = {team: [1.0 - x for x in plays[q]] for team, q in qb1.items() if q in plays}
+
     # 3. + 4. project, shrink
     rows: dict = {}
     for pid, p in skill.items():
@@ -187,6 +200,9 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
         games = use.get(pid, {}).get("games", 0)
         ours = ours_healthy = inh = 0.0
         sched_sum = sched_n = 0.0
+        qfac = (qb_effect.get(pos) or {}).get("factor", 1.0) if pos != "QB" else 1.0
+        qabs = qb_absent.get(team) if qfac < 1.0 else None
+        qb_out_weeks = 0.0
         for i, w in enumerate(weeks):
             m = sched.mult(team, pos, w)
             if m <= 0:
@@ -194,8 +210,12 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
             wt = weight(w)
             sched_sum += m * wt
             sched_n += wt
-            ours += base * m * wt * plays[pid][i]
-            ours_healthy += base * m * wt
+            q = 1.0
+            if qabs and qabs[i] > 0:
+                q = 1.0 - qabs[i] * (1.0 - qfac)
+                qb_out_weeks += qabs[i] * wt
+            ours += base * m * wt * q * plays[pid][i]
+            ours_healthy += base * m * wt * q
             inh += inherited[pid][i] * m * wt * plays[pid][i]
         pr = prior.get(pid, {}).get("ros") if use_prior else None
         if pr is not None:
@@ -221,6 +241,17 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
             "unverified": unverified[pid] and (p.get("injury_status") in config.RESERVE_STATUSES
                                                 or p.get("injury_status") in ("Out", "Doubtful")),
         }
+        rows[pid]["qb_out_weeks"] = round(qb_out_weeks, 1)
+        rows[pid]["qb_factor"] = qfac
+        log = logs.get(pid) or []
+        rows[pid]["games_logged"] = len(log)
+        if len(log) >= config.CONSISTENCY_MIN_GAMES:
+            q = statistics.quantiles(log, n=4)
+            rows[pid]["floor"] = round(q[0], 1)
+            rows[pid]["ceiling"] = round(q[2], 1)
+            rows[pid]["bust_rate"] = round(sum(1 for v in log if v < config.BUST_POINTS) / len(log), 2)
+        else:
+            rows[pid]["floor"] = rows[pid]["ceiling"] = rows[pid]["bust_rate"] = None
 
     # 5. replacement level, points over replacement, rank, curve
     repl = {}
@@ -251,6 +282,7 @@ def value_table(through_week: int | None = None, *, alpha: float | None = None,
         usage_fit={pos: {"oos_r": coefs[pos].get("oos_r"), "ppg_only": coefs[pos].get("oos_r_ppg_only"),
                          "n": coefs[pos].get("n")} for pos in config.SKILL_POSITIONS},
         usage_fit_seasons=fit_seasons,
+        qb_out=qb_effect,
     )
     if through_week is None and not force and key[1:] == (config.USAGE_ALPHA, config.PRIOR_GAMES,
                                                             config.SCHEDULE_K, True, True, True, None, ()):

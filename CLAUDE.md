@@ -103,7 +103,7 @@ Two of these live outside the repo, so you cannot see them in the tree:
 
 | What | Where | When |
 |---|---|---|
-| Site rebuild + snapshot commit | `.github/workflows/site.yml` | hourly at `:05`, plus Tue + Sun 12:00 UTC |
+| Site rebuild (matchups, waivers, rest-of-season values) + snapshot commit | `.github/workflows/site.yml` | hourly at `:05`, plus Tue + Sun 12:00 UTC |
 | Value-model backtest → `reports/backtest.md` | same workflow, Tuesday 12:00 UTC run only (and manual dispatch) | weekly, after MNF |
 | Waiver/trade monitor | Claude Routine (account-level) | hourly, `:50` (read-only, after the Action) |
 | Sunday inactives + lineup | Claude Routine (account-level) | Sun 11:35am ET |
@@ -129,6 +129,8 @@ python3 -m fantasy.monitor report              # full waiver + trade analysis
 python3 -m fantasy.monitor watch               # hourly mode: what changed
 python3 -m fantasy.monitor player --name "..."  # beat-reporter news for one player
 python3 -m fantasy.backtest                    # score the value model on completed weeks
+python3 -m fantasy.monitor values              # every roster, every player, the numbers behind value (read-only)
+python3 -m fantasy.monitor trade --give "A" --get "B"   # score an offer: value, both lineups, counters, blurbs
 python3 matchups.py --full --markdown --out-dir matchups
 python3 build_site.py                          # renders docs/ from the reports
 ```
@@ -167,6 +169,16 @@ disagree, the sentence wins — go read it.
   for every candidate; the first version of the check let the model "start"
   inactives, concluded value and lineups were different things, and was wrong
   by about eight points a team.
+- **The model prices means.** For a favourite, floor beats ceiling at equal mean:
+  a swap of equal rest-of-season points that lowers the lineup's summed 25th
+  percentiles is a cost, not a wash. Read the Floor / Ceil and Bust% columns
+  (values page, trade evaluator) before accepting one. Diggs-for-Skattebo read
+  as even on the mean and was a floor downgrade at two slots.
+- **A running back's value is partly his quarterback's, but less than it feels.**
+  Skattebo averaged 18 with Dart and 12 without; league-wide over 2024–2025 the
+  loss when a starter sits is unstable (none in 2024, ~16% in 2025). The model
+  applies a *measured* factor for the weeks a QB1 is projected out and prints
+  it with its sample size; the blurb still decides how long he is out.
 - **A static outside list is the stale-rank problem in a different coat.**
   Sleeper's season-total projection never moved after August (Tank Dell 52
   points on IR). Every prior source is fingerprinted and dropped to weight 0
