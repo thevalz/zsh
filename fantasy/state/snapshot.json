@@ -407,7 +407,8 @@
   "11583": "IR",
   "11604": "Questionable",
   "11623": "Questionable",
-  "11632": "Questionable",
+  "11625": "Questionable",
+  "11626": "Questionable",
   "11637": "Questionable",
   "11643": "Questionable",
   "11646": "Questionable",
@@ -419,7 +420,7 @@
   "12486": "IR",
   "12487": "Questionable",
   "12489": "Questionable",
-  "12508": "Out",
+  "12508": "IR",
   "12534": "Questionable",
   "12544": "Questionable",
   "12656": "IR",
@@ -472,6 +473,7 @@
   "9502": "IR",
   "9508": "Questionable",
   "9753": "PUP",
+  "9757": "Questionable",
   "9997": "Questionable"
  },
  "ownership": {
