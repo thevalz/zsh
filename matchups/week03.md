@@ -1,6 +1,6 @@
 # Matchups -- 2026 week 3
 
-_depth charts as of 2026-09-23; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
+_depth charts as of 2026-09-24; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
 
 ## supervillain (thevalz) -- my lineup
 
@@ -111,7 +111,7 @@ _depth charts as of 2026-09-23; defender grades pool PFR coverage stats from 202
 | Jaylen Warren | RB | PIT | RB1 | vs CIN | 🟢 SOFT | 17 | MLB Barrett Carter [D 24]<br>WLB Demetrius Knight Jr. [C 45] | CIN run D [F 5, #31] |
 | Luther Burden III | WR | CHI | WR2 | vs PHI | 🔴 TOUGH | 89 | (outside) LCB Riq Woolen [A 86]<br>RCB Quinyon Mitchell [A 90]<br>⚠ shadow risk | PHI pass D [A 91, #3] |
 | Rome Odunze | WR | CHI | WR1 | vs PHI | 🔴 TOUGH | 89 | (outside) LCB Riq Woolen [A 86]<br>RCB Quinyon Mitchell [A 90]<br>⚠ shadow risk | PHI pass D [A 91, #3] |
-| Alec Pierce | WR | IND | WR1 | vs HOU | 🔴 TOUGH | 81 | (outside) LCB Derek Stingley Jr. [A 90]<br>RCB Kamari Lassiter [B 80]<br>⚠ shadow risk | HOU pass D [B 74, #7] |
+| Keenan Allen | WR | IND | WR2 | vs HOU | 🔴 TOUGH | 81 | (outside) LCB Derek Stingley Jr. [A 90]<br>RCB Kamari Lassiter [B 80]<br>⚠ shadow risk | HOU pass D [B 74, #7] |
 | Davante Adams | WR | LA | WR2 | @ DEN | 🔴 TOUGH | 79 | (outside) LCB Pat Surtain II [A 85]<br>RCB Riley Moss [C 55]<br>⚠ shadow risk | DEN pass D [A 95, #1] |
 | Puka Nacua | WR | LA | WR1 | @ DEN | 🔴 TOUGH | 79 | (outside) LCB Pat Surtain II [A 85]<br>RCB Riley Moss [C 55]<br>⚠ shadow risk | DEN pass D [A 95, #1] |
 | Jordan Whittington | WR | LA | WR3 | @ DEN | 🔴 TOUGH | 78 | (slot) NB Ja'Quan McMillian [B 69]<br>⚠ shadow risk | DEN pass D [A 95, #1] |
@@ -122,8 +122,8 @@ _depth charts as of 2026-09-23; defender grades pool PFR coverage stats from 202
 | Jalen McMillan | WR | TB | WR3 | vs MIN | 🔴 TOUGH | 73 | (slot) NB Byron Murphy Jr. [B 68]<br>⚠ shadow risk | MIN pass D [A 82, #4] |
 | Stefon Diggs | WR | WAS | WR2 | vs SEA | 🔴 TOUGH | 73 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 92, #2] |
 | Terry McLaurin | WR | WAS | WR1 | vs SEA | 🔴 TOUGH | 73 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 92, #2] |
-| Josh Downs | WR | IND | WR2 | vs HOU | 🔴 TOUGH | 73 | (slot) NB Jalen Pitre [B 72]<br>⚠ shadow risk | HOU pass D [B 74, #7] |
-| Keenan Allen | WR | IND | WR3 | vs HOU | 🔴 TOUGH | 73 | (slot) NB Jalen Pitre [B 72]<br>⚠ shadow risk | HOU pass D [B 74, #7] |
+| Darius Slayton | WR | IND | WR3 | vs HOU | 🔴 TOUGH | 73 | (slot) NB Jalen Pitre [B 72]<br>⚠ shadow risk | HOU pass D [B 74, #7] |
+| Josh Downs | WR | IND | WR1 | vs HOU | 🔴 TOUGH | 73 | (slot) NB Jalen Pitre [B 72]<br>⚠ shadow risk | HOU pass D [B 74, #7] |
 | Emeka Egbuka | WR | TB | WR1 | vs MIN | 🔴 TOUGH | 72 | (outside) LCB Charles Demmings [?] (rookie)<br>RCB James Pierre [A 84]<br>⚠ shadow risk | MIN pass D [A 82, #4] |
 | Quentin Johnston | WR | LAC | WR2 | @ BUF | 🔴 TOUGH | 69 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 81, #5] |
 | Keon Coleman | WR | BUF | WR3 | vs LAC | 🟡 NEUTRAL | 68 | (slot) NB Tarheeb Still [B 66] | LAC pass D [B 71, #12] |
@@ -201,13 +201,13 @@ _depth charts as of 2026-09-23; defender grades pool PFR coverage stats from 202
 | Jameson Williams | WR | DET | WR2 | vs NYJ | 🟢 SOFT | 33 | (outside) LCB Nahshon Wright [C 47]<br>RCB Brandon Stephens [F 16] | NYJ pass D [D 38, #20] |
 | Demarcus Robinson | WR | SF | WR3 | vs ARI | 🟢 SOFT | 33 | (slot) NB Max Melton [D 40] | ARI pass D [F 19, #28] |
 | Rashid Shaheed | WR | SEA | WR2 | @ WAS | 🟢 SOFT | 32 | (outside) LCB Rasul Douglas [B 67]<br>RCB Mike Sainristil [D 28] | WAS pass D [F 3, #32] |
-| Andrei Iosivas | WR | CIN | WR3 | @ PIT | 🟢 SOFT | 31 | (slot) NB Jalen Ramsey [D 27]<br>⚠ shadow risk | PIT pass D [D 38, #19] |
+| Colbie Young | WR | CIN | WR3 | @ PIT | 🟢 SOFT | 31 | (slot) NB Jalen Ramsey [D 27]<br>⚠ shadow risk | PIT pass D [D 38, #19] |
 | Carnell Tate | WR | TEN | WR1 | @ NYG | 🟢 SOFT | 28 | (outside) LCB Deonte Banks [F 20]<br>RCB Greg Newsome II [D 33] | NYG pass D [D 31, #22] |
 | Cooper Kupp | WR | SEA | WR3 | @ WAS | 🟢 SOFT | 16 | (slot) NB Amik Robertson [D 23] | WAS pass D [F 3, #32] |
 | Jaxon Smith-Njigba | WR | SEA | WR1 | @ WAS | 🟢 SOFT | 16 | (slot) NB Amik Robertson [D 23] | WAS pass D [F 3, #32] |
 | Chig Okonkwo | TE | WAS | TE1 | vs SEA | 🔴 TOUGH | 80 | FS Julian Love [A 81]<br>SS Ty Okada [C 53] | SEA pass D [A 92, #2] |
 | Colby Parkinson | TE | LA | TE1 | @ DEN | 🔴 TOUGH | 78 | FS Brandon Jones [B 79]<br>SS Talanoa Hufanga [C 46] | DEN pass D [A 95, #1] |
-| Oronde Gadsden | TE | LAC | TE1 | @ BUF | 🔴 TOUGH | 71 | FS C.J. Gardner-Johnson [B 62]<br>SS Cole Bishop [C 59] | BUF pass D [A 81, #5] |
+| Charlie Kolar | TE | LAC | TE1 | @ BUF | 🔴 TOUGH | 71 | FS C.J. Gardner-Johnson [B 62]<br>SS Cole Bishop [C 59] | BUF pass D [A 81, #5] |
 | Colston Loveland | TE | CHI | TE1 | vs PHI | 🔴 TOUGH | 71 | FS Andrew Mukuba [?] (low sample (25 tgt))<br>SS Marcus Epps [?] (low sample (13 tgt)) | PHI pass D [A 91, #3] |
 | Tyler Warren | TE | IND | TE1 | vs HOU | 🔴 TOUGH | 70 | FS Calen Bullock [A 83]<br>SS Reed Blankenship [C 49] | HOU pass D [B 74, #7] |
 | Dalton Kincaid | TE | BUF | TE1 | vs LAC | 🟡 NEUTRAL | 68 | FS Elijah Molden [C 45]<br>SS Derwin James Jr. [A 83] | LAC pass D [B 71, #12] |

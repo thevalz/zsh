@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-24 09:52 UTC
+**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-24 14:53 UTC
 
 _value = rest-of-season points over replacement from usage through week 2 (452 players with games), projected over weeks 3–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 33% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-18; live page had only 6 experts); ESPN weekly projections summed over weeks 3–17 (378 players); Sleeper weekly projections summed over 15 remaining weeks (448 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 91 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,10 +8,12 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-24 04:32 UTC (5.3h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-24 09:53 UTC (5.0h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-Nothing changed.
-
+- 📈 **Kayshon Boutte (WR-HOU) moved up the depth chart (3 → 2)** — Workload is trending his way. He is a free agent.
+  ↳ _September 21, 2026 — :_ Boutte caught three of five targets for 37 yards during the Texans' 20-6 loss to the Bengals on Sunday.
+- ⚠️ **Mason Taylor (TE-NYJ) cleared (Doubtful → healthy)** — FREE AGENT player is off the report.
+  ↳ _September 23, 2026 — :_ Jets head coach Aaron Glenn said that Taylor (thumb) won't participate in Wednesday's practice,  Rich Cimini of ESPN.com  reports. (serious)
 
 ## Waiver board — best available opportunity
 
@@ -19,10 +21,10 @@ Nothing changed.
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 34.4 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $6 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 18.9 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🔥 | **Alvin Kamara (RB-NO)** | CONTESTED | 11.1 | every man ahead of him is banged up (1 deep); Travis Etienne is Questionable (Hamstring) | 273,128 | $17 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.4 | 45,657 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 45,657 | $3 |
+| 🔥 | **Alvin Kamara (RB-NO)** | CONTESTED | 11.1 | every man ahead of him is banged up (1 deep); Travis Etienne is Questionable (Hamstring) | 234,304 | $17 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.4 | 41,166 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 41,166 | $3 |
+| 🟢 | **Kayshon Boutte (WR-HOU)** | BUY EARLY | 4.8 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 0 | $2 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 18.9 | starting for his NFL team and unrostered | 0 | $2 |
-| · | **Xavier Hutchinson (WR-HOU)** | SPECULATIVE | 3.0 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 22,127 | $1 |
 | 🔹 | **Pat Freiermuth (TE-PIT)** | STARTER FA | 11.5 | starting for his NFL team and unrostered | 0 | $2 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
@@ -67,7 +69,7 @@ Nothing changed.
 | 5 | mtngoblin | 4-0 | 458.5 | 34.9 | 88.8 | 164.4 | 117.2 | 6.7 |
 | 6 | Down to Pound | 1-3 | 407.2 | 39.2 | 78.7 | 121.9 | 100.4 | 23.1 |
 | 7 | To Infinity and Bijan | 2-2 | 403.1 | 20.6 | 80.0 | 161.7 | 83.7 | 20.5 |
-| 8 | hulleywood | 1-3 | 385.7 | 44.3 | 95.4 | 80.0 | 109.0 | 29.6 |
+| 8 | hulleywood | 1-3 | 385.7 | 44.2 | 95.4 | 80.0 | 109.0 | 29.6 |
 | 9 | NYKatSnatchers | 1-3 | 383.4 | 33.1 | 51.3 | 113.8 | 100.9 | 60.6 |
 | 10 | Brooklyn Meatpackers | 0-4 | 372.9 | 30.5 | 79.0 | 127.5 | 62.7 | 48.0 |
 | 11 | Holy Turnovers, Batman! | 1-3 | 358.9 | 23.7 | 99.1 | 107.1 | 86.7 | 10.9 |
