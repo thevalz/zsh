@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-24 04:32 UTC
+**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-24 09:52 UTC
 
 _value = rest-of-season points over replacement from usage through week 2 (452 players with games), projected over weeks 3–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 33% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-18; live page had only 6 experts); ESPN weekly projections summed over weeks 3–17 (378 players); Sleeper weekly projections summed over 15 remaining weeks (448 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 91 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,24 +8,10 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-23 23:35 UTC (5.0h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-24 04:32 UTC (5.3h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- ⚠️ **Ronnie Rivers (RB-LAR) Questionable → IR** — FREE AGENT player's status changed. Next up: **Jordan Waters (RB-LAR)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ The Rams placed Rivers (calf) on their  injured reserve  list Wednesday. (serious)
-- ⚠️ **Savion Williams (WR-GB) → IR** — FREE AGENT player newly listed IR. Next up: **Quincy Skinner (WR-GB)** — FREE AGENT, claim him.
-  ↳ _September 1, 2026 — On mend from high-ankle sprain:_ Packers general manager Brian Gutekunst said Tuesday that Williams is recovering from a high-ankle sprain and should be ready to return from injured reserve when first eligible in Week 5,  Matt Schneidman of The Athletic  reports. (serious)
-- ⚠️ **Jayden Reed (WR-GB) Doubtful → Out** — hulleywood's player's status changed. Next up: **Savion Williams (WR-GB)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ Reed (neck) has been ruled out for Thursday's game against the Falcons,  Wes Hodkiewicz of the Packers' official site  reports.
-- ⚠️ **Charlie Kolar (TE-LAC) cleared (Out → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 23, 2026 — :_ Chargers head coach Jim Harbaugh said Wednesday that Kolar (forearm) won't play Sunday in Buffalo but is expected to avoid placement on injured reserve,  Kris Rhim of ESPN.com  reports. (serious)
-- ⚠️ **Kyle Monangai (RB-CHI) → Questionable** — Randikulous's player newly listed Questionable. Next up: **Roschon Johnson (RB-CHI)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ Monangai (undisclosed) was not present during the portion of Wednesday's practice open to the media,  Brad Biggs of the Chicago Tribune  reports. (serious)
-- ⚠️ **Andrei Iosivas (WR-CIN) cleared (Out → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 23, 2026 — :_ Bengals head coach Zac Taylor said Wednesday that Iosivas tore a ligament in his thumb and will be placed on injured reserve,  Ben Baby of ESPN.com  reports. (serious)
-- ⚠️ **Tim Patrick (WR-NYJ) cleared (IR → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 12, 2026 — :_ The Jets placed Patrick (groin) on injured reserve Saturday,  Zack Rosenblatt of The Athletic  reports. (serious)
-- ⚠️ **Travis Etienne (RB-NO) → Questionable** — hulleywood's player newly listed Questionable. Next up: **Alvin Kamara (RB-NO)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ Head coach Kellen Moore said Etienne was a limited practice participant Wednesday due to a hamstring injury,  Jeff Nowak of WWL New Orleans  reports. (practice: **LIMITED**)
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
@@ -33,10 +19,10 @@ _baseline: snapshot committed 2026-09-23 23:35 UTC (5.0h ago) — older than the
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 34.4 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $6 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 18.9 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🔥 | **Alvin Kamara (RB-NO)** | CONTESTED | 11.1 | every man ahead of him is banged up (1 deep); Travis Etienne is Questionable (Hamstring) | 302,712 | $17 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.4 | 47,547 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 47,547 | $3 |
+| 🔥 | **Alvin Kamara (RB-NO)** | CONTESTED | 11.1 | every man ahead of him is banged up (1 deep); Travis Etienne is Questionable (Hamstring) | 273,128 | $17 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.4 | 45,657 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 45,657 | $3 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 18.9 | starting for his NFL team and unrostered | 0 | $2 |
-| · | **Xavier Hutchinson (WR-HOU)** | SPECULATIVE | 3.0 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 25,508 | $1 |
+| · | **Xavier Hutchinson (WR-HOU)** | SPECULATIVE | 3.0 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 22,127 | $1 |
 | 🔹 | **Pat Freiermuth (TE-PIT)** | STARTER FA | 11.5 | starting for his NFL team and unrostered | 0 | $2 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
