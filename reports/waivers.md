@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-25 18:28 UTC
+**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-25 22:12 UTC
 
 _value = rest-of-season points over replacement from usage through week 3 (454 players with games), projected over weeks 4–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 43% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-25; live page had only 6 experts); ESPN weekly projections summed over weeks 4–17 (376 players); Sleeper weekly projections summed over 14 remaining weeks (442 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 99 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,24 +8,10 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-25 13:37 UTC (4.9h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-25 18:29 UTC (3.7h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- ⚠️ **Caleb Douglas (WR-MIA) Questionable → Out** — East Coast Wins Most's player's status changed. Next up: **Chris Bell (WR-MIA)** — FREE AGENT, claim him.
-  ↳ _September 25, 2026 — :_ Douglas (ankle) won't play Sunday against the Chiefs,  C. Isaiah Smalls II of the Miami Herald  reports. (practice: **DNP**)
-- ⚠️ **Jaylen Wright (RB-MIA) Questionable → Doubtful** — FREE AGENT player's status changed. Next up: **Ollie Gordon (RB-MIA)** — FREE AGENT, claim him.
-  ↳ _September 25, 2026 — :_ Wright (foot) is considered doubtful for Sunday's game against Kansas City,  Travis Wingfield of the Dolphins' official site  reports.
-- ⚠️ **Nico Collins (WR-HOU) Questionable → Doubtful** — Jersey Rum Hams's player's status changed. Next up: **Xavier Hutchinson (WR-HOU)** — FREE AGENT, claim him.
-  ↳ _September 25, 2026 — :_ Collins (hamstring) isn't practicing Friday and is slated to miss a second game in a row,  Aaron Wilson of KPRC 2 Houston  reports.
-- ⚠️ **Puka Nacua (WR-LAR) Questionable → Doubtful** — East Coast Wins Most's player's status changed. Next up: **Konata Mumpfield (WR-LAR)** — FREE AGENT, claim him.
-  ↳ _September 25, 2026 — :_ Coach Sean McVay said Friday that Nacua (hip) will be listed as doubtful for Sunday's game at Denver,  Stu Jackson of the Rams' official site  reports.
-- 📈 **Davante Adams (WR-LAR) moved up the depth chart (2 → 1)** — Workload is trending his way.
-  ↳ _September 21, 2026 — :_ Adams secured eight of 10 targets for 195 yards and two touchdowns in the Rams' 28-6 win over the Giants on Monday night.
-- ⚠️ **Malik Davis (RB-DAL) cleared (IR → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 12, 2026 — :_ The Cowboys placed Davis (hip) on injured reserve Saturday,  Adam Schefter of ESPN  reports. (serious)
-- ⚠️ **Julian Hill (TE-NE) cleared (IR → healthy)** — FREE AGENT player is off the report.
-  ↳ _June 1, 2026 — Lands on IR:_ The Patriots placed Hill (knee) on IR on Monday,  Evan Lazar of the team's official site  reports. (serious)
-- ⚠️ **Tim Patrick (WR-NYJ) cleared (IR → healthy)** — FREE AGENT player is off the report.
-  ↳ _September 12, 2026 — :_ The Jets placed Patrick (groin) on injured reserve Saturday,  Zack Rosenblatt of The Athletic  reports. (serious)
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
@@ -33,10 +19,10 @@ _baseline: snapshot committed 2026-09-25 13:37 UTC (4.9h ago) — older than the
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 28.2 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $6 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 19.9 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🔥 | **Tank Bigsby (RB-PHI)** | CONTESTED | 3.3 | every man ahead of him is banged up (1 deep); 57,162 adds in 24h — the market has re-rated him | 57,162 | $17 |
-| 🚨 | **Xavier Hutchinson (WR-HOU)** | URGENT | 3.3 | everyone ahead of him is out — the job is his; Nico Collins is Doubtful (Hamstring) | 24,437 | $11 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.6 | 53,199 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 53,199 | $3 |
-| 🔥 | **Alvin Kamara (RB-NO)** | CONTESTED | 10.0 | every man ahead of him is banged up (1 deep); Travis Etienne is Questionable (Hamstring) | 146,632 | $17 |
+| 🚨 | **Xavier Hutchinson (WR-HOU)** | URGENT | 3.3 | everyone ahead of him is out — the job is his; 42,147 adds in 24h — the market has re-rated him | 42,147 | $11 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.6 | 53,235 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 53,235 | $3 |
+| 🔥 | **Alvin Kamara (RB-NO)** | CONTESTED | 10.0 | every man ahead of him is banged up (1 deep); Travis Etienne is Questionable (Hamstring) | 132,064 | $17 |
+| 🔥 | **Tank Bigsby (RB-PHI)** | CONTESTED | 3.3 | every man ahead of him is banged up (1 deep); 32,515 adds in 24h — the market has re-rated him | 32,515 | $17 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 20.2 | starting for his NFL team and unrostered | 0 | $2 |
 | 🔹 | **Cade Otton (TE-TB)** | STARTER FA | 12.5 | starting for his NFL team and unrostered | 0 | $2 |
 
