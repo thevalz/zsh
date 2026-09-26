@@ -1,17 +1,17 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-26 12:58 UTC
+**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-26 17:03 UTC
 
 _value = rest-of-season points over replacement from usage through week 3 (454 players with games), projected over weeks 4–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 43% his own usage, the rest prior_  
-_prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-25; live page had only 6 experts); ESPN weekly projections summed over weeks 4–17 (376 players); Sleeper weekly projections summed over 14 remaining weeks (442 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 104 absences priced on default weeks, not a blurb (`unverified`)_  
+_prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-25; live page had only 6 experts); ESPN weekly projections summed over weeks 4–17 (377 players); Sleeper weekly projections summed over 14 remaining weeks (442 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 104 absences priced on default weeks, not a blurb (`unverified`)_  
 _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46 (PPG alone 0.39), RB 0.85 (PPG alone 0.85), WR 0.77 (PPG alone 0.76), TE 0.84 (PPG alone 0.79)_
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-26 07:30 UTC (5.5h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-26 12:58 UTC (4.1h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-Nothing changed.
-
+- 🚨 **Alec Pierce (WR-IND) Out → IR** — MY player's status changed. Next up: **Anthony Gould (WR-IND)** — FREE AGENT, claim him.
+  ↳ _September 26, 2026 — :_ Pierce (heel) was  placed on injured reserve  Saturday. (serious)
 
 ## Waiver board — best available opportunity
 
@@ -19,7 +19,7 @@ Nothing changed.
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 28.2 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $6 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 19.9 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.6 | 37,071 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 37,071 | $3 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.6 | 37,188 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 37,188 | $3 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 20.2 | starting for his NFL team and unrostered | 0 | $2 |
 | 🟢 | **Chris Rodriguez (RB-JAX)** | BUY EARLY | 2.9 | direct handcuff to MY Bhayshul Tuten | 0 | $2 |
 | 🔹 | **Cade Otton (TE-TB)** | STARTER FA | 12.7 | starting for his NFL team and unrostered | 0 | $2 |
@@ -59,16 +59,16 @@ Nothing changed.
 
 | # | Team | W-L | Lineup | Bench | QB | RB | WR | TE |
 |--:|:--|:--|--:|--:|--:|--:|--:|--:|
-| 1 | **supervillain** | 4-0 | 522.4 | 33.9 | 154.9 | 131.0 | 67.9 | 86.1 |
+| 1 | **supervillain** | 4-0 | 522.4 | 33.1 | 154.9 | 131.0 | 67.9 | 86.1 |
 | 2 | It's Gonna be Maye | 3-1 | 518.0 | 43.8 | 93.8 | 181.4 | 138.8 | 50.5 |
 | 3 | Randikulous | 4-0 | 457.9 | 35.1 | 88.2 | 157.2 | 116.7 | 42.0 |
-| 4 | mtngoblin | 4-0 | 456.2 | 32.5 | 86.2 | 160.6 | 123.2 | 6.7 |
+| 4 | mtngoblin | 4-0 | 456.2 | 32.6 | 86.2 | 160.6 | 123.2 | 6.7 |
 | 5 | Jersey Rum Hams | 2-2 | 449.2 | 62.8 | 68.5 | 103.8 | 152.2 | 18.9 |
-| 6 | To Infinity and Bijan | 2-2 | 424.5 | 20.6 | 85.2 | 165.6 | 95.5 | 19.9 |
-| 7 | NYKatSnatchers | 1-3 | 400.0 | 26.3 | 51.9 | 116.0 | 110.6 | 64.8 |
+| 6 | To Infinity and Bijan | 2-2 | 424.5 | 20.7 | 85.2 | 165.6 | 95.5 | 19.9 |
+| 7 | NYKatSnatchers | 1-3 | 400.0 | 26.4 | 51.9 | 116.0 | 110.6 | 64.8 |
 | 8 | Down to Pound | 1-3 | 397.7 | 39.4 | 78.1 | 119.8 | 101.4 | 23.5 |
 | 9 | hulleywood | 1-3 | 388.4 | 43.1 | 95.4 | 73.6 | 109.7 | 31.1 |
-| 10 | Brooklyn Meatpackers | 0-4 | 370.5 | 29.5 | 79.0 | 120.4 | 63.6 | 56.7 |
+| 10 | Brooklyn Meatpackers | 0-4 | 370.5 | 29.6 | 79.0 | 120.4 | 63.6 | 56.7 |
 | 11 | Holy Turnovers, Batman! | 1-3 | 345.1 | 23.5 | 103.8 | 89.9 | 86.9 | 10.0 |
 | 12 | East Coast Wins Most | 1-3 | 320.9 | 20.5 | 24.4 | 134.3 | 88.4 | 23.1 |
 

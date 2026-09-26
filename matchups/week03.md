@@ -11,16 +11,16 @@ _depth charts as of 2026-09-26; defender grades pool PFR coverage stats from 202
 | Bhayshul Tuten | RB | JAX | FLEX | vs NE | 🟡 NEUTRAL | 58 | LILB Christian Elliss [C 41]<br>RILB Robert Spillane [C 41] | NE run D [B 70, #9] |
 | Cam Skattebo | RB | NYG | RB | vs TEN | 🟡 NEUTRAL | 54 | MLB Anthony Hill Jr. [?] (rookie)<br>WLB Cedric Gray [D 38] | TEN run D [B 60, #13] |
 | Derrick Henry | RB | BAL | RB | @ DAL | 🟢 SOFT | 30 | LILB DeMarvion Overshown [?] (low sample (16 tgt))<br>RILB Dee Winters [B 63] | DAL run D [F 12, #29] |
-| Emeka Egbuka | WR | TB | WR | vs MIN | 🔴 TOUGH | 75 | (outside) LCB Isaiah Rodgers [C 59]<br>RCB James Pierre [A 84]<br>⚠ shadow risk | MIN pass D [A 81, #5] |
 | Tetairoa McMillan | WR | CAR | WR | @ CLE | 🟡 NEUTRAL | 62 | (outside) LCB Denzel Ward [C 57]<br>RCB Tyson Campbell [C 55] | CLE pass D [B 73, #9] |
-| Devaughn Vele | WR | NO | FLEX | vs LV | 🟡 NEUTRAL | 53 | (outside) LCB Eric Stokes [B 73]<br>RCB Darien Porter [D 34] | LV pass D [C 54, #15] |
+| Devaughn Vele | WR | NO | WR | vs LV | 🟡 NEUTRAL | 53 | (outside) LCB Eric Stokes [B 73]<br>RCB Darien Porter [D 34] | LV pass D [C 54, #15] |
 | Trey McBride | TE | ARI | TE | @ SF | 🟡 NEUTRAL | 41 | FS Ji'Ayir Brown [B 64]<br>SS Marques Sigle [D 21] | SF pass D [D 39, #19] |
+| Dalton Schultz | TE | HOU | FLEX | @ IND | 🟢 SOFT | 35 | FS Cam Bynum [C 52]<br>SS A.J. Haulcy [?] (rookie) | IND pass D [F 18, #29] |
 | Tony Pollard | RB | TEN | BN | @ NYG | 🟢 SOFT | 26 | LILB Arvell Reese [?] (rookie)<br>RILB Tremaine Edmunds [B 69] | NYG run D [F 3, #32] |
 | Rico Dowdle | RB | PIT | BN | vs CIN | 🟢 SOFT | 17 | MLB Barrett Carter [D 24]<br>WLB Demetrius Knight Jr. [C 45] | CIN run D [F 5, #31] |
 | Alec Pierce | WR | IND | BN | vs HOU | 🔴 TOUGH | 81 | (outside) LCB Derek Stingley Jr. [A 90]<br>RCB Kamari Lassiter [B 80]<br>⚠ shadow risk | HOU pass D [B 74, #8] |
+| Emeka Egbuka | WR | TB | BN | vs MIN | 🔴 TOUGH | 75 | (outside) LCB Isaiah Rodgers [C 59]<br>RCB James Pierre [A 84]<br>⚠ shadow risk | MIN pass D [A 81, #5] |
 | Tank Dell | WR | HOU | BN | @ IND | 🟡 NEUTRAL | 42 | (outside) LCB Sauce Gardner [B 61]<br>RCB Charvarius Ward [C 48] | IND pass D [F 18, #29] |
 | Malachi Fields | WR | NYG | BN | vs TEN | 🟢 SOFT | 37 | (outside) LCB Cor'Dale Flott [B 70]<br>RCB Alontae Taylor [D 37] | TEN pass D [F 8, #30] |
-| Dalton Schultz | TE | HOU | BN | @ IND | 🟢 SOFT | 35 | FS Cam Bynum [C 52]<br>SS A.J. Haulcy [?] (rookie) | IND pass D [F 18, #29] |
 
 ## Holy Turnovers, Batman! (darrenfreitas) -- this week's opponent
 
