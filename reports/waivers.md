@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-26 01:26 UTC
+**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-26 07:30 UTC
 
 _value = rest-of-season points over replacement from usage through week 3 (454 players with games), projected over weeks 4–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 43% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-25; live page had only 6 experts); ESPN weekly projections summed over weeks 4–17 (376 players); Sleeper weekly projections summed over 14 remaining weeks (442 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 104 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,26 +8,10 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-25 22:12 UTC (3.2h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-26 01:26 UTC (6.1h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- 🚨 **Rico Dowdle (RB-PIT) Questionable → Out** — MY player's status changed. Next up: **Travis Homer (RB-PIT)** — FREE AGENT, claim him.
-  ↳ _September 25, 2026 — :_ Dowdle (toe) has been ruled out for Sunday's gam at Cincinnati,  Alan Saunders of Steelers Now  reports.
-- ⚠️ **Nico Collins (WR-HOU) Doubtful → Out** — Jersey Rum Hams's player's status changed. Next up: **Tank Dell (WR-HOU)** — rostered by supervillain.
-  ↳ _September 25, 2026 — :_ Collins (hamstring)  will not play  in Sunday's game at Indianapolis.
-- 🚨 **Tony Pollard (RB-TEN) cleared (Questionable → healthy)** — MY player is off the report.
-  ↳ _September 25, 2026 — :_ Pollard (ankle) doesn't have an injury designation for Sunday's game against the Giants after returning to a full practice Friday,  Jim Wyatt of the Titans' official site  reports. (practice: **FULL**)
-- ⚠️ **Mason Tipton (WR-NO) → PUP** — FREE AGENT player newly listed PUP. Next up: **Barion Brown (WR-NO)** — FREE AGENT, claim him.
-  ↳ _August 31, 2026 — Starting year on reserve/PUP list:_ Tipton (leg) was  moved to the reserve/PUP list by the Saints  on Sunday.
-- ⚠️ **Jonah Coleman (RB-DEN) Questionable → Out** — Down to Pound's player's status changed. Next up: **Cody Schrader (RB-DEN)** — FREE AGENT, claim him.
-  ↳ _September 25, 2026 — :_ Coleman (ankle) has been  ruled out  for Sunday's game against the Rams.
-- ⚠️ **Saquon Barkley (RB-PHI) cleared (Questionable → healthy)** — Holy Turnovers, Batman!'s player is off the report.
-  ↳ _September 25, 2026 — :_ Barkley (stinger) was a  full practice participant  Friday. (practice: **FULL**, serious)
-- ⚠️ **Jadarian Price (RB-SEA) cleared (Questionable → healthy)** — Jersey Rum Hams's player is off the report.
-  ↳ _September 25, 2026 — :_ Head coach Mike Macdonald said Friday that Price (shoulder) received "a ton of reps" in practice this week and will be "full go" Sunday in Washington,  Gregg Bell of The Tacoma News Tribune  reports. (practice: **LIMITED**, serious)
-- ⚠️ **Aaron Jones (RB-MIN) cleared (Questionable → healthy)** — hulleywood's player is off the report.
-  ↳ _September 25, 2026 — :_ Head coach Kevin O'Connell said Friday that Jones (knee) will be available for Sunday's game at Tampa Bay,  Alec Lewis of The Athletic  reports.
-- ⚠️ **Travis Etienne (RB-NO) cleared (Questionable → healthy)** — hulleywood's player is off the report.
-- ⚠️ **Kyle Monangai (RB-CHI) cleared (Questionable → healthy)** — Randikulous's player is off the report.
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
@@ -35,7 +19,7 @@ _baseline: snapshot committed 2026-09-25 22:12 UTC (3.2h ago) — older than the
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 28.2 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $6 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 19.9 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.6 | 46,530 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 46,530 | $3 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.6 | 37,764 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 37,764 | $3 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 20.2 | starting for his NFL team and unrostered | 0 | $2 |
 | 🟢 | **Chris Rodriguez (RB-JAX)** | BUY EARLY | 2.9 | direct handcuff to MY Bhayshul Tuten | 0 | $2 |
 | 🔹 | **Cade Otton (TE-TB)** | STARTER FA | 12.7 | starting for his NFL team and unrostered | 0 | $2 |
