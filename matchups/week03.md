@@ -1,6 +1,6 @@
 # Matchups -- 2026 week 3
 
-_depth charts as of 2026-09-25; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
+_depth charts as of 2026-09-26; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
 
 ## supervillain (thevalz) -- my lineup
 
@@ -11,7 +11,7 @@ _depth charts as of 2026-09-25; defender grades pool PFR coverage stats from 202
 | Bhayshul Tuten | RB | JAX | FLEX | vs NE | 🟡 NEUTRAL | 58 | LILB Christian Elliss [C 41]<br>RILB Robert Spillane [C 41] | NE run D [B 70, #9] |
 | Cam Skattebo | RB | NYG | RB | vs TEN | 🟡 NEUTRAL | 54 | MLB Anthony Hill Jr. [?] (rookie)<br>WLB Cedric Gray [D 38] | TEN run D [B 60, #13] |
 | Derrick Henry | RB | BAL | RB | @ DAL | 🟢 SOFT | 30 | LILB DeMarvion Overshown [?] (low sample (16 tgt))<br>RILB Dee Winters [B 63] | DAL run D [F 12, #29] |
-| Emeka Egbuka | WR | TB | WR | vs MIN | 🔴 TOUGH | 72 | (outside) LCB Charles Demmings [?] (rookie)<br>RCB James Pierre [A 84]<br>⚠ shadow risk | MIN pass D [A 81, #5] |
+| Emeka Egbuka | WR | TB | WR | vs MIN | 🔴 TOUGH | 75 | (outside) LCB Isaiah Rodgers [C 59]<br>RCB James Pierre [A 84]<br>⚠ shadow risk | MIN pass D [A 81, #5] |
 | Tetairoa McMillan | WR | CAR | WR | @ CLE | 🟡 NEUTRAL | 62 | (outside) LCB Denzel Ward [C 57]<br>RCB Tyson Campbell [C 55] | CLE pass D [B 73, #9] |
 | Devaughn Vele | WR | NO | FLEX | vs LV | 🟡 NEUTRAL | 53 | (outside) LCB Eric Stokes [B 73]<br>RCB Darien Porter [D 34] | LV pass D [C 54, #15] |
 | Trey McBride | TE | ARI | TE | @ SF | 🟡 NEUTRAL | 41 | FS Ji'Ayir Brown [B 64]<br>SS Marques Sigle [D 21] | SF pass D [D 39, #19] |
@@ -94,7 +94,7 @@ _depth charts as of 2026-09-25; defender grades pool PFR coverage stats from 202
 | Cam Skattebo | RB | NYG | RB1 | vs TEN | 🟡 NEUTRAL | 54 | MLB Anthony Hill Jr. [?] (rookie)<br>WLB Cedric Gray [D 38] | TEN run D [B 60, #13] |
 | Kyren Williams | RB | LA | RB1 | @ DEN | 🟡 NEUTRAL | 54 | LILB Alex Singleton [D 21]<br>RILB Justin Strnad [B 71] | DEN run D [C 59, #14] |
 | Jeremiyah Love | RB | ARI | RB1 | @ SF | 🟡 NEUTRAL | 51 | MLB Fred Warner [B 70]<br>WLB Dre Greenlaw [?] (low sample (23 tgt)) | SF run D [C 45, #19] |
-| MarShawn Lloyd | RB | GB | RB1 | vs ATL | 🟡 NEUTRAL | 51 | LILB Kendal Daniels [?] (rookie)<br>RILB Divine Deablo [C 59] | ATL run D [C 48, #16] |
+| Kaleb Johnson | RB | GB | RB1 | vs ATL | 🟡 NEUTRAL | 51 | LILB Kendal Daniels [?] (rookie)<br>RILB Divine Deablo [C 59] | ATL run D [C 48, #16] |
 | Bijan Robinson | RB | ATL | RB1 | @ GB | 🟡 NEUTRAL | 46 | LILB Edgerrin Cooper [B 62]<br>RILB Zaire Franklin [D 35] | GB run D [C 44, #21] |
 | Saquon Barkley | RB | PHI | RB1 | @ CHI | 🟡 NEUTRAL | 45 | MLB T.J. Edwards [B 65]<br>WLB Devin Bush [B 71] | CHI run D [D 30, #24] |
 | Chase Brown | RB | CIN | RB1 | @ PIT | 🟡 NEUTRAL | 44 | LILB Payton Wilson [D 37]<br>RILB Patrick Queen [C 40] | PIT run D [C 47, #18] |
@@ -117,6 +117,7 @@ _depth charts as of 2026-09-25; defender grades pool PFR coverage stats from 202
 | Jordan Whittington | WR | LA | WR3 | @ DEN | 🔴 TOUGH | 78 | (slot) NB Ja'Quan McMillian [B 69]<br>⚠ shadow risk | DEN pass D [A 95, #1] |
 | Brian Thomas Jr. | WR | JAX | WR2 | vs NE | 🔴 TOUGH | 77 | (outside) LCB Carlton Davis III [B 75]<br>RCB Christian Gonzalez [A 83]<br>⚠ shadow risk | NE pass D [B 73, #11] |
 | Parker Washington | WR | JAX | WR1 | vs NE | 🔴 TOUGH | 77 | (outside) LCB Carlton Davis III [B 75]<br>RCB Christian Gonzalez [A 83]<br>⚠ shadow risk | NE pass D [B 73, #11] |
+| Emeka Egbuka | WR | TB | WR1 | vs MIN | 🔴 TOUGH | 75 | (outside) LCB Isaiah Rodgers [C 59]<br>RCB James Pierre [A 84]<br>⚠ shadow risk | MIN pass D [A 81, #5] |
 | Kalif Raymond | WR | CHI | WR3 | vs PHI | 🔴 TOUGH | 74 | (slot) NB Cooper DeJean [B 65]<br>⚠ shadow risk | PHI pass D [A 92, #2] |
 | Stefon Diggs | WR | WAS | WR2 | vs SEA | 🔴 TOUGH | 73 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 92, #3] |
 | Terry McLaurin | WR | WAS | WR1 | vs SEA | 🔴 TOUGH | 73 | (outside) LCB Devon Witherspoon [C 40]<br>RCB Josh Jobe [A 85]<br>⚠ shadow risk | SEA pass D [A 92, #3] |
@@ -124,7 +125,6 @@ _depth charts as of 2026-09-25; defender grades pool PFR coverage stats from 202
 | Josh Downs | WR | IND | WR1 | vs HOU | 🔴 TOUGH | 73 | (slot) NB Jalen Pitre [B 72]<br>⚠ shadow risk | HOU pass D [B 74, #8] |
 | Chris Godwin Jr. | WR | TB | WR2 | vs MIN | 🔴 TOUGH | 73 | (slot) NB Byron Murphy Jr. [B 68]<br>⚠ shadow risk | MIN pass D [A 81, #5] |
 | Jalen McMillan | WR | TB | WR3 | vs MIN | 🔴 TOUGH | 73 | (slot) NB Byron Murphy Jr. [B 68]<br>⚠ shadow risk | MIN pass D [A 81, #5] |
-| Emeka Egbuka | WR | TB | WR1 | vs MIN | 🔴 TOUGH | 72 | (outside) LCB Charles Demmings [?] (rookie)<br>RCB James Pierre [A 84]<br>⚠ shadow risk | MIN pass D [A 81, #5] |
 | Quentin Johnston | WR | LAC | WR2 | @ BUF | 🔴 TOUGH | 69 | (outside) LCB Christian Benford [B 74]<br>RCB Maxwell Hairston [?] (low sample (25 tgt)) | BUF pass D [A 82, #4] |
 | Marvin Mims Jr. | WR | DEN | WR3 | vs LA | 🔴 TOUGH | 68 | (slot) NB Quentin Lake [B 65] | LA pass D [B 73, #10] |
 | Keon Coleman | WR | BUF | WR3 | vs LAC | 🟡 NEUTRAL | 68 | (slot) NB Tarheeb Still [B 66] | LAC pass D [B 71, #12] |
@@ -197,8 +197,8 @@ _depth charts as of 2026-09-25; defender grades pool PFR coverage stats from 202
 | Jauan Jennings | WR | MIN | WR3 | @ TB | 🟢 SOFT | 36 | (slot) NB Jacob Parrish [C 41] | TB pass D [D 26, #24] |
 | DeVonta Smith | WR | PHI | WR1 | @ CHI | 🟢 SOFT | 35 | (outside) LCB Jaylon Johnson [D 29]<br>RCB Tyrique Stevenson [C 53] | CHI pass D [D 25, #25] |
 | Dontayvion Wicks | WR | PHI | WR2 | @ CHI | 🟢 SOFT | 35 | (outside) LCB Jaylon Johnson [D 29]<br>RCB Tyrique Stevenson [C 53] | CHI pass D [D 25, #25] |
+| Jameson Williams | WR | DET | WR2 | vs NYJ | 🟢 SOFT | 35 | (outside) LCB Azareye'h Thomas [?] (low sample (27 tgt))<br>RCB Brandon Stephens [F 16] | NYJ pass D [D 38, #21] |
 | Devontez Walker | WR | BAL | WR3 | @ DAL | 🟢 SOFT | 34 | (slot) NB Caleb Downs [?] (rookie) | DAL pass D [F 5, #31] |
-| Jameson Williams | WR | DET | WR2 | vs NYJ | 🟢 SOFT | 33 | (outside) LCB Nahshon Wright [C 47]<br>RCB Brandon Stephens [F 16] | NYJ pass D [D 38, #21] |
 | Demarcus Robinson | WR | SF | WR3 | vs ARI | 🟢 SOFT | 33 | (slot) NB Max Melton [D 40] | ARI pass D [F 19, #28] |
 | Rashid Shaheed | WR | SEA | WR2 | @ WAS | 🟢 SOFT | 32 | (outside) LCB Rasul Douglas [B 67]<br>RCB Mike Sainristil [D 28] | WAS pass D [F 3, #32] |
 | Colbie Young | WR | CIN | WR3 | @ PIT | 🟢 SOFT | 31 | (slot) NB Jalen Ramsey [D 27]<br>⚠ shadow risk | PIT pass D [D 38, #20] |
@@ -317,24 +317,24 @@ _depth charts as of 2026-09-25; defender grades pool PFR coverage stats from 202
 | 36 | Trent McDuffie | LA | RCB | B | 62 | 6.1 | 90 | 62 | 6 | 2 | 105 |
 | 37 | Sauce Gardner | IND | LCB | B | 61 | 7.7 | 86 | 52 | 2 | 0 | 74 |
 | 38 | Dax Hill | CIN | LCB | B | 61 | 6.1 | 88 | 64 | 3 | 1 | 98 |
-| 39 | Jourdan Lewis | JAX | NB | C | 59 | 4.8 | 89 | 66 | 6 | 2 | 85 |
-| 40 | Christian Izien | DET | NB | C | 58 | 7.0 | 91 | 68 | 1 | 0 | 42 |
-| 41 | Denzel Ward | CLE | LCB | C | 57 | 7.3 | 90 | 59 | 5 | 2 | 100 |
-| 42 | Jaylen Watson | LA | LCB | C | 56 | 7.7 | 78 | 61 | 1 | 2 | 79 |
-| 43 | Mike Jackson | CAR | LCB | C | 56 | 7.7 | 85 | 59 | 7 | 5 | 148 |
-| 44 | Riley Moss | DEN | RCB | C | 55 | 7.3 | 90 | 60 | 6 | 1 | 169 |
-| 45 | Tyson Campbell | CLE | RCB | C | 55 | 7.5 | 95 | 55 | 7 | 1 | 119 |
-| 46 | Jarvis Brownlee Jr. | NYJ | NB | C | 55 | 6.0 | 90 | 67 | 2 | 0 | 85 |
-| 47 | Tyrique Stevenson | CHI | RCB | C | 53 | 8.5 | 87 | 57 | 3 | 2 | 99 |
-| 48 | Taron Johnson | LV | NB | C | 52 | 6.7 | 90 | 66 | 2 | 1 | 82 |
-| 49 | Keisean Nixon | GB | LCB | C | 52 | 6.8 | 96 | 62 | 7 | 1 | 130 |
-| 50 | Zyon McCollum | TB | LCB | C | 51 | 7.4 | 95 | 59 | 8 | 2 | 136 |
-| 51 | Nick Emmanwori | SEA | NB | C | 51 | 6.4 | 100 | 74 | 3 | 1 | 66 |
-| 52 | Cam Lewis | CHI | NB | C | 51 | 6.7 | 91 | 66 | 2 | 0 | 71 |
-| 53 | Marlon Humphrey | BAL | RCB | C | 51 | 8.1 | 77 | 63 | 3 | 7 | 147 |
-| 54 | Charvarius Ward | IND | RCB | C | 48 | 7.6 | 98 | 58 | 3 | 0 | 74 |
-| 55 | Jonas Sanker | NO | NB | C | 47 | 10.3 | 101 | 62 | 3 | 2 | 34 |
-| 56 | Nahshon Wright | NYJ | LCB | C | 47 | 8.3 | 87 | 61 | 6 | 5 | 98 |
+| 39 | Isaiah Rodgers | MIN | LCB | C | 59 | 7.0 | 87 | 60 | 3 | 1 | 99 |
+| 40 | Jourdan Lewis | JAX | NB | C | 59 | 4.8 | 89 | 66 | 6 | 2 | 85 |
+| 41 | Christian Izien | DET | NB | C | 58 | 7.0 | 91 | 68 | 1 | 0 | 42 |
+| 42 | Denzel Ward | CLE | LCB | C | 57 | 7.3 | 90 | 59 | 5 | 2 | 100 |
+| 43 | Jaylen Watson | LA | LCB | C | 56 | 7.7 | 78 | 61 | 1 | 2 | 79 |
+| 44 | Mike Jackson | CAR | LCB | C | 56 | 7.7 | 85 | 59 | 7 | 5 | 148 |
+| 45 | Riley Moss | DEN | RCB | C | 55 | 7.3 | 90 | 60 | 6 | 1 | 169 |
+| 46 | Tyson Campbell | CLE | RCB | C | 55 | 7.5 | 95 | 55 | 7 | 1 | 119 |
+| 47 | Jarvis Brownlee Jr. | NYJ | NB | C | 55 | 6.0 | 90 | 67 | 2 | 0 | 85 |
+| 48 | Tyrique Stevenson | CHI | RCB | C | 53 | 8.5 | 87 | 57 | 3 | 2 | 99 |
+| 49 | Taron Johnson | LV | NB | C | 52 | 6.7 | 90 | 66 | 2 | 1 | 82 |
+| 50 | Keisean Nixon | GB | LCB | C | 52 | 6.8 | 96 | 62 | 7 | 1 | 130 |
+| 51 | Zyon McCollum | TB | LCB | C | 51 | 7.4 | 95 | 59 | 8 | 2 | 136 |
+| 52 | Nick Emmanwori | SEA | NB | C | 51 | 6.4 | 100 | 74 | 3 | 1 | 66 |
+| 53 | Cam Lewis | CHI | NB | C | 51 | 6.7 | 91 | 66 | 2 | 0 | 71 |
+| 54 | Marlon Humphrey | BAL | RCB | C | 51 | 8.1 | 77 | 63 | 3 | 7 | 147 |
+| 55 | Charvarius Ward | IND | RCB | C | 48 | 7.6 | 98 | 58 | 3 | 0 | 74 |
+| 56 | Jonas Sanker | NO | NB | C | 47 | 10.3 | 101 | 62 | 3 | 2 | 34 |
 | 57 | Kool-Aid McKinstry | NO | LCB | C | 46 | 8.0 | 98 | 58 | 9 | 3 | 123 |
 | 58 | Quincy Riley | NO | RCB | C | 46 | 7.9 | 96 | 60 | 3 | 1 | 52 |
 | 59 | Mike Hughes | ATL | RCB | C | 44 | 7.4 | 100 | 61 | 6 | 1 | 105 |
@@ -374,7 +374,7 @@ _depth charts as of 2026-09-25; defender grades pool PFR coverage stats from 202
 | 93 | Jason Marshall Jr. | MIA | LCB | ? | | | | | | | low sample (25 tgt) |
 | 94 | JuJu Brents | MIA | RCB | ? | | | | | | | low sample (13 tgt) |
 | 95 | Chris Johnson | MIA | NB | ? | | | | | | | rookie |
-| 96 | Charles Demmings | MIN | LCB | ? | | | | | | | rookie |
+| 96 | Azareye'h Thomas | NYJ | LCB | ? | | | | | | | low sample (27 tgt) |
 
 ### Legend
 

@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-26 07:30 UTC
+**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-26 12:58 UTC
 
 _value = rest-of-season points over replacement from usage through week 3 (454 players with games), projected over weeks 4–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 43% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-25; live page had only 6 experts); ESPN weekly projections summed over weeks 4–17 (376 players); Sleeper weekly projections summed over 14 remaining weeks (442 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 104 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,7 +8,7 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-26 01:26 UTC (6.1h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-26 07:30 UTC (5.5h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
 Nothing changed.
 
@@ -19,7 +19,7 @@ Nothing changed.
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 28.2 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $6 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 19.9 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.6 | 37,764 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 37,764 | $3 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.6 | 37,071 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 37,071 | $3 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 20.2 | starting for his NFL team and unrostered | 0 | $2 |
 | 🟢 | **Chris Rodriguez (RB-JAX)** | BUY EARLY | 2.9 | direct handcuff to MY Bhayshul Tuten | 0 | $2 |
 | 🔹 | **Cade Otton (TE-TB)** | STARTER FA | 12.7 | starting for his NFL team and unrostered | 0 | $2 |
