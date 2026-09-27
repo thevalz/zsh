@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-27 01:18 UTC
+**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-27 07:59 UTC
 
 _value = rest-of-season points over replacement from usage through week 3 (454 players with games), projected over weeks 4–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 43% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-25; live page had only 6 experts); ESPN weekly projections summed over weeks 4–17 (377 players); Sleeper weekly projections summed over 14 remaining weeks (442 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 106 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,18 +8,10 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-26 22:39 UTC (2.6h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-27 01:18 UTC (6.7h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- ⚠️ **Aidan O'Connell (QB-LV) Questionable → Out** — FREE AGENT player's status changed. Next up: **Fernando Mendoza (QB-LV)** — rostered by Brooklyn Meatpackers.
-  ↳ _September 26, 2026 — :_ O'Connell (personal) has been ruled out ahead of Sunday's game against the Saints,  Ryan McFadden of ESPN.com  reports. (serious)
-- ⚠️ **Jonah Coleman (RB-DEN) Out → IR** — Down to Pound's player's status changed. Next up: **Cody Schrader (RB-DEN)** — FREE AGENT, claim him.
-  ↳ _September 26, 2026 — :_ Coleman (ankle) is being placed on injured reserve Saturday,  Adam Schefter of ESPN  reports. (serious)
-- ⚠️ **Caleb Williams (QB-CHI) Doubtful → Out** — Randikulous's player's status changed. Next up: **Miller Moss (QB-CHI)** — FREE AGENT, claim him.
-  ↳ _September 26, 2026 — :_ Williams (hamstring) has been  ruled out  for Monday's game against the Eagles.
-- ⚠️ **Mason Tipton (WR-NO) cleared (PUP → healthy)** — FREE AGENT player is off the report.
-  ↳ _August 31, 2026 — Starting year on reserve/PUP list:_ Tipton (leg) was  moved to the reserve/PUP list by the Saints  on Sunday.
-- ⚠️ **DeVonta Smith (WR-PHI) cleared (Questionable → healthy)** — Down to Pound's player is off the report.
-  ↳ _September 26, 2026 — :_ Smith (hamstring)  does not carry an injury designation  into Monday's game against the Bears.
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
@@ -27,9 +19,9 @@ _baseline: snapshot committed 2026-09-26 22:39 UTC (2.6h ago) — older than the
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 28.2 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $6 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 19.9 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.6 | 39,960 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 39,960 | $3 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.7 | 42,579 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 42,579 | $3 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 20.2 | starting for his NFL team and unrostered | 0 | $2 |
-| 🔥 | **Eli Heidenreich (RB-PIT)** | CONTESTED | 0.1 | every man ahead of him is banged up (1 deep); 45,764 adds in 24h — the market has re-rated him | 45,764 | $17 |
+| 🔥 | **Eli Heidenreich (RB-PIT)** | CONTESTED | 0.1 | every man ahead of him is banged up (1 deep); 43,812 adds in 24h — the market has re-rated him | 43,812 | $17 |
 | 🟢 | **Chris Rodriguez (RB-JAX)** | BUY EARLY | 2.9 | direct handcuff to MY Bhayshul Tuten | 0 | $2 |
 | 🔹 | **Cade Otton (TE-TB)** | STARTER FA | 12.7 | starting for his NFL team and unrostered | 0 | $2 |
 
@@ -71,11 +63,11 @@ _baseline: snapshot committed 2026-09-26 22:39 UTC (2.6h ago) — older than the
 | 1 | **supervillain** | 4-0 | 522.4 | 33.1 | 154.9 | 131.0 | 67.9 | 86.1 |
 | 2 | It's Gonna be Maye | 3-1 | 518.0 | 43.8 | 93.8 | 181.4 | 138.8 | 50.5 |
 | 3 | mtngoblin | 4-0 | 457.4 | 32.6 | 87.1 | 160.6 | 123.2 | 6.7 |
-| 4 | Randikulous | 4-0 | 457.0 | 35.0 | 87.3 | 157.2 | 116.7 | 42.0 |
+| 4 | Randikulous | 4-0 | 457.0 | 35.1 | 87.3 | 157.2 | 116.7 | 42.0 |
 | 5 | Jersey Rum Hams | 2-2 | 449.2 | 62.4 | 68.5 | 103.8 | 152.2 | 18.9 |
-| 6 | To Infinity and Bijan | 2-2 | 424.5 | 20.8 | 85.2 | 165.6 | 95.5 | 19.9 |
+| 6 | To Infinity and Bijan | 2-2 | 424.5 | 20.9 | 85.2 | 165.6 | 95.5 | 19.9 |
 | 7 | NYKatSnatchers | 1-3 | 400.2 | 21.2 | 51.9 | 116.0 | 110.6 | 64.8 |
-| 8 | Down to Pound | 1-3 | 397.7 | 39.0 | 78.1 | 119.8 | 101.4 | 23.5 |
+| 8 | Down to Pound | 1-3 | 397.7 | 39.1 | 78.1 | 119.8 | 101.4 | 23.5 |
 | 9 | hulleywood | 1-3 | 388.4 | 43.1 | 95.4 | 73.6 | 109.7 | 31.1 |
 | 10 | Brooklyn Meatpackers | 0-4 | 370.8 | 29.6 | 79.0 | 120.4 | 63.6 | 56.7 |
 | 11 | Holy Turnovers, Batman! | 1-3 | 345.1 | 23.5 | 103.8 | 89.9 | 86.9 | 10.0 |
