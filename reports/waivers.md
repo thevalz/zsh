@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-27 07:59 UTC
+**Week 3** · supervillain (4-0) · FAAB left **$56** · generated 2026-09-27 13:49 UTC
 
 _value = rest-of-season points over replacement from usage through week 3 (454 players with games), projected over weeks 4–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 43% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-25; live page had only 6 experts); ESPN weekly projections summed over weeks 4–17 (377 players); Sleeper weekly projections summed over 14 remaining weeks (442 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 106 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,10 +8,10 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.46
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-27 01:18 UTC (6.7h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-27 07:59 UTC (5.8h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-Nothing changed.
-
+- 📥 **Chris Godwin (WR-TB) was added** — Picked up by Down to Pound.
+  ↳ _September 20, 2026 — :_ Godwin caught all three of his targets for 46 yards in Tampa Bay's 23-19 loss to the Browns on Sunday. He added 12 rushing yards on one attempt. (serious)
 
 ## Waiver board — best available opportunity
 
@@ -19,9 +19,9 @@ Nothing changed.
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 28.2 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $6 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 19.9 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.7 | 42,579 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 42,579 | $3 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 3.7 | 50,049 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 50,049 | $3 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 20.2 | starting for his NFL team and unrostered | 0 | $2 |
-| 🔥 | **Eli Heidenreich (RB-PIT)** | CONTESTED | 0.1 | every man ahead of him is banged up (1 deep); 43,812 adds in 24h — the market has re-rated him | 43,812 | $17 |
+| 🔥 | **Eli Heidenreich (RB-PIT)** | CONTESTED | 0.1 | every man ahead of him is banged up (1 deep); 42,860 adds in 24h — the market has re-rated him | 42,860 | $17 |
 | 🟢 | **Chris Rodriguez (RB-JAX)** | BUY EARLY | 2.9 | direct handcuff to MY Bhayshul Tuten | 0 | $2 |
 | 🔹 | **Cade Otton (TE-TB)** | STARTER FA | 12.7 | starting for his NFL team and unrostered | 0 | $2 |
 
@@ -49,7 +49,7 @@ Nothing changed.
 |:--|--:|--:|--:|--:|--:|--:|
 | QB | 2 | 2 | 154.91 | 87.08 | **1/12** | 0 |
 | RB | 2 | 5 | 130.98 | 130.98 | **6/12** | 48.73 |
-| WR | 2 | 6 | 67.91 | 109.65 | **11/12** | 2.16 |
+| WR | 2 | 6 | 67.91 | 109.65 | **11/12** | 2.31 |
 | TE | 1 | 2 | 86.07 | 31.14 | **1/12** | 12.87 |
 
 > ⚠️ **QB: 2 rostered for 2 starting slots — one injury and there is nobody to plug in.**
@@ -67,7 +67,7 @@ Nothing changed.
 | 5 | Jersey Rum Hams | 2-2 | 449.2 | 62.4 | 68.5 | 103.8 | 152.2 | 18.9 |
 | 6 | To Infinity and Bijan | 2-2 | 424.5 | 20.9 | 85.2 | 165.6 | 95.5 | 19.9 |
 | 7 | NYKatSnatchers | 1-3 | 400.2 | 21.2 | 51.9 | 116.0 | 110.6 | 64.8 |
-| 8 | Down to Pound | 1-3 | 397.7 | 39.1 | 78.1 | 119.8 | 101.4 | 23.5 |
+| 8 | Down to Pound | 1-3 | 397.7 | 54.1 | 78.1 | 119.8 | 101.4 | 23.5 |
 | 9 | hulleywood | 1-3 | 388.4 | 43.1 | 95.4 | 73.6 | 109.7 | 31.1 |
 | 10 | Brooklyn Meatpackers | 0-4 | 370.8 | 29.6 | 79.0 | 120.4 | 63.6 | 56.7 |
 | 11 | Holy Turnovers, Batman! | 1-3 | 345.1 | 23.5 | 103.8 | 89.9 | 86.9 | 10.0 |
@@ -88,7 +88,7 @@ Nothing changed.
   - _2-for-1_ — give **Bhayshul Tuten (RB-JAX) + Rico Dowdle (RB-PIT)** (50.5) → get **Jalen Coker (WR-CAR)** (53.1)
   - _2-for-1_ — give **Bhayshul Tuten (RB-JAX) + Tony Pollard (RB-TEN)** (53.4) → get **Jalen Coker (WR-CAR)** (53.1)
 
-### hulleywood — fit score 66.46
+### hulleywood — fit score 66.76
 - Roster counts: QB:4 / RB:4 / WR:5 / TE:2
 - They need: **RB (57.39)**
 - Shape: I send **RB**, I get back **WR**
@@ -99,7 +99,7 @@ Nothing changed.
   - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (11.8) → get **Michael Pittman (WR-PIT)** (14.0)
   - _1-for-1_ — give **Tony Pollard (RB-TEN)** (14.7) → get **Michael Pittman (WR-PIT)** (14.0)
 
-### Holy Turnovers, Batman! — fit score 56.34
+### Holy Turnovers, Batman! — fit score 56.79
 - Roster counts: QB:4 / RB:3 / WR:5 / TE:2
 - They need: **RB (41.1), WR (22.79), TE (21.11)**
 - Shape: I send **RB**, I get back **WR**
@@ -110,8 +110,8 @@ Nothing changed.
   - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (11.8) → get **Jakobi Meyers (WR-JAX)** (9.9)
   - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (11.8) → get **Davante Adams (WR-LAR)** (9.1)
 
-### Down to Pound — fit score 47.15
-- Roster counts: QB:3 / RB:5 / WR:5 / TE:1
+### Down to Pound — fit score 53.79
+- Roster counts: QB:3 / RB:5 / WR:6 / TE:1
 - They need: **RB (11.14), QB (8.94), WR (8.24), TE (7.68)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
@@ -121,7 +121,7 @@ Nothing changed.
   - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (11.8) → get **DK Metcalf (WR-PIT)** (18.0)
   - _1-for-1_ — give **Tony Pollard (RB-TEN)** (14.7) → get **DK Metcalf (WR-PIT)** (18.0)
 
-### NYKatSnatchers — fit score 44.5
+### NYKatSnatchers — fit score 44.8
 - Roster counts: QB:2 / RB:5 / WR:7 / TE:1
 - They need: **QB (35.15), RB (14.96)**
 - Shape: I send **RB**, I get back **WR**

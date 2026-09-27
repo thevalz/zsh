@@ -1,6 +1,6 @@
 # Matchups -- 2026 week 3
 
-_depth charts as of 2026-09-26; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
+_depth charts as of 2026-09-27; defender grades pool PFR coverage stats from 2024 (half weight), 2025 and 2026; team defense from 2025, 2026_
 
 ## supervillain (thevalz) -- my lineup
 
@@ -39,7 +39,7 @@ _depth charts as of 2026-09-26; defender grades pool PFR coverage stats from 202
 | Kirk Cousins | QB | LV | BN | @ NO | 🟡 NEUTRAL | 66 |  | NO pass D [B 66, #13] |
 | Kenny Gainwell | RB | TB | BN | vs MIN | 🔴 TOUGH | 72 | LILB Eric Wilson [B 66]<br>RILB Blake Cashman [D 34] | MIN run D [A 87, #4] |
 | Jakobi Meyers | WR | JAX | BN | vs NE | 🟡 NEUTRAL | 48 | (slot) NB Marcus Jones [D 34]<br>⚠ shadow risk | NE pass D [B 73, #11] |
-| Kenyon Sadiq | TE | NYJ | BN | @ DET | 🟢 SOFT | 32 | FS Chuck Clark [D 21]<br>SS Thomas Harper [?] (low sample (22 tgt)) | DET pass D [D 28, #23] |
+| Kenyon Sadiq | TE | NYJ | BN | @ DET | 🟢 SOFT | 32 | FS Chuck Clark [D 21]<br>SS Jalen Mills [?] (low sample (19 tgt)) | DET pass D [D 28, #23] |
 
 ## All NFL starters (waiver / trade targets)
 
@@ -199,7 +199,7 @@ _depth charts as of 2026-09-26; defender grades pool PFR coverage stats from 202
 | Dontayvion Wicks | WR | PHI | WR2 | @ CHI | 🟢 SOFT | 35 | (outside) LCB Jaylon Johnson [D 29]<br>RCB Tyrique Stevenson [C 53] | CHI pass D [D 25, #25] |
 | Jameson Williams | WR | DET | WR2 | vs NYJ | 🟢 SOFT | 35 | (outside) LCB Azareye'h Thomas [?] (low sample (27 tgt))<br>RCB Brandon Stephens [F 16] | NYJ pass D [D 38, #21] |
 | Devontez Walker | WR | BAL | WR3 | @ DAL | 🟢 SOFT | 34 | (slot) NB Caleb Downs [?] (rookie) | DAL pass D [F 5, #31] |
-| Demarcus Robinson | WR | SF | WR3 | vs ARI | 🟢 SOFT | 33 | (slot) NB Max Melton [D 40] | ARI pass D [F 19, #28] |
+| Jacob Cowing | WR | SF | WR3 | vs ARI | 🟢 SOFT | 33 | (slot) NB Max Melton [D 40] | ARI pass D [F 19, #28] |
 | Rashid Shaheed | WR | SEA | WR2 | @ WAS | 🟢 SOFT | 32 | (outside) LCB Rasul Douglas [B 67]<br>RCB Mike Sainristil [D 28] | WAS pass D [F 3, #32] |
 | Colbie Young | WR | CIN | WR3 | @ PIT | 🟢 SOFT | 31 | (slot) NB Jalen Ramsey [D 27]<br>⚠ shadow risk | PIT pass D [D 38, #20] |
 | Carnell Tate | WR | TEN | WR1 | @ NYG | 🟢 SOFT | 29 | (outside) LCB Deonte Banks [F 20]<br>RCB Greg Newsome II [D 33] | NYG pass D [D 33, #22] |
@@ -232,7 +232,7 @@ _depth charts as of 2026-09-26; defender grades pool PFR coverage stats from 202
 | Dallas Goedert | TE | PHI | TE1 | @ CHI | 🟢 SOFT | 36 | FS Xavier Woods [C 45]<br>SS Dillon Thieneman [?] (rookie) | CHI pass D [D 25, #25] |
 | Dalton Schultz | TE | HOU | TE1 | @ IND | 🟢 SOFT | 35 | FS Cam Bynum [C 52]<br>SS A.J. Haulcy [?] (rookie) | IND pass D [F 18, #29] |
 | Mike Gesicki | TE | CIN | TE1 | @ PIT | 🟢 SOFT | 35 | FS Jaquan Brisker [F 17]<br>SS Rayshawn Jenkins [C 46] | PIT pass D [D 38, #20] |
-| Kenyon Sadiq | TE | NYJ | TE1 | @ DET | 🟢 SOFT | 32 | FS Chuck Clark [D 21]<br>SS Thomas Harper [?] (low sample (22 tgt)) | DET pass D [D 28, #23] |
+| Kenyon Sadiq | TE | NYJ | TE1 | @ DET | 🟢 SOFT | 32 | FS Chuck Clark [D 21]<br>SS Jalen Mills [?] (low sample (19 tgt)) | DET pass D [D 28, #23] |
 | Pat Freiermuth | TE | PIT | TE1 | vs CIN | 🟢 SOFT | 31 | FS Bryan Cook [D 34]<br>SS Jordan Battle [D 40] | CIN pass D [D 25, #26] |
 | Isaiah Likely | TE | NYG | TE1 | vs TEN | 🟢 SOFT | 24 | FS Kevin Winston Jr. [?] (low sample (24 tgt))<br>SS Amani Hooker [D 33] | TEN pass D [F 8, #30] |
 | AJ Barner | TE | SEA | TE1 | @ WAS | 🟢 SOFT | 24 | FS Jeremy Reaves [C 45]<br>SS Nick Cross [C 43] | WAS pass D [F 3, #32] |
