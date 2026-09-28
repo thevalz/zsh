@@ -85,7 +85,7 @@ _depth charts as of 2026-09-28; defender grades pool PFR coverage stats from 202
 | James Cook III | RB | BUF | RB1 | vs LAC | 🔴 TOUGH | 72 | LILB Daiyan Henley [B 67]<br>RILB Del'Shawn Phillips [?] (low sample (5 tgt)) | LAC run D [A 81, #5] |
 | Travis Etienne Jr. | RB | NO | RB1 | vs LV | 🟡 NEUTRAL | 67 | LILB Nakobe Dean [B 71]<br>RILB Quay Walker [C 45] | LV run D [B 73, #8] |
 | Ashton Jeanty | RB | LV | RB1 | @ NO | 🟡 NEUTRAL | 65 | LILB Kaden Elliss [B 65]<br>RILB Pete Werner [B 65] | NO run D [B 66, #9] |
-| De'Von Achane | RB | MIA | RB1 | vs KC | 🟡 NEUTRAL | 61 | MLB Nick Bolton [D 39]<br>WLB Drue Tranquill [D 23] | KC run D [A 81, #6] |
+| Jaylen Wright | RB | MIA | RB1 | vs KC | 🟡 NEUTRAL | 61 | MLB Nick Bolton [D 39]<br>WLB Drue Tranquill [D 23] | KC run D [A 81, #6] |
 | J.K. Dobbins | RB | DEN | RB1 | vs LA | 🟡 NEUTRAL | 57 | LILB Nate Landman [D 35]<br>RILB Omar Speights [B 76] | LA run D [C 58, #14] |
 | Javonte Williams | RB | DAL | RB1 | vs BAL | 🟡 NEUTRAL | 56 | LILB Roquan Smith [C 50]<br>RILB Teddye Buchanan [C 51] | BAL run D [C 59, #12] |
 | Cam Skattebo | RB | NYG | RB1 | vs TEN | 🟡 NEUTRAL | 55 | MLB Anthony Hill Jr. [?] (rookie)<br>WLB Cedric Gray [D 38] | TEN run D [B 62, #10] |
@@ -112,7 +112,6 @@ _depth charts as of 2026-09-28; defender grades pool PFR coverage stats from 202
 | Luther Burden III | WR | CHI | WR2 | vs PHI | 🔴 TOUGH | 90 | (outside) LCB Riq Woolen [A 86]<br>RCB Quinyon Mitchell [A 90]<br>⚠ shadow risk | PHI pass D [A 94, #1] |
 | Rome Odunze | WR | CHI | WR1 | vs PHI | 🔴 TOUGH | 90 | (outside) LCB Riq Woolen [A 86]<br>RCB Quinyon Mitchell [A 90]<br>⚠ shadow risk | PHI pass D [A 94, #1] |
 | Keenan Allen | WR | IND | WR2 | vs HOU | 🔴 TOUGH | 82 | (outside) LCB Derek Stingley Jr. [A 90]<br>RCB Kamari Lassiter [B 80]<br>⚠ shadow risk | HOU pass D [B 77, #6] |
-| Brian Thomas Jr. | WR | JAX | WR2 | vs NE | 🔴 TOUGH | 78 | (outside) LCB Carlton Davis III [B 75]<br>RCB Christian Gonzalez [A 83]<br>⚠ shadow risk | NE pass D [B 76, #9] |
 | Parker Washington | WR | JAX | WR1 | vs NE | 🔴 TOUGH | 78 | (outside) LCB Carlton Davis III [B 75]<br>RCB Christian Gonzalez [A 83]<br>⚠ shadow risk | NE pass D [B 76, #9] |
 | Davante Adams | WR | LA | WR2 | @ DEN | 🔴 TOUGH | 76 | (outside) LCB Pat Surtain II [A 85]<br>RCB Riley Moss [C 55]<br>⚠ shadow risk | DEN pass D [A 88, #2] |
 | Puka Nacua | WR | LA | WR1 | @ DEN | 🔴 TOUGH | 76 | (outside) LCB Pat Surtain II [A 85]<br>RCB Riley Moss [C 55]<br>⚠ shadow risk | DEN pass D [A 88, #2] |
@@ -165,7 +164,8 @@ _depth charts as of 2026-09-28; defender grades pool PFR coverage stats from 202
 | George Pickens | WR | DAL | WR2 | vs BAL | 🟡 NEUTRAL | 51 | (outside) LCB Nate Wiggins [B 71]<br>RCB Marlon Humphrey [C 51] | BAL pass D [D 33, #22] |
 | Matthew Golden | WR | GB | WR3 | vs ATL | 🟡 NEUTRAL | 50 | (slot) NB Billy Bowman Jr. [?] (low sample (27 tgt)) | ATL pass D [C 49, #17] |
 | Xavier Legette | WR | CAR | WR3 | @ CLE | 🟡 NEUTRAL | 49 | (slot) NB Myles Harden [D 35] | CLE pass D [B 75, #10] |
-| Jakobi Meyers | WR | JAX | WR3 | vs NE | 🟡 NEUTRAL | 49 | (slot) NB Marcus Jones [D 34]<br>⚠ shadow risk | NE pass D [B 76, #9] |
+| Brian Thomas Jr. | WR | JAX | WR3 | vs NE | 🟡 NEUTRAL | 49 | (slot) NB Marcus Jones [D 34]<br>⚠ shadow risk | NE pass D [B 76, #9] |
+| Jakobi Meyers | WR | JAX | WR2 | vs NE | 🟡 NEUTRAL | 49 | (slot) NB Marcus Jones [D 34]<br>⚠ shadow risk | NE pass D [B 76, #9] |
 | Christian Watson | WR | GB | WR1 | vs ATL | 🟡 NEUTRAL | 48 | (outside) LCB C.J. Henderson [?] (low sample (11 tgt))<br>RCB Mike Hughes [C 44] | ATL pass D [C 49, #17] |
 | Jayden Reed | WR | GB | WR2 | vs ATL | 🟡 NEUTRAL | 48 | (outside) LCB C.J. Henderson [?] (low sample (11 tgt))<br>RCB Mike Hughes [C 44] | ATL pass D [C 49, #17] |
 | Adonai Mitchell | WR | NYJ | WR2 | @ DET | 🟡 NEUTRAL | 48 | (outside) LCB D.J. Reed [B 68]<br>RCB Ennis Rakestraw Jr. [?] (low sample (3 tgt)) | DET pass D [D 27, #24] |
