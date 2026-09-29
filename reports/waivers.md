@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 4** · supervillain (5-1) · FAAB left **$56** · generated 2026-09-29 15:39 UTC
+**Week 4** · supervillain (5-1) · FAAB left **$56** · generated 2026-09-29 17:28 UTC
 
 _value = rest-of-season points over replacement from usage through week 3 (483 players with games), projected over weeks 4–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 43% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-25; live page had only 6 experts); ESPN weekly projections summed over weeks 4–17 (382 players); Sleeper weekly projections summed over 14 remaining weeks (442 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 164 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,50 +8,17 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.47
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-29 08:19 UTC (7.3h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-29 15:39 UTC (1.8h ago)_
 
-- ⚠️ **Eli Raridon (TE-NE) → Out** — FREE AGENT player newly listed Out. Next up: **Cameron Latu (TE-NE)** — FREE AGENT, claim him.
-  ↳ _September 27, 2026 — :_ Raridon (thigh)  is listed as inactive  Week 3 against the Jaguars. (serious)
-- ⚠️ **Ty Chandler (RB-NO) → IR** — FREE AGENT player newly listed IR. Next up: **Zamir White (RB-NO)** — FREE AGENT, claim him.
-  ↳ _August 25, 2026 — Placed on injured reserve:_ The Saints placed Chandler (knee) on injured reserve Tuesday,  Mike Triplett of NewOrleans.Football  reports. (serious)
-- ⚠️ **Charlie Kolar (TE-LAC) → Out** — FREE AGENT player newly listed Out. Next up: **Hayden Rucci (TE-LAC)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ Chargers head coach Jim Harbaugh said Wednesday that Kolar (forearm) won't play Sunday in Buffalo but is expected to avoid placement on injured reserve,  Kris Rhim of ESPN.com  reports. (serious)
-- ⚠️ **Mason Taylor (TE-NYJ) → Out** — FREE AGENT player newly listed Out. Next up: **Jeremy Ruckert (TE-NYJ)** — FREE AGENT, claim him.
-  ↳ _September 25, 2026 — :_ Taylor (thumb) has been  ruled out  for Sunday's game at Detroit.
-- ⚠️ **Xavier Legette (WR-CAR) → Out** — FREE AGENT player newly listed Out. Next up: **Brycen Tremayne (WR-CAR)** — FREE AGENT, claim him.
-  ↳ _September 27, 2026 — :_ Legette (knee) is inactive for Sunday's game at Cleveland,  Darin Gantt of the Panthers' official site  reports.
-- ⚠️ **Emari Demercado (RB-DAL) → Out** — FREE AGENT player newly listed Out. Next up: **Malik Davis (RB-DAL)** — FREE AGENT, claim him.
-  ↳ _September 27, 2026 — :_ Demercado (coach's decision) is listed as  inactive  Sunday against the Ravens in Rio de Janeiro.
-- ⚠️ **Barion Brown (WR-NO) → Out** — FREE AGENT player newly listed Out. Next up: **Mason Tipton (WR-NO)** — FREE AGENT, claim him.
-  ↳ _September 25, 2026 — :_ Brown (hamstring) is listed as  inactive  for Sunday's game versus Las Vegas.
-- ⚠️ **Darius Slayton (WR-IND) → Out** — FREE AGENT player newly listed Out. Next up: **Laquon Treadwell (WR-IND)** — FREE AGENT, claim him.
-  ↳ _September 27, 2026 — :_ Slayton (coach's decision) is  inactive  for Sunday's game against the Texans.
-- 📤 **De'Von Achane (RB-MIA) was dropped** — Now a free agent — check the waiver board below.
-- 📈 **Jakobi Meyers (WR-JAX) moved up the depth chart (3 → 2)** — Workload is trending his way.
-- 📈 **Adonai Mitchell (WR-NYJ) moved up the depth chart (8 → 2)** — Workload is trending his way.
-- 📈 **Nico Collins (WR-HOU) moved up the depth chart (6 → 1)** — Workload is trending his way.
-- 📈 **Puka Nacua (WR-LAR) moved up the depth chart (7 → 1)** — Workload is trending his way.
-- 📈 **Braelon Allen (RB-NYJ) moved up the depth chart (2 → 1)** — Workload is trending his way.
-- 📈 **Alvin Kamara (RB-NO) moved up the depth chart (2 → 1)** — Workload is trending his way.
-- 📈 **Caleb Douglas (WR-MIA) moved up the depth chart (9 → 2)** — Workload is trending his way.
-- 📈 **Rico Dowdle (RB-PIT) moved up the depth chart (5 → 2)** — Workload is trending his way.
-- ⚠️ **De'Von Achane (RB-MIA) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Malik Davis (RB-DAL) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Jaylen Wright (RB-MIA) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **David Njoku (TE-LAC) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Julian Hill (TE-NE) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **CJ Daniels (WR-LAR) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Mason Tipton (WR-NO) cleared (PUP → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Arian Smith (WR-NYJ) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Jalen McMillan (WR-TB) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Savion Williams (WR-GB) cleared (IR → healthy)** — FREE AGENT player is off the report.
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 38.7 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $6 |
-| 🚨 | **Isaiah Davis (RB-NYJ)** | URGENT | 0.8 | 202,734 adds in 24h — the market has re-rated him; Breece Hall is Out (Thigh) | 202,734 | $20 |
+| 🚨 | **Isaiah Davis (RB-NYJ)** | URGENT | 0.8 | 236,385 adds in 24h — the market has re-rated him; Breece Hall is Out (Thigh) | 236,385 | $20 |
 | 🚨 | **Jarquez Hunter (RB-MIA)** | URGENT | 1.9 | every man ahead of him is banged up (3 deep); Ollie Gordon is Questionable (Undisclosed) | 0 | $12 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 16.3 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
 | 🚨 | **CJ Donaldson (RB-NO)** | URGENT | 1.3 | Travis Etienne is Out (Hamstring) | 0 | $7 |
