@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 4** · supervillain (5-1) · FAAB left **$56** · generated 2026-09-29 08:19 UTC
+**Week 4** · supervillain (5-1) · FAAB left **$56** · generated 2026-09-29 15:39 UTC
 
 _value = rest-of-season points over replacement from usage through week 3 (483 players with games), projected over weeks 4–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 43% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-25; live page had only 6 experts); ESPN weekly projections summed over weeks 4–17 (382 players); Sleeper weekly projections summed over 14 remaining weeks (442 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 164 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,27 +8,57 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.47
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-29 01:45 UTC (6.6h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-29 08:19 UTC (7.3h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- ⚠️ **Jalen McMillan (WR-TB) Questionable → Out** — FREE AGENT player's status changed. Next up: **Ted Hurst (WR-TB)** — FREE AGENT, claim him.
-  ↳ _September 28, 2026 — :_ McMillan has been diagnosed with a PCL sprain in his left knee,  Jenna Laine of ESPN.com  reports. (serious)
-- 📈 **Jaxson Dart (QB-NYG) moved up the depth chart (4 → 3)** — Workload is trending his way.
-  ↳ _September 24, 2026 — :_ The Giants officially placed Dart (knee) on injured reserve Thursday,  Mike Garafolo of NFL Network  reports. (serious)
-- ⚠️ **Tanner McKee (QB-PHI) → Out** — FREE AGENT player newly listed Out. Next up: **Cole Payton (QB-PHI)** — FREE AGENT, claim him.
-  ↳ _September 28, 2026 — :_ McKee (coach's decision) is  inactive  but will serve as the team's emergency third quarterback Monday night against the Bears.
+- ⚠️ **Eli Raridon (TE-NE) → Out** — FREE AGENT player newly listed Out. Next up: **Cameron Latu (TE-NE)** — FREE AGENT, claim him.
+  ↳ _September 27, 2026 — :_ Raridon (thigh)  is listed as inactive  Week 3 against the Jaguars. (serious)
+- ⚠️ **Ty Chandler (RB-NO) → IR** — FREE AGENT player newly listed IR. Next up: **Zamir White (RB-NO)** — FREE AGENT, claim him.
+  ↳ _August 25, 2026 — Placed on injured reserve:_ The Saints placed Chandler (knee) on injured reserve Tuesday,  Mike Triplett of NewOrleans.Football  reports. (serious)
+- ⚠️ **Charlie Kolar (TE-LAC) → Out** — FREE AGENT player newly listed Out. Next up: **Hayden Rucci (TE-LAC)** — FREE AGENT, claim him.
+  ↳ _September 23, 2026 — :_ Chargers head coach Jim Harbaugh said Wednesday that Kolar (forearm) won't play Sunday in Buffalo but is expected to avoid placement on injured reserve,  Kris Rhim of ESPN.com  reports. (serious)
+- ⚠️ **Mason Taylor (TE-NYJ) → Out** — FREE AGENT player newly listed Out. Next up: **Jeremy Ruckert (TE-NYJ)** — FREE AGENT, claim him.
+  ↳ _September 25, 2026 — :_ Taylor (thumb) has been  ruled out  for Sunday's game at Detroit.
+- ⚠️ **Xavier Legette (WR-CAR) → Out** — FREE AGENT player newly listed Out. Next up: **Brycen Tremayne (WR-CAR)** — FREE AGENT, claim him.
+  ↳ _September 27, 2026 — :_ Legette (knee) is inactive for Sunday's game at Cleveland,  Darin Gantt of the Panthers' official site  reports.
+- ⚠️ **Emari Demercado (RB-DAL) → Out** — FREE AGENT player newly listed Out. Next up: **Malik Davis (RB-DAL)** — FREE AGENT, claim him.
+  ↳ _September 27, 2026 — :_ Demercado (coach's decision) is listed as  inactive  Sunday against the Ravens in Rio de Janeiro.
+- ⚠️ **Barion Brown (WR-NO) → Out** — FREE AGENT player newly listed Out. Next up: **Mason Tipton (WR-NO)** — FREE AGENT, claim him.
+  ↳ _September 25, 2026 — :_ Brown (hamstring) is listed as  inactive  for Sunday's game versus Las Vegas.
+- ⚠️ **Darius Slayton (WR-IND) → Out** — FREE AGENT player newly listed Out. Next up: **Laquon Treadwell (WR-IND)** — FREE AGENT, claim him.
+  ↳ _September 27, 2026 — :_ Slayton (coach's decision) is  inactive  for Sunday's game against the Texans.
+- 📤 **De'Von Achane (RB-MIA) was dropped** — Now a free agent — check the waiver board below.
+- 📈 **Jakobi Meyers (WR-JAX) moved up the depth chart (3 → 2)** — Workload is trending his way.
+- 📈 **Adonai Mitchell (WR-NYJ) moved up the depth chart (8 → 2)** — Workload is trending his way.
+- 📈 **Nico Collins (WR-HOU) moved up the depth chart (6 → 1)** — Workload is trending his way.
+- 📈 **Puka Nacua (WR-LAR) moved up the depth chart (7 → 1)** — Workload is trending his way.
+- 📈 **Braelon Allen (RB-NYJ) moved up the depth chart (2 → 1)** — Workload is trending his way.
+- 📈 **Alvin Kamara (RB-NO) moved up the depth chart (2 → 1)** — Workload is trending his way.
+- 📈 **Caleb Douglas (WR-MIA) moved up the depth chart (9 → 2)** — Workload is trending his way.
+- 📈 **Rico Dowdle (RB-PIT) moved up the depth chart (5 → 2)** — Workload is trending his way.
+- ⚠️ **De'Von Achane (RB-MIA) cleared (IR → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Malik Davis (RB-DAL) cleared (IR → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Jaylen Wright (RB-MIA) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **David Njoku (TE-LAC) cleared (IR → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Julian Hill (TE-NE) cleared (IR → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **CJ Daniels (WR-LAR) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Mason Tipton (WR-NO) cleared (PUP → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Arian Smith (WR-NYJ) cleared (IR → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Jalen McMillan (WR-TB) cleared (Out → healthy)** — FREE AGENT player is off the report.
+- ⚠️ **Savion Williams (WR-GB) cleared (IR → healthy)** — FREE AGENT player is off the report.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
-| 🚨 | **Ollie Gordon (RB-MIA)** | URGENT | 12.0 | everyone ahead of him is out — the job is his; De'Von Achane is IR (Knee - ACL) | 4,553,710 | $20 |
 | 🧊 | **James Conner (RB-ARI)** | STASH | 38.7 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $6 |
-| 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 16.0 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
-| 🚨 | **Jaylen Wright (RB-MIA)** | URGENT | 4.0 | every man ahead of him is banged up (2 deep); 127,990 adds in 24h — the market has re-rated him | 127,990 | $20 |
-| 🚨 | **Isaiah Davis (RB-NYJ)** | URGENT | 0.5 | 51,669 adds in 24h — the market has re-rated him; Breece Hall is Out (Thigh) | 51,669 | $11 |
-| 🚨 | **Jalon Daniels (QB-TB)** | URGENT | 0.1 | everyone ahead of him is out — the job is his; 69,288 adds in 24h — the market has re-rated him | 69,288 | $11 |
-| 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 12.7 | starting for his NFL team and unrostered | 0 | $2 |
-| 🔹 | **Cade Otton (TE-TB)** | STARTER FA | 12.5 | starting for his NFL team and unrostered | 0 | $2 |
+| 🚨 | **Isaiah Davis (RB-NYJ)** | URGENT | 0.8 | 202,734 adds in 24h — the market has re-rated him; Breece Hall is Out (Thigh) | 202,734 | $20 |
+| 🚨 | **Jarquez Hunter (RB-MIA)** | URGENT | 1.9 | every man ahead of him is banged up (3 deep); Ollie Gordon is Questionable (Undisclosed) | 0 | $12 |
+| 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 16.3 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
+| 🚨 | **CJ Donaldson (RB-NO)** | URGENT | 1.3 | Travis Etienne is Out (Hamstring) | 0 | $7 |
+| 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 13.1 | starting for his NFL team and unrostered | 0 | $2 |
+| 🔹 | **Cade Otton (TE-TB)** | STARTER FA | 12.7 | starting for his NFL team and unrostered | 0 | $2 |
+| · | **Kayshon Boutte (WR-HOU)** | SPECULATIVE | 3.5 | Nico Collins is Out (Hamstring); fills my thin WR room | 0 | $1 |
+| · | **Xavier Legette (WR-CAR)** | SPECULATIVE | 0.9 | Jalen Coker is Out (Quadriceps); fills my thin WR room | 0 | $1 |
 
 *Own value is the player's standalone worth, separate from the opportunity in front of him. A high tier next to a low own value means you are buying a job, not a player — check that the job is worth having before bidding against a crowd.*
 
@@ -44,7 +74,7 @@ _baseline: snapshot committed 2026-09-29 01:45 UTC (6.6h ago) — older than the
 | Bhayshul Tuten (RB-JAX) | healthy | Chris Rodriguez (RB-JAX) | **FREE AGENT** |
 | Tony Pollard (RB-TEN) | healthy | Tyjae Spears (RB-TEN) | **FREE AGENT** |
 | Dalton Schultz (TE-HOU) | healthy | Foster Moreau (TE-HOU) | **FREE AGENT** |
-| Rico Dowdle (RB-PIT) | Out · _unverified_ | Eli Heidenreich (RB-PIT) | **FREE AGENT** |
+| Rico Dowdle (RB-PIT) | Out · _unverified_ | Travis Homer (RB-PIT) | **FREE AGENT** |
 
 *A designation shown as `unverified` has had no beat-reporter blurb read for it. The tag alone cannot tell a cramp from a torn ACL, or a current injury from a two-year-old one — run `python3 -m fantasy.monitor player --name "..."` before acting on it.*
 
@@ -52,10 +82,10 @@ _baseline: snapshot committed 2026-09-29 01:45 UTC (6.6h ago) — older than the
 
 | Pos | Starters | Rostered | Starter value | League median | Rank | Tradeable surplus |
 |:--|--:|--:|--:|--:|--:|--:|
-| QB | 2 | 2 | 154.23 | 81.34 | **1/12** | 0 |
-| RB | 2 | 6 | 150.13 | 121.28 | **5/12** | 69.66 |
-| WR | 2 | 5 | 50.96 | 106.53 | **11/12** | 1.92 |
-| TE | 1 | 2 | 80.52 | 29.62 | **2/12** | 10.41 |
+| QB | 2 | 2 | 156.82 | 81.34 | **1/12** | 0 |
+| RB | 2 | 6 | 150.13 | 120.66 | **5/12** | 74.66 |
+| WR | 2 | 5 | 50.96 | 105.58 | **11/12** | 1.83 |
+| TE | 1 | 2 | 80.52 | 29.62 | **2/12** | 9.98 |
 
 > ⚠️ **QB: 2 rostered for 2 starting slots — one injury and there is nobody to plug in.**
 
@@ -65,67 +95,67 @@ _baseline: snapshot committed 2026-09-29 01:45 UTC (6.6h ago) — older than the
 
 | # | Team | W-L | Lineup | Bench | QB | RB | WR | TE |
 |--:|:--|:--|--:|--:|--:|--:|--:|--:|
-| 1 | **supervillain** | 5-1 | 539.9 | 27.5 | 154.2 | 150.1 | 51.0 | 80.5 |
-| 2 | It's Gonna be Maye | 3-3 | 506.8 | 51.4 | 85.8 | 176.7 | 135.3 | 41.3 |
-| 3 | mtngoblin | 6-0 | 473.5 | 36.4 | 81.2 | 170.4 | 121.2 | 5.8 |
-| 4 | Randikulous | 6-0 | 442.9 | 18.5 | 73.6 | 160.6 | 121.3 | 35.6 |
-| 5 | Jersey Rum Hams | 2-4 | 439.4 | 49.7 | 65.9 | 121.3 | 151.3 | 20.5 |
-| 6 | To Infinity and Bijan | 4-2 | 427.7 | 14.1 | 95.1 | 166.0 | 104.4 | 15.2 |
-| 7 | NYKatSnatchers | 3-3 | 408.3 | 17.2 | 48.9 | 115.4 | 118.5 | 81.9 |
-| 8 | Down to Pound | 2-4 | 396.8 | 42.1 | 69.6 | 117.9 | 106.5 | 29.6 |
-| 9 | hulleywood | 1-5 | 379.9 | 45.0 | 81.3 | 96.5 | 89.2 | 28.2 |
-| 10 | Holy Turnovers, Batman! | 3-3 | 348.7 | 28.0 | 95.8 | 111.6 | 91.8 | 10.4 |
-| 11 | Brooklyn Meatpackers | 0-6 | 343.4 | 29.3 | 89.7 | 113.0 | 45.4 | 44.2 |
-| 12 | East Coast Wins Most | 1-5 | 323.3 | 26.7 | 35.4 | 102.1 | 94.4 | 23.9 |
+| 1 | **supervillain** | 5-1 | 543.4 | 27.6 | 156.8 | 150.1 | 51.0 | 80.5 |
+| 2 | It's Gonna be Maye | 3-3 | 506.5 | 53.4 | 85.0 | 176.7 | 135.3 | 41.3 |
+| 3 | mtngoblin | 6-0 | 477.2 | 36.6 | 82.1 | 170.4 | 121.2 | 6.0 |
+| 4 | Randikulous | 6-0 | 443.1 | 18.9 | 74.1 | 160.6 | 121.3 | 35.6 |
+| 5 | Jersey Rum Hams | 2-4 | 438.2 | 51.0 | 66.8 | 120.7 | 149.8 | 20.5 |
+| 6 | To Infinity and Bijan | 4-2 | 424.3 | 14.5 | 95.1 | 164.9 | 101.0 | 15.5 |
+| 7 | NYKatSnatchers | 3-3 | 407.4 | 17.6 | 48.4 | 115.2 | 117.7 | 81.9 |
+| 8 | Down to Pound | 2-4 | 395.8 | 43.1 | 69.6 | 117.9 | 105.6 | 29.6 |
+| 9 | hulleywood | 1-5 | 380.1 | 45.5 | 81.3 | 96.5 | 89.2 | 28.2 |
+| 10 | Holy Turnovers, Batman! | 3-3 | 350.8 | 29.0 | 95.8 | 112.4 | 91.8 | 10.7 |
+| 11 | Brooklyn Meatpackers | 0-6 | 328.0 | 29.2 | 73.8 | 113.0 | 45.0 | 44.2 |
+| 12 | East Coast Wins Most | 1-5 | 280.6 | 14.6 | 35.7 | 64.6 | 94.4 | 23.9 |
 
 *Lineup is the value of the starters each roster actually plays: the positional starters plus the best three leftovers for FLEX, FLEX and SUPER_FLEX. Bench is everything after that. Values are the same rest-of-season points-over-replacement numbers used everywhere else in this report.*
 
 ## Trade targets — ranked by two-way fit
 
-### East Coast Wins Most — fit score 61.33
-- Roster counts: QB:4 / RB:4 / WR:5 / TE:2
-- They need: **QB (45.91), RB (19.16), WR (12.16), TE (5.77)**
+### East Coast Wins Most — fit score 97.77
+- Roster counts: QB:4 / RB:3 / WR:5 / TE:2
+- They need: **RB (56.1), QB (45.62), WR (11.21), TE (5.77)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
+  - _2-for-1_ — give **Tony Pollard (RB-TEN) + Nicholas Singleton (RB-TEN)** (25.0) → get **Michael Wilson (WR-ARI)** (31.7)
   - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Nicholas Singleton (RB-TEN)** (13.7) → get **Luther Burden (WR-CHI)** (19.9)
   - _2-for-1_ — give **Tony Pollard (RB-TEN) + Nicholas Singleton (RB-TEN)** (25.0) → get **Rashee Rice (WR-KC)** (31.1)
+  - _2-for-1_ — give **Tony Pollard (RB-TEN) + Rico Dowdle (RB-PIT)** (37.1) → get **Michael Wilson (WR-ARI)** (31.7)
   - _2-for-1_ — give **Tony Pollard (RB-TEN) + Rico Dowdle (RB-PIT)** (37.1) → get **Rashee Rice (WR-KC)** (31.1)
-  - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (12.9) → get **Luther Burden (WR-CHI)** (19.9)
-  - _1-for-1_ — give **Tony Pollard (RB-TEN)** (24.3) → get **Rashee Rice (WR-KC)** (31.1)
 
-### Jersey Rum Hams — fit score 58.4
+### Jersey Rum Hams — fit score 57.87
 - Roster counts: QB:3 / RB:4 / WR:6 / TE:2
-- They need: **QB (15.42), TE (9.09)**
+- They need: **QB (14.59), TE (9.09)**
 - Shape: I send **TE**, I get back **WR**
 - Concrete starting points:
   - _1-for-1_ — give **Dalton Schultz (TE-HOU)** (23.1) → get **Jalen Coker (WR-CAR)** (33.8)
   - _1-for-1_ — give **Dalton Schultz (TE-HOU)** (23.1) → get **Stefon Diggs (WR-WAS)** (26.4)
 
-### hulleywood — fit score 42.16
+### hulleywood — fit score 41.3
 - Roster counts: QB:4 / RB:4 / WR:5 / TE:2
-- They need: **RB (24.82), WR (17.36), TE (1.44)**
+- They need: **RB (24.2), WR (16.41), TE (1.44)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (12.9) → get **Josh Downs (WR-IND)** (22.7)
   - _1-for-1_ — give **Tony Pollard (RB-TEN)** (24.3) → get **Josh Downs (WR-IND)** (22.7)
-  - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (12.9) → get **Michael Pittman (WR-PIT)** (7.8)
+  - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (12.9) → get **Michael Pittman (WR-PIT)** (8.1)
 
-### To Infinity and Bijan — fit score 28.61
+### To Infinity and Bijan — fit score 28.35
 - Roster counts: QB:3 / RB:5 / WR:4 / TE:2
-- They need: **TE (14.41), WR (2.09)**
+- They need: **TE (14.16), WR (4.57)**
 - Shape: I send **TE**, I get back **WR**
 - Concrete starting points:
-  - _1-for-1_ — give **Dalton Schultz (TE-HOU)** (23.1) → get **Mike Evans (WR-SF)** (25.5)
+  - _1-for-1_ — give **Dalton Schultz (TE-HOU)** (23.1) → get **Mike Evans (WR-SF)** (25.9)
 
-### NYKatSnatchers — fit score 28.16
+### NYKatSnatchers — fit score 27.73
 - Roster counts: QB:2 / RB:5 / WR:7 / TE:1
-- They need: **QB (32.45), RB (5.84)**
+- They need: **QB (32.95), RB (5.51)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _2-for-1_ — give **Tony Pollard (RB-TEN) + Nicholas Singleton (RB-TEN)** (25.0) → get **Ladd McConkey (WR-LAC)** (25.1)
   - _2-for-1_ — give **Tony Pollard (RB-TEN) + Rico Dowdle (RB-PIT)** (37.1) → get **Ladd McConkey (WR-LAC)** (25.1)
   - _1-for-1_ — give **Tony Pollard (RB-TEN)** (24.3) → get **Ladd McConkey (WR-LAC)** (25.1)
-  - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (12.9) → get **Adonai Mitchell (WR-NYJ)** (11.8)
+  - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (12.9) → get **Adonai Mitchell (WR-NYJ)** (12.2)
 
 
 ## News
