@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 4** · supervillain (5-1) · FAAB left **$56** · generated 2026-09-29 17:28 UTC
+**Week 4** · supervillain (5-1) · FAAB left **$56** · generated 2026-09-29 20:39 UTC
 
 _value = rest-of-season points over replacement from usage through week 3 (483 players with games), projected over weeks 4–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 43% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-25; live page had only 6 experts); ESPN weekly projections summed over weeks 4–17 (382 players); Sleeper weekly projections summed over 14 remaining weeks (442 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 164 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,7 +8,7 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.47
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-29 15:39 UTC (1.8h ago)_
+_baseline: snapshot committed 2026-09-29 17:28 UTC (3.2h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
 Nothing changed.
 
@@ -18,7 +18,7 @@ Nothing changed.
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 38.7 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $6 |
-| 🚨 | **Isaiah Davis (RB-NYJ)** | URGENT | 0.8 | 236,385 adds in 24h — the market has re-rated him; Breece Hall is Out (Thigh) | 236,385 | $20 |
+| 🚨 | **Isaiah Davis (RB-NYJ)** | URGENT | 0.8 | 273,375 adds in 24h — the market has re-rated him; Breece Hall is Out (Thigh) | 273,375 | $20 |
 | 🚨 | **Jarquez Hunter (RB-MIA)** | URGENT | 1.9 | every man ahead of him is banged up (3 deep); Ollie Gordon is Questionable (Undisclosed) | 0 | $12 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 16.3 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $3 |
 | 🚨 | **CJ Donaldson (RB-NO)** | URGENT | 1.3 | Travis Etienne is Out (Hamstring) | 0 | $7 |
