@@ -8,16 +8,16 @@ _depth charts as of 2026-09-30; defender grades pool PFR coverage stats from 202
 |---|---|---|---|---|---|---|---|---|
 | Brock Purdy | QB | SF | SUPER_FLEX | vs DEN | 🔴 TOUGH | 88 |  | DEN pass D [A 88, #2] |
 | Josh Allen | QB | BUF | QB | vs NE | 🔴 TOUGH | 76 |  | NE pass D [B 76, #10] |
-| Tony Pollard | RB | TEN | FLEX | @ BAL | 🟡 NEUTRAL | 56 | LILB Roquan Smith [C 50]<br>RILB Teddye Buchanan [C 51] | BAL run D [C 59, #12] |
 | Derrick Henry | RB | BAL | RB | vs TEN | 🟡 NEUTRAL | 54 | MLB Anthony Hill Jr. [?] (rookie)<br>WLB Cedric Gray [D 38] | TEN run D [B 61, #10] |
 | Cam Skattebo | RB | NYG | RB | vs ARI | 🟡 NEUTRAL | 40 | MLB Mack Wilson Sr. [C 58]<br>WLB Jack Gibbens [D 31] | ARI run D [D 38, #23] |
 | Bhayshul Tuten | RB | JAX | FLEX | @ CIN | 🟢 SOFT | 17 | MLB Barrett Carter [D 24]<br>WLB Demetrius Knight Jr. [C 45] | CIN run D [F 5, #31] |
 | Emeka Egbuka | WR | TB | WR | vs GB | 🟡 NEUTRAL | 52 | (outside) LCB Keisean Nixon [C 52]<br>RCB Brandon Cisse [?] (rookie) | GB pass D [C 53, #15] |
+| Devaughn Vele | WR | NO | FLEX | vs ATL | 🟡 NEUTRAL | 48 | (outside) LCB C.J. Henderson [?] (low sample (11 tgt))<br>RCB Mike Hughes [C 44] | ATL pass D [C 49, #17] |
 | Tetairoa McMillan | WR | CAR | WR | vs DET | 🟡 NEUTRAL | 47 | (outside) LCB D.J. Reed [B 68]<br>RCB Ennis Rakestraw Jr. [?] (low sample (3 tgt)) | DET pass D [D 26, #25] |
 | Trey McBride | TE | ARI | TE | @ NYG | 🟡 NEUTRAL | 48 | FS Jevon Holland [B 80]<br>SS Tyler Nubin [D 36] | NYG pass D [D 38, #19] |
 | Ollie Gordon II | RB | MIA | BN | @ MIN | 🔴 TOUGH | 75 | LILB Eric Wilson [B 66]<br>RILB Blake Cashman [D 34] | MIN run D [A 92, #2] |
+| Tony Pollard | RB | TEN | BN | @ BAL | 🟡 NEUTRAL | 56 | LILB Roquan Smith [C 50]<br>RILB Teddye Buchanan [C 51] | BAL run D [C 59, #12] |
 | Rico Dowdle | RB | PIT | BN | @ CLE | 🟡 NEUTRAL | 54 | MLB Carson Schwesinger [C 45]<br>WLB Easton Mascarenas-Arnold [?] (no coverage data) | CLE run D [C 58, #13] |
-| Devaughn Vele | WR | NO | BN | vs ATL | 🟡 NEUTRAL | 48 | (outside) LCB C.J. Henderson [?] (low sample (11 tgt))<br>RCB Mike Hughes [C 44] | ATL pass D [C 49, #17] |
 | Alec Pierce | WR | IND | BN | @ WAS | 🟡 NEUTRAL | 39 | (outside) LCB Rasul Douglas [B 67]<br>RCB Fabian Moreau [?] (low sample (25 tgt)) | WAS pass D [F 2, #32] |
 | Tank Dell | WR | HOU | BN | vs DAL | 🟡 NEUTRAL | 38 | (outside) LCB Cobie Durant [B 75]<br>RCB DaRon Bland [D 38] | DAL pass D [F 5, #31] |
 | Dalton Schultz | TE | HOU | BN | vs DAL | 🟢 SOFT | 24 | FS Malik Hooker [D 35]<br>SS Markquese Bell [?] (low sample (17 tgt)) | DAL pass D [F 5, #31] |

@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-09-30 13:34 UTC
+**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-09-30 19:04 UTC
 
 _value = rest-of-season points over replacement from usage through week 3 (485 players with games), projected over weeks 4–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 43% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-25; live page had only 6 experts); ESPN weekly projections summed over weeks 4–17 (382 players); Sleeper weekly projections summed over 14 remaining weeks (451 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 98 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,77 +8,10 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.47
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-30 06:35 UTC (7.0h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-30 13:34 UTC (5.5h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- ⚠️ **Charlie Kolar (TE-LAC) Out → Doubtful** — FREE AGENT player's status changed. Next up: **Hayden Rucci (TE-LAC)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ Chargers head coach Jim Harbaugh said Wednesday that Kolar (forearm) won't play Sunday in Buffalo but is expected to avoid placement on injured reserve,  Kris Rhim of ESPN.com  reports. (serious)
-- 🚨 **Rico Dowdle (RB-PIT) Out → Questionable** — MY player's status changed. Next up: **Travis Homer (RB-PIT)** — FREE AGENT, claim him.
-  ↳ _September 29, 2026 — :_ Dowdle (toe) was estimated as a non-participant on Tuesday's injury report,  Nick Farabaugh of PennLive.com  reports. (practice: **DNP**)
-- ⚠️ **Caleb Williams (QB-CHI) Out → Doubtful** — Randikulous's player's status changed. Next up: **Miller Moss (QB-CHI)** — FREE AGENT, claim him.
-  ↳ _September 27, 2026 — :_ Williams, who is ruled out for Monday's game against the Eagles, has been diagnosed with a Grade 2 right hamstring strain, which doctors consider a 3-to-4-week injury,  Adam Schefter and Ian Rapoport of ESPN  report. (serious)
-- ⚠️ **Dylan Sampson (RB-CLE) → IR** — FREE AGENT player newly listed IR. Next up: **Eric Gray (RB-CLE)** — FREE AGENT, claim him.
-  ↳ _September 15, 2026 — :_ Sampson (knee)  was placed on injured reserve  Tuesday. (serious)
-- ⚠️ **De'Von Achane (RB-MIA) → IR** — FREE AGENT player newly listed IR. Next up: **Jarquez Hunter (RB-MIA)** — FREE AGENT, claim him.
-  ↳ _September 28, 2026 — :_ The Dolphins  placed  Achane (knee) on injured reserve Monday. (serious)
-- ⚠️ **Jayden Reed (WR-GB) Out → Doubtful** — hulleywood's player's status changed. Next up: **Bo Melton (WR-GB)** — FREE AGENT, claim him.
-  ↳ _September 28, 2026 — :_ Packers head coach Matt LaFleur said Monday that he still has no update regarding how long Reed (neck) will be sidelined,  Matt Schneidman of The Athletic  reports. (serious)
-- 📤 **Chris Godwin (WR-TB) was dropped** — Now a free agent — check the waiver board below.
-  ↳ _September 29, 2026 — :_ Godwin gathered in three of four targets for 25 yards during Sunday's 23-16 loss to the Vikings. (serious)
-- ⚠️ **Terrance Ferguson (TE-LAR) Questionable → Doubtful** — East Coast Wins Most's player's status changed. Next up: **Colby Parkinson (TE-LAR)** — FREE AGENT, claim him.
-  ↳ _September 28, 2026 — :_ Coach Sean McVay said Monday that Ferguson "likely" will be sidelined for Sunday's game in Philadelphia,  Adam Grosbard of The Orange County Register  reports.
-- 📤 **Tre Tucker (WR-LV) was dropped** — Now a free agent — check the waiver board below.
-- 📈 **Jordyn Tyson (WR-NO) moved up the depth chart (11 → 10)** — Workload is trending his way.
-- 📈 **Jordan Mason (RB-MIN) moved up the depth chart (7 → 4)** — Workload is trending his way.
-- 📈 **Alec Pierce (WR-IND) moved up the depth chart (9 → 8)** — Workload is trending his way.
-- 📈 **Jaxson Dart (QB-NYG) moved up the depth chart (3 → 2)** — Workload is trending his way.
-- 📈 **Josh Jacobs (RB-GB) moved up the depth chart (4 → 3)** — Workload is trending his way.
-- ⚠️ **Darius Slayton (WR-IND) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **CJ Williams (WR-JAX) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Mason Taylor (TE-NYJ) Out → Questionable** — FREE AGENT player's status changed. Next up: **Jeremy Ruckert (TE-NYJ)** — FREE AGENT, claim him.
-- ⚠️ **Zach Wilson (QB-NO) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Barion Brown (WR-NO) Out → Questionable** — FREE AGENT player's status changed. Next up: **Mason Tipton (WR-NO)** — FREE AGENT, claim him.
-- ⚠️ **Behren Morton (QB-NE) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Tyler Conklin (TE-DET) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Carson Beck (QB-ARI) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Eli Heidenreich (RB-PIT) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Riley Leonard (QB-IND) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Michael Carter (RB-TEN) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **RJ Harvey (RB-DEN) cleared (Questionable → healthy)** — Brooklyn Meatpackers's player is off the report.
-- ⚠️ **DJ Giddens (RB-IND) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **J.J. McCarthy (QB-NYG) cleared (Out → healthy)** — Jersey Rum Hams's player is off the report.
-- ⚠️ **Rachaad White (RB-WAS) cleared (Questionable → healthy)** — East Coast Wins Most's player is off the report.
-- ⚠️ **Aidan O'Connell (QB-LV) Out → Questionable** — FREE AGENT player's status changed. Next up: **Fernando Mendoza (QB-LV)** — rostered by Brooklyn Meatpackers.
-- ⚠️ **Xavier Legette (WR-CAR) Out → Questionable** — FREE AGENT player's status changed. Next up: **Brycen Tremayne (WR-CAR)** — FREE AGENT, claim him.
-- ⚠️ **Breece Hall (RB-NYJ) Out → Questionable** — Brooklyn Meatpackers's player's status changed. Next up: **Isaiah Davis (RB-NYJ)** — FREE AGENT, claim him.
-- ⚠️ **Mike Evans (WR-SF) Out → Questionable** — To Infinity and Bijan's player's status changed. Next up: **Deebo Samuel (WR-SF)** — rostered by Brooklyn Meatpackers.
-- ⚠️ **Jalen Coker (WR-CAR) Out → Questionable** — Jersey Rum Hams's player's status changed. Next up: **Xavier Legette (WR-CAR)** — FREE AGENT, claim him.
-- ⚠️ **Adonai Mitchell (WR-NYJ) Out → Questionable** — NYKatSnatchers's player's status changed. Next up: **Isaiah Williams (WR-NYJ)** — FREE AGENT, claim him.
-- ⚠️ **Nico Collins (WR-HOU) Out → Questionable** — Jersey Rum Hams's player's status changed. Next up: **Xavier Hutchinson (WR-HOU)** — FREE AGENT, claim him.
-- ⚠️ **Puka Nacua (WR-LAR) Out → Questionable** — East Coast Wins Most's player's status changed. Next up: **Davante Adams (WR-LAR)** — rostered by Holy Turnovers, Batman!.
-- ⚠️ **Garrett Nussmeier (QB-KC) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **DJ Uiagalelei (QB-LAC) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Mark Andrews (TE-BAL) cleared (Questionable → healthy)** — hulleywood's player is off the report.
-- ⚠️ **Haynes King (QB-CAR) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Will Howard (QB-PIT) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Jayden Daniels (QB-WAS) Out → Questionable** — mtngoblin's player's status changed. Next up: **Athan Kaliakmanis (QB-WAS)** — FREE AGENT, claim him.
-- ⚠️ **Jalen Milroe (QB-SEA) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Taylen Green (QB-CLE) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Eli Raridon (TE-NE) Out → Questionable** — FREE AGENT player's status changed. Next up: **Cameron Latu (TE-NE)** — FREE AGENT, claim him.
-- ⚠️ **Kurtis Rourke (QB-SF) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Devin Singletary (RB-NYG) cleared (Out → healthy)** — To Infinity and Bijan's player is off the report.
-- ⚠️ **Emari Demercado (RB-DAL) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Sam Ehlinger (QB-DEN) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Ty Simpson (QB-LAR) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Cooper Rush (QB-ATL) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Caleb Douglas (WR-MIA) Out → Questionable** — East Coast Wins Most's player's status changed. Next up: **Chris Bell (WR-MIA)** — FREE AGENT, claim him.
-- ⚠️ **Brady Cook (QB-MIA) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Justin Jefferson (WR-MIN) Out → Questionable** — hulleywood's player's status changed. Next up: **Jordan Addison (WR-MIN)** — rostered by Brooklyn Meatpackers.
-- 📥 **Kalif Raymond (WR-CHI) was added** — Picked up by Jersey Rum Hams.
-- 📥 **Brenton Strange (TE-JAX) was added** — Picked up by Randikulous.
-- 📥 **Ollie Gordon (RB-MIA) was added** — Picked up by supervillain.
-- 📥 **Wan'Dale Robinson (WR-TEN) was added** — Picked up by NYKatSnatchers.
-- 📥 **Keenan Allen (WR-IND) was added** — Picked up by mtngoblin.
-- 📥 **Keaton Mitchell (RB-LAC) was added** — Picked up by East Coast Wins Most.
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
@@ -86,9 +19,9 @@ _baseline: snapshot committed 2026-09-30 06:35 UTC (7.0h ago) — older than the
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 38.7 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $1 |
 | 🚨 | **Jarquez Hunter (RB-MIA)** | URGENT | 1.8 | Jaylen Wright is Questionable (Foot); De'Von Achane is IR (Knee - ACL) | 0 | $1 |
-| 🚨 | **CJ Donaldson (RB-NO)** | URGENT | 1.3 | 38,157 adds in 24h — the market has re-rated him; Travis Etienne is Out (Hamstring) | 38,157 | $1 |
+| 🚨 | **CJ Donaldson (RB-NO)** | URGENT | 1.3 | 41,250 adds in 24h — the market has re-rated him; Travis Etienne is Out (Hamstring) | 41,250 | $1 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 16.3 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $1 |
-| 🔥 | **Isaiah Davis (RB-NYJ)** | CONTESTED | 0.5 | 448,875 adds in 24h — the market has re-rated him; Breece Hall is Questionable (Thigh) | 448,875 | $1 |
+| 🔥 | **Isaiah Davis (RB-NYJ)** | CONTESTED | 0.5 | 410,022 adds in 24h — the market has re-rated him; Breece Hall is Questionable (Thigh) | 410,022 | $1 |
 | · | **Xavier Hutchinson (WR-HOU)** | SPECULATIVE | 2.9 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 0 | $1 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 13.1 | starting for his NFL team and unrostered | 0 | $1 |
 | 🔹 | **Tre Tucker (WR-LV)** | STARTER FA | 9.1 | starting for his NFL team and unrostered; fills my thin WR room | 0 | $1 |
