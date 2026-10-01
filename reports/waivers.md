@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-09-30 22:58 UTC
+**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-10-01 02:00 UTC
 
 _value = rest-of-season points over replacement from usage through week 3 (484 players with games), projected over weeks 4–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 43% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR via DynastyProcess mirror (scraped 2026-09-25; live page had only 7 experts); ESPN weekly projections summed over weeks 4–17 (391 players); Sleeper weekly projections summed over 14 remaining weeks (452 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 104 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,43 +8,19 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.47
 
 ## Since last run
 
-_baseline: snapshot committed 2026-09-30 19:05 UTC (3.9h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-09-30 22:58 UTC (3.0h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- 🚨 **Rico Dowdle (RB-PIT) Questionable → Out** — MY player's status changed. Next up: **Travis Homer (RB-PIT)** — FREE AGENT, claim him.
-  ↳ _September 30, 2026 — :_ The Steelers ruled Dowdle (toe) out for Thursday's game in Cleveland,  Brooke Pryor of ESPN.com  reports. (practice: **DNP**)
-- ⚠️ **Jayden Reed (WR-GB) Doubtful → IR** — hulleywood's player's status changed. Next up: **Savion Williams (WR-GB)** — FREE AGENT, claim him.
-  ↳ _September 30, 2026 — :_ The Packers officially placed Reed (neck) on  injured reserve  Wednesday. (serious)
-- ⚠️ **Savion Williams (WR-GB) → IR** — FREE AGENT player newly listed IR. Next up: **Quincy Skinner (WR-GB)** — FREE AGENT, claim him.
-  ↳ _September 1, 2026 — On mend from high-ankle sprain:_ Packers general manager Brian Gutekunst said Tuesday that Williams is recovering from a high-ankle sprain and should be ready to return from injured reserve when first eligible in Week 5,  Matt Schneidman of The Athletic  reports. (serious)
-- ⚠️ **Breece Hall (RB-NYJ) Questionable → Doubtful** — Brooklyn Meatpackers's player's status changed. Next up: **Isaiah Davis (RB-NYJ)** — FREE AGENT, claim him.
-  ↳ _September 30, 2026 — :_ Jets head coach Aaron Glenn said that Hall (thigh) won't practice Wednesday and confirmed the running back is being viewed as week-to-week,  Zack Rosenblatt of The Athletic  reports. (serious)
-- ⚠️ **Xavier Legette (WR-CAR) Questionable → Doubtful** — FREE AGENT player's status changed. Next up: **Brycen Tremayne (WR-CAR)** — FREE AGENT, claim him.
-  ↳ _September 30, 2026 — :_ Legette (knee) did not practice Wednesday,  Alex Zietlow of The Charlotte Observer  reports. (practice: **DNP**, serious)
-- ⚠️ **Adonai Mitchell (WR-NYJ) Questionable → Doubtful** — NYKatSnatchers's player's status changed. Next up: **Isaiah Williams (WR-NYJ)** — FREE AGENT, claim him.
-  ↳ _September 30, 2026 — :_ Jets head coach Aaron Glenn said that Mitchell (finger) won't practice Wednesday and is considered week-to-week,  Zack Rosenblatt of The Athletic  reports. (serious)
-- 🚨 **Tony Pollard (RB-TEN) → Questionable** — MY player newly listed Questionable. Next up: **Tyjae Spears (RB-TEN)** — FREE AGENT, claim him.
-  ↳ _September 30, 2026 — :_ Pollard was a  non-participant  in Wednesday's practice due to a foot injury. (practice: **DNP**)
-- 🚨 **Josh Allen (QB-BUF) cleared (Questionable → healthy)** — MY player is off the report.
-  ↳ _September 30, 2026 — :_ Allen (knee) wasn't even  listed  on Wednesday's injury report.
-- ⚠️ **Mason Taylor (TE-NYJ) Questionable → Doubtful** — FREE AGENT player's status changed. Next up: **Jeremy Ruckert (TE-NYJ)** — FREE AGENT, claim him.
-- ⚠️ **DJ Moore (WR-BUF) → Questionable** — Randikulous's player newly listed Questionable. Next up: **Khalil Shakir (WR-BUF)** — rostered by Randikulous.
-- ⚠️ **Ladd McConkey (WR-LAC) → Questionable** — NYKatSnatchers's player newly listed Questionable. Next up: **Quentin Johnston (WR-LAC)** — FREE AGENT, claim him.
-- ⚠️ **Jakobi Meyers (WR-JAX) → Questionable** — Holy Turnovers, Batman!'s player newly listed Questionable. Next up: **Brian Thomas (WR-JAX)** — rostered by To Infinity and Bijan.
-- ⚠️ **Lamar Jackson (QB-BAL) → Questionable** — Brooklyn Meatpackers's player newly listed Questionable. Next up: **Tyler Huntley (QB-BAL)** — FREE AGENT, claim him.
-- ⚠️ **Kenyon Sadiq (TE-NYJ) → Questionable** — Holy Turnovers, Batman!'s player newly listed Questionable. Next up: **Mason Taylor (TE-NYJ)** — FREE AGENT, claim him.
-- ⚠️ **Rachaad White (RB-WAS) → Questionable** — East Coast Wins Most's player newly listed Questionable. Next up: **Kaytron Allen (RB-WAS)** — FREE AGENT, claim him.
-- ⚠️ **Zay Flowers (WR-BAL) → Questionable** — NYKatSnatchers's player newly listed Questionable. Next up: **Rashod Bateman (WR-BAL)** — rostered by It's Gonna be Maye.
-- ⚠️ **Bucky Irving (RB-TB) → Questionable** — To Infinity and Bijan's player newly listed Questionable. Next up: **Kenny Gainwell (RB-TB)** — rostered by Holy Turnovers, Batman!.
-- ⚠️ **Jaylen Waddle (WR-DEN) cleared (Questionable → healthy)** — Brooklyn Meatpackers's player is off the report.
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 38.7 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $1 |
-| 🚨 | **Isaiah Davis (RB-NYJ)** | URGENT | 0.6 | 391,599 adds in 24h — the market has re-rated him; Breece Hall is Doubtful (Thigh) | 391,599 | $1 |
+| 🚨 | **Isaiah Davis (RB-NYJ)** | URGENT | 0.6 | 352,890 adds in 24h — the market has re-rated him; Breece Hall is Doubtful (Thigh) | 352,890 | $1 |
 | 🚨 | **Jarquez Hunter (RB-MIA)** | URGENT | 1.8 | Jaylen Wright is Questionable (Foot); De'Von Achane is IR (Knee - ACL) | 0 | $1 |
-| 🚨 | **CJ Donaldson (RB-NO)** | URGENT | 1.3 | 41,094 adds in 24h — the market has re-rated him; Travis Etienne is Out (Hamstring) | 41,094 | $1 |
+| 🚨 | **CJ Donaldson (RB-NO)** | URGENT | 1.3 | 39,513 adds in 24h — the market has re-rated him; Travis Etienne is Out (Hamstring) | 39,513 | $1 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 16.3 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $1 |
 | · | **Xavier Hutchinson (WR-HOU)** | SPECULATIVE | 3.0 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 0 | $1 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 13.1 | starting for his NFL team and unrostered | 0 | $1 |
@@ -96,7 +72,7 @@ _baseline: snapshot committed 2026-09-30 19:05 UTC (3.9h ago) — older than the
 | 7 | NYKatSnatchers | 3-3 | 409.3 | 21.6 | 48.4 | 115.2 | 115.8 | 81.9 |
 | 8 | Down to Pound | 2-4 | 394.1 | 38.1 | 69.6 | 117.2 | 104.5 | 29.6 |
 | 9 | hulleywood | 1-5 | 386.3 | 46.1 | 87.8 | 98.3 | 87.9 | 28.2 |
-| 10 | Holy Turnovers, Batman! | 3-3 | 348.4 | 29.5 | 95.0 | 113.2 | 90.2 | 10.4 |
+| 10 | Holy Turnovers, Batman! | 3-3 | 348.4 | 29.8 | 95.0 | 113.2 | 90.2 | 10.4 |
 | 11 | Brooklyn Meatpackers | 0-6 | 325.0 | 28.4 | 72.6 | 114.0 | 43.6 | 43.5 |
 | 12 | East Coast Wins Most | 1-5 | 285.8 | 20.9 | 36.2 | 64.6 | 93.3 | 24.2 |
 
