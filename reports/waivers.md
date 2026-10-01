@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-10-01 16:17 UTC
+**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-10-01 21:45 UTC
 
 _value = rest-of-season points over replacement from usage through week 3 (484 players with games), projected over weeks 4–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 43% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR live (8 experts, 10/01); ESPN weekly projections summed over weeks 4–17 (391 players); Sleeper weekly projections summed over 14 remaining weeks (453 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 102 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,10 +8,10 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.47
 
 ## Since last run
 
-_baseline: snapshot committed 2026-10-01 08:44 UTC (7.6h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-10-01 16:17 UTC (5.5h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- 📤 **Dontayvion Wicks (WR-PHI) was dropped** — Now a free agent — check the waiver board below.
-  ↳ _September 29, 2026 — :_ Wicks recorded two receptions for 32 yards on five targets in Monday's 27-7 loss to the Bears.
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
@@ -21,7 +21,7 @@ _baseline: snapshot committed 2026-10-01 08:44 UTC (7.6h ago) — older than the
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 15.5 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $1 |
 | 🟢 | **Tyjae Spears (RB-TEN)** | BUY EARLY | 8.3 | every man ahead of him is banged up (1 deep); Tony Pollard is Questionable (Ankle) — MY player | 0 | $1 |
 | 🚨 | **Andrew Beck (RB-NYJ)** | URGENT | 0.8 | Breece Hall is Doubtful (Thigh) | 0 | $1 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.1 | direct handcuff to MY Derrick Henry | 24,678 | $1 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.1 | direct handcuff to MY Derrick Henry | 24,372 | $1 |
 | 🟢 | **Dontayvion Wicks (WR-PHI)** | BUY EARLY | 10.9 | every man ahead of him is banged up (1 deep); DeVonta Smith is Questionable (Hamstring) | 0 | $1 |
 | · | **Xavier Hutchinson (WR-HOU)** | SPECULATIVE | 3.1 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 0 | $1 |
 | 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 15.7 | starting for his NFL team and unrostered | 0 | $1 |
@@ -132,10 +132,7 @@ _baseline: snapshot committed 2026-10-01 08:44 UTC (7.6h ago) — older than the
 
 ## News touching our players
 
-- ⚠️ [Steelers rule Joey Porter out again; Jalen Ramsey questionable](https://www.espn.com/nfl/story/_/id/50070581/steelers-rule-joey-porter-again-jalen-ramsey-questionable) — Rico Dowdle (my roster)
-- ⚠️ [Fantasy football buzz: Jaylen Warren in for heavy workload, 10 trends to know before you set your lineup](https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis) — Cam Skattebo (my roster), Bhayshul Tuten (my roster), Ollie Gordon (my roster), Dalton Schultz (my roster), Rico Dowdle (my roster), Dontayvion Wicks (waiver target — buy early)
-- [Derrick Henry: Titans still family, but not much love on Sunday](https://www.espn.com/video/clip/_/id/50069744/titans-family-not-much-love-sunday) — Derrick Henry (my roster)
-- [Ravens' Henry: 'Always love' for Titans, but not much this Sunday](https://www.espn.com/nfl/story/_/id/50069438/ravens-henry-always-love-titans-not-much-sunday) — Derrick Henry (my roster)
-- [NFL survivor power rankings: Why you should use Vikings, Seahawks](https://www.espn.com/fantasy/football/story/_/id/50069425/espn-nfl-survivor-week-4-survivor-pool-strategy-advice-picks-predictions) — Seahawks (my roster)
-- [Who will find the end zone? Top predicted TD scorers for Week 4](https://www.espn.com/espn/betting/story/_/id/50053313/nfl-week-4-touchdown-betting-odds-end-zone-scoring-predictions) — Derrick Henry (my roster)
-- [2026 NFL awards tracker: Odds for MVP, Rookie of the Year and more](https://www.espn.com/espn/betting/story/_/id/48476156/2026-nfl-awards-betting-odds-mvp-rookie-year-offensive-defensive-player-coach) — Josh Allen (my roster), Brock Purdy (my roster)
+- [Allen seeks to put sloppy play behind him as Bills host turnover-prone Maye and the Patriots](http://www.espn.com/nfl/preview?gameId=401872971) — Josh Allen (my roster)
+- [Brock Purdy and the 49ers prepare for a tough test against the Broncos defense](http://www.espn.com/nfl/preview?gameId=401872975) — Brock Purdy (my roster)
+- [The Seahawks will be looking for a rebound on Sunday while the Chargers just want a win](http://www.espn.com/nfl/preview?gameId=401872977) — Seahawks (my roster)
+- [Fantasy football buzz: Dolphins move towards split backfield to replace De'Von Achane](https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis) — Cam Skattebo (my roster), Bhayshul Tuten (my roster), Ollie Gordon (my roster), Dalton Schultz (my roster), Dontayvion Wicks (waiver target — buy early)
