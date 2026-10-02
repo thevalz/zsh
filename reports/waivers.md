@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-10-02 15:42 UTC
+**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-10-02 20:37 UTC
 
 _value = rest-of-season points over replacement from usage through week 4 (484 players with games), projected over weeks 5–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 50% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR live (8 experts, 10/02); ESPN weekly projections summed over weeks 5–17 (381 players); Sleeper weekly projections summed over 13 remaining weeks (445 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 109 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,27 +8,10 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.47
 
 ## Since last run
 
-_baseline: snapshot committed 2026-10-02 08:22 UTC (7.3h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-10-02 15:42 UTC (4.9h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- ⚠️ **Breece Hall (RB-NYJ) Doubtful → Out** — Brooklyn Meatpackers's player's status changed. Next up: **Andrew Beck (RB-NYJ)** — FREE AGENT, claim him.
-  ↳ _October 2, 2026 — :_ Hall (quadriceps) is out for Sunday's game at Chicago, according to  Zack Rosenblatt of The Athletic . (practice: **DNP**)
-- ⚠️ **Mason Taylor (TE-NYJ) Doubtful → Out** — FREE AGENT player's status changed. Next up: **Jelani Woods (TE-NYJ)** — FREE AGENT, claim him.
-  ↳ _October 2, 2026 — :_ Taylor (thumb) has been ruled out for Sunday's game against the Bears,  Zack Rosenblatt of The Athletic  reports. (practice: **DNP**)
-- ⚠️ **Adonai Mitchell (WR-NYJ) Doubtful → Out** — NYKatSnatchers's player's status changed. Next up: **Myles White (WR-NYJ)** — FREE AGENT, claim him.
-  ↳ _October 2, 2026 — :_ Mitchell (finger) is out for Sunday's game against the Bears,  Zack Rosenblatt  reports. (practice: **DNP**)
-- ⚠️ **Caleb Douglas (WR-MIA) Questionable → Out** — East Coast Wins Most's player's status changed. Next up: **Chris Bell (WR-MIA)** — FREE AGENT, claim him.
-  ↳ _October 2, 2026 — :_ Douglas (ankle) has been ruled out for Sunday's game against the Vikings,  Marcel Louis-Jacques of ESPN.com  reports. (practice: **DNP**)
-- 📈 **Rico Dowdle (RB-PIT) moved up the depth chart (6 → 5)** — Workload is trending his way.
-  ↳ _September 30, 2026 — :_ The Steelers ruled Dowdle (toe) out for Thursday's game in Cleveland,  Brooke Pryor of ESPN.com  reports. (practice: **DNP**)
-- ⚠️ **Eli Heidenreich (RB-PIT) → Out** — FREE AGENT player newly listed Out.
-  ↳ _September 27, 2026 — :_ Heidenreich (coach's decision) is  inactive  for Sunday's game against the Bengals.
-- ⚠️ **Jayden Daniels (QB-WAS) Questionable → Out** — mtngoblin's player's status changed. Next up: **Athan Kaliakmanis (QB-WAS)** — FREE AGENT, claim him.
-  ↳ _October 2, 2026 — :_ Daniels (elbow), per head coach Dan Quinn, was ruled out for Sunday's game against the Colts in London,  Nicki Jhabvala of The Athletic  reports.
-- ⚠️ **Xavier Legette (WR-CAR) cleared (Doubtful → healthy)** — FREE AGENT player is off the report.
-  ↳ _October 1, 2026 — :_ Legette (knee)  remained a non-participant  at Thursday's practice. (practice: **DNP**)
-- ⚠️ **Dylan Sampson (RB-CLE) cleared (IR → healthy)** — FREE AGENT player is off the report.
-- 📥 **Darren Waller (TE-CAR) was added** — Picked up by East Coast Wins Most.
-- 📥 **Dontayvion Wicks (WR-PHI) was added** — Picked up by NYKatSnatchers.
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
@@ -37,7 +20,8 @@ _baseline: snapshot committed 2026-10-02 08:22 UTC (7.3h ago) — older than the
 | 🧊 | **James Conner (RB-ARI)** | STASH | 36.8 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $1 |
 | 🚨 | **Andrew Beck (RB-NYJ)** | URGENT | 0.8 | Breece Hall is Out (Quadriceps) | 0 | $1 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 15.0 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $1 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.0 | direct handcuff to MY Derrick Henry | 30,762 | $1 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.0 | 34,902 adds in 24h — the market has re-rated him; direct handcuff to MY Derrick Henry | 34,902 | $1 |
+| 🚨 | **Tyson Bagent (QB-CHI)** | URGENT | 0.0 | 28,536 adds in 24h — the market has re-rated him; Caleb Williams is Doubtful (Hamstring) | 28,536 | $1 |
 | · | **Xavier Hutchinson (WR-HOU)** | SPECULATIVE | 3.1 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 0 | $1 |
 | 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 0 | $1 |
 | · | **Devin Neal (RB-MIN)** | SPECULATIVE | 1.7 | Jordan Mason is IR (Thumb) | 0 | $1 |
@@ -150,8 +134,7 @@ _baseline: snapshot committed 2026-10-02 08:22 UTC (7.3h ago) — older than the
 
 ## News touching our players
 
-- [What to know before setting your lineup for Week 4: Mariota, Tuten in store for breakout week](https://www.espn.com/fantasy/football/story/_/id/50077631/fantasy-football-start-sit-week-4-need-know) — Bhayshul Tuten (my roster), Ollie Gordon (my roster)
+- ⚠️ [Bears coach Ben Johnson not ready to name QB starter](https://www.espn.com/nfl/story/_/id/50085487/bears-coach-ben-johnson-not-ready-name-qb-starter) — Tyson Bagent (waiver target — urgent)
 - [Dan Orlovsky: Brock Purdy is the best QB in football right now](https://www.espn.com/video/clip/_/id/50084412/brock-purdy-best-qb-football-right-now) — Brock Purdy (my roster)
-- [Greg Rousseau's sacks, Josh Allen's rushing TDs are on record paces](https://www.espn.com/nfl/story/_/id/50077206/greg-rousseau-josh-allen-record-pace) — Josh Allen (my roster)
-- [Fantasy football buzz: You should be paying attention to Aaron Rodgers](https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis) — Cam Skattebo (my roster), Bhayshul Tuten (my roster), Ollie Gordon (my roster), Dalton Schultz (my roster)
 - [Why Mike Clay is concerned over Bhayshul Tuten's fantasy prospects](https://www.espn.com/video/clip/_/id/50084873/why-mike-clay-concerned-bhayshul-tuten-fantasy-prospects) — Bhayshul Tuten (my roster)
+- [Fantasy football buzz: How will absence of DeVonta Smith affect other Eagles?](https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis) — Cam Skattebo (my roster), Bhayshul Tuten (my roster), Ollie Gordon (my roster), Dalton Schultz (my roster)
