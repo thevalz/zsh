@@ -1,29 +1,45 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-10-02 08:22 UTC
+**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-10-02 15:42 UTC
 
 _value = rest-of-season points over replacement from usage through week 4 (484 players with games), projected over weeks 5–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 50% his own usage, the rest prior_  
-_prior from FantasyPros ROS ECR live (8 experts, 10/02); ESPN weekly projections summed over weeks 5–17 (381 players); Sleeper weekly projections summed over 13 remaining weeks (445 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 107 absences priced on default weeks, not a blurb (`unverified`)_  
+_prior from FantasyPros ROS ECR live (8 experts, 10/02); ESPN weekly projections summed over weeks 5–17 (381 players); Sleeper weekly projections summed over 13 remaining weeks (445 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 109 absences priced on default weeks, not a blurb (`unverified`)_  
 _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.47 (PPG alone 0.39), RB 0.85 (PPG alone 0.85), WR 0.77 (PPG alone 0.76), TE 0.84 (PPG alone 0.79)_
 
 ## Since last run
 
-_baseline: snapshot committed 2026-10-02 01:33 UTC (6.8h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-10-02 08:22 UTC (7.3h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-Nothing changed.
-
+- ⚠️ **Breece Hall (RB-NYJ) Doubtful → Out** — Brooklyn Meatpackers's player's status changed. Next up: **Andrew Beck (RB-NYJ)** — FREE AGENT, claim him.
+  ↳ _October 2, 2026 — :_ Hall (quadriceps) is out for Sunday's game at Chicago, according to  Zack Rosenblatt of The Athletic . (practice: **DNP**)
+- ⚠️ **Mason Taylor (TE-NYJ) Doubtful → Out** — FREE AGENT player's status changed. Next up: **Jelani Woods (TE-NYJ)** — FREE AGENT, claim him.
+  ↳ _October 2, 2026 — :_ Taylor (thumb) has been ruled out for Sunday's game against the Bears,  Zack Rosenblatt of The Athletic  reports. (practice: **DNP**)
+- ⚠️ **Adonai Mitchell (WR-NYJ) Doubtful → Out** — NYKatSnatchers's player's status changed. Next up: **Myles White (WR-NYJ)** — FREE AGENT, claim him.
+  ↳ _October 2, 2026 — :_ Mitchell (finger) is out for Sunday's game against the Bears,  Zack Rosenblatt  reports. (practice: **DNP**)
+- ⚠️ **Caleb Douglas (WR-MIA) Questionable → Out** — East Coast Wins Most's player's status changed. Next up: **Chris Bell (WR-MIA)** — FREE AGENT, claim him.
+  ↳ _October 2, 2026 — :_ Douglas (ankle) has been ruled out for Sunday's game against the Vikings,  Marcel Louis-Jacques of ESPN.com  reports. (practice: **DNP**)
+- 📈 **Rico Dowdle (RB-PIT) moved up the depth chart (6 → 5)** — Workload is trending his way.
+  ↳ _September 30, 2026 — :_ The Steelers ruled Dowdle (toe) out for Thursday's game in Cleveland,  Brooke Pryor of ESPN.com  reports. (practice: **DNP**)
+- ⚠️ **Eli Heidenreich (RB-PIT) → Out** — FREE AGENT player newly listed Out.
+  ↳ _September 27, 2026 — :_ Heidenreich (coach's decision) is  inactive  for Sunday's game against the Bengals.
+- ⚠️ **Jayden Daniels (QB-WAS) Questionable → Out** — mtngoblin's player's status changed. Next up: **Athan Kaliakmanis (QB-WAS)** — FREE AGENT, claim him.
+  ↳ _October 2, 2026 — :_ Daniels (elbow), per head coach Dan Quinn, was ruled out for Sunday's game against the Colts in London,  Nicki Jhabvala of The Athletic  reports.
+- ⚠️ **Xavier Legette (WR-CAR) cleared (Doubtful → healthy)** — FREE AGENT player is off the report.
+  ↳ _October 1, 2026 — :_ Legette (knee)  remained a non-participant  at Thursday's practice. (practice: **DNP**)
+- ⚠️ **Dylan Sampson (RB-CLE) cleared (IR → healthy)** — FREE AGENT player is off the report.
+- 📥 **Darren Waller (TE-CAR) was added** — Picked up by East Coast Wins Most.
+- 📥 **Dontayvion Wicks (WR-PHI) was added** — Picked up by NYKatSnatchers.
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 36.8 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $1 |
+| 🚨 | **Andrew Beck (RB-NYJ)** | URGENT | 0.8 | Breece Hall is Out (Quadriceps) | 0 | $1 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 15.0 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $1 |
-| 🚨 | **Andrew Beck (RB-NYJ)** | URGENT | 0.7 | Breece Hall is Doubtful (Thigh) | 0 | $1 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.0 | direct handcuff to MY Derrick Henry | 30,285 | $1 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.0 | direct handcuff to MY Derrick Henry | 30,762 | $1 |
 | · | **Xavier Hutchinson (WR-HOU)** | SPECULATIVE | 3.1 | every man ahead of him is banged up (1 deep); Nico Collins is Questionable (Hamstring) | 0 | $1 |
 | 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 17.7 | starting for his NFL team and unrostered | 0 | $1 |
-| 🔥 | **Dontayvion Wicks (WR-PHI)** | CONTESTED | 10.9 | every man ahead of him is banged up (1 deep); DeVonta Smith is Questionable (Hamstring) | 64,953 | $1 |
 | · | **Devin Neal (RB-MIN)** | SPECULATIVE | 1.7 | Jordan Mason is IR (Thumb) | 0 | $1 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 12.9 | starting for his NFL team and unrostered | 0 | $1 |
 | 🔹 | **Cade Otton (TE-TB)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $1 |
@@ -42,6 +58,7 @@ Nothing changed.
 | Bhayshul Tuten (RB-JAX) | healthy | Chris Rodriguez (RB-JAX) | **FREE AGENT** |
 | Tony Pollard (RB-TEN) | healthy | Tyjae Spears (RB-TEN) | **FREE AGENT** |
 | Dalton Schultz (TE-HOU) | healthy | Foster Moreau (TE-HOU) | **FREE AGENT** |
+| Rico Dowdle (RB-PIT) | Out · _unverified_ | Eli Heidenreich (RB-PIT) | **FREE AGENT** |
 | Ollie Gordon (RB-MIA) | healthy | Jaylen Wright (RB-MIA) | rostered (Down to Pound) |
 
 *A designation shown as `unverified` has had no beat-reporter blurb read for it. The tag alone cannot tell a cramp from a torn ACL, or a current injury from a two-year-old one — run `python3 -m fantasy.monitor player --name "..."` before acting on it.*
@@ -52,8 +69,8 @@ Nothing changed.
 |:--|--:|--:|--:|--:|--:|--:|
 | QB | 2 | 2 | 155.37 | 76.83 | **1/12** | 0 |
 | RB | 2 | 6 | 149.15 | 125.91 | **5/12** | 81.62 |
-| WR | 2 | 5 | 48.59 | 109.9 | **11/12** | 0.0 |
-| TE | 1 | 2 | 80.52 | 32.2 | **2/12** | 9.07 |
+| WR | 2 | 5 | 48.59 | 109.9 | **11/12** | 1.44 |
+| TE | 1 | 2 | 80.52 | 32.74 | **2/12** | 9.07 |
 
 > ⚠️ **QB: 2 rostered for 2 starting slots — one injury and there is nobody to plug in.**
 
@@ -64,66 +81,64 @@ Nothing changed.
 | # | Team | W-L | Lineup | Bench | QB | RB | WR | TE |
 |--:|:--|:--|--:|--:|--:|--:|--:|--:|
 | 1 | **supervillain** | 5-1 | 535.5 | 35.7 | 155.4 | 149.2 | 48.6 | 80.5 |
-| 2 | It's Gonna be Maye | 3-3 | 504.6 | 54.2 | 76.8 | 176.7 | 136.2 | 42.0 |
-| 3 | mtngoblin | 6-0 | 485.6 | 38.6 | 89.0 | 169.2 | 122.7 | 5.6 |
+| 2 | It's Gonna be Maye | 3-3 | 504.6 | 54.6 | 76.8 | 176.7 | 136.2 | 42.0 |
+| 3 | mtngoblin | 6-0 | 482.8 | 38.7 | 86.2 | 169.2 | 122.7 | 5.6 |
 | 4 | Randikulous | 6-0 | 456.0 | 27.9 | 73.7 | 162.8 | 124.2 | 37.4 |
 | 5 | Jersey Rum Hams | 2-4 | 450.8 | 47.6 | 68.9 | 118.7 | 153.8 | 20.5 |
-| 6 | To Infinity and Bijan | 4-2 | 418.1 | 13.6 | 89.5 | 160.5 | 105.7 | 13.8 |
-| 7 | NYKatSnatchers | 3-3 | 413.6 | 23.0 | 45.4 | 116.3 | 119.5 | 83.2 |
-| 8 | Down to Pound | 2-4 | 401.7 | 43.5 | 65.4 | 125.9 | 109.9 | 26.8 |
-| 9 | hulleywood | 1-5 | 382.4 | 42.8 | 78.7 | 100.6 | 92.4 | 32.2 |
-| 10 | Holy Turnovers, Batman! | 3-3 | 347.0 | 29.4 | 97.1 | 110.9 | 90.0 | 10.0 |
-| 11 | Brooklyn Meatpackers | 0-6 | 321.4 | 29.2 | 72.4 | 110.0 | 43.0 | 42.7 |
-| 12 | East Coast Wins Most | 1-5 | 299.6 | 21.4 | 40.7 | 63.1 | 99.7 | 24.7 |
+| 6 | To Infinity and Bijan | 4-2 | 417.6 | 13.7 | 90.0 | 160.5 | 104.6 | 13.8 |
+| 7 | NYKatSnatchers | 3-3 | 413.2 | 29.3 | 45.1 | 116.3 | 119.5 | 83.2 |
+| 8 | Down to Pound | 2-4 | 402.0 | 43.7 | 65.4 | 125.9 | 109.9 | 26.8 |
+| 9 | hulleywood | 1-5 | 384.4 | 42.8 | 78.7 | 101.7 | 92.4 | 32.7 |
+| 10 | Holy Turnovers, Batman! | 3-3 | 347.8 | 29.6 | 97.1 | 112.0 | 90.0 | 10.0 |
+| 11 | Brooklyn Meatpackers | 0-6 | 321.0 | 29.2 | 72.4 | 110.0 | 42.6 | 42.7 |
+| 12 | East Coast Wins Most | 1-5 | 299.1 | 26.6 | 40.8 | 62.8 | 98.7 | 24.7 |
 
 *Lineup is the value of the starters each roster actually plays: the positional starters plus the best three leftovers for FLEX, FLEX and SUPER_FLEX. Bench is everything after that. Values are the same rest-of-season points-over-replacement numbers used everywhere else in this report.*
 
 ## Trade targets — ranked by two-way fit
 
-### East Coast Wins Most — fit score 112.6
+### East Coast Wins Most — fit score 117.78
 - Roster counts: QB:4 / RB:4 / WR:5 / TE:2
-- They need: **RB (62.84), QB (36.17), WR (10.19), TE (7.54)**
+- They need: **RB (63.08), QB (35.99), WR (11.21), TE (8.08)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Ollie Gordon (RB-MIA)** (21.3) → get **Luther Burden (WR-CHI)** (28.7)
   - _2-for-1_ — give **Tony Pollard (RB-TEN) + Ollie Gordon (RB-MIA)** (34.3) → get **Michael Wilson (WR-ARI)** (38.0)
   - _2-for-1_ — give **Tony Pollard (RB-TEN) + Rico Dowdle (RB-PIT)** (37.1) → get **Michael Wilson (WR-ARI)** (38.0)
-  - _2-for-1_ — give **Tony Pollard (RB-TEN) + Ollie Gordon (RB-MIA)** (34.3) → get **Rashee Rice (WR-KC)** (33.3)
-  - _2-for-1_ — give **Tony Pollard (RB-TEN) + Rico Dowdle (RB-PIT)** (37.1) → get **Rashee Rice (WR-KC)** (33.3)
+  - _2-for-1_ — give **Tony Pollard (RB-TEN) + Ollie Gordon (RB-MIA)** (34.3) → get **Rashee Rice (WR-KC)** (33.8)
+  - _2-for-1_ — give **Tony Pollard (RB-TEN) + Rico Dowdle (RB-PIT)** (37.1) → get **Rashee Rice (WR-KC)** (33.8)
 
-### Jersey Rum Hams — fit score 69.85
+### Jersey Rum Hams — fit score 75.61
 - Roster counts: QB:4 / RB:4 / WR:5 / TE:2
-- They need: **TE (11.67), QB (7.97), RB (7.25)**
+- They need: **TE (12.21), QB (7.97), RB (7.25)**
 - Shape: I send **TE**, I get back **WR**
 - Concrete starting points:
   - _1-for-1_ — give **Dalton Schultz (TE-HOU)** (21.9) → get **Stefon Diggs (WR-WAS)** (25.9)
   - _1-for-1_ — give **Dalton Schultz (TE-HOU)** (21.9) → get **Kalif Raymond (WR-CHI)** (16.5)
 
-### hulleywood — fit score 39.26
+### hulleywood — fit score 40.16
 - Roster counts: QB:4 / RB:4 / WR:5 / TE:2
-- They need: **RB (25.27), WR (17.49)**
+- They need: **RB (24.25), WR (17.49)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
-  - _2-for-1_ — give **Tony Pollard (RB-TEN) + Ollie Gordon (RB-MIA)** (34.3) → get **George Pickens (WR-DAL)** (39.3)
   - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Ollie Gordon (RB-MIA)** (21.3) → get **Josh Downs (WR-IND)** (23.9)
-  - _2-for-1_ — give **Tony Pollard (RB-TEN) + Rico Dowdle (RB-PIT)** (37.1) → get **George Pickens (WR-DAL)** (39.3)
-  - _1-for-1_ — give **Tony Pollard (RB-TEN)** (25.1) → get **George Pickens (WR-DAL)** (39.3)
   - _1-for-1_ — give **Tony Pollard (RB-TEN)** (25.1) → get **Josh Downs (WR-IND)** (23.9)
+  - _1-for-1_ — give **Ollie Gordon (RB-MIA)** (9.2) → get **Michael Pittman (WR-PIT)** (6.3)
 
-### Holy Turnovers, Batman! — fit score 30.25
-- Roster counts: QB:4 / RB:3 / WR:5 / TE:3
-- They need: **TE (22.17), WR (19.95), RB (15.05)**
+### NYKatSnatchers — fit score 37.8
+- Roster counts: QB:2 / RB:4 / WR:8 / TE:1
+- They need: **QB (31.71), RB (9.6)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
-  - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Ollie Gordon (RB-MIA)** (21.3) → get **Jakobi Meyers (WR-JAX)** (16.0)
-  - _1-for-1_ — give **Ollie Gordon (RB-MIA)** (9.2) → get **Jakobi Meyers (WR-JAX)** (16.0)
-  - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (12.0) → get **Jakobi Meyers (WR-JAX)** (16.0)
-  - _1-for-1_ — give **Ollie Gordon (RB-MIA)** (9.2) → get **Courtland Sutton (WR-DEN)** (8.1)
-  - _1-for-1_ — give **Ollie Gordon (RB-MIA)** (9.2) → get **Davante Adams (WR-LAR)** (7.2)
+  - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Ollie Gordon (RB-MIA)** (21.3) → get **Ladd McConkey (WR-LAC)** (24.3)
+  - _1-for-1_ — give **Ollie Gordon (RB-MIA)** (9.2) → get **Wan'Dale Robinson (WR-TEN)** (13.3)
+  - _1-for-1_ — give **Ollie Gordon (RB-MIA)** (9.2) → get **Adonai Mitchell (WR-NYJ)** (11.5)
+  - _1-for-1_ — give **Rico Dowdle (RB-PIT)** (12.0) → get **Wan'Dale Robinson (WR-TEN)** (13.3)
+  - _1-for-1_ — give **Ollie Gordon (RB-MIA)** (9.2) → get **Dontayvion Wicks (WR-PHI)** (10.5)
 
-### Brooklyn Meatpackers — fit score 29.37
+### Brooklyn Meatpackers — fit score 35.13
 - Roster counts: QB:3 / RB:4 / WR:6 / TE:2
-- They need: **WR (66.92), RB (15.96), QB (4.44)**
+- They need: **WR (67.3), RB (15.96), QB (4.46)**
 - Shape: I send **RB**, I get back **WR**
 - Concrete starting points:
   - _2-for-1_ — give **Rico Dowdle (RB-PIT) + Ollie Gordon (RB-MIA)** (21.3) → get **Deebo Samuel (WR-SF)** (16.3)
@@ -135,8 +150,8 @@ Nothing changed.
 
 ## News touching our players
 
-- ⚠️ [Fantasy football buzz: Saints place RB Travis Etienne Jr. on IR](https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis) — Cam Skattebo (my roster), Bhayshul Tuten (my roster), Ollie Gordon (my roster), Dalton Schultz (my roster), Dontayvion Wicks (waiver target — contested)
-- [Allen seeks to put sloppy play behind him as Bills host turnover-prone Maye and the Patriots](http://www.espn.com/nfl/preview?gameId=401872971) — Josh Allen (my roster)
-- [Brock Purdy and the 49ers prepare for a tough test against the Broncos defense](http://www.espn.com/nfl/preview?gameId=401872975) — Brock Purdy (my roster)
-- [The Seahawks will be looking for a rebound on Sunday while the Chargers just want a win](http://www.espn.com/nfl/preview?gameId=401872977) — Seahawks (my roster)
-- [Henry is on Baltimore's side now as the Ravens host the Titans in a series where road teams flourish](http://www.espn.com/nfl/preview?gameId=401872973) — Derrick Henry (my roster)
+- [What to know before setting your lineup for Week 4: Mariota, Tuten in store for breakout week](https://www.espn.com/fantasy/football/story/_/id/50077631/fantasy-football-start-sit-week-4-need-know) — Bhayshul Tuten (my roster), Ollie Gordon (my roster)
+- [Dan Orlovsky: Brock Purdy is the best QB in football right now](https://www.espn.com/video/clip/_/id/50084412/brock-purdy-best-qb-football-right-now) — Brock Purdy (my roster)
+- [Greg Rousseau's sacks, Josh Allen's rushing TDs are on record paces](https://www.espn.com/nfl/story/_/id/50077206/greg-rousseau-josh-allen-record-pace) — Josh Allen (my roster)
+- [Fantasy football buzz: You should be paying attention to Aaron Rodgers](https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis) — Cam Skattebo (my roster), Bhayshul Tuten (my roster), Ollie Gordon (my roster), Dalton Schultz (my roster)
+- [Why Mike Clay is concerned over Bhayshul Tuten's fantasy prospects](https://www.espn.com/video/clip/_/id/50084873/why-mike-clay-concerned-bhayshul-tuten-fantasy-prospects) — Bhayshul Tuten (my roster)
