@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-10-03 12:25 UTC
+**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-10-03 17:10 UTC
 
 _value = rest-of-season points over replacement from usage through week 4 (483 players with games), projected over weeks 5–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 50% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR live (8 experts, 10/02); ESPN weekly projections summed over weeks 5–17 (382 players); Sleeper weekly projections summed over 13 remaining weeks (445 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 117 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,24 +8,10 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.47
 
 ## Since last run
 
-_baseline: snapshot committed 2026-10-03 06:21 UTC (6.1h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-10-03 12:25 UTC (4.7h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- ⚠️ **Johnny Wilson (WR-PHI) → IR** — FREE AGENT player newly listed IR. Next up: **Xavier Gipson (WR-PHI)** — FREE AGENT, claim him.
-  ↳ _August 22, 2026 — Reverts to IR:_ Wilson (knee) reverted to Philadelphia's injured reserve Saturday, per  the NFL's transaction log . (serious)
-- ⚠️ **David Njoku (TE-LAC) → IR** — FREE AGENT player newly listed IR. Next up: **Charlie Kolar (TE-LAC)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ The Chargers  placed  Njoku (fibula) on injured reserve Wednesday. (serious)
-- 📈 **Dontayvion Wicks (WR-PHI) moved up the depth chart (2 → 1)** — Workload is trending his way.
-  ↳ _October 2, 2026 — :_ Wicks will operate as the top wide receiver against the Rams on Sunday due to the absence of  DeVonta Smith  (hamstring),  Chris McPherson of the Eagles' official site  reports. (serious)
-- 📈 **Zach Charbonnet (RB-SEA) moved up the depth chart (5 → 4)** — Workload is trending his way.
-  ↳ _October 2, 2026 — :_ Charbonnet (knee) was a limited practice participant Thursday and Friday,  John Boyle of the Seahawks' official site  reports. (practice: **LIMITED**)
-- 📈 **Jordan Addison (WR-MIN) moved up the depth chart (2 → 1)** — Workload is trending his way.
-  ↳ _October 2, 2026 — :_ Addison will serve as the Vikings' top wide receiver against the Dolphins on Sunday due to the absence of  Justin Jefferson  (ankle),  Craig Peters of the Vikings' official site  reports.
-- ⚠️ **Charlie Kolar (TE-LAC) cleared (Out → healthy)** — FREE AGENT player is off the report.
-  ↳ _October 2, 2026 — :_ Kolar (forearm) has been  ruled out  for Sunday's game against the Seahawks. (practice: **DNP**)
-- ⚠️ **Terrance Ferguson (TE-LAR) cleared (IR → healthy)** — FREE AGENT player is off the report.
-  ↳ _October 2, 2026 — :_ The Rams  placed  Ferguson (ankle) on injured reserve Friday. (serious)
-- ⚠️ **Marquise Brown (WR-PHI) cleared (Out → healthy)** — FREE AGENT player is off the report.
-  ↳ _October 2, 2026 — :_ Brown (ankle) is listed as  out  ahead of Sunday's game against the Rams.
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
@@ -34,7 +20,7 @@ _baseline: snapshot committed 2026-10-03 06:21 UTC (6.1h ago) — older than the
 | 🧊 | **James Conner (RB-ARI)** | STASH | 36.8 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $1 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 15.2 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $1 |
 | 🚨 | **DeaMonte Trayanum (RB-NYJ)** | URGENT | 0.2 | Breece Hall is Out (Quadriceps) | 0 | $1 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.0 | direct handcuff to MY Derrick Henry | 25,254 | $1 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.0 | direct handcuff to MY Derrick Henry | 24,930 | $1 |
 | · | **Devin Neal (RB-MIN)** | SPECULATIVE | 1.7 | Jordan Mason is IR (Thumb) | 0 | $1 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 12.9 | starting for his NFL team and unrostered | 0 | $1 |
 | 🔹 | **Cade Otton (TE-TB)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $1 |
