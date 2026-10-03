@@ -28,15 +28,15 @@ _depth charts as of 2026-10-03; defender grades pool PFR coverage stats from 202
 |---|---|---|---|---|---|---|---|---|
 | Bo Nix | QB | DEN | QB | @ SF | 🟡 NEUTRAL | 40 |  | SF pass D [D 40, #18] |
 | Daniel Jones | QB | IND | SUPER_FLEX | @ WAS | 🟢 SOFT | 2 |  | WAS pass D [F 2, #32] |
-| Blake Corum | RB | LA | RB | @ PHI | 🟡 NEUTRAL | 60 | LILB Zack Baun [A 86]<br>RILB Jihaad Campbell [C 54] | PHI run D [C 53, #17] |
+| Emanuel Wilson | RB | SEA | RB | vs LAC | 🔴 TOUGH | 72 | LILB Daiyan Henley [B 69]<br>RILB Del'Shawn Phillips [?] (low sample (11 tgt)) | LAC run D [A 81, #5] |
 | Jahmyr Gibbs | RB | DET | RB | @ CAR | 🟢 SOFT | 38 | LILB Devin Lloyd [B 66]<br>RILB Bobby Okereke [A 80] | CAR run D [F 14, #28] |
 | Dontayvion Wicks | WR | PHI | FLEX | vs LA | 🔴 TOUGH | 68 | (outside) LCB Jaylen Watson [C 47]<br>RCB Trent McDuffie [B 79] | LA pass D [B 77, #6] |
 | Ladd McConkey | WR | LAC | WR | @ SEA | 🟡 NEUTRAL | 67 | (slot) NB Nick Emmanwori [C 54]<br>⚠ shadow risk | SEA pass D [A 89, #2] |
 | Drake London | WR | ATL | WR | @ NO | 🟡 NEUTRAL | 56 | (outside) LCB Kool-Aid McKinstry [C 49]<br>RCB Quincy Riley [C 53] | NO pass D [B 65, #13] |
 | Zay Flowers | WR | BAL | FLEX | vs TEN | 🟢 SOFT | 37 | (outside) LCB Cor'Dale Flott [B 65]<br>RCB Alontae Taylor [D 35] | TEN pass D [F 13, #30] |
 | Brock Bowers | TE | LV | TE | vs KC | 🟡 NEUTRAL | 58 | FS Alohi Gilman [C 45]<br>SS Chamarri Conner [D 31] | KC pass D [B 77, #8] |
-| Emanuel Wilson | RB | SEA | BN | vs LAC | 🔴 TOUGH | 72 | LILB Daiyan Henley [B 69]<br>RILB Del'Shawn Phillips [?] (low sample (11 tgt)) | LAC run D [A 81, #5] |
 | Josh Jacobs | RB | GB | BN | @ TB | 🔴 TOUGH | 69 | LILB Alex Anzalone [B 62]<br>RILB Josiah Trotter [?] (low sample (9 tgt)) | TB run D [B 77, #7] |
+| Blake Corum | RB | LA | BN | @ PHI | 🟡 NEUTRAL | 60 | LILB Zack Baun [A 86]<br>RILB Jihaad Campbell [C 54] | PHI run D [C 53, #17] |
 | Raheim Sanders | RB | CLE | BN | vs PIT | 🟡 NEUTRAL | 45 | LILB Payton Wilson [D 34]<br>RILB Patrick Queen [C 56] | PIT run D [C 45, #20] |
 | Wan'Dale Robinson | WR | TEN | BN | @ BAL | 🟡 NEUTRAL | 60 | (slot) NB Kyle Hamilton [B 75] | BAL pass D [D 32, #22] |
 | Jordyn Tyson | WR | NO | BN | vs ATL | 🟡 NEUTRAL | 52 | (outside) LCB C.J. Henderson [B 73]<br>RCB Mike Hughes [D 35] | ATL pass D [C 49, #17] |
