@@ -4,11 +4,13 @@
 Inputs (all Markdown, produced by the other tools):
   matchups/weekNN.md     python3 matchups.py --full --markdown --out-dir matchups
   reports/waivers.md     python3 -m fantasy.monitor report --out reports/waivers.md
+  reports/values.md      python3 -m fantasy.monitor values --out reports/values.md
 
 Outputs:
   docs/index.html            dashboard: this week's lineups + the waiver board
   docs/matchups/weekNN.html  every weekly matchup report
   docs/waivers.html          the full waiver & trade report
+  docs/values.html           rest-of-season values for every roster
   docs/style.css, docs/.nojekyll
 
 Anything else already in docs/ (for example the archived draft console) is
@@ -227,6 +229,7 @@ footer{color:var(--muted);font-size:12px;text-align:center;padding:30px 0}
 def page(title: str, body: str, active: str, depth: int = 0, generated: str = "") -> str:
     rel = "../" * depth
     nav = [("index.html", "Dashboard", "home"), ("waivers.html", "Waiver wire", "waivers"),
+           ("values.html", "Rest of season", "values"),
            ("weeks.html", "All weeks", "weeks"), ("draft-live.html", "Draft console (archive)", "draft")]
     has_draft = os.path.exists(os.path.join(DOCS, "draft-live.html"))
     links = []
@@ -289,6 +292,16 @@ def main() -> int:
         body = "<h1>Waiver wire</h1><p>No waiver report has been generated yet.</p>"
     write(os.path.join(DOCS, "waivers.html"), page("Waiver wire", body, "waivers", generated=generated))
 
+    # Rest-of-season values page: the model's per-player numbers for every roster
+    values_md = read(os.path.join(ROOT, "reports", "values.md"))
+    if values_md:
+        title, pre, secs = split_sections(values_md)
+        body = f"<h1>{inline(title)}</h1>" + md_to_html(pre) + "".join(
+            f'<h2 id="{slug(h)}">{inline(h)}</h2>' + md_to_html(b) for h, b in secs)
+    else:
+        body = "<h1>Rest of season</h1><p>No values report has been generated yet.</p>"
+    write(os.path.join(DOCS, "values.html"), page("Rest of season", body, "values", generated=generated))
+
     # Dashboard
     parts = [f"<h1>{SITE_TITLE}</h1><p class='meta'>Lineup matchups and waiver wire for the Zebras Shooting Heroin "
              f"league. Updated {generated}.</p>"]
@@ -311,6 +324,9 @@ def main() -> int:
             parts.append(f'<div class="card"><h2>{inline(h)}</h2>{md_to_html(b)}</div>')
         parts.append('<p class="more"><a href="waivers.html">Full waiver &amp; trade report</a>: '
                      'handcuffs, roster strength, trade targets and news.</p>')
+    if values_md:
+        parts.append('<p class="more"><a href="values.html">Rest-of-season values</a>: '
+                     'every roster, every player — usage, prior, schedule and what the model makes of it.</p>')
     write(os.path.join(DOCS, "index.html"), page("Dashboard", "".join(parts), "home", generated=generated))
     print(f"built docs/ ({len(weeks)} week(s), waivers: {'yes' if waivers_md else 'no'})")
     return 0

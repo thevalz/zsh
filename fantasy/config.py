@@ -43,6 +43,16 @@ UNRANKED_RANK = 9999
 # leans back on raw points. Touchdowns are noise; targets and carries are not.
 USAGE_ALPHA = 1.0
 USAGE_MIN_GAMES = 1
+# The usage fit is trained on players with real roles, so it cannot
+# extrapolate down to a backup who took a few mop-up snaps: a quarterback
+# with one point on three attempts still projects like a starter, because
+# the team's red-zone trips are his team's too. Below this snap share the
+# prediction is scaled by share / USAGE_ROLE_SNAP; at or above it (any
+# regular, including a 54%-snap workhorse back) nothing changes.
+USAGE_ROLE_SNAP = 0.35
+# Same idea for a quarterback whose snaps are not posted yet: fewer than this
+# many pass attempts per game scales his prediction down proportionally.
+QB_ROLE_ATTEMPTS = 20.0
 
 # The outside prior. Only sources that move during the season are used: a
 # list whose payload has not changed in SOURCE_STALE_DAYS is flagged static in
@@ -84,6 +94,27 @@ REPLACEMENT_RANK = {"QB": 24, "RB": 30, "WR": 30, "TE": 12}
 # defaults, not diagnoses; a player priced on them is marked `unverified`, and
 # a blurb with an eligible week overrides them.
 DEFAULT_ABSENCE_WEEKS = {"IR": 4, "PUP": 4, "Sus": 2, "NA": 2, "DNR": 99, "Out": 1, "Doubtful": 1}
+
+# What a team's backs, receivers and tight ends lose when the starting
+# quarterback sits. Measured on the two previous seasons (usage.qb_out_effect):
+# the week-1 starter is the quarterback; a week he threw fewer than
+# QB_OUT_MIN_ATTEMPTS passes is an absent week; a team-position group needs
+# this many weeks of each kind to count. The pooled median ratio per position
+# is applied to every remaining week the current starter is projected absent,
+# clamped at QB_OUT_FLOOR and never above 1.0. Never hand-set: the fit writes
+# it and the header prints it with its sample size.
+QB_OUT_MIN_ATTEMPTS = 15
+QB_OUT_MIN_ABSENT_WEEKS = 3
+QB_OUT_MIN_PRESENT_WEEKS = 6
+QB_OUT_FLOOR = 0.6
+
+# Consistency, reported next to value but never priced into it: floor and
+# ceiling are the 25th and 75th percentiles of a player's league points per
+# game played over last season and this one; bust rate is the share of those
+# games under BUST_POINTS. Fewer than CONSISTENCY_MIN_GAMES logged and the
+# report shows a dash with the count instead of a number.
+BUST_POINTS = 8.0
+CONSISTENCY_MIN_GAMES = 6
 
 # Kept flat: the superflex premium is expressed by REPLACEMENT_RANK["QB"].
 POSITION_MULTIPLIER = {"QB": 1.0, "RB": 1.0, "WR": 1.0, "TE": 1.0}
