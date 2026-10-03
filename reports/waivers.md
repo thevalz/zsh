@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-10-03 00:22 UTC
+**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-10-03 06:21 UTC
 
 _value = rest-of-season points over replacement from usage through week 4 (483 players with games), projected over weeks 5–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 50% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR live (8 experts, 10/02); ESPN weekly projections summed over weeks 5–17 (382 players); Sleeper weekly projections summed over 13 remaining weeks (445 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 117 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,47 +8,23 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.47
 
 ## Since last run
 
-_baseline: snapshot committed 2026-10-02 20:38 UTC (3.7h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-10-03 00:23 UTC (6.0h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- ⚠️ **Jadarian Price (RB-SEA) Questionable → Out** — Jersey Rum Hams's player's status changed. Next up: **Emanuel Wilson (RB-SEA)** — rostered by NYKatSnatchers.
-  ↳ _October 2, 2026 — :_ Coach Mike Macdonald said Friday that Price has been ruled out for Sunday's game against the Chargers,  Curtis Crabtree of Fox 13 Seattle  reports. (practice: **DNP**)
-- ⚠️ **Charlie Kolar (TE-LAC) Doubtful → Out** — FREE AGENT player's status changed. Next up: **Hayden Rucci (TE-LAC)** — FREE AGENT, claim him.
-  ↳ _October 2, 2026 — :_ Kolar (forearm) has been  ruled out  for Sunday's game against the Seahawks. (practice: **DNP**)
-- ⚠️ **DeVonta Smith (WR-PHI) Questionable → Out** — Down to Pound's player's status changed. Next up: **Dontayvion Wicks (WR-PHI)** — rostered by NYKatSnatchers.
-  ↳ _October 2, 2026 — :_ Smith (hamstring) has been  ruled out  for Sunday's contest against the Rams. (practice: **DNP**)
-- ⚠️ **Arian Smith (WR-NYJ) → IR** — FREE AGENT player newly listed IR. Next up: **Omar Cooper (WR-NYJ)** — FREE AGENT, claim him.
-  ↳ _September 23, 2026 — :_ Smith (knee) underwent surgery Wednesday to repair a torn ACL and will miss the rest of the season,  Antwan V. Staley of the New York Daily News  reports. (serious)
-- ⚠️ **Terrance Ferguson (TE-LAR) Doubtful → IR** — FREE AGENT player's status changed. Next up: **Davis Allen (TE-LAR)** — FREE AGENT, claim him.
-  ↳ _October 2, 2026 — :_ The Rams  placed  Ferguson (ankle) on injured reserve Friday. (serious)
-- ⚠️ **Rachaad White (RB-WAS) Questionable → Out** — East Coast Wins Most's player's status changed. Next up: **Austin Ekeler (RB-WAS)** — FREE AGENT, claim him.
-  ↳ _October 2, 2026 — :_ White (shoulder) has been  ruled out  for Sunday's game against the Colts.
-- ⚠️ **Justin Jefferson (WR-MIN) Questionable → Out** — hulleywood's player's status changed. Next up: **Jordan Addison (WR-MIN)** — rostered by Brooklyn Meatpackers.
-  ↳ _October 2, 2026 — :_ Jefferson (ankle) has been ruled out for Sunday's game versus the Dolphins.
-- ⚠️ **British Brooks (RB-HOU) Questionable → IR** — FREE AGENT player's status changed. Next up: **Noah Whittington (RB-HOU)** — FREE AGENT, claim him.
-  ↳ _October 1, 2026 — :_ Brooks (hamstring)  did not participate  at the Texans' practice Thursday.
-- ⚠️ **Caleb Williams (QB-CHI) Doubtful → Out** — Randikulous's player's status changed. Next up: **Tyson Bagent (QB-CHI)** — FREE AGENT, claim him.
-- ⚠️ **Marquise Brown (WR-PHI) Questionable → Out** — FREE AGENT player's status changed. Next up: **Elijah Moore (WR-PHI)** — FREE AGENT, claim him.
-- ⚠️ **Puka Nacua (WR-LAR) cleared (Questionable → healthy)** — East Coast Wins Most's player is off the report.
-- ⚠️ **Mason Taylor (TE-NYJ) cleared (Out → healthy)** — FREE AGENT player is off the report.
-- ⚠️ **Bucky Irving (RB-TB) cleared (Questionable → healthy)** — To Infinity and Bijan's player is off the report.
-- ⚠️ **Terry McLaurin (WR-WAS) → Questionable** — It's Gonna be Maye's player newly listed Questionable. Next up: **Stefon Diggs (WR-WAS)** — rostered by Jersey Rum Hams.
-- ⚠️ **Jakobi Meyers (WR-JAX) cleared (Questionable → healthy)** — Holy Turnovers, Batman!'s player is off the report.
-- ⚠️ **Zay Flowers (WR-BAL) → Questionable** — NYKatSnatchers's player newly listed Questionable. Next up: **Rashod Bateman (WR-BAL)** — rostered by It's Gonna be Maye.
-- ⚠️ **Nico Collins (WR-HOU) cleared (Questionable → healthy)** — Jersey Rum Hams's player is off the report.
-- ⚠️ **DJ Moore (WR-BUF) cleared (Questionable → healthy)** — Randikulous's player is off the report.
-- ⚠️ **D'Andre Swift (RB-CHI) cleared (Questionable → healthy)** — Randikulous's player is off the report.
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
 | | Player | Tier | Own value | Why | Adds/24h | Bid |
 |:--|:--|:--|--:|:--|--:|--:|
 | 🧊 | **James Conner (RB-ARI)** | STASH | 39.3 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $1 |
-| 🚨 | **Tyson Bagent (QB-CHI)** | URGENT | 0.0 | 54,186 adds in 24h — the market has re-rated him; Caleb Williams is Out (Hamstring) | 54,186 | $1 |
+| 🚨 | **Tyson Bagent (QB-CHI)** | URGENT | 0.0 | 80,580 adds in 24h — the market has re-rated him; Caleb Williams is Out (Hamstring) | 80,580 | $1 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 14.2 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $1 |
 | 🚨 | **DeaMonte Trayanum (RB-NYJ)** | URGENT | 0.3 | Breece Hall is Out (Quadriceps) | 0 | $1 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.1 | direct handcuff to MY Derrick Henry | 31,617 | $1 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.1 | direct handcuff to MY Derrick Henry | 25,218 | $1 |
 | 🟢 | **Devin Neal (RB-MIN)** | BUY EARLY | 1.9 | Jordan Mason is IR (Thumb) | 0 | $1 |
 | 🔹 | **Dallas Goedert (TE-PHI)** | STARTER FA | 17.1 | starting for his NFL team and unrostered | 0 | $1 |
+| 🚨 | **Austin Ekeler (RB-WAS)** | URGENT | 1.7 | 42,216 adds in 24h — the market has re-rated him; Rachaad White is Out (Shoulder) | 42,216 | $1 |
 | 🚨 | **Johnny Mundt (TE-PHI)** | URGENT | 0.5 | everyone ahead of him is out — the job is his; Dallas Goedert is Out (Knee - MCL) | 0 | $1 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 12.5 | starting for his NFL team and unrostered | 0 | $1 |
 | 🔹 | **Cade Otton (TE-TB)** | STARTER FA | 12.0 | starting for his NFL team and unrostered | 0 | $1 |
@@ -162,7 +138,7 @@ _baseline: snapshot committed 2026-10-02 20:38 UTC (3.7h ago) — older than the
 ## News touching our players
 
 - ⚠️ [Bears coach Ben Johnson not ready to name QB starter](https://www.espn.com/nfl/story/_/id/50085487/bears-coach-ben-johnson-not-ready-name-qb-starter) — Tyson Bagent (waiver target — urgent)
-- ⚠️ [Fantasy football Week 4 inactives: Daniels, DeVonta to sit, McConkey questionable](https://www.espn.com/fantasy/football/story/_/page/FFSundayInactives-50077553/fantasy-football-injuries-nfl-week-4-inactive-active) — Tyson Bagent (waiver target — urgent), Tyjae Spears (handcuff to my Tony Pollard)
 - ⚠️ [RB Jadarian Price ruled out by Seattle Seahawks for Week 4](https://www.espn.com/nhl/story/_/id/50086884/rb-jadarian-price-ruled-seattle-seahawks-week-4) — Seahawks (my roster)
+- ⚠️ [Fantasy football Week 4 inactives: Daniels, DeVonta to sit; McConkey questionable](https://www.espn.com/fantasy/football/story/_/page/FFSundayInactives-50077553/fantasy-football-injuries-nfl-week-4-inactive-active) — Tyson Bagent (waiver target — urgent), Tyjae Spears (handcuff to my Tony Pollard)
 - [Why Mike Clay is concerned over Bhayshul Tuten's fantasy prospects](https://www.espn.com/video/clip/_/id/50084873/why-mike-clay-concerned-bhayshul-tuten-fantasy-prospects) — Bhayshul Tuten (my roster)
 - [Fantasy football buzz: How will absence of DeVonta Smith affect other Eagles?](https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis) — Cam Skattebo (my roster), Bhayshul Tuten (my roster), Ollie Gordon (my roster), Dalton Schultz (my roster)
