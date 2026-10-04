@@ -1,6 +1,6 @@
 # Zebras Shooting Heroin — waiver & trade monitor
 
-**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-10-03 21:06 UTC
+**Week 4** · supervillain (5-1) · FAAB left **$0** · generated 2026-10-04 00:28 UTC
 
 _value = rest-of-season points over replacement from usage through week 4 (481 players with games), projected over weeks 5–17, playoff weeks from 15 ×2, opponent adjustment ±15%; a player with every game played is 50% his own usage, the rest prior_  
 _prior from FantasyPros ROS ECR live (8 experts, 10/02); ESPN weekly projections summed over weeks 5–17 (379 players); Sleeper weekly projections summed over 13 remaining weeks (443 players) · weights fantasypros ×1, espn ×1, sleeper ×1 · 119 absences priced on default weeks, not a blurb (`unverified`)_  
@@ -8,20 +8,10 @@ _usage fit on 2024, 2025; out-of-sample r vs rest-of-season PPG on 2025: QB 0.47
 
 ## Since last run
 
-_baseline: snapshot committed 2026-10-03 17:10 UTC (3.9h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
+_baseline: snapshot committed 2026-10-03 21:06 UTC (3.4h ago) — older than the hourly rebuild, so some of these changes may have been reported last hour too_
 
-- ⚠️ **Jadarian Price (RB-SEA) Out → IR** — Jersey Rum Hams's player's status changed. Next up: **Jacardia Wright (RB-SEA)** — FREE AGENT, claim him.
-  ↳ _October 3, 2026 — :_ Price (chest) was placed on injured reserve Saturday,  Adam Schefter of ESPN  reports. (serious)
-- ⚠️ **D.J. Montgomery (WR-IND) → IR** — FREE AGENT player newly listed IR. Next up: **Nick Westbrook-Ikhine (WR-IND)** — FREE AGENT, claim him.
-  ↳ _August 31, 2026 — Placed on IR:_ Montgomery (abdomen) was placed on injured reserve by the Colts on Sunday,  JJ Stankevitz of the team's official website  reports. (serious)
-- ⚠️ **Keenan Allen (WR-IND) Questionable → Out** — mtngoblin's player's status changed. Next up: **D.J. Montgomery (WR-IND)** — FREE AGENT, claim him.
-  ↳ _October 3, 2026 — :_ Allen (groin) has been  downgraded to out  for Sunday's game against Washington. (practice: **DNP**, serious)
-- 📈 **Rico Dowdle (RB-PIT) moved up the depth chart (5 → 4)** — Workload is trending his way.
-  ↳ _September 30, 2026 — :_ The Steelers ruled Dowdle (toe) out for Thursday's game in Cleveland,  Brooke Pryor of ESPN.com  reports. (practice: **DNP**)
-- ⚠️ **Terry McLaurin (WR-WAS) Questionable → Doubtful** — It's Gonna be Maye's player's status changed. Next up: **Stefon Diggs (WR-WAS)** — rostered by Jersey Rum Hams.
-  ↳ _October 3, 2026 — :_ McLaurin (hamstring) is now likely to miss Sunday's game against the Colts in London,  Ben Standig of The Team 980 Washington D.C.  reports.
-- 📈 **Jaylen Wright (RB-MIA) moved up the depth chart (2 → 1)** — Workload is trending his way.
-  ↳ _October 1, 2026 — :_ Wright (foot/stinger) was a full participant in Thursday's practice,  Emily Leiker of The Minnesota Star Tribune  reports. (practice: **FULL**)
+Nothing changed.
+
 
 ## Waiver board — best available opportunity
 
@@ -30,7 +20,7 @@ _baseline: snapshot committed 2026-10-03 17:10 UTC (3.9h ago) — older than the
 | 🧊 | **James Conner (RB-ARI)** | STASH | 39.3 | on a reserve list but designated to return; August 30, 2026: Moves to IR, designation to return | 0 | $1 |
 | 🧊 | **Dillon Gabriel (QB-CLE)** | STASH | 14.2 | on a reserve list but designated to return; August 31, 2026: Injury not considered serious | 0 | $1 |
 | 🚨 | **DeaMonte Trayanum (RB-NYJ)** | URGENT | 0.3 | Breece Hall is Out (Quadriceps) | 0 | $1 |
-| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.1 | direct handcuff to MY Derrick Henry | 21,987 | $1 |
+| 🛡️ | **Justice Hill (RB-BAL)** | INSURANCE | 4.1 | direct handcuff to MY Derrick Henry | 20,196 | $1 |
 | 🟢 | **Devin Neal (RB-MIN)** | BUY EARLY | 1.9 | Jordan Mason is IR (Thumb) | 0 | $1 |
 | 🔹 | **T.J. Hockenson (TE-MIN)** | STARTER FA | 12.2 | starting for his NFL team and unrostered | 0 | $1 |
 | 🔹 | **Cade Otton (TE-TB)** | STARTER FA | 12.0 | starting for his NFL team and unrostered | 0 | $1 |
@@ -141,7 +131,6 @@ _baseline: snapshot committed 2026-10-03 17:10 UTC (3.9h ago) — older than the
 ## News touching our players
 
 - ⚠️ [RB Jadarian Price ruled out by Seattle Seahawks for Week 4](https://www.espn.com/nhl/story/_/id/50086884/rb-jadarian-price-ruled-seattle-seahawks-week-4) — Seahawks (my roster)
-- ⚠️ [Fantasy football Week 4 inactives: Daniels, DeVonta to sit; McConkey questionable](https://www.espn.com/fantasy/football/story/_/page/FFSundayInactives-50077553/fantasy-football-injuries-nfl-week-4-inactive-active) — Tyjae Spears (handcuff to my Tony Pollard)
 - ⚠️ [Seahawks place RB Jadarian Price (chest) on IR](https://www.espn.com/nfl/story/_/id/50093007/seahawks-place-rb-jadarian-price-chest-ir) — Seahawks (my roster)
-- [Fantasy football buzz: How will absence of DeVonta Smith affect other Eagles?](https://www.espn.com/fantasy/football/story/_/id/40699880/fantasy-football-injuries-position-battles-nfl-news-analysis) — Cam Skattebo (my roster), Bhayshul Tuten (my roster), Ollie Gordon (my roster), Dalton Schultz (my roster)
+- ⚠️ [Fantasy football Week 4 inactives: Daniels, DeVonta to sit; McConkey questionable](https://www.espn.com/fantasy/football/story/_/page/FFSundayInactives-50077553/fantasy-football-injuries-nfl-week-4-inactive-active) — Tyjae Spears (handcuff to my Tony Pollard)
 - [Seahawks WR Jaxon Smith-Njigba off to a historic start, but is it sustainable?](https://www.espn.com/nfl/story/_/id/50086094/seahawks-jaxon-smith-njigba-historic-start) — Seahawks (my roster)
